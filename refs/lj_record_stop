@@ -1,0 +1,16 @@
+<dec f='luajit/lj_record.h' l='31' type='void lj_record_stop(jit_State * J, TraceLink linktype, TraceNo lnk)'/>
+<use f='luajit/lj_ffrecord.c' l='137' u='c' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='171' u='c' c='recff_nyi'/>
+<def f='luajit/lj_record.c' l='287' ll='309' type='void lj_record_stop(jit_State * J, TraceLink linktype, TraceNo lnk)'/>
+<use f='luajit/lj_record.c' l='604' u='c' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='635' u='c' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='637' u='c' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='846' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='870' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1696' u='c' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1698' u='c' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1775' u='c' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='1777' u='c' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2420' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2639' u='c' c='lj_record_setup'/>
+<doc f='luajit/lj_record.c' l='286'>/* Stop recording. */</doc>

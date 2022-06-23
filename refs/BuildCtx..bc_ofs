@@ -1,0 +1,5 @@
+<dec f='luajit/host/buildvm.h' l='81' type='int32_t *'/>
+<use f='luajit/host/buildvm.c' l='207' u='w' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='213' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='314' u='r' c='emit_bcdef'/>
+<offset>832</offset>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ir.h' l='318' macro='1' type='5'/>
+<use f='luajit/lj_ir.h' l='323'/>
+<use f='luajit/lj_ir.h' l='324'/>
+<use f='luajit/lj_crecord.c' l='113' u='r' c='crec_ct2irt'/>
+<use f='luajit/lj_crecord.c' l='811' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1229' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1272' u='r' c='crec_call'/>
+<use f='luajit/lj_ir.c' l='373' u='r' c='lj_ir_kslot'/>
+<use f='luajit/lj_ir.c' l='378' u='r' c='lj_ir_kslot'/>
+<use f='luajit/lj_record.c' l='1305' u='r' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1310' u='r' c='rec_idx_abc'/>

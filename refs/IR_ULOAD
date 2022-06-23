@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='67'/>
+<use f='luajit/lj_ir.h' l='172' u='r' c='lj_assert_75'/>
+<use f='luajit/lj_asm_x86.h' l='466' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='2026' macro='1' u='r' c='asm_swapops'/>
+<use f='luajit/lj_asm_x86.h' l='2405' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2423' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2452' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm.c' l='1792' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2342' c='asm_setup_regsp'/>
+<use f='luajit/lj_opt_mem.c' l='494' u='r' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_record.c' l='1661' u='r' c='rec_upvalue'/>

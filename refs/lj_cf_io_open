@@ -1,0 +1,1 @@
+<def f='luajit/lib_io.c' l='401' macro='1' type='int lj_cf_io_open(lua_State * L)'/>

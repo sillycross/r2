@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='341' type='int lua_sethook(lua_State * L, lua_Hook func, int mask, int count)'/>
+<use f='luajit/lib_debug.c' l='340' u='c' c='lj_cf_debug_sethook'/>
+<def f='luajit/lj_dispatch.c' l='323' ll='334' macro='1' type='int lua_sethook(lua_State * L, lua_Hook func, int mask, int count)'/>
+<use f='luajit/luajit.c' l='47' u='c' c='lstop'/>
+<use f='luajit/luajit.c' l='58' u='c' c='laction'/>

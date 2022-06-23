@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='506' type='MRef'/>
+<offset>448</offset>
+<doc f='luajit/lj_obj.h' l='506'>/* Top of free elements. */</doc>
+<use f='luajit/lj_tab.c' l='47' macro='1' u='m' c='newhpart'/>
+<use f='luajit/lj_tab.c' l='99' u='m' c='newtab'/>
+<use f='luajit/lj_tab.c' l='114' u='m' c='newtab'/>
+<use f='luajit/lj_tab.c' l='190' macro='1' u='m' c='lj_tab_dup'/>
+<use f='luajit/lj_tab.c' l='190' macro='1' u='m' c='lj_tab_dup'/>
+<use f='luajit/lj_tab.c' l='209' macro='1' u='m' c='lj_tab_clear'/>
+<use f='luajit/lj_tab.c' l='264' u='m' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='447' macro='1' u='m' c='lj_tab_newkey'/>
+<use f='luajit/lj_tab.c' l='456' macro='1' u='m' c='lj_tab_newkey'/>

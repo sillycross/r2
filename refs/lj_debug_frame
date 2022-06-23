@@ -1,0 +1,8 @@
+<dec f='luajit/lj_debug.h' l='29' type='cTValue * lj_debug_frame(lua_State * L, int level, int * size)'/>
+<use f='luajit/lib_base.c' l='148' u='c' c='lj_cf_getfenv'/>
+<use f='luajit/lib_base.c' l='170' u='c' c='lj_cf_setfenv'/>
+<def f='luajit/lj_debug.c' l='25' ll='47' type='cTValue * lj_debug_frame(lua_State * L, int level, int * size)'/>
+<use f='luajit/lj_debug.c' l='540' u='c' c='lua_getstack'/>
+<use f='luajit/lj_debug.c' l='589' u='c' c='lj_debug_dumpstack'/>
+<doc f='luajit/lj_debug.c' l='24'>/* Get frame corresponding to a level. */</doc>
+<use f='luajit/lj_err.c' l='1078' u='c' c='luaL_where'/>

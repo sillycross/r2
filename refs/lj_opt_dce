@@ -1,0 +1,9 @@
+<dec f='luajit/lj_iropt.h' l='151' type='void lj_opt_dce(jit_State * J)'/>
+<def f='luajit/lj_opt_dce.c' l='64' ll='71' type='void lj_opt_dce(jit_State * J)'/>
+<doc f='luajit/lj_opt_dce.c' l='58'>/* Dead Code Elimination.
+**
+** First backpropagate marks for all used instructions. Then replace
+** the unused ones with a NOP. Note that compressing the IR to eliminate
+** the NOPs does not pay off.
+*/</doc>
+<use f='luajit/lj_trace.c' l='680' u='c' c='trace_state'/>

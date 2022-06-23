@@ -1,0 +1,22 @@
+<def f='luajit/lj_obj.h' l='587' ll='612'/>
+<use f='luajit/lj_obj.h' l='587'/>
+<size>104</size>
+<doc f='luajit/lj_obj.h' l='586'>/* Garbage collector state. */</doc>
+<mbr r='GCState::total' o='0' t='GCSize'/>
+<mbr r='GCState::threshold' o='64' t='GCSize'/>
+<mbr r='GCState::currentwhite' o='128' t='uint8_t'/>
+<mbr r='GCState::state' o='136' t='uint8_t'/>
+<mbr r='GCState::nocdatafin' o='144' t='uint8_t'/>
+<mbr r='GCState::lightudnum' o='152' t='uint8_t'/>
+<mbr r='GCState::sweepstr' o='160' t='MSize'/>
+<mbr r='GCState::root' o='192' t='GCRef'/>
+<mbr r='GCState::sweep' o='256' t='MRef'/>
+<mbr r='GCState::gray' o='320' t='GCRef'/>
+<mbr r='GCState::grayagain' o='384' t='GCRef'/>
+<mbr r='GCState::weak' o='448' t='GCRef'/>
+<mbr r='GCState::mmudata' o='512' t='GCRef'/>
+<mbr r='GCState::debt' o='576' t='GCSize'/>
+<mbr r='GCState::estimate' o='640' t='GCSize'/>
+<mbr r='GCState::stepmul' o='704' t='MSize'/>
+<mbr r='GCState::pause' o='736' t='MSize'/>
+<mbr r='GCState::lightudseg' o='768' t='MRef'/>

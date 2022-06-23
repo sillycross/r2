@@ -1,0 +1,2 @@
+<use f='luajit/lj_asm.c' l='1583' u='r' c='asm_phi'/>
+<use f='luajit/lj_asm.c' l='1602' u='r' c='asm_phi'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_err.h' l='31' type='void lj_err_lex(lua_State * L, GCstr * src, const char * tok, BCLine line, ErrMsg em, struct __va_list_tag * argp)'/>
+<def f='luajit/lj_err.c' l='884' ll='895' macro='1' type='void lj_err_lex(lua_State * L, GCstr * src, const char * tok, BCLine line, ErrMsg em, struct __va_list_tag * argp)'/>
+<use f='luajit/lj_lex.c' l='500' u='c' c='lj_lex_error'/>

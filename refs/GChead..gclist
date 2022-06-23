@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='728' type='GCRef'/>
+<offset>192</offset>
+<use f='luajit/lj_gc.c' l='84' u='m' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='247' u='m' c='gc_marktrace'/>
+<use f='luajit/lj_gc.c' l='327' u='m' c='propagatemark'/>

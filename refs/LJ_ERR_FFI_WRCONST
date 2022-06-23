@@ -1,0 +1,5 @@
+<dec f='luajit/lj_errmsg.h' l='171' macro='1' type='3574'/>
+<use f='luajit/lj_errmsg.h' l='171' macro='1' u='r'/>
+<use f='luajit/lib_ffi.c' l='175' u='r' c='lj_cf_ffi_meta___newindex'/>
+<use f='luajit/lib_ffi.c' l='414' u='r' c='lj_cf_ffi_clib___newindex'/>
+<use f='luajit/lj_cdata.c' l='298' u='r' c='lj_cdata_set'/>

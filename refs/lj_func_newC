@@ -1,0 +1,6 @@
+<dec f='luajit/lj_func.h' l='19' type='GCfunc * lj_func_newC(lua_State * L, MSize nelems, GCtab * env)'/>
+<use f='luajit/lj_api.c' l='694' u='c' c='lua_pushcclosure'/>
+<use f='luajit/lj_api.c' l='1150' u='c' c='cpcall'/>
+<def f='luajit/lj_func.c' l='111' ll='121' type='GCfunc * lj_func_newC(lua_State * L, MSize nelems, GCtab * env)'/>
+<doc f='luajit/lj_func.c' l='109'>/* -- Functions (closures) ------------------------------------------------ */</doc>
+<use f='luajit/lj_lib.c' l='95' u='c' c='lj_lib_register'/>

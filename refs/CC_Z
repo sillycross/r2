@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='353' type='4'/>
+<use f='luajit/lj_asm_x86.h' l='1882' u='r' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1902' u='r' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1911' u='r' c='asm_obar'/>

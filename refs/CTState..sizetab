@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ctype.h' l='177' type='MSize'/>
+<offset>96</offset>
+<doc f='luajit/lj_ctype.h' l='177'>/* Size of C type table. */</doc>
+<use f='luajit/lj_ctype.c' l='157' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='167' u='a' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='193' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='195' u='a' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='601' u='w' c='lj_ctype_init'/>
+<use f='luajit/lj_ctype.c' l='632' u='r' c='lj_ctype_freestate'/>

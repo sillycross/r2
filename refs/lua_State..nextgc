@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='63' type='GCRef'/>
+<offset>0</offset>
+<use f='luajit/lj_gc.c' l='141' u='a' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='559' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='560' u='m' c='gc_finalize'/>
+<use f='luajit/lj_udata.c' l='26' u='m' c='lj_udata_new'/>
+<use f='luajit/lj_udata.c' l='27' u='m' c='lj_udata_new'/>

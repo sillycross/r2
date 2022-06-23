@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='369' ll='401' type='Reg asm_fuseloadk64(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm_x86.h' l='428' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='444' u='c' c='asm_fuseload'/>
+<doc f='luajit/lj_asm_x86.h' l='368'>/* Fuse load of 64 bit IR constant into memory operand. */</doc>

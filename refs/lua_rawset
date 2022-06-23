@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='193' type='void lua_rawset(lua_State * L, int idx)'/>
+<use f='luajit/lib_base.c' l='196' u='c' c='lj_cf_rawset'/>
+<use f='luajit/lib_base.c' l='491' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='339' u='c' c='lj_cf_debug_sethook'/>
+<def f='luajit/lj_api.c' l='999' ll='1009' macro='1' type='void lua_rawset(lua_State * L, int idx)'/>

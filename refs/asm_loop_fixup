@@ -1,0 +1,2 @@
+<def f='luajit/lj_asm_x86.h' l='2796' ll='2838' type='void asm_loop_fixup(ASMState * as)'/>
+<doc f='luajit/lj_asm_x86.h' l='2795'>/* Fixup the loop branch. */</doc>

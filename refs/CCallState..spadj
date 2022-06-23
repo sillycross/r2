@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ccall.h' l='161' type='uint32_t'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='a' c='build_subroutines'/>
+<offset>64</offset>
+<doc f='luajit/lj_ccall.h' l='161'>/* Stack pointer adjustment. */</doc>
+<use f='luajit/lj_ccall.c' l='1103' u='w' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1105' u='w' c='ccall_set_args'/>

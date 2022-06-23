@@ -1,0 +1,30 @@
+<dec f='luajit/lj_obj.h' l='384' type='uint8_t'/>
+<offset>488</offset>
+<doc f='luajit/lj_obj.h' l='384'>/* Miscellaneous flags (see below). */</doc>
+<use f='luajit/lib_jit.c' l='206' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='208' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lj_bcread.c' l='284' u='r' c='bcread_bytecode'/>
+<use f='luajit/lj_bcread.c' l='355' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='223' u='r' c='bcwrite_bytecode'/>
+<use f='luajit/lj_bcwrite.c' l='248' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='264' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='321' u='r' c='bcwrite_header'/>
+<use f='luajit/lj_debug.c' l='193' u='r' c='debug_localname'/>
+<use f='luajit/lj_debug.c' l='482' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_dispatch.c' l='214' u='w' c='setptmode'/>
+<use f='luajit/lj_dispatch.c' l='218' u='w' c='setptmode'/>
+<use f='luajit/lj_dispatch.c' l='227' u='r' c='setptmode_all'/>
+<use f='luajit/lj_dispatch.c' l='450' u='r' c='call_init'/>
+<use f='luajit/lj_func.c' l='134' u='r' c='func_newL'/>
+<use f='luajit/lj_func.c' l='135' u='w' c='func_newL'/>
+<use f='luajit/lj_parse.c' l='1591' u='w' c='fs_finish'/>
+<use f='luajit/lj_record.c' l='697' u='r' c='rec_call_specialize'/>
+<use f='luajit/lj_record.c' l='864' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1613' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1685' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1717' u='r' c='rec_func_setup'/>
+<use f='luajit/lj_trace.c' l='186' u='r' c='lj_trace_reenableproto'/>
+<use f='luajit/lj_trace.c' l='189' u='w' c='lj_trace_reenableproto'/>
+<use f='luajit/lj_trace.c' l='377' u='w' c='blacklist_pc'/>
+<use f='luajit/lj_trace.c' l='413' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='420' u='w' c='trace_start'/>

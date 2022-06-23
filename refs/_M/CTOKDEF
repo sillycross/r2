@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='336'/>
+<use f='luajit/lj_ctype.h' l='361' u='c'/>
+<doc f='luajit/lj_ctype.h' l='335'>/* C lexer keywords. */</doc>
+<use f='luajit/lj_cparse.c' l='60' u='c'/>

@@ -1,0 +1,25 @@
+<dec f='luajit/lj_bc.h' l='204' type='97'/>
+<use f='luajit/lj_dispatch.h' l='84' u='r'/>
+<use f='luajit/host/buildvm_arch.h' l='1191' macro='1' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2299' macro='1' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='4674' u='r' c='build_backend'/>
+<use f='luajit/host/buildvm_arch.h' l='4677' u='r' c='build_backend'/>
+<use f='luajit/host/buildvm_arch.h' l='4679' u='r' c='build_backend'/>
+<use f='luajit/lj_dispatch.c' l='65' macro='1' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='66' macro='1' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='76' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='132' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='133' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='134' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='139' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='140' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='141' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='148' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='176' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='177' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='178' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='179' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='187' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='190' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_record.c' l='2046' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2482' u='r' c='lj_record_ins'/>

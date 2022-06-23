@@ -1,0 +1,25 @@
+<dec f='luajit/lj_ctype.h' l='148' type='GCRef'/>
+<use f='luajit/lj_ctype.h' l='455' u='m' c='ctype_setname'/>
+<offset>128</offset>
+<doc f='luajit/lj_ctype.h' l='148'>/* Element name (GCstr). */</doc>
+<use f='luajit/lib_ffi.c' l='574' u='m' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='575' u='m' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lj_cconv.c' l='509' u='m' c='cconv_substruct_tab'/>
+<use f='luajit/lj_cconv.c' l='521' u='m' c='cconv_substruct_tab'/>
+<use f='luajit/lj_cconv.c' l='712' u='m' c='cconv_substruct_init'/>
+<use f='luajit/lj_clib.c' l='336' u='m' c='clib_extsym'/>
+<use f='luajit/lj_cparse.c' l='775' u='m' c='cp_add'/>
+<use f='luajit/lj_cparse.c' l='1234' u='m' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1252' u='m' c='cp_struct_name'/>
+<use f='luajit/lj_crecord.c' l='159' u='m' c='crec_copy_struct'/>
+<use f='luajit/lj_crecord.c' l='1038' u='m' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1058' u='m' c='crec_alloc'/>
+<use f='luajit/lj_ctype.c' l='176' u='m' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='202' u='m' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='218' u='m' c='lj_ctype_addname'/>
+<use f='luajit/lj_ctype.c' l='218' u='m' c='lj_ctype_addname'/>
+<use f='luajit/lj_ctype.c' l='229' u='m' c='lj_ctype_getname'/>
+<use f='luajit/lj_ctype.c' l='246' u='m' c='lj_ctype_getfieldq'/>
+<use f='luajit/lj_ctype.c' l='430' u='m' c='ctype_preptype'/>
+<use f='luajit/lj_ctype.c' l='431' u='m' c='ctype_preptype'/>
+<use f='luajit/lj_ctype.c' l='617' u='m' c='lj_ctype_init'/>

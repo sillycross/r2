@@ -1,0 +1,26 @@
+<dec f='luajit/lua.h' l='150' type='const char * lua_tolstring(lua_State * L, int idx, size_t * len)'/>
+<use f='luajit/lib_aux.c' l='175' macro='1' u='c' c='luaL_gsub'/>
+<use f='luajit/lib_aux.c' l='248' u='c' c='luaL_addvalue'/>
+<use f='luajit/lib_aux.c' l='313' macro='1' u='c' c='panic'/>
+<use f='luajit/lib_base.c' l='398' u='c' c='reader_func'/>
+<use f='luajit/lib_base.c' l='534' u='c' c='lj_cf_print'/>
+<use f='luajit/lib_debug.c' l='372' macro='1' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_debug.c' l='389' macro='1' u='c' c='lj_cf_debug_traceback'/>
+<use f='luajit/lib_package.c' l='325' macro='1' u='c' c='searchpath'/>
+<use f='luajit/lib_package.c' l='358' macro='1' u='c' c='findfile'/>
+<use f='luajit/lib_package.c' l='367' macro='1' u='c' c='loaderror'/>
+<use f='luajit/lib_package.c' l='367' macro='1' u='c' c='loaderror'/>
+<use f='luajit/lib_package.c' l='399' macro='1' u='c' c='lj_cf_package_loader_croot'/>
+<use f='luajit/lib_package.c' l='451' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_string.c' l='550' u='c' c='add_s'/>
+<def f='luajit/lj_api.c' l='504' ll='521' macro='1' type='const char * lua_tolstring(lua_State * L, int idx, size_t * len)'/>
+<use f='luajit/lj_api.c' l='567' u='c' c='luaL_checkoption'/>
+<use f='luajit/luajit.c' l='50' macro='1' u='c' c='lstop'/>
+<use f='luajit/luajit.c' l='91' macro='1' u='c' c='report'/>
+<use f='luajit/luajit.c' l='108' macro='1' u='c' c='traceback'/>
+<use f='luajit/luajit.c' l='148' macro='1' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='190' macro='1' u='c' c='write_prompt'/>
+<use f='luajit/luajit.c' l='201' u='c' c='incomplete'/>
+<use f='luajit/luajit.c' l='235' macro='1' u='c' c='loadline'/>
+<use f='luajit/luajit.c' l='261' macro='1' u='c' c='dotty'/>
+<use f='luajit/luajit.c' l='305' macro='1' u='c' c='loadjitmodule'/>

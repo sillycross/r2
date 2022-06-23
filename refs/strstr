@@ -1,0 +1,4 @@
+<dec f='include/string.h' l='329' type='char * strstr(const char * __haystack, const char * __needle)'/>
+<use f='luajit/host/buildvm_lib.c' l='400' u='c' c='emit_lib'/>
+<use f='luajit/lib_aux.c' l='168' u='c' c='luaL_gsub'/>
+<use f='luajit/luajit.c' l='203' u='c' c='incomplete'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='267'/>
+<use f='luajit/lib_aux.c' l='97' u='c'/>
+<use f='luajit/lib_aux.c' l='118' u='c'/>
+<use f='luajit/lib_package.c' l='414' u='c'/>
+<use f='luajit/lib_package.c' l='444' u='c'/>
+<use f='luajit/luajit.c' l='281' u='c'/>

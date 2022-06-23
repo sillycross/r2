@@ -1,0 +1,6 @@
+<dec f='luajit/lauxlib.h' l='45' type='void luaL_checkstack(lua_State * L, int sz, const char * msg)'/>
+<use f='luajit/lib_aux.c' l='150' u='c' c='luaL_setfuncs'/>
+<use f='luajit/lib_base.c' l='389' u='c' c='reader_func'/>
+<use f='luajit/lib_io.c' l='199' u='c' c='io_file_read'/>
+<use f='luajit/lib_string.c' l='444' u='c' c='push_captures'/>
+<def f='luajit/lj_api.c' l='112' ll='116' macro='1' type='void luaL_checkstack(lua_State * L, int size, const char * msg)'/>

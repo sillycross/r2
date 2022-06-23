@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/mman-linux.h' l='43'/>
+<use f='luajit/lj_ccallback.c' l='279' u='c'/>
+<use f='luajit/lj_mcode.c' l='108' u='c'/>

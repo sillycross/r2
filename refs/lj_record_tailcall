@@ -1,0 +1,5 @@
+<dec f='luajit/lj_record.h' l='35' type='void lj_record_tailcall(jit_State * J, BCReg func, ptrdiff_t nargs)'/>
+<use f='luajit/lj_ffrecord.c' l='372' u='c' c='recff_metacall_cp'/>
+<def f='luajit/lj_record.c' l='771' ll='790' type='void lj_record_tailcall(jit_State * J, BCReg func, ptrdiff_t nargs)'/>
+<use f='luajit/lj_record.c' l='2390' u='c' c='lj_record_ins'/>
+<doc f='luajit/lj_record.c' l='770'>/* Record tail call. */</doc>

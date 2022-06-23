@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='606' type='GCSize'/>
+<offset>640</offset>
+<doc f='luajit/lj_obj.h' l='606'>/* Estimate of memory actually in use. */</doc>
+<use f='luajit/lj_gc.c' l='647' u='w' c='atomic'/>
+<use f='luajit/lj_gc.c' l='676' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='683' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='704' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='705' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='735' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='794' u='r' c='lj_gc_fullgc'/>

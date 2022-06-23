@@ -1,0 +1,5 @@
+<dec f='include/stdlib.h' l='631' type='char * getenv(const char * __name)'/>
+<doc f='include/stdlib.h' l='630'>/* Return the value of envariable NAME, or NULL if it doesn&apos;t exist.  */</doc>
+<use f='luajit/lib_os.c' l='107' u='c' c='lj_cf_os_getenv'/>
+<use f='luajit/lib_package.c' l='557' u='c' c='setpath'/>
+<use f='luajit/luajit.c' l='496' u='c' c='handle_luainit'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/lauxlib.h' l='66' type='int luaL_loadbuffer(lua_State * L, const char * buff, size_t sz, const char * name)'/>
+<use f='luajit/lib_debug.c' l='370' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_package.c' l='263' u='c' c='ll_loadfunc'/>
+<use f='luajit/lib_package.c' l='420' u='c' c='lj_cf_package_loader_preload'/>
+<def f='luajit/lj_load.c' l='146' ll='150' macro='1' type='int luaL_loadbuffer(lua_State * L, const char * buf, size_t size, const char * name)'/>
+<use f='luajit/lj_load.c' l='154' u='c' c='luaL_loadstring'/>
+<use f='luajit/luajit.c' l='175' u='c' c='dostring'/>
+<use f='luajit/luajit.c' l='235' u='c' c='loadline'/>

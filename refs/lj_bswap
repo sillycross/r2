@@ -1,0 +1,15 @@
+<def f='luajit/lj_def.h' l='186' ll='189' type='uint32_t lj_bswap(uint32_t x)'/>
+<use f='luajit/lj_asm.c' l='484' macro='1' u='c' c='ra_pick'/>
+<use f='luajit/lj_asm.c' l='649' macro='1' u='c' c='ra_allocref'/>
+<use f='luajit/lj_asm.c' l='1393' macro='1' u='c' c='asm_phi_break'/>
+<use f='luajit/lj_asm.c' l='1479' macro='1' u='c' c='asm_phi_shuffle'/>
+<use f='luajit/lj_asm.c' l='1557' macro='1' u='c' c='asm_phi_fixup'/>
+<use f='luajit/lj_bcread.c' l='167' u='c' c='bcread_dbg'/>
+<use f='luajit/lj_bcread.c' l='290' u='c' c='bcread_bytecode'/>
+<use f='luajit/lj_opt_fold.c' l='332' u='c' c='fold_kfold_bswap'/>
+<use f='luajit/lj_serialize.c' l='155' u='c' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='311' u='c' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='379' u='c' c='serialize_get'/>
+<use f='luajit/lj_str.c' l='28' u='c' c='lj_str_cmp'/>
+<use f='luajit/lj_str.c' l='28' u='c' c='lj_str_cmp'/>
+<use f='luajit/lj_str.c' l='103' u='c' c='hash_dense'/>

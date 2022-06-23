@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='8'/>
+<use f='luajit/lj_record.c' l='1336' u='r' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1354' u='r' c='rec_idx_key'/>

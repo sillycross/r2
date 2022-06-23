@@ -1,0 +1,22 @@
+<dec f='luajit/lj_cconv.h' l='18' type='2'/>
+<doc f='luajit/lj_cconv.h' l='18'>/* Floating-point number. */</doc>
+<use f='luajit/lj_cconv.c' l='160' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='191' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='235' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='236' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='267' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='267' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='281' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='294' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='313' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='338' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='411' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='445' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='461' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='462' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='467' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='470' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='470' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='478' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='505' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='523' macro='1' u='r' c='crec_ct_ct'/>

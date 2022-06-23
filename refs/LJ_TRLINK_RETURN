@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='246' type='7'/>
+<doc f='luajit/lj_jit.h' l='246'>/* Return to interpreter. */</doc>
+<use f='luajit/lj_ffrecord.c' l='171' u='r' c='recff_nyi'/>
+<use f='luajit/lj_record.c' l='846' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1765' u='r' c='rec_func_jit'/>

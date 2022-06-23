@@ -1,0 +1,4 @@
+<dec f='luajit/lj_buf.h' l='170' type='SBuf * lj_buf_putstr_reverse(SBuf * sb, GCstr * s)'/>
+<def f='luajit/lj_buf.c' l='140' ll='149' type='SBuf * lj_buf_putstr_reverse(SBuf * sb, GCstr * s)'/>
+<doc f='luajit/lj_buf.c' l='138'>/* -- High-level buffer put operations ------------------------------------ */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

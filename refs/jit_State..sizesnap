@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='451' type='MSize'/>
+<offset>2784</offset>
+<doc f='luajit/lj_jit.h' l='451'>/* Size of temp. snapshot buffer. */</doc>
+<use f='luajit/lj_snap.h' l='25' u='r' c='lj_snap_grow_buf'/>
+<use f='luajit/lj_snap.c' l='43' u='a' c='lj_snap_grow_buf_'/>
+<use f='luajit/lj_trace.c' l='366' u='r' c='lj_trace_freestate'/>

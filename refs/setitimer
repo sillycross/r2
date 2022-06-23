@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/sys/time.h' l='128' type='int setitimer(__itimer_which_t __which, const struct itimerval *restrict __new, struct itimerval *restrict __old)'/>
+<use f='luajit/lj_profile.c' l='187' u='c' c='profile_timer_start'/>
+<use f='luajit/lj_profile.c' l='200' u='c' c='profile_timer_stop'/>
+<doc f='include/x86_64-linux-gnu/sys/time.h' l='125'>/* Set the timer WHICH to *NEW.  If OLD is not NULL,
+   set *OLD to the old value of timer WHICH.
+   Returns 0 on success, -1 on errors.  */</doc>

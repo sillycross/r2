@@ -1,0 +1,36 @@
+<dec f='luajit/lj_target_x86.h' l='181' type='uint8_t'/>
+<offset>32</offset>
+<doc f='luajit/lj_target_x86.h' l='181'>/* Base register or RID_NONE. */</doc>
+<use f='luajit/lj_emit_x86.h' l='198' u='r' c='emit_mrm'/>
+<use f='luajit/lj_asm_x86.h' l='67' u='r' c='asm_guardcc'/>
+<use f='luajit/lj_asm_x86.h' l='73' u='r' c='asm_guardcc'/>
+<use f='luajit/lj_asm_x86.h' l='154' u='w' c='asm_fusearef'/>
+<use f='luajit/lj_asm_x86.h' l='160' u='r' c='asm_fusearef'/>
+<use f='luajit/lj_asm_x86.h' l='194' u='w' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='208' u='w' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='226' u='w' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='240' u='w' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='253' u='w' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='259' u='w' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='269' u='w' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='277' u='w' c='asm_fusestrref'/>
+<use f='luajit/lj_asm_x86.h' l='285' u='w' c='asm_fusestrref'/>
+<use f='luajit/lj_asm_x86.h' l='300' u='r' c='asm_fusestrref'/>
+<use f='luajit/lj_asm_x86.h' l='301' u='w' c='asm_fusestrref'/>
+<use f='luajit/lj_asm_x86.h' l='316' u='w' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='364' u='w' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='374' u='w' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='378' u='w' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='382' u='w' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='396' u='w' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='419' u='w' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='436' u='w' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='453' u='w' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='1102' u='r' c='asm_aref'/>
+<use f='luajit/lj_asm_x86.h' l='1103' u='r' c='asm_aref'/>
+<use f='luajit/lj_asm_x86.h' l='1384' u='r' c='asm_strref'/>
+<use f='luajit/lj_asm_x86.h' l='1386' u='r' c='asm_strref'/>
+<use f='luajit/lj_asm_x86.h' l='2128' u='w' c='asm_lea'/>
+<use f='luajit/lj_asm_x86.h' l='2134' u='w' c='asm_lea'/>
+<use f='luajit/lj_asm_x86.h' l='2161' u='w' c='asm_lea'/>
+<use f='luajit/lj_asm_x86.h' l='2962' u='w' c='asm_setup_target'/>

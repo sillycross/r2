@@ -1,0 +1,8 @@
+<def f='luajit/lj_strscan.h' l='35' ll='38' type='int lj_strscan_numberobj(TValue * o)'/>
+<use f='luajit/lib_base.c' l='267' u='c' c='lj_ffh_tonumber'/>
+<doc f='luajit/lj_strscan.h' l='34'>/* Check for number or convert string to number/int in-place (!). */</doc>
+<use f='luajit/lj_ffrecord.c' l='69' u='c' c='argv2int'/>
+<use f='luajit/lj_lib.c' l='244' u='c' c='lj_lib_checkint'/>
+<use f='luajit/lj_meta.c' l='456' u='c' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='457' u='c' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='458' u='c' c='lj_meta_for'/>

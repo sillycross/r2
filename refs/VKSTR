@@ -1,0 +1,13 @@
+<dec f='luajit/lj_parse.c' l='39' type='3'/>
+<use f='luajit/lj_parse.c' l='516' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='635' u='r' c='bcemit_store'/>
+<use f='luajit/lj_parse.c' l='741' u='r' c='bcemit_branch_t'/>
+<use f='luajit/lj_parse.c' l='763' u='r' c='bcemit_branch_f'/>
+<use f='luajit/lj_parse.c' l='848' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='1648' u='r' c='expr_str'/>
+<use f='luajit/lj_parse.c' l='77' u='r' c='expr_index'/>
+<use f='luajit/lj_parse.c' l='1710' u='r' c='expr_kvalue'/>
+<use f='luajit/lj_parse.c' l='1754' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1929' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='2000' u='r' c='expr_simple'/>
+<doc f='luajit/lj_parse.c' l='39'>/* sval = string value */</doc>

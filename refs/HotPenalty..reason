@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='304' type='uint16_t'/>
+<offset>80</offset>
+<doc f='luajit/lj_jit.h' l='304'>/* Abort reason (really TraceErr). */</doc>
+<use f='luajit/lj_record.c' l='587' u='r' c='innerloopleft'/>
+<use f='luajit/lj_record.c' l='588' u='r' c='innerloopleft'/>
+<use f='luajit/lj_trace.c' l='401' u='w' c='penalty_pc'/>

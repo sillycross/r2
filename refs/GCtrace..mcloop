@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='269' type='MSize'/>
+<offset>768</offset>
+<doc f='luajit/lj_jit.h' l='269'>/* Offset of loop start in machine code. */</doc>
+<use f='luajit/lib_jit.c' l='390' u='r' c='lj_cf_jit_util_tracemc'/>
+<use f='luajit/lj_asm.c' l='2517' u='w' c='lj_asm_trace'/>

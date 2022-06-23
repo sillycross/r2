@@ -1,0 +1,20 @@
+<dec f='luajit/lj_meta.h' l='14' type='cTValue * lj_meta_lookup(lua_State * L, cTValue * o, MMS mm)'/>
+<use f='luajit/lib_base.c' l='89' u='c' c='ffh_pairs'/>
+<use f='luajit/lib_base.c' l='134' u='c' c='lj_ffh_setmetatable'/>
+<use f='luajit/lib_base.c' l='326' u='c' c='lj_ffh_tostring'/>
+<use f='luajit/lib_buffer.c' l='130' u='c' c='lj_cf_buffer_method_put'/>
+<def f='luajit/lj_meta.c' l='59' ll='74' type='cTValue * lj_meta_lookup(lua_State * L, cTValue * o, MMS mm)'/>
+<use f='luajit/lj_meta.c' l='146' u='c' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='184' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='224' u='c' c='lj_meta_arith'/>
+<use f='luajit/lj_meta.c' l='226' u='c' c='lj_meta_arith'/>
+<use f='luajit/lj_meta.c' l='245' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='247' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='317' u='c' c='lj_meta_len'/>
+<use f='luajit/lj_meta.c' l='375' u='c' c='lj_meta_equal_cd'/>
+<use f='luajit/lj_meta.c' l='389' u='c' c='lj_meta_comp'/>
+<use f='luajit/lj_meta.c' l='402' u='c' c='lj_meta_comp'/>
+<use f='luajit/lj_meta.c' l='406' u='c' c='lj_meta_comp'/>
+<use f='luajit/lj_meta.c' l='444' u='c' c='lj_meta_call'/>
+<doc f='luajit/lj_meta.c' l='58'>/* Lookup metamethod for object. */</doc>
+<use f='luajit/lj_strfmt.c' l='435' u='c' c='lj_strfmt_putarg'/>

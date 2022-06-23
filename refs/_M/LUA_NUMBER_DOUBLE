@@ -1,0 +1,4 @@
+<dec f='luajit/luaconf.h' l='116'/>
+<doc f='luajit/luaconf.h' l='113'>/* The following defines are here only for compatibility with luaconf.h
+** from the standard Lua distribution. They must not be changed for LuaJIT.
+*/</doc>

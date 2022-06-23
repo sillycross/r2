@@ -1,0 +1,2 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='14'/>
+<use f='luajit/lj_mcode.c' l='364' u='r' c='lj_mcode_limiterr'/>

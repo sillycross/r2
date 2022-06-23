@@ -1,0 +1,2 @@
+<def f='luajit/lj_jit.h' l='292' ll='298' type='MSize snap_nextofs(GCtrace * T, SnapShot * snap)'/>
+<use f='luajit/lj_opt_loop.c' l='212' u='c' c='loop_subst_snap'/>

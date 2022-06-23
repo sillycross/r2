@@ -1,0 +1,2 @@
+<use f='luajit/lj_trace.c' l='561' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='706' u='r' c='trace_state'/>

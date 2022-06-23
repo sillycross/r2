@@ -1,0 +1,15 @@
+<dec f='luajit/lj_snap.h' l='13' type='void lj_snap_add(jit_State * J)'/>
+<use f='luajit/lj_crecord.c' l='1215' u='c' c='crec_snap_caller'/>
+<use f='luajit/lj_record.c' l='306' u='c' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='542' u='c' c='rec_for'/>
+<use f='luajit/lj_record.c' l='673' u='c' c='rec_profile_ins'/>
+<use f='luajit/lj_record.c' l='682' u='c' c='rec_profile_ret'/>
+<use f='luajit/lj_record.c' l='873' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1197' u='c' c='rec_mm_comp_cdata'/>
+<use f='luajit/lj_record.c' l='1973' u='c' c='rec_comp_prep'/>
+<use f='luajit/lj_record.c' l='2058' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2627' u='c' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2648' u='c' c='lj_record_setup'/>
+<def f='luajit/lj_snap.c' l='181' ll='201' type='void lj_snap_add(jit_State * J)'/>
+<use f='luajit/lj_snap.c' l='629' u='c' c='lj_snap_replay'/>
+<doc f='luajit/lj_snap.c' l='180'>/* Add or merge a snapshot. */</doc>

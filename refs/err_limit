@@ -1,0 +1,7 @@
+<def f='luajit/lj_parse.c' l='184' ll='190' macro='1' type='void err_limit(FuncState * fs, uint32_t limit, const char * what)'/>
+<use f='luajit/lj_parse.c' l='192' u='c' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='192' u='c' c='var_new'/>
+<use f='luajit/lj_parse.c' l='192' u='c' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='193' u='c' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='193' u='c' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='192' u='c' c='parse_assignment'/>

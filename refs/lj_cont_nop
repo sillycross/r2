@@ -1,0 +1,4 @@
+<dec f='luajit/lj_vm.h' l='106' type='void lj_cont_nop()'/>
+<use f='luajit/lj_meta.c' l='189' u='r' c='lj_meta_tset'/>
+<use f='luajit/lj_record.c' l='915' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1423' u='r' c='lj_record_idx'/>

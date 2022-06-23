@@ -1,0 +1,6 @@
+<dec f='luajit/lj_parse.c' l='138' type='MSize'/>
+<use f='luajit/lj_parse.c' l='1473' u='r' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1609' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1621' u='w' c='fs_init'/>
+<offset>672</offset>
+<doc f='luajit/lj_parse.c' l='138'>/* Base of variable stack for this function. */</doc>

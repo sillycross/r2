@@ -1,0 +1,2 @@
+<dec f='luajit/host/buildvm_peobj.c' l='100' type='-2'/>
+<use f='luajit/host/buildvm_peobj.c' l='335' u='r' c='emit_peobj'/>

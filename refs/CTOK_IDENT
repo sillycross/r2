@@ -1,0 +1,23 @@
+<dec f='luajit/lj_ctype.h' l='361' macro='1' type='256'/>
+<use f='luajit/lj_cparse.c' l='134' u='r' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='196' u='r' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='213' u='r' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='433' u='r' c='cp_istypedecl'/>
+<use f='luajit/lj_cparse.c' l='521' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='570' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='570' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='1057' u='r' c='cp_decl_mode'/>
+<use f='luajit/lj_cparse.c' l='1093' u='r' c='cp_decl_gccattribute'/>
+<use f='luajit/lj_cparse.c' l='1175' u='r' c='cp_decl_msvcattribute'/>
+<use f='luajit/lj_cparse.c' l='1229' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1229' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1403' u='r' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1452' u='r' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1452' u='r' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1540' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1720' u='r' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1726' u='r' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1764' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1767' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1822' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1826' u='r' c='cp_decl_multi'/>

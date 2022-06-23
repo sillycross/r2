@@ -1,0 +1,2 @@
+<def f='luajit/lj_recdef.h' l='209' ll='269' type='const RecordFunc [59]'/>
+<use f='luajit/lj_ffrecord.c' l='1197' u='r' c='lj_ffrecord_func'/>

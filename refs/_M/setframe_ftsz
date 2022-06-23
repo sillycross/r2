@@ -1,0 +1,5 @@
+<dec f='luajit/lj_frame.h' l='50'/>
+<use f='luajit/lj_api.c' l='1222' u='c'/>
+<use f='luajit/lj_ccallback.c' l='564' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='116' u='c'/>
+<use f='luajit/lj_meta.c' l='91' u='c'/>

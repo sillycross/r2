@@ -1,0 +1,5 @@
+<dec f='luajit/lj_errmsg.h' l='158' macro='1' type='3156'/>
+<use f='luajit/lj_errmsg.h' l='158' macro='1' u='r'/>
+<use f='luajit/lib_ffi.c' l='62' u='r' c='ffi_checkctype'/>
+<use f='luajit/lj_cparse.c' l='207' u='r' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='1911' u='r' c='cpcparser'/>

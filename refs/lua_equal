@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='143' type='int lua_equal(lua_State * L, int idx1, int idx2)'/>
+<def f='luajit/lj_api.c' l='290' ll='321' macro='1' type='int lua_equal(lua_State * L, int idx1, int idx2)'/>

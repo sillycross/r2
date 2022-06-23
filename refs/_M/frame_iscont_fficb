@@ -1,0 +1,5 @@
+<dec f='luajit/lj_frame.h' l='105'/>
+<use f='luajit/lj_debug.c' l='91' u='c'/>
+<use f='luajit/lj_err.c' l='168' u='c'/>
+<use f='luajit/lj_err.c' l='808' u='c'/>
+<use f='luajit/lj_err.c' l='949' u='c'/>

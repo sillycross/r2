@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ir.h' l='277'/>
+<use f='luajit/lj_ir.h' l='586' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2476' u='c'/>

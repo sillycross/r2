@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cconv.h' l='61' type='int lj_cconv_tv_bf(CTState * cts, CType * s, TValue * o, uint8_t * sp)'/>
+<def f='luajit/lj_cconv.c' l='426' ll='467' type='int lj_cconv_tv_bf(CTState * cts, CType * s, TValue * o, uint8_t * sp)'/>
+<doc f='luajit/lj_cconv.c' l='425'>/* Convert bitfield to TValue. */</doc>
+<use f='luajit/lj_cdata.c' l='234' u='c' c='lj_cdata_get'/>

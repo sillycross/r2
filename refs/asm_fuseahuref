@@ -1,0 +1,13 @@
+<def f='luajit/lj_asm_x86.h' l='181' ll='229' type='void asm_fuseahuref(ASMState * as, IRRef ref, RegSet allow)'/>
+<use f='luajit/lj_asm_x86.h' l='469' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='482' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='1535' u='c' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1562' u='c' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1604' u='c' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1616' u='c' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1636' u='c' c='asm_ahustore'/>
+<doc f='luajit/lj_asm_x86.h' l='176'>/* Fuse array/hash/upvalue reference into memory operand.
+** Caveat: this may allocate GPRs for the base/idx registers. Be sure to
+** pass the final allow mask, excluding any GPRs used for other inputs.
+** In particular: 2-operand GPR instructions need to call ra_dest() first!
+*/</doc>

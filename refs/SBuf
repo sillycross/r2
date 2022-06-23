@@ -1,0 +1,7 @@
+<def f='luajit/lj_obj.h' l='161' ll='163'/>
+<use f='luajit/lj_obj.h' l='161'/>
+<size>32</size>
+<mbr r='SBuf::w' o='0' t='char *'/>
+<mbr r='SBuf::e' o='64' t='char *'/>
+<mbr r='SBuf::b' o='128' t='char *'/>
+<mbr r='SBuf::L' o='192' t='MRef'/>

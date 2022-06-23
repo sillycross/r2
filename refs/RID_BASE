@@ -1,0 +1,20 @@
+<dec f='luajit/lj_target_x86.h' l='47' type='2'/>
+<doc f='luajit/lj_target_x86.h' l='46'>/* These definitions must match with the *.dasc file(s): */</doc>
+<doc f='luajit/lj_target_x86.h' l='47'>/* Interpreter BASE. */</doc>
+<use f='luajit/lj_asm.c' l='357' u='r' c='ra_rematk'/>
+<use f='luajit/lj_asm_x86.h' l='2666' u='r' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2709' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2715' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2720' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2722' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2724' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2727' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2734' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2736' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2737' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2851' u='r' c='asm_head_root_base'/>
+<use f='luajit/lj_asm_x86.h' l='2852' u='r' c='asm_head_root_base'/>
+<use f='luajit/lj_asm.c' l='2061' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2089' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2091' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2141' u='r' c='asm_setup_regsp'/>

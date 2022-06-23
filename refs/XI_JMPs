@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='213' type='235'/>
+<use f='luajit/lj_asm_x86.h' l='19' u='r' c='asm_exitstub_gen'/>
+<use f='luajit/lj_asm_x86.h' l='2813' u='r' c='asm_loop_fixup'/>
+<use f='luajit/lj_ccallback.c' l='143' u='r' c='callback_mcode_init'/>

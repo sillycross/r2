@@ -1,0 +1,42 @@
+<dec f='luajit/lj_obj.h' l='656' type='GCRef [38]'/>
+<offset>3392</offset>
+<doc f='luajit/lj_obj.h' l='656'>/* GC roots. */</doc>
+<use f='luajit/lib_base.c' l='521' macro='1' u='m' c='lj_cf_print'/>
+<use f='luajit/lib_ffi.c' l='338' macro='1' u='m' c='ffi_pairs'/>
+<use f='luajit/lib_ffi.c' l='515' macro='1' u='m' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='855' macro='1' u='m' c='luaopen_ffi'/>
+<use f='luajit/lib_io.c' l='42' u='m' c='io_stdfile'/>
+<use f='luajit/lib_io.c' l='42' u='m' c='io_file_write'/>
+<use f='luajit/lib_io.c' l='42' u='m' c='lj_cf_io_method_close'/>
+<use f='luajit/lib_io.c' l='472' u='m' c='io_std_getset'/>
+<use f='luajit/lib_io.c' l='42' u='m' c='io_std_getset'/>
+<use f='luajit/lib_io.c' l='42' u='m' c='lj_cf_io_lines'/>
+<use f='luajit/lib_io.c' l='538' u='m' c='luaopen_io'/>
+<use f='luajit/lib_io.c' l='539' u='m' c='luaopen_io'/>
+<use f='luajit/lib_string.c' l='668' macro='1' u='m' c='luaopen_string'/>
+<use f='luajit/lib_string.c' l='669' macro='1' u='m' c='luaopen_string'/>
+<use f='luajit/lj_api.c' l='855' macro='1' u='m' c='lua_getmetatable'/>
+<use f='luajit/lj_api.c' l='1050' macro='1' u='m' c='lua_setmetatable'/>
+<use f='luajit/lj_api.c' l='1051' macro='1' u='m' c='lua_setmetatable'/>
+<use f='luajit/lj_api.c' l='1054' macro='1' u='m' c='lua_setmetatable'/>
+<use f='luajit/lj_ctype.c' l='351' macro='1' u='m' c='lj_ctype_meta'/>
+<use f='luajit/lj_debug.c' l='314' macro='1' u='m' c='lj_debug_funcname'/>
+<use f='luajit/lj_ffrecord.c' l='1168' macro='1' u='m' c='recff_debug_getmetatable'/>
+<use f='luajit/lj_gc.c' l='94' u='m' c='gc_mark_gcroot'/>
+<use f='luajit/lj_gc.c' l='95' u='m' c='gc_mark_gcroot'/>
+<use f='luajit/lj_gc.c' l='95' u='m' c='gc_mark_gcroot'/>
+<use f='luajit/lj_gc.c' l='146' macro='1' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='177' macro='1' u='m' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='563' macro='1' u='m' c='gc_finalize'/>
+<use f='luajit/lj_meta.c' l='42' u='m' c='lj_meta_init'/>
+<use f='luajit/lj_meta.c' l='67' macro='1' u='m' c='lj_meta_lookup'/>
+<use f='luajit/lj_meta.c' l='69' macro='1' u='m' c='lj_meta_lookup'/>
+<use f='luajit/lj_meta.c' l='144' macro='1' u='m' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='174' macro='1' u='m' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='332' macro='1' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' macro='1' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_record.c' l='996' macro='1' u='m' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1011' macro='1' u='m' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1026' macro='1' u='m' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1398' macro='1' u='m' c='nommstr'/>
+<use f='luajit/lj_record.c' l='1493' macro='1' u='m' c='lj_record_idx'/>

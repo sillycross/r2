@@ -1,0 +1,10 @@
+<dec f='luajit/lj_parse.c' l='135' type='BCLine'/>
+<use f='luajit/lj_parse.c' l='186' u='r' c='err_limit'/>
+<use f='luajit/lj_parse.c' l='189' u='r' c='err_limit'/>
+<use f='luajit/lj_parse.c' l='1426' u='r' c='fs_fixup_line'/>
+<use f='luajit/lj_parse.c' l='1428' u='r' c='fs_fixup_line'/>
+<use f='luajit/lj_parse.c' l='1571' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1867' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='2730' u='w' c='lj_parse'/>
+<offset>544</offset>
+<doc f='luajit/lj_parse.c' l='135'>/* First line of the function definition. */</doc>

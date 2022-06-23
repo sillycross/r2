@@ -1,0 +1,12 @@
+<dec f='luajit/lj_err.h' l='23' type='GCstr * lj_err_str(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lib_base.c' l='615' u='c' c='ffh_resume'/>
+<use f='luajit/lj_api.c' l='1244' u='c' c='lua_resume'/>
+<use f='luajit/lj_ccallback.c' l='685' u='c' c='lj_ccallback_enter'/>
+<use f='luajit/lj_err.c' l='429' u='c' c='lj_err_unwind_dwarf'/>
+<def f='luajit/lj_err.c' l='767' ll='770' macro='1' type='GCstr * lj_err_str(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lj_err.c' l='777' u='c' c='lj_err_mem'/>
+<use f='luajit/lj_err.c' l='841' u='c' c='lj_err_run'/>
+<use f='luajit/lj_lex.c' l='437' u='c' c='lj_lex_setup'/>
+<use f='luajit/lj_load.c' l='38' u='c' c='cpparser'/>
+<use f='luajit/lj_mcode.c' l='176' u='c' c='mcode_protfail'/>
+<use f='luajit/lj_state.c' l='156' u='c' c='cpluaopen'/>

@@ -1,0 +1,40 @@
+<dec f='luajit/lua.h' l='256'/>
+<doc f='luajit/lua.h' l='250'>/*
+** ===============================================================
+** some useful macros
+** ===============================================================
+*/</doc>
+<use f='luajit/lib_aux.c' l='92' u='c'/>
+<use f='luajit/lib_aux.c' l='98' u='c'/>
+<use f='luajit/lib_aux.c' l='119' u='c'/>
+<use f='luajit/lib_aux.c' l='139' u='c'/>
+<use f='luajit/lib_aux.c' l='158' u='c'/>
+<use f='luajit/lib_aux.c' l='252' u='c'/>
+<use f='luajit/lib_aux.c' l='281' u='c'/>
+<use f='luajit/lib_aux.c' l='286' u='c'/>
+<use f='luajit/lib_base.c' l='497' u='c'/>
+<use f='luajit/lib_init.c' l='53' u='c'/>
+<use f='luajit/lib_os.c' l='152' u='c'/>
+<use f='luajit/lib_os.c' l='167' u='c'/>
+<use f='luajit/lib_package.c' l='215' u='c'/>
+<use f='luajit/lib_package.c' l='261' u='c'/>
+<use f='luajit/lib_package.c' l='459' u='c'/>
+<use f='luajit/lib_package.c' l='488' u='c'/>
+<use f='luajit/lib_package.c' l='522' u='c'/>
+<use f='luajit/lib_package.c' l='524' u='c'/>
+<use f='luajit/lib_package.c' l='614' u='c'/>
+<use f='luajit/lib_package.c' l='625' u='c'/>
+<use f='luajit/lib_string.c' l='592' u='c'/>
+<use f='luajit/lib_table.c' l='189' u='c'/>
+<use f='luajit/lib_table.c' l='206' u='c'/>
+<use f='luajit/lib_table.c' l='214' u='c'/>
+<use f='luajit/lib_table.c' l='219' u='c'/>
+<use f='luajit/lib_table.c' l='232' u='c'/>
+<use f='luajit/lib_table.c' l='237' u='c'/>
+<use f='luajit/lib_table.c' l='240' u='c'/>
+<use f='luajit/luajit.c' l='94' u='c'/>
+<use f='luajit/luajit.c' l='194' u='c'/>
+<use f='luajit/luajit.c' l='204' u='c'/>
+<use f='luajit/luajit.c' l='286' u='c'/>
+<use f='luajit/luajit.c' l='290' u='c'/>
+<use f='luajit/luajit.c' l='355' u='c'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/lj_bc.h' l='246'/>
+<use f='luajit/lj_debug.c' l='261' u='c'/>
+<use f='luajit/lj_debug.c' l='264' u='c'/>
+<use f='luajit/lj_record.c' l='324' u='c'/>
+<use f='luajit/lj_record.c' l='326' u='c'/>
+<use f='luajit/lj_record.c' l='2093' u='c'/>
+<use f='luajit/lj_record.c' l='2497' u='c'/>
+<use f='luajit/lj_snap.c' l='273' u='c'/>

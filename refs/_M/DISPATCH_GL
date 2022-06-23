@@ -1,0 +1,289 @@
+<dec f='luajit/host/buildvm_arch.h' l='318'/>
+<use f='luajit/host/buildvm_arch.h' l='421' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='747' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='836' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1237' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1266' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1279' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1279' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1327' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1327' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1327' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1503' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1918' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1918' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1941' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1941' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2023' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2023' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2024' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2024' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2024' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2025' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2025' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2025' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2061' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2238' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2238' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2238' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2259' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2259' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2502' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2502' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3582' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3582' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3607' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3607' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3800' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3800' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3866' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3866' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3896' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3896' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3922' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3922' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3969' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3969' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4519' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4519' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4645' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4650' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4660' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4660' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='98'>//|
+//|// Stack layout while in interpreter. Must match with lj_frame.h.
+//|//-----------------------------------------------------------------------
+//|.if X64WIN		// x64/Windows stack layout
+//|
+//|.define CFRAME_SPACE,	aword*5			// Delta for rsp (see &lt;--).
+//|.macro saveregs_
+//|  push rdi; push rsi; push rbx
+//|  sub rsp, CFRAME_SPACE
+//|.endmacro
+//|.macro saveregs
+//|  push rbp; saveregs_
+//|.endmacro
+//|.macro restoreregs
+//|  add rsp, CFRAME_SPACE
+//|  pop rbx; pop rsi; pop rdi; pop rbp
+//|.endmacro
+//|
+//|.define SAVE_CFRAME,	aword [rsp+aword*13]
+//|.define SAVE_PC,	aword [rsp+aword*12]
+//|.define SAVE_L,	aword [rsp+aword*11]
+//|.define SAVE_ERRF,	dword [rsp+dword*21]
+//|.define SAVE_NRES,	dword [rsp+dword*20]
+//|//----- 16 byte aligned, ^^^ 32 byte register save area, owned by interpreter
+//|.define SAVE_RET,	aword [rsp+aword*9]	//&lt;-- rsp entering interpreter.
+//|.define SAVE_R4,	aword [rsp+aword*8]
+//|.define SAVE_R3,	aword [rsp+aword*7]
+//|.define SAVE_R2,	aword [rsp+aword*6]
+//|.define SAVE_R1,	aword [rsp+aword*5]	//&lt;-- rsp after register saves.
+//|.define ARG5,		aword [rsp+aword*4]
+//|.define CSAVE_4,	aword [rsp+aword*3]
+//|.define CSAVE_3,	aword [rsp+aword*2]
+//|.define CSAVE_2,	aword [rsp+aword*1]
+//|.define CSAVE_1,	aword [rsp]		//&lt;-- rsp while in interpreter.
+//|//----- 16 byte aligned, ^^^ 32 byte register save area, owned by callee
+//|
+//|.define ARG5d,		dword [rsp+dword*8]
+//|.define TMP1,		ARG5			// TMP1 overlaps ARG5
+//|.define TMP1d,		ARG5d
+//|.define TMP1hi,	dword [rsp+dword*9]
+//|.define MULTRES,	TMP1d			// MULTRES overlaps TMP1d.
+//|
+//|//-----------------------------------------------------------------------
+//|.else			// x64/POSIX stack layout
+//|
+//|.define CFRAME_SPACE,	aword*5			// Delta for rsp (see &lt;--).
+//|.macro saveregs_
+//|  push rbx; push r15; push r14
+//|.if NO_UNWIND
+//|  push r13; push r12
+//|.endif
+//|  sub rsp, CFRAME_SPACE
+//|.endmacro
+//|.macro saveregs
+//|  push rbp; saveregs_
+//|.endmacro
+//|.macro restoreregs
+//|  add rsp, CFRAME_SPACE
+//|.if NO_UNWIND
+//|  pop r12; pop r13
+//|.endif
+//|  pop r14; pop r15; pop rbx; pop rbp
+//|.endmacro
+//|
+//|//----- 16 byte aligned,
+//|.if NO_UNWIND
+//|.define SAVE_RET,	aword [rsp+aword*11]	//&lt;-- rsp entering interpreter.
+//|.define SAVE_R4,	aword [rsp+aword*10]
+//|.define SAVE_R3,	aword [rsp+aword*9]
+//|.define SAVE_R2,	aword [rsp+aword*8]
+//|.define SAVE_R1,	aword [rsp+aword*7]
+//|.define SAVE_RU2,	aword [rsp+aword*6]
+//|.define SAVE_RU1,	aword [rsp+aword*5]	//&lt;-- rsp after register saves.
+//|.else
+//|.define SAVE_RET,	aword [rsp+aword*9]	//&lt;-- rsp entering interpreter.
+//|.define SAVE_R4,	aword [rsp+aword*8]
+//|.define SAVE_R3,	aword [rsp+aword*7]
+//|.define SAVE_R2,	aword [rsp+aword*6]
+//|.define SAVE_R1,	aword [rsp+aword*5]	//&lt;-- rsp after register saves.
+//|.endif
+//|.define SAVE_CFRAME,	aword [rsp+aword*4]
+//|.define SAVE_PC,	aword [rsp+aword*3]
+//|.define SAVE_L,	aword [rsp+aword*2]
+//|.define SAVE_ERRF,	dword [rsp+dword*3]
+//|.define SAVE_NRES,	dword [rsp+dword*2]
+//|.define TMP1,		aword [rsp]		//&lt;-- rsp while in interpreter.
+//|//----- 16 byte aligned
+//|
+//|.define TMP1d,		dword [rsp]
+//|.define TMP1hi,	dword [rsp+dword*1]
+//|.define MULTRES,	TMP1d			// MULTRES overlaps TMP1d.
+//|
+//|.endif
+//|
+//|//-----------------------------------------------------------------------
+//|
+//|// Instruction headers.
+//|.macro ins_A; .endmacro
+//|.macro ins_AD; .endmacro
+//|.macro ins_AJ; .endmacro
+//|.macro ins_ABC; movzx RBd, RCH; movzx RCd, RCL; .endmacro
+//|.macro ins_AB_; movzx RBd, RCH; .endmacro
+//|.macro ins_A_C; movzx RCd, RCL; .endmacro
+//|.macro ins_AND; not RD; .endmacro
+//|
+//|// Instruction decode+dispatch. Carefully tuned (nope, lodsd is not faster).
+//|.macro ins_NEXT
+//|  mov RCd, [PC]
+//|  movzx RAd, RCH
+//|  movzx OP, RCL
+//|  add PC, 4
+//|  shr RCd, 16
+//|  jmp aword [DISPATCH+OP*8]
+//|.endmacro
+//|
+//|// Instruction footer.
+//|.if 1
+//|  // Replicated dispatch. Less unpredictable branches, but higher I-Cache use.
+//|  .define ins_next, ins_NEXT
+//|  .define ins_next_, ins_NEXT
+//|.else
+//|  // Common dispatch. Lower I-Cache use, only one (very) unpredictable branch.
+//|  // Affects only certain kinds of benchmarks (and only with -j off).
+//|  // Around 10%-30% slower on Core2, a lot more slower on P4.
+//|  .macro ins_next
+//|    jmp -&gt;ins_next
+//|  .endmacro
+//|  .macro ins_next_
+//|  -&gt;ins_next:
+//|    ins_NEXT
+//|  .endmacro
+//|.endif
+//|
+//|// Call decode and dispatch.
+//|.macro ins_callt
+//|  // BASE = new base, RB = LFUNC, RD = nargs+1, [BASE-8] = PC
+//|  mov PC, LFUNC:RB-&gt;pc
+//|  mov RAd, [PC]
+//|  movzx OP, RAL
+//|  movzx RAd, RAH
+//|  add PC, 4
+//|  jmp aword [DISPATCH+OP*8]
+//|.endmacro
+//|
+//|.macro ins_call
+//|  // BASE = new base, RB = LFUNC, RD = nargs+1
+//|  mov [BASE-8], PC
+//|  ins_callt
+//|.endmacro
+//|
+//|//-----------------------------------------------------------------------
+//|
+//|// Macros to clear or set tags.
+//|.macro cleartp, reg; shl reg, 17; shr reg, 17; .endmacro
+//|.macro settp, reg, tp
+//|  mov64 ITYPE, ((uint64_t)tp&lt;&lt;47)
+//|  or reg, ITYPE
+//|.endmacro
+//|.macro settp, dst, reg, tp
+//|  mov64 dst, ((uint64_t)tp&lt;&lt;47)
+//|  or dst, reg
+//|.endmacro
+//|.macro setint, reg
+//|  settp reg, LJ_TISNUM
+//|.endmacro
+//|.macro setint, dst, reg
+//|  settp dst, reg, LJ_TISNUM
+//|.endmacro
+//|
+//|// Macros to test operand types.
+//|.macro checktp_nc, reg, tp, target
+//|  mov ITYPE, reg
+//|  sar ITYPE, 47
+//|  cmp ITYPEd, tp
+//|  jne target
+//|.endmacro
+//|.macro checktp, reg, tp, target
+//|  mov ITYPE, reg
+//|  cleartp reg
+//|  sar ITYPE, 47
+//|  cmp ITYPEd, tp
+//|  jne target
+//|.endmacro
+//|.macro checktptp, src, tp, target
+//|  mov ITYPE, src
+//|  sar ITYPE, 47
+//|  cmp ITYPEd, tp
+//|  jne target
+//|.endmacro
+//|.macro checkstr, reg, target; checktp reg, LJ_TSTR, target; .endmacro
+//|.macro checktab, reg, target; checktp reg, LJ_TTAB, target; .endmacro
+//|.macro checkfunc, reg, target; checktp reg, LJ_TFUNC, target; .endmacro
+//|
+//|.macro checknumx, reg, target, jump
+//|  mov ITYPE, reg
+//|  sar ITYPE, 47
+//|  cmp ITYPEd, LJ_TISNUM
+//|  jump target
+//|.endmacro
+//|.macro checkint, reg, target; checknumx reg, target, jne; .endmacro
+//|.macro checkinttp, src, target; checknumx src, target, jne; .endmacro
+//|.macro checknum, reg, target; checknumx reg, target, jae; .endmacro
+//|.macro checknumtp, src, target; checknumx src, target, jae; .endmacro
+//|.macro checknumber, src, target; checknumx src, target, ja; .endmacro
+//|
+//|.macro mov_false, reg; mov64 reg, (int64_t)~((uint64_t)1&lt;&lt;47); .endmacro
+//|.macro mov_true, reg; mov64 reg, (int64_t)~((uint64_t)2&lt;&lt;47); .endmacro
+//|
+//|// These operands must be used with movzx.
+//|.define PC_OP, byte [PC-4]
+//|.define PC_RA, byte [PC-3]
+//|.define PC_RB, byte [PC-1]
+//|.define PC_RC, byte [PC-2]
+//|.define PC_RD, word [PC-2]
+//|
+//|.macro branchPC, reg
+//|  lea PC, [PC+reg*4-BCBIAS_J*4]
+//|.endmacro
+//|
+//|// Assumes DISPATCH is relative to GL.</doc>

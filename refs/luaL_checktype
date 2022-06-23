@@ -1,0 +1,5 @@
+<dec f='luajit/lauxlib.h' l='46' type='void luaL_checktype(lua_State * L, int narg, int t)'/>
+<use f='luajit/lib_debug.c' l='333' u='c' c='lj_cf_debug_sethook'/>
+<use f='luajit/lib_os.c' l='236' u='c' c='lj_cf_os_time'/>
+<use f='luajit/lib_package.c' l='535' u='c' c='lj_cf_package_seeall'/>
+<def f='luajit/lj_api.c' l='240' ll='244' macro='1' type='void luaL_checktype(lua_State * L, int idx, int tt)'/>

@@ -1,0 +1,11 @@
+<def f='luajit/lj_obj.h' l='484' ll='491'/>
+<use f='luajit/lj_obj.h' l='484'/>
+<size>24</size>
+<doc f='luajit/lj_obj.h' l='483'>/* Hash node. */</doc>
+<mbr r='Node::val' o='0' t='TValue'/>
+<mbr r='Node::key' o='64' t='TValue'/>
+<mbr r='Node::next' o='128' t='MRef'/>
+<use f='luajit/host/minilua.c' l='348'/>
+<def f='luajit/host/minilua.c' l='352' ll='355'/>
+<use f='luajit/host/minilua.c' l='352'/>
+<size>40</size>

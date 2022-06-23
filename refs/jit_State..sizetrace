@@ -1,0 +1,11 @@
+<dec f='luajit/lj_jit.h' l='464' type='MSize'/>
+<offset>3168</offset>
+<doc f='luajit/lj_jit.h' l='464'>/* Size of trace array. */</doc>
+<use f='luajit/lib_jit.c' l='287' u='r' c='jit_checktrace'/>
+<use f='luajit/lj_trace.c' l='66' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='72' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='75' u='a' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='76' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='265' u='r' c='lj_trace_flush'/>
+<use f='luajit/lj_trace.c' l='286' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='368' u='r' c='lj_trace_freestate'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_carith.h' l='22' type='uint64_t lj_carith_shift64(uint64_t x, int32_t sh, int op)'/>
+<use f='luajit/lib_bit.c' l='98' u='c' c='lj_ffh_bit_lshift'/>
+<def f='luajit/lj_carith.c' l='298' ll='311' type='uint64_t lj_carith_shift64(uint64_t x, int32_t sh, int op)'/>
+<use f='luajit/lj_opt_fold.c' l='441' u='c' c='fold_kfold_int64shift'/>

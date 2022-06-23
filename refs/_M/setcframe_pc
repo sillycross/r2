@@ -1,0 +1,12 @@
+<dec f='luajit/lj_frame.h' l='290'/>
+<use f='luajit/lj_ccallback.c' l='569' u='c'/>
+<use f='luajit/lj_ccallback.c' l='712' u='c'/>
+<use f='luajit/lj_dispatch.c' l='406' u='c'/>
+<use f='luajit/lj_dispatch.c' l='524' u='c'/>
+<use f='luajit/lj_dispatch.c' l='528' u='c'/>
+<use f='luajit/lj_dispatch.c' l='543' u='c'/>
+<use f='luajit/lj_dispatch.c' l='546' u='c'/>
+<use f='luajit/lj_err.c' l='960' u='c'/>
+<use f='luajit/lj_snap.c' l='889' u='c'/>
+<use f='luajit/lj_trace.c' l='889' u='c'/>
+<use f='luajit/lj_trace.c' l='910' u='c'/>

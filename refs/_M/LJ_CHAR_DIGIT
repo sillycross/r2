@@ -1,0 +1,4 @@
+<dec f='luajit/lj_char.h' l='14'/>
+<use f='luajit/lib_string.c' l='197' u='c'/>
+<use f='luajit/lj_strscan.c' l='404' u='c'/>
+<use f='luajit/lj_strscan.c' l='416' u='c'/>

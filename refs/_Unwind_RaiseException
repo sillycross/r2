@@ -1,0 +1,2 @@
+<dec f='luajit/lj_err.c' l='406' type='int _Unwind_RaiseException(_Unwind_Exception * )'/>
+<use f='luajit/lj_err.c' l='724' u='c' c='err_raise_ext'/>

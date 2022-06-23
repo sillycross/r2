@@ -1,0 +1,10 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='78'/>
+<use f='luajit/host/buildvm_arch.h' l='4299' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4337' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4369' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4417' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm.c' l='215' u='r' c='build_code'/>
+<use f='luajit/lj_bcwrite.c' l='229' u='r' c='bcwrite_bytecode'/>
+<use f='luajit/lj_record.c' l='2416' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2625' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='486' u='r' c='trace_stop'/>

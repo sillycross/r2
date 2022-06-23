@@ -1,0 +1,12 @@
+<dec f='luajit/dasm_x86.h' l='70' type='size_t'/>
+<use f='luajit/dasm_x86.h' l='96' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='132' u='r' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='133' u='r' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='133' u='w' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='134' u='r' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='146' u='r' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='230' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='249' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='288' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='502' u='r' c='dasm_getpclabel'/>
+<offset>320</offset>

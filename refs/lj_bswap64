@@ -1,0 +1,4 @@
+<def f='luajit/lj_def.h' l='191' ll='194' type='uint64_t lj_bswap64(uint64_t x)'/>
+<use f='luajit/lib_bit.c' l='84' u='c' c='lj_ffh_bit_bswap'/>
+<use f='luajit/lj_opt_fold.c' l='461' u='c' c='fold_kfold_bswap64'/>
+<use f='luajit/lj_serialize.c' l='159' u='c' c='serialize_put'/>

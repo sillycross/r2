@@ -1,0 +1,4 @@
+<dec f='luajit/lj_alloc.h' l='12' type='void * lj_alloc_create(PRNGState * rs)'/>
+<def f='luajit/lj_alloc.c' l='1226' ll='1249' type='void * lj_alloc_create(PRNGState * rs)'/>
+<doc f='luajit/lj_alloc.c' l='1224'>/* ----------------------------------------------------------------------- */</doc>
+<use f='luajit/lj_state.c' l='213' u='c' c='lua_newstate'/>

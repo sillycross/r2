@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='361' macro='1' type='261'/>
+<use f='luajit/lj_cparse.c' l='329' u='r' c='cp_next_'/>
+<use f='luajit/lj_cparse.c' l='612' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='1702' u='r' c='cp_declarator'/>

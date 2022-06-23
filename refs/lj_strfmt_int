@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strfmt.h' l='114' type='GCstr * lj_strfmt_int(lua_State * L, int32_t k)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='908' u='c' c='fold_kfold_tostr_kint'/>
+<def f='luajit/lj_strfmt.c' l='483' ll='488' type='GCstr * lj_strfmt_int(lua_State * L, int32_t k)'/>
+<use f='luajit/lj_strfmt.c' l='493' u='c' c='lj_strfmt_number'/>
+<doc f='luajit/lj_strfmt.c' l='482'>/* Convert integer to string. */</doc>

@@ -1,0 +1,17 @@
+<dec f='luajit/host/buildvm.h' l='79' type='BuildSym *'/>
+<use f='luajit/host/buildvm_arch.h' l='4839' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm_arch.h' l='4840' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm_arch.h' l='4840' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm.c' l='160' u='r' c='sym_insert'/>
+<use f='luajit/host/buildvm.c' l='162' u='r' c='sym_insert'/>
+<use f='luajit/host/buildvm.c' l='162' u='r' c='sym_insert'/>
+<use f='luajit/host/buildvm.c' l='165' u='r' c='sym_insert'/>
+<use f='luajit/host/buildvm.c' l='166' u='r' c='sym_insert'/>
+<use f='luajit/host/buildvm.c' l='205' u='w' c='build_code'/>
+<offset>704</offset>
+<use f='luajit/host/buildvm_asm.c' l='277' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_asm.c' l='278' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_asm.c' l='289' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_peobj.c' l='262' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='354' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='354' u='r' c='emit_peobj'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_strfmt.h' l='106' type='SBuf * lj_strfmt_putfnum(SBuf * sb, SFormat , lua_Number n)'/>
+<use f='luajit/lib_buffer.c' l='126' u='c' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lj_buf.c' l='228' u='c' c='lj_buf_puttab'/>
+<use f='luajit/lj_ctype.c' l='583' u='c' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='585' u='c' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_meta.c' l='301' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_strfmt.c' l='177' u='c' c='lj_strfmt_wstrnum'/>
+<use f='luajit/lj_strfmt.c' l='198' u='c' c='lj_strfmt_putnum'/>
+<use f='luajit/lj_strfmt.c' l='428' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='566' u='c' c='lj_strfmt_pushvf'/>
+<def f='luajit/lj_strfmt_num.c' l='577' ll='581' type='SBuf * lj_strfmt_putfnum(SBuf * sb, SFormat sf, lua_Number n)'/>
+<doc f='luajit/lj_strfmt_num.c' l='576'>/* Add formatted floating-point number to buffer. */</doc>

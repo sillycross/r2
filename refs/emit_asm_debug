@@ -1,0 +1,3 @@
+<def f='luajit/host/buildvm_arch.h' l='4683' ll='4908' type='void emit_asm_debug(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='479' u='c' c='main'/>
+<doc f='luajit/host/buildvm_arch.h' l='4682'>/* Emit pseudo frame-info for all assembler functions. */</doc>

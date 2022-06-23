@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ctype.h' l='465'/>
+<use f='luajit/lib_ffi.c' l='654' u='c'/>
+<use f='luajit/lj_carith.c' l='71' u='c'/>
+<use f='luajit/lj_cconv.c' l='583' u='c'/>
+<use f='luajit/lj_cdata.c' l='192' u='c'/>
+<use f='luajit/lj_cparse.c' l='572' u='c'/>
+<use f='luajit/lj_crecord.c' l='632' u='c'/>
+<use f='luajit/lj_crecord.c' l='872' u='c'/>
+<use f='luajit/lj_crecord.c' l='1535' u='c'/>

@@ -1,0 +1,33 @@
+<dec f='luajit/lj_obj.h' l='502' type='MRef'/>
+<use f='luajit/host/buildvm_arch.h' l='1253' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='3690' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3822' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4118' u='a' c='build_ins'/>
+<offset>320</offset>
+<doc f='luajit/lj_obj.h' l='502'>/* Hash part. */</doc>
+<use f='luajit/lj_tab.h' l='37' u='m' c='hashmask'/>
+<use f='luajit/lib_table.c' l='69' u='m' c='lj_cf_table_maxn'/>
+<use f='luajit/lj_bcwrite.c' l='93' u='m' c='bcwrite_ktab'/>
+<use f='luajit/lj_bcwrite.c' l='109' u='m' c='bcwrite_ktab'/>
+<use f='luajit/lj_gc.c' l='207' u='m' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='486' u='m' c='gc_clearweak'/>
+<use f='luajit/lj_gc.c' l='583' u='m' c='lj_gc_finalize_cdata'/>
+<use f='luajit/lj_parse.c' l='1375' u='m' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='1813' u='m' c='expr_table'/>
+<use f='luajit/lj_record.c' l='1373' u='m' c='rec_idx_key'/>
+<use f='luajit/lj_serialize.c' l='181' u='m' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='196' u='m' c='serialize_put'/>
+<use f='luajit/lj_tab.c' l='46' u='m' c='newhpart'/>
+<use f='luajit/lj_tab.c' l='61' u='m' c='clearhpart'/>
+<use f='luajit/lj_tab.c' l='97' u='m' c='newtab'/>
+<use f='luajit/lj_tab.c' l='112' u='m' c='newtab'/>
+<use f='luajit/lj_tab.c' l='187' u='m' c='lj_tab_dup'/>
+<use f='luajit/lj_tab.c' l='188' u='m' c='lj_tab_dup'/>
+<use f='luajit/lj_tab.c' l='208' u='m' c='lj_tab_clear'/>
+<use f='luajit/lj_tab.c' l='218' u='m' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='232' u='m' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='262' u='m' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='332' u='m' c='counthash'/>
+<use f='luajit/lj_tab.c' l='446' u='m' c='lj_tab_newkey'/>
+<use f='luajit/lj_tab.c' l='591' u='m' c='keyindex'/>
+<use f='luajit/lj_tab.c' l='613' u='m' c='lj_tab_next'/>

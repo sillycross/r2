@@ -1,0 +1,17 @@
+<dec f='luajit/lj_obj.h' l='643' type='TValue'/>
+<offset>2176</offset>
+<doc f='luajit/lj_obj.h' l='643'>/* Anchor for registry. */</doc>
+<use f='luajit/lib_debug.c' l='28' macro='1' u='a' c='lj_cf_debug_getregistry'/>
+<use f='luajit/lib_ffi.c' l='840' macro='1' u='a' c='ffi_register_module'/>
+<use f='luajit/lib_jit.c' l='555' macro='1' u='a' c='jit_profile_callback'/>
+<use f='luajit/lib_jit.c' l='575' macro='1' u='a' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lib_jit.c' l='597' macro='1' u='a' c='lj_cf_jit_profile_stop'/>
+<use f='luajit/lj_api.c' l='48' macro='1' u='a' c='index2adr'/>
+<use f='luajit/lj_api.c' l='728' macro='1' u='a' c='luaL_newmetatable'/>
+<use f='luajit/lj_api.c' l='944' macro='1' u='a' c='luaL_testudata'/>
+<use f='luajit/lj_gc.c' l='106' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='106' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='106' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_state.c' l='152' macro='1' u='a' c='cpluaopen'/>
+<use f='luajit/lj_state.c' l='242' macro='1' u='a' c='lua_newstate'/>
+<use f='luajit/lj_vmevent.c' l='23' macro='1' u='a' c='lj_vmevent_prepare'/>

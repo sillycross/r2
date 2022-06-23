@@ -1,0 +1,3 @@
+<dec f='luajit/lj_errmsg.h' l='168' macro='1' type='3490'/>
+<use f='luajit/lj_errmsg.h' l='168' macro='1' u='r'/>
+<use f='luajit/lj_cparse.c' l='161' u='r' c='cp_err_badidx'/>

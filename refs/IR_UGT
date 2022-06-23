@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='7'/>
+<use f='luajit/lj_asm.c' l='1732' c='asm_ir'/>
+<use f='luajit/lj_ffrecord.c' l='794' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='906' u='r' c='recff_string_find'/>
+<use f='luajit/lj_ir.c' l='464' c='lj_ir_numcmp'/>
+<use f='luajit/lj_opt_fold.c' l='356' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='487' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_record.c' l='1652' u='r' c='rec_upvalue'/>

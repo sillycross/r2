@@ -1,0 +1,9 @@
+<dec f='luajit/lj_record.h' l='19' type='GCtab *'/>
+<offset>256</offset>
+<doc f='luajit/lj_record.h' l='19'>/* Runtime value of metatable object. */</doc>
+<use f='luajit/lj_record.c' l='1004' u='w' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1030' u='w' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1124' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1127' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1165' u='r' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1168' u='r' c='rec_mm_comp'/>

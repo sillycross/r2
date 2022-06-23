@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='52' type='void lj_gc_finalize_cdata(lua_State * L)'/>
+<def f='luajit/lj_gc.c' l='577' ll='597' type='void lj_gc_finalize_cdata(lua_State * L)'/>
+<doc f='luajit/lj_gc.c' l='576'>/* Finalize all cdata objects from finalizer table. */</doc>
+<use f='luajit/lj_state.c' l='270' u='c' c='cpfinalize'/>

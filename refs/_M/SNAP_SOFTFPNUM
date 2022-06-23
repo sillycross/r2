@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='202'/>
+<use f='luajit/lj_asm.c' l='975' u='c'/>
+<use f='luajit/lj_snap.c' l='102' u='c'/>
+<use f='luajit/lj_snap.c' l='505' u='c'/>
+<use f='luajit/lj_snap.c' l='920' u='c'/>

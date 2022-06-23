@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='685' type='uint8_t'/>
+<offset>80</offset>
+<doc f='luajit/lj_obj.h' l='685'>/* Fake FF_C for curr_funcisL() on dummy frames. */</doc>
+<use f='luajit/lj_state.c' l='225' u='w' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='311' u='w' c='lj_state_new'/>

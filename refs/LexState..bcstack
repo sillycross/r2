@@ -1,0 +1,11 @@
+<dec f='luajit/lj_lex.h' l='73' type='BCInsLine *'/>
+<offset>1280</offset>
+<doc f='luajit/lj_lex.h' l='73'>/* Stack for bytecode instructions/line numbers. */</doc>
+<use f='luajit/lj_lex.c' l='407' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='449' u='r' c='lj_lex_cleanup'/>
+<use f='luajit/lj_parse.c' l='422' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='424' u='w' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='424' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='426' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='1864' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1875' u='r' c='parse_body'/>

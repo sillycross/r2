@@ -1,0 +1,7 @@
+<def f='luajit/host/minilua.c' l='4316' ll='4319'/>
+<use f='luajit/host/minilua.c' l='4317'/>
+<use f='luajit/host/minilua.c' l='4320' c='check_conflict'/>
+<use f='luajit/host/minilua.c' l='4341' c='assignment'/>
+<use f='luajit/host/minilua.c' l='4346' c='assignment'/>
+<use f='luajit/host/minilua.c' l='4589' c='exprstat'/>
+<size>32</size>

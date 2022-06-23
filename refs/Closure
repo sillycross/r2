@@ -1,0 +1,4 @@
+<def f='luajit/host/minilua.c' l='340' ll='343'/>
+<use f='luajit/host/minilua.c' l='340'/>
+<use f='luajit/host/minilua.c' l='494'/>
+<size>56</size>

@@ -1,0 +1,34 @@
+<dec f='luajit/lj_obj.h' l='591' type='uint8_t'/>
+<offset>136</offset>
+<doc f='luajit/lj_obj.h' l='591'>/* GC state. */</doc>
+<use f='luajit/lj_gc.c' l='108' u='w' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='311' u='r' c='gc_traverse_thread'/>
+<use f='luajit/lj_gc.c' l='654' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='661' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='667' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='674' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='688' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='693' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='711' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='734' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='769' u='r' c='lj_gc_step_jit'/>
+<use f='luajit/lj_gc.c' l='769' u='r' c='lj_gc_step_jit'/>
+<use f='luajit/lj_gc.c' l='779' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='784' u='w' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='787' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='787' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='792' u='w' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='793' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='809' u='r' c='lj_gc_barrierf'/>
+<use f='luajit/lj_gc.c' l='809' u='r' c='lj_gc_barrierf'/>
+<use f='luajit/lj_gc.c' l='820' u='r' c='lj_gc_barrieruv'/>
+<use f='luajit/lj_gc.c' l='820' u='r' c='lj_gc_barrieruv'/>
+<use f='luajit/lj_gc.c' l='838' u='r' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='838' u='r' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='854' u='r' c='lj_gc_barriertrace'/>
+<use f='luajit/lj_gc.c' l='854' u='r' c='lj_gc_barriertrace'/>
+<use f='luajit/lj_state.c' l='249' u='w' c='lua_newstate'/>
+<use f='luajit/lj_str.c' l='136' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='223' u='r' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_trace.c' l='894' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='894' u='r' c='lj_trace_exit'/>

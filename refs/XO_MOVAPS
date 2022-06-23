@@ -1,0 +1,2 @@
+<dec f='luajit/lj_target_x86.h' l='285' type='672071933'/>
+<use f='luajit/lj_emit_x86.h' l='539' u='r' c='emit_movrr'/>

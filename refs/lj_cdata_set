@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cdata.h' l='74' type='void lj_cdata_set(CTState * cts, CType * d, uint8_t * dp, TValue * o, CTInfo qual)'/>
+<use f='luajit/lib_ffi.c' l='178' u='c' c='lj_cf_ffi_meta___newindex'/>
+<def f='luajit/lj_cdata.c' l='261' ll='302' type='void lj_cdata_set(CTState * cts, CType * d, uint8_t * dp, TValue * o, CTInfo qual)'/>
+<doc f='luajit/lj_cdata.c' l='260'>/* Convert TValue and set C data value. */</doc>

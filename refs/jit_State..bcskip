@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='427' type='uint8_t'/>
+<offset>1464</offset>
+<doc f='luajit/lj_jit.h' l='427'>/* Number of bytecode instructions to skip. */</doc>
+<use f='luajit/lj_record.c' l='1889' u='w' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2063' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2064' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='446' u='w' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='633' u='r' c='trace_pendpatch'/>
+<use f='luajit/lj_trace.c' l='637' u='w' c='trace_pendpatch'/>
+<use f='luajit/lj_trace.c' l='907' u='w' c='lj_trace_exit'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/host/buildvm.h' l='77' type='int'/>
+<use f='luajit/host/buildvm.c' l='176' u='w' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='177' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='178' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='191' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='205' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='222' u='r' c='build_code'/>
+<offset>480</offset>
+<use f='luajit/host/buildvm_lib.c' l='100' u='r' c='find_ffofs'/>

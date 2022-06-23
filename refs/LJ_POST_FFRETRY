@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='167' type='6'/>
+<doc f='luajit/lj_jit.h' l='167'>/* Suppress recording of retried fast functions. */</doc>
+<use f='luajit/lj_ffrecord.c' l='1199' u='r' c='lj_ffrecord_func'/>
+<use f='luajit/lj_record.c' l='2045' c='lj_record_ins'/>

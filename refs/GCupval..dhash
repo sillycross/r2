@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='441' type='uint32_t'/>
+<offset>320</offset>
+<doc f='luajit/lj_obj.h' l='441'>/* Disambiguation hash: dh1 != dh2 =&gt; cannot alias. */</doc>
+<use f='luajit/lj_func.c' l='149' u='w' c='lj_func_newL_empty'/>
+<use f='luajit/lj_func.c' l='175' u='w' c='lj_func_newL_gc'/>
+<use f='luajit/lj_record.c' l='1630' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1630' u='r' c='rec_upvalue'/>

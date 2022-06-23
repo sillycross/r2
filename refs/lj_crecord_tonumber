@@ -1,0 +1,4 @@
+<dec f='luajit/lj_crecord.h' l='35' type='void lj_crecord_tonumber(jit_State * J, RecordFFData * rd)'/>
+<def f='luajit/lj_crecord.c' l='1897' ll='1914' type='void lj_crecord_tonumber(jit_State * J, RecordFFData * rd)'/>
+<doc f='luajit/lj_crecord.c' l='1895'>/* -- Miscellaneous library functions ------------------------------------- */</doc>
+<use f='luajit/lj_ffrecord.c' l='359' u='c' c='recff_tonumber'/>

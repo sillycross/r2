@@ -1,0 +1,30 @@
+<dec f='luajit/lj_opt_mem.c' l='36' type='0'/>
+<use f='luajit/lj_opt_mem.c' l='52' u='r' c='aa_escape'/>
+<use f='luajit/lj_opt_mem.c' l='66' u='r' c='aa_table'/>
+<use f='luajit/lj_opt_mem.c' l='98' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='109' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='115' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='118' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='125' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='145' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='179' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='276' u='r' c='lj_opt_fwd_hrefk'/>
+<use f='luajit/lj_opt_mem.c' l='308' u='r' c='lj_opt_fwd_href_nokey'/>
+<use f='luajit/lj_opt_mem.c' l='323' u='r' c='fwd_aa_tab_clear'/>
+<use f='luajit/lj_opt_mem.c' l='337' u='r' c='lj_opt_fwd_tptr'/>
+<use f='luajit/lj_opt_mem.c' l='355' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='431' u='r' c='lj_opt_fwd_alen'/>
+<use f='luajit/lj_opt_mem.c' l='458' u='r' c='aa_uref'/>
+<use f='luajit/lj_opt_mem.c' l='463' u='r' c='aa_uref'/>
+<use f='luajit/lj_opt_mem.c' l='466' u='r' c='aa_uref'/>
+<use f='luajit/lj_opt_mem.c' l='485' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_opt_mem.c' l='516' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='564' u='r' c='aa_fref'/>
+<use f='luajit/lj_opt_mem.c' l='586' c='lj_opt_fwd_fload'/>
+<use f='luajit/lj_opt_mem.c' l='616' c='lj_opt_dse_fstore'/>
+<use f='luajit/lj_opt_mem.c' l='669' u='r' c='aa_cnew'/>
+<use f='luajit/lj_opt_mem.c' l='710' u='r' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='718' u='r' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='805' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='867' c='lj_opt_dse_xstore'/>
+<doc f='luajit/lj_opt_mem.c' l='36'>/* The two refs CANNOT alias (exact). */</doc>

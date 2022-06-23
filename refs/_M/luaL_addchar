@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='142'/>
+<use f='luajit/lib_string.c' l='553' u='c'/>
+<use f='luajit/lib_string.c' l='557' u='c'/>
+<use f='luajit/lib_string.c' l='629' u='c'/>

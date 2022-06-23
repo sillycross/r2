@@ -1,0 +1,4 @@
+<dec f='luajit/lj_vmevent.h' l='12'/>
+<use f='luajit/lib_jit.c' l='130' u='c'/>
+<doc f='luajit/lj_vmevent.h' l='11'>/* Registry key for VM event handler table. */</doc>
+<use f='luajit/lj_vmevent.c' l='22' u='c'/>

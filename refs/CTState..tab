@@ -1,0 +1,36 @@
+<dec f='luajit/lj_ctype.h' l='175' type='CType *'/>
+<use f='luajit/lj_ctype.h' l='420' u='r' c='ctype_get'/>
+<offset>0</offset>
+<doc f='luajit/lj_ctype.h' l='175'>/* C type table. */</doc>
+<use f='luajit/lib_ffi.c' l='109' macro='1' u='r' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='316' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lj_carith.c' l='249' macro='1' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_ccall.c' l='1165' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccall.c' l='1173' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccallback.c' l='728' macro='1' u='r' c='callback_slot_new'/>
+<use f='luajit/lj_cconv.c' l='24' macro='1' u='r' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='30' macro='1' u='r' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='41' macro='1' u='r' c='cconv_err_convtv'/>
+<use f='luajit/lj_cconv.c' l='52' macro='1' u='r' c='cconv_err_initov'/>
+<use f='luajit/lj_cconv.c' l='418' macro='1' u='r' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='572' macro='1' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cparse.c' l='160' macro='1' u='r' c='cp_err_badidx'/>
+<use f='luajit/lj_cparse.c' l='212' u='r' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='574' macro='1' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_crecord.c' l='736' macro='1' u='r' c='crec_index_meta'/>
+<use f='luajit/lj_crecord.c' l='1254' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1690' macro='1' u='r' c='recff_ffi_fill'/>
+<use f='luajit/lj_ctype.c' l='167' u='w' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='167' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='171' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='195' u='w' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='195' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='198' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='199' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='200' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='201' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='202' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='236' u='r' c='lj_ctype_getname'/>
+<use f='luajit/lj_ctype.c' l='435' macro='1' u='r' c='ctype_preptype'/>
+<use f='luajit/lj_ctype.c' l='600' u='w' c='lj_ctype_init'/>
+<use f='luajit/lj_ctype.c' l='632' u='r' c='lj_ctype_freestate'/>

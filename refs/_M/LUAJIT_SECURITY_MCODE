@@ -1,0 +1,6 @@
+<dec f='luajit/lj_arch.h' l='689'/>
+<doc f='luajit/lj_arch.h' l='688'>/* Machine code page protection: 0 = insecure RWX, 1 = secure RW^X. */</doc>
+<use f='luajit/lj_mcode.c' l='135' u='c'/>
+<use f='luajit/lj_mcode.c' l='326' u='c'/>
+<use f='luajit/lj_mcode.c' l='337' u='c'/>
+<use f='luajit/lj_mcode.c' l='347' u='c'/>

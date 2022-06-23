@@ -1,0 +1,2 @@
+<dec f='luajit/host/minilua.c' l='129' type='270'/>
+<use f='luajit/host/minilua.c' l='4238' c='getunopr'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='13' type='4'/>
+<use f='luajit/lj_gc.c' l='674' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='679' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='787' u='r' c='lj_gc_fullgc'/>

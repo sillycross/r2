@@ -1,0 +1,1 @@
+<def f='luajit/lib_bit.c' l='79' macro='1' type='int lj_ffh_bit_bswap(lua_State * L)'/>

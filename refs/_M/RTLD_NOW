@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/dlfcn.h' l='25'/>
+<use f='luajit/lib_package.c' l='46' u='c'/>

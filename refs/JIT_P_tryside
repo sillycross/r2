@@ -1,0 +1,2 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='8'/>
+<use f='luajit/lj_record.c' l='2638' u='r' c='lj_record_setup'/>

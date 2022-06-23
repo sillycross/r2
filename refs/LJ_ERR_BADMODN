@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='102' macro='1' type='1973'/>
+<use f='luajit/lj_errmsg.h' l='102' macro='1' u='r'/>
+<use f='luajit/lib_aux.c' l='121' u='r' c='luaL_pushmodule'/>
+<use f='luajit/lj_lib.c' l='39' u='r' c='lib_create_table'/>

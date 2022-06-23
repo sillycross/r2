@@ -1,0 +1,1 @@
+<def f='luajit/lib_string.c' l='65' macro='1' type='int lj_ffh_string_char(lua_State * L)'/>

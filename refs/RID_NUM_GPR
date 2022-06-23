@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='61' type='16'/>
+<use f='luajit/lj_target_x86.h' l='160'/>
+<use f='luajit/lj_asm.c' l='647' u='r' c='ra_allocref'/>
+<use f='luajit/lj_trace.c' l='805' u='r' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='807' u='r' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='881' u='r' c='lj_trace_exit'/>

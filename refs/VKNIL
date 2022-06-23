@@ -1,0 +1,11 @@
+<dec f='luajit/lj_parse.c' l='36' type='0'/>
+<use f='luajit/lj_parse.c' l='507' u='r' c='bcemit_nil'/>
+<use f='luajit/lj_parse.c' l='545' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='745' u='r' c='bcemit_branch_t'/>
+<use f='luajit/lj_parse.c' l='759' u='r' c='bcemit_branch_f'/>
+<use f='luajit/lj_parse.c' l='845' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='944' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='1753' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='2004' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2144' u='r' c='expr_cond'/>
+<doc f='luajit/lj_parse.c' l='35'>/* Constant expressions must be first and in this order: */</doc>

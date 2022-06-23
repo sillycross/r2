@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='647' type='lua_Hook'/>
+<offset>2688</offset>
+<doc f='luajit/lj_obj.h' l='647'>/* Hook function. */</doc>
+<use f='luajit/lj_dispatch.c' l='328' u='w' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='338' u='r' c='lua_gethook'/>
+<use f='luajit/lj_dispatch.c' l='355' u='r' c='callhook'/>

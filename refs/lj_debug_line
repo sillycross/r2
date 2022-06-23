@@ -1,0 +1,9 @@
+<dec f='luajit/lj_debug.h' l='30' type='BCLine lj_debug_line(GCproto * pt, BCPos pc)'/>
+<use f='luajit/lib_jit.c' l='205' u='c' c='lj_cf_jit_util_funcinfo'/>
+<def f='luajit/lj_debug.c' l='115' ll='130' type='BCLine lj_debug_line(GCproto * pt, BCPos pc)'/>
+<use f='luajit/lj_debug.c' l='139' u='c' c='debug_frameline'/>
+<use f='luajit/lj_debug.c' l='380' u='c' c='lj_debug_pushloc'/>
+<doc f='luajit/lj_debug.c' l='114'>/* Get line number for a bytecode position. */</doc>
+<use f='luajit/lj_dispatch.c' l='431' u='c' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='432' u='c' c='lj_dispatch_ins'/>
+<use f='luajit/lj_record.c' l='660' u='c' c='rec_profile_need'/>

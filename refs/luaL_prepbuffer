@@ -1,0 +1,5 @@
+<dec f='luajit/lauxlib.h' l='152' type='char * luaL_prepbuffer(luaL_Buffer * B)'/>
+<def f='luajit/lib_aux.c' l='212' ll='217' macro='1' type='char * luaL_prepbuffer(luaL_Buffer * B)'/>
+<use f='luajit/lib_string.c' l='553' macro='1' u='c' c='add_s'/>
+<use f='luajit/lib_string.c' l='557' macro='1' u='c' c='add_s'/>
+<use f='luajit/lib_string.c' l='629' macro='1' u='c' c='lj_cf_string_gsub'/>

@@ -1,0 +1,19 @@
+<dec f='luajit/host/buildvm_arch.h' l='91'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1191' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2208' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2299' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2502' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2564' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3616' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3624' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3982' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4020' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4020' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4043' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4058' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4264' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='90'>//|.type LFUNC,		GCfuncL</doc>

@@ -1,0 +1,17 @@
+<dec f='luajit/dasm_x86.h' l='67' type='int *'/>
+<use f='luajit/dasm_x86.h' l='93' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='116' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='116' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='125' u='w' c='dasm_setupglobal'/>
+<use f='luajit/dasm_x86.h' l='125' u='r' c='dasm_setupglobal'/>
+<use f='luajit/dasm_x86.h' l='125' u='r' c='dasm_setupglobal'/>
+<use f='luajit/dasm_x86.h' l='145' u='r' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='223' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='225' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='248' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='248' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='296' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='518' u='r' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='519' u='r' c='dasm_checkstep'/>
+<offset>128</offset>
+<doc f='luajit/dasm_x86.h' l='67'>/* Local/global chain/pos ptrs. */</doc>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_debug.h' l='50'/>
+<use f='luajit/lj_debug.h' l='61' u='c'/>
+<doc f='luajit/lj_debug.h' l='49'>/* Fixed internal variable names. */</doc>
+<use f='luajit/lj_debug.c' l='168' u='c'/>

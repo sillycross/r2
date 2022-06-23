@@ -1,0 +1,15 @@
+<dec f='luajit/lj_jit.h' l='463' type='TraceNo'/>
+<offset>3136</offset>
+<doc f='luajit/lj_jit.h' l='463'>/* Start of scan for next free trace. */</doc>
+<use f='luajit/lj_trace.c' l='64' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='65' u='w' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='66' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='66' u='w' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='67' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='68' u='w' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='78' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='174' u='r' c='lj_trace_free'/>
+<use f='luajit/lj_trace.c' l='175' u='w' c='lj_trace_free'/>
+<use f='luajit/lj_trace.c' l='297' u='w' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='617' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='618' u='w' c='trace_abort'/>

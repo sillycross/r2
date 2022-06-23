@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ctype.h' l='180' type='GCtab *'/>
+<offset>256</offset>
+<doc f='luajit/lj_ctype.h' l='180'>/* Map of cdata to finalizer. */</doc>
+<use f='luajit/lib_ffi.c' l='516' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='852' u='w' c='luaopen_ffi'/>
+<use f='luajit/lj_cdata.c' l='89' u='r' c='lj_cdata_setfin'/>
+<use f='luajit/lj_gc.c' l='188' u='r' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='548' u='r' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='582' u='r' c='lj_gc_finalize_cdata'/>
+<use f='luajit/lj_gc.c' l='709' u='r' c='gc_onestep'/>

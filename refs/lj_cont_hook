@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='109' type='void lj_cont_hook()'/>
+<use f='luajit/lj_api.c' l='1216' u='r' c='lua_yield'/>

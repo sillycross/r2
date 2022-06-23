@@ -1,0 +1,7 @@
+<dec f='luajit/host/buildvm.h' l='48' macro='1' type='1'/>
+<use f='luajit/host/buildvm.c' l='112' u='r' c='sym_decorate'/>
+<use f='luajit/host/buildvm.c' l='476' c='main'/>
+<use f='luajit/host/buildvm_asm.c' l='36' c='emit_asm_reloc'/>
+<use f='luajit/host/buildvm_asm.c' l='204' c='emit_asm_label'/>
+<use f='luajit/host/buildvm_asm.c' l='226' c='emit_asm_align'/>
+<use f='luajit/host/buildvm_asm.c' l='335' c='emit_asm'/>

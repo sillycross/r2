@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm_arch.h' l='86'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='85'>//|.type GL,		global_State</doc>

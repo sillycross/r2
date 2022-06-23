@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='137' type='TRef lj_opt_narrow_index(jit_State * J, TRef key)'/>
+<def f='luajit/lj_opt_narrow.c' l='452' ll='464' type='TRef lj_opt_narrow_index(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_opt_narrow.c' l='451'>/* Narrow array index. */</doc>
+<use f='luajit/lj_record.c' l='1335' u='c' c='rec_idx_key'/>

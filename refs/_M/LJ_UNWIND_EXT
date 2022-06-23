@@ -1,0 +1,10 @@
+<dec f='luajit/lj_arch.h' l='644'/>
+<use f='luajit/lj_arch.h' l='647' u='c'/>
+<use f='luajit/lj_err.h' l='52' u='c'/>
+<use f='luajit/lj_trace.h' l='40' u='c'/>
+<use f='luajit/lj_err.c' l='135' u='c'/>
+<use f='luajit/lj_err.c' l='424' u='c'/>
+<use f='luajit/lj_err.c' l='442' u='c'/>
+<use f='luajit/lj_err.c' l='476' u='c'/>
+<use f='luajit/lj_err.c' l='712' u='c'/>
+<use f='luajit/lj_err.c' l='739' u='c'/>

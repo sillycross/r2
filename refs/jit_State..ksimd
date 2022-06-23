@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='443' type='TValue [5]'/>
+<offset>2112</offset>
+<doc f='luajit/lj_jit.h' l='443'>/* 16 byte aligned SIMD constants. */</doc>
+<use f='luajit/lj_ffrecord.c' l='519' macro='1' u='a' c='recff_math_abs'/>
+<use f='luajit/lj_opt_fold.c' l='1045' macro='1' u='a' c='fold_simplify_nummuldiv_k'/>
+<use f='luajit/lj_opt_narrow.c' l='563' macro='1' u='a' c='lj_opt_narrow_unm'/>
+<use f='luajit/lj_trace.c' l='316' macro='1' u='a' c='lj_trace_initstate'/>
+<use f='luajit/lj_trace.c' l='319' macro='1' u='a' c='lj_trace_initstate'/>

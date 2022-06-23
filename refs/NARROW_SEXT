@@ -1,0 +1,5 @@
+<dec f='luajit/lj_opt_narrow.c' l='193' type='2'/>
+<use f='luajit/lj_opt_narrow.c' l='280' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='336' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='374' u='r' c='narrow_conv_emit'/>
+<doc f='luajit/lj_opt_narrow.c' l='193'>/* Push sign-extension of ref. */</doc>

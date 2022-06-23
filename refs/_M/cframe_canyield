@@ -1,0 +1,6 @@
+<dec f='luajit/lj_frame.h' l='292'/>
+<use f='luajit/lib_base.c' l='588' u='c'/>
+<use f='luajit/lj_api.c' l='1193' u='c'/>
+<use f='luajit/lj_api.c' l='1200' u='c'/>
+<use f='luajit/lj_err.c' l='153' u='c'/>
+<use f='luajit/lj_err.c' l='813' u='c'/>

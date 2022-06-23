@@ -1,0 +1,15 @@
+<def f='luajit/lj_def.h' l='242' ll='245' type='uint32_t lj_getu32(const void * p)'/>
+<doc f='luajit/lj_def.h' l='241'>/* Unaligned load of uint32_t. */</doc>
+<use f='luajit/lj_opt_fold.c' l='2053' u='c' c='kfold_xload'/>
+<use f='luajit/lj_serialize.c' l='101' u='c' c='serialize_ru124_'/>
+<use f='luajit/lj_serialize.c' l='311' u='c' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='311' u='c' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='379' u='c' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='379' u='c' c='serialize_get'/>
+<use f='luajit/lj_str.c' l='81' u='c' c='hash_sparse'/>
+<use f='luajit/lj_str.c' l='82' u='c' c='hash_sparse'/>
+<use f='luajit/lj_str.c' l='83' u='c' c='hash_sparse'/>
+<use f='luajit/lj_str.c' l='85' u='c' c='hash_sparse'/>
+<use f='luajit/lj_str.c' l='108' u='c' c='hash_dense'/>
+<use f='luajit/lj_str.c' l='109' u='c' c='hash_dense'/>
+<use f='luajit/lj_str.c' l='110' u='c' c='hash_dense'/>

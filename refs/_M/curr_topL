@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='712'/>
+<use f='luajit/lj_err.c' l='870' u='c'/>
+<use f='luajit/lj_gc.c' l='755' u='c'/>
+<use f='luajit/lj_gc.c' l='765' u='c'/>
+<use f='luajit/lj_meta.c' l='122' u='c'/>
+<use f='luajit/lj_meta.c' l='308' u='c'/>
+<use f='luajit/lj_meta.c' l='432' u='c'/>
+<use f='luajit/lj_snap.c' l='893' u='c'/>
+<use f='luajit/lj_snap.c' l='942' u='c'/>

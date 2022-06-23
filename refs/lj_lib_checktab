@@ -1,0 +1,17 @@
+<dec f='luajit/lj_lib.h' l='45' type='GCtab * lj_lib_checktab(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='81' u='c' c='lj_ffh_next'/>
+<use f='luajit/lib_base.c' l='114' u='c' c='lj_ffh_ipairs_aux'/>
+<use f='luajit/lib_base.c' l='132' u='c' c='lj_ffh_setmetatable'/>
+<use f='luajit/lib_base.c' l='161' u='c' c='lj_cf_setfenv'/>
+<use f='luajit/lib_base.c' l='186' u='c' c='lj_ffh_rawget'/>
+<use f='luajit/lib_base.c' l='193' u='c' c='lj_cf_rawset'/>
+<use f='luajit/lib_base.c' l='224' u='c' c='lj_cf_unpack'/>
+<use f='luajit/lib_buffer.c' l='299' u='c' c='lj_cf_buffer_new'/>
+<use f='luajit/lib_debug.c' l='61' u='c' c='lj_cf_debug_setfenv'/>
+<use f='luajit/lib_ffi.c' l='770' u='c' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_table.c' l='59' u='c' c='lj_cf_table_maxn'/>
+<use f='luajit/lib_table.c' l='81' u='c' c='lj_cf_table_insert'/>
+<use f='luajit/lib_table.c' l='154' u='c' c='lj_cf_table_concat'/>
+<use f='luajit/lib_table.c' l='261' u='c' c='lj_cf_table_sort'/>
+<use f='luajit/lib_table.c' l='298' u='c' c='lj_cf_table_clear'/>
+<def f='luajit/lj_lib.c' l='269' ll='275' type='GCtab * lj_lib_checktab(lua_State * L, int narg)'/>

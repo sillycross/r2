@@ -1,0 +1,4 @@
+<dec f='luajit/lj_record.h' l='41' type='void lj_record_ins(jit_State * J)'/>
+<def f='luajit/lj_record.c' l='1998' ll='2515' type='void lj_record_ins(jit_State * J)'/>
+<doc f='luajit/lj_record.c' l='1997'>/* Record the next bytecode instruction (_before_ it&apos;s executed). */</doc>
+<use f='luajit/lj_trace.c' l='671' u='c' c='trace_state'/>

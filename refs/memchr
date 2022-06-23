@@ -1,0 +1,3 @@
+<dec f='include/string.h' l='90' type='void * memchr(const void * __s, int __c, size_t __n)'/>
+<use f='luajit/host/minilua.c' l='7323' u='c' c='lmemfind'/>
+<use f='luajit/lj_str.c' l='51' u='c' c='lj_str_find'/>

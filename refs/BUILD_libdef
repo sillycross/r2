@@ -1,0 +1,9 @@
+<dec f='luajit/host/buildvm.h' l='48' macro='1' type='7'/>
+<use f='luajit/host/buildvm.c' l='497' c='main'/>
+<use f='luajit/host/buildvm_lib.c' l='77' u='r' c='libdef_module'/>
+<use f='luajit/host/buildvm_lib.c' l='115' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='192' u='r' c='libdef_lua'/>
+<use f='luajit/host/buildvm_lib.c' l='265' u='r' c='libdef_push'/>
+<use f='luajit/host/buildvm_lib.c' l='310' u='r' c='libdef_set'/>
+<use f='luajit/host/buildvm_lib.c' l='352' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='424' u='r' c='emit_lib'/>

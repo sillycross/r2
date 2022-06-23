@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='302' type='MRef'/>
+<offset>0</offset>
+<doc f='luajit/lj_jit.h' l='302'>/* Starting bytecode PC. */</doc>
+<use f='luajit/lj_record.c' l='586' u='m' c='innerloopleft'/>
+<use f='luajit/lj_trace.c' l='385' u='m' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='398' u='m' c='penalty_pc'/>

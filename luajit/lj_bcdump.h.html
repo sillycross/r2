@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_bcdump.h source code [luajit/lj_bcdump.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_bcdump.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_bcdump.h.html'>lj_bcdump.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Bytecode dump definitions.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_BCDUMP_H">_LJ_BCDUMP_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_BCDUMP_H" data-ref="_M/_LJ_BCDUMP_H">_LJ_BCDUMP_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_lex.h.html">"lj_lex.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><i>/* -- Bytecode dump format ------------------------------------------------ */</i></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/*</i></td></tr>
+<tr><th id="15">15</th><td><i>** dump   = header proto+ 0U</i></td></tr>
+<tr><th id="16">16</th><td><i>** header = ESC 'L' 'J' versionB flagsU [namelenU nameB*]</i></td></tr>
+<tr><th id="17">17</th><td><i>** proto  = lengthU pdata</i></td></tr>
+<tr><th id="18">18</th><td><i>** pdata  = phead bcinsW* uvdataH* kgc* knum* [debugB*]</i></td></tr>
+<tr><th id="19">19</th><td><i>** phead  = flagsB numparamsB framesizeB numuvB numkgcU numknU numbcU</i></td></tr>
+<tr><th id="20">20</th><td><i>**          [debuglenU [firstlineU numlineU]]</i></td></tr>
+<tr><th id="21">21</th><td><i>** kgc    = kgctypeU { ktab | (loU hiU) | (rloU rhiU iloU ihiU) | strB* }</i></td></tr>
+<tr><th id="22">22</th><td><i>** knum   = intU0 | (loU1 hiU)</i></td></tr>
+<tr><th id="23">23</th><td><i>** ktab   = narrayU nhashU karray* khash*</i></td></tr>
+<tr><th id="24">24</th><td><i>** karray = ktabk</i></td></tr>
+<tr><th id="25">25</th><td><i>** khash  = ktabk ktabk</i></td></tr>
+<tr><th id="26">26</th><td><i>** ktabk  = ktabtypeU { intU | (loU hiU) | strB* }</i></td></tr>
+<tr><th id="27">27</th><td><i>**</i></td></tr>
+<tr><th id="28">28</th><td><i>** B = 8 bit, H = 16 bit, W = 32 bit, U = ULEB128 of W, U0/U1 = ULEB128 of W+1</i></td></tr>
+<tr><th id="29">29</th><td><i>*/</i></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><i>/* Bytecode dump header. */</i></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_HEAD1" data-ref="_M/BCDUMP_HEAD1">BCDUMP_HEAD1</dfn>		0x1b</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_HEAD2" data-ref="_M/BCDUMP_HEAD2">BCDUMP_HEAD2</dfn>		0x4c</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_HEAD3" data-ref="_M/BCDUMP_HEAD3">BCDUMP_HEAD3</dfn>		0x4a</u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><i>/* If you perform *any* kind of private modifications to the bytecode itself</i></td></tr>
+<tr><th id="37">37</th><td><i>** or to the dump format, you *must* set BCDUMP_VERSION to 0x80 or higher.</i></td></tr>
+<tr><th id="38">38</th><td><i>*/</i></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_VERSION" data-ref="_M/BCDUMP_VERSION">BCDUMP_VERSION</dfn>		2</u></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i>/* Compatibility flags. */</i></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_F_BE" data-ref="_M/BCDUMP_F_BE">BCDUMP_F_BE</dfn>		0x01</u></td></tr>
+<tr><th id="43">43</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_F_STRIP" data-ref="_M/BCDUMP_F_STRIP">BCDUMP_F_STRIP</dfn>		0x02</u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_F_FFI" data-ref="_M/BCDUMP_F_FFI">BCDUMP_F_FFI</dfn>		0x04</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_F_FR2" data-ref="_M/BCDUMP_F_FR2">BCDUMP_F_FR2</dfn>		0x08</u></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/BCDUMP_F_KNOWN" data-ref="_M/BCDUMP_F_KNOWN">BCDUMP_F_KNOWN</dfn>		(BCDUMP_F_FR2*2-1)</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><i>/* Type codes for the GC constants of a prototype. Plus length for strings. */</i></td></tr>
+<tr><th id="50">50</th><td><b>enum</b> {</td></tr>
+<tr><th id="51">51</th><td>  <dfn class="enum" id="BCDUMP_KGC_CHILD" title='BCDUMP_KGC_CHILD' data-ref="BCDUMP_KGC_CHILD" data-ref-filename="BCDUMP_KGC_CHILD">BCDUMP_KGC_CHILD</dfn>, <dfn class="enum" id="BCDUMP_KGC_TAB" title='BCDUMP_KGC_TAB' data-ref="BCDUMP_KGC_TAB" data-ref-filename="BCDUMP_KGC_TAB">BCDUMP_KGC_TAB</dfn>, <dfn class="enum" id="BCDUMP_KGC_I64" title='BCDUMP_KGC_I64' data-ref="BCDUMP_KGC_I64" data-ref-filename="BCDUMP_KGC_I64">BCDUMP_KGC_I64</dfn>, <dfn class="enum" id="BCDUMP_KGC_U64" title='BCDUMP_KGC_U64' data-ref="BCDUMP_KGC_U64" data-ref-filename="BCDUMP_KGC_U64">BCDUMP_KGC_U64</dfn>,</td></tr>
+<tr><th id="52">52</th><td>  <dfn class="enum" id="BCDUMP_KGC_COMPLEX" title='BCDUMP_KGC_COMPLEX' data-ref="BCDUMP_KGC_COMPLEX" data-ref-filename="BCDUMP_KGC_COMPLEX">BCDUMP_KGC_COMPLEX</dfn>, <dfn class="enum" id="BCDUMP_KGC_STR" title='BCDUMP_KGC_STR' data-ref="BCDUMP_KGC_STR" data-ref-filename="BCDUMP_KGC_STR">BCDUMP_KGC_STR</dfn></td></tr>
+<tr><th id="53">53</th><td>};</td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><i>/* Type codes for the keys/values of a constant table. */</i></td></tr>
+<tr><th id="56">56</th><td><b>enum</b> {</td></tr>
+<tr><th id="57">57</th><td>  <dfn class="enum" id="BCDUMP_KTAB_NIL" title='BCDUMP_KTAB_NIL' data-ref="BCDUMP_KTAB_NIL" data-ref-filename="BCDUMP_KTAB_NIL">BCDUMP_KTAB_NIL</dfn>, <dfn class="enum" id="BCDUMP_KTAB_FALSE" title='BCDUMP_KTAB_FALSE' data-ref="BCDUMP_KTAB_FALSE" data-ref-filename="BCDUMP_KTAB_FALSE">BCDUMP_KTAB_FALSE</dfn>, <dfn class="enum" id="BCDUMP_KTAB_TRUE" title='BCDUMP_KTAB_TRUE' data-ref="BCDUMP_KTAB_TRUE" data-ref-filename="BCDUMP_KTAB_TRUE">BCDUMP_KTAB_TRUE</dfn>,</td></tr>
+<tr><th id="58">58</th><td>  <dfn class="enum" id="BCDUMP_KTAB_INT" title='BCDUMP_KTAB_INT' data-ref="BCDUMP_KTAB_INT" data-ref-filename="BCDUMP_KTAB_INT">BCDUMP_KTAB_INT</dfn>, <dfn class="enum" id="BCDUMP_KTAB_NUM" title='BCDUMP_KTAB_NUM' data-ref="BCDUMP_KTAB_NUM" data-ref-filename="BCDUMP_KTAB_NUM">BCDUMP_KTAB_NUM</dfn>, <dfn class="enum" id="BCDUMP_KTAB_STR" title='BCDUMP_KTAB_STR' data-ref="BCDUMP_KTAB_STR" data-ref-filename="BCDUMP_KTAB_STR">BCDUMP_KTAB_STR</dfn></td></tr>
+<tr><th id="59">59</th><td>};</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td><i>/* -- Bytecode reader/writer ---------------------------------------------- */</i></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>int</em> <dfn class="decl fn" id="lj_bcwrite" title='lj_bcwrite' data-ref="lj_bcwrite" data-ref-filename="lj_bcwrite">lj_bcwrite</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col3 decl" id="13L" title='L' data-type='lua_State *' data-ref="13L" data-ref-filename="13L">L</dfn>, <a class="typedef" href="lj_obj.h.html#GCproto" title='GCproto' data-type='struct GCproto' data-ref="GCproto" data-ref-filename="GCproto">GCproto</a> *<dfn class="local col4 decl" id="14pt" title='pt' data-type='GCproto *' data-ref="14pt" data-ref-filename="14pt">pt</dfn>, <a class="typedef" href="lua.h.html#lua_Writer" title='lua_Writer' data-type='int (*)(lua_State *, const void *, size_t, void *)' data-ref="lua_Writer" data-ref-filename="lua_Writer">lua_Writer</a> <dfn class="local col5 decl" id="15writer" title='writer' data-type='lua_Writer' data-ref="15writer" data-ref-filename="15writer">writer</dfn>,</td></tr>
+<tr><th id="64">64</th><td>		       <em>void</em> *<dfn class="local col6 decl" id="16data" title='data' data-type='void *' data-ref="16data" data-ref-filename="16data">data</dfn>, <em>int</em> <dfn class="local col7 decl" id="17strip" title='strip' data-type='int' data-ref="17strip" data-ref-filename="17strip">strip</dfn>);</td></tr>
+<tr><th id="65">65</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCproto" title='GCproto' data-type='struct GCproto' data-ref="GCproto" data-ref-filename="GCproto">GCproto</a> *<dfn class="decl fn" id="lj_bcread_proto" title='lj_bcread_proto' data-ref="lj_bcread_proto" data-ref-filename="lj_bcread_proto">lj_bcread_proto</dfn>(<a class="typedef" href="lj_lex.h.html#LexState" title='LexState' data-type='struct LexState' data-ref="LexState" data-ref-filename="LexState">LexState</a> *<dfn class="local col8 decl" id="18ls" title='ls' data-type='LexState *' data-ref="18ls" data-ref-filename="18ls">ls</dfn>);</td></tr>
+<tr><th id="66">66</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCproto" title='GCproto' data-type='struct GCproto' data-ref="GCproto" data-ref-filename="GCproto">GCproto</a> *<dfn class="decl fn" id="lj_bcread" title='lj_bcread' data-ref="lj_bcread" data-ref-filename="lj_bcread">lj_bcread</dfn>(<a class="typedef" href="lj_lex.h.html#LexState" title='LexState' data-type='struct LexState' data-ref="LexState" data-ref-filename="LexState">LexState</a> *<dfn class="local col9 decl" id="19ls" title='ls' data-type='LexState *' data-ref="19ls" data-ref-filename="19ls">ls</dfn>);</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="69">69</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_string.c.html'>luajit/lib_string.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,10 @@
+<dec f='luajit/lua.h' l='163' type='void lua_pushinteger(lua_State * L, lua_Integer n)'/>
+<use f='luajit/lib_aux.c' l='304' u='c' c='luaL_unref'/>
+<use f='luajit/lib_debug.c' l='78' u='c' c='settabsi'/>
+<use f='luajit/lib_debug.c' l='297' u='c' c='hookf'/>
+<use f='luajit/lib_debug.c' l='356' u='c' c='lj_cf_debug_gethook'/>
+<use f='luajit/lib_jit.c' l='745' u='c' c='luaopen_jit'/>
+<use f='luajit/lib_os.c' l='135' u='c' c='setfield'/>
+<use f='luajit/lib_string.c' l='434' u='c' c='push_onecapture'/>
+<use f='luajit/lib_string.c' l='637' u='c' c='lj_cf_string_gsub'/>
+<def f='luajit/lj_api.c' l='643' ll='647' macro='1' type='void lua_pushinteger(lua_State * L, lua_Integer n)'/>

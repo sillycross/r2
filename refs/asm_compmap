@@ -1,0 +1,2 @@
+<def f='luajit/lj_asm_x86.h' l='2339' ll='2352' type='const uint16_t [11]'/>
+<use f='luajit/lj_asm_x86.h' l='2357' u='r' c='asm_comp'/>

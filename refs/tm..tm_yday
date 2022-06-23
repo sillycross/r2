@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/types/struct_tm.h' l='16' type='int'/>
+<offset>224</offset>
+<doc f='include/x86_64-linux-gnu/bits/types/struct_tm.h' l='16'>/* Days in year.[0-365]	*/</doc>
+<use f='luajit/lib_os.c' l='204' u='r' c='lj_cf_os_date'/>

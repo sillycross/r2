@@ -1,0 +1,5 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='285'/>
+<use f='luajit/lj_lex.c' l='365' u='r' c='lex_scan'/>
+<use f='luajit/lj_parse.c' l='2394' u='r' c='parse_label'/>
+<use f='luajit/lj_parse.c' l='2397' u='r' c='parse_label'/>
+<use f='luajit/lj_parse.c' l='2681' c='parse_stmt'/>

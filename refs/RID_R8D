@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='30' macro='1' type='8'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm_x86.h' l='549' macro='1' u='r' c='asm_gencall'/>

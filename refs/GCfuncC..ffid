@@ -1,0 +1,63 @@
+<dec f='luajit/lj_obj.h' l='452' type='uint8_t'/>
+<use f='luajit/host/buildvm_arch.h' l='4135' u='a' c='build_ins'/>
+<offset>80</offset>
+<use f='luajit/lib_base.c' l='154' macro='1' u='r' c='lj_cf_getfenv'/>
+<use f='luajit/lib_base.c' l='176' macro='1' u='r' c='lj_cf_setfenv'/>
+<use f='luajit/lib_base.c' l='520' u='r' c='lj_cf_print'/>
+<use f='luajit/lib_bit.c' l='98' u='r' c='lj_ffh_bit_lshift'/>
+<use f='luajit/lib_bit.c' l='124' u='r' c='lj_ffh_bit_band'/>
+<use f='luajit/lib_debug.c' l='234' macro='1' u='r' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='247' macro='1' u='r' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lib_ffi.c' l='185' u='r' c='ffi_arith'/>
+<use f='luajit/lib_jit.c' l='172' macro='1' u='r' c='check_Lproto'/>
+<use f='luajit/lib_jit.c' l='220' macro='1' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='221' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_string.c' l='129' macro='1' u='r' c='lj_cf_string_dump'/>
+<use f='luajit/lj_api.c' l='261' macro='1' u='r' c='lua_iscfunction'/>
+<use f='luajit/lj_api.c' l='922' macro='1' u='r' c='lua_upvalueid'/>
+<use f='luajit/lj_ccallback.c' l='568' macro='1' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='710' macro='1' u='r' c='lj_ccallback_leave'/>
+<use f='luajit/lj_debug.c' l='60' macro='1' u='r' c='debug_framepc'/>
+<use f='luajit/lj_debug.c' l='230' macro='1' u='r' c='lj_debug_uvnamev'/>
+<use f='luajit/lj_debug.c' l='360' macro='1' u='r' c='lj_debug_addloc'/>
+<use f='luajit/lj_debug.c' l='413' macro='1' u='r' c='lua_getlocal'/>
+<use f='luajit/lj_debug.c' l='455' macro='1' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='479' macro='1' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='507' macro='1' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='604' macro='1' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='617' macro='1' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='626' macro='1' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='628' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='682' macro='1' u='r' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='683' u='r' c='luaL_traceback'/>
+<use f='luajit/lj_dispatch.c' l='266' macro='1' u='r' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='445' macro='1' u='r' c='call_init'/>
+<use f='luajit/lj_err.c' l='821' u='r' c='finderrfunc'/>
+<use f='luajit/lj_err.c' l='870' macro='1' u='r' c='err_msgv'/>
+<use f='luajit/lj_err.c' l='902' macro='1' u='r' c='lj_err_optype'/>
+<use f='luajit/lj_err.c' l='956' u='r' c='lj_err_callermsg'/>
+<use f='luajit/lj_err.c' l='957' u='r' c='lj_err_callermsg'/>
+<use f='luajit/lj_ffrecord.c' l='158' u='r' c='recff_nyi'/>
+<use f='luajit/lj_ffrecord.c' l='1182' u='r' c='recdef_lookup'/>
+<use f='luajit/lj_ffrecord.c' l='1183' u='r' c='recdef_lookup'/>
+<use f='luajit/lj_func.c' l='115' u='w' c='lj_func_newC'/>
+<use f='luajit/lj_func.c' l='187' macro='1' u='r' c='lj_func_free'/>
+<use f='luajit/lj_gc.c' l='225' macro='1' u='r' c='gc_traverse_func'/>
+<use f='luajit/lj_gc.c' l='296' macro='1' u='r' c='gc_traverse_frames'/>
+<use f='luajit/lj_gc.c' l='337' macro='1' u='r' c='propagatemark'/>
+<use f='luajit/lj_gc.c' l='755' macro='1' u='r' c='lj_gc_step_fixtop'/>
+<use f='luajit/lj_lib.c' l='100' u='w' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='160' u='w' c='lj_lib_pushcc'/>
+<use f='luajit/lj_load.c' l='163' macro='1' u='r' c='lua_dump'/>
+<use f='luajit/lj_meta.c' l='122' macro='1' u='r' c='mmcall'/>
+<use f='luajit/lj_meta.c' l='341' macro='1' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_record.c' l='694' macro='1' u='r' c='rec_call_specialize'/>
+<use f='luajit/lj_record.c' l='705' u='r' c='rec_call_specialize'/>
+<use f='luajit/lj_record.c' l='711' u='r' c='rec_call_specialize'/>
+<use f='luajit/lj_record.c' l='1788' u='r' c='select_detect'/>
+<use f='luajit/lj_snap.c' l='115' macro='1' u='r' c='snapshot_framelinks'/>
+<use f='luajit/lj_strfmt.c' l='523' macro='1' u='r' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt.c' l='525' u='r' c='lj_strfmt_obj'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='729' macro='1' u='r' c='lj_trace_ins'/>
+<use f='luajit/lj_trace.c' l='757' macro='1' u='r' c='trace_hotside'/>

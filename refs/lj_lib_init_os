@@ -1,0 +1,1 @@
+<use f='luajit/lib_os.c' l='289' macro='1' u='r' c='luaopen_os'/>

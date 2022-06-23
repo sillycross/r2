@@ -1,0 +1,17 @@
+<dec f='luajit/lj_buf.h' l='153' type='SBuf * lj_buf_putmem(SBuf * sb, const void * q, MSize len)'/>
+<use f='luajit/lib_buffer.c' l='129' u='c' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_buffer.c' l='194' u='c' c='lj_cf_buffer_method_putcdata'/>
+<use f='luajit/lib_string.c' l='118' u='c' c='writer_buf'/>
+<def f='luajit/lj_buf.c' l='113' ll='119' type='SBuf * lj_buf_putmem(SBuf * sb, const void * q, MSize len)'/>
+<doc f='luajit/lj_buf.c' l='111'>/* -- Low-level buffer put operations ------------------------------------- */</doc>
+<use f='luajit/lj_debug.c' l='557' u='c' c='debug_putchunkname'/>
+<use f='luajit/lj_debug.c' l='574' u='c' c='debug_putchunkname'/>
+<use f='luajit/lj_debug.c' l='576' u='c' c='debug_putchunkname'/>
+<use f='luajit/lj_debug.c' l='611' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='627' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_meta.c' l='294' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='297' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_strfmt.c' l='382' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='557' u='c' c='lj_strfmt_pushvf'/>
+<use f='luajit/lj_strfmt.c' l='571' u='c' c='lj_strfmt_pushvf'/>

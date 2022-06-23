@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='16'/>
+<use f='luajit/lj_bcread.c' l='239' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_cparse.c' l='1559' u='r' c='cp_decl_spec'/>
+<use f='luajit/lj_lex.c' l='123' u='r' c='lex_number'/>
+<use f='luajit/lj_parse.c' l='968' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_serialize.c' l='365' u='r' c='serialize_get'/>

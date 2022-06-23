@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ir.h' l='235'/>
+<doc f='luajit/lj_ir.h' l='234'>/* BUFHDR mode, stored in op2. */</doc>
+<use f='luajit/lj_ffrecord.c' l='186' u='c'/>
+<use f='luajit/lj_record.c' l='1940' u='c'/>

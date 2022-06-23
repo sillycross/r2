@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ircall.h' l='23'/>
+<use f='luajit/lj_ir.c' l='146' u='c'/>

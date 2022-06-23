@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='50'/>
+<use f='luajit/lj_asm.c' l='1773' c='asm_ir'/>
+<use f='luajit/lj_recdef.h' l='64' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='283' c='kfold_intop'/>
+<use f='luajit/lj_vmmath.c' l='52' u='r' c='lj_vm_foldarith'/>

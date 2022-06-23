@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='77'/>
+<doc f='luajit/lj_target_x86.h' l='76'>/* Note: this requires the use of FORCE_REX! */</doc>
+<use f='luajit/lj_asm_x86.h' l='895' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='897' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1438' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2478' u='c'/>

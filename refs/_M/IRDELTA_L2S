@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='169'/>
+<use f='luajit/lj_ir.h' l='171' u='c'/>
+<use f='luajit/lj_ir.h' l='172' u='c'/>
+<use f='luajit/lj_ir.h' l='173' u='c'/>
+<use f='luajit/lj_ir.h' l='174' u='c'/>
+<doc f='luajit/lj_ir.h' l='168'>/* Delta between xLOAD and xSTORE. */</doc>
+<use f='luajit/lj_asm_x86.h' l='467' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='141' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='912' u='c'/>
+<use f='luajit/lj_record.c' l='1537' u='c'/>

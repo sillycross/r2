@@ -1,0 +1,7 @@
+<dec f='luajit/lua.h' l='137' type='int lua_isstring(lua_State * L, int idx)'/>
+<use f='luajit/lib_base.c' l='341' u='c' c='lj_cf_error'/>
+<use f='luajit/lib_package.c' l='456' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_string.c' l='594' u='c' c='add_value'/>
+<def f='luajit/lj_api.c' l='271' ll='275' macro='1' type='int lua_isstring(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='101' u='c' c='traceback'/>
+<use f='luajit/luajit.c' l='104' u='c' c='traceback'/>

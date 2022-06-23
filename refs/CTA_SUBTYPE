@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ctype.h' l='128' type='3'/>
+<doc f='luajit/lj_ctype.h' l='128'>/* Transparent sub-type. */</doc>
+<use f='luajit/lj_ccall.c' l='665' u='r' c='ccall_classify_struct'/>
+<use f='luajit/lj_cconv.c' l='529' u='r' c='cconv_substruct_tab'/>
+<use f='luajit/lj_cconv.c' l='720' u='r' c='cconv_substruct_init'/>
+<use f='luajit/lj_cparse.c' l='1292' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1404' u='r' c='cp_decl_struct'/>
+<use f='luajit/lj_ctype.c' l='250' u='r' c='lj_ctype_getfieldq'/>

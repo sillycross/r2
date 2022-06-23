@@ -1,0 +1,33 @@
+<def f='luajit/lj_gc.h' l='119' ll='123' type='void lj_mem_free(global_State * g, void * p, size_t osize)'/>
+<use f='luajit/lj_buf.h' l='94' u='c' c='lj_buf_free'/>
+<use f='luajit/lj_buf.h' l='146' u='c' c='lj_bufx_free'/>
+<use f='luajit/lj_cdata.c' l='81' u='c' c='lj_cdata_free'/>
+<use f='luajit/lj_cdata.c' l='83' u='c' c='lj_cdata_free'/>
+<use f='luajit/lj_ctype.c' l='632' macro='1' u='c' c='lj_ctype_freestate'/>
+<use f='luajit/lj_ctype.c' l='633' macro='1' u='c' c='lj_ctype_freestate'/>
+<use f='luajit/lj_ctype.c' l='634' macro='1' u='c' c='lj_ctype_freestate'/>
+<use f='luajit/lj_func.c' l='22' u='c' c='lj_func_freeproto'/>
+<use f='luajit/lj_func.c' l='106' macro='1' u='c' c='lj_func_freeuv'/>
+<use f='luajit/lj_func.c' l='189' u='c' c='lj_func_free'/>
+<use f='luajit/lj_ir.c' l='108' u='c' c='lj_ir_growbot'/>
+<use f='luajit/lj_lex.c' l='449' macro='1' u='c' c='lj_lex_cleanup'/>
+<use f='luajit/lj_lex.c' l='450' macro='1' u='c' c='lj_lex_cleanup'/>
+<use f='luajit/lj_opt_loop.c' l='426' macro='1' u='c' c='lj_opt_loop'/>
+<use f='luajit/lj_state.c' l='175' macro='1' u='c' c='close_state'/>
+<use f='luajit/lj_state.c' l='177' macro='1' u='c' c='close_state'/>
+<use f='luajit/lj_state.c' l='181' macro='1' u='c' c='close_state'/>
+<use f='luajit/lj_state.c' l='332' macro='1' u='c' c='lj_state_free'/>
+<use f='luajit/lj_state.c' l='333' macro='1' u='c' c='lj_state_free'/>
+<use f='luajit/lj_str.c' l='212' macro='1' u='c' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='361' u='c' c='lj_str_free'/>
+<use f='luajit/lj_tab.c' l='218' macro='1' u='c' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='220' macro='1' u='c' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='222' u='c' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='224' macro='1' u='c' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='289' macro='1' u='c' c='lj_tab_resize'/>
+<use f='luajit/lj_trace.c' l='178' u='c' c='lj_trace_free'/>
+<use f='luajit/lj_trace.c' l='365' macro='1' u='c' c='lj_trace_freestate'/>
+<use f='luajit/lj_trace.c' l='366' macro='1' u='c' c='lj_trace_freestate'/>
+<use f='luajit/lj_trace.c' l='367' macro='1' u='c' c='lj_trace_freestate'/>
+<use f='luajit/lj_trace.c' l='368' macro='1' u='c' c='lj_trace_freestate'/>
+<use f='luajit/lj_udata.c' l='33' u='c' c='lj_udata_free'/>

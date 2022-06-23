@@ -1,0 +1,2 @@
+<dec f='luajit/lj_target_x86.h' l='312' type='3'/>
+<use f='luajit/lj_asm_x86.h' l='1987' u='r' c='asm_ldexp'/>

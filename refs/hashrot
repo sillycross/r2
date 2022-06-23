@@ -1,0 +1,14 @@
+<def f='luajit/lj_tab.h' l='18' ll='32' type='uint32_t hashrot(uint32_t lo, uint32_t hi)'/>
+<doc f='luajit/lj_tab.h' l='17'>/* Scramble the bits of numbers and pointers. */</doc>
+<use f='luajit/lj_asm.c' l='908' u='c' c='asm_snap_alloc1'/>
+<use f='luajit/lj_asm.c' l='995' u='c' c='asm_snap_checkrename'/>
+<use f='luajit/lj_asm.c' l='1083' u='c' c='ir_khash'/>
+<use f='luajit/lj_ctype.c' l='147' u='c' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='147' u='c' c='ctype_addtype'/>
+<use f='luajit/lj_ctype.c' l='149' u='c' c='lj_ctype_addname'/>
+<use f='luajit/lj_ctype.c' l='149' u='c' c='lj_ctype_getname'/>
+<use f='luajit/lj_record.c' l='1630' u='c' c='rec_upvalue'/>
+<use f='luajit/lj_tab.c' l='26' macro='1' u='c' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='30' macro='1' u='c' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='389' macro='1' u='c' c='lj_tab_getinth'/>
+<use f='luajit/lj_tab.c' l='522' macro='1' u='c' c='lj_tab_setinth'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_vm.h' l='51' type='void lj_vm_rethook()'/>
+<use f='luajit/lj_dispatch.c' l='151' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='152' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='153' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='154' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='171' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='172' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='173' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='174' u='r' c='lj_dispatch_update'/>

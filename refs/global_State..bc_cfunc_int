@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='650' type='BCIns'/>
+<offset>2880</offset>
+<doc f='luajit/lj_obj.h' l='650'>/* Bytecode for internal C function calls. */</doc>
+<use f='luajit/lj_dispatch.c' l='74' u='w' c='lj_dispatch_init'/>
+<use f='luajit/lj_lib.c' l='104' u='a' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='161' u='a' c='lj_lib_pushcc'/>

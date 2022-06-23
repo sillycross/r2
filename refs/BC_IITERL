@@ -1,0 +1,9 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='83'/>
+<use f='luajit/lj_bc.h' l='221' u='r' c='lj_assert_47'/>
+<use f='luajit/host/buildvm_arch.h' l='4454' c='build_ins'/>
+<use f='luajit/host/buildvm.c' l='216' u='r' c='build_code'/>
+<use f='luajit/lj_bcwrite.c' l='228' u='r' c='bcwrite_bytecode'/>
+<use f='luajit/lj_dispatch.c' l='70' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='133' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_record.c' l='2446' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='194' u='r' c='lj_trace_reenableproto'/>

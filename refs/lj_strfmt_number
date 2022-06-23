@@ -1,0 +1,10 @@
+<dec f='luajit/lj_strfmt.h' l='116' type='GCstr * lj_strfmt_number(lua_State * L, cTValue * o)'/>
+<use f='luajit/lj_api.c' l='513' u='c' c='lua_tolstring'/>
+<use f='luajit/lj_api.c' l='532' u='c' c='luaL_checklstring'/>
+<use f='luajit/lj_api.c' l='554' u='c' c='luaL_optlstring'/>
+<use f='luajit/lj_api.c' l='586' u='c' c='lua_objlen'/>
+<use f='luajit/lj_ffrecord.c' l='83' u='c' c='argv2str'/>
+<use f='luajit/lj_lib.c' l='202' u='c' c='lj_lib_checkstr'/>
+<def f='luajit/lj_strfmt.c' l='491' ll='494' type='GCstr * lj_strfmt_number(lua_State * L, cTValue * o)'/>
+<use f='luajit/lj_strfmt.c' l='512' u='c' c='lj_strfmt_obj'/>
+<doc f='luajit/lj_strfmt.c' l='490'>/* Convert integer or number to string. */</doc>

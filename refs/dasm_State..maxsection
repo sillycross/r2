@@ -1,0 +1,9 @@
+<dec f='luajit/dasm_x86.h' l='74' type='int'/>
+<use f='luajit/dasm_x86.h' l='98' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='112' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='147' u='r' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='264' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='303' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='397' u='r' c='dasm_encode'/>
+<offset>576</offset>
+<doc f='luajit/dasm_x86.h' l='74'>/* 0 &lt;= sectionidx &lt; maxsection. */</doc>

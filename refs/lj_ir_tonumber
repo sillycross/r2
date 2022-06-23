@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='85' type='TRef lj_ir_tonumber(jit_State * J, TRef tr)'/>
+<use f='luajit/lj_ffrecord.c' l='604' u='c' c='recff_math_minmax'/>
+<use f='luajit/lj_ffrecord.c' l='608' u='c' c='recff_math_minmax'/>
+<def f='luajit/lj_ir.c' l='412' ll='421' type='TRef lj_ir_tonumber(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_ir.c' l='411'>/* Convert from string to number. */</doc>

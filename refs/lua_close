@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='112' type='void lua_close(lua_State * L)'/>
+<use f='luajit/lib_os.c' l='120' u='c' c='lj_cf_os_exit'/>
+<def f='luajit/lj_state.c' l='276' ll='305' macro='1' type='void lua_close(lua_State * L)'/>
+<use f='luajit/luajit.c' l='584' u='c' c='main'/>

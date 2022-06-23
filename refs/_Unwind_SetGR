@@ -1,0 +1,3 @@
+<dec f='luajit/lj_err.c' l='402' type='void _Unwind_SetGR(_Unwind_Context * , int , uintptr_t )'/>
+<use f='luajit/lj_err.c' l='447' u='c' c='lj_err_unwind_dwarf'/>
+<use f='luajit/lj_err.c' l='458' u='c' c='lj_err_unwind_dwarf'/>

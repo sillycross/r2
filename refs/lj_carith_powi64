@@ -1,0 +1,6 @@
+<dec f='luajit/lj_carith.h' l='33' type='int64_t lj_carith_powi64(int64_t x, int64_t k)'/>
+<use f='luajit/lj_carith.c' l='206' u='c' c='carith_int64'/>
+<def f='luajit/lj_carith.c' l='415' ll='430' type='int64_t lj_carith_powi64(int64_t x, int64_t k)'/>
+<doc f='luajit/lj_carith.c' l='414'>/* Signed 64 bit x^k. */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='419' u='c' c='fold_kfold_int64arith2'/>

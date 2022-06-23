@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='361' type='int'/>
+<offset>0</offset>
+<use f='luajit/lib_debug.c' l='295' u='r' c='hookf'/>
+<use f='luajit/lj_dispatch.c' l='359' u='w' c='callhook'/>

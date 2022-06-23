@@ -1,0 +1,3 @@
+<dec f='luajit/lj_target.h' l='37'/>
+<doc f='luajit/lj_target.h' l='36'>/* Spill slot 0 means no spill slot has been allocated. */</doc>
+<use f='luajit/lj_asm.c' l='680' u='c'/>

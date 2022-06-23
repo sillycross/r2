@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='6'/>
+<use f='luajit/lib_jit.c' l='505' u='r' c='jitopt_param'/>
+<use f='luajit/lj_dispatch.c' l='86' u='r' c='lj_dispatch_init_hotcount'/>
+<use f='luajit/lj_trace.c' l='740' u='r' c='lj_trace_hot'/>

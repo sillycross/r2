@@ -1,0 +1,6 @@
+<dec f='luajit/lj_arch.h' l='608'/>
+<use f='luajit/lj_alloc.c' l='269' u='c'/>
+<use f='luajit/lj_mcode.c' l='268' u='c'/>
+<use f='luajit/lj_mcode.c' l='268' u='c'/>
+<use f='luajit/lj_mcode.c' l='363' u='c'/>
+<use f='luajit/lj_mcode.c' l='363' u='c'/>

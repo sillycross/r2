@@ -1,0 +1,7 @@
+<def f='luajit/lj_ffrecord.h' l='14' ll='18'/>
+<use f='luajit/lj_ffrecord.h' l='14'/>
+<size>24</size>
+<doc f='luajit/lj_ffrecord.h' l='13'>/* Data used by handlers to record a fast function. */</doc>
+<mbr r='RecordFFData::argv' o='0' t='TValue *'/>
+<mbr r='RecordFFData::nres' o='64' t='ptrdiff_t'/>
+<mbr r='RecordFFData::data' o='128' t='uint32_t'/>

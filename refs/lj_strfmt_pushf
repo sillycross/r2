@@ -1,0 +1,27 @@
+<dec f='luajit/lj_strfmt.h' l='125' type='const char * lj_strfmt_pushf(lua_State * L, const char * fmt)'/>
+<use f='luajit/lib_ffi.c' l='322' u='c' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_io.c' l='89' u='c' c='io_file_open'/>
+<use f='luajit/lj_bcread.c' l='43' u='c' c='bcread_error'/>
+<use f='luajit/lj_clib.c' l='65' u='c' c='clib_extname'/>
+<use f='luajit/lj_clib.c' l='74' u='c' c='clib_extname'/>
+<use f='luajit/lj_cparse.c' l='74' u='c' c='cp_tok2str'/>
+<use f='luajit/lj_cparse.c' l='76' u='c' c='cp_tok2str'/>
+<use f='luajit/lj_cparse.c' l='147' u='c' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='149' u='c' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='1044' u='c' c='cp_decl_asm'/>
+<use f='luajit/lj_debug.c' l='366' u='c' c='lj_debug_addloc'/>
+<use f='luajit/lj_debug.c' l='371' u='c' c='lj_debug_addloc'/>
+<use f='luajit/lj_debug.c' l='382' u='c' c='lj_debug_pushloc'/>
+<use f='luajit/lj_debug.c' l='390' u='c' c='lj_debug_pushloc'/>
+<use f='luajit/lj_debug.c' l='392' u='c' c='lj_debug_pushloc'/>
+<use f='luajit/lj_debug.c' l='394' u='c' c='lj_debug_pushloc'/>
+<use f='luajit/lj_debug.c' l='396' u='c' c='lj_debug_pushloc'/>
+<use f='luajit/lj_err.c' l='891' u='c' c='lj_err_lex'/>
+<use f='luajit/lj_err.c' l='893' u='c' c='lj_err_lex'/>
+<use f='luajit/lj_err.c' l='995' u='c' c='err_argmsg'/>
+<use f='luajit/lj_err.c' l='997' u='c' c='err_argmsg'/>
+<use f='luajit/lj_err.c' l='1037' u='c' c='lj_err_argtype'/>
+<use f='luajit/lj_lex.c' l='481' u='c' c='lj_lex_token2str'/>
+<use f='luajit/lj_lex.c' l='483' u='c' c='lj_lex_token2str'/>
+<def f='luajit/lj_strfmt.c' l='594' ll='602' type='const char * lj_strfmt_pushf(lua_State * L, const char * fmt)'/>
+<doc f='luajit/lj_strfmt.c' l='593'>/* Push formatted message as a string object to Lua stack. Vararg variant. */</doc>

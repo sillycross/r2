@@ -1,0 +1,2 @@
+<def f='luajit/lib_base.c' l='245' macro='1' type='int lj_cf_select(lua_State * L)'/>
+<use f='luajit/lj_libdef.h' l='18' u='r'/>

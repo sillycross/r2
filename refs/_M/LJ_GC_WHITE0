@@ -1,0 +1,5 @@
+<dec f='luajit/lj_gc.h' l='17'/>
+<doc f='luajit/lj_gc.h' l='16'>/* Bitmasks for marked field of GCobj. */</doc>
+<use f='luajit/lj_state.c' l='224' u='c'/>
+<use f='luajit/lj_state.c' l='227' u='c'/>
+<use f='luajit/lj_state.c' l='228' u='c'/>

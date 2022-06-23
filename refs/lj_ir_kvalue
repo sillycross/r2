@@ -1,0 +1,11 @@
+<dec f='luajit/lj_iropt.h' l='82' type='void lj_ir_kvalue(lua_State * L, TValue * tv, const IRIns * ir)'/>
+<use f='luajit/lib_jit.c' l='351' u='c' c='lj_cf_jit_util_tracek'/>
+<use f='luajit/lj_asm_x86.h' l='1067' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1615' u='c' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='2731' u='c' c='asm_stack_restore'/>
+<def f='luajit/lj_ir.c' l='384' ll='407' type='void lj_ir_kvalue(lua_State * L, TValue * tv, const IRIns * ir)'/>
+<doc f='luajit/lj_ir.c' l='383'>/* Copy value of IR constant. */</doc>
+<use f='luajit/lj_opt_fold.c' l='2194' u='c' c='fold_fwd_href_tdup'/>
+<use f='luajit/lj_opt_mem.c' l='195' u='c' c='fwd_ahload'/>
+<use f='luajit/lj_snap.c' l='655' u='c' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='855' u='c' c='snap_unsink'/>

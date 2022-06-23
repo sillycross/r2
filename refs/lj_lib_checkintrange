@@ -1,0 +1,9 @@
+<dec f='luajit/lj_lib.h' l='51' type='int32_t lj_lib_checkintrange(lua_State * L, int narg, int32_t a, int32_t b)'/>
+<use f='luajit/lib_buffer.c' l='75' u='c' c='lj_cf_buffer_method_skip'/>
+<use f='luajit/lib_buffer.c' l='97' u='c' c='lj_cf_buffer_method_set'/>
+<use f='luajit/lib_buffer.c' l='169' u='c' c='lj_cf_buffer_method_get'/>
+<use f='luajit/lib_buffer.c' l='193' u='c' c='lj_cf_buffer_method_putcdata'/>
+<use f='luajit/lib_buffer.c' l='202' u='c' c='lj_cf_buffer_method_reserve'/>
+<use f='luajit/lib_buffer.c' l='216' u='c' c='lj_cf_buffer_method_commit'/>
+<use f='luajit/lib_buffer.c' l='296' u='c' c='lj_cf_buffer_new'/>
+<def f='luajit/lj_lib.c' l='321' ll='355' type='int32_t lj_lib_checkintrange(lua_State * L, int narg, int32_t a, int32_t b)'/>

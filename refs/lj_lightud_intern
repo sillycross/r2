@@ -1,0 +1,5 @@
+<dec f='luajit/lj_udata.h' l='14' type='void * lj_lightud_intern(lua_State * L, void * p)'/>
+<use f='luajit/lj_api.c' l='713' u='c' c='lua_pushlightuserdata'/>
+<use f='luajit/lj_api.c' l='1156' u='c' c='cpcall'/>
+<use f='luajit/lj_serialize.c' l='390' u='c' c='serialize_get'/>
+<def f='luajit/lj_udata.c' l='37' ll='60' type='void * lj_lightud_intern(lua_State * L, void * p)'/>

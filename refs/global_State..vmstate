@@ -1,0 +1,22 @@
+<dec f='luajit/lj_obj.h' l='638' type='volatile int32_t'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='a' c='build_subroutines'/>
+<offset>1472</offset>
+<doc f='luajit/lj_obj.h' l='638'>/* VM state or current JIT code trace number. */</doc>
+<use f='luajit/lj_asm.c' l='1853' macro='1' u='a' c='asm_head_root'/>
+<use f='luajit/lj_asm.c' l='1957' macro='1' u='a' c='asm_head_side'/>
+<use f='luajit/lj_dispatch.c' l='549' macro='1' u='w' c='lj_dispatch_profile'/>
+<use f='luajit/lj_gc.c' l='725' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='726' macro='1' u='w' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='736' u='w' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='742' u='w' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='747' u='w' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='777' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='778' macro='1' u='w' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='795' u='w' c='lj_gc_fullgc'/>
+<use f='luajit/lj_profile.c' l='157' u='r' c='profile_trigger'/>
+<use f='luajit/lj_trace.c' l='658' macro='1' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='679' macro='1' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='697' macro='1' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='700' macro='1' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='712' macro='1' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='935' u='r' c='lj_trace_unwind'/>

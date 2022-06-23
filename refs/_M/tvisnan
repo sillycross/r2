@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='806'/>
+<doc f='luajit/lj_obj.h' l='805'>/* Special macros to test numbers for NaN, +0, -0, +1 and raw equality. */</doc>
+<use f='luajit/lj_api.c' l='638' u='c'/>
+<use f='luajit/lj_meta.c' l='181' u='c'/>
+<use f='luajit/lj_parse.c' l='782' u='c'/>
+<use f='luajit/lj_record.c' l='1448' u='c'/>
+<use f='luajit/lj_tab.c' l='555' u='c'/>
+<use f='luajit/lj_trace.c' l='816' u='c'/>

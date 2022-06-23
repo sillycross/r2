@@ -1,0 +1,14 @@
+<dec f='luajit/lj_iropt.h' l='127' type='int lj_opt_fwd_wasnonnil(jit_State * J, IROpT loadop, IRRef xref)'/>
+<def f='luajit/lj_opt_mem.c' l='909' ll='942' type='int lj_opt_fwd_wasnonnil(jit_State * J, IROpT loadop, IRRef xref)'/>
+<doc f='luajit/lj_opt_mem.c' l='898'>/* Check whether the previous value for a table store is non-nil.
+** This can be derived either from a previous store or from a previous
+** load (because all loads from tables perform a type check).
+**
+** The result of the analysis can be used to avoid the metatable check
+** and the guard against HREF returning niltv. Both of these are cheap,
+** so let&apos;s not spend too much effort on the analysis.
+**
+** A result of 1 is exact: previous value CANNOT be nil.
+** A result of 0 is inexact: previous value MAY be nil.
+*/</doc>
+<use f='luajit/lj_record.c' l='1517' u='c' c='lj_record_idx'/>

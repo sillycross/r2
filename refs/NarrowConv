@@ -1,0 +1,4 @@
+<def f='luajit/lj_opt_narrow.c' l='204' ll='211'/>
+<use f='luajit/lj_opt_narrow.c' l='204'/>
+<size>1056</size>
+<doc f='luajit/lj_opt_narrow.c' l='203'>/* Context used for narrowing of type conversions. */</doc>

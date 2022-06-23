@@ -1,0 +1,11 @@
+<dec f='luajit/lj_strfmt.h' l='93' type='SBuf * lj_strfmt_putint(SBuf * sb, int32_t k)'/>
+<use f='luajit/lib_buffer.c' l='124' u='c' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lj_debug.c' l='624' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='628' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_meta.c' l='299' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_strfmt.c' l='175' u='c' c='lj_strfmt_wstrnum'/>
+<def f='luajit/lj_strfmt.c' l='188' ll='192' type='SBuf * lj_strfmt_putint(SBuf * sb, int32_t k)'/>
+<use f='luajit/lj_strfmt.c' l='356' u='c' c='lj_strfmt_putfnum_int'/>
+<use f='luajit/lj_strfmt.c' l='395' u='c' c='lj_strfmt_putarg'/>
+<doc f='luajit/lj_strfmt.c' l='187'>/* Add integer to buffer. */</doc>

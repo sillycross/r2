@@ -1,0 +1,5 @@
+<dec f='luajit/lj_vm.h' l='42' type='double lj_vm_foldfpm(double x, int op)'/>
+<use f='luajit/lj_ffrecord.c' l='531' u='c' c='recff_math_round'/>
+<use f='luajit/lj_opt_fold.c' l='211' u='c' c='fold_kfold_fpmath'/>
+<def f='luajit/lj_vmmath.c' l='118' ll='130' type='double lj_vm_foldfpm(double x, int fpm)'/>
+<doc f='luajit/lj_vmmath.c' l='117'>/* Computes fpm(x) for extended math functions. */</doc>

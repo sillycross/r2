@@ -1,0 +1,9 @@
+<dec f='luajit/lj_jit.h' l='15'/>
+<doc f='luajit/lj_jit.h' l='14'>/* General JIT engine flags. 4 bits. */</doc>
+<use f='luajit/lib_jit.c' l='106' u='c'/>
+<use f='luajit/lib_jit.c' l='732' u='c'/>
+<use f='luajit/lj_dispatch.c' l='109' u='c'/>
+<use f='luajit/lj_dispatch.c' l='254' u='c'/>
+<use f='luajit/lj_dispatch.c' l='256' u='c'/>
+<use f='luajit/lj_dispatch.c' l='508' u='c'/>
+<use f='luajit/lj_state.c' l='288' u='c'/>

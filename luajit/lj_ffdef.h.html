@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_ffdef.h source code [luajit/lj_ffdef.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_ffdef.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_ffdef.h.html'>lj_ffdef.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/* This is a generated file. DO NOT EDIT! */</i></td></tr>
+<tr><th id="2">2</th><td></td></tr>
+<tr><th id="3">3</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_assert," data-ref="_M/FFDEF">FFDEF</a>(assert)</td></tr>
+<tr><th id="4">4</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_type," data-ref="_M/FFDEF">FFDEF</a>(type)</td></tr>
+<tr><th id="5">5</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_next," data-ref="_M/FFDEF">FFDEF</a>(next)</td></tr>
+<tr><th id="6">6</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_pairs," data-ref="_M/FFDEF">FFDEF</a>(pairs)</td></tr>
+<tr><th id="7">7</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ipairs_aux," data-ref="_M/FFDEF">FFDEF</a>(ipairs_aux)</td></tr>
+<tr><th id="8">8</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ipairs," data-ref="_M/FFDEF">FFDEF</a>(ipairs)</td></tr>
+<tr><th id="9">9</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_getmetatable," data-ref="_M/FFDEF">FFDEF</a>(getmetatable)</td></tr>
+<tr><th id="10">10</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_setmetatable," data-ref="_M/FFDEF">FFDEF</a>(setmetatable)</td></tr>
+<tr><th id="11">11</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_getfenv," data-ref="_M/FFDEF">FFDEF</a>(getfenv)</td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_setfenv," data-ref="_M/FFDEF">FFDEF</a>(setfenv)</td></tr>
+<tr><th id="13">13</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_rawget," data-ref="_M/FFDEF">FFDEF</a>(rawget)</td></tr>
+<tr><th id="14">14</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_rawset," data-ref="_M/FFDEF">FFDEF</a>(rawset)</td></tr>
+<tr><th id="15">15</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_rawequal," data-ref="_M/FFDEF">FFDEF</a>(rawequal)</td></tr>
+<tr><th id="16">16</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_unpack," data-ref="_M/FFDEF">FFDEF</a>(unpack)</td></tr>
+<tr><th id="17">17</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_select," data-ref="_M/FFDEF">FFDEF</a>(select)</td></tr>
+<tr><th id="18">18</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_tonumber," data-ref="_M/FFDEF">FFDEF</a>(tonumber)</td></tr>
+<tr><th id="19">19</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_tostring," data-ref="_M/FFDEF">FFDEF</a>(tostring)</td></tr>
+<tr><th id="20">20</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_error," data-ref="_M/FFDEF">FFDEF</a>(error)</td></tr>
+<tr><th id="21">21</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_pcall," data-ref="_M/FFDEF">FFDEF</a>(pcall)</td></tr>
+<tr><th id="22">22</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_xpcall," data-ref="_M/FFDEF">FFDEF</a>(xpcall)</td></tr>
+<tr><th id="23">23</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_loadfile," data-ref="_M/FFDEF">FFDEF</a>(loadfile)</td></tr>
+<tr><th id="24">24</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_load," data-ref="_M/FFDEF">FFDEF</a>(load)</td></tr>
+<tr><th id="25">25</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_loadstring," data-ref="_M/FFDEF">FFDEF</a>(loadstring)</td></tr>
+<tr><th id="26">26</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_dofile," data-ref="_M/FFDEF">FFDEF</a>(dofile)</td></tr>
+<tr><th id="27">27</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_gcinfo," data-ref="_M/FFDEF">FFDEF</a>(gcinfo)</td></tr>
+<tr><th id="28">28</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_collectgarbage," data-ref="_M/FFDEF">FFDEF</a>(collectgarbage)</td></tr>
+<tr><th id="29">29</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_newproxy," data-ref="_M/FFDEF">FFDEF</a>(newproxy)</td></tr>
+<tr><th id="30">30</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_print," data-ref="_M/FFDEF">FFDEF</a>(print)</td></tr>
+<tr><th id="31">31</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_status," data-ref="_M/FFDEF">FFDEF</a>(coroutine_status)</td></tr>
+<tr><th id="32">32</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_running," data-ref="_M/FFDEF">FFDEF</a>(coroutine_running)</td></tr>
+<tr><th id="33">33</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_isyieldable," data-ref="_M/FFDEF">FFDEF</a>(coroutine_isyieldable)</td></tr>
+<tr><th id="34">34</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_create," data-ref="_M/FFDEF">FFDEF</a>(coroutine_create)</td></tr>
+<tr><th id="35">35</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_yield," data-ref="_M/FFDEF">FFDEF</a>(coroutine_yield)</td></tr>
+<tr><th id="36">36</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_resume," data-ref="_M/FFDEF">FFDEF</a>(coroutine_resume)</td></tr>
+<tr><th id="37">37</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_wrap_aux," data-ref="_M/FFDEF">FFDEF</a>(coroutine_wrap_aux)</td></tr>
+<tr><th id="38">38</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_coroutine_wrap," data-ref="_M/FFDEF">FFDEF</a>(coroutine_wrap)</td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_abs," data-ref="_M/FFDEF">FFDEF</a>(math_abs)</td></tr>
+<tr><th id="40">40</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_floor," data-ref="_M/FFDEF">FFDEF</a>(math_floor)</td></tr>
+<tr><th id="41">41</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_ceil," data-ref="_M/FFDEF">FFDEF</a>(math_ceil)</td></tr>
+<tr><th id="42">42</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_sqrt," data-ref="_M/FFDEF">FFDEF</a>(math_sqrt)</td></tr>
+<tr><th id="43">43</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_log10," data-ref="_M/FFDEF">FFDEF</a>(math_log10)</td></tr>
+<tr><th id="44">44</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_exp," data-ref="_M/FFDEF">FFDEF</a>(math_exp)</td></tr>
+<tr><th id="45">45</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_sin," data-ref="_M/FFDEF">FFDEF</a>(math_sin)</td></tr>
+<tr><th id="46">46</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_cos," data-ref="_M/FFDEF">FFDEF</a>(math_cos)</td></tr>
+<tr><th id="47">47</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_tan," data-ref="_M/FFDEF">FFDEF</a>(math_tan)</td></tr>
+<tr><th id="48">48</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_asin," data-ref="_M/FFDEF">FFDEF</a>(math_asin)</td></tr>
+<tr><th id="49">49</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_acos," data-ref="_M/FFDEF">FFDEF</a>(math_acos)</td></tr>
+<tr><th id="50">50</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_atan," data-ref="_M/FFDEF">FFDEF</a>(math_atan)</td></tr>
+<tr><th id="51">51</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_sinh," data-ref="_M/FFDEF">FFDEF</a>(math_sinh)</td></tr>
+<tr><th id="52">52</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_cosh," data-ref="_M/FFDEF">FFDEF</a>(math_cosh)</td></tr>
+<tr><th id="53">53</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_tanh," data-ref="_M/FFDEF">FFDEF</a>(math_tanh)</td></tr>
+<tr><th id="54">54</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_frexp," data-ref="_M/FFDEF">FFDEF</a>(math_frexp)</td></tr>
+<tr><th id="55">55</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_modf," data-ref="_M/FFDEF">FFDEF</a>(math_modf)</td></tr>
+<tr><th id="56">56</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_log," data-ref="_M/FFDEF">FFDEF</a>(math_log)</td></tr>
+<tr><th id="57">57</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_atan2," data-ref="_M/FFDEF">FFDEF</a>(math_atan2)</td></tr>
+<tr><th id="58">58</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_pow," data-ref="_M/FFDEF">FFDEF</a>(math_pow)</td></tr>
+<tr><th id="59">59</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_fmod," data-ref="_M/FFDEF">FFDEF</a>(math_fmod)</td></tr>
+<tr><th id="60">60</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_ldexp," data-ref="_M/FFDEF">FFDEF</a>(math_ldexp)</td></tr>
+<tr><th id="61">61</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_min," data-ref="_M/FFDEF">FFDEF</a>(math_min)</td></tr>
+<tr><th id="62">62</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_max," data-ref="_M/FFDEF">FFDEF</a>(math_max)</td></tr>
+<tr><th id="63">63</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_random," data-ref="_M/FFDEF">FFDEF</a>(math_random)</td></tr>
+<tr><th id="64">64</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_math_randomseed," data-ref="_M/FFDEF">FFDEF</a>(math_randomseed)</td></tr>
+<tr><th id="65">65</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_tobit," data-ref="_M/FFDEF">FFDEF</a>(bit_tobit)</td></tr>
+<tr><th id="66">66</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_bnot," data-ref="_M/FFDEF">FFDEF</a>(bit_bnot)</td></tr>
+<tr><th id="67">67</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_bswap," data-ref="_M/FFDEF">FFDEF</a>(bit_bswap)</td></tr>
+<tr><th id="68">68</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_lshift," data-ref="_M/FFDEF">FFDEF</a>(bit_lshift)</td></tr>
+<tr><th id="69">69</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_rshift," data-ref="_M/FFDEF">FFDEF</a>(bit_rshift)</td></tr>
+<tr><th id="70">70</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_arshift," data-ref="_M/FFDEF">FFDEF</a>(bit_arshift)</td></tr>
+<tr><th id="71">71</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_rol," data-ref="_M/FFDEF">FFDEF</a>(bit_rol)</td></tr>
+<tr><th id="72">72</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_ror," data-ref="_M/FFDEF">FFDEF</a>(bit_ror)</td></tr>
+<tr><th id="73">73</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_band," data-ref="_M/FFDEF">FFDEF</a>(bit_band)</td></tr>
+<tr><th id="74">74</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_bor," data-ref="_M/FFDEF">FFDEF</a>(bit_bor)</td></tr>
+<tr><th id="75">75</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_bxor," data-ref="_M/FFDEF">FFDEF</a>(bit_bxor)</td></tr>
+<tr><th id="76">76</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_bit_tohex," data-ref="_M/FFDEF">FFDEF</a>(bit_tohex)</td></tr>
+<tr><th id="77">77</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_byte," data-ref="_M/FFDEF">FFDEF</a>(string_byte)</td></tr>
+<tr><th id="78">78</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_char," data-ref="_M/FFDEF">FFDEF</a>(string_char)</td></tr>
+<tr><th id="79">79</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_sub," data-ref="_M/FFDEF">FFDEF</a>(string_sub)</td></tr>
+<tr><th id="80">80</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_rep," data-ref="_M/FFDEF">FFDEF</a>(string_rep)</td></tr>
+<tr><th id="81">81</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_reverse," data-ref="_M/FFDEF">FFDEF</a>(string_reverse)</td></tr>
+<tr><th id="82">82</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_lower," data-ref="_M/FFDEF">FFDEF</a>(string_lower)</td></tr>
+<tr><th id="83">83</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_upper," data-ref="_M/FFDEF">FFDEF</a>(string_upper)</td></tr>
+<tr><th id="84">84</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_dump," data-ref="_M/FFDEF">FFDEF</a>(string_dump)</td></tr>
+<tr><th id="85">85</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_find," data-ref="_M/FFDEF">FFDEF</a>(string_find)</td></tr>
+<tr><th id="86">86</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_match," data-ref="_M/FFDEF">FFDEF</a>(string_match)</td></tr>
+<tr><th id="87">87</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_gmatch_aux," data-ref="_M/FFDEF">FFDEF</a>(string_gmatch_aux)</td></tr>
+<tr><th id="88">88</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_gmatch," data-ref="_M/FFDEF">FFDEF</a>(string_gmatch)</td></tr>
+<tr><th id="89">89</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_gsub," data-ref="_M/FFDEF">FFDEF</a>(string_gsub)</td></tr>
+<tr><th id="90">90</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_string_format," data-ref="_M/FFDEF">FFDEF</a>(string_format)</td></tr>
+<tr><th id="91">91</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_table_maxn," data-ref="_M/FFDEF">FFDEF</a>(table_maxn)</td></tr>
+<tr><th id="92">92</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_table_insert," data-ref="_M/FFDEF">FFDEF</a>(table_insert)</td></tr>
+<tr><th id="93">93</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_table_concat," data-ref="_M/FFDEF">FFDEF</a>(table_concat)</td></tr>
+<tr><th id="94">94</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_table_sort," data-ref="_M/FFDEF">FFDEF</a>(table_sort)</td></tr>
+<tr><th id="95">95</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_table_new," data-ref="_M/FFDEF">FFDEF</a>(table_new)</td></tr>
+<tr><th id="96">96</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_table_clear," data-ref="_M/FFDEF">FFDEF</a>(table_clear)</td></tr>
+<tr><th id="97">97</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_close," data-ref="_M/FFDEF">FFDEF</a>(io_method_close)</td></tr>
+<tr><th id="98">98</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_read," data-ref="_M/FFDEF">FFDEF</a>(io_method_read)</td></tr>
+<tr><th id="99">99</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_write," data-ref="_M/FFDEF">FFDEF</a>(io_method_write)</td></tr>
+<tr><th id="100">100</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_flush," data-ref="_M/FFDEF">FFDEF</a>(io_method_flush)</td></tr>
+<tr><th id="101">101</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_seek," data-ref="_M/FFDEF">FFDEF</a>(io_method_seek)</td></tr>
+<tr><th id="102">102</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_setvbuf," data-ref="_M/FFDEF">FFDEF</a>(io_method_setvbuf)</td></tr>
+<tr><th id="103">103</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method_lines," data-ref="_M/FFDEF">FFDEF</a>(io_method_lines)</td></tr>
+<tr><th id="104">104</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method___gc," data-ref="_M/FFDEF">FFDEF</a>(io_method___gc)</td></tr>
+<tr><th id="105">105</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_method___tostring," data-ref="_M/FFDEF">FFDEF</a>(io_method___tostring)</td></tr>
+<tr><th id="106">106</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_open," data-ref="_M/FFDEF">FFDEF</a>(io_open)</td></tr>
+<tr><th id="107">107</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_popen," data-ref="_M/FFDEF">FFDEF</a>(io_popen)</td></tr>
+<tr><th id="108">108</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_tmpfile," data-ref="_M/FFDEF">FFDEF</a>(io_tmpfile)</td></tr>
+<tr><th id="109">109</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_close," data-ref="_M/FFDEF">FFDEF</a>(io_close)</td></tr>
+<tr><th id="110">110</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_read," data-ref="_M/FFDEF">FFDEF</a>(io_read)</td></tr>
+<tr><th id="111">111</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_write," data-ref="_M/FFDEF">FFDEF</a>(io_write)</td></tr>
+<tr><th id="112">112</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_flush," data-ref="_M/FFDEF">FFDEF</a>(io_flush)</td></tr>
+<tr><th id="113">113</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_input," data-ref="_M/FFDEF">FFDEF</a>(io_input)</td></tr>
+<tr><th id="114">114</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_output," data-ref="_M/FFDEF">FFDEF</a>(io_output)</td></tr>
+<tr><th id="115">115</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_lines," data-ref="_M/FFDEF">FFDEF</a>(io_lines)</td></tr>
+<tr><th id="116">116</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_io_type," data-ref="_M/FFDEF">FFDEF</a>(io_type)</td></tr>
+<tr><th id="117">117</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_execute," data-ref="_M/FFDEF">FFDEF</a>(os_execute)</td></tr>
+<tr><th id="118">118</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_remove," data-ref="_M/FFDEF">FFDEF</a>(os_remove)</td></tr>
+<tr><th id="119">119</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_rename," data-ref="_M/FFDEF">FFDEF</a>(os_rename)</td></tr>
+<tr><th id="120">120</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_tmpname," data-ref="_M/FFDEF">FFDEF</a>(os_tmpname)</td></tr>
+<tr><th id="121">121</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_getenv," data-ref="_M/FFDEF">FFDEF</a>(os_getenv)</td></tr>
+<tr><th id="122">122</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_exit," data-ref="_M/FFDEF">FFDEF</a>(os_exit)</td></tr>
+<tr><th id="123">123</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_clock," data-ref="_M/FFDEF">FFDEF</a>(os_clock)</td></tr>
+<tr><th id="124">124</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_date," data-ref="_M/FFDEF">FFDEF</a>(os_date)</td></tr>
+<tr><th id="125">125</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_time," data-ref="_M/FFDEF">FFDEF</a>(os_time)</td></tr>
+<tr><th id="126">126</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_difftime," data-ref="_M/FFDEF">FFDEF</a>(os_difftime)</td></tr>
+<tr><th id="127">127</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_os_setlocale," data-ref="_M/FFDEF">FFDEF</a>(os_setlocale)</td></tr>
+<tr><th id="128">128</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_getregistry," data-ref="_M/FFDEF">FFDEF</a>(debug_getregistry)</td></tr>
+<tr><th id="129">129</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_getmetatable," data-ref="_M/FFDEF">FFDEF</a>(debug_getmetatable)</td></tr>
+<tr><th id="130">130</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_setmetatable," data-ref="_M/FFDEF">FFDEF</a>(debug_setmetatable)</td></tr>
+<tr><th id="131">131</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_getfenv," data-ref="_M/FFDEF">FFDEF</a>(debug_getfenv)</td></tr>
+<tr><th id="132">132</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_setfenv," data-ref="_M/FFDEF">FFDEF</a>(debug_setfenv)</td></tr>
+<tr><th id="133">133</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_getinfo," data-ref="_M/FFDEF">FFDEF</a>(debug_getinfo)</td></tr>
+<tr><th id="134">134</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_getlocal," data-ref="_M/FFDEF">FFDEF</a>(debug_getlocal)</td></tr>
+<tr><th id="135">135</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_setlocal," data-ref="_M/FFDEF">FFDEF</a>(debug_setlocal)</td></tr>
+<tr><th id="136">136</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_getupvalue," data-ref="_M/FFDEF">FFDEF</a>(debug_getupvalue)</td></tr>
+<tr><th id="137">137</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_setupvalue," data-ref="_M/FFDEF">FFDEF</a>(debug_setupvalue)</td></tr>
+<tr><th id="138">138</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_upvalueid," data-ref="_M/FFDEF">FFDEF</a>(debug_upvalueid)</td></tr>
+<tr><th id="139">139</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_upvaluejoin," data-ref="_M/FFDEF">FFDEF</a>(debug_upvaluejoin)</td></tr>
+<tr><th id="140">140</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_sethook," data-ref="_M/FFDEF">FFDEF</a>(debug_sethook)</td></tr>
+<tr><th id="141">141</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_gethook," data-ref="_M/FFDEF">FFDEF</a>(debug_gethook)</td></tr>
+<tr><th id="142">142</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_debug," data-ref="_M/FFDEF">FFDEF</a>(debug_debug)</td></tr>
+<tr><th id="143">143</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_debug_traceback," data-ref="_M/FFDEF">FFDEF</a>(debug_traceback)</td></tr>
+<tr><th id="144">144</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_on," data-ref="_M/FFDEF">FFDEF</a>(jit_on)</td></tr>
+<tr><th id="145">145</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_off," data-ref="_M/FFDEF">FFDEF</a>(jit_off)</td></tr>
+<tr><th id="146">146</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_flush," data-ref="_M/FFDEF">FFDEF</a>(jit_flush)</td></tr>
+<tr><th id="147">147</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_status," data-ref="_M/FFDEF">FFDEF</a>(jit_status)</td></tr>
+<tr><th id="148">148</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_security," data-ref="_M/FFDEF">FFDEF</a>(jit_security)</td></tr>
+<tr><th id="149">149</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_attach," data-ref="_M/FFDEF">FFDEF</a>(jit_attach)</td></tr>
+<tr><th id="150">150</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_funcinfo," data-ref="_M/FFDEF">FFDEF</a>(jit_util_funcinfo)</td></tr>
+<tr><th id="151">151</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_funcbc," data-ref="_M/FFDEF">FFDEF</a>(jit_util_funcbc)</td></tr>
+<tr><th id="152">152</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_funck," data-ref="_M/FFDEF">FFDEF</a>(jit_util_funck)</td></tr>
+<tr><th id="153">153</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_funcuvname," data-ref="_M/FFDEF">FFDEF</a>(jit_util_funcuvname)</td></tr>
+<tr><th id="154">154</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_traceinfo," data-ref="_M/FFDEF">FFDEF</a>(jit_util_traceinfo)</td></tr>
+<tr><th id="155">155</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_traceir," data-ref="_M/FFDEF">FFDEF</a>(jit_util_traceir)</td></tr>
+<tr><th id="156">156</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_tracek," data-ref="_M/FFDEF">FFDEF</a>(jit_util_tracek)</td></tr>
+<tr><th id="157">157</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_tracesnap," data-ref="_M/FFDEF">FFDEF</a>(jit_util_tracesnap)</td></tr>
+<tr><th id="158">158</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_tracemc," data-ref="_M/FFDEF">FFDEF</a>(jit_util_tracemc)</td></tr>
+<tr><th id="159">159</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_traceexitstub," data-ref="_M/FFDEF">FFDEF</a>(jit_util_traceexitstub)</td></tr>
+<tr><th id="160">160</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_util_ircalladdr," data-ref="_M/FFDEF">FFDEF</a>(jit_util_ircalladdr)</td></tr>
+<tr><th id="161">161</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_opt_start," data-ref="_M/FFDEF">FFDEF</a>(jit_opt_start)</td></tr>
+<tr><th id="162">162</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_profile_start," data-ref="_M/FFDEF">FFDEF</a>(jit_profile_start)</td></tr>
+<tr><th id="163">163</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_profile_stop," data-ref="_M/FFDEF">FFDEF</a>(jit_profile_stop)</td></tr>
+<tr><th id="164">164</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_jit_profile_dumpstack," data-ref="_M/FFDEF">FFDEF</a>(jit_profile_dumpstack)</td></tr>
+<tr><th id="165">165</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___index," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___index)</td></tr>
+<tr><th id="166">166</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___newindex," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___newindex)</td></tr>
+<tr><th id="167">167</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___eq," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___eq)</td></tr>
+<tr><th id="168">168</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___len," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___len)</td></tr>
+<tr><th id="169">169</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___lt," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___lt)</td></tr>
+<tr><th id="170">170</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___le," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___le)</td></tr>
+<tr><th id="171">171</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___concat," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___concat)</td></tr>
+<tr><th id="172">172</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___call," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___call)</td></tr>
+<tr><th id="173">173</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___add," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___add)</td></tr>
+<tr><th id="174">174</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___sub," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___sub)</td></tr>
+<tr><th id="175">175</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___mul," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___mul)</td></tr>
+<tr><th id="176">176</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___div," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___div)</td></tr>
+<tr><th id="177">177</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___mod," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___mod)</td></tr>
+<tr><th id="178">178</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___pow," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___pow)</td></tr>
+<tr><th id="179">179</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___unm," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___unm)</td></tr>
+<tr><th id="180">180</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___tostring," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___tostring)</td></tr>
+<tr><th id="181">181</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___pairs," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___pairs)</td></tr>
+<tr><th id="182">182</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_meta___ipairs," data-ref="_M/FFDEF">FFDEF</a>(ffi_meta___ipairs)</td></tr>
+<tr><th id="183">183</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_clib___index," data-ref="_M/FFDEF">FFDEF</a>(ffi_clib___index)</td></tr>
+<tr><th id="184">184</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_clib___newindex," data-ref="_M/FFDEF">FFDEF</a>(ffi_clib___newindex)</td></tr>
+<tr><th id="185">185</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_clib___gc," data-ref="_M/FFDEF">FFDEF</a>(ffi_clib___gc)</td></tr>
+<tr><th id="186">186</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_callback_free," data-ref="_M/FFDEF">FFDEF</a>(ffi_callback_free)</td></tr>
+<tr><th id="187">187</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_callback_set," data-ref="_M/FFDEF">FFDEF</a>(ffi_callback_set)</td></tr>
+<tr><th id="188">188</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_cdef," data-ref="_M/FFDEF">FFDEF</a>(ffi_cdef)</td></tr>
+<tr><th id="189">189</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_new," data-ref="_M/FFDEF">FFDEF</a>(ffi_new)</td></tr>
+<tr><th id="190">190</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_cast," data-ref="_M/FFDEF">FFDEF</a>(ffi_cast)</td></tr>
+<tr><th id="191">191</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_typeof," data-ref="_M/FFDEF">FFDEF</a>(ffi_typeof)</td></tr>
+<tr><th id="192">192</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_typeinfo," data-ref="_M/FFDEF">FFDEF</a>(ffi_typeinfo)</td></tr>
+<tr><th id="193">193</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_istype," data-ref="_M/FFDEF">FFDEF</a>(ffi_istype)</td></tr>
+<tr><th id="194">194</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_sizeof," data-ref="_M/FFDEF">FFDEF</a>(ffi_sizeof)</td></tr>
+<tr><th id="195">195</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_alignof," data-ref="_M/FFDEF">FFDEF</a>(ffi_alignof)</td></tr>
+<tr><th id="196">196</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_offsetof," data-ref="_M/FFDEF">FFDEF</a>(ffi_offsetof)</td></tr>
+<tr><th id="197">197</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_errno," data-ref="_M/FFDEF">FFDEF</a>(ffi_errno)</td></tr>
+<tr><th id="198">198</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_string," data-ref="_M/FFDEF">FFDEF</a>(ffi_string)</td></tr>
+<tr><th id="199">199</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_copy," data-ref="_M/FFDEF">FFDEF</a>(ffi_copy)</td></tr>
+<tr><th id="200">200</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_fill," data-ref="_M/FFDEF">FFDEF</a>(ffi_fill)</td></tr>
+<tr><th id="201">201</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_abi," data-ref="_M/FFDEF">FFDEF</a>(ffi_abi)</td></tr>
+<tr><th id="202">202</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_metatype," data-ref="_M/FFDEF">FFDEF</a>(ffi_metatype)</td></tr>
+<tr><th id="203">203</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_gc," data-ref="_M/FFDEF">FFDEF</a>(ffi_gc)</td></tr>
+<tr><th id="204">204</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_ffi_load," data-ref="_M/FFDEF">FFDEF</a>(ffi_load)</td></tr>
+<tr><th id="205">205</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_free," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_free)</td></tr>
+<tr><th id="206">206</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_reset," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_reset)</td></tr>
+<tr><th id="207">207</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_skip," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_skip)</td></tr>
+<tr><th id="208">208</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_set," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_set)</td></tr>
+<tr><th id="209">209</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_put," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_put)</td></tr>
+<tr><th id="210">210</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_putf," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_putf)</td></tr>
+<tr><th id="211">211</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_get," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_get)</td></tr>
+<tr><th id="212">212</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_putcdata," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_putcdata)</td></tr>
+<tr><th id="213">213</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_reserve," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_reserve)</td></tr>
+<tr><th id="214">214</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_commit," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_commit)</td></tr>
+<tr><th id="215">215</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_ref," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_ref)</td></tr>
+<tr><th id="216">216</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_encode," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_encode)</td></tr>
+<tr><th id="217">217</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method_decode," data-ref="_M/FFDEF">FFDEF</a>(buffer_method_decode)</td></tr>
+<tr><th id="218">218</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method___gc," data-ref="_M/FFDEF">FFDEF</a>(buffer_method___gc)</td></tr>
+<tr><th id="219">219</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method___tostring," data-ref="_M/FFDEF">FFDEF</a>(buffer_method___tostring)</td></tr>
+<tr><th id="220">220</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_method___len," data-ref="_M/FFDEF">FFDEF</a>(buffer_method___len)</td></tr>
+<tr><th id="221">221</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_new," data-ref="_M/FFDEF">FFDEF</a>(buffer_new)</td></tr>
+<tr><th id="222">222</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_encode," data-ref="_M/FFDEF">FFDEF</a>(buffer_encode)</td></tr>
+<tr><th id="223">223</th><td><a class="macro" href="lj_ff.h.html#13" title="FF_buffer_decode," data-ref="_M/FFDEF">FFDEF</a>(buffer_decode)</td></tr>
+<tr><th id="224">224</th><td></td></tr>
+<tr><th id="225">225</th><td><u>#undef <a class="macro" href="lj_ff.h.html#13" data-ref="_M/FFDEF">FFDEF</a></u></td></tr>
+<tr><th id="226">226</th><td></td></tr>
+<tr><th id="227">227</th><td><u>#<span data-ppcond="227">ifndef</span> <span class="macro" data-ref="_M/FF_NUM_ASMFUNC">FF_NUM_ASMFUNC</span></u></td></tr>
+<tr><th id="228">228</th><td><u>#define <dfn class="macro" id="_M/FF_NUM_ASMFUNC" data-ref="_M/FF_NUM_ASMFUNC">FF_NUM_ASMFUNC</dfn> 57</u></td></tr>
+<tr><th id="229">229</th><td><u>#<span data-ppcond="227">endif</span></u></td></tr>
+<tr><th id="230">230</th><td></td></tr>
+<tr><th id="231">231</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_base.c.html'>luajit/lib_base.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_opt_narrow.c' l='192' type='1'/>
+<use f='luajit/lj_opt_narrow.c' l='353' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='372' u='r' c='narrow_conv_emit'/>
+<doc f='luajit/lj_opt_narrow.c' l='192'>/* Push conversion of ref. */</doc>

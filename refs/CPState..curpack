@@ -1,0 +1,14 @@
+<dec f='luajit/lj_cparse.h' l='58' type='uint8_t'/>
+<offset>1016</offset>
+<doc f='luajit/lj_cparse.h' l='58'>/* Current position in pack pragma stack. */</doc>
+<use f='luajit/lj_cparse.c' l='398' u='w' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='1310' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1311' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1769' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1770' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1770' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1771' u='w' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1774' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1774' u='w' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1782' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1785' u='r' c='cp_pragma'/>

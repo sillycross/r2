@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='1032' type='const char *const [12]'/>
+<use f='luajit/lj_api.c' l='255' u='r' c='lua_typename'/>
+<use f='luajit/lj_cconv.c' l='27' u='r' c='cconv_err_conv'/>
+<use f='luajit/lj_err.c' l='1031' u='r' c='lj_err_argtype'/>
+<use f='luajit/lj_err.c' l='1035' u='r' c='lj_err_argtype'/>
+<use f='luajit/lj_err.c' l='1044' u='r' c='lj_err_argt'/>
+<def f='luajit/lj_obj.c' l='12' ll='15' type='const char *const [12]'/>
+<doc f='luajit/lj_obj.c' l='11'>/* Object type names. */</doc>
+<doc f='luajit/lj_obj.c' l='12'>/* ORDER LUA_T */</doc>

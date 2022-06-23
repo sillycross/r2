@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strfmt.h' l='118' type='GCstr * lj_strfmt_char(lua_State * L, int c)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='909' u='c' c='fold_kfold_tostr_kint'/>
+<def f='luajit/lj_strfmt.c' l='498' ll='503' type='GCstr * lj_strfmt_char(lua_State * L, int c)'/>
+<doc f='luajit/lj_strfmt.c' l='497'>/* Convert char value to string. */</doc>

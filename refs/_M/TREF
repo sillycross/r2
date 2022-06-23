@@ -1,0 +1,13 @@
+<dec f='luajit/lj_ir.h' l='486'/>
+<use f='luajit/lj_ir.c' l='127' u='c'/>
+<use f='luajit/lj_ir.c' l='214' u='c'/>
+<use f='luajit/lj_ir.c' l='235' u='c'/>
+<use f='luajit/lj_ir.c' l='296' u='c'/>
+<use f='luajit/lj_ir.c' l='309' u='c'/>
+<use f='luajit/lj_ir.c' l='336' u='c'/>
+<use f='luajit/lj_ir.c' l='355' u='c'/>
+<use f='luajit/lj_ir.c' l='378' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2517' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2543' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2556' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='436' u='c'/>

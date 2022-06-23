@@ -1,0 +1,4 @@
+<dec f='luajit/lj_arch.h' l='674'/>
+<doc f='luajit/lj_arch.h' l='673'>/* PRNG init: 0 = fixed/insecure, 1 = secure from OS. */</doc>
+<use f='luajit/lj_prng.c' l='74' u='c'/>
+<use f='luajit/lj_prng.c' l='144' u='c'/>

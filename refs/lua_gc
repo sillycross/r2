@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='232' type='int lua_gc(lua_State * L, int what, int data)'/>
+<use f='luajit/lib_base.c' l='468' u='c' c='lj_cf_collectgarbage'/>
+<def f='luajit/lj_api.c' l='1251' ll='1296' macro='1' type='int lua_gc(lua_State * L, int what, int data)'/>
+<use f='luajit/luajit.c' l='127' u='c' c='docall'/>
+<use f='luajit/luajit.c' l='536' u='c' c='pmain'/>
+<use f='luajit/luajit.c' l='538' u='c' c='pmain'/>

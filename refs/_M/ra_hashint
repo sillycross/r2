@@ -1,0 +1,7 @@
+<dec f='luajit/lj_target.h' l='31'/>
+<doc f='luajit/lj_target.h' l='30'>/* The ra_hashint() macro assumes a previous test for ra_noreg(). */</doc>
+<use f='luajit/lj_asm.c' l='629' u='c'/>
+<use f='luajit/lj_asm.c' l='723' u='c'/>
+<use f='luajit/lj_asm.c' l='781' u='c'/>
+<use f='luajit/lj_asm.c' l='2331' u='c'/>
+<use f='luajit/lj_asm.c' l='2353' u='c'/>

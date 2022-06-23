@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='620' type='uint8_t'/>
+<offset>160</offset>
+<doc f='luajit/lj_obj.h' l='620'>/* String ID reseed counter. */</doc>
+<use f='luajit/lj_str.c' l='288' u='w' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='291' u='w' c='lj_str_alloc'/>

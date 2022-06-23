@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='312'/>
+<use f='luajit/lj_parse.c' l='1099' u='c'/>
+<use f='luajit/lj_parse.c' l='1216' u='c'/>
+<use f='luajit/lj_parse.c' l='1221' u='c'/>
+<use f='luajit/lj_parse.c' l='1233' u='c'/>
+<use f='luajit/lj_parse.c' l='1239' u='c'/>
+<use f='luajit/lj_parse.c' l='1268' u='c'/>
+<use f='luajit/lj_parse.c' l='1464' u='c'/>
+<use f='luajit/lj_parse.c' l='1475' u='c'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='173' type='192'/>
+<use f='luajit/lj_emit_x86.h' l='88' u='r' c='emit_rr'/>
+<use f='luajit/lj_emit_x86.h' l='171' u='r' c='emit_gri'/>
+<use f='luajit/lj_emit_x86.h' l='196' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='319' u='r' c='emit_loadu64'/>
+<use f='luajit/lj_asm_x86.h' l='2904' u='r' c='asm_tail_fixup'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_gc.h' l='32'/>
+<doc f='luajit/lj_gc.h' l='31'>/* Macros to test and set GCobj colors. */</doc>
+<use f='luajit/lj_gc.c' l='144' u='c'/>
+<use f='luajit/lj_gc.c' l='245' u='c'/>
+<use f='luajit/lj_gc.c' l='461' u='c'/>

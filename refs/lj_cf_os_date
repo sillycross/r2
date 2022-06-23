@@ -1,0 +1,1 @@
+<def f='luajit/lib_os.c' l='171' macro='1' type='int lj_cf_os_date(lua_State * L)'/>

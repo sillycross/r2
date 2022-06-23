@@ -1,0 +1,7 @@
+<dec f='luajit/host/buildvm.h' l='98' type='const char *const []'/>
+<use f='luajit/host/buildvm_arch.h' l='4665' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm.c' l='218' u='r' c='build_code'/>
+<def f='luajit/host/buildvm.c' l='246' ll='251' type='const char *const [98]'/>
+<use f='luajit/host/buildvm.c' l='327' u='r' c='emit_vmdef'/>
+<use f='luajit/host/buildvm.c' l='327' u='r' c='emit_vmdef'/>
+<doc f='luajit/host/buildvm.c' l='244'>/* -- Generate VM enums --------------------------------------------------- */</doc>

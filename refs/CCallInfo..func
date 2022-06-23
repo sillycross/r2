@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ircall.h' l='15' type='ASMFunction'/>
+<offset>0</offset>
+<doc f='luajit/lj_ircall.h' l='15'>/* Function pointer. */</doc>
+<use f='luajit/lib_jit.c' l='425' u='r' c='lj_cf_jit_util_ircalladdr'/>
+<use f='luajit/lj_asm_x86.h' l='563' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='564' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='746' u='w' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='747' u='r' c='asm_callx'/>
+<use f='luajit/lj_opt_fold.c' l='220' u='r' c='fold_kfold_fpcall1'/>
+<use f='luajit/lj_opt_fold.c' l='233' u='r' c='fold_kfold_fpcall2'/>
+<use f='luajit/lj_opt_fold.c' l='671' u='r' c='fold_bufput_kfold_op'/>
+<use f='luajit/lj_opt_fold.c' l='727' u='r' c='fold_bufput_kfold_fmt'/>

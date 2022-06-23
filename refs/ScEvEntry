@@ -1,0 +1,11 @@
+<def f='luajit/lj_jit.h' l='323' ll='331'/>
+<use f='luajit/lj_jit.h' l='323'/>
+<size>24</size>
+<doc f='luajit/lj_jit.h' l='322'>/* Scalar evolution analysis cache. */</doc>
+<mbr r='ScEvEntry::pc' o='0' t='MRef'/>
+<mbr r='ScEvEntry::idx' o='64' t='IRRef1'/>
+<mbr r='ScEvEntry::start' o='80' t='IRRef1'/>
+<mbr r='ScEvEntry::stop' o='96' t='IRRef1'/>
+<mbr r='ScEvEntry::step' o='112' t='IRRef1'/>
+<mbr r='ScEvEntry::t' o='128' t='IRType1'/>
+<mbr r='ScEvEntry::dir' o='136' t='uint8_t'/>

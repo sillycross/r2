@@ -1,0 +1,19 @@
+<dec f='luajit/lj_ir.h' l='239'/>
+<doc f='luajit/lj_ir.h' l='238'>/* CONV mode, stored in op2. */</doc>
+<use f='luajit/lj_asm_x86.h' l='814' u='c'/>
+<use f='luajit/lj_asm.c' l='2346' u='c'/>
+<use f='luajit/lj_asm.c' l='2347' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='818' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='819' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='820' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1151' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1161' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1172' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1177' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1198' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1215' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1225' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1228' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1244' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1245' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='274' u='c'/>

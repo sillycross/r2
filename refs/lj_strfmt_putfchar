@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strfmt.h' l='107' type='SBuf * lj_strfmt_putfchar(SBuf * sb, SFormat , int32_t c)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='720' u='c' c='fold_bufput_kfold_fmt'/>
+<def f='luajit/lj_strfmt.c' l='246' ll='255' type='SBuf * lj_strfmt_putfchar(SBuf * sb, SFormat sf, int32_t c)'/>
+<use f='luajit/lj_strfmt.c' l='466' u='c' c='lj_strfmt_putarg'/>
+<doc f='luajit/lj_strfmt.c' l='245'>/* Add formatted char to buffer. */</doc>

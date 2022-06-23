@@ -1,0 +1,12 @@
+<dec f='luajit/lj_tab.h' l='90' type='MSize lj_tab_len(GCtab * t)'/>
+<use f='luajit/lib_base.c' l='227' u='c' c='lj_cf_unpack'/>
+<use f='luajit/lib_table.c' l='82' u='c' c='lj_cf_table_insert'/>
+<use f='luajit/lib_table.c' l='158' u='c' c='lj_cf_table_concat'/>
+<use f='luajit/lib_table.c' l='262' u='c' c='lj_cf_table_sort'/>
+<use f='luajit/lj_api.c' l='582' u='c' c='lua_objlen'/>
+<use f='luajit/lj_ffrecord.c' l='1048' u='c' c='recff_table_insert'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_serialize.c' l='127' u='c' c='lj_serialize_dict_prep'/>
+<def f='luajit/lj_tab.c' l='651' ll='667' type='MSize lj_tab_len(GCtab * t)'/>
+<use f='luajit/lj_tab.c' l='680' u='c' c='lj_tab_len_hint'/>
+<doc f='luajit/lj_tab.c' l='650'>/* Compute table length. Fast path. */</doc>

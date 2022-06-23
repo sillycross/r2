@@ -1,0 +1,5 @@
+<dec f='luajit/lj_mcode.h' l='19' type='void lj_mcode_free(jit_State * J)'/>
+<def f='luajit/lj_mcode.c' l='281' ll='293' type='void lj_mcode_free(jit_State * J)'/>
+<doc f='luajit/lj_mcode.c' l='280'>/* Free all MCode areas. */</doc>
+<use f='luajit/lj_trace.c' l='301' u='c' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='364' u='c' c='lj_trace_freestate'/>

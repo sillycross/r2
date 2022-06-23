@@ -1,0 +1,4 @@
+<dec f='luajit/lj_tab.h' l='92' type='MSize lj_tab_len_hint(GCtab * t, size_t hint)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_tab.c' l='671' ll='681' type='MSize lj_tab_len_hint(GCtab * t, size_t hint)'/>
+<doc f='luajit/lj_tab.c' l='670'>/* Verify hinted table length or compute it. */</doc>

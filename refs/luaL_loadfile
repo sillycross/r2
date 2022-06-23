@@ -1,0 +1,6 @@
+<dec f='luajit/lauxlib.h' l='65' type='int luaL_loadfile(lua_State * L, const char * filename)'/>
+<use f='luajit/lib_base.c' l='446' u='c' c='lj_cf_dofile'/>
+<use f='luajit/lib_package.c' l='376' u='c' c='lj_cf_package_loader_lua'/>
+<def f='luajit/lj_load.c' l='117' ll='120' macro='1' type='int luaL_loadfile(lua_State * L, const char * filename)'/>
+<use f='luajit/luajit.c' l='169' u='c' c='dofile'/>
+<use f='luajit/luajit.c' l='276' u='c' c='handle_script'/>

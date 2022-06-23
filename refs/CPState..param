@@ -1,0 +1,10 @@
+<dec f='luajit/lj_cparse.h' l='51' type='TValue *'/>
+<use f='luajit/lib_ffi.c' l='54' u='w' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='485' u='w' c='lj_cf_ffi_cdef'/>
+<offset>704</offset>
+<doc f='luajit/lj_cparse.h' l='51'>/* C type parameters. */</doc>
+<use f='luajit/lj_cparse.c' l='203' u='r' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='208' u='w' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='1910' u='r' c='cpcparser'/>
+<use f='luajit/lj_cparse.c' l='1910' u='r' c='cpcparser'/>
+<use f='luajit/lj_crecord.c' l='85' u='w' c='argv2ctype'/>

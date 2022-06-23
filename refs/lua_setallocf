@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='246' type='void lua_setallocf(lua_State * L, lua_Alloc f, void * ud)'/>
+<def f='luajit/lj_api.c' l='1305' ll='1310' macro='1' type='void lua_setallocf(lua_State * L, lua_Alloc f, void * ud)'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='223' type='106'/>
+<use f='luajit/lj_asm_x86.h' l='17' u='r' c='asm_exitstub_gen'/>
+<use f='luajit/lj_asm_x86.h' l='20' u='r' c='asm_exitstub_gen'/>
+<use f='luajit/lj_asm_x86.h' l='23' u='r' c='asm_exitstub_gen'/>

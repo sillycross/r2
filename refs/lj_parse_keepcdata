@@ -1,0 +1,4 @@
+<dec f='luajit/lj_parse.h' l='15' type='void lj_parse_keepcdata(LexState * ls, TValue * tv, GCcdata * cd)'/>
+<use f='luajit/lj_lex.c' l='130' u='c' c='lex_number'/>
+<def f='luajit/lj_parse.c' l='252' ll='258' type='void lj_parse_keepcdata(LexState * ls, TValue * tv, GCcdata * cd)'/>
+<doc f='luajit/lj_parse.c' l='251'>/* Anchor cdata to avoid GC. */</doc>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='295' type='188354556'/>
+<doc f='luajit/lj_target_x86.h' l='295'>/* Really 66 0f 3a 0b. See asm_fpmath. */</doc>
+<use f='luajit/lj_asm_x86.h' l='1957' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='1958' u='r' c='asm_fpmath'/>

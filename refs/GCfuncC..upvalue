@@ -1,0 +1,32 @@
+<dec f='luajit/lj_obj.h' l='458' type='TValue [1]'/>
+<use f='luajit/host/buildvm_arch.h' l='1220' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1425' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1503' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='m' c='build_subroutines'/>
+<offset>384</offset>
+<doc f='luajit/lj_obj.h' l='458'>/* Array of upvalues (TValue). */</doc>
+<use f='luajit/lib_base.c' l='97' macro='1' u='a' c='ffh_pairs'/>
+<use f='luajit/lib_base.c' l='511' macro='1' u='a' c='lj_cf_print'/>
+<use f='luajit/lib_base.c' l='516' macro='1' u='a' c='lj_cf_print'/>
+<use f='luajit/lib_base.c' l='631' macro='1' u='a' c='lj_ffh_coroutine_wrap_aux'/>
+<use f='luajit/lib_debug.c' l='235' u='a' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_io.c' l='250' u='a' c='io_file_iter'/>
+<use f='luajit/lib_io.c' l='257' u='a' c='io_file_iter'/>
+<use f='luajit/lib_math.c' l='134' macro='1' u='a' c='lj_cf_math_random'/>
+<use f='luajit/lib_math.c' l='185' macro='1' u='a' c='lj_cf_math_randomseed'/>
+<use f='luajit/lib_string.c' l='515' macro='1' u='a' c='lj_cf_string_gmatch_aux'/>
+<use f='luajit/lib_string.c' l='516' macro='1' u='a' c='lj_cf_string_gmatch_aux'/>
+<use f='luajit/lib_string.c' l='518' macro='1' u='a' c='lj_cf_string_gmatch_aux'/>
+<use f='luajit/lj_api.c' l='59' u='a' c='index2adr'/>
+<use f='luajit/lj_api.c' l='698' u='a' c='lua_pushcclosure'/>
+<use f='luajit/lj_api.c' l='923' u='a' c='lua_upvalueid'/>
+<use f='luajit/lj_debug.c' l='240' u='a' c='lj_debug_uvnamev'/>
+<use f='luajit/lj_err.c' l='1029' u='a' c='lj_err_argtype'/>
+<use f='luajit/lj_err.c' l='1029' u='a' c='lj_err_argtype'/>
+<use f='luajit/lj_ffrecord.c' l='207' u='a' c='recff_type'/>
+<use f='luajit/lj_ffrecord.c' l='445' u='a' c='recff_xpairs'/>
+<use f='luajit/lj_ffrecord.c' l='622' u='a' c='recff_math_random'/>
+<use f='luajit/lj_gc.c' l='235' u='a' c='gc_traverse_func'/>
+<use f='luajit/lj_gc.c' l='235' u='a' c='gc_traverse_func'/>
+<use f='luajit/lj_gc.c' l='235' u='a' c='gc_traverse_func'/>
+<use f='luajit/lj_lib.c' l='98' u='r' c='lj_lib_register'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='85' macro='1' type='1511'/>
+<use f='luajit/lj_errmsg.h' l='85' macro='1' u='r'/>
+<use f='luajit/lib_io.c' l='59' u='r' c='io_tofile'/>
+<use f='luajit/lib_io.c' l='253' u='r' c='io_file_iter'/>

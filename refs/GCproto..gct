@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_bcread.c' l='345' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_parse.c' l='1588' u='w' c='fs_finish'/>

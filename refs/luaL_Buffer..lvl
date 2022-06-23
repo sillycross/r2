@@ -1,0 +1,14 @@
+<dec f='luajit/lauxlib.h' l='137' type='int'/>
+<use f='luajit/lib_aux.c' l='190' u='w' c='emptybuffer'/>
+<use f='luajit/lib_aux.c' l='196' u='r' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='202' u='r' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='206' u='r' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='208' u='w' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='208' u='r' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='227' u='w' c='luaL_addlstring'/>
+<use f='luajit/lib_aux.c' l='240' u='r' c='luaL_pushresult'/>
+<use f='luajit/lib_aux.c' l='241' u='w' c='luaL_pushresult'/>
+<use f='luajit/lib_aux.c' l='256' u='w' c='luaL_addvalue'/>
+<use f='luajit/lib_aux.c' l='265' u='w' c='luaL_buffinit'/>
+<offset>64</offset>
+<doc f='luajit/lauxlib.h' l='137'>/* number of strings in the stack (level) */</doc>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_profile.h' l='13' type='void lj_profile_interpreter(lua_State * L)'/>
+<use f='luajit/lj_dispatch.c' l='545' u='c' c='lj_dispatch_profile'/>
+<def f='luajit/lj_profile.c' l='126' ll='146' type='void lj_profile_interpreter(lua_State * L)'/>
+<doc f='luajit/lj_profile.c' l='125'>/* Callback from profile hook (HOOK_PROFILE already cleared). */</doc>

@@ -1,0 +1,11 @@
+<dec f='luajit/luaconf.h' l='111'/>
+<doc f='luajit/luaconf.h' l='106'>/*
+** Size of lauxlib and io.* on-stack buffers. Weird workaround to avoid using
+** unreasonable amounts of stack space, but still retain ABI compatibility.
+** Blame Lua for depending on BUFSIZ in the ABI, blame **** for wrecking it.
+*/</doc>
+<use f='luajit/lauxlib.h' l='139' u='c'/>
+<use f='luajit/lib_io.c' l='145' u='c'/>
+<use f='luajit/lib_io.c' l='163' u='c'/>
+<use f='luajit/lib_io.c' l='360' u='c'/>
+<use f='luajit/lj_load.c' l='72' u='c'/>

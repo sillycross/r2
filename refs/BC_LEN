@@ -1,0 +1,4 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='21'/>
+<use f='luajit/host/buildvm_arch.h' l='3170' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='2094' u='r' c='expr_unop'/>
+<use f='luajit/lj_record.c' l='2223' c='lj_record_ins'/>

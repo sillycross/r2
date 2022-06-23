@@ -1,0 +1,24 @@
+<dec f='luajit/lj_ir.h' l='264' type='1'/>
+<doc f='luajit/lj_ir.h' l='264'>/* 16 bit unsigned literal. */</doc>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>

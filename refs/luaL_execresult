@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='81' type='int luaL_execresult(lua_State * L, int stat)'/>
+<def f='luajit/lib_aux.c' l='49' ll='77' macro='1' type='int luaL_execresult(lua_State * L, int stat)'/>

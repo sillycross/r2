@@ -1,0 +1,11 @@
+<dec f='luajit/lj_parse.c' l='142' type='uint8_t'/>
+<use f='luajit/lj_parse.c' l='1108' u='r' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1113' u='r' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1117' u='w' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1410' u='r' c='fs_fixup_uv1'/>
+<use f='luajit/lj_parse.c' l='1411' u='r' c='fs_fixup_uv1'/>
+<use f='luajit/lj_parse.c' l='1463' u='r' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1582' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1630' u='w' c='fs_init'/>
+<offset>728</offset>
+<doc f='luajit/lj_parse.c' l='142'>/* Number of upvalues */</doc>

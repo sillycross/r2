@@ -1,0 +1,12 @@
+<dec f='luajit/host/minilua.c' l='119' type='9'/>
+<use f='luajit/host/minilua.c' l='3217' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3366' c='luaK_storevar'/>
+<use f='luajit/host/minilua.c' l='3480' u='r' c='luaK_indexed'/>
+<use f='luajit/host/minilua.c' l='4325' u='r' c='check_conflict'/>
+<use f='luajit/host/minilua.c' l='4343' u='r' c='assignment'/>
+<dec f='luajit/lj_parse.c' l='47' type='9'/>
+<use f='luajit/lj_parse.c' l='450' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='1656' u='r' c='expr_index'/>
+<use f='luajit/lj_parse.c' l='2165' u='r' c='assign_hazard'/>
+<use f='luajit/lj_parse.c' l='2209' u='r' c='parse_assignment'/>
+<doc f='luajit/lj_parse.c' l='47'>/* info = table register, aux = index reg/byte/string const */</doc>

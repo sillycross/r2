@@ -1,0 +1,5 @@
+<dec f='luajit/lj_buf.h' l='154' type='SBuf * lj_buf_putchar(SBuf * sb, int c)'/>
+<def f='luajit/lj_buf.c' l='121' ll='127' type='SBuf * lj_buf_putchar(SBuf * sb, int c)'/>
+<use f='luajit/lj_ctype.c' l='584' u='c' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='586' u='c' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

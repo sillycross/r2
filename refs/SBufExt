@@ -1,0 +1,11 @@
+<def f='luajit/lj_buf.h' l='23' ll='32'/>
+<use f='luajit/lj_buf.h' l='23'/>
+<size>64</size>
+<doc f='luajit/lj_buf.h' l='22'>/* Extended string buffer. */</doc>
+<mbr r='SBufExt::w' o='0' t='char *'/>
+<mbr r='SBufExt::e' o='64' t='char *'/>
+<mbr r='SBufExt::b' o='128' t='char *'/>
+<mbr r='SBufExt::L' o='192' t='MRef'/>
+<mbr r='SBufExt::r' o='320' t='char *'/>
+<mbr r='SBufExt::dict' o='384' t='GCRef'/>
+<mbr r='SBufExt::depth' o='448' t='int'/>

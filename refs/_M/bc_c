@@ -1,0 +1,12 @@
+<dec f='luajit/lj_bc.h' l='37'/>
+<use f='luajit/lj_asm.c' l='2081' u='c'/>
+<use f='luajit/lj_debug.c' l='273' u='c'/>
+<use f='luajit/lj_dispatch.c' l='389' u='c'/>
+<use f='luajit/lj_parse.c' l='2342' u='c'/>
+<use f='luajit/lj_record.c' l='1786' u='c'/>
+<use f='luajit/lj_record.c' l='2099' u='c'/>
+<use f='luajit/lj_snap.c' l='244' u='c'/>
+<use f='luajit/lj_snap.c' l='247' u='c'/>
+<use f='luajit/lj_snap.c' l='280' u='c'/>
+<use f='luajit/lj_snap.c' l='281' u='c'/>
+<use f='luajit/lj_trace.c' l='918' u='c'/>

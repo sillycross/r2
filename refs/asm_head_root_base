@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='2843' ll='2854' type='void asm_head_root_base(ASMState * as)'/>
+<use f='luajit/lj_asm.c' l='1852' u='c' c='asm_head_root'/>
+<doc f='luajit/lj_asm_x86.h' l='2842'>/* Coalesce BASE register for a root trace. */</doc>

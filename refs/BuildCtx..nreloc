@@ -1,0 +1,11 @@
+<dec f='luajit/host/buildvm.h' l='77' type='int'/>
+<use f='luajit/host/buildvm.c' l='134' u='r' c='collect_reloc'/>
+<use f='luajit/host/buildvm.c' l='143' u='r' c='collect_reloc'/>
+<use f='luajit/host/buildvm.c' l='144' u='r' c='collect_reloc'/>
+<use f='luajit/host/buildvm.c' l='145' u='r' c='collect_reloc'/>
+<use f='luajit/host/buildvm.c' l='146' u='w' c='collect_reloc'/>
+<use f='luajit/host/buildvm.c' l='179' u='w' c='build_code'/>
+<offset>544</offset>
+<use f='luajit/host/buildvm_asm.c' l='290' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_peobj.c' l='187' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='252' u='r' c='emit_peobj'/>

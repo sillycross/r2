@@ -1,0 +1,14 @@
+<dec f='luajit/lj_iropt.h' l='105' type='4'/>
+<doc f='luajit/lj_iropt.h' l='105'>/* Guard eliminated. */</doc>
+<use f='luajit/lj_opt_fold.c' l='365' u='r' c='fold_kfold_intcomp0'/>
+<use f='luajit/lj_opt_fold.c' l='500' u='r' c='fold_kfold_int64comp0'/>
+<use f='luajit/lj_opt_fold.c' l='1913' u='r' c='fold_abc_fwd'/>
+<use f='luajit/lj_opt_fold.c' l='1938' u='r' c='fold_abc_k'/>
+<use f='luajit/lj_opt_fold.c' l='1954' u='r' c='fold_abc_invar'/>
+<use f='luajit/lj_opt_fold.c' l='2094' u='r' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2112' u='r' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2388' u='r' c='fold_barrier_tnew_tdup'/>
+<use f='luajit/lj_opt_mem.c' l='363' u='r' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='524' u='r' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='624' u='r' c='lj_opt_dse_fstore'/>
+<use f='luajit/lj_opt_mem.c' l='875' u='r' c='lj_opt_dse_xstore'/>

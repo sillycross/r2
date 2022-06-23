@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cconv.h' l='50'/>
+<use f='luajit/lib_ffi.c' l='601' u='c'/>
+<use f='luajit/lj_carith.c' l='108' u='c'/>
+<use f='luajit/lj_cconv.c' l='87' u='c'/>

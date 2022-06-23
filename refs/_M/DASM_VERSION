@@ -1,0 +1,2 @@
+<dec f='luajit/dasm_proto.h' l='14'/>
+<use f='luajit/host/buildvm_arch.h' l='6' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_prng.h' l='11' type='int lj_prng_seed_secure(PRNGState * rs)'/>
+<def f='luajit/lj_prng.c' l='162' ll='247' type='int lj_prng_seed_secure(PRNGState * rs)'/>
+<doc f='luajit/lj_prng.c' l='161'>/* Securely seed PRNG from system entropy. Returns 0 on failure. */</doc>
+<use f='luajit/lj_state.c' l='206' u='c' c='lua_newstate'/>

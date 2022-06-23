@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strfmt.h' l='23' type='2'/>
+<use f='luajit/lj_ffrecord.c' l='957' u='r' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='961' c='recff_string_format'/>
+<use f='luajit/lj_strfmt.c' l='93' u='r' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='381' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='556' c='lj_strfmt_pushvf'/>

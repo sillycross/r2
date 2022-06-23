@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ctype.h' l='24' type='4'/>
+<doc f='luajit/lj_ctype.h' l='24'>/* Void type. */</doc>
+<use f='luajit/lib_ffi.c' l='602' macro='1' u='r' c='lj_cf_ffi_istype'/>
+<use f='luajit/lj_ccall.c' l='1115' macro='1' u='r' c='ccall_get_results'/>
+<use f='luajit/lj_ccallback.c' l='642' macro='1' u='r' c='callback_conv_result'/>
+<use f='luajit/lj_ccallback.c' l='759' macro='1' u='r' c='callback_checkfunc'/>
+<use f='luajit/lj_cconv.c' l='90' macro='1' u='r' c='lj_cconv_compatptr'/>
+<use f='luajit/lj_cconv.c' l='90' macro='1' u='r' c='lj_cconv_compatptr'/>
+<use f='luajit/lj_cparse.c' l='1564' u='r' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1643' macro='1' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_crecord.c' l='1242' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='474' c='ctype_repr'/>

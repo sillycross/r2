@@ -1,0 +1,8 @@
+<dec f='luajit/lua.h' l='366' type='int'/>
+<offset>320</offset>
+<doc f='luajit/lua.h' l='366'>/* (l) */</doc>
+<use f='luajit/lib_debug.c' l='296' u='r' c='hookf'/>
+<use f='luajit/lib_debug.c' l='297' u='r' c='hookf'/>
+<use f='luajit/lj_debug.c' l='686' u='r' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='687' u='r' c='luaL_traceback'/>
+<use f='luajit/lj_dispatch.c' l='360' u='w' c='callhook'/>

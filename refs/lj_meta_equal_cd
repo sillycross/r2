@@ -1,0 +1,2 @@
+<dec f='luajit/lj_meta.h' l='32' type='TValue * lj_meta_equal_cd(lua_State * L, BCIns ins)'/>
+<def f='luajit/lj_meta.c' l='355' ll='380' type='TValue * lj_meta_equal_cd(lua_State * L, BCIns ins)'/>

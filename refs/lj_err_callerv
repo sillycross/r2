@@ -1,0 +1,23 @@
+<dec f='luajit/lj_err.h' l='37' type='void lj_err_callerv(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lib_aux.c' l='121' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_ffi.c' l='117' u='c' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='122' u='c' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='241' u='c' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='337' u='c' c='ffi_pairs'/>
+<use f='luajit/lib_jit.c' l='528' u='c' c='lj_cf_jit_opt_start'/>
+<use f='luajit/lib_os.c' l='164' u='c' c='getfield'/>
+<use f='luajit/lib_string.c' l='595' u='c' c='add_value'/>
+<use f='luajit/lib_table.c' l='164' u='c' c='lj_cf_table_concat'/>
+<use f='luajit/lj_api.c' l='115' u='c' c='luaL_checkstack'/>
+<use f='luajit/lj_carith.c' l='256' u='c' c='lj_carith_meta'/>
+<use f='luajit/lj_carith.c' l='257' u='c' c='lj_carith_meta'/>
+<use f='luajit/lj_cconv.c' l='34' u='c' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='46' u='c' c='cconv_err_convtv'/>
+<use f='luajit/lj_cconv.c' l='53' u='c' c='cconv_err_initov'/>
+<use f='luajit/lj_clib.c' l='350' u='c' c='lj_clib_index'/>
+<def f='luajit/lj_err.c' l='970' ll='978' macro='1' type='void lj_err_callerv(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lj_lib.c' l='39' u='c' c='lib_create_table'/>
+<use f='luajit/lj_serialize.c' l='293' u='c' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='331' u='c' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='395' u='c' c='serialize_get'/>
+<use f='luajit/lj_strfmt.c' l='384' u='c' c='lj_strfmt_putarg'/>

@@ -1,0 +1,22 @@
+<dec f='luajit/lj_tab.h' l='80' type='TValue * lj_tab_set(lua_State * L, GCtab * t, cTValue * key)'/>
+<use f='luajit/lib_ffi.c' l='519' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_jit.c' l='143' u='c' c='lj_cf_jit_attach'/>
+<use f='luajit/lib_jit.c' l='582' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lib_jit.c' l='584' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lib_jit.c' l='599' u='c' c='lj_cf_jit_profile_stop'/>
+<use f='luajit/lib_jit.c' l='601' u='c' c='lj_cf_jit_profile_stop'/>
+<use f='luajit/lj_api.c' l='1005' u='c' c='lua_rawset'/>
+<use f='luajit/lj_bcread.c' l='218' u='c' c='bcread_ktab'/>
+<use f='luajit/lj_ccall.c' l='1171' u='c' c='lj_ccall_func'/>
+<use f='luajit/lj_cdata.c' l='95' u='c' c='lj_cdata_setfin'/>
+<use f='luajit/lj_gc.c' l='548' u='c' c='gc_finalize'/>
+<use f='luajit/lj_lib.c' l='126' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_parse.c' l='210' u='c' c='const_num'/>
+<use f='luajit/lj_parse.c' l='224' u='c' c='const_gc'/>
+<use f='luajit/lj_parse.c' l='257' u='c' c='lj_parse_keepcdata'/>
+<use f='luajit/lj_parse.c' l='1764' u='c' c='expr_table'/>
+<use f='luajit/lj_serialize.c' l='352' u='c' c='serialize_get'/>
+<use f='luajit/lj_snap.c' l='856' u='c' c='snap_unsink'/>
+<use f='luajit/lj_tab.c' l='286' u='c' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='453' u='c' c='lj_tab_newkey'/>
+<def f='luajit/lj_tab.c' l='542' ll='567' type='TValue * lj_tab_set(lua_State * L, GCtab * t, cTValue * key)'/>

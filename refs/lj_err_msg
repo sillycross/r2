@@ -1,0 +1,24 @@
+<dec f='luajit/lj_err.h' l='30' type='void lj_err_msg(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lj_api.c' l='185' u='c' c='copy_slot'/>
+<use f='luajit/lj_api.c' l='764' u='c' c='lua_newuserdata'/>
+<use f='luajit/lj_api.c' l='1233' u='c' c='lua_yield'/>
+<use f='luajit/lj_ctype.c' l='158' u='c' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='194' u='c' c='lj_ctype_intern'/>
+<def f='luajit/lj_err.c' l='878' ll='881' macro='1' type='void lj_err_msg(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lj_meta.c' l='156' u='c' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='179' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='181' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='196' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='287' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='456' u='c' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='457' u='c' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='458' u='c' c='lj_meta_for'/>
+<use f='luajit/lj_state.c' l='118' u='c' c='lj_state_growstack'/>
+<use f='luajit/lj_str.c' l='353' u='c' c='lj_str_new'/>
+<use f='luajit/lj_tab.c' l='43' u='c' c='newhpart'/>
+<use f='luajit/lj_tab.c' l='118' u='c' c='newtab'/>
+<use f='luajit/lj_tab.c' l='239' u='c' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='556' u='c' c='lj_tab_set'/>
+<use f='luajit/lj_tab.c' l='559' u='c' c='lj_tab_set'/>
+<use f='luajit/lj_tab.c' l='596' u='c' c='keyindex'/>
+<use f='luajit/lj_udata.c' l='51' u='c' c='lj_lightud_intern'/>

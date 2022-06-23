@@ -1,0 +1,2 @@
+<dec f='luajit/host/buildvm_arch.h' l='164' type='153'/>
+<use f='luajit/host/buildvm_arch.h' l='4685' u='r' c='emit_asm_debug'/>

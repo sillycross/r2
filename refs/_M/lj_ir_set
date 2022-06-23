@@ -1,0 +1,9 @@
+<dec f='luajit/lj_iropt.h' l='25'/>
+<use f='luajit/lj_asm.c' l='677' u='c'/>
+<use f='luajit/lj_crecord.c' l='566' u='c'/>
+<use f='luajit/lj_crecord.c' l='769' u='c'/>
+<use f='luajit/lj_crecord.c' l='1265' u='c'/>
+<use f='luajit/lj_crecord.c' l='1366' u='c'/>
+<use f='luajit/lj_crecord.c' l='1399' u='c'/>
+<use f='luajit/lj_crecord.c' l='1465' u='c'/>
+<use f='luajit/lj_ir.c' l='156' u='c'/>

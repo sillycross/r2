@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='206'/>
+<use f='luajit/lib_jit.c' l='377' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='305' u='c'/>
+<use f='luajit/lj_snap.c' l='74' u='c'/>
+<use f='luajit/lj_snap.c' l='494' u='c'/>

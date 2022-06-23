@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='337' type='0'/>
+<use f='luajit/lj_asm_x86.h' l='1236' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1238' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1240' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='2280' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm.c' l='1749' macro='1' u='r' c='asm_ir'/>

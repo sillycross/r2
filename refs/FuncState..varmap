@@ -1,0 +1,12 @@
+<dec f='luajit/lj_parse.c' l='143' type='VarIndex [200]'/>
+<use f='luajit/lj_parse.c' l='1062' u='w' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1044' u='r' c='var_add'/>
+<use f='luajit/lj_parse.c' l='1044' u='r' c='var_remove'/>
+<use f='luajit/lj_parse.c' l='1044' u='r' c='var_lookup_local'/>
+<use f='luajit/lj_parse.c' l='1133' u='r' c='var_lookup_'/>
+<use f='luajit/lj_parse.c' l='1044' u='r' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='2264' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='1044' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='1044' u='r' c='predict_next'/>
+<offset>736</offset>
+<doc f='luajit/lj_parse.c' l='143'>/* Map from register to variable idx. */</doc>

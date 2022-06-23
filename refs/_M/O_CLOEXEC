@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fcntl-linux.h' l='144'/>
+<use f='luajit/lj_prng.c' l='221' u='c'/>

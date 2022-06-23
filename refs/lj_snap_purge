@@ -1,0 +1,5 @@
+<dec f='luajit/lj_snap.h' l='14' type='void lj_snap_purge(jit_State * J)'/>
+<use f='luajit/lj_record.c' l='869' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='2057' u='c' c='lj_record_ins'/>
+<def f='luajit/lj_snap.c' l='311' ll='321' type='void lj_snap_purge(jit_State * J)'/>
+<doc f='luajit/lj_snap.c' l='310'>/* Purge dead slots before the next snapshot. */</doc>

@@ -1,0 +1,19 @@
+<dec f='luajit/lj_ctype.h' l='459' type='CTypeID lj_ctype_intern(CTState * cts, CTInfo info, CTSize size)'/>
+<use f='luajit/lj_carith.c' l='49' u='c' c='carith_checkarg'/>
+<use f='luajit/lj_carith.c' l='148' u='c' c='carith_ptr'/>
+<use f='luajit/lj_ccall.c' l='903' u='c' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_ccall.c' l='907' u='c' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_cconv.c' l='573' u='c' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cdata.c' l='22' u='c' c='lj_cdata_newref'/>
+<use f='luajit/lj_cparse.c' l='515' u='c' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='897' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='915' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='960' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='1646' u='c' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1649' u='c' c='cp_decl_func'/>
+<use f='luajit/lj_crecord.c' l='576' u='c' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='659' u='c' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='1432' u='c' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1509' u='c' c='recff_cdata_arith'/>
+<def f='luajit/lj_ctype.c' l='181' ll='205' type='CTypeID lj_ctype_intern(CTState * cts, CTInfo info, CTSize size)'/>
+<doc f='luajit/lj_ctype.c' l='180'>/* Intern a type element. */</doc>

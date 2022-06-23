@@ -1,0 +1,3 @@
+<dec f='luajit/lualib.h' l='27' type='int luaopen_string(lua_State * L)'/>
+<use f='luajit/lib_init.c' l='24' u='r'/>
+<def f='luajit/lib_string.c' l='660' ll='675' macro='1' type='int luaopen_string(lua_State * L)'/>

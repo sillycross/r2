@@ -1,0 +1,3 @@
+<dec f='luajit/lj_trace.h' l='39' type='int lj_trace_exit(jit_State * J, void * exptr)'/>
+<def f='luajit/lj_trace.c' l='840' ll='928' type='int lj_trace_exit(jit_State * J, void * exptr)'/>
+<doc f='luajit/lj_trace.c' l='839'>/* A trace exited. Restore interpreter state. */</doc>

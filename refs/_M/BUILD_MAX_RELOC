@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm.h' l='19'/>
+<use f='luajit/host/buildvm.h' l='89' u='c'/>
+<use f='luajit/host/buildvm.c' l='134' u='c'/>
+<doc f='luajit/host/buildvm.h' l='18'>/* Hardcoded limits. Increase as needed. */</doc>

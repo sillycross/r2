@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ffdef.h' l='74' macro='1' type='73'/>
+<use f='luajit/lib_bit.c' l='124' u='r' c='lj_ffh_bit_band'/>

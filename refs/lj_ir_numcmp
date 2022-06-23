@@ -1,0 +1,6 @@
+<dec f='luajit/lj_iropt.h' l='90' type='int lj_ir_numcmp(lua_Number a, lua_Number b, IROp op)'/>
+<def f='luajit/lj_ir.c' l='452' ll='467' type='int lj_ir_numcmp(lua_Number a, lua_Number b, IROp op)'/>
+<doc f='luajit/lj_ir.c' l='451'>/* Evaluate numeric comparison. */</doc>
+<use f='luajit/lj_opt_fold.c' l='262' u='c' c='fold_kfold_numcomp'/>
+<use f='luajit/lj_record.c' l='2152' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2155' u='c' c='lj_record_ins'/>

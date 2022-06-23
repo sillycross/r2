@@ -1,0 +1,35 @@
+<dec f='luajit/lj_lib.h' l='42' type='int32_t lj_lib_checkint(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='115' u='c' c='lj_ffh_ipairs_aux'/>
+<use f='luajit/lib_base.c' l='164' u='c' c='lj_cf_setfenv'/>
+<use f='luajit/lib_base.c' l='227' u='c' c='lj_cf_unpack'/>
+<use f='luajit/lib_base.c' l='252' u='c' c='lj_cf_select'/>
+<use f='luajit/lib_debug.c' l='167' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='173' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='193' u='c' c='lj_cf_debug_setlocal'/>
+<use f='luajit/lib_debug.c' l='197' u='c' c='lj_cf_debug_setlocal'/>
+<use f='luajit/lib_debug.c' l='203' u='c' c='debug_getupvalue'/>
+<use f='luajit/lib_debug.c' l='231' u='c' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='249' u='c' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lib_io.c' l='214' u='c' c='io_file_read'/>
+<use f='luajit/lib_jit.c' l='82' u='c' c='lj_cf_jit_flush'/>
+<use f='luajit/lib_jit.c' l='233' u='c' c='lj_cf_jit_util_funcbc'/>
+<use f='luajit/lib_jit.c' l='250' u='c' c='lj_cf_jit_util_funck'/>
+<use f='luajit/lib_jit.c' l='270' u='c' c='lj_cf_jit_util_funcuvname'/>
+<use f='luajit/lib_jit.c' l='285' u='c' c='jit_checktrace'/>
+<use f='luajit/lib_jit.c' l='322' u='c' c='lj_cf_jit_util_traceir'/>
+<use f='luajit/lib_jit.c' l='340' u='c' c='lj_cf_jit_util_tracek'/>
+<use f='luajit/lib_jit.c' l='365' u='c' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lib_jit.c' l='400' u='c' c='lj_cf_jit_util_traceexitstub'/>
+<use f='luajit/lib_jit.c' l='423' u='c' c='lj_cf_jit_util_ircalladdr'/>
+<use f='luajit/lib_jit.c' l='620' u='c' c='lj_cf_jit_profile_dumpstack'/>
+<use f='luajit/lib_string.c' l='70' u='c' c='lj_ffh_string_char'/>
+<use f='luajit/lib_string.c' l='82' u='c' c='lj_ffh_string_sub'/>
+<use f='luajit/lib_string.c' l='90' u='c' c='lj_cf_string_rep'/>
+<use f='luajit/lib_table.c' l='88' u='c' c='lj_cf_table_insert'/>
+<use f='luajit/lib_table.c' l='158' u='c' c='lj_cf_table_concat'/>
+<use f='luajit/lib_table.c' l='290' u='c' c='lj_cf_table_new'/>
+<use f='luajit/lib_table.c' l='291' u='c' c='lj_cf_table_new'/>
+<def f='luajit/lj_lib.c' l='241' ll='253' type='int32_t lj_lib_checkint(lua_State * L, int narg)'/>
+<use f='luajit/lj_lib.c' l='258' u='c' c='lj_lib_optint'/>
+<use f='luajit/lj_meta.c' l='435' u='c' c='lj_meta_istype'/>
+<use f='luajit/lj_strfmt.c' l='466' u='c' c='lj_strfmt_putarg'/>

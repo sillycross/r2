@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='453' type='MRef'/>
+<offset>256</offset>
+<use f='luajit/lib_base.c' l='668' u='m' c='setpc_wrap_aux'/>
+<use f='luajit/lj_api.c' l='598' u='m' c='lua_tocfunction'/>
+<use f='luajit/lj_func.c' l='118' u='m' c='lj_func_newC'/>
+<use f='luajit/lj_lib.c' l='104' u='m' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='106' u='m' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='161' u='m' c='lj_lib_pushcc'/>

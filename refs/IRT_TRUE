@@ -1,0 +1,47 @@
+<dec f='luajit/lj_ir.h' l='318' macro='1' type='2'/>
+<use f='luajit/lj_asm.c' l='1071' macro='1' u='r' c='ir_khash'/>
+<use f='luajit/lj_asm_x86.h' l='1295' macro='1' u='r' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1650' macro='1' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1763' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_crecord.c' l='568' macro='1' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='568' macro='1' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='612' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='613' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='771' macro='1' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='771' macro='1' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='1270' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1270' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1368' macro='1' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1368' macro='1' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1401' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1401' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1467' macro='1' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1467' macro='1' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1721' macro='1' u='r' c='recff_ffi_istype'/>
+<use f='luajit/lj_crecord.c' l='1721' macro='1' u='r' c='recff_ffi_istype'/>
+<use f='luajit/lj_crecord.c' l='1733' macro='1' u='r' c='recff_ffi_abi'/>
+<use f='luajit/lj_crecord.c' l='1733' macro='1' u='r' c='recff_ffi_abi'/>
+<use f='luajit/lj_ffrecord.c' l='277' macro='1' u='r' c='recff_rawequal'/>
+<use f='luajit/lj_ffrecord.c' l='277' macro='1' u='r' c='recff_rawequal'/>
+<use f='luajit/lj_ffrecord.c' l='413' macro='1' u='r' c='recff_tostring'/>
+<use f='luajit/lj_ffrecord.c' l='1142' macro='1' u='r' c='recff_io_write'/>
+<use f='luajit/lj_ffrecord.c' l='1142' macro='1' u='r' c='recff_io_write'/>
+<use f='luajit/lj_ffrecord.c' l='1151' macro='1' u='r' c='recff_io_flush'/>
+<use f='luajit/lj_ffrecord.c' l='1151' macro='1' u='r' c='recff_io_flush'/>
+<use f='luajit/lj_opt_loop.c' l='163' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='336' macro='1' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_mem.c' l='187' macro='1' u='r' c='fwd_ahload'/>
+<use f='luajit/lj_record.c' l='201' macro='1' u='r' c='sload'/>
+<use f='luajit/lj_record.c' l='833' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='833' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1480' macro='1' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1662' macro='1' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1836' macro='1' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='1885' macro='1' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2030' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2030' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2143' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2144' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2220' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2220' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='700' macro='1' u='r' c='snap_restoreval'/>

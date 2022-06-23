@@ -1,0 +1,4 @@
+<dec f='luajit/lj_dispatch.h' l='120'/>
+<use f='luajit/host/buildvm_arch.h' l='3464' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3492' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2780' u='c'/>

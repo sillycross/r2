@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='499' type='size_t'/>
+<offset>24640</offset>
+<doc f='luajit/lj_jit.h' l='499'>/* Total size of all allocated mcode areas. */</doc>
+<use f='luajit/lj_mcode.c' l='276' u='w' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='285' u='w' c='lj_mcode_free'/>
+<use f='luajit/lj_mcode.c' l='367' u='r' c='lj_mcode_limiterr'/>

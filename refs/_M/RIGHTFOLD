@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='113'/>
+<use f='luajit/lj_opt_fold.c' l='1366' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1425' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1580' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1595' u='c'/>

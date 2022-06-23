@@ -1,0 +1,10 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='63'/>
+<use f='luajit/host/buildvm_arch.h' l='3924' c='build_ins'/>
+<use f='luajit/lj_asm.c' l='2083' c='asm_tail_link'/>
+<use f='luajit/lj_dispatch.c' l='391' c='cur_topslot'/>
+<use f='luajit/lj_ffrecord.c' l='157' u='r' c='recff_nyi'/>
+<use f='luajit/lj_parse.c' l='1793' u='r' c='expr_table'/>
+<use f='luajit/lj_record.c' l='2346' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='294' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='946' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='921' c='lj_trace_exit'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_parse.c' l='38' type='2'/>
+<use f='luajit/lj_parse.c' l='548' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='575' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='633' u='r' c='bcemit_store'/>
+<use f='luajit/lj_parse.c' l='741' u='r' c='bcemit_branch_t'/>
+<use f='luajit/lj_parse.c' l='763' u='r' c='bcemit_branch_f'/>
+<use f='luajit/lj_parse.c' l='845' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='945' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='1708' u='r' c='expr_kvalue'/>
+<use f='luajit/lj_parse.c' l='2007' u='r' c='expr_simple'/>

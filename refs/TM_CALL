@@ -1,0 +1,2 @@
+<dec f='luajit/host/minilua.c' l='59' type='16'/>
+<use f='luajit/host/minilua.c' l='1113' u='r' c='tryfuncTM'/>

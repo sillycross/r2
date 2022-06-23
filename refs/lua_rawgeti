@@ -1,0 +1,18 @@
+<dec f='luajit/lua.h' l='181' type='void lua_rawgeti(lua_State * L, int idx, int n)'/>
+<use f='luajit/lib_aux.c' l='284' u='c' c='luaL_ref'/>
+<use f='luajit/lib_aux.c' l='288' u='c' c='luaL_ref'/>
+<use f='luajit/lib_aux.c' l='302' u='c' c='luaL_unref'/>
+<use f='luajit/lib_package.c' l='448' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_table.c' l='201' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='202' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='209' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='210' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='215' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='222' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='224' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='230' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='235' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='245' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='246' u='c' c='auxsort'/>
+<def f='luajit/lj_api.c' l='833' ll='844' macro='1' type='void lua_rawgeti(lua_State * L, int idx, int n)'/>
+<use f='luajit/luajit.c' l='284' u='c' c='handle_script'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_target_x86.h' l='332' type='0'/>
+<use f='luajit/lj_emit_x86.h' l='564' u='r' c='emit_addptr'/>
+<use f='luajit/lj_asm_x86.h' l='870' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1224' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1243' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1286' u='r' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1387' u='r' c='asm_strref'/>
+<use f='luajit/lj_asm_x86.h' l='2184' u='r' c='asm_add'/>
+<use f='luajit/lj_asm_x86.h' l='2904' u='r' c='asm_tail_fixup'/>
+<use f='luajit/lj_asm.c' l='1777' macro='1' u='r' c='asm_ir'/>

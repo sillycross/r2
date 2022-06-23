@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='306' type='uint8_t'/>
+<offset>88</offset>
+<doc f='luajit/lj_obj.h' l='306'>/* Hash algorithm. */</doc>
+<use f='luajit/lj_str.c' l='151' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='177' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='182' u='w' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='194' u='w' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='248' u='r' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='251' u='w' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='298' u='w' c='lj_str_alloc'/>

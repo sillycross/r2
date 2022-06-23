@@ -1,0 +1,26 @@
+<dec f='luajit/lj_cconv.h' l='17' type='1'/>
+<doc f='luajit/lj_cconv.h' l='17'>/* Integer. */</doc>
+<use f='luajit/lj_cconv.c' l='152' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='170' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='171' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='171' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='191' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='217' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='222' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='226' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='236' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='288' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='312' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='333' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='410' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='425' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='426' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='426' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='442' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='445' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='449' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='450' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='462' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='477' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='504' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='518' macro='1' u='r' c='crec_ct_ct'/>

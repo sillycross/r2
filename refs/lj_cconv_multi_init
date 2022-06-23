@@ -1,0 +1,8 @@
+<dec f='luajit/lj_cconv.h' l='65' type='int lj_cconv_multi_init(CTState * cts, CType * d, TValue * o)'/>
+<def f='luajit/lj_cconv.c' l='743' ll='752' type='int lj_cconv_multi_init(CTState * cts, CType * d, TValue * o)'/>
+<use f='luajit/lj_cconv.c' l='760' u='c' c='lj_cconv_ct_init'/>
+<doc f='luajit/lj_cconv.c' l='739'>/* Check whether to use a multi-value initializer.
+** This is true if an aggregate is to be initialized with a value.
+** Valarrays are treated as values here so ct_tv handles (V|C, I|F).
+*/</doc>
+<use f='luajit/lj_crecord.c' l='1003' u='c' c='crec_alloc'/>

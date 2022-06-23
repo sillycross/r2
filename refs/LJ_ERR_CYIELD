@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='57' macro='1' type='830'/>
+<use f='luajit/lj_errmsg.h' l='57' macro='1' u='r'/>
+<use f='luajit/lib_base.c' l='604' u='r' c='lj_ffh_coroutine_yield'/>
+<use f='luajit/lj_api.c' l='1233' u='r' c='lua_yield'/>

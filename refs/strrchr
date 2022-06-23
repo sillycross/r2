@@ -1,0 +1,2 @@
+<dec f='include/string.h' l='252' type='char * strrchr(const char * __s, int __c)'/>
+<use f='luajit/lib_package.c' l='508' u='c' c='modinit'/>

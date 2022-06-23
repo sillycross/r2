@@ -1,0 +1,6 @@
+<def f='luajit/lj_lex.h' l='37' ll='40'/>
+<use f='luajit/lj_lex.h' l='37'/>
+<size>8</size>
+<doc f='luajit/lj_lex.h' l='36'>/* Combined bytecode ins/line. Only used during bytecode generation. */</doc>
+<mbr r='BCInsLine::ins' o='0' t='BCIns'/>
+<mbr r='BCInsLine::line' o='32' t='BCLine'/>

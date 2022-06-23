@@ -1,0 +1,5 @@
+<dec f='luajit/host/minilua.c' l='128' type='265'/>
+<use f='luajit/host/minilua.c' l='4077' u='r' c='body'/>
+<use f='luajit/host/minilua.c' l='4224' c='simpleexp'/>
+<use f='luajit/host/minilua.c' l='4651' c='statement'/>
+<use f='luajit/host/minilua.c' l='4657' u='r' c='statement'/>

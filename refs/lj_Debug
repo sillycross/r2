@@ -1,0 +1,16 @@
+<def f='luajit/lj_debug.h' l='11' ll='27'/>
+<use f='luajit/lj_debug.h' l='11'/>
+<size>128</size>
+<mbr r='lj_Debug::event' o='0' t='int'/>
+<mbr r='lj_Debug::name' o='64' t='const char *'/>
+<mbr r='lj_Debug::namewhat' o='128' t='const char *'/>
+<mbr r='lj_Debug::what' o='192' t='const char *'/>
+<mbr r='lj_Debug::source' o='256' t='const char *'/>
+<mbr r='lj_Debug::currentline' o='320' t='int'/>
+<mbr r='lj_Debug::nups' o='352' t='int'/>
+<mbr r='lj_Debug::linedefined' o='384' t='int'/>
+<mbr r='lj_Debug::lastlinedefined' o='416' t='int'/>
+<mbr r='lj_Debug::short_src' o='448' t='char [60]'/>
+<mbr r='lj_Debug::i_ci' o='928' t='int'/>
+<mbr r='lj_Debug::nparams' o='960' t='int'/>
+<mbr r='lj_Debug::isvararg' o='992' t='int'/>

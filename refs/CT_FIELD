@@ -1,0 +1,18 @@
+<dec f='luajit/lj_ctype.h' l='31' type='9'/>
+<doc f='luajit/lj_ctype.h' l='30'>/* Internal element types. */</doc>
+<doc f='luajit/lj_ctype.h' l='31'>/* Struct/union field or function parameter. */</doc>
+<use f='luajit/lib_ffi.c' l='657' macro='1' u='r' c='lj_cf_ffi_offsetof'/>
+<use f='luajit/lj_ccall.c' l='661' macro='1' u='r' c='ccall_classify_struct'/>
+<use f='luajit/lj_cconv.c' l='506' macro='1' u='r' c='cconv_substruct_tab'/>
+<use f='luajit/lj_cconv.c' l='524' macro='1' u='r' c='cconv_substruct_tab'/>
+<use f='luajit/lj_cconv.c' l='710' macro='1' u='r' c='cconv_substruct_init'/>
+<use f='luajit/lj_cconv.c' l='715' macro='1' u='r' c='cconv_substruct_init'/>
+<use f='luajit/lj_cparse.c' l='1291' macro='1' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1316' macro='1' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1327' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1418' u='r' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1659' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_crecord.c' l='156' macro='1' u='r' c='crec_copy_struct'/>
+<use f='luajit/lj_crecord.c' l='1036' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1052' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_ctype.c' l='295' u='r' c='lj_ctype_vlsize'/>

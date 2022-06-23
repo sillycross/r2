@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lib_init.c source code [luajit/lib_init.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lib_init.c'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lib_init.c.html'>lib_init.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Library initialization.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>**</i></td></tr>
+<tr><th id="5">5</th><td><i>** Major parts taken verbatim from the Lua interpreter.</i></td></tr>
+<tr><th id="6">6</th><td><i>** Copyright (C) 1994-2008 Lua.org, PUC-Rio. See Copyright Notice in lua.h</i></td></tr>
+<tr><th id="7">7</th><td><i>*/</i></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/lib_init_c" data-ref="_M/lib_init_c">lib_init_c</dfn></u></td></tr>
+<tr><th id="10">10</th><td><u>#define <dfn class="macro" id="_M/LUA_LIB" data-ref="_M/LUA_LIB">LUA_LIB</dfn></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="lua.h.html">"lua.h"</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="lauxlib.h.html">"lauxlib.h"</a></u></td></tr>
+<tr><th id="14">14</th><td><u>#include <a href="lualib.h.html">"lualib.h"</a></u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><u>#include <a href="lj_arch.h.html">"lj_arch.h"</a></u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><em>static</em> <em>const</em> <a class="typedef" href="lauxlib.h.html#luaL_Reg" title='luaL_Reg' data-type='struct luaL_Reg' data-ref="luaL_Reg" data-ref-filename="luaL_Reg">luaL_Reg</a> <dfn class="tu decl def" id="lj_lib_load" title='lj_lib_load' data-type='const luaL_Reg [11]' data-ref="lj_lib_load" data-ref-filename="lj_lib_load">lj_lib_load</dfn>[] = {</td></tr>
+<tr><th id="19">19</th><td>  { <q>""</q>,			<a class="ref fn" href="lualib.h.html#luaopen_base" title='luaopen_base' data-ref="luaopen_base" data-ref-filename="luaopen_base">luaopen_base</a> },</td></tr>
+<tr><th id="20">20</th><td>  { <a class="macro" href="lualib.h.html#19" title="&quot;package&quot;" data-ref="_M/LUA_LOADLIBNAME">LUA_LOADLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_package" title='luaopen_package' data-ref="luaopen_package" data-ref-filename="luaopen_package">luaopen_package</a> },</td></tr>
+<tr><th id="21">21</th><td>  { <a class="macro" href="lualib.h.html#16" title="&quot;table&quot;" data-ref="_M/LUA_TABLIBNAME">LUA_TABLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_table" title='luaopen_table' data-ref="luaopen_table" data-ref-filename="luaopen_table">luaopen_table</a> },</td></tr>
+<tr><th id="22">22</th><td>  { <a class="macro" href="lualib.h.html#17" title="&quot;io&quot;" data-ref="_M/LUA_IOLIBNAME">LUA_IOLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_io" title='luaopen_io' data-ref="luaopen_io" data-ref-filename="luaopen_io">luaopen_io</a> },</td></tr>
+<tr><th id="23">23</th><td>  { <a class="macro" href="lualib.h.html#18" title="&quot;os&quot;" data-ref="_M/LUA_OSLIBNAME">LUA_OSLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_os" title='luaopen_os' data-ref="luaopen_os" data-ref-filename="luaopen_os">luaopen_os</a> },</td></tr>
+<tr><th id="24">24</th><td>  { <a class="macro" href="lualib.h.html#15" title="&quot;string&quot;" data-ref="_M/LUA_STRLIBNAME">LUA_STRLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_string" title='luaopen_string' data-ref="luaopen_string" data-ref-filename="luaopen_string">luaopen_string</a> },</td></tr>
+<tr><th id="25">25</th><td>  { <a class="macro" href="lualib.h.html#14" title="&quot;math&quot;" data-ref="_M/LUA_MATHLIBNAME">LUA_MATHLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_math" title='luaopen_math' data-ref="luaopen_math" data-ref-filename="luaopen_math">luaopen_math</a> },</td></tr>
+<tr><th id="26">26</th><td>  { <a class="macro" href="lualib.h.html#20" title="&quot;debug&quot;" data-ref="_M/LUA_DBLIBNAME">LUA_DBLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_debug" title='luaopen_debug' data-ref="luaopen_debug" data-ref-filename="luaopen_debug">luaopen_debug</a> },</td></tr>
+<tr><th id="27">27</th><td>  { <a class="macro" href="lualib.h.html#21" title="&quot;bit&quot;" data-ref="_M/LUA_BITLIBNAME">LUA_BITLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_bit" title='luaopen_bit' data-ref="luaopen_bit" data-ref-filename="luaopen_bit">luaopen_bit</a> },</td></tr>
+<tr><th id="28">28</th><td>  { <a class="macro" href="lualib.h.html#22" title="&quot;jit&quot;" data-ref="_M/LUA_JITLIBNAME">LUA_JITLIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_jit" title='luaopen_jit' data-ref="luaopen_jit" data-ref-filename="luaopen_jit">luaopen_jit</a> },</td></tr>
+<tr><th id="29">29</th><td>  { <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,		<span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> }</td></tr>
+<tr><th id="30">30</th><td>};</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><em>static</em> <em>const</em> <a class="typedef" href="lauxlib.h.html#luaL_Reg" title='luaL_Reg' data-type='struct luaL_Reg' data-ref="luaL_Reg" data-ref-filename="luaL_Reg">luaL_Reg</a> <dfn class="tu decl def" id="lj_lib_preload" title='lj_lib_preload' data-type='const luaL_Reg [2]' data-ref="lj_lib_preload" data-ref-filename="lj_lib_preload">lj_lib_preload</dfn>[] = {</td></tr>
+<tr><th id="33">33</th><td><u>#<span data-ppcond="33">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="34">34</th><td>  { <a class="macro" href="lualib.h.html#23" title="&quot;ffi&quot;" data-ref="_M/LUA_FFILIBNAME">LUA_FFILIBNAME</a>,	<a class="ref fn" href="lualib.h.html#luaopen_ffi" title='luaopen_ffi' data-ref="luaopen_ffi" data-ref-filename="luaopen_ffi">luaopen_ffi</a> },</td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="33">endif</span></u></td></tr>
+<tr><th id="36">36</th><td>  { <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>,		<span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span> }</td></tr>
+<tr><th id="37">37</th><td>};</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="luaconf.h.html#137" title="extern" data-ref="_M/LUALIB_API">LUALIB_API</a> <em>void</em> <dfn class="decl def fn" id="luaL_openlibs" title='luaL_openlibs' data-ref="luaL_openlibs" data-ref-filename="luaL_openlibs">luaL_openlibs</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col1 decl" id="1L" title='L' data-type='lua_State *' data-ref="1L" data-ref-filename="1L">L</dfn>)</td></tr>
+<tr><th id="40">40</th><td>{</td></tr>
+<tr><th id="41">41</th><td>  <em>const</em> <a class="typedef" href="lauxlib.h.html#luaL_Reg" title='luaL_Reg' data-type='struct luaL_Reg' data-ref="luaL_Reg" data-ref-filename="luaL_Reg">luaL_Reg</a> *<dfn class="local col2 decl" id="2lib" title='lib' data-type='const luaL_Reg *' data-ref="2lib" data-ref-filename="2lib">lib</dfn>;</td></tr>
+<tr><th id="42">42</th><td>  <b>for</b> (<a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a> = <a class="tu ref" href="#lj_lib_load" title='lj_lib_load' data-use='r' data-ref="lj_lib_load" data-ref-filename="lj_lib_load">lj_lib_load</a>; <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>-&gt;<a class="ref field" href="lauxlib.h.html#luaL_Reg::func" title='luaL_Reg::func' data-ref="luaL_Reg::func" data-ref-filename="luaL_Reg..func">func</a>; <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>++) {</td></tr>
+<tr><th id="43">43</th><td>    <a class="macro" href="lua.h.html#262" title="lua_pushcclosure(L, (lib-&gt;func), 0)" data-ref="_M/lua_pushcfunction">lua_pushcfunction</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>-&gt;<a class="ref field" href="lauxlib.h.html#luaL_Reg::func" title='luaL_Reg::func' data-ref="luaL_Reg::func" data-ref-filename="luaL_Reg..func">func</a>);</td></tr>
+<tr><th id="44">44</th><td>    <a class="ref fn" href="lua.h.html#lua_pushstring" title='lua_pushstring' data-ref="lua_pushstring" data-ref-filename="lua_pushstring">lua_pushstring</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>-&gt;<a class="ref field" href="lauxlib.h.html#luaL_Reg::name" title='luaL_Reg::name' data-ref="luaL_Reg::name" data-ref-filename="luaL_Reg..name">name</a>);</td></tr>
+<tr><th id="45">45</th><td>    <a class="ref fn" href="lua.h.html#lua_call" title='lua_call' data-ref="lua_call" data-ref-filename="lua_call">lua_call</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, <var>1</var>, <var>0</var>);</td></tr>
+<tr><th id="46">46</th><td>  }</td></tr>
+<tr><th id="47">47</th><td>  <a class="ref fn" href="lauxlib.h.html#luaL_findtable" title='luaL_findtable' data-ref="luaL_findtable" data-ref-filename="luaL_findtable">luaL_findtable</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, <a class="macro" href="lua.h.html#36" title="(-10000)" data-ref="_M/LUA_REGISTRYINDEX">LUA_REGISTRYINDEX</a>, <q>"_PRELOAD"</q>,</td></tr>
+<tr><th id="48">48</th><td>		 <b>sizeof</b>(<a class="tu ref" href="#lj_lib_preload" title='lj_lib_preload' data-use='r' data-ref="lj_lib_preload" data-ref-filename="lj_lib_preload">lj_lib_preload</a>)/<b>sizeof</b>(<a class="tu ref" href="#lj_lib_preload" title='lj_lib_preload' data-use='r' data-ref="lj_lib_preload" data-ref-filename="lj_lib_preload">lj_lib_preload</a>[<var>0</var>])-<var>1</var>);</td></tr>
+<tr><th id="49">49</th><td>  <b>for</b> (<a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a> = <a class="tu ref" href="#lj_lib_preload" title='lj_lib_preload' data-use='r' data-ref="lj_lib_preload" data-ref-filename="lj_lib_preload">lj_lib_preload</a>; <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>-&gt;<a class="ref field" href="lauxlib.h.html#luaL_Reg::func" title='luaL_Reg::func' data-ref="luaL_Reg::func" data-ref-filename="luaL_Reg..func">func</a>; <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>++) {</td></tr>
+<tr><th id="50">50</th><td>    <a class="macro" href="lua.h.html#262" title="lua_pushcclosure(L, (lib-&gt;func), 0)" data-ref="_M/lua_pushcfunction">lua_pushcfunction</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>-&gt;<a class="ref field" href="lauxlib.h.html#luaL_Reg::func" title='luaL_Reg::func' data-ref="luaL_Reg::func" data-ref-filename="luaL_Reg..func">func</a>);</td></tr>
+<tr><th id="51">51</th><td>    <a class="ref fn" href="lua.h.html#lua_setfield" title='lua_setfield' data-ref="lua_setfield" data-ref-filename="lua_setfield">lua_setfield</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, -<var>2</var>, <a class="local col2 ref" href="#2lib" title='lib' data-ref="2lib" data-ref-filename="2lib">lib</a>-&gt;<a class="ref field" href="lauxlib.h.html#luaL_Reg::name" title='luaL_Reg::name' data-ref="luaL_Reg::name" data-ref-filename="luaL_Reg..name">name</a>);</td></tr>
+<tr><th id="52">52</th><td>  }</td></tr>
+<tr><th id="53">53</th><td>  <a class="macro" href="lua.h.html#256" title="lua_settop(L, -(1)-1)" data-ref="_M/lua_pop">lua_pop</a>(<a class="local col1 ref" href="#1L" title='L' data-ref="1L" data-ref-filename="1L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="54">54</th><td>}</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

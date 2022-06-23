@@ -1,0 +1,7 @@
+<use f='luajit/lj_record.c' l='777' u='r' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='827' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='852' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='888' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='904' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='924' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='950' u='r' c='lj_record_ret'/>

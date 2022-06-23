@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='115' type='lua_CFunction lua_atpanic(lua_State * L, lua_CFunction panicf)'/>
+<def f='luajit/lj_err.c' l='1049' ll='1054' macro='1' type='lua_CFunction lua_atpanic(lua_State * L, lua_CFunction panicf)'/>

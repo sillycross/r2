@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='325' type='MSize'/>
+<offset>192</offset>
+<doc f='luajit/lj_obj.h' l='325'>/* Size of payload. */</doc>
+<use f='luajit/lj_api.c' l='584' u='r' c='lua_objlen'/>
+<use f='luajit/lj_gc.c' l='150' macro='1' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_udata.c' l='21' u='w' c='lj_udata_new'/>
+<use f='luajit/lj_udata.c' l='33' macro='1' u='r' c='lj_udata_free'/>

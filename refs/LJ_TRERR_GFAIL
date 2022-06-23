@@ -1,0 +1,2 @@
+<use f='luajit/lj_opt_fold.c' l='2523' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_loop.c' l='433' c='lj_opt_loop'/>

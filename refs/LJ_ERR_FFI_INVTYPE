@@ -1,0 +1,10 @@
+<dec f='luajit/lj_errmsg.h' l='152' macro='1' type='2996'/>
+<use f='luajit/lj_errmsg.h' l='152' macro='1' u='r'/>
+<use f='luajit/lib_ffi.c' l='538' u='r' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='777' u='r' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='800' u='r' c='lj_cf_ffi_gc'/>
+<use f='luajit/lj_cparse.c' l='877' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='928' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='941' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='996' u='r' c='cp_decl_constinit'/>
+<use f='luajit/lj_cparse.c' l='1571' u='r' c='cp_decl_spec'/>

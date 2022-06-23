@@ -1,0 +1,3 @@
+<dec f='luajit/lua.h' l='344' type='int lua_gethookcount(lua_State * L)'/>
+<use f='luajit/lib_debug.c' l='356' u='c' c='lj_cf_debug_gethook'/>
+<def f='luajit/lj_dispatch.c' l='346' ll='349' macro='1' type='int lua_gethookcount(lua_State * L)'/>

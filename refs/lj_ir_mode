@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='293' type='const uint8_t [101]'/>
+<use f='luajit/lj_ir.h' l='586' u='r' c='ir_sideeff'/>
+<use f='luajit/lib_jit.c' l='325' u='r' c='lj_cf_jit_util_traceir'/>
+<use f='luajit/lj_asm_x86.h' l='2012' u='r' c='asm_swapops'/>
+<def f='luajit/lj_ir.c' l='46' ll='49' type='const uint8_t [101]'/>
+<doc f='luajit/lj_ir.c' l='45'>/* IR instruction modes. */</doc>
+<use f='luajit/lj_opt_fold.c' l='2464' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2470' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2476' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_loop.c' l='324' u='r' c='loop_unroll'/>

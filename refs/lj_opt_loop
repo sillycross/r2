@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='152' type='int lj_opt_loop(jit_State * J)'/>
+<def f='luajit/lj_opt_loop.c' l='415' ll='447' type='int lj_opt_loop(jit_State * J)'/>
+<doc f='luajit/lj_opt_loop.c' l='414'>/* Loop optimization. */</doc>
+<use f='luajit/lj_trace.c' l='681' u='c' c='trace_state'/>

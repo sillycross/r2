@@ -1,0 +1,4 @@
+<dec f='luajit/host/minilua.c' l='99' type='35'/>
+<use f='luajit/host/minilua.c' l='3854' u='r' c='leaveblock'/>
+<use f='luajit/host/minilua.c' l='4391' u='r' c='breakstat'/>
+<use f='luajit/host/minilua.c' l='5263' c='luaV_execute'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lauxlib.h' l='30' type='int luaL_getmetafield(lua_State * L, int obj, const char * e)'/>
+<def f='luajit/lj_api.c' l='863' ll='874' macro='1' type='int luaL_getmetafield(lua_State * L, int idx, const char * field)'/>
+<use f='luajit/lj_api.c' l='1178' u='c' c='luaL_callmeta'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='688' type='GCRef'/>
+<offset>192</offset>
+<doc f='luajit/lj_obj.h' l='688'>/* GC chain. */</doc>
+<use f='luajit/lj_gc.c' l='345' u='m' c='propagatemark'/>

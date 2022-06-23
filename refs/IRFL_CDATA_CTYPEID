@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='15'/>
+<use f='luajit/lj_crecord.c' l='55' u='r' c='argv2cdata'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='29' type='void lj_trace_flushproto(global_State * g, GCproto * pt)'/>
+<use f='luajit/lj_dispatch.c' l='219' u='c' c='setptmode'/>
+<def f='luajit/lj_trace.c' l='273' ll='277' type='void lj_trace_flushproto(global_State * g, GCproto * pt)'/>
+<doc f='luajit/lj_trace.c' l='272'>/* Flush all traces associated with a prototype. */</doc>

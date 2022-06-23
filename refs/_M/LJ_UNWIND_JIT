@@ -1,0 +1,5 @@
+<dec f='luajit/lj_arch.h' l='650'/>
+<use f='luajit/lj_err.h' l='44' u='c'/>
+<use f='luajit/lj_err.c' l='491' u='c'/>
+<use f='luajit/lj_trace.c' l='824' u='c'/>
+<use f='luajit/lj_trace.c' l='930' u='c'/>

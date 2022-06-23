@@ -1,0 +1,8 @@
+<dec f='luajit/lj_err.h' l='26' type='void lj_err_run(lua_State * L)'/>
+<use f='luajit/lib_base.c' l='52' u='c' c='lj_ffh_assert'/>
+<use f='luajit/lib_base.c' l='648' u='c' c='lj_ffh_coroutine_wrap_err'/>
+<def f='luajit/lj_err.c' l='833' ll='852' macro='1' type='void lj_err_run(lua_State * L)'/>
+<use f='luajit/lj_err.c' l='858' u='c' c='lj_err_trace'/>
+<use f='luajit/lj_err.c' l='874' u='c' c='err_msgv'/>
+<use f='luajit/lj_err.c' l='966' u='c' c='lj_err_callermsg'/>
+<use f='luajit/lj_err.c' l='1059' u='c' c='lua_error'/>

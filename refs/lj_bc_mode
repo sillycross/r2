@@ -1,0 +1,17 @@
+<dec f='luajit/lj_bc.h' l='262' type='const uint16_t []'/>
+<use f='luajit/lib_jit.c' l='239' u='r' c='lj_cf_jit_util_funcbc'/>
+<def f='luajit/lj_bcdef.h' l='160' ll='219' type='const uint16_t [154]'/>
+<use f='luajit/lj_debug.c' l='261' macro='1' u='r' c='lj_debug_slotname'/>
+<use f='luajit/lj_debug.c' l='264' macro='1' u='r' c='lj_debug_slotname'/>
+<use f='luajit/lj_debug.c' l='308' macro='1' u='r' c='lj_debug_funcname'/>
+<use f='luajit/lj_meta.c' l='216' macro='1' u='r' c='lj_meta_arith'/>
+<use f='luajit/lj_record.c' l='324' macro='1' u='r' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='326' macro='1' u='r' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='2093' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2100' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2106' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2255' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2497' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='239' macro='1' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='243' macro='1' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='273' macro='1' u='r' c='snap_usedef'/>

@@ -1,0 +1,12 @@
+<dec f='luajit/lj_err.h' l='41' type='void lj_err_argtype(lua_State * L, int narg, const char * xname)'/>
+<use f='luajit/lib_buffer.c' l='38' u='c' c='buffer_tobuf'/>
+<use f='luajit/lib_buffer.c' l='140' u='c' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_buffer.c' l='191' u='c' c='lj_cf_buffer_method_putcdata'/>
+<use f='luajit/lib_ffi.c' l='44' u='c' c='ffi_checkctype'/>
+<use f='luajit/lib_io.c' l='51' u='c' c='io_tofilep'/>
+<use f='luajit/lj_api.c' l='954' u='c' c='luaL_checkudata'/>
+<use f='luajit/lj_cparse.c' l='221' u='c' c='cp_param'/>
+<def f='luajit/lj_err.c' l='1019' ll='1039' macro='1' type='void lj_err_argtype(lua_State * L, int narg, const char * xname)'/>
+<use f='luajit/lj_err.c' l='1044' u='c' c='lj_err_argt'/>
+<use f='luajit/lj_err.c' l='1071' u='c' c='luaL_typerror'/>
+<use f='luajit/lj_meta.c' l='438' u='c' c='lj_meta_istype'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='354' type='lua_Integer lua_tointegerx(lua_State * L, int idx, int * isnum)'/>
+<def f='luajit/lj_api.c' l='421' ll='448' macro='1' type='lua_Integer lua_tointegerx(lua_State * L, int idx, int * ok)'/>

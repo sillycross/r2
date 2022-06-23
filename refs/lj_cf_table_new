@@ -1,0 +1,2 @@
+<def f='luajit/lib_table.c' l='288' macro='1' type='int lj_cf_table_new(lua_State * L)'/>
+<use f='luajit/lib_table.c' l='304' u='r' c='luaopen_table_new'/>

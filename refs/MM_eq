@@ -1,0 +1,30 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='4'/>
+<use f='luajit/host/buildvm_arch.h' l='2978' u='r' c='build_ins'/>
+<use f='luajit/lib_ffi.c' l='185' u='r' c='ffi_arith'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_carith.c' l='101' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='104' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='172' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='240' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_crecord.c' l='1359' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1383' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1398' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1462' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_recdef.h' l='170' u='r'/>
+<use f='luajit/lj_meta.c' l='332' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='332' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='332' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='375' u='r' c='lj_meta_equal_cd'/>
+<use f='luajit/lj_record.c' l='1117' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1133' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='2177' u='r' c='lj_record_ins'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='186' macro='1' type='3'/>
+<use f='luajit/lj_asm_x86.h' l='1943' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_recdef.h' l='45' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='1121' u='r' c='fold_simplify_numpow_xknum'/>
+<use f='luajit/lj_vmmath.c' l='124' c='lj_vm_foldfpm'/>

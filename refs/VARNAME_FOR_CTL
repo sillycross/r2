@@ -1,0 +1,2 @@
+<dec f='luajit/lj_debug.h' l='61' macro='1' type='6'/>
+<use f='luajit/lj_parse.c' l='2556' u='r' c='parse_for_iter'/>

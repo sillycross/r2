@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_alloc.h source code [luajit/lj_alloc.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_alloc.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_alloc.h.html'>lj_alloc.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Bundled memory allocator.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Donated to the public domain.</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_ALLOC_H">_LJ_ALLOC_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_ALLOC_H" data-ref="_M/_LJ_ALLOC_H">_LJ_ALLOC_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_def.h.html">"lj_def.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">ifndef</span> <span class="macro" data-ref="_M/LUAJIT_USE_SYSMALLOC">LUAJIT_USE_SYSMALLOC</span></u></td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> *<a class="decl fn" href="lj_alloc.c.html#lj_alloc_create" title='lj_alloc_create' data-ref="lj_alloc_create" data-ref-filename="lj_alloc_create" id="lj_alloc_create">lj_alloc_create</a>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col1 decl" id="1rs" title='rs' data-type='PRNGState *' data-ref="1rs" data-ref-filename="1rs">rs</dfn>);</td></tr>
+<tr><th id="13">13</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <a class="decl fn" href="lj_alloc.c.html#lj_alloc_setprng" title='lj_alloc_setprng' data-ref="lj_alloc_setprng" data-ref-filename="lj_alloc_setprng" id="lj_alloc_setprng">lj_alloc_setprng</a>(<em>void</em> *<dfn class="local col2 decl" id="2msp" title='msp' data-type='void *' data-ref="2msp" data-ref-filename="2msp">msp</dfn>, <a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col3 decl" id="3rs" title='rs' data-type='PRNGState *' data-ref="3rs" data-ref-filename="3rs">rs</dfn>);</td></tr>
+<tr><th id="14">14</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <a class="decl fn" href="lj_alloc.c.html#lj_alloc_destroy" title='lj_alloc_destroy' data-ref="lj_alloc_destroy" data-ref-filename="lj_alloc_destroy" id="lj_alloc_destroy">lj_alloc_destroy</a>(<em>void</em> *<dfn class="local col4 decl" id="4msp" title='msp' data-type='void *' data-ref="4msp" data-ref-filename="4msp">msp</dfn>);</td></tr>
+<tr><th id="15">15</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> *<a class="decl fn" href="lj_alloc.c.html#lj_alloc_f" title='lj_alloc_f' data-ref="lj_alloc_f" data-ref-filename="lj_alloc_f" id="lj_alloc_f">lj_alloc_f</a>(<em>void</em> *<dfn class="local col5 decl" id="5msp" title='msp' data-type='void *' data-ref="5msp" data-ref-filename="5msp">msp</dfn>, <em>void</em> *<dfn class="local col6 decl" id="6ptr" title='ptr' data-type='void *' data-ref="6ptr" data-ref-filename="6ptr">ptr</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col7 decl" id="7osize" title='osize' data-type='size_t' data-ref="7osize" data-ref-filename="7osize">osize</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col8 decl" id="8nsize" title='nsize' data-type='size_t' data-ref="8nsize" data-ref-filename="8nsize">nsize</dfn>);</td></tr>
+<tr><th id="16">16</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lj_alloc.c.html'>luajit/lj_alloc.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

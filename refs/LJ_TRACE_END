@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='154' type='19'/>
+<doc f='luajit/lj_jit.h' l='154'>/* End of trace. */</doc>
+<use f='luajit/lj_record.c' l='293' macro='1' u='r' c='lj_record_stop'/>
+<use f='luajit/lj_trace.c' l='674' c='trace_state'/>

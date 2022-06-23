@@ -1,0 +1,3 @@
+<dec f='include/locale.h' l='122' type='char * setlocale(int __category, const char * __locale)'/>
+<use f='luajit/lib_os.c' l='278' u='c' c='lj_cf_os_setlocale'/>
+<doc f='include/locale.h' l='121'>/* Set and/or return the current locale.  */</doc>

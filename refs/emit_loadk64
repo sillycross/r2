@@ -1,0 +1,6 @@
+<def f='luajit/lj_emit_x86.h' l='384' ll='424' type='void emit_loadk64(ASMState * as, Reg r, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='353' u='c' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='760' u='c' c='ra_left'/>
+<use f='luajit/lj_asm.c' l='765' u='c' c='ra_left'/>
+<use f='luajit/lj_asm.c' l='769' u='c' c='ra_left'/>
+<doc f='luajit/lj_emit_x86.h' l='383'>/* Load 64 bit IR constant into register. */</doc>

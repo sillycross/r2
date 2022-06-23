@@ -1,0 +1,4 @@
+<dec f='include/ctype.h' l='125' type='int toupper(int __c)'/>
+<def f='include/ctype.h' l='212' ll='216' macro='1' type='int toupper(int __c)'/>
+<use f='luajit/host/minilua.c' l='7032' macro='1' u='c' c='str_upper'/>
+<doc f='include/ctype.h' l='124'>/* Return the uppercase version of C.  */</doc>

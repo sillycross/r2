@@ -1,0 +1,76 @@
+<dec f='luajit/lj_obj.h' l='588' type='GCSize'/>
+<use f='luajit/lj_gc.h' l='121' u='w' c='lj_mem_free'/>
+<offset>0</offset>
+<doc f='luajit/lj_obj.h' l='588'>/* Memory currently allocated. */</doc>
+<use f='luajit/lib_base.c' l='330' macro='1' u='r' c='lj_ffh_tostring'/>
+<use f='luajit/lib_base.c' l='456' u='r' c='lj_cf_gcinfo'/>
+<use f='luajit/lib_base.c' l='466' u='r' c='lj_cf_collectgarbage'/>
+<use f='luajit/lib_bit.c' l='167' macro='1' u='r' c='lj_cf_bit_tohex'/>
+<use f='luajit/lib_buffer.c' l='145' macro='1' u='r' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_buffer.c' l='154' macro='1' u='r' c='lj_cf_buffer_method_putf'/>
+<use f='luajit/lib_buffer.c' l='176' macro='1' u='r' c='lj_cf_buffer_method_get'/>
+<use f='luajit/lib_buffer.c' l='241' macro='1' u='r' c='lj_cf_buffer_method_encode'/>
+<use f='luajit/lib_buffer.c' l='251' macro='1' u='r' c='lj_cf_buffer_method_decode'/>
+<use f='luajit/lib_buffer.c' l='266' macro='1' u='r' c='lj_cf_buffer_method___tostring'/>
+<use f='luajit/lib_buffer.c' l='327' macro='1' u='r' c='lj_cf_buffer_encode'/>
+<use f='luajit/lib_buffer.c' l='340' macro='1' u='r' c='lj_cf_buffer_decode'/>
+<use f='luajit/lib_ffi.c' l='159' macro='1' u='r' c='lj_cf_ffi_meta___index'/>
+<use f='luajit/lib_ffi.c' l='324' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='385' macro='1' u='r' c='lj_cf_ffi_clib___index'/>
+<use f='luajit/lib_ffi.c' l='489' macro='1' u='r' c='lj_cf_ffi_cdef'/>
+<use f='luajit/lib_ffi.c' l='526' macro='1' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='543' macro='1' u='r' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='555' macro='1' u='r' c='lj_cf_ffi_typeof'/>
+<use f='luajit/lib_ffi.c' l='578' macro='1' u='r' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='695' macro='1' u='r' c='lj_cf_ffi_string'/>
+<use f='luajit/lib_ffi.c' l='786' macro='1' u='r' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_io.c' l='156' macro='1' u='r' c='io_file_readline'/>
+<use f='luajit/lib_io.c' l='168' macro='1' u='r' c='io_file_readall'/>
+<use f='luajit/lib_io.c' l='180' macro='1' u='r' c='io_file_readlen'/>
+<use f='luajit/lib_os.c' l='218' macro='1' u='r' c='lj_cf_os_date'/>
+<use f='luajit/lib_string.c' l='102' macro='1' u='r' c='lj_cf_string_rep'/>
+<use f='luajit/lib_string.c' l='132' macro='1' u='r' c='lj_cf_string_dump'/>
+<use f='luajit/lib_string.c' l='652' macro='1' u='r' c='lj_cf_string_format'/>
+<use f='luajit/lib_table.c' l='168' macro='1' u='r' c='lj_cf_table_concat'/>
+<use f='luajit/lj_api.c' l='511' macro='1' u='r' c='lua_tolstring'/>
+<use f='luajit/lj_api.c' l='530' macro='1' u='r' c='luaL_checklstring'/>
+<use f='luajit/lj_api.c' l='552' macro='1' u='r' c='luaL_optlstring'/>
+<use f='luajit/lj_api.c' l='652' macro='1' u='r' c='lua_pushlstring'/>
+<use f='luajit/lj_api.c' l='664' macro='1' u='r' c='lua_pushstring'/>
+<use f='luajit/lj_api.c' l='674' macro='1' u='r' c='lua_pushvfstring'/>
+<use f='luajit/lj_api.c' l='682' macro='1' u='r' c='lua_pushfstring'/>
+<use f='luajit/lj_api.c' l='692' macro='1' u='r' c='lua_pushcclosure'/>
+<use f='luajit/lj_api.c' l='721' macro='1' u='r' c='lua_createtable'/>
+<use f='luajit/lj_api.c' l='752' macro='1' u='r' c='lua_newthread'/>
+<use f='luajit/lj_api.c' l='762' macro='1' u='r' c='lua_newuserdata'/>
+<use f='luajit/lj_api.c' l='1260' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1260' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1266' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1269' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1273' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1273' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1274' u='r' c='lua_gc'/>
+<use f='luajit/lj_asm_x86.h' l='2788' u='a' c='asm_gc_check'/>
+<use f='luajit/lj_carith.c' l='153' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='215' macro='1' u='r' c='carith_int64'/>
+<use f='luajit/lj_ccall.c' l='1183' macro='1' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccallback.c' l='628' macro='1' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_func.c' l='163' macro='1' u='r' c='lj_func_newL_gc'/>
+<use f='luajit/lj_gc.c' l='647' u='r' c='atomic'/>
+<use f='luajit/lj_gc.c' l='671' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='676' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='680' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='683' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='730' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='731' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='741' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='746' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='872' u='w' c='lj_mem_realloc'/>
+<use f='luajit/lj_gc.c' l='872' u='r' c='lj_mem_realloc'/>
+<use f='luajit/lj_gc.c' l='885' u='w' c='lj_mem_newgco'/>
+<use f='luajit/lj_load.c' l='60' macro='1' u='r' c='lua_loadx'/>
+<use f='luajit/lj_meta.c' l='307' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_parse.c' l='246' macro='1' u='r' c='lj_parse_keepstr'/>
+<use f='luajit/lj_parse.c' l='1823' macro='1' u='r' c='expr_table'/>
+<use f='luajit/lj_state.c' l='157' u='r' c='cpluaopen'/>
+<use f='luajit/lj_state.c' l='252' u='w' c='lua_newstate'/>

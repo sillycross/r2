@@ -1,0 +1,4 @@
+<def f='luajit/lj_cdata.h' l='27' ll='35' type='void cdata_setptr(void * p, CTSize sz, const void * v)'/>
+<doc f='luajit/lj_cdata.h' l='26'>/* Set C data pointer. */</doc>
+<use f='luajit/lj_cconv.c' l='346' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='352' u='c' c='lj_cconv_ct_ct'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='9'/>
+<use f='luajit/lib_ffi.c' l='225' u='r' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='240' u='r' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_crecord.c' l='1298' u='r' c='recff_cdata_call'/>
+<use f='luajit/lj_debug.c' l='309' u='r' c='lj_debug_funcname'/>
+<use f='luajit/lj_meta.c' l='444' u='r' c='lj_meta_call'/>
+<use f='luajit/lj_record.c' l='738' u='r' c='rec_call_setup'/>

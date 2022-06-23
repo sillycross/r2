@@ -1,0 +1,24 @@
+<dec f='luajit/lj_ctype.h' l='33' type='11'/>
+<doc f='luajit/lj_ctype.h' l='33'>/* Constant value. */</doc>
+<use f='luajit/lj_carith.c' l='72' macro='1' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_cconv.c' l='584' macro='1' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cdata.c' l='193' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='230' macro='1' u='r' c='lj_cdata_get'/>
+<use f='luajit/lj_cdata.c' l='263' macro='1' u='r' c='lj_cdata_set'/>
+<use f='luajit/lj_clib.c' l='348' macro='1' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_clib.c' l='351' macro='1' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='522' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='578' macro='1' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='1000' u='r' c='cp_decl_constinit'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1479' u='r' c='cp_decl_enum'/>
+<use f='luajit/lj_crecord.c' l='173' macro='1' u='r' c='crec_copy_struct'/>
+<use f='luajit/lj_crecord.c' l='635' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='877' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1043' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1078' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1536' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1588' macro='1' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_crecord.c' l='1594' macro='1' u='r' c='recff_clib_index'/>

@@ -1,0 +1,7 @@
+<def f='luajit/host/buildvm.h' l='54' ll='58'/>
+<use f='luajit/host/buildvm.h' l='54'/>
+<size>12</size>
+<doc f='luajit/host/buildvm.h' l='53'>/* Code relocation. */</doc>
+<mbr r='BuildReloc::ofs' o='0' t='int32_t'/>
+<mbr r='BuildReloc::sym' o='32' t='int'/>
+<mbr r='BuildReloc::type' o='64' t='int'/>

@@ -1,0 +1,2 @@
+<def f='luajit/lj_buf.h' l='118' ll='124' type='void lj_bufx_set_borrow(lua_State * L, SBufExt * sbx, SBuf * sb)'/>
+<use f='luajit/lib_buffer.c' l='324' u='c' c='lj_cf_buffer_encode'/>

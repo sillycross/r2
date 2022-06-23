@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='518'/>
+<use f='luajit/lj_opt_mem.c' l='188' u='c'/>
+<use f='luajit/lj_record.c' l='201' u='c'/>
+<use f='luajit/lj_record.c' l='257' u='c'/>
+<use f='luajit/lj_record.c' l='1480' u='c'/>
+<use f='luajit/lj_record.c' l='1662' u='c'/>
+<use f='luajit/lj_record.c' l='1836' u='c'/>
+<use f='luajit/lj_record.c' l='1885' u='c'/>
+<use f='luajit/lj_record.c' l='2109' u='c'/>
+<use f='luajit/lj_snap.c' l='416' u='c'/>

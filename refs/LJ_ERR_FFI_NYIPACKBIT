@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='179' macro='1' type='3680'/>
+<use f='luajit/lj_errmsg.h' l='179' macro='1' u='r'/>
+<use f='luajit/lj_cconv.c' l='448' u='r' c='lj_cconv_tv_bf'/>
+<use f='luajit/lj_cconv.c' l='668' u='r' c='lj_cconv_bf_tv'/>

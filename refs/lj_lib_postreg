@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lib.h' l='97' type='int lj_lib_postreg(lua_State * L, lua_CFunction cf, int id, const char * name)'/>
+<use f='luajit/lib_table.c' l='304' u='c' c='luaopen_table_new'/>
+<use f='luajit/lib_table.c' l='309' u='c' c='luaopen_table_clear'/>
+<def f='luajit/lj_lib.c' l='175' ll='183' type='int lj_lib_postreg(lua_State * L, lua_CFunction cf, int id, const char * name)'/>

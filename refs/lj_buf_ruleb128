@@ -1,0 +1,6 @@
+<dec f='luajit/lj_buf.h' l='180' type='uint32_t lj_buf_ruleb128(const char ** pp)'/>
+<use f='luajit/lj_bcread.c' l='130' u='c' c='bcread_uleb128'/>
+<def f='luajit/lj_buf.c' l='261' ll='272' type='uint32_t lj_buf_ruleb128(const char ** pp)'/>
+<doc f='luajit/lj_buf.c' l='260'>/* Read ULEB128 from buffer. */</doc>
+<use f='luajit/lj_debug.c' l='162' u='c' c='debug_varname'/>
+<use f='luajit/lj_debug.c' l='164' u='c' c='debug_varname'/>

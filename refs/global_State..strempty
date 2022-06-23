@@ -1,0 +1,18 @@
+<dec f='luajit/lj_obj.h' l='632' type='GCstr'/>
+<offset>960</offset>
+<doc f='luajit/lj_obj.h' l='632'>/* Empty string. */</doc>
+<use f='luajit/lib_base.c' l='418' u='a' c='lj_cf_load'/>
+<use f='luajit/lib_ffi.c' l='859' u='a' c='luaopen_ffi'/>
+<use f='luajit/lib_io.c' l='185' u='a' c='io_file_readlen'/>
+<use f='luajit/lib_os.c' l='224' u='a' c='lj_cf_os_date'/>
+<use f='luajit/lj_api.c' l='789' u='a' c='lua_concat'/>
+<use f='luajit/lj_ctype.c' l='347' u='a' c='lj_ctype_meta'/>
+<use f='luajit/lj_ffrecord.c' l='808' u='a' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='845' u='a' c='recff_string_char'/>
+<use f='luajit/lj_gc.c' l='645' u='m' c='atomic'/>
+<use f='luajit/lj_opt_fold.c' l='520' u='a' c='fold_kfold_snew_empty'/>
+<use f='luajit/lj_opt_fold.c' l='630' u='a' c='fold_bufstr_kfold_cse'/>
+<use f='luajit/lj_record.c' l='1951' u='a' c='rec_cat'/>
+<use f='luajit/lj_state.c' l='228' u='m' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='229' u='m' c='lua_newstate'/>
+<use f='luajit/lj_str.c' l='354' u='a' c='lj_str_new'/>

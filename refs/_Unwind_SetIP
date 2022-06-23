@@ -1,0 +1,4 @@
+<dec f='luajit/lj_err.c' l='404' type='void _Unwind_SetIP(_Unwind_Context * , uintptr_t )'/>
+<use f='luajit/lj_err.c' l='448' u='c' c='lj_err_unwind_dwarf'/>
+<use f='luajit/lj_err.c' l='459' u='c' c='lj_err_unwind_dwarf'/>
+<use f='luajit/lj_err.c' l='515' u='c' c='err_unwind_jit'/>

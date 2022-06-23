@@ -1,0 +1,7 @@
+<dec f='luajit/lua.h' l='326'/>
+<use f='luajit/host/buildvm_arch.h' l='2238' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2259' u='c'/>
+<use f='luajit/lib_debug.c' l='309' u='c'/>
+<use f='luajit/lj_dispatch.c' l='116' u='c'/>
+<use f='luajit/lj_dispatch.c' l='423' u='c'/>
+<use f='luajit/luajit.c' l='58' u='c'/>

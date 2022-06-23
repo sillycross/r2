@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='474' type='GCstr * lj_ctype_repr_complex(lua_State * L, void * sp, CTSize size)'/>
+<use f='luajit/lib_ffi.c' l='298' u='c' c='lj_cf_ffi_meta___tostring'/>
+<def f='luajit/lj_ctype.c' l='574' ll='588' type='GCstr * lj_ctype_repr_complex(lua_State * L, void * sp, CTSize size)'/>
+<doc f='luajit/lj_ctype.c' l='573'>/* Convert complex to string with &apos;i&apos; or &apos;I&apos; suffix. */</doc>

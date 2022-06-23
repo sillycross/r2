@@ -1,0 +1,12 @@
+<dec f='luajit/lj_iropt.h' l='139' type='TRef lj_opt_narrow_tobit(jit_State * J, TRef tr)'/>
+<use f='luajit/lj_crecord.c' l='1843' u='c' c='recff_bit64_shift'/>
+<use f='luajit/lj_crecord.c' l='1873' u='c' c='recff_bit64_tohex'/>
+<use f='luajit/lj_crecord.c' l='1886' u='c' c='recff_bit64_tohex'/>
+<use f='luajit/lj_ffrecord.c' l='656' u='c' c='recff_bit_tobit'/>
+<use f='luajit/lj_ffrecord.c' l='667' u='c' c='recff_bit_unary'/>
+<use f='luajit/lj_ffrecord.c' l='678' u='c' c='recff_bit_nary'/>
+<use f='luajit/lj_ffrecord.c' l='682' u='c' c='recff_bit_nary'/>
+<use f='luajit/lj_ffrecord.c' l='695' u='c' c='recff_bit_shift'/>
+<use f='luajit/lj_ffrecord.c' l='696' u='c' c='recff_bit_shift'/>
+<def f='luajit/lj_opt_narrow.c' l='483' ll='496' type='TRef lj_opt_narrow_tobit(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_opt_narrow.c' l='482'>/* Narrow conversion to bitop operand (overflow wrapped). */</doc>

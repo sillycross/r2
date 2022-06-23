@@ -1,0 +1,5 @@
+<dec f='luajit/lj_dispatch.h' l='82'/>
+<use f='luajit/lj_dispatch.h' l='108' u='c'/>
+<doc f='luajit/lj_dispatch.h' l='81'>/* This solves a circular dependency problem -- bump as needed. Sigh. */</doc>
+<use f='luajit/lj_dispatch.c' l='37' u='c'/>
+<use f='luajit/lj_dispatch.c' l='75' u='c'/>

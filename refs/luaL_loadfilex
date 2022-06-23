@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='82' type='int luaL_loadfilex(lua_State * L, const char * filename, const char * mode)'/>
+<use f='luajit/lib_base.c' l='381' u='c' c='lj_cf_loadfile'/>
+<def f='luajit/lj_load.c' l='84' ll='115' macro='1' type='int luaL_loadfilex(lua_State * L, const char * filename, const char * mode)'/>
+<use f='luajit/lj_load.c' l='119' u='c' c='luaL_loadfile'/>

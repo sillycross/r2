@@ -1,0 +1,2 @@
+<dec f='luajit/lj_iropt.h' l='75'/>
+<use f='luajit/lj_opt_narrow.c' l='488' u='c'/>

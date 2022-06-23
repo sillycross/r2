@@ -1,0 +1,4 @@
+<def f='luajit/host/buildvm_peobj.c' l='32' ll='43'/>
+<use f='luajit/host/buildvm_peobj.c' l='32'/>
+<size>40</size>
+<doc f='luajit/host/buildvm_peobj.c' l='31'>/* PE section. */</doc>

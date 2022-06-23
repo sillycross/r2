@@ -1,0 +1,9 @@
+<dec f='luajit/lj_bc.h' l='235' type='3'/>
+<use f='luajit/lj_parse.c' l='2484' u='r' c='parse_for_num'/>
+<use f='luajit/lj_record.c' l='481' u='r' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='484' u='r' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='503' u='w' c='rec_for'/>
+<use f='luajit/lj_record.c' l='528' u='w' c='rec_for'/>
+<use f='luajit/lj_record.c' l='536' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='550' u='r' c='rec_for'/>
+<use f='luajit/lj_snap.c' l='253' u='r' c='snap_usedef'/>

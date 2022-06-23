@@ -1,0 +1,41 @@
+<dec f='luajit/host/buildvm.h' l='70' type='BuildMode'/>
+<use f='luajit/host/buildvm_arch.h' l='4686' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm.c' l='102' u='r' c='sym_decorate'/>
+<use f='luajit/host/buildvm.c' l='112' u='r' c='sym_decorate'/>
+<use f='luajit/host/buildvm.c' l='112' u='r' c='sym_decorate'/>
+<use f='luajit/host/buildvm.c' l='400' u='w' c='parseargs'/>
+<use f='luajit/host/buildvm.c' l='415' u='w' c='parseargs'/>
+<use f='luajit/host/buildvm.c' l='429' u='r' c='parseargs'/>
+<use f='luajit/host/buildvm.c' l='452' u='r' c='main'/>
+<use f='luajit/host/buildvm.c' l='474' u='r' c='main'/>
+<offset>64</offset>
+<doc f='luajit/host/buildvm.h' l='69'>/* Parsed command line. */</doc>
+<use f='luajit/host/buildvm_asm.c' l='29' u='r' c='emit_asm_reloc'/>
+<use f='luajit/host/buildvm_asm.c' l='76' u='r' c='emit_asm_reloc_text'/>
+<use f='luajit/host/buildvm_asm.c' l='83' u='r' c='emit_asm_reloc_text'/>
+<use f='luajit/host/buildvm_asm.c' l='174' u='r' c='emit_asm_label'/>
+<use f='luajit/host/buildvm_asm.c' l='224' u='r' c='emit_asm_align'/>
+<use f='luajit/host/buildvm_asm.c' l='253' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_asm.c' l='295' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_asm.c' l='295' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_asm.c' l='325' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_lib.c' l='77' u='r' c='libdef_module'/>
+<use f='luajit/host/buildvm_lib.c' l='115' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='135' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='137' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='143' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='148' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='192' u='r' c='libdef_lua'/>
+<use f='luajit/host/buildvm_lib.c' l='232' u='r' c='libdef_rec'/>
+<use f='luajit/host/buildvm_lib.c' l='265' u='r' c='libdef_push'/>
+<use f='luajit/host/buildvm_lib.c' l='310' u='r' c='libdef_set'/>
+<use f='luajit/host/buildvm_lib.c' l='352' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='352' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='353' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='355' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='357' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='424' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='429' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='434' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='436' u='r' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='444' u='r' c='emit_lib'/>

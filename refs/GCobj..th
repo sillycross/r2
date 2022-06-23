@@ -1,0 +1,27 @@
+<dec f='luajit/lj_obj.h' l='750' type='lua_State'/>
+<offset>0</offset>
+<use f='luajit/lib_base.c' l='562' macro='1' u='a' c='lj_cf_coroutine_status'/>
+<use f='luajit/lib_base.c' l='626' macro='1' u='a' c='lj_ffh_coroutine_resume'/>
+<use f='luajit/lib_base.c' l='631' macro='1' u='a' c='lj_ffh_coroutine_wrap_aux'/>
+<use f='luajit/lib_debug.c' l='92' macro='1' u='a' c='getthread'/>
+<use f='luajit/lib_jit.c' l='616' macro='1' u='a' c='lj_cf_jit_profile_dumpstack'/>
+<use f='luajit/lj_api.c' l='619' macro='1' u='a' c='lua_tothread'/>
+<use f='luajit/lj_api.c' l='746' macro='1' u='a' c='lua_pushthread'/>
+<use f='luajit/lj_api.c' l='884' macro='1' u='a' c='lua_getfenv'/>
+<use f='luajit/lj_api.c' l='1079' macro='1' u='a' c='lua_setfenv'/>
+<use f='luajit/lj_debug.c' l='64' macro='1' u='a' c='debug_framepc'/>
+<use f='luajit/lj_err.c' l='422' macro='1' u='a' c='lj_err_unwind_dwarf'/>
+<use f='luajit/lj_gc.c' l='104' macro='1' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='104' macro='1' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='105' macro='1' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='105' macro='1' u='a' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='141' macro='1' u='a' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='344' macro='1' u='a' c='propagatemark'/>
+<use f='luajit/lj_gc.c' l='409' macro='1' u='a' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='559' macro='1' u='a' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='560' macro='1' u='a' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='763' macro='1' u='a' c='lj_gc_step_jit'/>
+<use f='luajit/lj_gc.c' l='832' macro='1' u='a' c='lj_gc_closeuv'/>
+<use f='luajit/lj_state.c' l='280' macro='1' u='a' c='lua_close'/>
+<use f='luajit/lj_udata.c' l='26' macro='1' u='a' c='lj_udata_new'/>
+<use f='luajit/lj_udata.c' l='27' macro='1' u='a' c='lj_udata_new'/>

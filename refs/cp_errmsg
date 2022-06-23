@@ -1,0 +1,20 @@
+<def f='luajit/lj_cparse.c' l='127' ll='151' macro='1' type='void cp_errmsg(CPState * cp, CPToken tok, ErrMsg em)'/>
+<use f='luajit/lj_cparse.c' l='155' u='c' c='cp_err_token'/>
+<use f='luajit/lj_cparse.c' l='161' u='c' c='cp_err_badidx'/>
+<use f='luajit/lj_cparse.c' l='166' u='c' c='cp_err'/>
+<use f='luajit/lj_cparse.c' l='183' u='c' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='205' u='c' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='238' u='c' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='242' u='c' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='540' u='c' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='575' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='1234' u='c' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1237' u='c' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1252' u='c' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1414' u='c' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1453' u='c' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1520' u='c' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1571' u='c' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1592' u='c' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1776' u='c' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1830' u='c' c='cp_decl_multi'/>

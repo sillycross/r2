@@ -1,0 +1,6 @@
+<def f='luajit/lj_jit.h' l='178' ll='181'/>
+<use f='luajit/lj_jit.h' l='178'/>
+<size>16</size>
+<doc f='luajit/lj_jit.h' l='177'>/* Linked list of MCode areas. */</doc>
+<mbr r='MCLink::next' o='0' t='MCode *'/>
+<mbr r='MCLink::size' o='64' t='size_t'/>

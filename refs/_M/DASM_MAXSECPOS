@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_x86.h' l='28'/>
+<use f='luajit/dasm_x86.h' l='178' u='c'/>
+<use f='luajit/dasm_x86.h' l='180' u='c'/>
+<doc f='luajit/dasm_x86.h' l='27'>/* Maximum number of section buffer positions for a single dasm_put() call. */</doc>

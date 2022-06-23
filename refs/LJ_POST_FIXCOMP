@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='162' type='1'/>
+<doc f='luajit/lj_jit.h' l='162'>/* Fixup comparison and emit pending guard. */</doc>
+<use f='luajit/lj_crecord.c' l='1572' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_record.c' l='2010' c='lj_record_ins'/>

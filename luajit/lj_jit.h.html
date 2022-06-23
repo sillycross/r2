@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_jit.h source code [luajit/lj_jit.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="BPropEntry,FoldState,GCtrace,HotPenalty,MCLink,RBCHashEntry,ScEvEntry,SnapShot,jit_State "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_jit.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_jit.h.html'>lj_jit.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Common definitions for the JIT compiler.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_JIT_H">_LJ_JIT_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_JIT_H" data-ref="_M/_LJ_JIT_H">_LJ_JIT_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_ir.h.html">"lj_ir.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><i>/* -- JIT engine flags ---------------------------------------------------- */</i></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/* General JIT engine flags. 4 bits. */</i></td></tr>
+<tr><th id="15">15</th><td><u>#define <dfn class="macro" id="_M/JIT_F_ON" data-ref="_M/JIT_F_ON">JIT_F_ON</dfn>		0x00000001</u></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><i>/* CPU-specific JIT engine flags. 12 bits. Flags and strings must match. */</i></td></tr>
+<tr><th id="18">18</th><td><u>#define <dfn class="macro" id="_M/JIT_F_CPU" data-ref="_M/JIT_F_CPU">JIT_F_CPU</dfn>		0x00000010</u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><u>#<span data-ppcond="20">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/JIT_F_SSE3" data-ref="_M/JIT_F_SSE3">JIT_F_SSE3</dfn>		(JIT_F_CPU &lt;&lt; 0)</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/JIT_F_SSE4_1" data-ref="_M/JIT_F_SSE4_1">JIT_F_SSE4_1</dfn>		(JIT_F_CPU &lt;&lt; 1)</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/JIT_F_BMI2" data-ref="_M/JIT_F_BMI2">JIT_F_BMI2</dfn>		(JIT_F_CPU &lt;&lt; 2)</u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/JIT_F_CPUSTRING" data-ref="_M/JIT_F_CPUSTRING">JIT_F_CPUSTRING</dfn>		"\4SSE3\6SSE4.1\4BMI2"</u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#<span data-ppcond="20">elif</span> LJ_TARGET_ARM</u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#define JIT_F_ARMV6_		(JIT_F_CPU &lt;&lt; 0)</u></td></tr>
+<tr><th id="32">32</th><td><u>#define JIT_F_ARMV6T2_		(JIT_F_CPU &lt;&lt; 1)</u></td></tr>
+<tr><th id="33">33</th><td><u>#define JIT_F_ARMV7		(JIT_F_CPU &lt;&lt; 2)</u></td></tr>
+<tr><th id="34">34</th><td><u>#define JIT_F_ARMV8		(JIT_F_CPU &lt;&lt; 3)</u></td></tr>
+<tr><th id="35">35</th><td><u>#define JIT_F_VFPV2		(JIT_F_CPU &lt;&lt; 4)</u></td></tr>
+<tr><th id="36">36</th><td><u>#define JIT_F_VFPV3		(JIT_F_CPU &lt;&lt; 5)</u></td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><u>#define JIT_F_ARMV6		(JIT_F_ARMV6_|JIT_F_ARMV6T2_|JIT_F_ARMV7|JIT_F_ARMV8)</u></td></tr>
+<tr><th id="39">39</th><td><u>#define JIT_F_ARMV6T2		(JIT_F_ARMV6T2_|JIT_F_ARMV7|JIT_F_ARMV8)</u></td></tr>
+<tr><th id="40">40</th><td><u>#define JIT_F_VFP		(JIT_F_VFPV2|JIT_F_VFPV3)</u></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><u>#define JIT_F_CPUSTRING		"\5ARMv6\7ARMv6T2\5ARMv7\5ARMv8\5VFPv2\5VFPv3"</u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><u>#elif LJ_TARGET_PPC</u></td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><u>#define JIT_F_SQRT		(JIT_F_CPU &lt;&lt; 0)</u></td></tr>
+<tr><th id="47">47</th><td><u>#define JIT_F_ROUND		(JIT_F_CPU &lt;&lt; 1)</u></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#define JIT_F_CPUSTRING		"\4SQRT\5ROUND"</u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><u>#elif LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><u>#define JIT_F_MIPSXXR2		(JIT_F_CPU &lt;&lt; 0)</u></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><u>#if LJ_TARGET_MIPS32</u></td></tr>
+<tr><th id="56">56</th><td><u>#if LJ_TARGET_MIPSR6</u></td></tr>
+<tr><th id="57">57</th><td><u>#define JIT_F_CPUSTRING		"\010MIPS32R6"</u></td></tr>
+<tr><th id="58">58</th><td><u>#else</u></td></tr>
+<tr><th id="59">59</th><td><u>#define JIT_F_CPUSTRING		"\010MIPS32R2"</u></td></tr>
+<tr><th id="60">60</th><td><u>#endif</u></td></tr>
+<tr><th id="61">61</th><td><u>#else</u></td></tr>
+<tr><th id="62">62</th><td><u>#if LJ_TARGET_MIPSR6</u></td></tr>
+<tr><th id="63">63</th><td><u>#define JIT_F_CPUSTRING		"\010MIPS64R6"</u></td></tr>
+<tr><th id="64">64</th><td><u>#else</u></td></tr>
+<tr><th id="65">65</th><td><u>#define JIT_F_CPUSTRING		"\010MIPS64R2"</u></td></tr>
+<tr><th id="66">66</th><td><u>#endif</u></td></tr>
+<tr><th id="67">67</th><td><u>#endif</u></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><u>#else</u></td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td><u>#define JIT_F_CPUSTRING		""</u></td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td><u>#<span data-ppcond="20">endif</span></u></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><i>/* Optimization flags. 12 bits. */</i></td></tr>
+<tr><th id="76">76</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT" data-ref="_M/JIT_F_OPT">JIT_F_OPT</dfn>		0x00010000</u></td></tr>
+<tr><th id="77">77</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_MASK" data-ref="_M/JIT_F_OPT_MASK">JIT_F_OPT_MASK</dfn>		0x0fff0000</u></td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_FOLD" data-ref="_M/JIT_F_OPT_FOLD">JIT_F_OPT_FOLD</dfn>		(JIT_F_OPT &lt;&lt; 0)</u></td></tr>
+<tr><th id="80">80</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_CSE" data-ref="_M/JIT_F_OPT_CSE">JIT_F_OPT_CSE</dfn>		(JIT_F_OPT &lt;&lt; 1)</u></td></tr>
+<tr><th id="81">81</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_DCE" data-ref="_M/JIT_F_OPT_DCE">JIT_F_OPT_DCE</dfn>		(JIT_F_OPT &lt;&lt; 2)</u></td></tr>
+<tr><th id="82">82</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_FWD" data-ref="_M/JIT_F_OPT_FWD">JIT_F_OPT_FWD</dfn>		(JIT_F_OPT &lt;&lt; 3)</u></td></tr>
+<tr><th id="83">83</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_DSE" data-ref="_M/JIT_F_OPT_DSE">JIT_F_OPT_DSE</dfn>		(JIT_F_OPT &lt;&lt; 4)</u></td></tr>
+<tr><th id="84">84</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_NARROW" data-ref="_M/JIT_F_OPT_NARROW">JIT_F_OPT_NARROW</dfn>	(JIT_F_OPT &lt;&lt; 5)</u></td></tr>
+<tr><th id="85">85</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_LOOP" data-ref="_M/JIT_F_OPT_LOOP">JIT_F_OPT_LOOP</dfn>		(JIT_F_OPT &lt;&lt; 6)</u></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_ABC" data-ref="_M/JIT_F_OPT_ABC">JIT_F_OPT_ABC</dfn>		(JIT_F_OPT &lt;&lt; 7)</u></td></tr>
+<tr><th id="87">87</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_SINK" data-ref="_M/JIT_F_OPT_SINK">JIT_F_OPT_SINK</dfn>		(JIT_F_OPT &lt;&lt; 8)</u></td></tr>
+<tr><th id="88">88</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_FUSE" data-ref="_M/JIT_F_OPT_FUSE">JIT_F_OPT_FUSE</dfn>		(JIT_F_OPT &lt;&lt; 9)</u></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><i>/* Optimizations names for -O. Must match the order above. */</i></td></tr>
+<tr><th id="91">91</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPTSTRING" data-ref="_M/JIT_F_OPTSTRING">JIT_F_OPTSTRING</dfn>	\</u></td></tr>
+<tr><th id="92">92</th><td><u>  "\4fold\3cse\3dce\3fwd\3dse\6narrow\4loop\3abc\4sink\4fuse"</u></td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td><i>/* Optimization levels set a fixed combination of flags. */</i></td></tr>
+<tr><th id="95">95</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_0" data-ref="_M/JIT_F_OPT_0">JIT_F_OPT_0</dfn>	0</u></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_1" data-ref="_M/JIT_F_OPT_1">JIT_F_OPT_1</dfn>	(JIT_F_OPT_FOLD|JIT_F_OPT_CSE|JIT_F_OPT_DCE)</u></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_2" data-ref="_M/JIT_F_OPT_2">JIT_F_OPT_2</dfn>	(JIT_F_OPT_1|JIT_F_OPT_NARROW|JIT_F_OPT_LOOP)</u></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_3" data-ref="_M/JIT_F_OPT_3">JIT_F_OPT_3</dfn>	(JIT_F_OPT_2|\</u></td></tr>
+<tr><th id="99">99</th><td><u>  JIT_F_OPT_FWD|JIT_F_OPT_DSE|JIT_F_OPT_ABC|JIT_F_OPT_SINK|JIT_F_OPT_FUSE)</u></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/JIT_F_OPT_DEFAULT" data-ref="_M/JIT_F_OPT_DEFAULT">JIT_F_OPT_DEFAULT</dfn>	JIT_F_OPT_3</u></td></tr>
+<tr><th id="101">101</th><td></td></tr>
+<tr><th id="102">102</th><td><i>/* -- JIT engine parameters ----------------------------------------------- */</i></td></tr>
+<tr><th id="103">103</th><td></td></tr>
+<tr><th id="104">104</th><td><u>#<span data-ppcond="104">if</span> <a class="macro" href="lj_arch.h.html#117" title="(2 == 1)" data-ref="_M/LJ_TARGET_WINDOWS">LJ_TARGET_WINDOWS</a> || <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="105">105</th><td><i>/* See: <a href="http://blogs.msdn.com/oldnewthing/archive/2003/10/08/55239.aspx">http://blogs.msdn.com/oldnewthing/archive/2003/10/08/55239.aspx</a> */</i></td></tr>
+<tr><th id="106">106</th><td><u>#define <dfn class="macro" id="_M/JIT_P_sizemcode_DEFAULT" data-ref="_M/JIT_P_sizemcode_DEFAULT">JIT_P_sizemcode_DEFAULT</dfn>		64</u></td></tr>
+<tr><th id="107">107</th><td><u>#<span data-ppcond="104">else</span></u></td></tr>
+<tr><th id="108">108</th><td><i>/* Could go as low as 4K, but the mmap() overhead would be rather high. */</i></td></tr>
+<tr><th id="109">109</th><td><u>#define JIT_P_sizemcode_DEFAULT		32</u></td></tr>
+<tr><th id="110">110</th><td><u>#<span data-ppcond="104">endif</span></u></td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><i>/* Optimization parameters and their defaults. Length is a char in octal! */</i></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/JIT_PARAMDEF" data-ref="_M/JIT_PARAMDEF">JIT_PARAMDEF</dfn>(_) \</u></td></tr>
+<tr><th id="114">114</th><td><u>  _(\010, maxtrace,	1000)	/* Max. # of traces in cache. */ \</u></td></tr>
+<tr><th id="115">115</th><td><u>  _(\011, maxrecord,	4000)	/* Max. # of recorded IR instructions. */ \</u></td></tr>
+<tr><th id="116">116</th><td><u>  _(\012, maxirconst,	500)	/* Max. # of IR constants of a trace. */ \</u></td></tr>
+<tr><th id="117">117</th><td><u>  _(\007, maxside,	100)	/* Max. # of side traces of a root trace. */ \</u></td></tr>
+<tr><th id="118">118</th><td><u>  _(\007, maxsnap,	500)	/* Max. # of snapshots for a trace. */ \</u></td></tr>
+<tr><th id="119">119</th><td><u>  _(\011, minstitch,	0)	/* Min. # of IR ins for a stitched trace. */ \</u></td></tr>
+<tr><th id="120">120</th><td><u>  \</u></td></tr>
+<tr><th id="121">121</th><td><u>  _(\007, hotloop,	56)	/* # of iter. to detect a hot loop/call. */ \</u></td></tr>
+<tr><th id="122">122</th><td><u>  _(\007, hotexit,	10)	/* # of taken exits to start a side trace. */ \</u></td></tr>
+<tr><th id="123">123</th><td><u>  _(\007, tryside,	4)	/* # of attempts to compile a side trace. */ \</u></td></tr>
+<tr><th id="124">124</th><td><u>  \</u></td></tr>
+<tr><th id="125">125</th><td><u>  _(\012, instunroll,	4)	/* Max. unroll for instable loops. */ \</u></td></tr>
+<tr><th id="126">126</th><td><u>  _(\012, loopunroll,	15)	/* Max. unroll for loop ops in side traces. */ \</u></td></tr>
+<tr><th id="127">127</th><td><u>  _(\012, callunroll,	3)	/* Max. unroll for recursive calls. */ \</u></td></tr>
+<tr><th id="128">128</th><td><u>  _(\011, recunroll,	2)	/* Min. unroll for true recursion. */ \</u></td></tr>
+<tr><th id="129">129</th><td><u>  \</u></td></tr>
+<tr><th id="130">130</th><td><u>  /* Size of each machine code area (in KBytes). */ \</u></td></tr>
+<tr><th id="131">131</th><td><u>  _(\011, sizemcode,	JIT_P_sizemcode_DEFAULT) \</u></td></tr>
+<tr><th id="132">132</th><td><u>  /* Max. total size of all machine code areas (in KBytes). */ \</u></td></tr>
+<tr><th id="133">133</th><td><u>  _(\010, maxmcode,	512) \</u></td></tr>
+<tr><th id="134">134</th><td><u>  /* End of list. */</u></td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td><b>enum</b> {</td></tr>
+<tr><th id="137">137</th><td><u>#define <dfn class="macro" id="_M/JIT_PARAMENUM" data-ref="_M/JIT_PARAMENUM">JIT_PARAMENUM</dfn>(len, name, value)	JIT_P_##name,</u></td></tr>
+<tr><th id="138">138</th><td><a class="macro" href="#113" title="JIT_P_maxtrace, JIT_P_maxrecord, JIT_P_maxirconst, JIT_P_maxside, JIT_P_maxsnap, JIT_P_minstitch, JIT_P_hotloop, JIT_P_hotexit, JIT_P_tryside, JIT_P_instunroll, JIT_P_loopunroll, JIT_P_callunroll, JIT_P_recunroll, JIT_P_sizemcode, JIT_P_maxmcode," data-ref="_M/JIT_PARAMDEF">JIT_PARAMDEF</a>(JIT_PARAMENUM)</td></tr>
+<tr><th id="139">139</th><td><u>#undef <a class="macro" href="#137" data-ref="_M/JIT_PARAMENUM">JIT_PARAMENUM</a></u></td></tr>
+<tr><th id="140">140</th><td>  <dfn class="enum" id="JIT_P__MAX" title='JIT_P__MAX' data-ref="JIT_P__MAX" data-ref-filename="JIT_P__MAX">JIT_P__MAX</dfn></td></tr>
+<tr><th id="141">141</th><td>};</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><u>#define <dfn class="macro" id="_M/JIT_PARAMSTR" data-ref="_M/JIT_PARAMSTR">JIT_PARAMSTR</dfn>(len, name, value)	#len #name</u></td></tr>
+<tr><th id="144">144</th><td><u>#define <dfn class="macro" id="_M/JIT_P_STRING" data-ref="_M/JIT_P_STRING">JIT_P_STRING</dfn>	JIT_PARAMDEF(JIT_PARAMSTR)</u></td></tr>
+<tr><th id="145">145</th><td></td></tr>
+<tr><th id="146">146</th><td><i>/* -- JIT engine data structures ------------------------------------------ */</i></td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td><i>/* Trace compiler state. */</i></td></tr>
+<tr><th id="149">149</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="150">150</th><td>  <dfn class="enum" id="LJ_TRACE_IDLE" title='LJ_TRACE_IDLE' data-ref="LJ_TRACE_IDLE" data-ref-filename="LJ_TRACE_IDLE">LJ_TRACE_IDLE</dfn>,	<i>/* Trace compiler idle. */</i></td></tr>
+<tr><th id="151">151</th><td>  <dfn class="enum" id="LJ_TRACE_ACTIVE" title='LJ_TRACE_ACTIVE' data-ref="LJ_TRACE_ACTIVE" data-ref-filename="LJ_TRACE_ACTIVE">LJ_TRACE_ACTIVE</dfn> = <var>0x10</var>,</td></tr>
+<tr><th id="152">152</th><td>  <dfn class="enum" id="LJ_TRACE_RECORD" title='LJ_TRACE_RECORD' data-ref="LJ_TRACE_RECORD" data-ref-filename="LJ_TRACE_RECORD">LJ_TRACE_RECORD</dfn>,	<i>/* Bytecode recording active. */</i></td></tr>
+<tr><th id="153">153</th><td>  <dfn class="enum" id="LJ_TRACE_START" title='LJ_TRACE_START' data-ref="LJ_TRACE_START" data-ref-filename="LJ_TRACE_START">LJ_TRACE_START</dfn>,	<i>/* New trace started. */</i></td></tr>
+<tr><th id="154">154</th><td>  <dfn class="enum" id="LJ_TRACE_END" title='LJ_TRACE_END' data-ref="LJ_TRACE_END" data-ref-filename="LJ_TRACE_END">LJ_TRACE_END</dfn>,		<i>/* End of trace. */</i></td></tr>
+<tr><th id="155">155</th><td>  <dfn class="enum" id="LJ_TRACE_ASM" title='LJ_TRACE_ASM' data-ref="LJ_TRACE_ASM" data-ref-filename="LJ_TRACE_ASM">LJ_TRACE_ASM</dfn>,		<i>/* Assemble trace. */</i></td></tr>
+<tr><th id="156">156</th><td>  <dfn class="enum" id="LJ_TRACE_ERR" title='LJ_TRACE_ERR' data-ref="LJ_TRACE_ERR" data-ref-filename="LJ_TRACE_ERR">LJ_TRACE_ERR</dfn>		<i>/* Trace aborted with error. */</i></td></tr>
+<tr><th id="157">157</th><td>} <dfn class="typedef" id="TraceState" title='TraceState' data-type='enum TraceState' data-ref="TraceState" data-ref-filename="TraceState">TraceState</dfn>;</td></tr>
+<tr><th id="158">158</th><td></td></tr>
+<tr><th id="159">159</th><td><i>/* Post-processing action. */</i></td></tr>
+<tr><th id="160">160</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="161">161</th><td>  <dfn class="enum" id="LJ_POST_NONE" title='LJ_POST_NONE' data-ref="LJ_POST_NONE" data-ref-filename="LJ_POST_NONE">LJ_POST_NONE</dfn>,		<i>/* No action. */</i></td></tr>
+<tr><th id="162">162</th><td>  <dfn class="enum" id="LJ_POST_FIXCOMP" title='LJ_POST_FIXCOMP' data-ref="LJ_POST_FIXCOMP" data-ref-filename="LJ_POST_FIXCOMP">LJ_POST_FIXCOMP</dfn>,	<i>/* Fixup comparison and emit pending guard. */</i></td></tr>
+<tr><th id="163">163</th><td>  <dfn class="enum" id="LJ_POST_FIXGUARD" title='LJ_POST_FIXGUARD' data-ref="LJ_POST_FIXGUARD" data-ref-filename="LJ_POST_FIXGUARD">LJ_POST_FIXGUARD</dfn>,	<i>/* Fixup and emit pending guard. */</i></td></tr>
+<tr><th id="164">164</th><td>  <dfn class="enum" id="LJ_POST_FIXGUARDSNAP" title='LJ_POST_FIXGUARDSNAP' data-ref="LJ_POST_FIXGUARDSNAP" data-ref-filename="LJ_POST_FIXGUARDSNAP">LJ_POST_FIXGUARDSNAP</dfn>,	<i>/* Fixup and emit pending guard and snapshot. */</i></td></tr>
+<tr><th id="165">165</th><td>  <dfn class="enum" id="LJ_POST_FIXBOOL" title='LJ_POST_FIXBOOL' data-ref="LJ_POST_FIXBOOL" data-ref-filename="LJ_POST_FIXBOOL">LJ_POST_FIXBOOL</dfn>,	<i>/* Fixup boolean result. */</i></td></tr>
+<tr><th id="166">166</th><td>  <dfn class="enum" id="LJ_POST_FIXCONST" title='LJ_POST_FIXCONST' data-ref="LJ_POST_FIXCONST" data-ref-filename="LJ_POST_FIXCONST">LJ_POST_FIXCONST</dfn>,	<i>/* Fixup constant results. */</i></td></tr>
+<tr><th id="167">167</th><td>  <dfn class="enum" id="LJ_POST_FFRETRY" title='LJ_POST_FFRETRY' data-ref="LJ_POST_FFRETRY" data-ref-filename="LJ_POST_FFRETRY">LJ_POST_FFRETRY</dfn>	<i>/* Suppress recording of retried fast functions. */</i></td></tr>
+<tr><th id="168">168</th><td>} <dfn class="typedef" id="PostProc" title='PostProc' data-type='enum PostProc' data-ref="PostProc" data-ref-filename="PostProc">PostProc</dfn>;</td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td><i>/* Machine code type. */</i></td></tr>
+<tr><th id="171">171</th><td><u>#<span data-ppcond="171">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="172">172</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="typedef" id="MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</dfn>;</td></tr>
+<tr><th id="173">173</th><td><u>#<span data-ppcond="171">else</span></u></td></tr>
+<tr><th id="174">174</th><td><b>typedef</b> uint32_t MCode;</td></tr>
+<tr><th id="175">175</th><td><u>#<span data-ppcond="171">endif</span></u></td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td><i>/* Linked list of MCode areas. */</i></td></tr>
+<tr><th id="178">178</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="MCLink" title='MCLink' data-ref="MCLink" data-ref-filename="MCLink"><a class="type" href="#MCLink" title='MCLink' data-ref="MCLink" data-ref-filename="MCLink">MCLink</a></dfn> {</td></tr>
+<tr><th id="179">179</th><td>  <a class="typedef" href="#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl field" id="MCLink::next" title='MCLink::next' data-ref="MCLink::next" data-ref-filename="MCLink..next">next</dfn>;		<i>/* Next area. */</i></td></tr>
+<tr><th id="180">180</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl field" id="MCLink::size" title='MCLink::size' data-ref="MCLink::size" data-ref-filename="MCLink..size">size</dfn>;		<i>/* Size of current area. */</i></td></tr>
+<tr><th id="181">181</th><td>} <dfn class="typedef" id="MCLink" title='MCLink' data-type='struct MCLink' data-ref="MCLink" data-ref-filename="MCLink">MCLink</dfn>;</td></tr>
+<tr><th id="182">182</th><td></td></tr>
+<tr><th id="183">183</th><td><i>/* Stack snapshot header. */</i></td></tr>
+<tr><th id="184">184</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="SnapShot" title='SnapShot' data-ref="SnapShot" data-ref-filename="SnapShot"><a class="type" href="#SnapShot" title='SnapShot' data-ref="SnapShot" data-ref-filename="SnapShot">SnapShot</a></dfn> {</td></tr>
+<tr><th id="185">185</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="SnapShot::mapofs" title='SnapShot::mapofs' data-ref="SnapShot::mapofs" data-ref-filename="SnapShot..mapofs">mapofs</dfn>;	<i>/* Offset into snapshot map. */</i></td></tr>
+<tr><th id="186">186</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="SnapShot::ref" title='SnapShot::ref' data-ref="SnapShot::ref" data-ref-filename="SnapShot..ref">ref</dfn>;		<i>/* First IR ref for this snapshot. */</i></td></tr>
+<tr><th id="187">187</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="SnapShot::mcofs" title='SnapShot::mcofs' data-ref="SnapShot::mcofs" data-ref-filename="SnapShot..mcofs">mcofs</dfn>;	<i>/* Offset into machine code in MCode units. */</i></td></tr>
+<tr><th id="188">188</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="SnapShot::nslots" title='SnapShot::nslots' data-ref="SnapShot::nslots" data-ref-filename="SnapShot..nslots">nslots</dfn>;	<i>/* Number of valid slots. */</i></td></tr>
+<tr><th id="189">189</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="SnapShot::topslot" title='SnapShot::topslot' data-ref="SnapShot::topslot" data-ref-filename="SnapShot..topslot">topslot</dfn>;	<i>/* Maximum frame extent. */</i></td></tr>
+<tr><th id="190">190</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="SnapShot::nent" title='SnapShot::nent' data-ref="SnapShot::nent" data-ref-filename="SnapShot..nent">nent</dfn>;		<i>/* Number of compressed entries. */</i></td></tr>
+<tr><th id="191">191</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="SnapShot::count" title='SnapShot::count' data-ref="SnapShot::count" data-ref-filename="SnapShot..count">count</dfn>;	<i>/* Count of taken exits for this snapshot. */</i></td></tr>
+<tr><th id="192">192</th><td>} <dfn class="typedef" id="SnapShot" title='SnapShot' data-type='struct SnapShot' data-ref="SnapShot" data-ref-filename="SnapShot">SnapShot</dfn>;</td></tr>
+<tr><th id="193">193</th><td></td></tr>
+<tr><th id="194">194</th><td><u>#define <dfn class="macro" id="_M/SNAPCOUNT_DONE" data-ref="_M/SNAPCOUNT_DONE">SNAPCOUNT_DONE</dfn>	255	/* Already compiled and linked a side trace. */</u></td></tr>
+<tr><th id="195">195</th><td></td></tr>
+<tr><th id="196">196</th><td><i>/* Compressed snapshot entry. */</i></td></tr>
+<tr><th id="197">197</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="SnapEntry" title='SnapEntry' data-type='uint32_t' data-ref="SnapEntry" data-ref-filename="SnapEntry">SnapEntry</dfn>;</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td><u>#define <dfn class="macro" id="_M/SNAP_FRAME" data-ref="_M/SNAP_FRAME">SNAP_FRAME</dfn>		0x010000	/* Frame slot. */</u></td></tr>
+<tr><th id="200">200</th><td><u>#define <dfn class="macro" id="_M/SNAP_CONT" data-ref="_M/SNAP_CONT">SNAP_CONT</dfn>		0x020000	/* Continuation slot. */</u></td></tr>
+<tr><th id="201">201</th><td><u>#define <dfn class="macro" id="_M/SNAP_NORESTORE" data-ref="_M/SNAP_NORESTORE">SNAP_NORESTORE</dfn>		0x040000	/* No need to restore slot. */</u></td></tr>
+<tr><th id="202">202</th><td><u>#define <dfn class="macro" id="_M/SNAP_SOFTFPNUM" data-ref="_M/SNAP_SOFTFPNUM">SNAP_SOFTFPNUM</dfn>		0x080000	/* Soft-float number. */</u></td></tr>
+<tr><th id="203">203</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_82(int STATIC_ASSERTION_FAILED[(0x010000 == 0x00010000)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(<a class="macro" href="#199" title="0x010000" data-ref="_M/SNAP_FRAME">SNAP_FRAME</a> == <a class="macro" href="lj_ir.h.html#483" title="0x00010000" data-ref="_M/TREF_FRAME">TREF_FRAME</a>);</td></tr>
+<tr><th id="204">204</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_84(int STATIC_ASSERTION_FAILED[(0x020000 == 0x00020000)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(<a class="macro" href="#200" title="0x020000" data-ref="_M/SNAP_CONT">SNAP_CONT</a> == <a class="macro" href="lj_ir.h.html#484" title="0x00020000" data-ref="_M/TREF_CONT">TREF_CONT</a>);</td></tr>
+<tr><th id="205">205</th><td></td></tr>
+<tr><th id="206">206</th><td><u>#define <dfn class="macro" id="_M/SNAP" data-ref="_M/SNAP">SNAP</dfn>(slot, flags, ref)	(((SnapEntry)(slot) &lt;&lt; 24) + (flags) + (ref))</u></td></tr>
+<tr><th id="207">207</th><td><u>#define <dfn class="macro" id="_M/SNAP_TR" data-ref="_M/SNAP_TR">SNAP_TR</dfn>(slot, tr) \</u></td></tr>
+<tr><th id="208">208</th><td><u>  (((SnapEntry)(slot) &lt;&lt; 24) + ((tr) &amp; (TREF_CONT|TREF_FRAME|TREF_REFMASK)))</u></td></tr>
+<tr><th id="209">209</th><td><u>#<span data-ppcond="209">if</span> !<a class="macro" href="lj_arch.h.html#533" title="1" data-ref="_M/LJ_FR2">LJ_FR2</a></u></td></tr>
+<tr><th id="210">210</th><td><u>#define SNAP_MKPC(pc)		((SnapEntry)u32ptr(pc))</u></td></tr>
+<tr><th id="211">211</th><td><u>#<span data-ppcond="209">endif</span></u></td></tr>
+<tr><th id="212">212</th><td><u>#define <dfn class="macro" id="_M/SNAP_MKFTSZ" data-ref="_M/SNAP_MKFTSZ">SNAP_MKFTSZ</dfn>(ftsz)	((SnapEntry)(ftsz))</u></td></tr>
+<tr><th id="213">213</th><td><u>#define <dfn class="macro" id="_M/snap_ref" data-ref="_M/snap_ref">snap_ref</dfn>(sn)		((sn) &amp; 0xffff)</u></td></tr>
+<tr><th id="214">214</th><td><u>#define <dfn class="macro" id="_M/snap_slot" data-ref="_M/snap_slot">snap_slot</dfn>(sn)		((BCReg)((sn) &gt;&gt; 24))</u></td></tr>
+<tr><th id="215">215</th><td><u>#define <dfn class="macro" id="_M/snap_isframe" data-ref="_M/snap_isframe">snap_isframe</dfn>(sn)	((sn) &amp; SNAP_FRAME)</u></td></tr>
+<tr><th id="216">216</th><td><u>#define <dfn class="macro" id="_M/snap_setref" data-ref="_M/snap_setref">snap_setref</dfn>(sn, ref)	(((sn) &amp; (0xffff0000&amp;~SNAP_NORESTORE)) | (ref))</u></td></tr>
+<tr><th id="217">217</th><td></td></tr>
+<tr><th id="218">218</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="decl def fn" id="snap_pc" title='snap_pc' data-ref="snap_pc" data-ref-filename="snap_pc">snap_pc</dfn>(<a class="typedef" href="#SnapEntry" title='SnapEntry' data-type='uint32_t' data-ref="SnapEntry" data-ref-filename="SnapEntry">SnapEntry</a> *<dfn class="local col3 decl" id="863sn" title='sn' data-type='SnapEntry *' data-ref="863sn" data-ref-filename="863sn">sn</dfn>)</td></tr>
+<tr><th id="219">219</th><td>{</td></tr>
+<tr><th id="220">220</th><td><u>#<span data-ppcond="220">if</span> <a class="macro" href="lj_arch.h.html#533" title="1" data-ref="_M/LJ_FR2">LJ_FR2</a></u></td></tr>
+<tr><th id="221">221</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col4 decl" id="864pcbase" title='pcbase' data-type='uint64_t' data-ref="864pcbase" data-ref-filename="864pcbase">pcbase</dfn>;</td></tr>
+<tr><th id="222">222</th><td>  <a class="ref fn" href="../include/string.h.html#memcpy" title='memcpy' data-ref="memcpy" data-ref-filename="memcpy">memcpy</a>(&amp;<a class="local col4 ref" href="#864pcbase" title='pcbase' data-ref="864pcbase" data-ref-filename="864pcbase">pcbase</a>, <a class="local col3 ref" href="#863sn" title='sn' data-ref="863sn" data-ref-filename="863sn">sn</a>, <b>sizeof</b>(<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a>));</td></tr>
+<tr><th id="223">223</th><td>  <b>return</b> (<em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *)(<a class="local col4 ref" href="#864pcbase" title='pcbase' data-ref="864pcbase" data-ref-filename="864pcbase">pcbase</a> &gt;&gt; <var>8</var>);</td></tr>
+<tr><th id="224">224</th><td><u>#<span data-ppcond="220">else</span></u></td></tr>
+<tr><th id="225">225</th><td>  <b>return</b> (<em>const</em> BCIns *)(uintptr_t)*sn;</td></tr>
+<tr><th id="226">226</th><td><u>#<span data-ppcond="220">endif</span></u></td></tr>
+<tr><th id="227">227</th><td>}</td></tr>
+<tr><th id="228">228</th><td></td></tr>
+<tr><th id="229">229</th><td><i>/* Snapshot and exit numbers. */</i></td></tr>
+<tr><th id="230">230</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="SnapNo" title='SnapNo' data-type='uint32_t' data-ref="SnapNo" data-ref-filename="SnapNo">SnapNo</dfn>;</td></tr>
+<tr><th id="231">231</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="ExitNo" title='ExitNo' data-type='uint32_t' data-ref="ExitNo" data-ref-filename="ExitNo">ExitNo</dfn>;</td></tr>
+<tr><th id="232">232</th><td></td></tr>
+<tr><th id="233">233</th><td><i>/* Trace number. */</i></td></tr>
+<tr><th id="234">234</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="TraceNo" title='TraceNo' data-type='uint32_t' data-ref="TraceNo" data-ref-filename="TraceNo">TraceNo</dfn>;	<i>/* Used to pass around trace numbers. */</i></td></tr>
+<tr><th id="235">235</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="typedef" id="TraceNo1" title='TraceNo1' data-type='uint16_t' data-ref="TraceNo1" data-ref-filename="TraceNo1">TraceNo1</dfn>;	<i>/* Stored trace number. */</i></td></tr>
+<tr><th id="236">236</th><td></td></tr>
+<tr><th id="237">237</th><td><i>/* Type of link. ORDER LJ_TRLINK */</i></td></tr>
+<tr><th id="238">238</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="239">239</th><td>  <dfn class="enum" id="LJ_TRLINK_NONE" title='LJ_TRLINK_NONE' data-ref="LJ_TRLINK_NONE" data-ref-filename="LJ_TRLINK_NONE">LJ_TRLINK_NONE</dfn>,		<i>/* Incomplete trace. No link, yet. */</i></td></tr>
+<tr><th id="240">240</th><td>  <dfn class="enum" id="LJ_TRLINK_ROOT" title='LJ_TRLINK_ROOT' data-ref="LJ_TRLINK_ROOT" data-ref-filename="LJ_TRLINK_ROOT">LJ_TRLINK_ROOT</dfn>,		<i>/* Link to other root trace. */</i></td></tr>
+<tr><th id="241">241</th><td>  <dfn class="enum" id="LJ_TRLINK_LOOP" title='LJ_TRLINK_LOOP' data-ref="LJ_TRLINK_LOOP" data-ref-filename="LJ_TRLINK_LOOP">LJ_TRLINK_LOOP</dfn>,		<i>/* Loop to same trace. */</i></td></tr>
+<tr><th id="242">242</th><td>  <dfn class="enum" id="LJ_TRLINK_TAILREC" title='LJ_TRLINK_TAILREC' data-ref="LJ_TRLINK_TAILREC" data-ref-filename="LJ_TRLINK_TAILREC">LJ_TRLINK_TAILREC</dfn>,		<i>/* Tail-recursion. */</i></td></tr>
+<tr><th id="243">243</th><td>  <dfn class="enum" id="LJ_TRLINK_UPREC" title='LJ_TRLINK_UPREC' data-ref="LJ_TRLINK_UPREC" data-ref-filename="LJ_TRLINK_UPREC">LJ_TRLINK_UPREC</dfn>,		<i>/* Up-recursion. */</i></td></tr>
+<tr><th id="244">244</th><td>  <dfn class="enum" id="LJ_TRLINK_DOWNREC" title='LJ_TRLINK_DOWNREC' data-ref="LJ_TRLINK_DOWNREC" data-ref-filename="LJ_TRLINK_DOWNREC">LJ_TRLINK_DOWNREC</dfn>,		<i>/* Down-recursion. */</i></td></tr>
+<tr><th id="245">245</th><td>  <dfn class="enum" id="LJ_TRLINK_INTERP" title='LJ_TRLINK_INTERP' data-ref="LJ_TRLINK_INTERP" data-ref-filename="LJ_TRLINK_INTERP">LJ_TRLINK_INTERP</dfn>,		<i>/* Fallback to interpreter. */</i></td></tr>
+<tr><th id="246">246</th><td>  <dfn class="enum" id="LJ_TRLINK_RETURN" title='LJ_TRLINK_RETURN' data-ref="LJ_TRLINK_RETURN" data-ref-filename="LJ_TRLINK_RETURN">LJ_TRLINK_RETURN</dfn>,		<i>/* Return to interpreter. */</i></td></tr>
+<tr><th id="247">247</th><td>  <dfn class="enum" id="LJ_TRLINK_STITCH" title='LJ_TRLINK_STITCH' data-ref="LJ_TRLINK_STITCH" data-ref-filename="LJ_TRLINK_STITCH">LJ_TRLINK_STITCH</dfn>		<i>/* Trace stitching. */</i></td></tr>
+<tr><th id="248">248</th><td>} <dfn class="typedef" id="TraceLink" title='TraceLink' data-type='enum TraceLink' data-ref="TraceLink" data-ref-filename="TraceLink">TraceLink</dfn>;</td></tr>
+<tr><th id="249">249</th><td></td></tr>
+<tr><th id="250">250</th><td><i>/* Trace object. */</i></td></tr>
+<tr><th id="251">251</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="GCtrace" title='GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace"><a class="type" href="#GCtrace" title='GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a></dfn> {</td></tr>
+<tr><th id="252">252</th><td>  <a class="macro" href="lj_obj.h.html#63" title="GCRef nextgc; uint8_t marked; uint8_t gct" data-ref="_M/GCHeader">GCHeader</a>;</td></tr>
+<tr><th id="253">253</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="GCtrace::nsnap" title='GCtrace::nsnap' data-ref="GCtrace::nsnap" data-ref-filename="GCtrace..nsnap">nsnap</dfn>;	<i>/* Number of snapshots. */</i></td></tr>
+<tr><th id="254">254</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="GCtrace::nins" title='GCtrace::nins' data-ref="GCtrace::nins" data-ref-filename="GCtrace..nins">nins</dfn>;		<i>/* Next IR instruction. Biased with REF_BIAS. */</i></td></tr>
+<tr><th id="255">255</th><td><u>#<span data-ppcond="255">if</span> <a class="macro" href="lj_arch.h.html#526" title="1" data-ref="_M/LJ_GC64">LJ_GC64</a></u></td></tr>
+<tr><th id="256">256</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="GCtrace::unused_gc64" title='GCtrace::unused_gc64' data-ref="GCtrace::unused_gc64" data-ref-filename="GCtrace..unused_gc64">unused_gc64</dfn>;</td></tr>
+<tr><th id="257">257</th><td><u>#<span data-ppcond="255">endif</span></u></td></tr>
+<tr><th id="258">258</th><td>  <a class="typedef" href="lj_obj.h.html#GCRef" title='GCRef' data-type='struct GCRef' data-ref="GCRef" data-ref-filename="GCRef">GCRef</a> <dfn class="decl field" id="GCtrace::gclist" title='GCtrace::gclist' data-ref="GCtrace::gclist" data-ref-filename="GCtrace..gclist">gclist</dfn>;</td></tr>
+<tr><th id="259">259</th><td>  <a class="typedef" href="lj_ir.h.html#IRIns" title='IRIns' data-type='union IRIns' data-ref="IRIns" data-ref-filename="IRIns">IRIns</a> *<dfn class="decl field" id="GCtrace::ir" title='GCtrace::ir' data-ref="GCtrace::ir" data-ref-filename="GCtrace..ir">ir</dfn>;		<i>/* IR instructions/constants. Biased with REF_BIAS. */</i></td></tr>
+<tr><th id="260">260</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="GCtrace::nk" title='GCtrace::nk' data-ref="GCtrace::nk" data-ref-filename="GCtrace..nk">nk</dfn>;		<i>/* Lowest IR constant. Biased with REF_BIAS. */</i></td></tr>
+<tr><th id="261">261</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="GCtrace::nsnapmap" title='GCtrace::nsnapmap' data-ref="GCtrace::nsnapmap" data-ref-filename="GCtrace..nsnapmap">nsnapmap</dfn>;	<i>/* Number of snapshot map elements. */</i></td></tr>
+<tr><th id="262">262</th><td>  <a class="typedef" href="#SnapShot" title='SnapShot' data-type='struct SnapShot' data-ref="SnapShot" data-ref-filename="SnapShot">SnapShot</a> *<dfn class="decl field" id="GCtrace::snap" title='GCtrace::snap' data-ref="GCtrace::snap" data-ref-filename="GCtrace..snap">snap</dfn>;	<i>/* Snapshot array. */</i></td></tr>
+<tr><th id="263">263</th><td>  <a class="typedef" href="#SnapEntry" title='SnapEntry' data-type='uint32_t' data-ref="SnapEntry" data-ref-filename="SnapEntry">SnapEntry</a> *<dfn class="decl field" id="GCtrace::snapmap" title='GCtrace::snapmap' data-ref="GCtrace::snapmap" data-ref-filename="GCtrace..snapmap">snapmap</dfn>;	<i>/* Snapshot map. */</i></td></tr>
+<tr><th id="264">264</th><td>  <a class="typedef" href="lj_obj.h.html#GCRef" title='GCRef' data-type='struct GCRef' data-ref="GCRef" data-ref-filename="GCRef">GCRef</a> <dfn class="decl field" id="GCtrace::startpt" title='GCtrace::startpt' data-ref="GCtrace::startpt" data-ref-filename="GCtrace..startpt">startpt</dfn>;	<i>/* Starting prototype. */</i></td></tr>
+<tr><th id="265">265</th><td>  <a class="typedef" href="lj_obj.h.html#MRef" title='MRef' data-type='struct MRef' data-ref="MRef" data-ref-filename="MRef">MRef</a> <dfn class="decl field" id="GCtrace::startpc" title='GCtrace::startpc' data-ref="GCtrace::startpc" data-ref-filename="GCtrace..startpc">startpc</dfn>;		<i>/* Bytecode PC of starting instruction. */</i></td></tr>
+<tr><th id="266">266</th><td>  <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> <dfn class="decl field" id="GCtrace::startins" title='GCtrace::startins' data-ref="GCtrace::startins" data-ref-filename="GCtrace..startins">startins</dfn>;	<i>/* Original bytecode of starting instruction. */</i></td></tr>
+<tr><th id="267">267</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="GCtrace::szmcode" title='GCtrace::szmcode' data-ref="GCtrace::szmcode" data-ref-filename="GCtrace..szmcode">szmcode</dfn>;	<i>/* Size of machine code. */</i></td></tr>
+<tr><th id="268">268</th><td>  <a class="typedef" href="#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl field" id="GCtrace::mcode" title='GCtrace::mcode' data-ref="GCtrace::mcode" data-ref-filename="GCtrace..mcode">mcode</dfn>;		<i>/* Start of machine code. */</i></td></tr>
+<tr><th id="269">269</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="GCtrace::mcloop" title='GCtrace::mcloop' data-ref="GCtrace::mcloop" data-ref-filename="GCtrace..mcloop">mcloop</dfn>;		<i>/* Offset of loop start in machine code. */</i></td></tr>
+<tr><th id="270">270</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="GCtrace::nchild" title='GCtrace::nchild' data-ref="GCtrace::nchild" data-ref-filename="GCtrace..nchild">nchild</dfn>;	<i>/* Number of child traces (root trace only). */</i></td></tr>
+<tr><th id="271">271</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="GCtrace::spadjust" title='GCtrace::spadjust' data-ref="GCtrace::spadjust" data-ref-filename="GCtrace..spadjust">spadjust</dfn>;	<i>/* Stack pointer adjustment (offset in bytes). */</i></td></tr>
+<tr><th id="272">272</th><td>  <a class="typedef" href="#TraceNo1" title='TraceNo1' data-type='uint16_t' data-ref="TraceNo1" data-ref-filename="TraceNo1">TraceNo1</a> <dfn class="decl field" id="GCtrace::traceno" title='GCtrace::traceno' data-ref="GCtrace::traceno" data-ref-filename="GCtrace..traceno">traceno</dfn>;	<i>/* Trace number. */</i></td></tr>
+<tr><th id="273">273</th><td>  <a class="typedef" href="#TraceNo1" title='TraceNo1' data-type='uint16_t' data-ref="TraceNo1" data-ref-filename="TraceNo1">TraceNo1</a> <dfn class="decl field" id="GCtrace::link" title='GCtrace::link' data-ref="GCtrace::link" data-ref-filename="GCtrace..link">link</dfn>;	<i>/* Linked trace (or self for loops). */</i></td></tr>
+<tr><th id="274">274</th><td>  <a class="typedef" href="#TraceNo1" title='TraceNo1' data-type='uint16_t' data-ref="TraceNo1" data-ref-filename="TraceNo1">TraceNo1</a> <dfn class="decl field" id="GCtrace::root" title='GCtrace::root' data-ref="GCtrace::root" data-ref-filename="GCtrace..root">root</dfn>;	<i>/* Root trace of side trace (or 0 for root traces). */</i></td></tr>
+<tr><th id="275">275</th><td>  <a class="typedef" href="#TraceNo1" title='TraceNo1' data-type='uint16_t' data-ref="TraceNo1" data-ref-filename="TraceNo1">TraceNo1</a> <dfn class="decl field" id="GCtrace::nextroot" title='GCtrace::nextroot' data-ref="GCtrace::nextroot" data-ref-filename="GCtrace..nextroot">nextroot</dfn>;	<i>/* Next root trace for same prototype. */</i></td></tr>
+<tr><th id="276">276</th><td>  <a class="typedef" href="#TraceNo1" title='TraceNo1' data-type='uint16_t' data-ref="TraceNo1" data-ref-filename="TraceNo1">TraceNo1</a> <dfn class="decl field" id="GCtrace::nextside" title='GCtrace::nextside' data-ref="GCtrace::nextside" data-ref-filename="GCtrace..nextside">nextside</dfn>;	<i>/* Next side trace of same root trace. */</i></td></tr>
+<tr><th id="277">277</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="GCtrace::sinktags" title='GCtrace::sinktags' data-ref="GCtrace::sinktags" data-ref-filename="GCtrace..sinktags">sinktags</dfn>;	<i>/* Trace has SINK tags. */</i></td></tr>
+<tr><th id="278">278</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="GCtrace::topslot" title='GCtrace::topslot' data-ref="GCtrace::topslot" data-ref-filename="GCtrace..topslot">topslot</dfn>;	<i>/* Top stack slot already checked to be allocated. */</i></td></tr>
+<tr><th id="279">279</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="GCtrace::linktype" title='GCtrace::linktype' data-ref="GCtrace::linktype" data-ref-filename="GCtrace..linktype">linktype</dfn>;	<i>/* Type of link. */</i></td></tr>
+<tr><th id="280">280</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="GCtrace::unused1" title='GCtrace::unused1' data-ref="GCtrace::unused1" data-ref-filename="GCtrace..unused1">unused1</dfn>;</td></tr>
+<tr><th id="281">281</th><td><u>#<span data-ppcond="281">ifdef</span> <span class="macro" data-ref="_M/LUAJIT_USE_GDBJIT">LUAJIT_USE_GDBJIT</span></u></td></tr>
+<tr><th id="282">282</th><td>  <em>void</em> *gdbjit_entry;	<i>/* GDB JIT entry. */</i></td></tr>
+<tr><th id="283">283</th><td><u>#<span data-ppcond="281">endif</span></u></td></tr>
+<tr><th id="284">284</th><td>} <dfn class="typedef" id="GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</dfn>;</td></tr>
+<tr><th id="285">285</th><td></td></tr>
+<tr><th id="286">286</th><td><u>#define <dfn class="macro" id="_M/gco2trace" data-ref="_M/gco2trace">gco2trace</dfn>(o)	check_exp((o)-&gt;gch.gct == ~LJ_TTRACE, (GCtrace *)(o))</u></td></tr>
+<tr><th id="287">287</th><td><u>#define <dfn class="macro" id="_M/traceref" data-ref="_M/traceref">traceref</dfn>(J, n) \</u></td></tr>
+<tr><th id="288">288</th><td><u>  check_exp((n)&gt;0 &amp;&amp; (MSize)(n)&lt;J-&gt;sizetrace, (GCtrace *)gcref(J-&gt;trace[(n)]))</u></td></tr>
+<tr><th id="289">289</th><td></td></tr>
+<tr><th id="290">290</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_86(int STATIC_ASSERTION_FAILED[(__builtin_offsetof(GChead, gclist) == __builtin_offsetof(GCtrace, gclist))?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(<span class="macro" title="__builtin_offsetof(GChead, gclist)" data-ref="_M/offsetof">offsetof</span>(<a class="typedef" href="lj_obj.h.html#GChead" title='GChead' data-type='struct GChead' data-ref="GChead" data-ref-filename="GChead">GChead</a>, gclist) == <span class="macro" title="__builtin_offsetof(GCtrace, gclist)" data-ref="_M/offsetof">offsetof</span>(<a class="typedef" href="#GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a>, gclist));</td></tr>
+<tr><th id="291">291</th><td></td></tr>
+<tr><th id="292">292</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl def fn" id="snap_nextofs" title='snap_nextofs' data-ref="snap_nextofs" data-ref-filename="snap_nextofs">snap_nextofs</dfn>(<a class="typedef" href="#GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a> *<dfn class="local col5 decl" id="865T" title='T' data-type='GCtrace *' data-ref="865T" data-ref-filename="865T">T</dfn>, <a class="typedef" href="#SnapShot" title='SnapShot' data-type='struct SnapShot' data-ref="SnapShot" data-ref-filename="SnapShot">SnapShot</a> *<dfn class="local col6 decl" id="866snap" title='snap' data-type='SnapShot *' data-ref="866snap" data-ref-filename="866snap">snap</dfn>)</td></tr>
+<tr><th id="293">293</th><td>{</td></tr>
+<tr><th id="294">294</th><td>  <b>if</b> (<a class="local col6 ref" href="#866snap" title='snap' data-ref="866snap" data-ref-filename="866snap">snap</a>+<var>1</var> == &amp;<a class="local col5 ref" href="#865T" title='T' data-ref="865T" data-ref-filename="865T">T</a>-&gt;<a class="ref field" href="#GCtrace::snap" title='GCtrace::snap' data-ref="GCtrace::snap" data-ref-filename="GCtrace..snap">snap</a>[<a class="local col5 ref" href="#865T" title='T' data-ref="865T" data-ref-filename="865T">T</a>-&gt;<a class="ref field" href="#GCtrace::nsnap" title='GCtrace::nsnap' data-ref="GCtrace::nsnap" data-ref-filename="GCtrace..nsnap">nsnap</a>])</td></tr>
+<tr><th id="295">295</th><td>    <b>return</b> <a class="local col5 ref" href="#865T" title='T' data-ref="865T" data-ref-filename="865T">T</a>-&gt;<a class="ref field" href="#GCtrace::nsnapmap" title='GCtrace::nsnapmap' data-ref="GCtrace::nsnapmap" data-ref-filename="GCtrace..nsnapmap">nsnapmap</a>;</td></tr>
+<tr><th id="296">296</th><td>  <b>else</b></td></tr>
+<tr><th id="297">297</th><td>    <b>return</b> (<a class="local col6 ref" href="#866snap" title='snap' data-ref="866snap" data-ref-filename="866snap">snap</a>+<var>1</var>)-&gt;<a class="ref field" href="#SnapShot::mapofs" title='SnapShot::mapofs' data-ref="SnapShot::mapofs" data-ref-filename="SnapShot..mapofs">mapofs</a>;</td></tr>
+<tr><th id="298">298</th><td>}</td></tr>
+<tr><th id="299">299</th><td></td></tr>
+<tr><th id="300">300</th><td><i>/* Round-robin penalty cache for bytecodes leading to aborted traces. */</i></td></tr>
+<tr><th id="301">301</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="HotPenalty" title='HotPenalty' data-ref="HotPenalty" data-ref-filename="HotPenalty"><a class="type" href="#HotPenalty" title='HotPenalty' data-ref="HotPenalty" data-ref-filename="HotPenalty">HotPenalty</a></dfn> {</td></tr>
+<tr><th id="302">302</th><td>  <a class="typedef" href="lj_obj.h.html#MRef" title='MRef' data-type='struct MRef' data-ref="MRef" data-ref-filename="MRef">MRef</a> <dfn class="decl field" id="HotPenalty::pc" title='HotPenalty::pc' data-ref="HotPenalty::pc" data-ref-filename="HotPenalty..pc">pc</dfn>;		<i>/* Starting bytecode PC. */</i></td></tr>
+<tr><th id="303">303</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="HotPenalty::val" title='HotPenalty::val' data-ref="HotPenalty::val" data-ref-filename="HotPenalty..val">val</dfn>;		<i>/* Penalty value, i.e. hotcount start. */</i></td></tr>
+<tr><th id="304">304</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="HotPenalty::reason" title='HotPenalty::reason' data-ref="HotPenalty::reason" data-ref-filename="HotPenalty..reason">reason</dfn>;	<i>/* Abort reason (really TraceErr). */</i></td></tr>
+<tr><th id="305">305</th><td>} <dfn class="typedef" id="HotPenalty" title='HotPenalty' data-type='struct HotPenalty' data-ref="HotPenalty" data-ref-filename="HotPenalty">HotPenalty</dfn>;</td></tr>
+<tr><th id="306">306</th><td></td></tr>
+<tr><th id="307">307</th><td><u>#define <dfn class="macro" id="_M/PENALTY_SLOTS" data-ref="_M/PENALTY_SLOTS">PENALTY_SLOTS</dfn>	64	/* Penalty cache slot. Must be a power of 2. */</u></td></tr>
+<tr><th id="308">308</th><td><u>#define <dfn class="macro" id="_M/PENALTY_MIN" data-ref="_M/PENALTY_MIN">PENALTY_MIN</dfn>	(36*2)	/* Minimum penalty value. */</u></td></tr>
+<tr><th id="309">309</th><td><u>#define <dfn class="macro" id="_M/PENALTY_MAX" data-ref="_M/PENALTY_MAX">PENALTY_MAX</dfn>	60000	/* Maximum penalty value. */</u></td></tr>
+<tr><th id="310">310</th><td><u>#define <dfn class="macro" id="_M/PENALTY_RNDBITS" data-ref="_M/PENALTY_RNDBITS">PENALTY_RNDBITS</dfn>	4	/* # of random bits to add to penalty value. */</u></td></tr>
+<tr><th id="311">311</th><td></td></tr>
+<tr><th id="312">312</th><td><i>/* Round-robin backpropagation cache for narrowing conversions. */</i></td></tr>
+<tr><th id="313">313</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="BPropEntry" title='BPropEntry' data-ref="BPropEntry" data-ref-filename="BPropEntry"><a class="type" href="#BPropEntry" title='BPropEntry' data-ref="BPropEntry" data-ref-filename="BPropEntry">BPropEntry</a></dfn> {</td></tr>
+<tr><th id="314">314</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="BPropEntry::key" title='BPropEntry::key' data-ref="BPropEntry::key" data-ref-filename="BPropEntry..key">key</dfn>;		<i>/* Key: original reference. */</i></td></tr>
+<tr><th id="315">315</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="BPropEntry::val" title='BPropEntry::val' data-ref="BPropEntry::val" data-ref-filename="BPropEntry..val">val</dfn>;		<i>/* Value: reference after conversion. */</i></td></tr>
+<tr><th id="316">316</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="BPropEntry::mode" title='BPropEntry::mode' data-ref="BPropEntry::mode" data-ref-filename="BPropEntry..mode">mode</dfn>;		<i>/* Mode for this entry (currently IRCONV_*). */</i></td></tr>
+<tr><th id="317">317</th><td>} <dfn class="typedef" id="BPropEntry" title='BPropEntry' data-type='struct BPropEntry' data-ref="BPropEntry" data-ref-filename="BPropEntry">BPropEntry</dfn>;</td></tr>
+<tr><th id="318">318</th><td></td></tr>
+<tr><th id="319">319</th><td><i>/* Number of slots for the backpropagation cache. Must be a power of 2. */</i></td></tr>
+<tr><th id="320">320</th><td><u>#define <dfn class="macro" id="_M/BPROP_SLOTS" data-ref="_M/BPROP_SLOTS">BPROP_SLOTS</dfn>	16</u></td></tr>
+<tr><th id="321">321</th><td></td></tr>
+<tr><th id="322">322</th><td><i>/* Scalar evolution analysis cache. */</i></td></tr>
+<tr><th id="323">323</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="ScEvEntry" title='ScEvEntry' data-ref="ScEvEntry" data-ref-filename="ScEvEntry"><a class="type" href="#ScEvEntry" title='ScEvEntry' data-ref="ScEvEntry" data-ref-filename="ScEvEntry">ScEvEntry</a></dfn> {</td></tr>
+<tr><th id="324">324</th><td>  <a class="typedef" href="lj_obj.h.html#MRef" title='MRef' data-type='struct MRef' data-ref="MRef" data-ref-filename="MRef">MRef</a> <dfn class="decl field" id="ScEvEntry::pc" title='ScEvEntry::pc' data-ref="ScEvEntry::pc" data-ref-filename="ScEvEntry..pc">pc</dfn>;		<i>/* Bytecode PC of FORI. */</i></td></tr>
+<tr><th id="325">325</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="ScEvEntry::idx" title='ScEvEntry::idx' data-ref="ScEvEntry::idx" data-ref-filename="ScEvEntry..idx">idx</dfn>;		<i>/* Index reference. */</i></td></tr>
+<tr><th id="326">326</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="ScEvEntry::start" title='ScEvEntry::start' data-ref="ScEvEntry::start" data-ref-filename="ScEvEntry..start">start</dfn>;		<i>/* Constant start reference. */</i></td></tr>
+<tr><th id="327">327</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="ScEvEntry::stop" title='ScEvEntry::stop' data-ref="ScEvEntry::stop" data-ref-filename="ScEvEntry..stop">stop</dfn>;		<i>/* Constant stop reference. */</i></td></tr>
+<tr><th id="328">328</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="ScEvEntry::step" title='ScEvEntry::step' data-ref="ScEvEntry::step" data-ref-filename="ScEvEntry..step">step</dfn>;		<i>/* Constant step reference. */</i></td></tr>
+<tr><th id="329">329</th><td>  <a class="typedef" href="lj_ir.h.html#IRType1" title='IRType1' data-type='struct IRType1' data-ref="IRType1" data-ref-filename="IRType1">IRType1</a> <dfn class="decl field" id="ScEvEntry::t" title='ScEvEntry::t' data-ref="ScEvEntry::t" data-ref-filename="ScEvEntry..t">t</dfn>;		<i>/* Scalar type. */</i></td></tr>
+<tr><th id="330">330</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="ScEvEntry::dir" title='ScEvEntry::dir' data-ref="ScEvEntry::dir" data-ref-filename="ScEvEntry..dir">dir</dfn>;		<i>/* Direction. 1: +, 0: -. */</i></td></tr>
+<tr><th id="331">331</th><td>} <dfn class="typedef" id="ScEvEntry" title='ScEvEntry' data-type='struct ScEvEntry' data-ref="ScEvEntry" data-ref-filename="ScEvEntry">ScEvEntry</dfn>;</td></tr>
+<tr><th id="332">332</th><td></td></tr>
+<tr><th id="333">333</th><td><i>/* Reverse bytecode map (IRRef -&gt; PC). Only for selected instructions. */</i></td></tr>
+<tr><th id="334">334</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="RBCHashEntry" title='RBCHashEntry' data-ref="RBCHashEntry" data-ref-filename="RBCHashEntry"><a class="type" href="#RBCHashEntry" title='RBCHashEntry' data-ref="RBCHashEntry" data-ref-filename="RBCHashEntry">RBCHashEntry</a></dfn> {</td></tr>
+<tr><th id="335">335</th><td>  <a class="typedef" href="lj_obj.h.html#MRef" title='MRef' data-type='struct MRef' data-ref="MRef" data-ref-filename="MRef">MRef</a> <dfn class="decl field" id="RBCHashEntry::pc" title='RBCHashEntry::pc' data-ref="RBCHashEntry::pc" data-ref-filename="RBCHashEntry..pc">pc</dfn>;		<i>/* Bytecode PC. */</i></td></tr>
+<tr><th id="336">336</th><td>  <a class="typedef" href="lj_obj.h.html#GCRef" title='GCRef' data-type='struct GCRef' data-ref="GCRef" data-ref-filename="GCRef">GCRef</a> <dfn class="decl field" id="RBCHashEntry::pt" title='RBCHashEntry::pt' data-ref="RBCHashEntry::pt" data-ref-filename="RBCHashEntry..pt">pt</dfn>;		<i>/* Prototype. */</i></td></tr>
+<tr><th id="337">337</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="RBCHashEntry::ref" title='RBCHashEntry::ref' data-ref="RBCHashEntry::ref" data-ref-filename="RBCHashEntry..ref">ref</dfn>;		<i>/* IR reference. */</i></td></tr>
+<tr><th id="338">338</th><td>} <dfn class="typedef" id="RBCHashEntry" title='RBCHashEntry' data-type='struct RBCHashEntry' data-ref="RBCHashEntry" data-ref-filename="RBCHashEntry">RBCHashEntry</dfn>;</td></tr>
+<tr><th id="339">339</th><td></td></tr>
+<tr><th id="340">340</th><td><i>/* Number of slots in the reverse bytecode hash table. Must be a power of 2. */</i></td></tr>
+<tr><th id="341">341</th><td><u>#define <dfn class="macro" id="_M/RBCHASH_SLOTS" data-ref="_M/RBCHASH_SLOTS">RBCHASH_SLOTS</dfn>	8</u></td></tr>
+<tr><th id="342">342</th><td></td></tr>
+<tr><th id="343">343</th><td><i>/* 128 bit SIMD constants. */</i></td></tr>
+<tr><th id="344">344</th><td><b>enum</b> {</td></tr>
+<tr><th id="345">345</th><td>  <dfn class="enum" id="LJ_KSIMD_ABS" title='LJ_KSIMD_ABS' data-ref="LJ_KSIMD_ABS" data-ref-filename="LJ_KSIMD_ABS">LJ_KSIMD_ABS</dfn>,</td></tr>
+<tr><th id="346">346</th><td>  <dfn class="enum" id="LJ_KSIMD_NEG" title='LJ_KSIMD_NEG' data-ref="LJ_KSIMD_NEG" data-ref-filename="LJ_KSIMD_NEG">LJ_KSIMD_NEG</dfn>,</td></tr>
+<tr><th id="347">347</th><td>  <dfn class="enum" id="LJ_KSIMD__MAX" title='LJ_KSIMD__MAX' data-ref="LJ_KSIMD__MAX" data-ref-filename="LJ_KSIMD__MAX">LJ_KSIMD__MAX</dfn></td></tr>
+<tr><th id="348">348</th><td>};</td></tr>
+<tr><th id="349">349</th><td></td></tr>
+<tr><th id="350">350</th><td><b>enum</b> {</td></tr>
+<tr><th id="351">351</th><td><u>#<span data-ppcond="351">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="352">352</th><td>  <dfn class="enum" id="LJ_K64_TOBIT" title='LJ_K64_TOBIT' data-ref="LJ_K64_TOBIT" data-ref-filename="LJ_K64_TOBIT">LJ_K64_TOBIT</dfn>,		<i>/* 2^52 + 2^51 */</i></td></tr>
+<tr><th id="353">353</th><td>  <dfn class="enum" id="LJ_K64_2P64" title='LJ_K64_2P64' data-ref="LJ_K64_2P64" data-ref-filename="LJ_K64_2P64">LJ_K64_2P64</dfn>,		<i>/* 2^64 */</i></td></tr>
+<tr><th id="354">354</th><td>  <dfn class="enum" id="LJ_K64_M2P64" title='LJ_K64_M2P64' data-ref="LJ_K64_M2P64" data-ref-filename="LJ_K64_M2P64">LJ_K64_M2P64</dfn>,		<i>/* -2^64 */</i></td></tr>
+<tr><th id="355">355</th><td><u>#<span data-ppcond="355">if</span> <a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a></u></td></tr>
+<tr><th id="356">356</th><td>  LJ_K64_M2P64_31,	<i>/* -2^64 or -2^31 */</i></td></tr>
+<tr><th id="357">357</th><td><u>#<span data-ppcond="355">else</span></u></td></tr>
+<tr><th id="358">358</th><td>  <dfn class="enum" id="LJ_K64_M2P64_31" title='LJ_K64_M2P64_31' data-ref="LJ_K64_M2P64_31" data-ref-filename="LJ_K64_M2P64_31">LJ_K64_M2P64_31</dfn> = <a class="enum" href="#LJ_K64_M2P64" title='LJ_K64_M2P64' data-ref="LJ_K64_M2P64" data-ref-filename="LJ_K64_M2P64">LJ_K64_M2P64</a>,</td></tr>
+<tr><th id="359">359</th><td><u>#<span data-ppcond="355">endif</span></u></td></tr>
+<tr><th id="360">360</th><td><u>#<span data-ppcond="351">endif</span></u></td></tr>
+<tr><th id="361">361</th><td><u>#<span data-ppcond="361">if</span> LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="362">362</th><td>  LJ_K64_2P31,		<i>/* 2^31 */</i></td></tr>
+<tr><th id="363">363</th><td><u>#if LJ_64</u></td></tr>
+<tr><th id="364">364</th><td>  LJ_K64_2P63,		<i>/* 2^63 */</i></td></tr>
+<tr><th id="365">365</th><td>  LJ_K64_M2P64,		<i>/* -2^64 */</i></td></tr>
+<tr><th id="366">366</th><td><u>#endif</u></td></tr>
+<tr><th id="367">367</th><td><u>#<span data-ppcond="361">endif</span></u></td></tr>
+<tr><th id="368">368</th><td>  <dfn class="enum" id="LJ_K64__MAX" title='LJ_K64__MAX' data-ref="LJ_K64__MAX" data-ref-filename="LJ_K64__MAX">LJ_K64__MAX</dfn>,</td></tr>
+<tr><th id="369">369</th><td>};</td></tr>
+<tr><th id="370">370</th><td></td></tr>
+<tr><th id="371">371</th><td><b>enum</b> {</td></tr>
+<tr><th id="372">372</th><td><u>#<span data-ppcond="372">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="373">373</th><td>  <dfn class="enum" id="LJ_K32_M2P64_31" title='LJ_K32_M2P64_31' data-ref="LJ_K32_M2P64_31" data-ref-filename="LJ_K32_M2P64_31">LJ_K32_M2P64_31</dfn>,	<i>/* -2^64 or -2^31 */</i></td></tr>
+<tr><th id="374">374</th><td><u>#<span data-ppcond="372">endif</span></u></td></tr>
+<tr><th id="375">375</th><td><u>#<span data-ppcond="375">if</span> LJ_TARGET_PPC</u></td></tr>
+<tr><th id="376">376</th><td>  LJ_K32_2P52_2P31,	<i>/* 2^52 + 2^31 */</i></td></tr>
+<tr><th id="377">377</th><td>  LJ_K32_2P52,		<i>/* 2^52 */</i></td></tr>
+<tr><th id="378">378</th><td><u>#<span data-ppcond="375">endif</span></u></td></tr>
+<tr><th id="379">379</th><td><u>#<span data-ppcond="379">if</span> LJ_TARGET_PPC || LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="380">380</th><td>  LJ_K32_2P31,		<i>/* 2^31 */</i></td></tr>
+<tr><th id="381">381</th><td><u>#<span data-ppcond="379">endif</span></u></td></tr>
+<tr><th id="382">382</th><td><u>#<span data-ppcond="382">if</span> LJ_TARGET_MIPS64</u></td></tr>
+<tr><th id="383">383</th><td>  LJ_K32_2P63,		<i>/* 2^63 */</i></td></tr>
+<tr><th id="384">384</th><td>  LJ_K32_M2P64,		<i>/* -2^64 */</i></td></tr>
+<tr><th id="385">385</th><td><u>#<span data-ppcond="382">endif</span></u></td></tr>
+<tr><th id="386">386</th><td>  <dfn class="enum" id="LJ_K32__MAX" title='LJ_K32__MAX' data-ref="LJ_K32__MAX" data-ref-filename="LJ_K32__MAX">LJ_K32__MAX</dfn></td></tr>
+<tr><th id="387">387</th><td>};</td></tr>
+<tr><th id="388">388</th><td></td></tr>
+<tr><th id="389">389</th><td><i>/* Get 16 byte aligned pointer to SIMD constant. */</i></td></tr>
+<tr><th id="390">390</th><td><u>#define <dfn class="macro" id="_M/LJ_KSIMD" data-ref="_M/LJ_KSIMD">LJ_KSIMD</dfn>(J, n) \</u></td></tr>
+<tr><th id="391">391</th><td><u>  ((TValue *)(((intptr_t)&amp;J-&gt;ksimd[2*(n)] + 15) &amp; ~(intptr_t)15))</u></td></tr>
+<tr><th id="392">392</th><td></td></tr>
+<tr><th id="393">393</th><td><i>/* Set/reset flag to activate the SPLIT pass for the current trace. */</i></td></tr>
+<tr><th id="394">394</th><td><u>#<span data-ppcond="394">if</span> <a class="macro" href="lj_arch.h.html#581" title="((!1) &amp;&amp; 0)" data-ref="_M/LJ_SOFTFP32">LJ_SOFTFP32</a> || (<a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a> &amp;&amp; <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a>)</u></td></tr>
+<tr><th id="395">395</th><td><u>#define lj_needsplit(J)		(J-&gt;needsplit = 1)</u></td></tr>
+<tr><th id="396">396</th><td><u>#define lj_resetsplit(J)	(J-&gt;needsplit = 0)</u></td></tr>
+<tr><th id="397">397</th><td><u>#<span data-ppcond="394">else</span></u></td></tr>
+<tr><th id="398">398</th><td><u>#define <dfn class="macro" id="_M/lj_needsplit" data-ref="_M/lj_needsplit">lj_needsplit</dfn>(J)		UNUSED(J)</u></td></tr>
+<tr><th id="399">399</th><td><u>#define <dfn class="macro" id="_M/lj_resetsplit" data-ref="_M/lj_resetsplit">lj_resetsplit</dfn>(J)	UNUSED(J)</u></td></tr>
+<tr><th id="400">400</th><td><u>#<span data-ppcond="394">endif</span></u></td></tr>
+<tr><th id="401">401</th><td></td></tr>
+<tr><th id="402">402</th><td><i>/* Fold state is used to fold instructions on-the-fly. */</i></td></tr>
+<tr><th id="403">403</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="FoldState" title='FoldState' data-ref="FoldState" data-ref-filename="FoldState"><a class="type" href="#FoldState" title='FoldState' data-ref="FoldState" data-ref-filename="FoldState">FoldState</a></dfn> {</td></tr>
+<tr><th id="404">404</th><td>  <a class="typedef" href="lj_ir.h.html#IRIns" title='IRIns' data-type='union IRIns' data-ref="IRIns" data-ref-filename="IRIns">IRIns</a> <dfn class="decl field" id="FoldState::ins" title='FoldState::ins' data-ref="FoldState::ins" data-ref-filename="FoldState..ins">ins</dfn>;		<i>/* Currently emitted instruction. */</i></td></tr>
+<tr><th id="405">405</th><td>  <a class="typedef" href="lj_ir.h.html#IRIns" title='IRIns' data-type='union IRIns' data-ref="IRIns" data-ref-filename="IRIns">IRIns</a> <dfn class="decl field" id="FoldState::left" title='FoldState::left' data-ref="FoldState::left" data-ref-filename="FoldState..left">left</dfn>[<var>2</var>];	<i>/* Instruction referenced by left operand. */</i></td></tr>
+<tr><th id="406">406</th><td>  <a class="typedef" href="lj_ir.h.html#IRIns" title='IRIns' data-type='union IRIns' data-ref="IRIns" data-ref-filename="IRIns">IRIns</a> <dfn class="decl field" id="FoldState::right" title='FoldState::right' data-ref="FoldState::right" data-ref-filename="FoldState..right">right</dfn>[<var>2</var>];	<i>/* Instruction referenced by right operand. */</i></td></tr>
+<tr><th id="407">407</th><td>} <dfn class="typedef" id="FoldState" title='FoldState' data-type='struct FoldState' data-ref="FoldState" data-ref-filename="FoldState">FoldState</dfn>;</td></tr>
+<tr><th id="408">408</th><td></td></tr>
+<tr><th id="409">409</th><td><i>/* JIT compiler state. */</i></td></tr>
+<tr><th id="410">410</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="jit_State" title='jit_State' data-ref="jit_State" data-ref-filename="jit_State"><a class="type" href="#jit_State" title='jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a></dfn> {</td></tr>
+<tr><th id="411">411</th><td>  <a class="typedef" href="#GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a> <dfn class="decl field" id="jit_State::cur" title='jit_State::cur' data-ref="jit_State::cur" data-ref-filename="jit_State..cur">cur</dfn>;		<i>/* Current trace. */</i></td></tr>
+<tr><th id="412">412</th><td>  <a class="typedef" href="#GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a> *<dfn class="decl field" id="jit_State::curfinal" title='jit_State::curfinal' data-ref="jit_State::curfinal" data-ref-filename="jit_State..curfinal">curfinal</dfn>;	<i>/* Final address of current trace (set during asm). */</i></td></tr>
+<tr><th id="413">413</th><td></td></tr>
+<tr><th id="414">414</th><td>  <a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="decl field" id="jit_State::L" title='jit_State::L' data-ref="jit_State::L" data-ref-filename="jit_State..L">L</dfn>;		<i>/* Current Lua state. */</i></td></tr>
+<tr><th id="415">415</th><td>  <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="decl field" id="jit_State::pc" title='jit_State::pc' data-ref="jit_State::pc" data-ref-filename="jit_State..pc">pc</dfn>;	<i>/* Current PC. */</i></td></tr>
+<tr><th id="416">416</th><td>  <a class="typedef" href="lj_obj.h.html#GCfunc" title='GCfunc' data-type='union GCfunc' data-ref="GCfunc" data-ref-filename="GCfunc">GCfunc</a> *<dfn class="decl field" id="jit_State::fn" title='jit_State::fn' data-ref="jit_State::fn" data-ref-filename="jit_State..fn">fn</dfn>;		<i>/* Current function. */</i></td></tr>
+<tr><th id="417">417</th><td>  <a class="typedef" href="lj_obj.h.html#GCproto" title='GCproto' data-type='struct GCproto' data-ref="GCproto" data-ref-filename="GCproto">GCproto</a> *<dfn class="decl field" id="jit_State::pt" title='jit_State::pt' data-ref="jit_State::pt" data-ref-filename="jit_State..pt">pt</dfn>;		<i>/* Current prototype. */</i></td></tr>
+<tr><th id="418">418</th><td>  <a class="typedef" href="lj_ir.h.html#TRef" title='TRef' data-type='uint32_t' data-ref="TRef" data-ref-filename="TRef">TRef</a> *<dfn class="decl field" id="jit_State::base" title='jit_State::base' data-ref="jit_State::base" data-ref-filename="jit_State..base">base</dfn>;		<i>/* Current frame base, points into J-&gt;slots. */</i></td></tr>
+<tr><th id="419">419</th><td></td></tr>
+<tr><th id="420">420</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="jit_State::flags" title='jit_State::flags' data-ref="jit_State::flags" data-ref-filename="jit_State..flags">flags</dfn>;	<i>/* JIT engine flags. */</i></td></tr>
+<tr><th id="421">421</th><td>  <a class="typedef" href="lj_obj.h.html#BCReg" title='BCReg' data-type='uint32_t' data-ref="BCReg" data-ref-filename="BCReg">BCReg</a> <dfn class="decl field" id="jit_State::maxslot" title='jit_State::maxslot' data-ref="jit_State::maxslot" data-ref-filename="jit_State..maxslot">maxslot</dfn>;	<i>/* Relative to baseslot. */</i></td></tr>
+<tr><th id="422">422</th><td>  <a class="typedef" href="lj_obj.h.html#BCReg" title='BCReg' data-type='uint32_t' data-ref="BCReg" data-ref-filename="BCReg">BCReg</a> <dfn class="decl field" id="jit_State::baseslot" title='jit_State::baseslot' data-ref="jit_State::baseslot" data-ref-filename="jit_State..baseslot">baseslot</dfn>;	<i>/* Current frame base, offset into J-&gt;slots. */</i></td></tr>
+<tr><th id="423">423</th><td></td></tr>
+<tr><th id="424">424</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="jit_State::mergesnap" title='jit_State::mergesnap' data-ref="jit_State::mergesnap" data-ref-filename="jit_State..mergesnap">mergesnap</dfn>;	<i>/* Allowed to merge with next snapshot. */</i></td></tr>
+<tr><th id="425">425</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="jit_State::needsnap" title='jit_State::needsnap' data-ref="jit_State::needsnap" data-ref-filename="jit_State..needsnap">needsnap</dfn>;	<i>/* Need snapshot before recording next bytecode. */</i></td></tr>
+<tr><th id="426">426</th><td>  <a class="typedef" href="lj_ir.h.html#IRType1" title='IRType1' data-type='struct IRType1' data-ref="IRType1" data-ref-filename="IRType1">IRType1</a> <dfn class="decl field" id="jit_State::guardemit" title='jit_State::guardemit' data-ref="jit_State::guardemit" data-ref-filename="jit_State..guardemit">guardemit</dfn>;	<i>/* Accumulated IRT_GUARD for emitted instructions. */</i></td></tr>
+<tr><th id="427">427</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="jit_State::bcskip" title='jit_State::bcskip' data-ref="jit_State::bcskip" data-ref-filename="jit_State..bcskip">bcskip</dfn>;	<i>/* Number of bytecode instructions to skip. */</i></td></tr>
+<tr><th id="428">428</th><td></td></tr>
+<tr><th id="429">429</th><td>  <a class="typedef" href="#FoldState" title='FoldState' data-type='struct FoldState' data-ref="FoldState" data-ref-filename="FoldState">FoldState</a> <dfn class="decl field" id="jit_State::fold" title='jit_State::fold' data-ref="jit_State::fold" data-ref-filename="jit_State..fold">fold</dfn>;	<i>/* Fold state. */</i></td></tr>
+<tr><th id="430">430</th><td></td></tr>
+<tr><th id="431">431</th><td>  <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="decl field" id="jit_State::bc_min" title='jit_State::bc_min' data-ref="jit_State::bc_min" data-ref-filename="jit_State..bc_min">bc_min</dfn>;	<i>/* Start of allowed bytecode range for root trace. */</i></td></tr>
+<tr><th id="432">432</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="jit_State::bc_extent" title='jit_State::bc_extent' data-ref="jit_State::bc_extent" data-ref-filename="jit_State..bc_extent">bc_extent</dfn>;	<i>/* Extent of the range. */</i></td></tr>
+<tr><th id="433">433</th><td></td></tr>
+<tr><th id="434">434</th><td>  <a class="typedef" href="#TraceState" title='TraceState' data-type='enum TraceState' data-ref="TraceState" data-ref-filename="TraceState">TraceState</a> <dfn class="decl field" id="jit_State::state" title='jit_State::state' data-ref="jit_State::state" data-ref-filename="jit_State..state">state</dfn>;	<i>/* Trace compiler state. */</i></td></tr>
+<tr><th id="435">435</th><td></td></tr>
+<tr><th id="436">436</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="jit_State::instunroll" title='jit_State::instunroll' data-ref="jit_State::instunroll" data-ref-filename="jit_State..instunroll">instunroll</dfn>;	<i>/* Unroll counter for instable loops. */</i></td></tr>
+<tr><th id="437">437</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="jit_State::loopunroll" title='jit_State::loopunroll' data-ref="jit_State::loopunroll" data-ref-filename="jit_State..loopunroll">loopunroll</dfn>;	<i>/* Unroll counter for loop ops in side traces. */</i></td></tr>
+<tr><th id="438">438</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="jit_State::tailcalled" title='jit_State::tailcalled' data-ref="jit_State::tailcalled" data-ref-filename="jit_State..tailcalled">tailcalled</dfn>;	<i>/* Number of successive tailcalls. */</i></td></tr>
+<tr><th id="439">439</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="jit_State::framedepth" title='jit_State::framedepth' data-ref="jit_State::framedepth" data-ref-filename="jit_State..framedepth">framedepth</dfn>;	<i>/* Current frame depth. */</i></td></tr>
+<tr><th id="440">440</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="jit_State::retdepth" title='jit_State::retdepth' data-ref="jit_State::retdepth" data-ref-filename="jit_State..retdepth">retdepth</dfn>;	<i>/* Return frame depth (count of RETF). */</i></td></tr>
+<tr><th id="441">441</th><td></td></tr>
+<tr><th id="442">442</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="jit_State::k32" title='jit_State::k32' data-ref="jit_State::k32" data-ref-filename="jit_State..k32">k32</dfn>[<a class="enum" href="#LJ_K32__MAX" title='LJ_K32__MAX' data-ref="LJ_K32__MAX" data-ref-filename="LJ_K32__MAX">LJ_K32__MAX</a>];  <i>/* Common 4 byte constants used by backends. */</i></td></tr>
+<tr><th id="443">443</th><td>  <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> <dfn class="decl field" id="jit_State::ksimd" title='jit_State::ksimd' data-ref="jit_State::ksimd" data-ref-filename="jit_State..ksimd">ksimd</dfn>[<a class="enum" href="#LJ_KSIMD__MAX" title='LJ_KSIMD__MAX' data-ref="LJ_KSIMD__MAX" data-ref-filename="LJ_KSIMD__MAX">LJ_KSIMD__MAX</a>*<var>2</var>+<var>1</var>];  <i>/* 16 byte aligned SIMD constants. */</i></td></tr>
+<tr><th id="444">444</th><td>  <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> <dfn class="decl field" id="jit_State::k64" title='jit_State::k64' data-ref="jit_State::k64" data-ref-filename="jit_State..k64">k64</dfn>[<a class="enum" href="#LJ_K64__MAX" title='LJ_K64__MAX' data-ref="LJ_K64__MAX" data-ref-filename="LJ_K64__MAX">LJ_K64__MAX</a>];  <i>/* Common 8 byte constants. */</i></td></tr>
+<tr><th id="445">445</th><td></td></tr>
+<tr><th id="446">446</th><td>  <a class="typedef" href="lj_ir.h.html#IRIns" title='IRIns' data-type='union IRIns' data-ref="IRIns" data-ref-filename="IRIns">IRIns</a> *<dfn class="decl field" id="jit_State::irbuf" title='jit_State::irbuf' data-ref="jit_State::irbuf" data-ref-filename="jit_State..irbuf">irbuf</dfn>;		<i>/* Temp. IR instruction buffer. Biased with REF_BIAS. */</i></td></tr>
+<tr><th id="447">447</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="jit_State::irtoplim" title='jit_State::irtoplim' data-ref="jit_State::irtoplim" data-ref-filename="jit_State..irtoplim">irtoplim</dfn>;	<i>/* Upper limit of instuction buffer (biased). */</i></td></tr>
+<tr><th id="448">448</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="jit_State::irbotlim" title='jit_State::irbotlim' data-ref="jit_State::irbotlim" data-ref-filename="jit_State..irbotlim">irbotlim</dfn>;	<i>/* Lower limit of instuction buffer (biased). */</i></td></tr>
+<tr><th id="449">449</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef" title='IRRef' data-type='uint32_t' data-ref="IRRef" data-ref-filename="IRRef">IRRef</a> <dfn class="decl field" id="jit_State::loopref" title='jit_State::loopref' data-ref="jit_State::loopref" data-ref-filename="jit_State..loopref">loopref</dfn>;	<i>/* Last loop reference or ref of final LOOP (or 0). */</i></td></tr>
+<tr><th id="450">450</th><td></td></tr>
+<tr><th id="451">451</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="jit_State::sizesnap" title='jit_State::sizesnap' data-ref="jit_State::sizesnap" data-ref-filename="jit_State..sizesnap">sizesnap</dfn>;	<i>/* Size of temp. snapshot buffer. */</i></td></tr>
+<tr><th id="452">452</th><td>  <a class="typedef" href="#SnapShot" title='SnapShot' data-type='struct SnapShot' data-ref="SnapShot" data-ref-filename="SnapShot">SnapShot</a> *<dfn class="decl field" id="jit_State::snapbuf" title='jit_State::snapbuf' data-ref="jit_State::snapbuf" data-ref-filename="jit_State..snapbuf">snapbuf</dfn>;	<i>/* Temp. snapshot buffer. */</i></td></tr>
+<tr><th id="453">453</th><td>  <a class="typedef" href="#SnapEntry" title='SnapEntry' data-type='uint32_t' data-ref="SnapEntry" data-ref-filename="SnapEntry">SnapEntry</a> *<dfn class="decl field" id="jit_State::snapmapbuf" title='jit_State::snapmapbuf' data-ref="jit_State::snapmapbuf" data-ref-filename="jit_State..snapmapbuf">snapmapbuf</dfn>;  <i>/* Temp. snapshot map buffer. */</i></td></tr>
+<tr><th id="454">454</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="jit_State::sizesnapmap" title='jit_State::sizesnapmap' data-ref="jit_State::sizesnapmap" data-ref-filename="jit_State..sizesnapmap">sizesnapmap</dfn>;	<i>/* Size of temp. snapshot map buffer. */</i></td></tr>
+<tr><th id="455">455</th><td></td></tr>
+<tr><th id="456">456</th><td>  <a class="typedef" href="#PostProc" title='PostProc' data-type='enum PostProc' data-ref="PostProc" data-ref-filename="PostProc">PostProc</a> <dfn class="decl field" id="jit_State::postproc" title='jit_State::postproc' data-ref="jit_State::postproc" data-ref-filename="jit_State..postproc">postproc</dfn>;	<i>/* Required post-processing after execution. */</i></td></tr>
+<tr><th id="457">457</th><td><u>#<span data-ppcond="457">if</span> <a class="macro" href="lj_arch.h.html#581" title="((!1) &amp;&amp; 0)" data-ref="_M/LJ_SOFTFP32">LJ_SOFTFP32</a> || (<a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a> &amp;&amp; <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a>)</u></td></tr>
+<tr><th id="458">458</th><td>  uint8_t needsplit;	<i>/* Need SPLIT pass. */</i></td></tr>
+<tr><th id="459">459</th><td><u>#<span data-ppcond="457">endif</span></u></td></tr>
+<tr><th id="460">460</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="jit_State::retryrec" title='jit_State::retryrec' data-ref="jit_State::retryrec" data-ref-filename="jit_State..retryrec">retryrec</dfn>;	<i>/* Retry recording. */</i></td></tr>
+<tr><th id="461">461</th><td></td></tr>
+<tr><th id="462">462</th><td>  <a class="typedef" href="lj_obj.h.html#GCRef" title='GCRef' data-type='struct GCRef' data-ref="GCRef" data-ref-filename="GCRef">GCRef</a> *<dfn class="decl field" id="jit_State::trace" title='jit_State::trace' data-ref="jit_State::trace" data-ref-filename="jit_State..trace">trace</dfn>;		<i>/* Array of traces. */</i></td></tr>
+<tr><th id="463">463</th><td>  <a class="typedef" href="#TraceNo" title='TraceNo' data-type='uint32_t' data-ref="TraceNo" data-ref-filename="TraceNo">TraceNo</a> <dfn class="decl field" id="jit_State::freetrace" title='jit_State::freetrace' data-ref="jit_State::freetrace" data-ref-filename="jit_State..freetrace">freetrace</dfn>;	<i>/* Start of scan for next free trace. */</i></td></tr>
+<tr><th id="464">464</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="jit_State::sizetrace" title='jit_State::sizetrace' data-ref="jit_State::sizetrace" data-ref-filename="jit_State..sizetrace">sizetrace</dfn>;	<i>/* Size of trace array. */</i></td></tr>
+<tr><th id="465">465</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="jit_State::ktrace" title='jit_State::ktrace' data-ref="jit_State::ktrace" data-ref-filename="jit_State..ktrace">ktrace</dfn>;	<i>/* Reference to KGC with GCtrace. */</i></td></tr>
+<tr><th id="466">466</th><td></td></tr>
+<tr><th id="467">467</th><td>  <a class="typedef" href="lj_ir.h.html#IRRef1" title='IRRef1' data-type='uint16_t' data-ref="IRRef1" data-ref-filename="IRRef1">IRRef1</a> <dfn class="decl field" id="jit_State::chain" title='jit_State::chain' data-ref="jit_State::chain" data-ref-filename="jit_State..chain">chain</dfn>[<a class="enum" href="lj_ir.h.html#IR__MAX" title='IR__MAX' data-ref="IR__MAX" data-ref-filename="IR__MAX">IR__MAX</a>];  <i>/* IR instruction skip-list chain anchors. */</i></td></tr>
+<tr><th id="468">468</th><td>  <a class="typedef" href="lj_ir.h.html#TRef" title='TRef' data-type='uint32_t' data-ref="TRef" data-ref-filename="TRef">TRef</a> <dfn class="decl field" id="jit_State::slot" title='jit_State::slot' data-ref="jit_State::slot" data-ref-filename="jit_State..slot">slot</dfn>[<a class="macro" href="lj_def.h.html#85" title="250" data-ref="_M/LJ_MAX_JSLOTS">LJ_MAX_JSLOTS</a>+<a class="macro" href="lj_def.h.html#72" title="(5+2*1)" data-ref="_M/LJ_STACK_EXTRA">LJ_STACK_EXTRA</a>];  <i>/* Stack slot map. */</i></td></tr>
+<tr><th id="469">469</th><td></td></tr>
+<tr><th id="470">470</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="jit_State::param" title='jit_State::param' data-ref="jit_State::param" data-ref-filename="jit_State..param">param</dfn>[<a class="enum" href="#JIT_P__MAX" title='JIT_P__MAX' data-ref="JIT_P__MAX" data-ref-filename="JIT_P__MAX">JIT_P__MAX</a>];  <i>/* JIT engine parameters. */</i></td></tr>
+<tr><th id="471">471</th><td></td></tr>
+<tr><th id="472">472</th><td>  <a class="typedef" href="#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl field" id="jit_State::exitstubgroup" title='jit_State::exitstubgroup' data-ref="jit_State::exitstubgroup" data-ref-filename="jit_State..exitstubgroup">exitstubgroup</dfn>[<a class="macro" href="lj_def.h.html#87" title="16" data-ref="_M/LJ_MAX_EXITSTUBGR">LJ_MAX_EXITSTUBGR</a>];  <i>/* Exit stub group addresses. */</i></td></tr>
+<tr><th id="473">473</th><td></td></tr>
+<tr><th id="474">474</th><td>  <a class="typedef" href="#HotPenalty" title='HotPenalty' data-type='struct HotPenalty' data-ref="HotPenalty" data-ref-filename="HotPenalty">HotPenalty</a> <dfn class="decl field" id="jit_State::penalty" title='jit_State::penalty' data-ref="jit_State::penalty" data-ref-filename="jit_State..penalty">penalty</dfn>[<a class="macro" href="#307" title="64" data-ref="_M/PENALTY_SLOTS">PENALTY_SLOTS</a>];  <i>/* Penalty slots. */</i></td></tr>
+<tr><th id="475">475</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="jit_State::penaltyslot" title='jit_State::penaltyslot' data-ref="jit_State::penaltyslot" data-ref-filename="jit_State..penaltyslot">penaltyslot</dfn>;	<i>/* Round-robin index into penalty slots. */</i></td></tr>
+<tr><th id="476">476</th><td></td></tr>
+<tr><th id="477">477</th><td><u>#<span data-ppcond="477">ifdef</span> <span class="macro" data-ref="_M/LUAJIT_ENABLE_TABLE_BUMP">LUAJIT_ENABLE_TABLE_BUMP</span></u></td></tr>
+<tr><th id="478">478</th><td>  RBCHashEntry rbchash[RBCHASH_SLOTS];  <i>/* Reverse bytecode map. */</i></td></tr>
+<tr><th id="479">479</th><td><u>#<span data-ppcond="477">endif</span></u></td></tr>
+<tr><th id="480">480</th><td></td></tr>
+<tr><th id="481">481</th><td>  <a class="typedef" href="#BPropEntry" title='BPropEntry' data-type='struct BPropEntry' data-ref="BPropEntry" data-ref-filename="BPropEntry">BPropEntry</a> <dfn class="decl field" id="jit_State::bpropcache" title='jit_State::bpropcache' data-ref="jit_State::bpropcache" data-ref-filename="jit_State..bpropcache">bpropcache</dfn>[<a class="macro" href="#320" title="16" data-ref="_M/BPROP_SLOTS">BPROP_SLOTS</a>];  <i>/* Backpropagation cache slots. */</i></td></tr>
+<tr><th id="482">482</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="jit_State::bpropslot" title='jit_State::bpropslot' data-ref="jit_State::bpropslot" data-ref-filename="jit_State..bpropslot">bpropslot</dfn>;	<i>/* Round-robin index into bpropcache slots. */</i></td></tr>
+<tr><th id="483">483</th><td></td></tr>
+<tr><th id="484">484</th><td>  <a class="typedef" href="#ScEvEntry" title='ScEvEntry' data-type='struct ScEvEntry' data-ref="ScEvEntry" data-ref-filename="ScEvEntry">ScEvEntry</a> <dfn class="decl field" id="jit_State::scev" title='jit_State::scev' data-ref="jit_State::scev" data-ref-filename="jit_State..scev">scev</dfn>;	<i>/* Scalar evolution analysis cache slots. */</i></td></tr>
+<tr><th id="485">485</th><td></td></tr>
+<tr><th id="486">486</th><td>  <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="decl field" id="jit_State::startpc" title='jit_State::startpc' data-ref="jit_State::startpc" data-ref-filename="jit_State..startpc">startpc</dfn>;	<i>/* Bytecode PC of starting instruction. */</i></td></tr>
+<tr><th id="487">487</th><td>  <a class="typedef" href="#TraceNo" title='TraceNo' data-type='uint32_t' data-ref="TraceNo" data-ref-filename="TraceNo">TraceNo</a> <dfn class="decl field" id="jit_State::parent" title='jit_State::parent' data-ref="jit_State::parent" data-ref-filename="jit_State..parent">parent</dfn>;	<i>/* Parent of current side trace (0 for root traces). */</i></td></tr>
+<tr><th id="488">488</th><td>  <a class="typedef" href="#ExitNo" title='ExitNo' data-type='uint32_t' data-ref="ExitNo" data-ref-filename="ExitNo">ExitNo</a> <dfn class="decl field" id="jit_State::exitno" title='jit_State::exitno' data-ref="jit_State::exitno" data-ref-filename="jit_State..exitno">exitno</dfn>;	<i>/* Exit number in parent of current side trace. */</i></td></tr>
+<tr><th id="489">489</th><td>  <em>int</em> <dfn class="decl field" id="jit_State::exitcode" title='jit_State::exitcode' data-ref="jit_State::exitcode" data-ref-filename="jit_State..exitcode">exitcode</dfn>;		<i>/* Exit code from unwound trace. */</i></td></tr>
+<tr><th id="490">490</th><td></td></tr>
+<tr><th id="491">491</th><td>  <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="decl field" id="jit_State::patchpc" title='jit_State::patchpc' data-ref="jit_State::patchpc" data-ref-filename="jit_State..patchpc">patchpc</dfn>;	<i>/* PC for pending re-patch. */</i></td></tr>
+<tr><th id="492">492</th><td>  <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> <dfn class="decl field" id="jit_State::patchins" title='jit_State::patchins' data-ref="jit_State::patchins" data-ref-filename="jit_State..patchins">patchins</dfn>;	<i>/* Instruction for pending re-patch. */</i></td></tr>
+<tr><th id="493">493</th><td></td></tr>
+<tr><th id="494">494</th><td>  <em>int</em> <dfn class="decl field" id="jit_State::mcprot" title='jit_State::mcprot' data-ref="jit_State::mcprot" data-ref-filename="jit_State..mcprot">mcprot</dfn>;		<i>/* Protection of current mcode area. */</i></td></tr>
+<tr><th id="495">495</th><td>  <a class="typedef" href="#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl field" id="jit_State::mcarea" title='jit_State::mcarea' data-ref="jit_State::mcarea" data-ref-filename="jit_State..mcarea">mcarea</dfn>;	<i>/* Base of current mcode area. */</i></td></tr>
+<tr><th id="496">496</th><td>  <a class="typedef" href="#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl field" id="jit_State::mctop" title='jit_State::mctop' data-ref="jit_State::mctop" data-ref-filename="jit_State..mctop">mctop</dfn>;		<i>/* Top of current mcode area. */</i></td></tr>
+<tr><th id="497">497</th><td>  <a class="typedef" href="#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl field" id="jit_State::mcbot" title='jit_State::mcbot' data-ref="jit_State::mcbot" data-ref-filename="jit_State..mcbot">mcbot</dfn>;		<i>/* Bottom of current mcode area. */</i></td></tr>
+<tr><th id="498">498</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl field" id="jit_State::szmcarea" title='jit_State::szmcarea' data-ref="jit_State::szmcarea" data-ref-filename="jit_State..szmcarea">szmcarea</dfn>;	<i>/* Size of current mcode area. */</i></td></tr>
+<tr><th id="499">499</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl field" id="jit_State::szallmcarea" title='jit_State::szallmcarea' data-ref="jit_State::szallmcarea" data-ref-filename="jit_State..szallmcarea">szallmcarea</dfn>;	<i>/* Total size of all allocated mcode areas. */</i></td></tr>
+<tr><th id="500">500</th><td></td></tr>
+<tr><th id="501">501</th><td>  <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> <dfn class="decl field" id="jit_State::errinfo" title='jit_State::errinfo' data-ref="jit_State::errinfo" data-ref-filename="jit_State..errinfo">errinfo</dfn>;	<i>/* Additional info element for trace errors. */</i></td></tr>
+<tr><th id="502">502</th><td></td></tr>
+<tr><th id="503">503</th><td><u>#<span data-ppcond="503">if</span> <a class="macro" href="lj_arch.h.html#562" title="1" data-ref="_M/LJ_HASPROFILE">LJ_HASPROFILE</a></u></td></tr>
+<tr><th id="504">504</th><td>  <a class="typedef" href="lj_obj.h.html#GCproto" title='GCproto' data-type='struct GCproto' data-ref="GCproto" data-ref-filename="GCproto">GCproto</a> *<dfn class="decl field" id="jit_State::prev_pt" title='jit_State::prev_pt' data-ref="jit_State::prev_pt" data-ref-filename="jit_State..prev_pt">prev_pt</dfn>;	<i>/* Previous prototype. */</i></td></tr>
+<tr><th id="505">505</th><td>  <a class="typedef" href="lj_obj.h.html#BCLine" title='BCLine' data-type='int32_t' data-ref="BCLine" data-ref-filename="BCLine">BCLine</a> <dfn class="decl field" id="jit_State::prev_line" title='jit_State::prev_line' data-ref="jit_State::prev_line" data-ref-filename="jit_State..prev_line">prev_line</dfn>;	<i>/* Previous line. */</i></td></tr>
+<tr><th id="506">506</th><td>  <em>int</em> <dfn class="decl field" id="jit_State::prof_mode" title='jit_State::prof_mode' data-ref="jit_State::prof_mode" data-ref-filename="jit_State..prof_mode">prof_mode</dfn>;	<i>/* Profiling mode: 0, 'f', 'l'. */</i></td></tr>
+<tr><th id="507">507</th><td><u>#<span data-ppcond="503">endif</span></u></td></tr>
+<tr><th id="508">508</th><td>} <dfn class="typedef" id="jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</dfn>;</td></tr>
+<tr><th id="509">509</th><td></td></tr>
+<tr><th id="510">510</th><td><u>#<span data-ppcond="510">ifdef</span> <span class="macro" data-ref="_M/LUA_USE_ASSERT">LUA_USE_ASSERT</span></u></td></tr>
+<tr><th id="511">511</th><td><u>#define lj_assertJ(c, ...)	lj_assertG_(J2G(J), (c), __VA_ARGS__)</u></td></tr>
+<tr><th id="512">512</th><td><u>#<span data-ppcond="510">else</span></u></td></tr>
+<tr><th id="513">513</th><td><u>#define <dfn class="macro" id="_M/lj_assertJ" data-ref="_M/lj_assertJ">lj_assertJ</dfn>(c, ...)	((void)J)</u></td></tr>
+<tr><th id="514">514</th><td><u>#<span data-ppcond="510">endif</span></u></td></tr>
+<tr><th id="515">515</th><td></td></tr>
+<tr><th id="516">516</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="517">517</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_trace.h' l='46'/>
+<use f='luajit/lj_record.c' l='293' u='c'/>

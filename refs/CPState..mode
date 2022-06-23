@@ -1,0 +1,12 @@
+<dec f='luajit/lj_cparse.h' l='56' type='uint32_t'/>
+<use f='luajit/lib_ffi.c' l='55' u='w' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='486' u='w' c='lj_cf_ffi_cdef'/>
+<offset>928</offset>
+<doc f='luajit/lj_cparse.h' l='56'>/* C parser mode. */</doc>
+<use f='luajit/lj_cparse.c' l='182' u='r' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='1236' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1501' u='r' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1666' u='w' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1673' u='w' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1906' u='r' c='cpcparser'/>
+<use f='luajit/lj_crecord.c' l='86' u='w' c='argv2ctype'/>

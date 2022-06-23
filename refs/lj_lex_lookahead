@@ -1,0 +1,5 @@
+<dec f='luajit/lj_lex.h' l='82' type='LexToken lj_lex_lookahead(LexState * ls)'/>
+<def f='luajit/lj_lex.c' l='468' ll='473' type='LexToken lj_lex_lookahead(LexState * ls)'/>
+<doc f='luajit/lj_lex.c' l='467'>/* Look ahead for the next token. */</doc>
+<use f='luajit/lj_parse.c' l='1742' u='c' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='2685' u='c' c='parse_stmt'/>

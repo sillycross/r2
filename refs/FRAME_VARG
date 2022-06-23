@@ -1,0 +1,14 @@
+<dec f='luajit/lj_frame.h' l='25' type='3'/>
+<use f='luajit/host/buildvm_arch.h' l='4043' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4043' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4180' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4279' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4609' u='r' c='build_ins'/>
+<use f='luajit/lj_debug.c' l='40' macro='1' u='r' c='lj_debug_frame'/>
+<use f='luajit/lj_debug.c' l='195' macro='1' u='r' c='debug_localname'/>
+<use f='luajit/lj_debug.c' l='300' macro='1' u='r' c='lj_debug_funcname'/>
+<use f='luajit/lj_err.c' l='171' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='804' c='finderrfunc'/>
+<use f='luajit/lj_record.c' l='774' macro='1' u='r' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='849' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1818' u='r' c='rec_varg'/>

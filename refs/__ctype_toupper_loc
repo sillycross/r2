@@ -1,0 +1,4 @@
+<dec f='include/ctype.h' l='83' type='const __int32_t ** __ctype_toupper_loc()'/>
+<use f='include/ctype.h' l='215' u='c' c='toupper'/>
+<use f='luajit/host/minilua.c' l='7032' macro='1' u='c' c='str_upper'/>
+<use f='luajit/host/minilua.c' l='7032' macro='1' u='c' c='str_upper'/>

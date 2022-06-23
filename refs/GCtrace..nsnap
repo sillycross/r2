@@ -1,0 +1,35 @@
+<dec f='luajit/lj_jit.h' l='253' type='uint16_t'/>
+<use f='luajit/lj_jit.h' l='294' u='r' c='snap_nextofs'/>
+<offset>80</offset>
+<doc f='luajit/lj_jit.h' l='253'>/* Number of snapshots. */</doc>
+<use f='luajit/lib_jit.c' l='309' u='r' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lib_jit.c' l='366' u='r' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lj_asm.c' l='1044' u='r' c='asm_snap_fixup_mcofs'/>
+<use f='luajit/lj_asm_x86.h' l='2961' u='r' c='asm_setup_target'/>
+<use f='luajit/lj_asm.c' l='2054' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2145' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_ffrecord.c' l='111' u='r' c='recff_stitch'/>
+<use f='luajit/lj_gc.c' l='355' u='r' c='propagatemark'/>
+<use f='luajit/lj_opt_dce.c' l='23' u='r' c='dce_marksnap'/>
+<use f='luajit/lj_opt_loop.c' l='146' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='216' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='219' u='w' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='294' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='376' u='w' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='391' u='w' c='loop_undo'/>
+<use f='luajit/lj_opt_loop.c' l='418' u='r' c='lj_opt_loop'/>
+<use f='luajit/lj_opt_sink.c' l='240' u='r' c='lj_opt_sink'/>
+<use f='luajit/lj_record.c' l='1971' u='r' c='rec_comp_prep'/>
+<use f='luajit/lj_record.c' l='1981' u='r' c='rec_comp_fixup'/>
+<use f='luajit/lj_record.c' l='2019' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='183' u='r' c='lj_snap_add'/>
+<use f='luajit/lj_snap.c' l='196' u='w' c='lj_snap_add'/>
+<use f='luajit/lj_snap.c' l='326' u='r' c='lj_snap_shrink'/>
+<use f='luajit/lj_trace.c' l='128' u='r' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='138' u='w' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='138' u='r' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='157' u='r' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='157' u='r' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='180' u='r' c='lj_trace_free'/>
+<use f='luajit/lj_trace.c' l='692' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='946' u='r' c='lj_trace_unwind'/>

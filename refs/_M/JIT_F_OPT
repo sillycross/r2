@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='76'/>
+<doc f='luajit/lj_jit.h' l='75'>/* Optimization flags. 12 bits. */</doc>
+<use f='luajit/lib_jit.c' l='108' u='c'/>
+<use f='luajit/lib_jit.c' l='477' u='c'/>

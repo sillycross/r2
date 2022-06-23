@@ -1,0 +1,6 @@
+<dec f='luajit/lj_debug.h' l='36' type='const char * lj_debug_funcname(lua_State * L, cTValue * frame, const char ** name)'/>
+<def f='luajit/lj_debug.c' l='293' ll='319' type='const char * lj_debug_funcname(lua_State * L, cTValue * frame, const char ** name)'/>
+<use f='luajit/lj_debug.c' l='489' u='c' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='602' u='c' c='lj_debug_dumpstack'/>
+<doc f='luajit/lj_debug.c' l='292'>/* Deduce function name from caller of a frame. */</doc>
+<use f='luajit/lj_err.c' l='991' u='c' c='err_argmsg'/>

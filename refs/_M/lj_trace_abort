@@ -1,0 +1,11 @@
+<dec f='luajit/lj_trace.h' l='45'/>
+<use f='luajit/lib_aux.c' l='44' u='c'/>
+<doc f='luajit/lj_trace.h' l='44'>/* Signal asynchronous abort of trace or end of trace. */</doc>
+<use f='luajit/lib_jit.c' l='568' u='c'/>
+<use f='luajit/lj_ccallback.c' l='689' u='c'/>
+<use f='luajit/lj_dispatch.c' l='243' u='c'/>
+<use f='luajit/lj_dispatch.c' l='331' u='c'/>
+<use f='luajit/lj_dispatch.c' l='358' u='c'/>
+<use f='luajit/lj_err.c' l='737' u='c'/>
+<use f='luajit/lj_err.c' l='839' u='c'/>
+<use f='luajit/lj_gc.c' l='509' u='c'/>

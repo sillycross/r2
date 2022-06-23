@@ -1,0 +1,14 @@
+<dec f='luajit/lj_jit.h' l='474' type='HotPenalty [64]'/>
+<offset>14592</offset>
+<doc f='luajit/lj_jit.h' l='474'>/* Penalty slots. */</doc>
+<use f='luajit/lj_record.c' l='586' u='m' c='innerloopleft'/>
+<use f='luajit/lj_record.c' l='587' u='m' c='innerloopleft'/>
+<use f='luajit/lj_record.c' l='588' u='m' c='innerloopleft'/>
+<use f='luajit/lj_record.c' l='589' u='m' c='innerloopleft'/>
+<use f='luajit/lj_trace.c' l='299' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='299' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='385' u='m' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='387' u='m' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='398' u='m' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='400' u='m' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='401' u='m' c='penalty_pc'/>

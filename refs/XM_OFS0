@@ -1,0 +1,10 @@
+<dec f='luajit/lj_target_x86.h' l='173' type='0'/>
+<use f='luajit/lj_emit_x86.h' l='109' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='113' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='134' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='146' u='r' c='emit_rmrxo'/>
+<use f='luajit/lj_emit_x86.h' l='201' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='212' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='217' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='376' u='r' c='emit_rma'/>
+<use f='luajit/lj_ccallback.c' l='136' u='r' c='callback_mcode_init'/>

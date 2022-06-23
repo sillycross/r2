@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='315' type='IRRef1'/>
+<offset>16</offset>
+<doc f='luajit/lj_jit.h' l='315'>/* Value: reference after conversion. */</doc>
+<use f='luajit/lj_opt_loop.c' l='396' u='r' c='loop_undo'/>
+<use f='luajit/lj_opt_narrow.c' l='234' u='w' c='narrow_bpc_set'/>
+<use f='luajit/lj_opt_narrow.c' l='247' u='r' c='narrow_stripov_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='328' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='335' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='436' u='r' c='narrow_stripov'/>
+<use f='luajit/lj_opt_narrow.c' l='436' u='r' c='narrow_stripov'/>

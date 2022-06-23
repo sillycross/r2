@@ -1,0 +1,2 @@
+<dec f='luajit/lj_err.c' l='403' type='uintptr_t _Unwind_GetIP(_Unwind_Context * )'/>
+<use f='luajit/lj_err.c' l='505' u='c' c='err_unwind_jit'/>

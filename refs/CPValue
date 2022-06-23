@@ -1,0 +1,5 @@
+<def f='luajit/lj_cparse.h' l='32' ll='38'/>
+<use f='luajit/lj_cparse.h' l='32'/>
+<size>8</size>
+<doc f='luajit/lj_cparse.h' l='31'>/* C parser internal value representation. */</doc>
+<mbr r='CPValue::id' o='32' t='CTypeID'/>

@@ -1,0 +1,7 @@
+<def f='luajit/lj_jit.h' l='301' ll='305'/>
+<use f='luajit/lj_jit.h' l='301'/>
+<size>16</size>
+<doc f='luajit/lj_jit.h' l='300'>/* Round-robin penalty cache for bytecodes leading to aborted traces. */</doc>
+<mbr r='HotPenalty::pc' o='0' t='MRef'/>
+<mbr r='HotPenalty::val' o='64' t='uint16_t'/>
+<mbr r='HotPenalty::reason' o='80' t='uint16_t'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='316' type='IRRef'/>
+<offset>32</offset>
+<doc f='luajit/lj_jit.h' l='316'>/* Mode for this entry (currently IRCONV_*). */</doc>
+<use f='luajit/lj_opt_narrow.c' l='220' u='r' c='narrow_bpc_get'/>
+<use f='luajit/lj_opt_narrow.c' l='221' u='r' c='narrow_bpc_get'/>
+<use f='luajit/lj_opt_narrow.c' l='235' u='w' c='narrow_bpc_set'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='196' type='int lua_setfenv(lua_State * L, int idx)'/>
+<use f='luajit/lib_debug.c' l='63' u='c' c='lj_cf_debug_setfenv'/>
+<use f='luajit/lib_package.c' l='487' u='c' c='setfenv'/>
+<def f='luajit/lj_api.c' l='1067' ll='1087' macro='1' type='int lua_setfenv(lua_State * L, int idx)'/>

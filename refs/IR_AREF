@@ -1,0 +1,17 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='56'/>
+<use f='luajit/lj_asm.c' l='892' u='r' c='asm_sunk_store'/>
+<use f='luajit/lj_asm_x86.h' l='186' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm.c' l='1782' c='asm_ir'/>
+<use f='luajit/lj_opt_mem.c' l='88' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='89' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='99' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='154' u='r' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='162' u='r' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='231' u='r' c='fwd_aload_reassoc'/>
+<use f='luajit/lj_opt_sink.c' l='27' u='r' c='sink_checkalloc'/>
+<use f='luajit/lj_record.c' l='1341' u='r' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1461' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1833' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='1883' u='r' c='rec_varg'/>
+<use f='luajit/lj_snap.c' l='457' u='r' c='snap_sunk_store2'/>
+<use f='luajit/lj_snap.c' l='588' u='r' c='lj_snap_replay'/>

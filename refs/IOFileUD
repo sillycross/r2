@@ -1,0 +1,4 @@
+<def f='luajit/lib_io.c' l='30' ll='33'/>
+<use f='luajit/lib_io.c' l='30'/>
+<size>16</size>
+<doc f='luajit/lib_io.c' l='29'>/* Userdata payload for I/O file. */</doc>

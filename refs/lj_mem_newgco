@@ -1,0 +1,14 @@
+<dec f='luajit/lj_gc.h' l='113' type='void * lj_mem_newgco(lua_State * L, GCSize size)'/>
+<use f='luajit/lj_cdata.h' l='46' u='c' c='lj_cdata_new'/>
+<use f='luajit/lj_cdata.h' l='55' u='c' c='lj_cdata_new_'/>
+<use f='luajit/lj_bcread.c' l='344' u='c' c='lj_bcread_proto'/>
+<use f='luajit/lj_func.c' l='74' u='c' c='func_emptyuv'/>
+<use f='luajit/lj_func.c' l='113' u='c' c='lj_func_newC'/>
+<use f='luajit/lj_func.c' l='126' u='c' c='func_newL'/>
+<def f='luajit/lj_gc.c' l='877' ll='890' type='void * lj_mem_newgco(lua_State * L, GCSize size)'/>
+<doc f='luajit/lj_gc.c' l='876'>/* Allocate new GC object and link it to the root set. */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_parse.c' l='1587' u='c' c='fs_finish'/>
+<use f='luajit/lj_state.c' l='309' macro='1' u='c' c='lj_state_new'/>
+<use f='luajit/lj_tab.c' l='88' u='c' c='newtab'/>
+<use f='luajit/lj_tab.c' l='103' macro='1' u='c' c='newtab'/>

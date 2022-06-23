@@ -1,0 +1,15 @@
+<dec f='luajit/lj_str.h' l='27'/>
+<use f='luajit/lib_jit.c' l='184' u='c'/>
+<use f='luajit/lib_jit.c' l='272' u='c'/>
+<use f='luajit/lib_jit.c' l='310' u='c'/>
+<use f='luajit/lj_api.c' l='665' u='c'/>
+<use f='luajit/lj_api.c' l='729' u='c'/>
+<use f='luajit/lj_api.c' l='814' u='c'/>
+<use f='luajit/lj_api.c' l='866' u='c'/>
+<use f='luajit/lj_api.c' l='944' u='c'/>
+<use f='luajit/lj_api.c' l='985' u='c'/>
+<use f='luajit/lj_bcread.c' l='408' u='c'/>
+<use f='luajit/lj_err.c' l='769' u='c'/>
+<use f='luajit/lj_lex.c' l='509' u='c'/>
+<use f='luajit/lj_lib.c' l='179' u='c'/>
+<use f='luajit/lj_parse.c' l='2724' u='c'/>

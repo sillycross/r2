@@ -1,0 +1,6 @@
+<def f='luajit/host/buildvm_libbc.h' l='3' type='const int'/>
+<use f='luajit/host/buildvm_lib.c' l='175' u='r' c='libdef_fixupbc'/>
+<use f='luajit/host/buildvm_lib.c' l='176' u='r' c='libdef_fixupbc'/>
+<use f='luajit/host/buildvm_lib.c' l='177' u='r' c='libdef_fixupbc'/>
+<use f='luajit/host/buildvm_lib.c' l='178' u='r' c='libdef_fixupbc'/>
+<doc f='luajit/host/buildvm_libbc.h' l='1'>/* This is a generated file. DO NOT EDIT! */</doc>

@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='30'/>
+<doc f='luajit/lua.h' l='29'>/* option for multiple returns in `lua_pcall&apos; and `lua_call&apos; */</doc>
+<use f='luajit/lib_base.c' l='448' u='c'/>
+<use f='luajit/luajit.c' l='121' u='c'/>
+<use f='luajit/luajit.c' l='146' u='c'/>

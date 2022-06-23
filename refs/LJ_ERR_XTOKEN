@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='124' macro='1' type='2365'/>
+<use f='luajit/lj_errmsg.h' l='124' macro='1' u='r'/>
+<use f='luajit/lj_cparse.c' l='155' u='r' c='cp_err_token'/>
+<use f='luajit/lj_parse.c' l='181' u='r' c='err_token'/>

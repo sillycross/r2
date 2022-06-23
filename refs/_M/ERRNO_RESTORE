@@ -1,0 +1,7 @@
+<dec f='luajit/lj_dispatch.h' l='161'/>
+<use f='luajit/lj_dispatch.c' l='439' u='c'/>
+<use f='luajit/lj_dispatch.c' l='512' u='c'/>
+<use f='luajit/lj_dispatch.c' l='529' u='c'/>
+<use f='luajit/lj_dispatch.c' l='550' u='c'/>
+<use f='luajit/lj_trace.c' l='749' u='c'/>
+<use f='luajit/lj_trace.c' l='915' u='c'/>

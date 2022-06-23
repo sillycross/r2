@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm_lib.c' l='24' type='2'/>
+<use f='luajit/host/buildvm_lib.c' l='132' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='133' u='r' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='342'/>

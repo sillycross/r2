@@ -1,0 +1,9 @@
+<dec f='luajit/host/minilua.c' l='132' type='287'/>
+<use f='luajit/host/minilua.c' l='2742' u='r' c='luaX_setinput'/>
+<use f='luajit/host/minilua.c' l='2796' u='r' c='read_long_string'/>
+<use f='luajit/host/minilua.c' l='2827' u='r' c='read_string'/>
+<use f='luajit/host/minilua.c' l='2950' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='2986' u='r' c='luaX_next'/>
+<use f='luajit/host/minilua.c' l='2988' u='r' c='luaX_next'/>
+<use f='luajit/host/minilua.c' l='3930' u='r' c='luaY_parser'/>
+<use f='luajit/host/minilua.c' l='4304' c='block_follow'/>

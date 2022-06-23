@@ -1,0 +1,14 @@
+<dec f='luajit/lj_strfmt.h' l='103' type='SBuf * lj_strfmt_putfxint(SBuf * sb, SFormat sf, uint64_t k)'/>
+<use f='luajit/lib_bit.c' l='165' u='c' c='lj_cf_bit_tohex'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='714' u='c' c='fold_bufput_kfold_fmt'/>
+<def f='luajit/lj_strfmt.c' l='279' ll='349' type='SBuf * lj_strfmt_putfxint(SBuf * sb, SFormat sf, uint64_t k)'/>
+<use f='luajit/lj_strfmt.c' l='358' u='c' c='lj_strfmt_putfnum_int'/>
+<use f='luajit/lj_strfmt.c' l='369' u='c' c='lj_strfmt_putfnum_uint'/>
+<use f='luajit/lj_strfmt.c' l='397' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='404' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='413' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='420' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='560' u='c' c='lj_strfmt_pushvf'/>
+<use f='luajit/lj_strfmt.c' l='563' u='c' c='lj_strfmt_pushvf'/>
+<doc f='luajit/lj_strfmt.c' l='278'>/* Add formatted signed/unsigned integer to buffer. */</doc>

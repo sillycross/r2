@@ -1,0 +1,5 @@
+<def f='luajit/lj_obj.h' l='466' ll='469'/>
+<use f='luajit/lj_obj.h' l='466'/>
+<size>56</size>
+<mbr r='GCfunc::c' o='0' t='GCfuncC'/>
+<mbr r='GCfunc::l' o='0' t='GCfuncL'/>

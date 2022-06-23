@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='481' type='BPropEntry [16]'/>
+<offset>22816</offset>
+<doc f='luajit/lj_jit.h' l='481'>/* Backpropagation cache slots. */</doc>
+<use f='luajit/lj_opt_dce.c' l='69' u='r' c='lj_opt_dce'/>
+<use f='luajit/lj_opt_dce.c' l='69' u='r' c='lj_opt_dce'/>
+<use f='luajit/lj_opt_loop.c' l='395' u='a' c='loop_undo'/>
+<use f='luajit/lj_opt_narrow.c' l='218' u='a' c='narrow_bpc_get'/>
+<use f='luajit/lj_opt_narrow.c' l='231' u='a' c='narrow_bpc_set'/>
+<use f='luajit/lj_record.c' l='2586' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2586' u='r' c='lj_record_setup'/>

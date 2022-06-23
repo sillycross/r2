@@ -1,0 +1,12 @@
+<dec f='luajit/lj_iropt.h' l='96' type='TRef lj_opt_cse(jit_State * J)'/>
+<use f='luajit/lj_opt_fold.c' l='633' macro='1' u='c' c='fold_bufstr_kfold_cse'/>
+<use f='luajit/lj_opt_fold.c' l='2247' u='c' c='fold_fload_tab_ah'/>
+<use f='luajit/lj_opt_fold.c' l='2342' u='c' c='fold_fwd_sload'/>
+<use f='luajit/lj_opt_fold.c' l='2375' u='c' c='fold_barrier_tab'/>
+<use f='luajit/lj_folddef.h' l='54' u='r'/>
+<use f='luajit/lj_folddef.h' l='147' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='2465' u='c' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2511' u='c' c='lj_opt_fold'/>
+<def f='luajit/lj_opt_fold.c' l='2531' ll='2558' type='TRef lj_opt_cse(jit_State * J)'/>
+<doc f='luajit/lj_opt_fold.c' l='2530'>/* CSE an IR instruction. This is very fast due to the skip-list chains. */</doc>
+<use f='luajit/lj_opt_mem.c' l='285' macro='1' u='c' c='lj_opt_fwd_hrefk'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='432' type='uint8_t'/>
+<offset>88</offset>
+<doc f='luajit/lj_obj.h' l='432'>/* Immutable value. */</doc>
+<use f='luajit/lj_func.c' l='148' u='w' c='lj_func_newL_empty'/>
+<use f='luajit/lj_func.c' l='174' u='w' c='lj_func_newL_gc'/>
+<use f='luajit/lj_record.c' l='1580' u='r' c='rec_upvalue_constify'/>

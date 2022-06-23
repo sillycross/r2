@@ -1,0 +1,9 @@
+<def f='luajit/lj_ctype.h' l='143' ll='149'/>
+<use f='luajit/lj_ctype.h' l='143'/>
+<size>24</size>
+<doc f='luajit/lj_ctype.h' l='142'>/* C type table element. */</doc>
+<mbr r='CType::info' o='0' t='CTInfo'/>
+<mbr r='CType::size' o='32' t='CTSize'/>
+<mbr r='CType::sib' o='64' t='CTypeID1'/>
+<mbr r='CType::next' o='80' t='CTypeID1'/>
+<mbr r='CType::name' o='128' t='GCRef'/>

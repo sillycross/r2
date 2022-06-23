@@ -1,0 +1,4 @@
+<def f='luajit/lj_obj.h' l='875' ll='884' type='void setrawlightudV(TValue * o, void * p)'/>
+<use f='luajit/lj_api.c' l='715' u='c' c='lua_pushlightuserdata'/>
+<use f='luajit/lj_api.c' l='1158' u='c' c='cpcall'/>
+<use f='luajit/lj_serialize.c' l='390' u='c' c='serialize_get'/>

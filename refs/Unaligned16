@@ -1,0 +1,5 @@
+<def f='luajit/lj_def.h' l='225' ll='228'/>
+<use f='luajit/lj_def.h' l='225'/>
+<size>2</size>
+<mbr r='Unaligned16::u' o='0' t='uint16_t'/>
+<mbr r='Unaligned16::b' o='0' t='uint8_t [2]'/>

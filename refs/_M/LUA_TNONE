@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='73'/>
+<doc f='luajit/lua.h' l='70'>/*
+** basic types
+*/</doc>
+<use f='luajit/lj_api.c' l='227' u='c'/>

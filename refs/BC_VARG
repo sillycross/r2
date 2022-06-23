@@ -1,0 +1,8 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='71'/>
+<use f='luajit/host/buildvm_arch.h' l='4139' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='2018' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2224' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2340' u='r' c='parse_return'/>
+<use f='luajit/lj_record.c' l='1892' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2393' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='290' u='r' c='snap_usedef'/>

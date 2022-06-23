@@ -1,0 +1,1 @@
+<def f='luajit/lib_ffi.c' l='669' macro='1' type='int lj_cf_ffi_errno(lua_State * L)'/>

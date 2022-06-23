@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ir.h' l='484'/>
+<use f='luajit/lj_jit.h' l='204' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='128' u='c'/>
+<use f='luajit/lj_record.c' l='963' u='c'/>
+<use f='luajit/lj_snap.c' l='77' u='c'/>
+<use f='luajit/lj_snap.c' l='94' u='c'/>

@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='437' type='GCRef'/>
+<offset>64</offset>
+<use f='luajit/lj_func.c' l='32' macro='1' u='m' c='unlinkuv'/>
+<use f='luajit/lj_func.c' l='33' u='m' c='unlinkuv'/>
+<use f='luajit/lj_func.c' l='33' u='m' c='unlinkuv'/>
+<use f='luajit/lj_func.c' l='63' u='m' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='63' u='m' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='64' macro='1' u='m' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='65' u='m' c='func_finduv'/>
+<use f='luajit/lj_gc.c' l='115' macro='1' u='m' c='gc_mark_uv'/>
+<use f='luajit/lj_gc.c' l='115' macro='1' u='m' c='gc_mark_uv'/>
+<use f='luajit/lj_state.c' l='240' u='m' c='lua_newstate'/>

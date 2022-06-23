@@ -1,0 +1,14 @@
+<def f='luajit/lj_buf.h' l='83' ll='89' type='SBuf * lj_buf_tmp_(lua_State * L)'/>
+<use f='luajit/lib_bit.c' l='156' u='c' c='lj_cf_bit_tohex'/>
+<use f='luajit/lib_string.c' l='92' u='c' c='lj_cf_string_rep'/>
+<use f='luajit/lib_string.c' l='127' u='c' c='lj_cf_string_dump'/>
+<use f='luajit/lib_string.c' l='648' u='c' c='lj_cf_string_format'/>
+<use f='luajit/lib_table.c' l='159' u='c' c='lj_cf_table_concat'/>
+<use f='luajit/lj_ctype.c' l='576' u='c' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_meta.c' l='288' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_opt_fold.c' l='670' u='c' c='fold_bufput_kfold_op'/>
+<use f='luajit/lj_opt_fold.c' l='687' u='c' c='fold_bufput_kfold_rep'/>
+<use f='luajit/lj_opt_fold.c' l='711' u='c' c='fold_bufput_kfold_fmt'/>
+<use f='luajit/lj_strfmt.c' l='175' u='c' c='lj_strfmt_wstrnum'/>
+<use f='luajit/lj_strfmt.c' l='177' u='c' c='lj_strfmt_wstrnum'/>
+<use f='luajit/lj_strfmt.c' l='549' u='c' c='lj_strfmt_pushvf'/>

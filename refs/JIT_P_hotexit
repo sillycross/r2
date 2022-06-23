@@ -1,0 +1,3 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='7'/>
+<use f='luajit/lj_record.c' l='2637' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='759' u='r' c='trace_hotside'/>

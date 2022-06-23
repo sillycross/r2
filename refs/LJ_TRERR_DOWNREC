@@ -1,0 +1,2 @@
+<use f='luajit/lj_record.c' l='808' u='r' c='check_downrec_unroll'/>
+<use f='luajit/lj_trace.c' l='622' u='r' c='trace_abort'/>

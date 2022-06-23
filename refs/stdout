@@ -1,0 +1,21 @@
+<dec f='include/stdio.h' l='136' type='struct _IO_FILE *'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='38' macro='1' u='r' c='vprintf'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='81' macro='1' u='r' c='putchar'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='107' macro='1' u='r' c='putchar_unlocked'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='107' macro='1' u='r' c='putchar_unlocked'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='107' macro='1' u='r' c='putchar_unlocked'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='107' macro='1' u='r' c='putchar_unlocked'/>
+<use f='luajit/host/buildvm.c' l='463' macro='1' u='r' c='main'/>
+<doc f='include/stdio.h' l='136'>/* Standard output stream.  */</doc>
+<use f='luajit/host/minilua.c' l='6959' macro='1' u='r' c='luaopen_io'/>
+<use f='luajit/lib_base.c' l='541' macro='1' u='r' c='lj_cf_print'/>
+<use f='luajit/lib_io.c' l='539' macro='1' u='r' c='luaopen_io'/>
+<use f='luajit/luajit.c' l='133' macro='1' u='r' c='print_version'/>
+<use f='luajit/luajit.c' l='147' macro='1' u='r' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='149' macro='1' u='r' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='150' macro='1' u='r' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='152' macro='1' u='r' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='192' macro='1' u='r' c='write_prompt'/>
+<use f='luajit/luajit.c' l='193' macro='1' u='r' c='write_prompt'/>
+<use f='luajit/luajit.c' l='265' macro='1' u='r' c='dotty'/>
+<use f='luajit/luajit.c' l='266' macro='1' u='r' c='dotty'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='57' type='void lj_vm_exit_interp()'/>
+<use f='luajit/lj_asm_x86.h' l='2907' u='r' c='asm_tail_fixup'/>

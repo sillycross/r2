@@ -1,0 +1,18 @@
+<dec f='luajit/lj_ctype.h' l='424'/>
+<doc f='luajit/lj_ctype.h' l='423'>/* Get C type ID for a C type. */</doc>
+<use f='luajit/lib_ffi.c' l='109' u='c'/>
+<use f='luajit/lib_ffi.c' l='316' u='c'/>
+<use f='luajit/lj_carith.c' l='249' u='c'/>
+<use f='luajit/lj_ccallback.c' l='728' u='c'/>
+<use f='luajit/lj_cconv.c' l='24' u='c'/>
+<use f='luajit/lj_cconv.c' l='30' u='c'/>
+<use f='luajit/lj_cconv.c' l='41' u='c'/>
+<use f='luajit/lj_cconv.c' l='52' u='c'/>
+<use f='luajit/lj_cconv.c' l='418' u='c'/>
+<use f='luajit/lj_cconv.c' l='572' u='c'/>
+<use f='luajit/lj_cparse.c' l='160' u='c'/>
+<use f='luajit/lj_cparse.c' l='574' u='c'/>
+<use f='luajit/lj_crecord.c' l='736' u='c'/>
+<use f='luajit/lj_crecord.c' l='1255' u='c'/>
+<use f='luajit/lj_crecord.c' l='1690' u='c'/>
+<use f='luajit/lj_ctype.c' l='435' u='c'/>

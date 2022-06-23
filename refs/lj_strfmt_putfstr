@@ -1,0 +1,4 @@
+<dec f='luajit/lj_strfmt.h' l='109' type='SBuf * lj_strfmt_putfstr(SBuf * sb, SFormat , GCstr * str)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='717' u='c' c='fold_bufput_kfold_fmt'/>
+<def f='luajit/lj_strfmt.c' l='272' ll='275' type='SBuf * lj_strfmt_putfstr(SBuf * sb, SFormat sf, GCstr * str)'/>

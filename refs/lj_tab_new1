@@ -1,0 +1,3 @@
+<dec f='luajit/lj_tab.h' l='58' type='GCtab * lj_tab_new1(lua_State * L, uint32_t ahsize)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_tab.c' l='154' ll='160' type='GCtab * lj_tab_new1(lua_State * L, uint32_t ahsize)'/>

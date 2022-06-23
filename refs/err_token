@@ -1,0 +1,5 @@
+<def f='luajit/lj_parse.c' l='179' ll='182' macro='1' type='void err_token(LexState * ls, LexToken tok)'/>
+<use f='luajit/lj_parse.c' l='1013' u='c' c='lex_check'/>
+<use f='luajit/lj_parse.c' l='1022' u='c' c='lex_match'/>
+<use f='luajit/lj_parse.c' l='1036' u='c' c='lex_str'/>
+<use f='luajit/lj_parse.c' l='2740' u='c' c='lj_parse'/>

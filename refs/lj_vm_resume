@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='17' type='int lj_vm_resume(lua_State * L, TValue * base, int nres1, ptrdiff_t ef)'/>
+<use f='luajit/lj_api.c' l='1240' u='c' c='lua_resume'/>

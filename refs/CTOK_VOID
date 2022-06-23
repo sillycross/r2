@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='362' macro='1' type='269'/>
+<use f='luajit/lj_ctype.h' l='365'/>
+<use f='luajit/lj_ctype.h' l='374' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='49' u='r'/>

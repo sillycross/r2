@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='156' type='21'/>
+<doc f='luajit/lj_jit.h' l='156'>/* Trace aborted with error. */</doc>
+<use f='luajit/lj_trace.c' l='708' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='731' u='r' c='lj_trace_ins'/>

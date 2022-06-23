@@ -1,0 +1,11 @@
+<dec f='luajit/lj_obj.h' l='434' type='TValue'/>
+<offset>0</offset>
+<doc f='luajit/lj_obj.h' l='434'>/* If closed: the value itself. */</doc>
+<use f='luajit/lj_asm_x86.h' l='205' u='a' c='asm_fuseahuref'/>
+<use f='luajit/lj_func.c' l='77' u='a' c='func_emptyuv'/>
+<use f='luajit/lj_func.c' l='78' u='a' c='func_emptyuv'/>
+<use f='luajit/lj_gc.c' l='832' u='a' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='833' u='a' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='840' u='a' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='840' u='a' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='841' u='a' c='lj_gc_closeuv'/>

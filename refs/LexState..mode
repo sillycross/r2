@@ -1,0 +1,6 @@
+<dec f='luajit/lj_lex.h' l='69' type='const char *'/>
+<offset>1088</offset>
+<doc f='luajit/lj_lex.h' l='69'>/* Allow loading bytecode (b) and/or source text (t). */</doc>
+<use f='luajit/lj_load.c' l='37' u='r' c='cpparser'/>
+<use f='luajit/lj_load.c' l='37' u='r' c='cpparser'/>
+<use f='luajit/lj_load.c' l='56' u='w' c='lua_loadx'/>

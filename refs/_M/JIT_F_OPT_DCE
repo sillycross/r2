@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='81'/>
+<use f='luajit/lj_asm.c' l='2464' u='c'/>
+<use f='luajit/lj_opt_dce.c' l='66' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='235' u='c'/>

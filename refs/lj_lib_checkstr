@@ -1,0 +1,26 @@
+<dec f='luajit/lj_lib.h' l='34' type='GCstr * lj_lib_checkstr(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='50' u='c' c='lj_ffh_assert'/>
+<use f='luajit/lib_base.c' l='291' u='c' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_base.c' l='420' u='c' c='lj_cf_load'/>
+<use f='luajit/lib_ffi.c' l='478' u='c' c='lj_cf_ffi_cdef'/>
+<use f='luajit/lib_ffi.c' l='650' u='c' c='lj_cf_ffi_offsetof'/>
+<use f='luajit/lib_ffi.c' l='726' u='c' c='lj_cf_ffi_abi'/>
+<use f='luajit/lib_ffi.c' l='810' u='c' c='lj_cf_ffi_load'/>
+<use f='luajit/lib_io.c' l='85' u='c' c='io_file_open'/>
+<use f='luajit/lib_io.c' l='403' u='c' c='lj_cf_io_open'/>
+<use f='luajit/lib_io.c' l='414' u='c' c='lj_cf_io_popen'/>
+<use f='luajit/lib_jit.c' l='524' u='c' c='lj_cf_jit_opt_start'/>
+<use f='luajit/lib_jit.c' l='619' u='c' c='lj_cf_jit_profile_dumpstack'/>
+<use f='luajit/lib_string.c' l='43' u='c' c='lj_ffh_string_byte'/>
+<use f='luajit/lib_string.c' l='81' u='c' c='lj_ffh_string_sub'/>
+<use f='luajit/lib_string.c' l='89' u='c' c='lj_cf_string_rep'/>
+<use f='luajit/lib_string.c' l='108' u='c' c='lj_ffh_string_reverse'/>
+<use f='luajit/lib_string.c' l='452' u='c' c='str_find_aux'/>
+<use f='luajit/lib_string.c' l='453' u='c' c='str_find_aux'/>
+<use f='luajit/lib_string.c' l='539' u='c' c='lj_cf_string_gmatch'/>
+<use f='luajit/lib_string.c' l='540' u='c' c='lj_cf_string_gmatch'/>
+<def f='luajit/lj_lib.c' l='195' ll='209' type='GCstr * lj_lib_checkstr(lua_State * L, int narg)'/>
+<use f='luajit/lj_lib.c' l='214' u='c' c='lj_lib_optstr'/>
+<use f='luajit/lj_lib.c' l='292' u='c' c='lj_lib_checkopt'/>
+<use f='luajit/lj_meta.c' l='437' u='c' c='lj_meta_istype'/>
+<use f='luajit/lj_strfmt.c' l='376' u='c' c='lj_strfmt_putarg'/>

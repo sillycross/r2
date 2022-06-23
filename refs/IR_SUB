@@ -1,0 +1,20 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='42'/>
+<use f='luajit/lj_asm.c' l='1754' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='1390' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_ffrecord.c' l='627' u='r' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='632' u='r' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='802' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='813' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='921' u='r' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='930' u='r' c='recff_string_find'/>
+<use f='luajit/lj_opt_fold.c' l='271' c='kfold_intop'/>
+<use f='luajit/lj_opt_fold.c' l='378' c='kfold_int64arith'/>
+<use f='luajit/lj_opt_fold.c' l='994' u='r' c='fold_simplify_numadd_negx'/>
+<use f='luajit/lj_opt_fold.c' l='1004' u='r' c='fold_simplify_numadd_xneg'/>
+<use f='luajit/lj_opt_narrow.c' l='319' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='539' u='r' c='lj_opt_narrow_arith'/>
+<use f='luajit/lj_opt_narrow.c' l='584' u='r' c='lj_opt_narrow_mod'/>
+<use f='luajit/lj_record.c' l='1653' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1829' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='1879' u='r' c='rec_varg'/>
+<use f='luajit/lj_vmmath.c' l='43' u='r' c='lj_vm_foldarith'/>

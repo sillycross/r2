@@ -1,0 +1,6 @@
+<dec f='luajit/dasm_x86.h' l='59' type='int'/>
+<use f='luajit/dasm_x86.h' l='103' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='176' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='180' u='w' c='dasm_put'/>
+<offset>224</offset>
+<doc f='luajit/dasm_x86.h' l='59'>/* End of biased buffer position - max single put. */</doc>

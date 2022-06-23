@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='242' type='3'/>
+<doc f='luajit/lj_jit.h' l='242'>/* Tail-recursion. */</doc>
+<use f='luajit/lj_record.c' l='1696' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1775' u='r' c='rec_func_jit'/>

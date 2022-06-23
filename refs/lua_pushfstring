@@ -1,0 +1,25 @@
+<dec f='luajit/lua.h' l='168' type='const char * lua_pushfstring(lua_State * L, const char * fmt)'/>
+<use f='luajit/lib_aux.c' l='40' u='c' c='luaL_fileresult'/>
+<use f='luajit/lib_aux.c' l='42' u='c' c='luaL_fileresult'/>
+<use f='luajit/lib_debug.c' l='122' u='c' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lib_io.c' l='385' u='c' c='lj_cf_io_method___tostring'/>
+<use f='luajit/lib_package.c' l='210' u='c' c='ll_register'/>
+<use f='luajit/lib_package.c' l='219' u='c' c='ll_register'/>
+<use f='luajit/lib_package.c' l='233' u='c' c='mksymname'/>
+<use f='luajit/lib_package.c' l='330' u='c' c='searchpath'/>
+<use f='luajit/lib_package.c' l='403' u='c' c='lj_cf_package_loader_croot'/>
+<use f='luajit/lib_package.c' l='421' u='c' c='lj_cf_package_loader_preload'/>
+<def f='luajit/lj_api.c' l='678' ll='687' macro='1' type='const char * lua_pushfstring(lua_State * L, const char * fmt)'/>
+<use f='luajit/lj_debug.c' l='665' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='683' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='685' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='687' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='689' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='694' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='696' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_load.c' l='93' u='c' c='luaL_loadfilex'/>
+<use f='luajit/lj_load.c' l='96' u='c' c='luaL_loadfilex'/>
+<use f='luajit/lj_load.c' l='104' u='c' c='luaL_loadfilex'/>
+<use f='luajit/luajit.c' l='50' u='c' c='lstop'/>
+<use f='luajit/luajit.c' l='220' u='c' c='pushline'/>
+<use f='luajit/luajit.c' l='260' u='c' c='dotty'/>

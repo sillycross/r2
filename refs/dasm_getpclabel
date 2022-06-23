@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='73' type='int dasm_getpclabel(BuildCtx * ctx, unsigned int pc)'/>
+<def f='luajit/dasm_x86.h' l='499' ll='508' type='int dasm_getpclabel(BuildCtx * ctx, unsigned int pc)'/>
+<use f='luajit/host/buildvm.c' l='211' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='498'>/* Get PC label offset. */</doc>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_errmsg.h' l='117' macro='1' type='2196'/>
+<use f='luajit/lj_errmsg.h' l='117' macro='1' u='r'/>
+<use f='luajit/lj_cparse.c' l='734' u='r' c='cp_expr_unary'/>
+<use f='luajit/lj_cparse.c' l='771' u='r' c='cp_add'/>
+<use f='luajit/lj_cparse.c' l='1684' u='r' c='cp_declarator'/>
+<use f='luajit/lj_parse.c' l='2040' u='r' c='synlevel_begin'/>

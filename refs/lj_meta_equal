@@ -1,0 +1,4 @@
+<dec f='luajit/lj_meta.h' l='31' type='TValue * lj_meta_equal(lua_State * L, GCobj * o1, GCobj * o2, int ne)'/>
+<use f='luajit/lj_api.c' l='311' u='c' c='lua_equal'/>
+<def f='luajit/lj_meta.c' l='329' ll='352' type='TValue * lj_meta_equal(lua_State * L, GCobj * o1, GCobj * o2, int ne)'/>
+<doc f='luajit/lj_meta.c' l='328'>/* Helper for equality comparisons. __eq metamethod. */</doc>

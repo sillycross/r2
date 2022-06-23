@@ -1,0 +1,19 @@
+<dec f='luajit/lj_lex.h' l='65' type='BCLine'/>
+<offset>896</offset>
+<doc f='luajit/lj_lex.h' l='65'>/* Input line counter. */</doc>
+<use f='luajit/lj_lex.c' l='88' u='w' c='lex_newline'/>
+<use f='luajit/lj_lex.c' l='411' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='457' u='r' c='lj_lex_next'/>
+<use f='luajit/lj_lex.c' l='500' u='r' c='lj_lex_error'/>
+<use f='luajit/lj_parse.c' l='1021' u='r' c='lex_match'/>
+<use f='luajit/lj_parse.c' l='1218' u='w' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1251' u='w' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1722' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1874' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1911' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1957' u='r' c='expr_primary'/>
+<use f='luajit/lj_parse.c' l='2027' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2267' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='2562' u='r' c='parse_for_iter'/>
+<use f='luajit/lj_parse.c' l='2643' u='r' c='parse_stmt'/>
+<use f='luajit/lj_parse.c' l='2741' u='r' c='lj_parse'/>

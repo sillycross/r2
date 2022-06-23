@@ -1,0 +1,5 @@
+<dec f='luajit/lj_cconv.h' l='54'/>
+<use f='luajit/lj_cconv.c' l='31' u='c'/>
+<use f='luajit/lj_cconv.c' l='32' u='c'/>
+<use f='luajit/lj_cconv.c' l='43' u='c'/>
+<use f='luajit/lj_cconv.c' l='44' u='c'/>

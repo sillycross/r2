@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='313'/>
+<doc f='luajit/lua.h' l='310'>/*
+** Event codes
+*/</doc>
+<use f='luajit/lj_dispatch.c' l='497' u='c'/>

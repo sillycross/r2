@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm.h' l='94' type='void emit_peobj(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='482' u='c' c='main'/>
+<def f='luajit/host/buildvm_peobj.c' l='171' ll='368' type='void emit_peobj(BuildCtx * ctx)'/>
+<doc f='luajit/host/buildvm_peobj.c' l='170'>/* Emit Windows PE object file. */</doc>

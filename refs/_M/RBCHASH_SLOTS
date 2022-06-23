@@ -1,0 +1,2 @@
+<dec f='luajit/lj_jit.h' l='341'/>
+<doc f='luajit/lj_jit.h' l='340'>/* Number of slots in the reverse bytecode hash table. Must be a power of 2. */</doc>

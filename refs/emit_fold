@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm.h' l='96' type='void emit_fold(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='502' u='c' c='main'/>
+<def f='luajit/host/buildvm_fold.c' l='168' ll='228' type='void emit_fold(BuildCtx * ctx)'/>
+<doc f='luajit/host/buildvm_fold.c' l='167'>/* Emit C source code for IR folding hash table. */</doc>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_lex.h' l='68' type='const char *'/>
+<offset>1024</offset>
+<doc f='luajit/lj_lex.h' l='68'>/* Chunk name argument. */</doc>
+<use f='luajit/lj_bcread.c' l='40' u='r' c='bcread_error'/>
+<use f='luajit/lj_bcread.c' l='408' u='r' c='bcread_header'/>
+<use f='luajit/lj_bcread.c' l='408' u='r' c='bcread_header'/>
+<use f='luajit/lj_load.c' l='55' u='w' c='lua_loadx'/>
+<use f='luajit/lj_parse.c' l='2724' u='r' c='lj_parse'/>
+<use f='luajit/lj_parse.c' l='2724' u='r' c='lj_parse'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/luajit.h' l='46' type='2'/>
+<doc f='luajit/luajit.h' l='46'>/* Change mode for a function. */</doc>
+<use f='luajit/lib_jit.c' l='57' u='r' c='setjitmode'/>
+<use f='luajit/lj_dispatch.c' l='260' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='274' u='r' c='luaJIT_setmode'/>

@@ -1,0 +1,21 @@
+<dec f='luajit/lj_iropt.h' l='86' type='TRef lj_ir_tonum(jit_State * J, TRef tr)'/>
+<use f='luajit/lj_ffrecord.c' l='518' u='c' c='recff_math_abs'/>
+<use f='luajit/lj_ffrecord.c' l='528' u='c' c='recff_math_round'/>
+<use f='luajit/lj_ffrecord.c' l='542' u='c' c='recff_math_unary'/>
+<use f='luajit/lj_ffrecord.c' l='548' u='c' c='recff_math_log'/>
+<use f='luajit/lj_ffrecord.c' l='555' u='c' c='recff_math_log'/>
+<use f='luajit/lj_ffrecord.c' l='570' u='c' c='recff_math_atan2'/>
+<use f='luajit/lj_ffrecord.c' l='571' u='c' c='recff_math_atan2'/>
+<use f='luajit/lj_ffrecord.c' l='579' u='c' c='recff_math_ldexp'/>
+<use f='luajit/lj_ffrecord.c' l='581' u='c' c='recff_math_ldexp'/>
+<use f='luajit/lj_ffrecord.c' l='591' u='c' c='recff_math_call'/>
+<use f='luajit/lj_ffrecord.c' l='629' u='c' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='631' u='c' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='1000' u='c' c='recff_string_format'/>
+<def f='luajit/lj_ir.c' l='424' ll='435' type='TRef lj_ir_tonum(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_ir.c' l='423'>/* Convert from integer or string to number. */</doc>
+<use f='luajit/lj_opt_narrow.c' l='579' u='c' c='lj_opt_narrow_mod'/>
+<use f='luajit/lj_opt_narrow.c' l='580' u='c' c='lj_opt_narrow_mod'/>
+<use f='luajit/lj_opt_narrow.c' l='591' u='c' c='lj_opt_narrow_pow'/>
+<use f='luajit/lj_opt_narrow.c' l='612' u='c' c='lj_opt_narrow_pow'/>
+<use f='luajit/lj_record.c' l='2209' u='c' c='lj_record_ins'/>

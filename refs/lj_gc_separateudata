@@ -1,0 +1,6 @@
+<dec f='luajit/lj_gc.h' l='49' type='size_t lj_gc_separateudata(global_State * g, int all)'/>
+<def f='luajit/lj_gc.c' l='138' ll='165' type='size_t lj_gc_separateudata(global_State * g, int all)'/>
+<use f='luajit/lj_gc.c' l='634' u='c' c='atomic'/>
+<doc f='luajit/lj_gc.c' l='137'>/* Separate userdata objects to be finalized to mmudata list. */</doc>
+<use f='luajit/lj_state.c' l='286' u='c' c='lua_close'/>
+<use f='luajit/lj_state.c' l='299' u='c' c='lua_close'/>

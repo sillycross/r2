@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='28' type='void luaL_register(lua_State * L, const char * libname, const luaL_Reg * l)'/>
+<def f='luajit/lib_aux.c' l='142' ll='146' macro='1' type='void luaL_register(lua_State * L, const char * libname, const luaL_Reg * l)'/>
+<use f='luajit/lib_package.c' l='600' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='624' u='c' c='luaopen_package'/>

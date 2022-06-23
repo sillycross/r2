@@ -1,0 +1,3 @@
+<def f='luajit/lj_prng.h' l='16' ll='22' type='void lj_prng_seed_fixed(PRNGState * rs)'/>
+<use f='luajit/lib_math.c' l='197' u='c' c='luaopen_math'/>
+<doc f='luajit/lj_prng.h' l='15'>/* This is just the precomputed result of lib_math.c:random_seed(rs, 0.0). */</doc>

@@ -1,0 +1,26 @@
+<dec f='luajit/lj_ccall.h' l='178' type='FPRArg [8]'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<offset>128</offset>
+<doc f='luajit/lj_ccall.h' l='178'>/* Arguments/results in FPRs. */</doc>
+<use f='luajit/lj_ccall.c' l='684' u='m' c='ccall_struct_reg'/>
+<use f='luajit/lj_ccall.c' l='719' u='m' c='ccall_struct_ret'/>
+<use f='luajit/lj_ccall.c' l='941' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='941' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='177' u='a' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1083' u='a' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1084' u='m' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1084' u='m' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1085' u='m' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='155' u='m' c='ccall_get_results'/>
+<use f='luajit/lj_ccall.c' l='157' u='m' c='ccall_get_results'/>
+<use f='luajit/lj_ccall.c' l='158' u='m' c='ccall_get_results'/>
+<use f='luajit/lj_ccall.c' l='1139' u='a' c='ccall_get_results'/>

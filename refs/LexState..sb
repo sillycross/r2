@@ -1,0 +1,46 @@
+<dec f='luajit/lj_lex.h' l='62' type='SBuf'/>
+<offset>512</offset>
+<doc f='luajit/lj_lex.h' l='62'>/* String buffer for tokens. */</doc>
+<use f='luajit/lj_bcread.c' l='56' u='m' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='59' u='a' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='59' u='a' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='63' u='a' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='69' u='m' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='79' u='a' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='80' u='m' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='81' u='m' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='423' u='a' c='lj_bcread'/>
+<use f='luajit/lj_lex.c' l='71' u='a' c='lex_save'/>
+<use f='luajit/lj_lex.c' l='108' u='m' c='lex_number'/>
+<use f='luajit/lj_lex.c' l='108' u='a' c='lex_number'/>
+<use f='luajit/lj_lex.c' l='108' u='a' c='lex_number'/>
+<use f='luajit/lj_lex.c' l='171' u='a' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='179' u='m' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='180' u='a' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='180' u='a' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='285' u='m' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='285' u='a' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='285' u='a' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='293' u='a' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='305' u='m' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='305' u='a' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='305' u='a' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='328' u='a' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='331' u='a' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='451' u='a' c='lj_lex_cleanup'/>
+<use f='luajit/lj_lex.c' l='495' u='m' c='lj_lex_error'/>
+<use f='luajit/lj_load.c' l='57' u='a' c='lua_loadx'/>
+<use f='luajit/lj_parse.c' l='1461' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1466' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1468' u='m' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1470' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1470' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1479' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1483' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1489' u='m' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1493' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1494' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1494' u='a' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1502' u='m' c='fs_fixup_var'/>
+<use f='luajit/lj_parse.c' l='1502' u='a' c='fs_fixup_var'/>
+<use f='luajit/lj_parse.c' l='1502' u='a' c='fs_fixup_var'/>

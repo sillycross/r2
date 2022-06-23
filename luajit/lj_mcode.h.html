@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_mcode.h source code [luajit/lj_mcode.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_mcode.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_mcode.h.html'>lj_mcode.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Machine code management.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_MCODE_H">_LJ_MCODE_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_MCODE_H" data-ref="_M/_LJ_MCODE_H">_LJ_MCODE_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a> || <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_mcode_sync" title='lj_mcode_sync' data-ref="lj_mcode_sync" data-ref-filename="lj_mcode_sync">lj_mcode_sync</dfn>(<em>void</em> *<dfn class="local col1 decl" id="1start" title='start' data-type='void *' data-ref="1start" data-ref-filename="1start">start</dfn>, <em>void</em> *<dfn class="local col2 decl" id="2end" title='end' data-type='void *' data-ref="2end" data-ref-filename="2end">end</dfn>);</td></tr>
+<tr><th id="13">13</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><u>#<span data-ppcond="15">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><u>#include <a href="lj_jit.h.html">"lj_jit.h"</a></u></td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_mcode_free" title='lj_mcode_free' data-ref="lj_mcode_free" data-ref-filename="lj_mcode_free">lj_mcode_free</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col3 decl" id="3J" title='J' data-type='jit_State *' data-ref="3J" data-ref-filename="3J">J</dfn>);</td></tr>
+<tr><th id="20">20</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_jit.h.html#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl fn" id="lj_mcode_reserve" title='lj_mcode_reserve' data-ref="lj_mcode_reserve" data-ref-filename="lj_mcode_reserve">lj_mcode_reserve</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col4 decl" id="4J" title='J' data-type='jit_State *' data-ref="4J" data-ref-filename="4J">J</dfn>, <a class="typedef" href="lj_jit.h.html#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> **<dfn class="local col5 decl" id="5lim" title='lim' data-type='MCode **' data-ref="5lim" data-ref-filename="5lim">lim</dfn>);</td></tr>
+<tr><th id="21">21</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_mcode_commit" title='lj_mcode_commit' data-ref="lj_mcode_commit" data-ref-filename="lj_mcode_commit">lj_mcode_commit</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col6 decl" id="6J" title='J' data-type='jit_State *' data-ref="6J" data-ref-filename="6J">J</dfn>, <a class="typedef" href="lj_jit.h.html#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="local col7 decl" id="7m" title='m' data-type='MCode *' data-ref="7m" data-ref-filename="7m">m</dfn>);</td></tr>
+<tr><th id="22">22</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_mcode_abort" title='lj_mcode_abort' data-ref="lj_mcode_abort" data-ref-filename="lj_mcode_abort">lj_mcode_abort</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col8 decl" id="8J" title='J' data-type='jit_State *' data-ref="8J" data-ref-filename="8J">J</dfn>);</td></tr>
+<tr><th id="23">23</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_jit.h.html#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="decl fn" id="lj_mcode_patch" title='lj_mcode_patch' data-ref="lj_mcode_patch" data-ref-filename="lj_mcode_patch">lj_mcode_patch</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col9 decl" id="9J" title='J' data-type='jit_State *' data-ref="9J" data-ref-filename="9J">J</dfn>, <a class="typedef" href="lj_jit.h.html#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="local col0 decl" id="10ptr" title='ptr' data-type='MCode *' data-ref="10ptr" data-ref-filename="10ptr">ptr</dfn>, <em>int</em> <dfn class="local col1 decl" id="11finish" title='finish' data-type='int' data-ref="11finish" data-ref-filename="11finish">finish</dfn>);</td></tr>
+<tr><th id="24">24</th><td><a class="macro" href="lj_def.h.html#337" title="extern __attribute__((visibility(&quot;hidden&quot;))) __attribute__((noreturn))" data-ref="_M/LJ_FUNC_NORET">LJ_FUNC_NORET</a> <em>void</em> <dfn class="decl fn" id="lj_mcode_limiterr" title='lj_mcode_limiterr' data-ref="lj_mcode_limiterr" data-ref-filename="lj_mcode_limiterr">lj_mcode_limiterr</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col2 decl" id="12J" title='J' data-type='jit_State *' data-ref="12J" data-ref-filename="12J">J</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col3 decl" id="13need" title='need' data-type='size_t' data-ref="13need" data-ref-filename="13need">need</dfn>);</td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/lj_mcode_commitbot" data-ref="_M/lj_mcode_commitbot">lj_mcode_commitbot</dfn>(J, m)	(J-&gt;mcbot = (m))</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="15">endif</span></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lj_asm.c.html'>luajit/lj_asm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

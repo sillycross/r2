@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='180' type='void lua_rawget(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='90' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_base.c' l='495' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='293' u='c' c='hookf'/>
+<use f='luajit/lib_debug.c' l='353' u='c' c='lj_cf_debug_gethook'/>
+<def f='luajit/lj_api.c' l='826' ll='831' macro='1' type='void lua_rawget(lua_State * L, int idx)'/>

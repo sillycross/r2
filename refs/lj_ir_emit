@@ -1,0 +1,42 @@
+<dec f='luajit/lj_iropt.h' l='17' type='TRef lj_ir_emit(jit_State * J)'/>
+<use f='luajit/lj_asm.c' l='678' u='c' c='ra_addrename'/>
+<def f='luajit/lj_ir.c' l='116' ll='128' type='TRef lj_ir_emit(jit_State * J)'/>
+<doc f='luajit/lj_ir.c' l='115'>/* Emit IR without any optimizations. */</doc>
+<use f='luajit/lj_opt_fold.c' l='597' macro='1' u='c' c='fold_bufput_append'/>
+<use f='luajit/lj_opt_fold.c' l='618' macro='1' u='c' c='fold_bufput_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='659' macro='1' u='c' c='fold_bufstr_kfold_cse'/>
+<use f='luajit/lj_opt_fold.c' l='678' macro='1' u='c' c='fold_bufput_kfold_op'/>
+<use f='luajit/lj_opt_fold.c' l='695' macro='1' u='c' c='fold_bufput_kfold_rep'/>
+<use f='luajit/lj_opt_fold.c' l='737' macro='1' u='c' c='fold_bufput_kfold_fmt'/>
+<use f='luajit/lj_opt_fold.c' l='1329' macro='1' u='c' c='fold_cse_conv'/>
+<use f='luajit/lj_opt_fold.c' l='1942' macro='1' u='c' c='fold_abc_k'/>
+<use f='luajit/lj_opt_fold.c' l='2174' macro='1' u='c' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='2248' macro='1' u='c' c='fold_fload_tab_ah'/>
+<use f='luajit/lj_opt_fold.c' l='2343' macro='1' u='c' c='fold_fwd_sload'/>
+<use f='luajit/lj_opt_fold.c' l='2377' macro='1' u='c' c='fold_barrier_tab'/>
+<use f='luajit/lj_opt_fold.c' l='2399' macro='1' u='c' c='fold_prof'/>
+<use f='luajit/lj_folddef.h' l='159' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='2471' u='c' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2477' u='c' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2570' u='c' c='lj_opt_cselim'/>
+<use f='luajit/lj_opt_loop.c' l='99' u='c' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='99' u='c' c='loop_unroll'/>
+<use f='luajit/lj_opt_mem.c' l='252' macro='1' u='c' c='lj_opt_fwd_aload'/>
+<use f='luajit/lj_opt_mem.c' l='261' macro='1' u='c' c='lj_opt_fwd_hload'/>
+<use f='luajit/lj_opt_mem.c' l='381' macro='1' u='c' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='442' macro='1' u='c' c='lj_opt_fwd_alen'/>
+<use f='luajit/lj_opt_mem.c' l='502' u='c' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_opt_mem.c' l='552' macro='1' u='c' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='642' macro='1' u='c' c='lj_opt_dse_fstore'/>
+<use f='luajit/lj_opt_mem.c' l='849' macro='1' u='c' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='893' macro='1' u='c' c='lj_opt_dse_xstore'/>
+<use f='luajit/lj_opt_narrow.c' l='99' u='c' c='narrow_conv_emit'/>
+<use f='luajit/lj_record.c' l='45' u='c' c='sloadt'/>
+<use f='luajit/lj_record.c' l='45' u='c' c='sload'/>
+<use f='luajit/lj_record.c' l='45' u='c' c='rec_comp_prep'/>
+<use f='luajit/lj_record.c' l='45' u='c' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='33' u='c' c='lj_snap_add'/>
+<use f='luajit/lj_snap.c' l='33' u='c' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='33' u='c' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='33' u='c' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='33' u='c' c='lj_snap_replay'/>

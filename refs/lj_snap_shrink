@@ -1,0 +1,4 @@
+<dec f='luajit/lj_snap.h' l='15' type='void lj_snap_shrink(jit_State * J)'/>
+<use f='luajit/lj_record.c' l='1994' u='c' c='rec_comp_fixup'/>
+<def f='luajit/lj_snap.c' l='324' ll='345' type='void lj_snap_shrink(jit_State * J)'/>
+<doc f='luajit/lj_snap.c' l='323'>/* Shrink last snapshot. */</doc>

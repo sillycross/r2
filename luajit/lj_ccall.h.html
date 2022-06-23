@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_ccall.h source code [luajit/lj_ccall.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="CCallState,FPRArg "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_ccall.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_ccall.h.html'>lj_ccall.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** FFI C call handling.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_CCALL_H">_LJ_CCALL_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_CCALL_H" data-ref="_M/_LJ_CCALL_H">_LJ_CCALL_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_ctype.h.html">"lj_ctype.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/* -- C calling conventions ----------------------------------------------- */</i></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><u>#<span data-ppcond="16">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="18">if</span> LJ_TARGET_X86</u></td></tr>
+<tr><th id="19">19</th><td><u>#define CCALL_NARG_GPR		2	/* For fastcall arguments. */</u></td></tr>
+<tr><th id="20">20</th><td><u>#define CCALL_NARG_FPR		0</u></td></tr>
+<tr><th id="21">21</th><td><u>#define CCALL_NRET_GPR		2</u></td></tr>
+<tr><th id="22">22</th><td><u>#define CCALL_NRET_FPR		1	/* For FP results on x87 stack. */</u></td></tr>
+<tr><th id="23">23</th><td><u>#define CCALL_ALIGN_STACKARG	0	/* Don't align argument on stack. */</u></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="18">elif</span> <a class="macro" href="lj_arch.h.html#622" title="0" data-ref="_M/LJ_ABI_WIN">LJ_ABI_WIN</a></u></td></tr>
+<tr><th id="25">25</th><td><u>#define CCALL_NARG_GPR		4</u></td></tr>
+<tr><th id="26">26</th><td><u>#define CCALL_NARG_FPR		4</u></td></tr>
+<tr><th id="27">27</th><td><u>#define CCALL_NRET_GPR		1</u></td></tr>
+<tr><th id="28">28</th><td><u>#define CCALL_NRET_FPR		1</u></td></tr>
+<tr><th id="29">29</th><td><u>#define CCALL_SPS_EXTRA		4</u></td></tr>
+<tr><th id="30">30</th><td><u>#<span data-ppcond="18">else</span></u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/CCALL_NARG_GPR" data-ref="_M/CCALL_NARG_GPR">CCALL_NARG_GPR</dfn>		6</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/CCALL_NARG_FPR" data-ref="_M/CCALL_NARG_FPR">CCALL_NARG_FPR</dfn>		8</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/CCALL_NRET_GPR" data-ref="_M/CCALL_NRET_GPR">CCALL_NRET_GPR</dfn>		2</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/CCALL_NRET_FPR" data-ref="_M/CCALL_NRET_FPR">CCALL_NRET_FPR</dfn>		2</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/CCALL_VECTOR_REG" data-ref="_M/CCALL_VECTOR_REG">CCALL_VECTOR_REG</dfn>	1	/* Pass vectors in registers. */</u></td></tr>
+<tr><th id="36">36</th><td><u>#<span data-ppcond="18">endif</span></u></td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/CCALL_SPS_FREE" data-ref="_M/CCALL_SPS_FREE">CCALL_SPS_FREE</dfn>		1</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/CCALL_ALIGN_CALLSTATE" data-ref="_M/CCALL_ALIGN_CALLSTATE">CCALL_ALIGN_CALLSTATE</dfn>	16</u></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><b>typedef</b> <a class="macro" href="lj_def.h.html#126" title="__attribute__((aligned(16)))" data-ref="_M/LJ_ALIGN">LJ_ALIGN</a>(<var>16</var>) <b>union</b> <dfn class="type def" id="FPRArg" title='FPRArg' data-ref="FPRArg" data-ref-filename="FPRArg"><a class="type" href="#FPRArg" title='FPRArg' data-ref="FPRArg" data-ref-filename="FPRArg">FPRArg</a></dfn> {</td></tr>
+<tr><th id="42">42</th><td>  <em>double</em> <dfn class="decl field" id="FPRArg::d" title='FPRArg::d' data-ref="FPRArg::d" data-ref-filename="FPRArg..d">d</dfn>[<var>2</var>];</td></tr>
+<tr><th id="43">43</th><td>  <em>float</em> <dfn class="decl field" id="FPRArg::f" title='FPRArg::f' data-ref="FPRArg::f" data-ref-filename="FPRArg..f">f</dfn>[<var>4</var>];</td></tr>
+<tr><th id="44">44</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="FPRArg::b" title='FPRArg::b' data-ref="FPRArg::b" data-ref-filename="FPRArg..b">b</dfn>[<var>16</var>];</td></tr>
+<tr><th id="45">45</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="FPRArg::s" title='FPRArg::s' data-ref="FPRArg::s" data-ref-filename="FPRArg..s">s</dfn>[<var>8</var>];</td></tr>
+<tr><th id="46">46</th><td>  <em>int</em> <dfn class="decl field" id="FPRArg::i" title='FPRArg::i' data-ref="FPRArg::i" data-ref-filename="FPRArg..i">i</dfn>[<var>4</var>];</td></tr>
+<tr><th id="47">47</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="FPRArg::l" title='FPRArg::l' data-ref="FPRArg::l" data-ref-filename="FPRArg..l">l</dfn>[<var>2</var>];</td></tr>
+<tr><th id="48">48</th><td>} <dfn class="typedef" id="FPRArg" title='FPRArg' data-type='union FPRArg' data-ref="FPRArg" data-ref-filename="FPRArg">FPRArg</dfn>;</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td><b>typedef</b> <a class="typedef" href="../include/stdint.h.html#intptr_t" title='intptr_t' data-type='long' data-ref="intptr_t" data-ref-filename="intptr_t">intptr_t</a> <dfn class="typedef" id="GPRArg" title='GPRArg' data-type='intptr_t' data-ref="GPRArg" data-ref-filename="GPRArg">GPRArg</dfn>;</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><u>#<span data-ppcond="16">elif</span> LJ_TARGET_ARM</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td><u>#define CCALL_NARG_GPR		4</u></td></tr>
+<tr><th id="55">55</th><td><u>#define CCALL_NRET_GPR		2	/* For softfp double. */</u></td></tr>
+<tr><th id="56">56</th><td><u>#if LJ_ABI_SOFTFP</u></td></tr>
+<tr><th id="57">57</th><td><u>#define CCALL_NARG_FPR		0</u></td></tr>
+<tr><th id="58">58</th><td><u>#define CCALL_NRET_FPR		0</u></td></tr>
+<tr><th id="59">59</th><td><u>#else</u></td></tr>
+<tr><th id="60">60</th><td><u>#define CCALL_NARG_FPR		8</u></td></tr>
+<tr><th id="61">61</th><td><u>#define CCALL_NRET_FPR		4</u></td></tr>
+<tr><th id="62">62</th><td><u>#endif</u></td></tr>
+<tr><th id="63">63</th><td><u>#define CCALL_SPS_FREE		0</u></td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><b>typedef</b> intptr_t GPRArg;</td></tr>
+<tr><th id="66">66</th><td><b>typedef</b> <b>union</b> FPRArg {</td></tr>
+<tr><th id="67">67</th><td>  <em>double</em> d;</td></tr>
+<tr><th id="68">68</th><td>  <em>float</em> f[<var>2</var>];</td></tr>
+<tr><th id="69">69</th><td>} FPRArg;</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td><u>#elif LJ_TARGET_ARM64</u></td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td><u>#define CCALL_NARG_GPR		8</u></td></tr>
+<tr><th id="74">74</th><td><u>#define CCALL_NRET_GPR		2</u></td></tr>
+<tr><th id="75">75</th><td><u>#define CCALL_NARG_FPR		8</u></td></tr>
+<tr><th id="76">76</th><td><u>#define CCALL_NRET_FPR		4</u></td></tr>
+<tr><th id="77">77</th><td><u>#define CCALL_SPS_FREE		0</u></td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><b>typedef</b> intptr_t GPRArg;</td></tr>
+<tr><th id="80">80</th><td><b>typedef</b> <b>union</b> FPRArg {</td></tr>
+<tr><th id="81">81</th><td>  <em>double</em> d;</td></tr>
+<tr><th id="82">82</th><td>  <b>struct</b> { LJ_ENDIAN_LOHI(<em>float</em> f; , <em>float</em> g;) };</td></tr>
+<tr><th id="83">83</th><td>  <b>struct</b> { LJ_ENDIAN_LOHI(uint32_t lo; , uint32_t hi;) };</td></tr>
+<tr><th id="84">84</th><td>} FPRArg;</td></tr>
+<tr><th id="85">85</th><td></td></tr>
+<tr><th id="86">86</th><td><u>#elif LJ_TARGET_PPC</u></td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td><u>#define CCALL_NARG_GPR		8</u></td></tr>
+<tr><th id="89">89</th><td><u>#define CCALL_NARG_FPR		(LJ_ABI_SOFTFP ? 0 : 8)</u></td></tr>
+<tr><th id="90">90</th><td><u>#define CCALL_NRET_GPR		4	/* For complex double. */</u></td></tr>
+<tr><th id="91">91</th><td><u>#define CCALL_NRET_FPR		(LJ_ABI_SOFTFP ? 0 : 1)</u></td></tr>
+<tr><th id="92">92</th><td><u>#define CCALL_SPS_EXTRA		4</u></td></tr>
+<tr><th id="93">93</th><td><u>#define CCALL_SPS_FREE		0</u></td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td><b>typedef</b> intptr_t GPRArg;</td></tr>
+<tr><th id="96">96</th><td><b>typedef</b> <em>double</em> FPRArg;</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><u>#elif LJ_TARGET_MIPS32</u></td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td><u>#define CCALL_NARG_GPR		4</u></td></tr>
+<tr><th id="101">101</th><td><u>#define CCALL_NARG_FPR		(LJ_ABI_SOFTFP ? 0 : 2)</u></td></tr>
+<tr><th id="102">102</th><td><u>#define CCALL_NRET_GPR		(LJ_ABI_SOFTFP ? 4 : 2)</u></td></tr>
+<tr><th id="103">103</th><td><u>#define CCALL_NRET_FPR		(LJ_ABI_SOFTFP ? 0 : 2)</u></td></tr>
+<tr><th id="104">104</th><td><u>#define CCALL_SPS_EXTRA		7</u></td></tr>
+<tr><th id="105">105</th><td><u>#define CCALL_SPS_FREE		1</u></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><b>typedef</b> intptr_t GPRArg;</td></tr>
+<tr><th id="108">108</th><td><b>typedef</b> <b>union</b> FPRArg {</td></tr>
+<tr><th id="109">109</th><td>  <em>double</em> d;</td></tr>
+<tr><th id="110">110</th><td>  <b>struct</b> { LJ_ENDIAN_LOHI(<em>float</em> f; , <em>float</em> g;) };</td></tr>
+<tr><th id="111">111</th><td>} FPRArg;</td></tr>
+<tr><th id="112">112</th><td></td></tr>
+<tr><th id="113">113</th><td><u>#elif LJ_TARGET_MIPS64</u></td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td><i>/* FP args are positional and overlay the GPR array. */</i></td></tr>
+<tr><th id="116">116</th><td><u>#define CCALL_NARG_GPR		8</u></td></tr>
+<tr><th id="117">117</th><td><u>#define CCALL_NARG_FPR		0</u></td></tr>
+<tr><th id="118">118</th><td><u>#define CCALL_NRET_GPR		2</u></td></tr>
+<tr><th id="119">119</th><td><u>#define CCALL_NRET_FPR		(LJ_ABI_SOFTFP ? 0 : 2)</u></td></tr>
+<tr><th id="120">120</th><td><u>#define CCALL_SPS_EXTRA		3</u></td></tr>
+<tr><th id="121">121</th><td><u>#define CCALL_SPS_FREE		1</u></td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td><b>typedef</b> intptr_t GPRArg;</td></tr>
+<tr><th id="124">124</th><td><b>typedef</b> <b>union</b> FPRArg {</td></tr>
+<tr><th id="125">125</th><td>  <em>double</em> d;</td></tr>
+<tr><th id="126">126</th><td>  <b>struct</b> { LJ_ENDIAN_LOHI(<em>float</em> f; , <em>float</em> g;) };</td></tr>
+<tr><th id="127">127</th><td>} FPRArg;</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td><u>#else</u></td></tr>
+<tr><th id="130">130</th><td><u>#error "Missing calling convention definitions for this architecture"</u></td></tr>
+<tr><th id="131">131</th><td><u>#<span data-ppcond="16">endif</span></u></td></tr>
+<tr><th id="132">132</th><td></td></tr>
+<tr><th id="133">133</th><td><u>#<span data-ppcond="133">ifndef</span> <span class="macro" data-ref="_M/CCALL_SPS_EXTRA">CCALL_SPS_EXTRA</span></u></td></tr>
+<tr><th id="134">134</th><td><u>#define <dfn class="macro" id="_M/CCALL_SPS_EXTRA" data-ref="_M/CCALL_SPS_EXTRA">CCALL_SPS_EXTRA</dfn>		0</u></td></tr>
+<tr><th id="135">135</th><td><u>#<span data-ppcond="133">endif</span></u></td></tr>
+<tr><th id="136">136</th><td><u>#<span data-ppcond="136">ifndef</span> <a class="macro" href="#35" data-ref="_M/CCALL_VECTOR_REG">CCALL_VECTOR_REG</a></u></td></tr>
+<tr><th id="137">137</th><td><u>#define CCALL_VECTOR_REG	0</u></td></tr>
+<tr><th id="138">138</th><td><u>#<span data-ppcond="136">endif</span></u></td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="139">ifndef</span> <span class="macro" data-ref="_M/CCALL_ALIGN_STACKARG">CCALL_ALIGN_STACKARG</span></u></td></tr>
+<tr><th id="140">140</th><td><u>#define <dfn class="macro" id="_M/CCALL_ALIGN_STACKARG" data-ref="_M/CCALL_ALIGN_STACKARG">CCALL_ALIGN_STACKARG</dfn>	1</u></td></tr>
+<tr><th id="141">141</th><td><u>#<span data-ppcond="139">endif</span></u></td></tr>
+<tr><th id="142">142</th><td><u>#<span data-ppcond="142">ifndef</span> <a class="macro" href="#39" data-ref="_M/CCALL_ALIGN_CALLSTATE">CCALL_ALIGN_CALLSTATE</a></u></td></tr>
+<tr><th id="143">143</th><td><u>#define CCALL_ALIGN_CALLSTATE	8</u></td></tr>
+<tr><th id="144">144</th><td><u>#<span data-ppcond="142">endif</span></u></td></tr>
+<tr><th id="145">145</th><td></td></tr>
+<tr><th id="146">146</th><td><u>#define <dfn class="macro" id="_M/CCALL_NUM_GPR" data-ref="_M/CCALL_NUM_GPR">CCALL_NUM_GPR</dfn> \</u></td></tr>
+<tr><th id="147">147</th><td><u>  (CCALL_NARG_GPR &gt; CCALL_NRET_GPR ? CCALL_NARG_GPR : CCALL_NRET_GPR)</u></td></tr>
+<tr><th id="148">148</th><td><u>#define <dfn class="macro" id="_M/CCALL_NUM_FPR" data-ref="_M/CCALL_NUM_FPR">CCALL_NUM_FPR</dfn> \</u></td></tr>
+<tr><th id="149">149</th><td><u>  (CCALL_NARG_FPR &gt; CCALL_NRET_FPR ? CCALL_NARG_FPR : CCALL_NRET_FPR)</u></td></tr>
+<tr><th id="150">150</th><td></td></tr>
+<tr><th id="151">151</th><td><i>/* Check against constants in lj_ctype.h. */</i></td></tr>
+<tr><th id="152">152</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_92(int STATIC_ASSERTION_FAILED[((6 &gt; 2 ? 6 : 2) &lt;= 8)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(<a class="macro" href="#146" title="(6 &gt; 2 ? 6 : 2)" data-ref="_M/CCALL_NUM_GPR">CCALL_NUM_GPR</a> &lt;= <a class="macro" href="lj_ctype.h.html#155" title="8" data-ref="_M/CCALL_MAX_GPR">CCALL_MAX_GPR</a>);</td></tr>
+<tr><th id="153">153</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_94(int STATIC_ASSERTION_FAILED[((8 &gt; 2 ? 8 : 2) &lt;= 8)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(<a class="macro" href="#148" title="(8 &gt; 2 ? 8 : 2)" data-ref="_M/CCALL_NUM_FPR">CCALL_NUM_FPR</a> &lt;= <a class="macro" href="lj_ctype.h.html#156" title="8" data-ref="_M/CCALL_MAX_FPR">CCALL_MAX_FPR</a>);</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td><u>#define <dfn class="macro" id="_M/CCALL_MAXSTACK" data-ref="_M/CCALL_MAXSTACK">CCALL_MAXSTACK</dfn>		32</u></td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><i>/* -- C call state -------------------------------------------------------- */</i></td></tr>
+<tr><th id="158">158</th><td></td></tr>
+<tr><th id="159">159</th><td><b>typedef</b> <a class="macro" href="lj_def.h.html#126" title="__attribute__((aligned(16)))" data-ref="_M/LJ_ALIGN">LJ_ALIGN</a>(<a class="macro" href="#39" title="16" data-ref="_M/CCALL_ALIGN_CALLSTATE">CCALL_ALIGN_CALLSTATE</a>) <b>struct</b> <dfn class="type def" id="CCallState" title='CCallState' data-ref="CCallState" data-ref-filename="CCallState"><a class="type" href="#CCallState" title='CCallState' data-ref="CCallState" data-ref-filename="CCallState">CCallState</a></dfn> {</td></tr>
+<tr><th id="160">160</th><td>  <em>void</em> (*<dfn class="decl field" id="CCallState::func" title='CCallState::func' data-ref="CCallState::func" data-ref-filename="CCallState..func">func</dfn>)(<em>void</em>);		<i>/* Pointer to called function. */</i></td></tr>
+<tr><th id="161">161</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="CCallState::spadj" title='CCallState::spadj' data-ref="CCallState::spadj" data-ref-filename="CCallState..spadj">spadj</dfn>;		<i>/* Stack pointer adjustment. */</i></td></tr>
+<tr><th id="162">162</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="CCallState::nsp" title='CCallState::nsp' data-ref="CCallState::nsp" data-ref-filename="CCallState..nsp">nsp</dfn>;			<i>/* Number of stack slots. */</i></td></tr>
+<tr><th id="163">163</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="CCallState::retref" title='CCallState::retref' data-ref="CCallState::retref" data-ref-filename="CCallState..retref">retref</dfn>;		<i>/* Return value by reference. */</i></td></tr>
+<tr><th id="164">164</th><td><u>#<span data-ppcond="164">if</span> <a class="macro" href="lj_arch.h.html#187" title="1" data-ref="_M/LJ_TARGET_X64">LJ_TARGET_X64</a></u></td></tr>
+<tr><th id="165">165</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="CCallState::ngpr" title='CCallState::ngpr' data-ref="CCallState::ngpr" data-ref-filename="CCallState..ngpr">ngpr</dfn>;			<i>/* Number of arguments in GPRs. */</i></td></tr>
+<tr><th id="166">166</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="CCallState::nfpr" title='CCallState::nfpr' data-ref="CCallState::nfpr" data-ref-filename="CCallState..nfpr">nfpr</dfn>;			<i>/* Number of arguments in FPRs. */</i></td></tr>
+<tr><th id="167">167</th><td><u>#<span data-ppcond="164">elif</span> LJ_TARGET_X86</u></td></tr>
+<tr><th id="168">168</th><td>  uint8_t resx87;		<i>/* Result on x87 stack: 1:float, 2:double. */</i></td></tr>
+<tr><th id="169">169</th><td><u>#elif LJ_TARGET_ARM64</u></td></tr>
+<tr><th id="170">170</th><td>  <em>void</em> *retp;			<i>/* Aggregate return pointer in x8. */</i></td></tr>
+<tr><th id="171">171</th><td><u>#elif LJ_TARGET_PPC</u></td></tr>
+<tr><th id="172">172</th><td>  uint8_t nfpr;			<i>/* Number of arguments in FPRs. */</i></td></tr>
+<tr><th id="173">173</th><td><u>#<span data-ppcond="164">endif</span></u></td></tr>
+<tr><th id="174">174</th><td><u>#<span data-ppcond="174">if</span> <a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a></u></td></tr>
+<tr><th id="175">175</th><td>  int32_t align1;</td></tr>
+<tr><th id="176">176</th><td><u>#<span data-ppcond="174">endif</span></u></td></tr>
+<tr><th id="177">177</th><td><u>#<span data-ppcond="177">if</span> <a class="macro" href="#148" title="(8 &gt; 2 ? 8 : 2)" data-ref="_M/CCALL_NUM_FPR">CCALL_NUM_FPR</a></u></td></tr>
+<tr><th id="178">178</th><td>  <a class="typedef" href="#FPRArg" title='FPRArg' data-type='union FPRArg' data-ref="FPRArg" data-ref-filename="FPRArg">FPRArg</a> <dfn class="decl field" id="CCallState::fpr" title='CCallState::fpr' data-ref="CCallState::fpr" data-ref-filename="CCallState..fpr">fpr</dfn>[<a class="macro" href="#148" title="(8 &gt; 2 ? 8 : 2)" data-ref="_M/CCALL_NUM_FPR">CCALL_NUM_FPR</a>];	<i>/* Arguments/results in FPRs. */</i></td></tr>
+<tr><th id="179">179</th><td><u>#<span data-ppcond="177">endif</span></u></td></tr>
+<tr><th id="180">180</th><td>  <a class="typedef" href="#GPRArg" title='GPRArg' data-type='intptr_t' data-ref="GPRArg" data-ref-filename="GPRArg">GPRArg</a> <dfn class="decl field" id="CCallState::gpr" title='CCallState::gpr' data-ref="CCallState::gpr" data-ref-filename="CCallState..gpr">gpr</dfn>[<a class="macro" href="#146" title="(6 &gt; 2 ? 6 : 2)" data-ref="_M/CCALL_NUM_GPR">CCALL_NUM_GPR</a>];	<i>/* Arguments/results in GPRs. */</i></td></tr>
+<tr><th id="181">181</th><td>  <a class="typedef" href="#GPRArg" title='GPRArg' data-type='intptr_t' data-ref="GPRArg" data-ref-filename="GPRArg">GPRArg</a> <dfn class="decl field" id="CCallState::stack" title='CCallState::stack' data-ref="CCallState::stack" data-ref-filename="CCallState..stack">stack</dfn>[<a class="macro" href="#155" title="32" data-ref="_M/CCALL_MAXSTACK">CCALL_MAXSTACK</a>];	<i>/* Stack slots. */</i></td></tr>
+<tr><th id="182">182</th><td>} <dfn class="typedef" id="CCallState" title='CCallState' data-type='struct CCallState' data-ref="CCallState" data-ref-filename="CCallState">CCallState</dfn>;</td></tr>
+<tr><th id="183">183</th><td></td></tr>
+<tr><th id="184">184</th><td><i>/* -- C call handling ----------------------------------------------------- */</i></td></tr>
+<tr><th id="185">185</th><td></td></tr>
+<tr><th id="186">186</th><td><i>/* Really belongs to lj_vm.h. */</i></td></tr>
+<tr><th id="187">187</th><td><a class="macro" href="lj_def.h.html#330" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_ASMF">LJ_ASMF</a> <em>void</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_vm_ffi_call" title='lj_vm_ffi_call' data-ref="lj_vm_ffi_call" data-ref-filename="lj_vm_ffi_call">lj_vm_ffi_call</dfn>(<a class="typedef" href="#CCallState" title='CCallState' data-type='struct CCallState' data-ref="CCallState" data-ref-filename="CCallState">CCallState</a> *<dfn class="local col6 decl" id="936cc" title='cc' data-type='CCallState *' data-ref="936cc" data-ref-filename="936cc">cc</dfn>);</td></tr>
+<tr><th id="188">188</th><td></td></tr>
+<tr><th id="189">189</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_ctype.h.html#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl fn" id="lj_ccall_ctid_vararg" title='lj_ccall_ctid_vararg' data-ref="lj_ccall_ctid_vararg" data-ref-filename="lj_ccall_ctid_vararg">lj_ccall_ctid_vararg</dfn>(<a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col7 decl" id="937cts" title='cts' data-type='CTState *' data-ref="937cts" data-ref-filename="937cts">cts</dfn>, <a class="typedef" href="lj_obj.h.html#cTValue" title='cTValue' data-type='const TValue' data-ref="cTValue" data-ref-filename="cTValue">cTValue</a> *<dfn class="local col8 decl" id="938o" title='o' data-type='cTValue *' data-ref="938o" data-ref-filename="938o">o</dfn>);</td></tr>
+<tr><th id="190">190</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>int</em> <dfn class="decl fn" id="lj_ccall_func" title='lj_ccall_func' data-ref="lj_ccall_func" data-ref-filename="lj_ccall_func">lj_ccall_func</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col9 decl" id="939L" title='L' data-type='lua_State *' data-ref="939L" data-ref-filename="939L">L</dfn>, <a class="typedef" href="lj_obj.h.html#GCcdata" title='GCcdata' data-type='struct GCcdata' data-ref="GCcdata" data-ref-filename="GCcdata">GCcdata</a> *<dfn class="local col0 decl" id="940cd" title='cd' data-type='GCcdata *' data-ref="940cd" data-ref-filename="940cd">cd</dfn>);</td></tr>
+<tr><th id="191">191</th><td></td></tr>
+<tr><th id="192">192</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="193">193</th><td></td></tr>
+<tr><th id="194">194</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="195">195</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

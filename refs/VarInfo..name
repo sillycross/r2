@@ -1,0 +1,19 @@
+<dec f='luajit/lj_lex.h' l='44' type='GCRef'/>
+<offset>0</offset>
+<doc f='luajit/lj_lex.h' l='44'>/* Local variable name or goto/label name. */</doc>
+<use f='luajit/lj_parse.c' l='1061' u='m' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1099' u='m' c='var_lookup_local'/>
+<use f='luajit/lj_parse.c' l='1168' u='m' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1185' u='m' c='gola_patch'/>
+<use f='luajit/lj_parse.c' l='1214' u='m' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1214' u='m' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1216' u='m' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1221' u='m' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1233' u='m' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1237' u='m' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1239' u='m' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1268' u='m' c='gola_findlabel'/>
+<use f='luajit/lj_parse.c' l='1464' u='m' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1475' u='m' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='2521' u='m' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='2524' u='m' c='predict_next'/>

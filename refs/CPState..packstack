@@ -1,0 +1,10 @@
+<dec f='luajit/lj_cparse.h' l='57' type='uint8_t [7]'/>
+<offset>960</offset>
+<doc f='luajit/lj_cparse.h' l='57'>/* Stack for pack pragmas. */</doc>
+<use f='luajit/lj_cparse.c' l='399' u='w' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='1310' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1311' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1770' u='w' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1770' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1782' u='w' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1785' u='w' c='cp_pragma'/>

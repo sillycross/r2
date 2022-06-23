@@ -1,0 +1,4 @@
+<dec f='luajit/lj_strfmt.h' l='54'/>
+<doc f='luajit/lj_strfmt.h' l='53'>/* Formats for conversion characters. */</doc>
+<use f='luajit/lj_strfmt.c' l='27' u='c'/>
+<use f='luajit/lj_strfmt.c' l='30' u='c'/>

@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='2943' ll='2956' type='Reg asm_setup_call_slots(ASMState * as, IRIns * ir, const CCallInfo * ci)'/>
+<use f='luajit/lj_asm.c' l='2199' u='c' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2206' u='c' c='asm_setup_regsp'/>
+<doc f='luajit/lj_asm_x86.h' l='2942'>/* Ensure there are enough stack slots for call arguments. */</doc>

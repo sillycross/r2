@@ -1,0 +1,6 @@
+<dec f='luajit/lj_vm.h' l='108' type='void lj_cont_condf()'/>
+<use f='luajit/lj_meta.c' l='342' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='357' u='r' c='lj_meta_equal_cd'/>
+<use f='luajit/lj_meta.c' l='387' u='r' c='lj_meta_comp'/>
+<use f='luajit/lj_meta.c' l='400' u='r' c='lj_meta_comp'/>
+<use f='luajit/lj_record.c' l='1102' u='r' c='rec_mm_callcomp'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='18'/>
+<use f='luajit/host/buildvm_arch.h' l='3124' c='build_ins'/>
+<use f='luajit/lj_debug.c' l='266' c='lj_debug_slotname'/>
+<use f='luajit/lj_debug.c' l='276' u='r' c='lj_debug_slotname'/>
+<use f='luajit/lj_parse.c' l='544' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='673' u='r' c='bcemit_method'/>
+<use f='luajit/lj_parse.c' l='2177' u='r' c='assign_hazard'/>
+<use f='luajit/lj_parse.c' l='2520' c='predict_next'/>
+<use f='luajit/lj_record.c' l='2287' c='lj_record_ins'/>

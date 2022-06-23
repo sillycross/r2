@@ -1,0 +1,12 @@
+<dec f='luajit/lj_strscan.h' l='21' type='1'/>
+<use f='luajit/lj_lex.c' l='113' u='r' c='lex_number'/>
+<use f='luajit/lj_strscan.c' l='128' u='r' c='strscan_hex'/>
+<use f='luajit/lj_strscan.c' l='233' u='r' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='257' u='r' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='352' u='r' c='strscan_bin'/>
+<use f='luajit/lj_strscan.c' l='397' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='447' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='459' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='501' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='509' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='519' u='r' c='lj_strscan_scan'/>

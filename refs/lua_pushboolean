@@ -1,0 +1,10 @@
+<dec f='luajit/lua.h' l='170' type='void lua_pushboolean(lua_State * L, int b)'/>
+<use f='luajit/lib_base.c' l='490' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='84' u='c' c='settabsb'/>
+<use f='luajit/lib_jit.c' l='206' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='208' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_os.c' l='143' u='c' c='setboolfield'/>
+<use f='luajit/lib_package.c' l='250' u='c' c='ll_loadfunc'/>
+<use f='luajit/lib_package.c' l='469' u='c' c='lj_cf_package_require'/>
+<def f='luajit/lj_api.c' l='704' ll='708' macro='1' type='void lua_pushboolean(lua_State * L, int b)'/>
+<use f='luajit/luajit.c' l='531' u='c' c='pmain'/>

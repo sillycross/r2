@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ffdef.h' l='146' macro='1' type='145'/>
+<use f='luajit/lj_ffrecord.c' l='161' c='recff_nyi'/>

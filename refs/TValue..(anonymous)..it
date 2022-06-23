@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='183' type='uint32_t'/>
+<offset>32</offset>
+<doc f='luajit/lj_obj.h' l='183'>/* Internal object tag. Must overlap MSW of number. */</doc>
+<use f='luajit/lj_lex.c' l='112' macro='1' u='w' c='lex_number'/>

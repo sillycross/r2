@@ -1,0 +1,69 @@
+<def f='luajit/lj_jit.h' l='410' ll='508'/>
+<use f='luajit/lj_jit.h' l='410'/>
+<size>3112</size>
+<doc f='luajit/lj_jit.h' l='409'>/* JIT compiler state. */</doc>
+<mbr r='jit_State::cur' o='0' t='GCtrace'/>
+<mbr r='jit_State::curfinal' o='960' t='GCtrace *'/>
+<mbr r='jit_State::L' o='1024' t='lua_State *'/>
+<mbr r='jit_State::pc' o='1088' t='const BCIns *'/>
+<mbr r='jit_State::fn' o='1152' t='GCfunc *'/>
+<mbr r='jit_State::pt' o='1216' t='GCproto *'/>
+<mbr r='jit_State::base' o='1280' t='TRef *'/>
+<mbr r='jit_State::flags' o='1344' t='uint32_t'/>
+<mbr r='jit_State::maxslot' o='1376' t='BCReg'/>
+<mbr r='jit_State::baseslot' o='1408' t='BCReg'/>
+<mbr r='jit_State::mergesnap' o='1440' t='uint8_t'/>
+<mbr r='jit_State::needsnap' o='1448' t='uint8_t'/>
+<mbr r='jit_State::guardemit' o='1456' t='IRType1'/>
+<mbr r='jit_State::bcskip' o='1464' t='uint8_t'/>
+<mbr r='jit_State::fold' o='1472' t='FoldState'/>
+<mbr r='jit_State::bc_min' o='1792' t='const BCIns *'/>
+<mbr r='jit_State::bc_extent' o='1856' t='MSize'/>
+<mbr r='jit_State::state' o='1888' t='TraceState'/>
+<mbr r='jit_State::instunroll' o='1920' t='int32_t'/>
+<mbr r='jit_State::loopunroll' o='1952' t='int32_t'/>
+<mbr r='jit_State::tailcalled' o='1984' t='int32_t'/>
+<mbr r='jit_State::framedepth' o='2016' t='int32_t'/>
+<mbr r='jit_State::retdepth' o='2048' t='int32_t'/>
+<mbr r='jit_State::k32' o='2080' t='uint32_t [1]'/>
+<mbr r='jit_State::ksimd' o='2112' t='TValue [5]'/>
+<mbr r='jit_State::k64' o='2432' t='TValue [3]'/>
+<mbr r='jit_State::irbuf' o='2624' t='IRIns *'/>
+<mbr r='jit_State::irtoplim' o='2688' t='IRRef'/>
+<mbr r='jit_State::irbotlim' o='2720' t='IRRef'/>
+<mbr r='jit_State::loopref' o='2752' t='IRRef'/>
+<mbr r='jit_State::sizesnap' o='2784' t='MSize'/>
+<mbr r='jit_State::snapbuf' o='2816' t='SnapShot *'/>
+<mbr r='jit_State::snapmapbuf' o='2880' t='SnapEntry *'/>
+<mbr r='jit_State::sizesnapmap' o='2944' t='MSize'/>
+<mbr r='jit_State::postproc' o='2976' t='PostProc'/>
+<mbr r='jit_State::retryrec' o='3008' t='uint8_t'/>
+<mbr r='jit_State::trace' o='3072' t='GCRef *'/>
+<mbr r='jit_State::freetrace' o='3136' t='TraceNo'/>
+<mbr r='jit_State::sizetrace' o='3168' t='MSize'/>
+<mbr r='jit_State::ktrace' o='3200' t='IRRef1'/>
+<mbr r='jit_State::chain' o='3216' t='IRRef1 [100]'/>
+<mbr r='jit_State::slot' o='4832' t='TRef [257]'/>
+<mbr r='jit_State::param' o='13056' t='int32_t [15]'/>
+<mbr r='jit_State::exitstubgroup' o='13568' t='MCode *[16]'/>
+<mbr r='jit_State::penalty' o='14592' t='HotPenalty [64]'/>
+<mbr r='jit_State::penaltyslot' o='22784' t='uint32_t'/>
+<mbr r='jit_State::bpropcache' o='22816' t='BPropEntry [16]'/>
+<mbr r='jit_State::bpropslot' o='23840' t='uint32_t'/>
+<mbr r='jit_State::scev' o='23872' t='ScEvEntry'/>
+<mbr r='jit_State::startpc' o='24064' t='const BCIns *'/>
+<mbr r='jit_State::parent' o='24128' t='TraceNo'/>
+<mbr r='jit_State::exitno' o='24160' t='ExitNo'/>
+<mbr r='jit_State::exitcode' o='24192' t='int'/>
+<mbr r='jit_State::patchpc' o='24256' t='BCIns *'/>
+<mbr r='jit_State::patchins' o='24320' t='BCIns'/>
+<mbr r='jit_State::mcprot' o='24352' t='int'/>
+<mbr r='jit_State::mcarea' o='24384' t='MCode *'/>
+<mbr r='jit_State::mctop' o='24448' t='MCode *'/>
+<mbr r='jit_State::mcbot' o='24512' t='MCode *'/>
+<mbr r='jit_State::szmcarea' o='24576' t='size_t'/>
+<mbr r='jit_State::szallmcarea' o='24640' t='size_t'/>
+<mbr r='jit_State::errinfo' o='24704' t='TValue'/>
+<mbr r='jit_State::prev_pt' o='24768' t='GCproto *'/>
+<mbr r='jit_State::prev_line' o='24832' t='BCLine'/>
+<mbr r='jit_State::prof_mode' o='24864' t='int'/>

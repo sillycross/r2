@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strfmt.h' l='115' type='GCstr * lj_strfmt_num(lua_State * L, cTValue * o)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='901' u='c' c='fold_kfold_tostr_knum'/>
+<use f='luajit/lj_strfmt.c' l='493' u='c' c='lj_strfmt_number'/>
+<def f='luajit/lj_strfmt_num.c' l='586' ll='591' type='GCstr * lj_strfmt_num(lua_State * L, cTValue * o)'/>
+<doc f='luajit/lj_strfmt_num.c' l='585'>/* Convert number to string. */</doc>

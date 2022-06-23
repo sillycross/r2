@@ -1,0 +1,21 @@
+<def f='luajit/lj_iropt.h' l='59' ll='64' type='TRef lj_ir_knum(jit_State * J, lua_Number n)'/>
+<use f='luajit/lj_crecord.c' l='414' u='c' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='481' u='c' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='880' u='c' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1597' u='c' c='recff_clib_index'/>
+<use f='luajit/lj_ir.c' l='274' u='c' c='lj_ir_knumint'/>
+<use f='luajit/lj_opt_fold.c' l='184' u='c' c='fold_kfold_numarith'/>
+<use f='luajit/lj_opt_fold.c' l='193' u='c' c='fold_kfold_numabsneg'/>
+<use f='luajit/lj_opt_fold.c' l='212' u='c' c='fold_kfold_fpmath'/>
+<use f='luajit/lj_opt_fold.c' l='221' u='c' c='fold_kfold_fpcall1'/>
+<use f='luajit/lj_opt_fold.c' l='234' u='c' c='fold_kfold_fpcall2'/>
+<use f='luajit/lj_opt_fold.c' l='246' u='c' c='fold_kfold_numpow'/>
+<use f='luajit/lj_opt_fold.c' l='802' u='c' c='fold_kfold_conv_kint_num'/>
+<use f='luajit/lj_opt_fold.c' l='808' u='c' c='fold_kfold_conv_kintu32_num'/>
+<use f='luajit/lj_opt_fold.c' l='840' u='c' c='fold_kfold_conv_kint64_num_i64'/>
+<use f='luajit/lj_opt_fold.c' l='846' u='c' c='fold_kfold_conv_kint64_num_u64'/>
+<use f='luajit/lj_opt_fold.c' l='917' u='c' c='fold_kfold_strto'/>
+<use f='luajit/lj_opt_fold.c' l='1023' u='c' c='fold_simplify_numsub_negk'/>
+<use f='luajit/lj_opt_fold.c' l='1072' u='c' c='fold_simplify_nummuldiv_negk'/>
+<use f='luajit/lj_record.c' l='338' u='c' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='347' u='c' c='find_kinit'/>

@@ -1,0 +1,16 @@
+<dec f='luajit/lua.h' l='88'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2208' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4637' u='c'/>
+<doc f='luajit/lua.h' l='87'>/* minimum Lua stack available to a C function */</doc>
+<use f='luajit/lib_aux.c' l='202' u='c'/>
+<use f='luajit/lib_io.c' l='199' u='c'/>
+<use f='luajit/lj_ccallback.c' l='570' u='c'/>
+<use f='luajit/lj_ccallback.c' l='772' u='c'/>
+<use f='luajit/lj_dispatch.c' l='74' u='c'/>
+<use f='luajit/lj_dispatch.c' l='363' u='c'/>
+<use f='luajit/lj_dispatch.c' l='455' u='c'/>
+<use f='luajit/lj_state.c' l='110' u='c'/>
+<use f='luajit/lj_trace.c' l='881' u='c'/>
+<use f='luajit/lj_vmevent.c' l='28' u='c'/>

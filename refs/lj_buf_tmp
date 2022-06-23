@@ -1,0 +1,7 @@
+<dec f='luajit/lj_buf.h' l='70' type='char * lj_buf_tmp(lua_State * L, MSize sz)'/>
+<use f='luajit/lib_io.c' l='148' u='c' c='io_file_readline'/>
+<use f='luajit/lib_io.c' l='164' u='c' c='io_file_readall'/>
+<use f='luajit/lib_io.c' l='177' u='c' c='io_file_readlen'/>
+<use f='luajit/lib_string.c' l='68' u='c' c='lj_ffh_string_char'/>
+<def f='luajit/lj_buf.c' l='104' ll='109' type='char * lj_buf_tmp(lua_State * L, MSize sz)'/>
+<use f='luajit/lj_buf.c' l='254' u='c' c='lj_buf_cat2str'/>

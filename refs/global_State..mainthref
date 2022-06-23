@@ -1,0 +1,16 @@
+<dec f='luajit/lj_obj.h' l='639' type='GCRef'/>
+<offset>1536</offset>
+<doc f='luajit/lj_obj.h' l='639'>/* Link to main thread. */</doc>
+<use f='luajit/lj_api.c' l='746' macro='1' u='m' c='lua_pushthread'/>
+<use f='luajit/lj_gc.c' l='104' macro='1' u='m' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='104' macro='1' u='m' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='105' macro='1' u='m' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='105' macro='1' u='m' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='141' macro='1' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='559' macro='1' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='560' macro='1' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='832' macro='1' u='m' c='lj_gc_closeuv'/>
+<use f='luajit/lj_state.c' l='238' u='m' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='280' macro='1' u='m' c='lua_close'/>
+<use f='luajit/lj_udata.c' l='26' macro='1' u='m' c='lj_udata_new'/>
+<use f='luajit/lj_udata.c' l='27' macro='1' u='m' c='lj_udata_new'/>

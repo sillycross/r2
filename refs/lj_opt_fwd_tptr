@@ -1,0 +1,8 @@
+<dec f='luajit/lj_iropt.h' l='126' type='int lj_opt_fwd_tptr(jit_State * J, IRRef lim)'/>
+<use f='luajit/lj_opt_fold.c' l='2211' u='c' c='fold_fload_tab_tnew_asize'/>
+<use f='luajit/lj_opt_fold.c' l='2219' u='c' c='fold_fload_tab_tnew_hmask'/>
+<use f='luajit/lj_opt_fold.c' l='2227' u='c' c='fold_fload_tab_tdup_asize'/>
+<use f='luajit/lj_opt_fold.c' l='2235' u='c' c='fold_fload_tab_tdup_hmask'/>
+<use f='luajit/lj_opt_fold.c' l='2248' u='c' c='fold_fload_tab_ah'/>
+<def f='luajit/lj_opt_mem.c' l='331' ll='342' type='int lj_opt_fwd_tptr(jit_State * J, IRRef lim)'/>
+<doc f='luajit/lj_opt_mem.c' l='330'>/* Check whether there&apos;s no aliasing NEWREF/table.clear for the left operand. */</doc>

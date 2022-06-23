@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_target.h source code [luajit/lj_target.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_target.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_target.h.html'>lj_target.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Definitions for target CPU.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_TARGET_H">_LJ_TARGET_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_TARGET_H" data-ref="_M/_LJ_TARGET_H">_LJ_TARGET_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_def.h.html">"lj_def.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_arch.h.html">"lj_arch.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><i>/* -- Registers and spill slots ------------------------------------------- */</i></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/* Register type (uint8_t in ir-&gt;r). */</i></td></tr>
+<tr><th id="15">15</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="Reg" title='Reg' data-type='uint32_t' data-ref="Reg" data-ref-filename="Reg">Reg</dfn>;</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><i>/* The hi-bit is NOT set for an allocated register. This means the value</i></td></tr>
+<tr><th id="18">18</th><td><i>** can be directly used without masking. The hi-bit is set for a register</i></td></tr>
+<tr><th id="19">19</th><td><i>** allocation hint or for RID_INIT, RID_SINK or RID_SUNK.</i></td></tr>
+<tr><th id="20">20</th><td><i>*/</i></td></tr>
+<tr><th id="21">21</th><td><u>#define <dfn class="macro" id="_M/RID_NONE" data-ref="_M/RID_NONE">RID_NONE</dfn>		0x80</u></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/RID_MASK" data-ref="_M/RID_MASK">RID_MASK</dfn>		0x7f</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/RID_INIT" data-ref="_M/RID_INIT">RID_INIT</dfn>		(RID_NONE|RID_MASK)</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/RID_SINK" data-ref="_M/RID_SINK">RID_SINK</dfn>		(RID_INIT-1)</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/RID_SUNK" data-ref="_M/RID_SUNK">RID_SUNK</dfn>		(RID_INIT-2)</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/ra_noreg" data-ref="_M/ra_noreg">ra_noreg</dfn>(r)		((r) &amp; RID_NONE)</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/ra_hasreg" data-ref="_M/ra_hasreg">ra_hasreg</dfn>(r)		(!((r) &amp; RID_NONE))</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><i>/* The ra_hashint() macro assumes a previous test for ra_noreg(). */</i></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/ra_hashint" data-ref="_M/ra_hashint">ra_hashint</dfn>(r)		((r) &lt; RID_SUNK)</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/ra_gethint" data-ref="_M/ra_gethint">ra_gethint</dfn>(r)		((Reg)((r) &amp; RID_MASK))</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/ra_sethint" data-ref="_M/ra_sethint">ra_sethint</dfn>(rr, r)	rr = (uint8_t)((r)|RID_NONE)</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/ra_samehint" data-ref="_M/ra_samehint">ra_samehint</dfn>(r1, r2)	(ra_gethint((r1)^(r2)) == 0)</u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><i>/* Spill slot 0 means no spill slot has been allocated. */</i></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/SPS_NONE" data-ref="_M/SPS_NONE">SPS_NONE</dfn>		0</u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/ra_hasspill" data-ref="_M/ra_hasspill">ra_hasspill</dfn>(s)		((s) != SPS_NONE)</u></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i>/* Combined register and spill slot (uint16_t in ir-&gt;prev). */</i></td></tr>
+<tr><th id="42">42</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="RegSP" title='RegSP' data-type='uint32_t' data-ref="RegSP" data-ref-filename="RegSP">RegSP</dfn>;</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/REGSP" data-ref="_M/REGSP">REGSP</dfn>(r, s)		((r) + ((s) &lt;&lt; 8))</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/REGSP_HINT" data-ref="_M/REGSP_HINT">REGSP_HINT</dfn>(r)		((r)|RID_NONE)</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/REGSP_INIT" data-ref="_M/REGSP_INIT">REGSP_INIT</dfn>		REGSP(RID_INIT, 0)</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/regsp_reg" data-ref="_M/regsp_reg">regsp_reg</dfn>(rs)		((rs) &amp; 255)</u></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/regsp_spill" data-ref="_M/regsp_spill">regsp_spill</dfn>(rs)		((rs) &gt;&gt; 8)</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/regsp_used" data-ref="_M/regsp_used">regsp_used</dfn>(rs) \</u></td></tr>
+<tr><th id="51">51</th><td><u>  (((rs) &amp; ~REGSP(RID_MASK, 0)) != REGSP(RID_NONE, 0))</u></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><i>/* -- Register sets ------------------------------------------------------- */</i></td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td><i>/* Bitset for registers. 32 registers suffice for most architectures.</i></td></tr>
+<tr><th id="56">56</th><td><i>** Note that one set holds bits for both GPRs and FPRs.</i></td></tr>
+<tr><th id="57">57</th><td><i>*/</i></td></tr>
+<tr><th id="58">58</th><td><u>#<span data-ppcond="58">if</span> LJ_TARGET_PPC || LJ_TARGET_MIPS || LJ_TARGET_ARM64</u></td></tr>
+<tr><th id="59">59</th><td><b>typedef</b> uint64_t RegSet;</td></tr>
+<tr><th id="60">60</th><td><u>#<span data-ppcond="58">else</span></u></td></tr>
+<tr><th id="61">61</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="RegSet" title='RegSet' data-type='uint32_t' data-ref="RegSet" data-ref-filename="RegSet">RegSet</dfn>;</td></tr>
+<tr><th id="62">62</th><td><u>#<span data-ppcond="58">endif</span></u></td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/RID2RSET" data-ref="_M/RID2RSET">RID2RSET</dfn>(r)		(((RegSet)1) &lt;&lt; (r))</u></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/RSET_EMPTY" data-ref="_M/RSET_EMPTY">RSET_EMPTY</dfn>		((RegSet)0)</u></td></tr>
+<tr><th id="66">66</th><td><u>#define <dfn class="macro" id="_M/RSET_RANGE" data-ref="_M/RSET_RANGE">RSET_RANGE</dfn>(lo, hi)	((RID2RSET((hi)-(lo))-1) &lt;&lt; (lo))</u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><u>#define <dfn class="macro" id="_M/rset_test" data-ref="_M/rset_test">rset_test</dfn>(rs, r)	((int)((rs) &gt;&gt; (r)) &amp; 1)</u></td></tr>
+<tr><th id="69">69</th><td><u>#define <dfn class="macro" id="_M/rset_set" data-ref="_M/rset_set">rset_set</dfn>(rs, r)		(rs |= RID2RSET(r))</u></td></tr>
+<tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/rset_clear" data-ref="_M/rset_clear">rset_clear</dfn>(rs, r)	(rs &amp;= ~RID2RSET(r))</u></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/rset_exclude" data-ref="_M/rset_exclude">rset_exclude</dfn>(rs, r)	(rs &amp; ~RID2RSET(r))</u></td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="72">if</span> LJ_TARGET_PPC || LJ_TARGET_MIPS || LJ_TARGET_ARM64</u></td></tr>
+<tr><th id="73">73</th><td><u>#define rset_picktop(rs)	((Reg)(__builtin_clzll(rs)^63))</u></td></tr>
+<tr><th id="74">74</th><td><u>#define rset_pickbot(rs)	((Reg)__builtin_ctzll(rs))</u></td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="72">else</span></u></td></tr>
+<tr><th id="76">76</th><td><u>#define <dfn class="macro" id="_M/rset_picktop" data-ref="_M/rset_picktop">rset_picktop</dfn>(rs)	((Reg)lj_fls(rs))</u></td></tr>
+<tr><th id="77">77</th><td><u>#define <dfn class="macro" id="_M/rset_pickbot" data-ref="_M/rset_pickbot">rset_pickbot</dfn>(rs)	((Reg)lj_ffs(rs))</u></td></tr>
+<tr><th id="78">78</th><td><u>#<span data-ppcond="72">endif</span></u></td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><i>/* -- Register allocation cost -------------------------------------------- */</i></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><i>/* The register allocation heuristic keeps track of the cost for allocating</i></td></tr>
+<tr><th id="83">83</th><td><i>** a specific register:</i></td></tr>
+<tr><th id="84">84</th><td><i>**</i></td></tr>
+<tr><th id="85">85</th><td><i>** A free register (obviously) has a cost of 0 and a 1-bit in the free mask.</i></td></tr>
+<tr><th id="86">86</th><td><i>**</i></td></tr>
+<tr><th id="87">87</th><td><i>** An already allocated register has the (non-zero) IR reference in the lowest</i></td></tr>
+<tr><th id="88">88</th><td><i>** bits and the result of a blended cost-model in the higher bits.</i></td></tr>
+<tr><th id="89">89</th><td><i>**</i></td></tr>
+<tr><th id="90">90</th><td><i>** The allocator first checks the free mask for a hit. Otherwise an (unrolled)</i></td></tr>
+<tr><th id="91">91</th><td><i>** linear search for the minimum cost is used. The search doesn't need to</i></td></tr>
+<tr><th id="92">92</th><td><i>** keep track of the position of the minimum, which makes it very fast.</i></td></tr>
+<tr><th id="93">93</th><td><i>** The lowest bits of the minimum cost show the desired IR reference whose</i></td></tr>
+<tr><th id="94">94</th><td><i>** register is the one to evict.</i></td></tr>
+<tr><th id="95">95</th><td><i>**</i></td></tr>
+<tr><th id="96">96</th><td><i>** Without the cost-model this degenerates to the standard heuristics for</i></td></tr>
+<tr><th id="97">97</th><td><i>** (reverse) linear-scan register allocation. Since code generation is done</i></td></tr>
+<tr><th id="98">98</th><td><i>** in reverse, a live interval extends from the last use to the first def.</i></td></tr>
+<tr><th id="99">99</th><td><i>** For an SSA IR the IR reference is the first (and only) def and thus</i></td></tr>
+<tr><th id="100">100</th><td><i>** trivially marks the end of the interval. The LSRA heuristics says to pick</i></td></tr>
+<tr><th id="101">101</th><td><i>** the register whose live interval has the furthest extent, i.e. the lowest</i></td></tr>
+<tr><th id="102">102</th><td><i>** IR reference in our case.</i></td></tr>
+<tr><th id="103">103</th><td><i>**</i></td></tr>
+<tr><th id="104">104</th><td><i>** A cost-model should take into account other factors, like spill-cost and</i></td></tr>
+<tr><th id="105">105</th><td><i>** restore- or rematerialization-cost, which depend on the kind of instruction.</i></td></tr>
+<tr><th id="106">106</th><td><i>** E.g. constants have zero spill costs, variant instructions have higher</i></td></tr>
+<tr><th id="107">107</th><td><i>** costs than invariants and PHIs should preferably never be spilled.</i></td></tr>
+<tr><th id="108">108</th><td><i>**</i></td></tr>
+<tr><th id="109">109</th><td><i>** Here's a first cut at simple, but effective blended cost-model for R-LSRA:</i></td></tr>
+<tr><th id="110">110</th><td><i>** - Due to careful design of the IR, constants already have lower IR</i></td></tr>
+<tr><th id="111">111</th><td><i>**   references than invariants and invariants have lower IR references</i></td></tr>
+<tr><th id="112">112</th><td><i>**   than variants.</i></td></tr>
+<tr><th id="113">113</th><td><i>** - The cost in the upper 16 bits is the sum of the IR reference and a</i></td></tr>
+<tr><th id="114">114</th><td><i>**   weighted score. The score currently only takes into account whether</i></td></tr>
+<tr><th id="115">115</th><td><i>**   the IRT_ISPHI bit is set in the instruction type.</i></td></tr>
+<tr><th id="116">116</th><td><i>** - The PHI weight is the minimum distance (in IR instructions) a PHI</i></td></tr>
+<tr><th id="117">117</th><td><i>**   reference has to be further apart from a non-PHI reference to be spilled.</i></td></tr>
+<tr><th id="118">118</th><td><i>** - It should be a power of two (for speed) and must be between 2 and 32768.</i></td></tr>
+<tr><th id="119">119</th><td><i>**   Good values for the PHI weight seem to be between 40 and 150.</i></td></tr>
+<tr><th id="120">120</th><td><i>** - Further study is required.</i></td></tr>
+<tr><th id="121">121</th><td><i>*/</i></td></tr>
+<tr><th id="122">122</th><td><u>#define <dfn class="macro" id="_M/REGCOST_PHI_WEIGHT" data-ref="_M/REGCOST_PHI_WEIGHT">REGCOST_PHI_WEIGHT</dfn>	64</u></td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td><i>/* Cost for allocating a specific register. */</i></td></tr>
+<tr><th id="125">125</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="RegCost" title='RegCost' data-type='uint32_t' data-ref="RegCost" data-ref-filename="RegCost">RegCost</dfn>;</td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td><i>/* Note: assumes 16 bit IRRef1. */</i></td></tr>
+<tr><th id="128">128</th><td><u>#define <dfn class="macro" id="_M/REGCOST" data-ref="_M/REGCOST">REGCOST</dfn>(cost, ref)	((RegCost)(ref) + ((RegCost)(cost) &lt;&lt; 16))</u></td></tr>
+<tr><th id="129">129</th><td><u>#define <dfn class="macro" id="_M/regcost_ref" data-ref="_M/regcost_ref">regcost_ref</dfn>(rc)		((IRRef1)(rc))</u></td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td><u>#define <dfn class="macro" id="_M/REGCOST_T" data-ref="_M/REGCOST_T">REGCOST_T</dfn>(t) \</u></td></tr>
+<tr><th id="132">132</th><td><u>  ((RegCost)((t)&amp;IRT_ISPHI) * (((RegCost)(REGCOST_PHI_WEIGHT)&lt;&lt;16)/IRT_ISPHI))</u></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/REGCOST_REF_T" data-ref="_M/REGCOST_REF_T">REGCOST_REF_T</dfn>(ref, t)	(REGCOST((ref), (ref)) + REGCOST_T((t)))</u></td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td><i>/* -- Target-specific definitions ----------------------------------------- */</i></td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td><u>#<span data-ppcond="137">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="138">138</th><td><u>#include <a href="lj_target_x86.h.html">"lj_target_x86.h"</a></u></td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="137">elif</span> LJ_TARGET_ARM</u></td></tr>
+<tr><th id="140">140</th><td><u>#include "lj_target_arm.h"</u></td></tr>
+<tr><th id="141">141</th><td><u>#elif LJ_TARGET_ARM64</u></td></tr>
+<tr><th id="142">142</th><td><u>#include "lj_target_arm64.h"</u></td></tr>
+<tr><th id="143">143</th><td><u>#elif LJ_TARGET_PPC</u></td></tr>
+<tr><th id="144">144</th><td><u>#include "lj_target_ppc.h"</u></td></tr>
+<tr><th id="145">145</th><td><u>#elif LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="146">146</th><td><u>#include "lj_target_mips.h"</u></td></tr>
+<tr><th id="147">147</th><td><u>#else</u></td></tr>
+<tr><th id="148">148</th><td><u>#error "Missing include for target CPU"</u></td></tr>
+<tr><th id="149">149</th><td><u>#<span data-ppcond="137">endif</span></u></td></tr>
+<tr><th id="150">150</th><td></td></tr>
+<tr><th id="151">151</th><td><u>#<span data-ppcond="151">ifdef</span> <a class="macro" href="lj_target_x86.h.html#166" data-ref="_M/EXITSTUBS_PER_GROUP">EXITSTUBS_PER_GROUP</a></u></td></tr>
+<tr><th id="152">152</th><td><i>/* Return the address of an exit stub. */</i></td></tr>
+<tr><th id="153">153</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <em>char</em> *<dfn class="decl def fn" id="exitstub_addr_" title='exitstub_addr_' data-ref="exitstub_addr_" data-ref-filename="exitstub_addr_">exitstub_addr_</dfn>(<em>char</em> **<dfn class="local col9 decl" id="109group" title='group' data-type='char **' data-ref="109group" data-ref-filename="109group">group</dfn>, <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col0 decl" id="110exitno" title='exitno' data-type='uint32_t' data-ref="110exitno" data-ref-filename="110exitno">exitno</dfn>)</td></tr>
+<tr><th id="154">154</th><td>{</td></tr>
+<tr><th id="155">155</th><td>  <a class="macro" href="lj_def.h.html#361" title="((void)0)" data-ref="_M/lj_assertX">lj_assertX</a>(group[exitno / EXITSTUBS_PER_GROUP] != NULL,</td></tr>
+<tr><th id="156">156</th><td>	     <q>"exit stub group for exit %d uninitialized"</q>, exitno);</td></tr>
+<tr><th id="157">157</th><td>  <b>return</b> (<em>char</em> *)<a class="local col9 ref" href="#109group" title='group' data-ref="109group" data-ref-filename="109group">group</a>[<a class="local col0 ref" href="#110exitno" title='exitno' data-ref="110exitno" data-ref-filename="110exitno">exitno</a> / <a class="macro" href="lj_target_x86.h.html#166" title="32" data-ref="_M/EXITSTUBS_PER_GROUP">EXITSTUBS_PER_GROUP</a>] +</td></tr>
+<tr><th id="158">158</th><td>	 <a class="macro" href="lj_target_x86.h.html#165" title="(2+2)" data-ref="_M/EXITSTUB_SPACING">EXITSTUB_SPACING</a>*(<a class="local col0 ref" href="#110exitno" title='exitno' data-ref="110exitno" data-ref-filename="110exitno">exitno</a> % <a class="macro" href="lj_target_x86.h.html#166" title="32" data-ref="_M/EXITSTUBS_PER_GROUP">EXITSTUBS_PER_GROUP</a>);</td></tr>
+<tr><th id="159">159</th><td>}</td></tr>
+<tr><th id="160">160</th><td><i>/* Avoid dependence on lj_jit.h if only including lj_target.h. */</i></td></tr>
+<tr><th id="161">161</th><td><u>#define <dfn class="macro" id="_M/exitstub_addr" data-ref="_M/exitstub_addr">exitstub_addr</dfn>(J, exitno) \</u></td></tr>
+<tr><th id="162">162</th><td><u>  ((MCode *)exitstub_addr_((char **)((J)-&gt;exitstubgroup), (exitno)))</u></td></tr>
+<tr><th id="163">163</th><td><u>#<span data-ppcond="151">endif</span></u></td></tr>
+<tr><th id="164">164</th><td></td></tr>
+<tr><th id="165">165</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="166">166</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_jit.c.html'>luajit/lib_jit.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

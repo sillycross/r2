@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='166' type='const char * lua_pushvfstring(lua_State * L, const char * fmt, struct __va_list_tag * argp)'/>
+<def f='luajit/lj_api.c' l='671' ll='676' macro='1' type='const char * lua_pushvfstring(lua_State * L, const char * fmt, struct __va_list_tag * argp)'/>

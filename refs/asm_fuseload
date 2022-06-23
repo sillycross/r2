@@ -1,0 +1,22 @@
+<def f='luajit/lj_asm_x86.h' l='409' ll='494' type='Reg asm_fuseload(ASMState * as, IRRef ref, RegSet allow)'/>
+<use f='luajit/lj_asm_x86.h' l='502' u='c' c='asm_fuseloadm'/>
+<use f='luajit/lj_asm_x86.h' l='807' u='c' c='asm_tobit'/>
+<use f='luajit/lj_asm_x86.h' l='825' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='837' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='886' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='903' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='922' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='928' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1936' u='c' c='asm_x87load'/>
+<use f='luajit/lj_asm_x86.h' l='1945' u='c' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='1950' u='c' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='2049' u='c' c='asm_fparith'/>
+<use f='luajit/lj_asm_x86.h' l='2394' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2428' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2465' u='c' c='asm_comp'/>
+<doc f='luajit/lj_asm_x86.h' l='403'>/* Fuse load into memory operand.
+**
+** Important caveat: this may emit RIP-relative loads! So don&apos;t place any
+** code emitters between this function and the use of its result.
+** The only permitted exception is asm_guardcc().
+*/</doc>

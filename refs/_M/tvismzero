@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='813'/>
+<use f='luajit/lib_io.c' l='130' u='c'/>
+<use f='luajit/lj_parse.c' l='782' u='c'/>
+<use f='luajit/lj_tab.c' l='510' u='c'/>

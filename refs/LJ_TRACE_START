@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='153' type='18'/>
+<doc f='luajit/lj_jit.h' l='153'>/* New trace started. */</doc>
+<use f='luajit/lj_trace.c' l='650' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='746' u='r' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='762' u='r' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='775' u='r' c='lj_trace_stitch'/>

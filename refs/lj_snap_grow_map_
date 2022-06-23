@@ -1,0 +1,4 @@
+<dec f='luajit/lj_snap.h' l='21' type='void lj_snap_grow_map_(jit_State * J, MSize need)'/>
+<use f='luajit/lj_snap.h' l='30' u='c' c='lj_snap_grow_map'/>
+<def f='luajit/lj_snap.c' l='48' ll='58' type='void lj_snap_grow_map_(jit_State * J, MSize need)'/>
+<doc f='luajit/lj_snap.c' l='47'>/* Grow snapshot map buffer. */</doc>

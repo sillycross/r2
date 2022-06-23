@@ -1,0 +1,15 @@
+<dec f='include/ctype.h' l='51' type='2048'/>
+<use f='luajit/host/minilua.c' l='2766' macro='1' u='r' c='read_numeral'/>
+<use f='luajit/host/minilua.c' l='2848' macro='1' u='r' c='read_string'/>
+<use f='luajit/host/minilua.c' l='2856' macro='1' u='r' c='read_string'/>
+<use f='luajit/host/minilua.c' l='2943' macro='1' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='2957' macro='1' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='7126' macro='1' u='r' c='match_class'/>
+<use f='luajit/host/minilua.c' l='7271' macro='1' u='r' c='match'/>
+<use f='luajit/host/minilua.c' l='7447' macro='1' u='r' c='add_s'/>
+<use f='luajit/host/minilua.c' l='7558' macro='1' u='r' c='scanformat'/>
+<use f='luajit/host/minilua.c' l='7559' macro='1' u='r' c='scanformat'/>
+<use f='luajit/host/minilua.c' l='7562' macro='1' u='r' c='scanformat'/>
+<use f='luajit/host/minilua.c' l='7563' macro='1' u='r' c='scanformat'/>
+<use f='luajit/host/minilua.c' l='7565' macro='1' u='r' c='scanformat'/>
+<doc f='include/ctype.h' l='51'>/* Numeric.  */</doc>

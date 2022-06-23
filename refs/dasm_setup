@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='61' type='void dasm_setup(BuildCtx * ctx, const void * actionlist)'/>
+<def f='luajit/dasm_x86.h' l='138' ll='151' type='void dasm_setup(BuildCtx * ctx, const void * actionlist)'/>
+<use f='luajit/host/buildvm.c' l='192' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='137'>/* Setup encoder. */</doc>

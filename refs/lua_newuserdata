@@ -1,0 +1,7 @@
+<dec f='luajit/lua.h' l='183' type='void * lua_newuserdata(lua_State * L, size_t sz)'/>
+<use f='luajit/lib_base.c' l='484' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_io.c' l='73' u='c' c='io_file_new'/>
+<use f='luajit/lib_io.c' l='521' u='c' c='io_std_new'/>
+<use f='luajit/lib_math.c' l='196' u='c' c='luaopen_math'/>
+<use f='luajit/lib_package.c' l='216' u='c' c='ll_register'/>
+<def f='luajit/lj_api.c' l='759' ll='769' macro='1' type='void * lua_newuserdata(lua_State * L, size_t size)'/>

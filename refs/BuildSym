@@ -1,0 +1,5 @@
+<def f='luajit/host/buildvm.h' l='60' ll='63'/>
+<use f='luajit/host/buildvm.h' l='60'/>
+<size>16</size>
+<mbr r='BuildSym::name' o='0' t='const char *'/>
+<mbr r='BuildSym::ofs' o='64' t='int32_t'/>

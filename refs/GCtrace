@@ -1,0 +1,33 @@
+<def f='luajit/lj_jit.h' l='251' ll='284'/>
+<use f='luajit/lj_jit.h' l='251'/>
+<size>120</size>
+<doc f='luajit/lj_jit.h' l='250'>/* Trace object. */</doc>
+<mbr r='GCtrace::nextgc' o='0' t='GCRef'/>
+<mbr r='GCtrace::marked' o='64' t='uint8_t'/>
+<mbr r='GCtrace::gct' o='72' t='uint8_t'/>
+<mbr r='GCtrace::nsnap' o='80' t='uint16_t'/>
+<mbr r='GCtrace::nins' o='96' t='IRRef'/>
+<mbr r='GCtrace::unused_gc64' o='128' t='uint32_t'/>
+<mbr r='GCtrace::gclist' o='192' t='GCRef'/>
+<mbr r='GCtrace::ir' o='256' t='IRIns *'/>
+<mbr r='GCtrace::nk' o='320' t='IRRef'/>
+<mbr r='GCtrace::nsnapmap' o='352' t='uint32_t'/>
+<mbr r='GCtrace::snap' o='384' t='SnapShot *'/>
+<mbr r='GCtrace::snapmap' o='448' t='SnapEntry *'/>
+<mbr r='GCtrace::startpt' o='512' t='GCRef'/>
+<mbr r='GCtrace::startpc' o='576' t='MRef'/>
+<mbr r='GCtrace::startins' o='640' t='BCIns'/>
+<mbr r='GCtrace::szmcode' o='672' t='MSize'/>
+<mbr r='GCtrace::mcode' o='704' t='MCode *'/>
+<mbr r='GCtrace::mcloop' o='768' t='MSize'/>
+<mbr r='GCtrace::nchild' o='800' t='uint16_t'/>
+<mbr r='GCtrace::spadjust' o='816' t='uint16_t'/>
+<mbr r='GCtrace::traceno' o='832' t='TraceNo1'/>
+<mbr r='GCtrace::link' o='848' t='TraceNo1'/>
+<mbr r='GCtrace::root' o='864' t='TraceNo1'/>
+<mbr r='GCtrace::nextroot' o='880' t='TraceNo1'/>
+<mbr r='GCtrace::nextside' o='896' t='TraceNo1'/>
+<mbr r='GCtrace::sinktags' o='912' t='uint8_t'/>
+<mbr r='GCtrace::topslot' o='920' t='uint8_t'/>
+<mbr r='GCtrace::linktype' o='928' t='uint8_t'/>
+<mbr r='GCtrace::unused1' o='936' t='uint8_t'/>

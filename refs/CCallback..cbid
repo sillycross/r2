@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ctype.h' l='167' type='CTypeID1 *'/>
+<offset>1152</offset>
+<doc f='luajit/lj_ctype.h' l='167'>/* Callback type table. */</doc>
+<use f='luajit/lib_ffi.c' l='439' u='r' c='ffi_callback_set'/>
+<use f='luajit/lib_ffi.c' l='447' u='r' c='ffi_callback_set'/>
+<use f='luajit/lj_ccallback.c' l='542' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='729' u='r' c='callback_slot_new'/>
+<use f='luajit/lj_ccallback.c' l='741' u='w' c='callback_slot_new'/>
+<use f='luajit/lj_ctype.c' l='633' u='r' c='lj_ctype_freestate'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_udata.h' l='12' type='void lj_udata_free(global_State * g, GCudata * ud)'/>
+<use f='luajit/lj_gc.c' l='395' u='r'/>
+<def f='luajit/lj_udata.c' l='31' ll='34' type='void lj_udata_free(global_State * g, GCudata * ud)'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_meta.h' l='33' type='TValue * lj_meta_comp(lua_State * L, cTValue * o1, cTValue * o2, int op)'/>
+<use f='luajit/lj_api.c' l='334' u='c' c='lua_lessthan'/>
+<def f='luajit/lj_meta.c' l='384' ll='427' type='TValue * lj_meta_comp(lua_State * L, cTValue * o1, cTValue * o2, int op)'/>
+<doc f='luajit/lj_meta.c' l='383'>/* Helper for ordered comparisons. String compare, __lt/__le metamethods. */</doc>

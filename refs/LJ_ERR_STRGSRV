@@ -1,0 +1,3 @@
+<dec f='luajit/lj_errmsg.h' l='101' macro='1' type='1940'/>
+<use f='luajit/lj_errmsg.h' l='101' macro='1' u='r'/>
+<use f='luajit/lib_string.c' l='595' u='r' c='add_value'/>

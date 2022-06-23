@@ -1,0 +1,4 @@
+<dec f='luajit/lj_asm.h' l='13' type='void lj_asm_patchexit(jit_State * J, GCtrace * T, ExitNo exitno, MCode * target)'/>
+<def f='luajit/lj_asm_x86.h' l='3068' ll='3101' type='void lj_asm_patchexit(jit_State * J, GCtrace * T, ExitNo exitno, MCode * target)'/>
+<doc f='luajit/lj_asm_x86.h' l='3067'>/* Patch exit jumps of existing machine code to a new target. */</doc>
+<use f='luajit/lj_trace.c' l='507' u='c' c='trace_stop'/>

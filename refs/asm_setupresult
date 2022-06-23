@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='651' ll='705' type='void asm_setupresult(ASMState * as, IRIns * ir, const CCallInfo * ci)'/>
+<use f='luajit/lj_asm_x86.h' l='738' u='c' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='1803' u='c' c='asm_cnew'/>
+<doc f='luajit/lj_asm_x86.h' l='650'>/* Setup result reg/sp for call. Evict scratch regs. */</doc>

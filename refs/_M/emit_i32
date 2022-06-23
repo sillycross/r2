@@ -1,0 +1,14 @@
+<dec f='luajit/lj_emit_x86.h' l='30'/>
+<use f='luajit/lj_emit_x86.h' l='183' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='246' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='257' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1313' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1485' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1618' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1653' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1659' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1816' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2099' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2445' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2491' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2733' u='c'/>

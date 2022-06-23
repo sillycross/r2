@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='89'/>
+<use f='luajit/lj_asm.c' l='1719' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='267' u='r' c='crec_copy'/>
+<use f='luajit/lj_crecord.c' l='274' u='r' c='crec_copy'/>
+<use f='luajit/lj_crecord.c' l='345' u='r' c='crec_fill'/>
+<use f='luajit/lj_opt_mem.c' l='801' u='r' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='801' u='r' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='862' u='r' c='lj_opt_dse_xstore'/>
+<use f='luajit/lj_opt_mem.c' l='862' u='r' c='lj_opt_dse_xstore'/>
+<use f='luajit/lj_snap.c' l='620' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='621' u='r' c='lj_snap_replay'/>

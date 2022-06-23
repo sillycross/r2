@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ctype.h' l='164' type='intptr_t [8]'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='a' c='build_subroutines'/>
+<offset>512</offset>
+<doc f='luajit/lj_ctype.h' l='164'>/* Arguments/results in GPRs. */</doc>
+<use f='luajit/lj_ccallback.c' l='356' u='a' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='643' u='a' c='callback_conv_result'/>

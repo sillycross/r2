@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm.c' l='40' ll='101'/>
+<use f='luajit/lj_asm.c' l='40'/>
+<size>912</size>
+<doc f='luajit/lj_asm.c' l='39'>/* Assembler state. */</doc>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_obj.h' l='1038' type='int lj_obj_equal(cTValue * o1, cTValue * o2)'/>
+<use f='luajit/lib_base.c' l='204' u='c' c='lj_cf_rawequal'/>
+<use f='luajit/lj_api.c' l='287' u='c' c='lua_rawequal'/>
+<use f='luajit/lj_meta.c' l='338' u='c' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='407' u='c' c='lj_meta_comp'/>
+<def f='luajit/lj_obj.c' l='23' ll='34' type='int lj_obj_equal(cTValue * o1, cTValue * o2)'/>
+<doc f='luajit/lj_obj.c' l='22'>/* Compare two objects without calling metamethods. */</doc>
+<use f='luajit/lj_record.c' l='227' u='c' c='lj_record_objcmp'/>
+<use f='luajit/lj_tab.c' l='432' u='c' c='lj_tab_get'/>
+<use f='luajit/lj_tab.c' l='563' u='c' c='lj_tab_set'/>
+<use f='luajit/lj_tab.c' l='590' u='c' c='keyindex'/>

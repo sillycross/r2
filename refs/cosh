@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='71' type='double cosh(double __x)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

@@ -1,0 +1,2 @@
+<dec f='include/string.h' l='302' type='char * strpbrk(const char * __s, const char * __accept)'/>
+<use f='luajit/host/minilua.c' l='7368' u='c' c='str_find_aux'/>

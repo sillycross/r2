@@ -1,0 +1,11 @@
+<dec f='luajit/lj_tab.h' l='73' type='cTValue * lj_tab_get(lua_State * L, GCtab * t, cTValue * key)'/>
+<use f='luajit/lib_jit.c' l='555' u='c' c='jit_profile_callback'/>
+<use f='luajit/lj_api.c' l='830' u='c' c='lua_rawget'/>
+<use f='luajit/lj_crecord.c' l='744' u='c' c='crec_index_meta'/>
+<use f='luajit/lj_crecord.c' l='1240' u='c' c='crec_call'/>
+<use f='luajit/lj_meta.c' l='142' u='c' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='169' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_opt_fold.c' l='2195' u='c' c='fold_fwd_href_tdup'/>
+<use f='luajit/lj_opt_mem.c' l='196' u='c' c='fwd_ahload'/>
+<use f='luajit/lj_record.c' l='1324' u='c' c='rec_idx_key'/>
+<def f='luajit/lj_tab.c' l='407' ll='437' type='cTValue * lj_tab_get(lua_State * L, GCtab * t, cTValue * key)'/>

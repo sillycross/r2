@@ -1,0 +1,3 @@
+<def f='luajit/lj_folddef.h' l='162' ll='1165' type='const uint32_t [1002]'/>
+<use f='luajit/lj_opt_fold.c' l='2504' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2505' u='r' c='lj_opt_fold'/>

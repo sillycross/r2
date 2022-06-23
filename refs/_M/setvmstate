@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='536'/>
+<use f='luajit/lj_dispatch.c' l='549' u='c'/>
+<use f='luajit/lj_gc.c' l='726' u='c'/>
+<use f='luajit/lj_gc.c' l='778' u='c'/>
+<use f='luajit/lj_trace.c' l='658' u='c'/>
+<use f='luajit/lj_trace.c' l='679' u='c'/>
+<use f='luajit/lj_trace.c' l='697' u='c'/>
+<use f='luajit/lj_trace.c' l='700' u='c'/>
+<use f='luajit/lj_trace.c' l='712' u='c'/>

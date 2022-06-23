@@ -1,0 +1,3 @@
+<def f='luajit/lj_obj.h' l='896' ll='908' type='void checklivetv(lua_State * L, TValue * o, const char * msg)'/>
+<use f='luajit/lj_obj.h' l='922' u='c' c='setgcV'/>
+<use f='luajit/lj_obj.h' l='970' u='c' c='copyTV'/>

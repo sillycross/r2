@@ -1,0 +1,23 @@
+<dec f='luajit/lj_obj.h' l='759'/>
+<doc f='luajit/lj_obj.h' l='758'>/* Macros to convert a GCobj pointer into a specific value. */</doc>
+<use f='luajit/lib_ffi.c' l='575' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='130' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='131' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='160' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='160' u='c'/>
+<use f='luajit/lj_cconv.c' l='521' u='c'/>
+<use f='luajit/lj_clib.c' l='336' u='c'/>
+<use f='luajit/lj_cparse.c' l='1234' u='c'/>
+<use f='luajit/lj_cparse.c' l='1252' u='c'/>
+<use f='luajit/lj_ctype.c' l='431' u='c'/>
+<use f='luajit/lj_debug.c' l='270' u='c'/>
+<use f='luajit/lj_debug.c' l='273' u='c'/>
+<use f='luajit/lj_gc.c' l='447' u='c'/>
+<use f='luajit/lj_meta.c' l='366' u='c'/>
+<use f='luajit/lj_parse.c' l='2521' u='c'/>
+<use f='luajit/lj_parse.c' l='2524' u='c'/>
+<use f='luajit/lj_record.c' l='2113' u='c'/>
+<use f='luajit/lj_str.c' l='150' u='c'/>
+<use f='luajit/lj_str.c' l='173' u='c'/>
+<use f='luajit/lj_str.c' l='232' u='c'/>
+<use f='luajit/lj_str.c' l='332' u='c'/>

@@ -1,0 +1,2 @@
+<dec f='include/stdlib.h' l='47'/>
+<use f='luajit/lib_aux.c' l='53' u='c'/>

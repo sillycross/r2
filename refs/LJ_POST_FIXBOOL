@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='165' type='4'/>
+<doc f='luajit/lj_jit.h' l='165'>/* Fixup boolean result. */</doc>
+<use f='luajit/lj_crecord.c' l='1720' u='r' c='recff_ffi_istype'/>
+<use f='luajit/lj_crecord.c' l='1732' u='r' c='recff_ffi_abi'/>
+<use f='luajit/lj_record.c' l='2025' c='lj_record_ins'/>

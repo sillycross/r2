@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_def.h source code [luajit/lj_def.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="PRNGState,Unaligned16,Unaligned32 "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_def.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_def.h.html'>lj_def.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** LuaJIT common internal definitions.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_DEF_H">_LJ_DEF_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_DEF_H" data-ref="_M/_LJ_DEF_H">_LJ_DEF_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lua.h.html">"lua.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">if</span> defined(<span class="macro" data-ref="_M/_MSC_VER">_MSC_VER</span>) &amp;&amp; (_MSC_VER &lt; 1700)</u></td></tr>
+<tr><th id="12">12</th><td><i>/* Old MSVC is stuck in the last century and doesn't have C99's stdint.h. */</i></td></tr>
+<tr><th id="13">13</th><td><b>typedef</b> __int8 int8_t;</td></tr>
+<tr><th id="14">14</th><td><b>typedef</b> __int16 int16_t;</td></tr>
+<tr><th id="15">15</th><td><b>typedef</b> __int32 int32_t;</td></tr>
+<tr><th id="16">16</th><td><b>typedef</b> __int64 int64_t;</td></tr>
+<tr><th id="17">17</th><td><b>typedef</b> <em>unsigned</em> __int8 uint8_t;</td></tr>
+<tr><th id="18">18</th><td><b>typedef</b> <em>unsigned</em> __int16 uint16_t;</td></tr>
+<tr><th id="19">19</th><td><b>typedef</b> <em>unsigned</em> __int32 uint32_t;</td></tr>
+<tr><th id="20">20</th><td><b>typedef</b> <em>unsigned</em> __int64 uint64_t;</td></tr>
+<tr><th id="21">21</th><td><u>#ifdef _WIN64</u></td></tr>
+<tr><th id="22">22</th><td><b>typedef</b> __int64 intptr_t;</td></tr>
+<tr><th id="23">23</th><td><b>typedef</b> <em>unsigned</em> __int64 uintptr_t;</td></tr>
+<tr><th id="24">24</th><td><u>#else</u></td></tr>
+<tr><th id="25">25</th><td><b>typedef</b> __int32 intptr_t;</td></tr>
+<tr><th id="26">26</th><td><b>typedef</b> <em>unsigned</em> __int32 uintptr_t;</td></tr>
+<tr><th id="27">27</th><td><u>#endif</u></td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="11">elif</span> defined(<span class="macro" data-ref="_M/__symbian__">__symbian__</span>)</u></td></tr>
+<tr><th id="29">29</th><td><i>/* Cough. */</i></td></tr>
+<tr><th id="30">30</th><td><b>typedef</b> <em>signed</em> <em>char</em> int8_t;</td></tr>
+<tr><th id="31">31</th><td><b>typedef</b> <em>short</em> <em>int</em> int16_t;</td></tr>
+<tr><th id="32">32</th><td><b>typedef</b> <em>int</em> int32_t;</td></tr>
+<tr><th id="33">33</th><td><b>typedef</b> <em>long</em> <em>long</em> int64_t;</td></tr>
+<tr><th id="34">34</th><td><b>typedef</b> <em>unsigned</em> <em>char</em> uint8_t;</td></tr>
+<tr><th id="35">35</th><td><b>typedef</b> <em>unsigned</em> <em>short</em> <em>int</em> uint16_t;</td></tr>
+<tr><th id="36">36</th><td><b>typedef</b> <em>unsigned</em> <em>int</em> uint32_t;</td></tr>
+<tr><th id="37">37</th><td><b>typedef</b> <em>unsigned</em> <em>long</em> <em>long</em> uint64_t;</td></tr>
+<tr><th id="38">38</th><td><b>typedef</b> <em>int</em> intptr_t;</td></tr>
+<tr><th id="39">39</th><td><b>typedef</b> <em>unsigned</em> <em>int</em> uintptr_t;</td></tr>
+<tr><th id="40">40</th><td><u>#<span data-ppcond="11">else</span></u></td></tr>
+<tr><th id="41">41</th><td><u>#include &lt;stdint.h&gt;</u></td></tr>
+<tr><th id="42">42</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><i>/* Needed everywhere. */</i></td></tr>
+<tr><th id="45">45</th><td><u>#include <a href="../include/string.h.html">&lt;string.h&gt;</a></u></td></tr>
+<tr><th id="46">46</th><td><u>#include <a href="../include/stdlib.h.html">&lt;stdlib.h&gt;</a></u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><i>/* Various VM limits. */</i></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_MEM32" data-ref="_M/LJ_MAX_MEM32">LJ_MAX_MEM32</dfn>	0x7fffff00	/* Max. 32 bit memory allocation. */</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_MEM64" data-ref="_M/LJ_MAX_MEM64">LJ_MAX_MEM64</dfn>	((uint64_t)1&lt;&lt;47)  /* Max. 64 bit memory allocation. */</u></td></tr>
+<tr><th id="51">51</th><td><i>/* Max. total memory allocation. */</i></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_MEM" data-ref="_M/LJ_MAX_MEM">LJ_MAX_MEM</dfn>	(LJ_GC64 ? LJ_MAX_MEM64 : LJ_MAX_MEM32)</u></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_ALLOC" data-ref="_M/LJ_MAX_ALLOC">LJ_MAX_ALLOC</dfn>	LJ_MAX_MEM	/* Max. individual allocation length. */</u></td></tr>
+<tr><th id="54">54</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_STR" data-ref="_M/LJ_MAX_STR">LJ_MAX_STR</dfn>	LJ_MAX_MEM32	/* Max. string length. */</u></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_BUF" data-ref="_M/LJ_MAX_BUF">LJ_MAX_BUF</dfn>	LJ_MAX_MEM32	/* Max. buffer length. */</u></td></tr>
+<tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_UDATA" data-ref="_M/LJ_MAX_UDATA">LJ_MAX_UDATA</dfn>	LJ_MAX_MEM32	/* Max. userdata length. */</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_STRTAB" data-ref="_M/LJ_MAX_STRTAB">LJ_MAX_STRTAB</dfn>	(1&lt;&lt;26)		/* Max. string table size. */</u></td></tr>
+<tr><th id="59">59</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_HBITS" data-ref="_M/LJ_MAX_HBITS">LJ_MAX_HBITS</dfn>	26		/* Max. hash bits. */</u></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_ABITS" data-ref="_M/LJ_MAX_ABITS">LJ_MAX_ABITS</dfn>	28		/* Max. bits of array key. */</u></td></tr>
+<tr><th id="61">61</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_ASIZE" data-ref="_M/LJ_MAX_ASIZE">LJ_MAX_ASIZE</dfn>	((1&lt;&lt;(LJ_MAX_ABITS-1))+1)  /* Max. array part size. */</u></td></tr>
+<tr><th id="62">62</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_COLOSIZE" data-ref="_M/LJ_MAX_COLOSIZE">LJ_MAX_COLOSIZE</dfn>	16		/* Max. elems for colocated array. */</u></td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_LINE" data-ref="_M/LJ_MAX_LINE">LJ_MAX_LINE</dfn>	LJ_MAX_MEM32	/* Max. source code line number. */</u></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_XLEVEL" data-ref="_M/LJ_MAX_XLEVEL">LJ_MAX_XLEVEL</dfn>	200		/* Max. syntactic nesting level. */</u></td></tr>
+<tr><th id="66">66</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_BCINS" data-ref="_M/LJ_MAX_BCINS">LJ_MAX_BCINS</dfn>	(1&lt;&lt;26)		/* Max. # of bytecode instructions. */</u></td></tr>
+<tr><th id="67">67</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_SLOTS" data-ref="_M/LJ_MAX_SLOTS">LJ_MAX_SLOTS</dfn>	250		/* Max. # of slots in a Lua func. */</u></td></tr>
+<tr><th id="68">68</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_LOCVAR" data-ref="_M/LJ_MAX_LOCVAR">LJ_MAX_LOCVAR</dfn>	200		/* Max. # of local variables. */</u></td></tr>
+<tr><th id="69">69</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_UPVAL" data-ref="_M/LJ_MAX_UPVAL">LJ_MAX_UPVAL</dfn>	60		/* Max. # of upvalues. */</u></td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_IDXCHAIN" data-ref="_M/LJ_MAX_IDXCHAIN">LJ_MAX_IDXCHAIN</dfn>	100		/* __index/__newindex chain limit. */</u></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/LJ_STACK_EXTRA" data-ref="_M/LJ_STACK_EXTRA">LJ_STACK_EXTRA</dfn>	(5+2*LJ_FR2)	/* Extra stack space (metamethods). */</u></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><u>#define <dfn class="macro" id="_M/LJ_NUM_CBPAGE" data-ref="_M/LJ_NUM_CBPAGE">LJ_NUM_CBPAGE</dfn>	1		/* Number of FFI callback pages. */</u></td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td><i>/* Minimum table/buffer sizes. */</i></td></tr>
+<tr><th id="77">77</th><td><u>#define <dfn class="macro" id="_M/LJ_MIN_GLOBAL" data-ref="_M/LJ_MIN_GLOBAL">LJ_MIN_GLOBAL</dfn>	6		/* Min. global table size (hbits). */</u></td></tr>
+<tr><th id="78">78</th><td><u>#define <dfn class="macro" id="_M/LJ_MIN_REGISTRY" data-ref="_M/LJ_MIN_REGISTRY">LJ_MIN_REGISTRY</dfn>	2		/* Min. registry size (hbits). */</u></td></tr>
+<tr><th id="79">79</th><td><u>#define <dfn class="macro" id="_M/LJ_MIN_STRTAB" data-ref="_M/LJ_MIN_STRTAB">LJ_MIN_STRTAB</dfn>	256		/* Min. string table size (pow2). */</u></td></tr>
+<tr><th id="80">80</th><td><u>#define <dfn class="macro" id="_M/LJ_MIN_SBUF" data-ref="_M/LJ_MIN_SBUF">LJ_MIN_SBUF</dfn>	32		/* Min. string buffer length. */</u></td></tr>
+<tr><th id="81">81</th><td><u>#define <dfn class="macro" id="_M/LJ_MIN_VECSZ" data-ref="_M/LJ_MIN_VECSZ">LJ_MIN_VECSZ</dfn>	8		/* Min. size for growable vectors. */</u></td></tr>
+<tr><th id="82">82</th><td><u>#define <dfn class="macro" id="_M/LJ_MIN_IRSZ" data-ref="_M/LJ_MIN_IRSZ">LJ_MIN_IRSZ</dfn>	32		/* Min. size for growable IR. */</u></td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><i>/* JIT compiler limits. */</i></td></tr>
+<tr><th id="85">85</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_JSLOTS" data-ref="_M/LJ_MAX_JSLOTS">LJ_MAX_JSLOTS</dfn>	250		/* Max. # of stack slots for a trace. */</u></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_PHI" data-ref="_M/LJ_MAX_PHI">LJ_MAX_PHI</dfn>	64		/* Max. # of PHIs for a loop. */</u></td></tr>
+<tr><th id="87">87</th><td><u>#define <dfn class="macro" id="_M/LJ_MAX_EXITSTUBGR" data-ref="_M/LJ_MAX_EXITSTUBGR">LJ_MAX_EXITSTUBGR</dfn>	16	/* Max. # of exit stub groups. */</u></td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td><i>/* Various macros. */</i></td></tr>
+<tr><th id="90">90</th><td><u>#<span data-ppcond="90">ifndef</span> <span class="macro" data-ref="_M/UNUSED">UNUSED</span></u></td></tr>
+<tr><th id="91">91</th><td><u>#define <dfn class="macro" id="_M/UNUSED" data-ref="_M/UNUSED">UNUSED</dfn>(x)	((void)(x))	/* to avoid warnings */</u></td></tr>
+<tr><th id="92">92</th><td><u>#<span data-ppcond="90">endif</span></u></td></tr>
+<tr><th id="93">93</th><td></td></tr>
+<tr><th id="94">94</th><td><u>#define <dfn class="macro" id="_M/U64x" data-ref="_M/U64x">U64x</dfn>(hi, lo)	(((uint64_t)0x##hi &lt;&lt; 32) + (uint64_t)0x##lo)</u></td></tr>
+<tr><th id="95">95</th><td><u>#define <dfn class="macro" id="_M/i32ptr" data-ref="_M/i32ptr">i32ptr</dfn>(p)	((int32_t)(intptr_t)(void *)(p))</u></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/u32ptr" data-ref="_M/u32ptr">u32ptr</dfn>(p)	((uint32_t)(intptr_t)(void *)(p))</u></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/i64ptr" data-ref="_M/i64ptr">i64ptr</dfn>(p)	((int64_t)(intptr_t)(void *)(p))</u></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/u64ptr" data-ref="_M/u64ptr">u64ptr</dfn>(p)	((uint64_t)(intptr_t)(void *)(p))</u></td></tr>
+<tr><th id="99">99</th><td><u>#define <dfn class="macro" id="_M/igcptr" data-ref="_M/igcptr">igcptr</dfn>(p)	(LJ_GC64 ? i64ptr(p) : i32ptr(p))</u></td></tr>
+<tr><th id="100">100</th><td></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/checki8" data-ref="_M/checki8">checki8</dfn>(x)	((x) == (int32_t)(int8_t)(x))</u></td></tr>
+<tr><th id="102">102</th><td><u>#define <dfn class="macro" id="_M/checku8" data-ref="_M/checku8">checku8</dfn>(x)	((x) == (int32_t)(uint8_t)(x))</u></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/checki16" data-ref="_M/checki16">checki16</dfn>(x)	((x) == (int32_t)(int16_t)(x))</u></td></tr>
+<tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/checku16" data-ref="_M/checku16">checku16</dfn>(x)	((x) == (int32_t)(uint16_t)(x))</u></td></tr>
+<tr><th id="105">105</th><td><u>#define <dfn class="macro" id="_M/checki32" data-ref="_M/checki32">checki32</dfn>(x)	((x) == (int32_t)(x))</u></td></tr>
+<tr><th id="106">106</th><td><u>#define <dfn class="macro" id="_M/checku32" data-ref="_M/checku32">checku32</dfn>(x)	((x) == (uint32_t)(x))</u></td></tr>
+<tr><th id="107">107</th><td><u>#define <dfn class="macro" id="_M/checkptr31" data-ref="_M/checkptr31">checkptr31</dfn>(x)	(((uint64_t)(uintptr_t)(x) &gt;&gt; 31) == 0)</u></td></tr>
+<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/checkptr32" data-ref="_M/checkptr32">checkptr32</dfn>(x)	((uintptr_t)(x) == (uint32_t)(uintptr_t)(x))</u></td></tr>
+<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/checkptr47" data-ref="_M/checkptr47">checkptr47</dfn>(x)	(((uint64_t)(uintptr_t)(x) &gt;&gt; 47) == 0)</u></td></tr>
+<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/checkptrGC" data-ref="_M/checkptrGC">checkptrGC</dfn>(x)	(LJ_GC64 ? checkptr47((x)) : LJ_64 ? checkptr31((x)) :1)</u></td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><i>/* Every half-decent C compiler transforms this into a rotate instruction. */</i></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/lj_rol" data-ref="_M/lj_rol">lj_rol</dfn>(x, n)	(((x)&lt;&lt;(n)) | ((x)&gt;&gt;(-(int)(n)&amp;(8*sizeof(x)-1))))</u></td></tr>
+<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/lj_ror" data-ref="_M/lj_ror">lj_ror</dfn>(x, n)	(((x)&lt;&lt;(-(int)(n)&amp;(8*sizeof(x)-1))) | ((x)&gt;&gt;(n)))</u></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><i>/* A really naive Bloom filter. But sufficient for our needs. */</i></td></tr>
+<tr><th id="117">117</th><td><b>typedef</b> <a class="typedef" href="../include/stdint.h.html#uintptr_t" title='uintptr_t' data-type='unsigned long' data-ref="uintptr_t" data-ref-filename="uintptr_t">uintptr_t</a> <dfn class="typedef" id="BloomFilter" title='BloomFilter' data-type='uintptr_t' data-ref="BloomFilter" data-ref-filename="BloomFilter">BloomFilter</dfn>;</td></tr>
+<tr><th id="118">118</th><td><u>#define <dfn class="macro" id="_M/BLOOM_MASK" data-ref="_M/BLOOM_MASK">BLOOM_MASK</dfn>	(8*sizeof(BloomFilter) - 1)</u></td></tr>
+<tr><th id="119">119</th><td><u>#define <dfn class="macro" id="_M/bloombit" data-ref="_M/bloombit">bloombit</dfn>(x)	((uintptr_t)1 &lt;&lt; ((x) &amp; BLOOM_MASK))</u></td></tr>
+<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/bloomset" data-ref="_M/bloomset">bloomset</dfn>(b, x)	((b) |= bloombit((x)))</u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/bloomtest" data-ref="_M/bloomtest">bloomtest</dfn>(b, x)	((b) &amp; bloombit((x)))</u></td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td><u>#<span data-ppcond="123">if</span> defined(<span class="macro" data-ref="_M/__GNUC__">__GNUC__</span>) || defined(<span class="macro" data-ref="_M/__clang__">__clang__</span>) || defined(<span class="macro" data-ref="_M/__psp2__">__psp2__</span>)</u></td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><u>#define <dfn class="macro" id="_M/LJ_NORET" data-ref="_M/LJ_NORET">LJ_NORET</dfn>	__attribute__((noreturn))</u></td></tr>
+<tr><th id="126">126</th><td><u>#define <dfn class="macro" id="_M/LJ_ALIGN" data-ref="_M/LJ_ALIGN">LJ_ALIGN</dfn>(n)	__attribute__((aligned(n)))</u></td></tr>
+<tr><th id="127">127</th><td><u>#define <dfn class="macro" id="_M/LJ_INLINE" data-ref="_M/LJ_INLINE">LJ_INLINE</dfn>	inline</u></td></tr>
+<tr><th id="128">128</th><td><u>#define <dfn class="macro" id="_M/LJ_AINLINE" data-ref="_M/LJ_AINLINE">LJ_AINLINE</dfn>	inline __attribute__((always_inline))</u></td></tr>
+<tr><th id="129">129</th><td><u>#define <dfn class="macro" id="_M/LJ_NOINLINE" data-ref="_M/LJ_NOINLINE">LJ_NOINLINE</dfn>	__attribute__((noinline))</u></td></tr>
+<tr><th id="130">130</th><td></td></tr>
+<tr><th id="131">131</th><td><u>#<span data-ppcond="131">if</span> defined(<span class="macro" data-ref="_M/__ELF__">__ELF__</span>) || defined(<span class="macro" data-ref="_M/__MACH__">__MACH__</span>) || defined(<span class="macro" data-ref="_M/__psp2__">__psp2__</span>)</u></td></tr>
+<tr><th id="132">132</th><td><u>#<span data-ppcond="132">if</span> !((defined(<span class="macro" data-ref="_M/__sun__">__sun__</span>) &amp;&amp; defined(<span class="macro" data-ref="_M/__svr4__">__svr4__</span>)) || defined(<span class="macro" data-ref="_M/__CELLOS_LV2__">__CELLOS_LV2__</span>))</u></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/LJ_NOAPI" data-ref="_M/LJ_NOAPI">LJ_NOAPI</dfn>	extern __attribute__((visibility("hidden")))</u></td></tr>
+<tr><th id="134">134</th><td><u>#<span data-ppcond="132">endif</span></u></td></tr>
+<tr><th id="135">135</th><td><u>#<span data-ppcond="131">endif</span></u></td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td><i>/* Note: it's only beneficial to use fastcall on x86 and then only for up to</i></td></tr>
+<tr><th id="138">138</th><td><i>** two non-FP args. The amalgamated compile covers all LJ_FUNC cases. Only</i></td></tr>
+<tr><th id="139">139</th><td><i>** indirect calls and related tail-called C functions are marked as fastcall.</i></td></tr>
+<tr><th id="140">140</th><td><i>*/</i></td></tr>
+<tr><th id="141">141</th><td><u>#<span data-ppcond="141">if</span> defined(<span class="macro" data-ref="_M/__i386__">__i386__</span>)</u></td></tr>
+<tr><th id="142">142</th><td><u>#define LJ_FASTCALL	__attribute__((fastcall))</u></td></tr>
+<tr><th id="143">143</th><td><u>#<span data-ppcond="141">endif</span></u></td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><u>#define <dfn class="macro" id="_M/LJ_LIKELY" data-ref="_M/LJ_LIKELY">LJ_LIKELY</dfn>(x)	__builtin_expect(!!(x), 1)</u></td></tr>
+<tr><th id="146">146</th><td><u>#define <dfn class="macro" id="_M/LJ_UNLIKELY" data-ref="_M/LJ_UNLIKELY">LJ_UNLIKELY</dfn>(x)	__builtin_expect(!!(x), 0)</u></td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td><u>#define <dfn class="macro" id="_M/lj_ffs" data-ref="_M/lj_ffs">lj_ffs</dfn>(x)	((uint32_t)__builtin_ctz(x))</u></td></tr>
+<tr><th id="149">149</th><td><i>/* Don't ask ... */</i></td></tr>
+<tr><th id="150">150</th><td><u>#<span data-ppcond="150">if</span> defined(<span class="macro" data-ref="_M/__INTEL_COMPILER">__INTEL_COMPILER</span>) &amp;&amp; (defined(<span class="macro" data-ref="_M/__i386__">__i386__</span>) || defined(<span class="macro" data-ref="_M/__x86_64__">__x86_64__</span>))</u></td></tr>
+<tr><th id="151">151</th><td><em>static</em> LJ_AINLINE uint32_t lj_fls(uint32_t x)</td></tr>
+<tr><th id="152">152</th><td>{</td></tr>
+<tr><th id="153">153</th><td>  uint32_t r; <b>__asm__</b>(<q>"bsrl %1, %0"</q> : <q>"=r"</q> (r) : <q>"rm"</q> (x) : <q>"cc"</q>); <b>return</b> r;</td></tr>
+<tr><th id="154">154</th><td>}</td></tr>
+<tr><th id="155">155</th><td><u>#<span data-ppcond="150">else</span></u></td></tr>
+<tr><th id="156">156</th><td><u>#define <dfn class="macro" id="_M/lj_fls" data-ref="_M/lj_fls">lj_fls</dfn>(x)	((uint32_t)(__builtin_clz(x)^31))</u></td></tr>
+<tr><th id="157">157</th><td><u>#<span data-ppcond="150">endif</span></u></td></tr>
+<tr><th id="158">158</th><td></td></tr>
+<tr><th id="159">159</th><td><u>#<span data-ppcond="159">if</span> defined(<span class="macro" data-ref="_M/__arm__">__arm__</span>)</u></td></tr>
+<tr><th id="160">160</th><td><em>static</em> LJ_AINLINE uint32_t lj_bswap(uint32_t x)</td></tr>
+<tr><th id="161">161</th><td>{</td></tr>
+<tr><th id="162">162</th><td><u>#if defined(__psp2__)</u></td></tr>
+<tr><th id="163">163</th><td>  <b>return</b> __builtin_rev(x);</td></tr>
+<tr><th id="164">164</th><td><u>#else</u></td></tr>
+<tr><th id="165">165</th><td>  uint32_t r;</td></tr>
+<tr><th id="166">166</th><td><u>#if __ARM_ARCH_6__ || __ARM_ARCH_6J__ || __ARM_ARCH_6T2__ || __ARM_ARCH_6Z__ ||\</u></td></tr>
+<tr><th id="167">167</th><td><u>    __ARM_ARCH_6ZK__ || __ARM_ARCH_7__ || __ARM_ARCH_7A__ || __ARM_ARCH_7R__</u></td></tr>
+<tr><th id="168">168</th><td>  <b>__asm__</b>(<q>"rev %0, %1"</q> : <q>"=r"</q> (r) : <q>"r"</q> (x));</td></tr>
+<tr><th id="169">169</th><td>  <b>return</b> r;</td></tr>
+<tr><th id="170">170</th><td><u>#else</u></td></tr>
+<tr><th id="171">171</th><td><u>#ifdef __thumb__</u></td></tr>
+<tr><th id="172">172</th><td>  r = x ^ lj_ror(x, <var>16</var>);</td></tr>
+<tr><th id="173">173</th><td><u>#else</u></td></tr>
+<tr><th id="174">174</th><td>  <b>__asm__</b>(<q>"eor %0, %1, %1, ror #16"</q> : <q>"=r"</q> (r) : <q>"r"</q> (x));</td></tr>
+<tr><th id="175">175</th><td><u>#endif</u></td></tr>
+<tr><th id="176">176</th><td>  <b>return</b> ((r &amp; <var>0xff00ffffu</var>) &gt;&gt; <var>8</var>) ^ lj_ror(x, <var>8</var>);</td></tr>
+<tr><th id="177">177</th><td><u>#endif</u></td></tr>
+<tr><th id="178">178</th><td><u>#endif</u></td></tr>
+<tr><th id="179">179</th><td>}</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td><em>static</em> LJ_AINLINE uint64_t lj_bswap64(uint64_t x)</td></tr>
+<tr><th id="182">182</th><td>{</td></tr>
+<tr><th id="183">183</th><td>  <b>return</b> ((uint64_t)lj_bswap((uint32_t)x)&lt;&lt;<var>32</var>) | lj_bswap((uint32_t)(x&gt;&gt;<var>32</var>));</td></tr>
+<tr><th id="184">184</th><td>}</td></tr>
+<tr><th id="185">185</th><td><u>#<span data-ppcond="159">elif</span> (<span class="macro" title="4" data-ref="_M/__GNUC__">__GNUC__</span> &gt; 4) || (<span class="macro" title="4" data-ref="_M/__GNUC__">__GNUC__</span> == 4 &amp;&amp; <span class="macro" title="2" data-ref="_M/__GNUC_MINOR__">__GNUC_MINOR__</span> &gt;= 3) || <span class="macro" title="1" data-ref="_M/__clang__">__clang__</span></u></td></tr>
+<tr><th id="186">186</th><td><em>static</em> <a class="macro" href="#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl def fn" id="lj_bswap" title='lj_bswap' data-ref="lj_bswap" data-ref-filename="lj_bswap">lj_bswap</dfn>(<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col6 decl" id="756x" title='x' data-type='uint32_t' data-ref="756x" data-ref-filename="756x">x</dfn>)</td></tr>
+<tr><th id="187">187</th><td>{</td></tr>
+<tr><th id="188">188</th><td>  <b>return</b> (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)<a class="ref fn" href="#188" title='__builtin_bswap32' data-ref="__builtin_bswap32" data-ref-filename="__builtin_bswap32">__builtin_bswap32</a>((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>)<a class="local col6 ref" href="#756x" title='x' data-ref="756x" data-ref-filename="756x">x</a>);</td></tr>
+<tr><th id="189">189</th><td>}</td></tr>
+<tr><th id="190">190</th><td></td></tr>
+<tr><th id="191">191</th><td><em>static</em> <a class="macro" href="#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="decl def fn" id="lj_bswap64" title='lj_bswap64' data-ref="lj_bswap64" data-ref-filename="lj_bswap64">lj_bswap64</dfn>(<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col7 decl" id="757x" title='x' data-type='uint64_t' data-ref="757x" data-ref-filename="757x">x</dfn>)</td></tr>
+<tr><th id="192">192</th><td>{</td></tr>
+<tr><th id="193">193</th><td>  <b>return</b> (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a>)<a class="ref fn" href="#193" title='__builtin_bswap64' data-ref="__builtin_bswap64" data-ref-filename="__builtin_bswap64">__builtin_bswap64</a>((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a>)<a class="local col7 ref" href="#757x" title='x' data-ref="757x" data-ref-filename="757x">x</a>);</td></tr>
+<tr><th id="194">194</th><td>}</td></tr>
+<tr><th id="195">195</th><td><u>#<span data-ppcond="159">elif</span> defined(__i386__) || defined(__x86_64__)</u></td></tr>
+<tr><th id="196">196</th><td><em>static</em> LJ_AINLINE uint32_t lj_bswap(uint32_t x)</td></tr>
+<tr><th id="197">197</th><td>{</td></tr>
+<tr><th id="198">198</th><td>  uint32_t r; <b>__asm__</b>(<q>"bswap %0"</q> : <q>"=r"</q> (r) : <q>"0"</q> (x)); <b>return</b> r;</td></tr>
+<tr><th id="199">199</th><td>}</td></tr>
+<tr><th id="200">200</th><td></td></tr>
+<tr><th id="201">201</th><td><u>#if defined(__i386__)</u></td></tr>
+<tr><th id="202">202</th><td><em>static</em> LJ_AINLINE uint64_t lj_bswap64(uint64_t x)</td></tr>
+<tr><th id="203">203</th><td>{</td></tr>
+<tr><th id="204">204</th><td>  <b>return</b> ((uint64_t)lj_bswap((uint32_t)x)&lt;&lt;<var>32</var>) | lj_bswap((uint32_t)(x&gt;&gt;<var>32</var>));</td></tr>
+<tr><th id="205">205</th><td>}</td></tr>
+<tr><th id="206">206</th><td><u>#else</u></td></tr>
+<tr><th id="207">207</th><td><em>static</em> LJ_AINLINE uint64_t lj_bswap64(uint64_t x)</td></tr>
+<tr><th id="208">208</th><td>{</td></tr>
+<tr><th id="209">209</th><td>  uint64_t r; <b>__asm__</b>(<q>"bswap %0"</q> : <q>"=r"</q> (r) : <q>"0"</q> (x)); <b>return</b> r;</td></tr>
+<tr><th id="210">210</th><td>}</td></tr>
+<tr><th id="211">211</th><td><u>#endif</u></td></tr>
+<tr><th id="212">212</th><td><u>#else</u></td></tr>
+<tr><th id="213">213</th><td><em>static</em> LJ_AINLINE uint32_t lj_bswap(uint32_t x)</td></tr>
+<tr><th id="214">214</th><td>{</td></tr>
+<tr><th id="215">215</th><td>  <b>return</b> (x &lt;&lt; <var>24</var>) | ((x &amp; <var>0xff00</var>) &lt;&lt; <var>8</var>) | ((x &gt;&gt; <var>8</var>) &amp; <var>0xff00</var>) | (x &gt;&gt; <var>24</var>);</td></tr>
+<tr><th id="216">216</th><td>}</td></tr>
+<tr><th id="217">217</th><td></td></tr>
+<tr><th id="218">218</th><td><em>static</em> LJ_AINLINE uint64_t lj_bswap64(uint64_t x)</td></tr>
+<tr><th id="219">219</th><td>{</td></tr>
+<tr><th id="220">220</th><td>  <b>return</b> (uint64_t)lj_bswap((uint32_t)(x &gt;&gt; <var>32</var>)) |</td></tr>
+<tr><th id="221">221</th><td>	 ((uint64_t)lj_bswap((uint32_t)x) &lt;&lt; <var>32</var>);</td></tr>
+<tr><th id="222">222</th><td>}</td></tr>
+<tr><th id="223">223</th><td><u>#<span data-ppcond="159">endif</span></u></td></tr>
+<tr><th id="224">224</th><td></td></tr>
+<tr><th id="225">225</th><td><b>typedef</b> <b>union</b> <b>__attribute__</b>((packed)) <dfn class="type def" id="Unaligned16" title='Unaligned16' data-ref="Unaligned16" data-ref-filename="Unaligned16"><a class="type" href="#Unaligned16" title='Unaligned16' data-ref="Unaligned16" data-ref-filename="Unaligned16">Unaligned16</a></dfn> {</td></tr>
+<tr><th id="226">226</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl field" id="Unaligned16::u" title='Unaligned16::u' data-ref="Unaligned16::u" data-ref-filename="Unaligned16..u">u</dfn>;</td></tr>
+<tr><th id="227">227</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="Unaligned16::b" title='Unaligned16::b' data-ref="Unaligned16::b" data-ref-filename="Unaligned16..b">b</dfn>[<var>2</var>];</td></tr>
+<tr><th id="228">228</th><td>} <dfn class="typedef" id="Unaligned16" title='Unaligned16' data-type='union Unaligned16' data-ref="Unaligned16" data-ref-filename="Unaligned16">Unaligned16</dfn>;</td></tr>
+<tr><th id="229">229</th><td></td></tr>
+<tr><th id="230">230</th><td><b>typedef</b> <b>union</b> <b>__attribute__</b>((packed)) <dfn class="type def" id="Unaligned32" title='Unaligned32' data-ref="Unaligned32" data-ref-filename="Unaligned32"><a class="type" href="#Unaligned32" title='Unaligned32' data-ref="Unaligned32" data-ref-filename="Unaligned32">Unaligned32</a></dfn> {</td></tr>
+<tr><th id="231">231</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="Unaligned32::u" title='Unaligned32::u' data-ref="Unaligned32::u" data-ref-filename="Unaligned32..u">u</dfn>;</td></tr>
+<tr><th id="232">232</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="Unaligned32::b" title='Unaligned32::b' data-ref="Unaligned32::b" data-ref-filename="Unaligned32..b">b</dfn>[<var>4</var>];</td></tr>
+<tr><th id="233">233</th><td>} <dfn class="typedef" id="Unaligned32" title='Unaligned32' data-type='union Unaligned32' data-ref="Unaligned32" data-ref-filename="Unaligned32">Unaligned32</dfn>;</td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td><i>/* Unaligned load of uint16_t. */</i></td></tr>
+<tr><th id="236">236</th><td><em>static</em> <a class="macro" href="#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl def fn" id="lj_getu16" title='lj_getu16' data-ref="lj_getu16" data-ref-filename="lj_getu16">lj_getu16</dfn>(<em>const</em> <em>void</em> *<dfn class="local col8 decl" id="758p" title='p' data-type='const void *' data-ref="758p" data-ref-filename="758p">p</dfn>)</td></tr>
+<tr><th id="237">237</th><td>{</td></tr>
+<tr><th id="238">238</th><td>  <b>return</b> ((<em>const</em> <a class="typedef" href="#Unaligned16" title='Unaligned16' data-type='union Unaligned16' data-ref="Unaligned16" data-ref-filename="Unaligned16">Unaligned16</a> *)<a class="local col8 ref" href="#758p" title='p' data-ref="758p" data-ref-filename="758p">p</a>)-&gt;<a class="ref field" href="#Unaligned16::u" title='Unaligned16::u' data-ref="Unaligned16::u" data-ref-filename="Unaligned16..u">u</a>;</td></tr>
+<tr><th id="239">239</th><td>}</td></tr>
+<tr><th id="240">240</th><td></td></tr>
+<tr><th id="241">241</th><td><i>/* Unaligned load of uint32_t. */</i></td></tr>
+<tr><th id="242">242</th><td><em>static</em> <a class="macro" href="#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl def fn" id="lj_getu32" title='lj_getu32' data-ref="lj_getu32" data-ref-filename="lj_getu32">lj_getu32</dfn>(<em>const</em> <em>void</em> *<dfn class="local col9 decl" id="759p" title='p' data-type='const void *' data-ref="759p" data-ref-filename="759p">p</dfn>)</td></tr>
+<tr><th id="243">243</th><td>{</td></tr>
+<tr><th id="244">244</th><td>  <b>return</b> ((<em>const</em> <a class="typedef" href="#Unaligned32" title='Unaligned32' data-type='union Unaligned32' data-ref="Unaligned32" data-ref-filename="Unaligned32">Unaligned32</a> *)<a class="local col9 ref" href="#759p" title='p' data-ref="759p" data-ref-filename="759p">p</a>)-&gt;<a class="ref field" href="#Unaligned32::u" title='Unaligned32::u' data-ref="Unaligned32::u" data-ref-filename="Unaligned32..u">u</a>;</td></tr>
+<tr><th id="245">245</th><td>}</td></tr>
+<tr><th id="246">246</th><td></td></tr>
+<tr><th id="247">247</th><td><u>#<span data-ppcond="123">elif</span> defined(_MSC_VER)</u></td></tr>
+<tr><th id="248">248</th><td></td></tr>
+<tr><th id="249">249</th><td><u>#define LJ_NORET	__declspec(noreturn)</u></td></tr>
+<tr><th id="250">250</th><td><u>#define LJ_ALIGN(n)	__declspec(align(n))</u></td></tr>
+<tr><th id="251">251</th><td><u>#define LJ_INLINE	__inline</u></td></tr>
+<tr><th id="252">252</th><td><u>#define LJ_AINLINE	__forceinline</u></td></tr>
+<tr><th id="253">253</th><td><u>#define LJ_NOINLINE	__declspec(noinline)</u></td></tr>
+<tr><th id="254">254</th><td><u>#if defined(_M_IX86)</u></td></tr>
+<tr><th id="255">255</th><td><u>#define LJ_FASTCALL	__fastcall</u></td></tr>
+<tr><th id="256">256</th><td><u>#endif</u></td></tr>
+<tr><th id="257">257</th><td></td></tr>
+<tr><th id="258">258</th><td><u>#ifdef _M_PPC</u></td></tr>
+<tr><th id="259">259</th><td><em>unsigned</em> <em>int</em> _CountLeadingZeros(<em>long</em>);</td></tr>
+<tr><th id="260">260</th><td><u>#pragma intrinsic(_CountLeadingZeros)</u></td></tr>
+<tr><th id="261">261</th><td><em>static</em> LJ_AINLINE uint32_t lj_fls(uint32_t x)</td></tr>
+<tr><th id="262">262</th><td>{</td></tr>
+<tr><th id="263">263</th><td>  <b>return</b> _CountLeadingZeros(x) ^ <var>31</var>;</td></tr>
+<tr><th id="264">264</th><td>}</td></tr>
+<tr><th id="265">265</th><td><u>#else</u></td></tr>
+<tr><th id="266">266</th><td><em>unsigned</em> <em>char</em> _BitScanForward(<em>unsigned</em> <em>long</em> *, <em>unsigned</em> <em>long</em>);</td></tr>
+<tr><th id="267">267</th><td><em>unsigned</em> <em>char</em> _BitScanReverse(<em>unsigned</em> <em>long</em> *, <em>unsigned</em> <em>long</em>);</td></tr>
+<tr><th id="268">268</th><td><u>#pragma intrinsic(_BitScanForward)</u></td></tr>
+<tr><th id="269">269</th><td><u>#pragma intrinsic(_BitScanReverse)</u></td></tr>
+<tr><th id="270">270</th><td></td></tr>
+<tr><th id="271">271</th><td><em>static</em> LJ_AINLINE uint32_t lj_ffs(uint32_t x)</td></tr>
+<tr><th id="272">272</th><td>{</td></tr>
+<tr><th id="273">273</th><td>  <em>unsigned</em> <em>long</em> r; _BitScanForward(&amp;r, x); <b>return</b> (uint32_t)r;</td></tr>
+<tr><th id="274">274</th><td>}</td></tr>
+<tr><th id="275">275</th><td></td></tr>
+<tr><th id="276">276</th><td><em>static</em> LJ_AINLINE uint32_t lj_fls(uint32_t x)</td></tr>
+<tr><th id="277">277</th><td>{</td></tr>
+<tr><th id="278">278</th><td>  <em>unsigned</em> <em>long</em> r; _BitScanReverse(&amp;r, x); <b>return</b> (uint32_t)r;</td></tr>
+<tr><th id="279">279</th><td>}</td></tr>
+<tr><th id="280">280</th><td><u>#endif</u></td></tr>
+<tr><th id="281">281</th><td></td></tr>
+<tr><th id="282">282</th><td><em>unsigned</em> <em>long</em> _byteswap_ulong(<em>unsigned</em> <em>long</em>);</td></tr>
+<tr><th id="283">283</th><td>uint64_t _byteswap_uint64(uint64_t);</td></tr>
+<tr><th id="284">284</th><td><u>#define lj_bswap(x)	(_byteswap_ulong((x)))</u></td></tr>
+<tr><th id="285">285</th><td><u>#define lj_bswap64(x)	(_byteswap_uint64((x)))</u></td></tr>
+<tr><th id="286">286</th><td></td></tr>
+<tr><th id="287">287</th><td><u>#if defined(_M_PPC) &amp;&amp; defined(LUAJIT_NO_UNALIGNED)</u></td></tr>
+<tr><th id="288">288</th><td><i>/*</i></td></tr>
+<tr><th id="289">289</th><td><i>** Replacement for unaligned loads on Xbox 360. Disabled by default since it's</i></td></tr>
+<tr><th id="290">290</th><td><i>** usually more costly than the occasional stall when crossing a cache-line.</i></td></tr>
+<tr><th id="291">291</th><td><i>*/</i></td></tr>
+<tr><th id="292">292</th><td><em>static</em> LJ_AINLINE uint16_t lj_getu16(<em>const</em> <em>void</em> *v)</td></tr>
+<tr><th id="293">293</th><td>{</td></tr>
+<tr><th id="294">294</th><td>  <em>const</em> uint8_t *p = (<em>const</em> uint8_t *)v;</td></tr>
+<tr><th id="295">295</th><td>  <b>return</b> (uint16_t)((p[<var>0</var>]&lt;&lt;<var>8</var>) | p[<var>1</var>]);</td></tr>
+<tr><th id="296">296</th><td>}</td></tr>
+<tr><th id="297">297</th><td><em>static</em> LJ_AINLINE uint32_t lj_getu32(<em>const</em> <em>void</em> *v)</td></tr>
+<tr><th id="298">298</th><td>{</td></tr>
+<tr><th id="299">299</th><td>  <em>const</em> uint8_t *p = (<em>const</em> uint8_t *)v;</td></tr>
+<tr><th id="300">300</th><td>  <b>return</b> (uint32_t)((p[<var>0</var>]&lt;&lt;<var>24</var>) | (p[<var>1</var>]&lt;&lt;<var>16</var>) | (p[<var>2</var>]&lt;&lt;<var>8</var>) | p[<var>3</var>]);</td></tr>
+<tr><th id="301">301</th><td>}</td></tr>
+<tr><th id="302">302</th><td><u>#else</u></td></tr>
+<tr><th id="303">303</th><td><i>/* Unaligned loads are generally ok on x86/x64. */</i></td></tr>
+<tr><th id="304">304</th><td><u>#define lj_getu16(p)	(*(uint16_t *)(p))</u></td></tr>
+<tr><th id="305">305</th><td><u>#define lj_getu32(p)	(*(uint32_t *)(p))</u></td></tr>
+<tr><th id="306">306</th><td><u>#endif</u></td></tr>
+<tr><th id="307">307</th><td></td></tr>
+<tr><th id="308">308</th><td><u>#else</u></td></tr>
+<tr><th id="309">309</th><td><u>#error "missing defines for your compiler"</u></td></tr>
+<tr><th id="310">310</th><td><u>#<span data-ppcond="123">endif</span></u></td></tr>
+<tr><th id="311">311</th><td></td></tr>
+<tr><th id="312">312</th><td><i>/* Optional defines. */</i></td></tr>
+<tr><th id="313">313</th><td><u>#<span data-ppcond="313">ifndef</span> <span class="macro" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</span></u></td></tr>
+<tr><th id="314">314</th><td><u>#define <dfn class="macro" id="_M/LJ_FASTCALL" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</dfn></u></td></tr>
+<tr><th id="315">315</th><td><u>#<span data-ppcond="313">endif</span></u></td></tr>
+<tr><th id="316">316</th><td><u>#<span data-ppcond="316">ifndef</span> <a class="macro" href="#125" data-ref="_M/LJ_NORET">LJ_NORET</a></u></td></tr>
+<tr><th id="317">317</th><td><u>#define LJ_NORET</u></td></tr>
+<tr><th id="318">318</th><td><u>#<span data-ppcond="316">endif</span></u></td></tr>
+<tr><th id="319">319</th><td><u>#<span data-ppcond="319">ifndef</span> <a class="macro" href="#133" data-ref="_M/LJ_NOAPI">LJ_NOAPI</a></u></td></tr>
+<tr><th id="320">320</th><td><u>#define LJ_NOAPI	extern</u></td></tr>
+<tr><th id="321">321</th><td><u>#<span data-ppcond="319">endif</span></u></td></tr>
+<tr><th id="322">322</th><td><u>#<span data-ppcond="322">ifndef</span> <a class="macro" href="#145" data-ref="_M/LJ_LIKELY">LJ_LIKELY</a></u></td></tr>
+<tr><th id="323">323</th><td><u>#define LJ_LIKELY(x)	(x)</u></td></tr>
+<tr><th id="324">324</th><td><u>#define LJ_UNLIKELY(x)	(x)</u></td></tr>
+<tr><th id="325">325</th><td><u>#<span data-ppcond="322">endif</span></u></td></tr>
+<tr><th id="326">326</th><td></td></tr>
+<tr><th id="327">327</th><td><i>/* Attributes for internal functions. */</i></td></tr>
+<tr><th id="328">328</th><td><u>#define <dfn class="macro" id="_M/LJ_DATA" data-ref="_M/LJ_DATA">LJ_DATA</dfn>		LJ_NOAPI</u></td></tr>
+<tr><th id="329">329</th><td><u>#define <dfn class="macro" id="_M/LJ_DATADEF" data-ref="_M/LJ_DATADEF">LJ_DATADEF</dfn></u></td></tr>
+<tr><th id="330">330</th><td><u>#define <dfn class="macro" id="_M/LJ_ASMF" data-ref="_M/LJ_ASMF">LJ_ASMF</dfn>		LJ_NOAPI</u></td></tr>
+<tr><th id="331">331</th><td><u>#define <dfn class="macro" id="_M/LJ_FUNCA" data-ref="_M/LJ_FUNCA">LJ_FUNCA</dfn>	LJ_NOAPI</u></td></tr>
+<tr><th id="332">332</th><td><u>#<span data-ppcond="332">if</span> defined(<span class="macro" data-ref="_M/ljamalg_c">ljamalg_c</span>)</u></td></tr>
+<tr><th id="333">333</th><td><u>#define LJ_FUNC		static</u></td></tr>
+<tr><th id="334">334</th><td><u>#<span data-ppcond="332">else</span></u></td></tr>
+<tr><th id="335">335</th><td><u>#define <dfn class="macro" id="_M/LJ_FUNC" data-ref="_M/LJ_FUNC">LJ_FUNC</dfn>		LJ_NOAPI</u></td></tr>
+<tr><th id="336">336</th><td><u>#<span data-ppcond="332">endif</span></u></td></tr>
+<tr><th id="337">337</th><td><u>#define <dfn class="macro" id="_M/LJ_FUNC_NORET" data-ref="_M/LJ_FUNC_NORET">LJ_FUNC_NORET</dfn>	LJ_FUNC LJ_NORET</u></td></tr>
+<tr><th id="338">338</th><td><u>#define <dfn class="macro" id="_M/LJ_FUNCA_NORET" data-ref="_M/LJ_FUNCA_NORET">LJ_FUNCA_NORET</dfn>	LJ_FUNCA LJ_NORET</u></td></tr>
+<tr><th id="339">339</th><td><u>#define <dfn class="macro" id="_M/LJ_ASMF_NORET" data-ref="_M/LJ_ASMF_NORET">LJ_ASMF_NORET</dfn>	LJ_ASMF LJ_NORET</u></td></tr>
+<tr><th id="340">340</th><td></td></tr>
+<tr><th id="341">341</th><td><i>/* Internal assertions. */</i></td></tr>
+<tr><th id="342">342</th><td><u>#<span data-ppcond="342">if</span> defined(<span class="macro" data-ref="_M/LUA_USE_ASSERT">LUA_USE_ASSERT</span>) || defined(<span class="macro" data-ref="_M/LUA_USE_APICHECK">LUA_USE_APICHECK</span>)</u></td></tr>
+<tr><th id="343">343</th><td><u>#define lj_assert_check(g, c, ...) \</u></td></tr>
+<tr><th id="344">344</th><td><u>  ((c) ? (void)0 : \</u></td></tr>
+<tr><th id="345">345</th><td><u>   (lj_assert_fail((g), __FILE__, __LINE__, __func__, __VA_ARGS__), 0))</u></td></tr>
+<tr><th id="346">346</th><td><u>#define lj_checkapi(c, ...)	lj_assert_check(G(L), (c), __VA_ARGS__)</u></td></tr>
+<tr><th id="347">347</th><td><u>#<span data-ppcond="342">else</span></u></td></tr>
+<tr><th id="348">348</th><td><u>#define <dfn class="macro" id="_M/lj_checkapi" data-ref="_M/lj_checkapi">lj_checkapi</dfn>(c, ...)	((void)L)</u></td></tr>
+<tr><th id="349">349</th><td><u>#<span data-ppcond="342">endif</span></u></td></tr>
+<tr><th id="350">350</th><td></td></tr>
+<tr><th id="351">351</th><td><u>#<span data-ppcond="351">ifdef</span> <span class="macro" data-ref="_M/LUA_USE_ASSERT">LUA_USE_ASSERT</span></u></td></tr>
+<tr><th id="352">352</th><td><u>#define lj_assertG_(g, c, ...)	lj_assert_check((g), (c), __VA_ARGS__)</u></td></tr>
+<tr><th id="353">353</th><td><u>#define lj_assertG(c, ...)	lj_assert_check(g, (c), __VA_ARGS__)</u></td></tr>
+<tr><th id="354">354</th><td><u>#define lj_assertL(c, ...)	lj_assert_check(G(L), (c), __VA_ARGS__)</u></td></tr>
+<tr><th id="355">355</th><td><u>#define lj_assertX(c, ...)	lj_assert_check(NULL, (c), __VA_ARGS__)</u></td></tr>
+<tr><th id="356">356</th><td><u>#define check_exp(c, e)		(lj_assertX((c), #c), (e))</u></td></tr>
+<tr><th id="357">357</th><td><u>#<span data-ppcond="351">else</span></u></td></tr>
+<tr><th id="358">358</th><td><u>#define <dfn class="macro" id="_M/lj_assertG_" data-ref="_M/lj_assertG_">lj_assertG_</dfn>(g, c, ...)	((void)0)</u></td></tr>
+<tr><th id="359">359</th><td><u>#define <dfn class="macro" id="_M/lj_assertG" data-ref="_M/lj_assertG">lj_assertG</dfn>(c, ...)	((void)g)</u></td></tr>
+<tr><th id="360">360</th><td><u>#define <dfn class="macro" id="_M/lj_assertL" data-ref="_M/lj_assertL">lj_assertL</dfn>(c, ...)	((void)L)</u></td></tr>
+<tr><th id="361">361</th><td><u>#define <dfn class="macro" id="_M/lj_assertX" data-ref="_M/lj_assertX">lj_assertX</dfn>(c, ...)	((void)0)</u></td></tr>
+<tr><th id="362">362</th><td><u>#define <dfn class="macro" id="_M/check_exp" data-ref="_M/check_exp">check_exp</dfn>(c, e)		(e)</u></td></tr>
+<tr><th id="363">363</th><td><u>#<span data-ppcond="351">endif</span></u></td></tr>
+<tr><th id="364">364</th><td></td></tr>
+<tr><th id="365">365</th><td><i>/* Static assertions. */</i></td></tr>
+<tr><th id="366">366</th><td><u>#define <dfn class="macro" id="_M/LJ_ASSERT_NAME2" data-ref="_M/LJ_ASSERT_NAME2">LJ_ASSERT_NAME2</dfn>(name, line)	name ## line</u></td></tr>
+<tr><th id="367">367</th><td><u>#define <dfn class="macro" id="_M/LJ_ASSERT_NAME" data-ref="_M/LJ_ASSERT_NAME">LJ_ASSERT_NAME</dfn>(line)		LJ_ASSERT_NAME2(lj_assert_, line)</u></td></tr>
+<tr><th id="368">368</th><td><u>#<span data-ppcond="368">ifdef</span> <span class="macro" data-ref="_M/__COUNTER__">__COUNTER__</span></u></td></tr>
+<tr><th id="369">369</th><td><u>#define <dfn class="macro" id="_M/LJ_STATIC_ASSERT" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</dfn>(cond) \</u></td></tr>
+<tr><th id="370">370</th><td><u>  extern void LJ_ASSERT_NAME(__COUNTER__)(int STATIC_ASSERTION_FAILED[(cond)?1:-1])</u></td></tr>
+<tr><th id="371">371</th><td><u>#<span data-ppcond="368">else</span></u></td></tr>
+<tr><th id="372">372</th><td><u>#define LJ_STATIC_ASSERT(cond) \</u></td></tr>
+<tr><th id="373">373</th><td><u>  extern void LJ_ASSERT_NAME(__LINE__)(int STATIC_ASSERTION_FAILED[(cond)?1:-1])</u></td></tr>
+<tr><th id="374">374</th><td><u>#<span data-ppcond="368">endif</span></u></td></tr>
+<tr><th id="375">375</th><td></td></tr>
+<tr><th id="376">376</th><td><i>/* PRNG state. Need this here, details in lj_prng.h. */</i></td></tr>
+<tr><th id="377">377</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="PRNGState" title='PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState"><a class="type" href="#PRNGState" title='PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a></dfn> {</td></tr>
+<tr><th id="378">378</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="decl field" id="PRNGState::u" title='PRNGState::u' data-ref="PRNGState::u" data-ref-filename="PRNGState..u">u</dfn>[<var>4</var>];</td></tr>
+<tr><th id="379">379</th><td>} <dfn class="typedef" id="PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</dfn>;</td></tr>
+<tr><th id="380">380</th><td></td></tr>
+<tr><th id="381">381</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="382">382</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

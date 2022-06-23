@@ -1,0 +1,4 @@
+<def f='luajit/lj_alloc.c' l='530' ll='543'/>
+<use f='luajit/lj_alloc.c' l='545'/>
+<use f='luajit/lj_alloc.c' l='1234' c='lj_alloc_create'/>
+<size>872</size>

@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ctype.h' l='166' type='void *'/>
+<offset>1088</offset>
+<doc f='luajit/lj_ctype.h' l='166'>/* Machine code for callback func. pointers. */</doc>
+<use f='luajit/lj_ccallback.c' l='92' u='r' c='callback_slot2ptr'/>
+<use f='luajit/lj_ccallback.c' l='98' u='r' c='lj_ccallback_ptr2slot'/>
+<use f='luajit/lj_ccallback.c' l='287' u='w' c='callback_mcode_new'/>
+<use f='luajit/lj_ccallback.c' l='307' u='r' c='lj_ccallback_mcode_free'/>
+<use f='luajit/lj_ccallback.c' l='738' u='r' c='callback_slot_new'/>

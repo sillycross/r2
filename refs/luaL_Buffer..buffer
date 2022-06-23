@@ -1,0 +1,12 @@
+<dec f='luajit/lauxlib.h' l='139' type='char [8192]'/>
+<use f='luajit/lib_aux.c' l='180' u='r' c='emptybuffer'/>
+<use f='luajit/lib_aux.c' l='188' u='r' c='emptybuffer'/>
+<use f='luajit/lib_aux.c' l='189' u='r' c='emptybuffer'/>
+<use f='luajit/lib_aux.c' l='216' u='r' c='luaL_prepbuffer'/>
+<use f='luajit/lib_aux.c' l='180' u='r' c='luaL_addlstring'/>
+<use f='luajit/lib_aux.c' l='180' u='r' c='luaL_addvalue'/>
+<use f='luajit/lib_aux.c' l='264' u='r' c='luaL_buffinit'/>
+<offset>192</offset>
+<use f='luajit/lib_string.c' l='553' macro='1' u='r' c='add_s'/>
+<use f='luajit/lib_string.c' l='557' macro='1' u='r' c='add_s'/>
+<use f='luajit/lib_string.c' l='629' macro='1' u='r' c='lj_cf_string_gsub'/>

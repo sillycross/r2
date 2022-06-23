@@ -1,0 +1,5 @@
+<def f='luajit/lj_cconv.c' l='50' ll='54' macro='1' type='void cconv_err_initov(CTState * cts, CType * d)'/>
+<use f='luajit/lj_cconv.c' l='485' u='c' c='cconv_array_tab'/>
+<use f='luajit/lj_cconv.c' l='692' u='c' c='cconv_array_init'/>
+<use f='luajit/lj_cconv.c' l='736' u='c' c='cconv_struct_init'/>
+<use f='luajit/lj_cconv.c' l='767' u='c' c='lj_cconv_ct_init'/>

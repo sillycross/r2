@@ -1,0 +1,24 @@
+<dec f='luajit/lj_lib.h' l='33' type='TValue * lj_lib_checkany(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='46' u='c' c='lj_ffh_assert'/>
+<use f='luajit/lib_base.c' l='88' u='c' c='ffh_pairs'/>
+<use f='luajit/lib_base.c' l='187' u='c' c='lj_ffh_rawget'/>
+<use f='luajit/lib_base.c' l='194' u='c' c='lj_cf_rawset'/>
+<use f='luajit/lib_base.c' l='195' u='c' c='lj_cf_rawset'/>
+<use f='luajit/lib_base.c' l='202' u='c' c='lj_cf_rawequal'/>
+<use f='luajit/lib_base.c' l='203' u='c' c='lj_cf_rawequal'/>
+<use f='luajit/lib_base.c' l='266' u='c' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_base.c' l='323' u='c' c='lj_ffh_tostring'/>
+<use f='luajit/lib_base.c' l='351' u='c' c='lj_ffh_pcall'/>
+<use f='luajit/lib_buffer.c' l='239' u='c' c='lj_cf_buffer_method_encode'/>
+<use f='luajit/lib_buffer.c' l='321' u='c' c='lj_cf_buffer_encode'/>
+<use f='luajit/lib_debug.c' l='34' u='c' c='lj_cf_debug_getmetatable'/>
+<use f='luajit/lib_debug.c' l='54' u='c' c='lj_cf_debug_getfenv'/>
+<use f='luajit/lib_debug.c' l='195' u='c' c='lj_cf_debug_setlocal'/>
+<use f='luajit/lib_debug.c' l='224' u='c' c='lj_cf_debug_setupvalue'/>
+<use f='luajit/lib_ffi.c' l='535' u='c' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='588' u='c' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='681' u='c' c='lj_cf_ffi_string'/>
+<use f='luajit/lib_ffi.c' l='795' u='c' c='lj_cf_ffi_gc'/>
+<use f='luajit/lib_io.c' l='505' u='c' c='lj_cf_io_type'/>
+<def f='luajit/lj_lib.c' l='187' ll='193' type='TValue * lj_lib_checkany(lua_State * L, int narg)'/>
+<doc f='luajit/lj_lib.c' l='185'>/* -- Type checks --------------------------------------------------------- */</doc>

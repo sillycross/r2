@@ -1,0 +1,6 @@
+<dec f='luajit/lj_iropt.h' l='74'/>
+<use f='luajit/lj_ffrecord.c' l='558' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='626' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1093' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1099' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1137' u='c'/>

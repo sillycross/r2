@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='289'/>
+<doc f='luajit/lua.h' l='285'>/*
+** compatibility macros and functions
+*/</doc>
+<use f='luajit/luajit.c' l='575' u='c'/>

@@ -1,0 +1,16 @@
+<dec f='luajit/lj_strfmt.h' l='41'/>
+<use f='luajit/lj_strfmt.c' l='54' u='c'/>
+<use f='luajit/lj_strfmt.c' l='304' u='c'/>
+<use f='luajit/lj_strfmt.c' l='304' u='c'/>
+<use f='luajit/lj_strfmt.c' l='315' u='c'/>
+<use f='luajit/lj_strfmt.c' l='318' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='324' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='336' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='445' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='469' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='480' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='489' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='513' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='537' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='550' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='559' u='c'/>

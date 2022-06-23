@@ -1,0 +1,2 @@
+<def f='luajit/lj_asm_x86.h' l='1598' ll='1665' type='void asm_ahustore(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='1800' u='c' c='asm_ir'/>

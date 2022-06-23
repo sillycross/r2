@@ -1,0 +1,3 @@
+<def f='luajit/lj_snap.h' l='23' ll='26' type='void lj_snap_grow_buf(jit_State * J, MSize need)'/>
+<use f='luajit/lj_opt_loop.c' l='295' u='c' c='loop_unroll'/>
+<use f='luajit/lj_snap.c' l='195' u='c' c='lj_snap_add'/>

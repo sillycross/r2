@@ -1,0 +1,18 @@
+<use f='luajit/host/buildvm.h' l='68'/>
+<use f='luajit/dasm_proto.h' l='47'/>
+<def f='luajit/dasm_x86.h' l='64' ll='77'/>
+<use f='luajit/dasm_x86.h' l='90' c='dasm_init'/>
+<size>120</size>
+<doc f='luajit/dasm_x86.h' l='63'>/* Core structure holding the DynASM encoding state. */</doc>
+<mbr r='dasm_State::psize' o='0' t='size_t'/>
+<mbr r='dasm_State::actionlist' o='64' t='dasm_ActList'/>
+<mbr r='dasm_State::lglabels' o='128' t='int *'/>
+<mbr r='dasm_State::lgsize' o='192' t='size_t'/>
+<mbr r='dasm_State::pclabels' o='256' t='int *'/>
+<mbr r='dasm_State::pcsize' o='320' t='size_t'/>
+<mbr r='dasm_State::globals' o='384' t='void **'/>
+<mbr r='dasm_State::section' o='448' t='dasm_Section *'/>
+<mbr r='dasm_State::codesize' o='512' t='size_t'/>
+<mbr r='dasm_State::maxsection' o='576' t='int'/>
+<mbr r='dasm_State::status' o='608' t='int'/>
+<mbr r='dasm_State::sections' o='640' t='dasm_Section [1]'/>

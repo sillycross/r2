@@ -1,0 +1,34 @@
+<def f='luajit/lj_ctype.h' l='386' ll='391' type='CTState * ctype_cts(lua_State * L)'/>
+<doc f='luajit/lj_ctype.h' l='385'>/* Get C type state. */</doc>
+<use f='luajit/lib_base.c' l='273' u='c' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_bit.c' l='122' u='c' c='lj_ffh_bit_band'/>
+<use f='luajit/lib_buffer.c' l='94' u='c' c='lj_cf_buffer_method_set'/>
+<use f='luajit/lib_buffer.c' l='187' u='c' c='lj_cf_buffer_method_putcdata'/>
+<use f='luajit/lib_ffi.c' l='80' u='c' c='ffi_checkptr'/>
+<use f='luajit/lib_ffi.c' l='92' u='c' c='ffi_checkint'/>
+<use f='luajit/lib_ffi.c' l='148' u='c' c='lj_cf_ffi_meta___index'/>
+<use f='luajit/lib_ffi.c' l='165' u='c' c='lj_cf_ffi_meta___newindex'/>
+<use f='luajit/lib_ffi.c' l='220' u='c' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='291' u='c' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='330' u='c' c='ffi_pairs'/>
+<use f='luajit/lib_ffi.c' l='377' u='c' c='lj_cf_ffi_clib___index'/>
+<use f='luajit/lib_ffi.c' l='398' u='c' c='lj_cf_ffi_clib___newindex'/>
+<use f='luajit/lib_ffi.c' l='435' u='c' c='ffi_callback_set'/>
+<use f='luajit/lib_ffi.c' l='482' u='c' c='lj_cf_ffi_cdef'/>
+<use f='luajit/lib_ffi.c' l='495' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='532' u='c' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='550' u='c' c='lj_cf_ffi_typeof'/>
+<use f='luajit/lib_ffi.c' l='562' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='586' u='c' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='616' u='c' c='lj_cf_ffi_sizeof'/>
+<use f='luajit/lib_ffi.c' l='638' u='c' c='lj_cf_ffi_alignof'/>
+<use f='luajit/lib_ffi.c' l='648' u='c' c='lj_cf_ffi_offsetof'/>
+<use f='luajit/lib_ffi.c' l='680' u='c' c='lj_cf_ffi_string'/>
+<use f='luajit/lib_ffi.c' l='768' u='c' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='796' u='c' c='lj_cf_ffi_gc'/>
+<use f='luajit/lj_carith.c' l='268' u='c' c='lj_carith_op'/>
+<use f='luajit/lj_carith.c' l='323' u='c' c='lj_carith_check64'/>
+<use f='luajit/lj_ccall.c' l='1153' u='c' c='lj_ccall_func'/>
+<use f='luajit/lj_clib.c' l='346' u='c' c='lj_clib_index'/>
+<use f='luajit/lj_serialize.c' l='240' u='c' c='serialize_put'/>
+<use f='luajit/lj_snap.c' l='783' u='c' c='snap_unsink'/>

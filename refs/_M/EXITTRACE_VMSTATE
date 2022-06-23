@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='168'/>
+<use f='luajit/lj_trace.c' l='824' u='c'/>
+<use f='luajit/lj_trace.c' l='934' u='c'/>
+<use f='luajit/lj_trace.c' l='941' u='c'/>

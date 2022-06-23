@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='475' type='CTState * lj_ctype_init(lua_State * L)'/>
+<use f='luajit/lib_ffi.c' l='850' u='c' c='luaopen_ffi'/>
+<def f='luajit/lj_ctype.c' l='593' ll='624' type='CTState * lj_ctype_init(lua_State * L)'/>
+<doc f='luajit/lj_ctype.c' l='592'>/* Initialize C type table and state. */</doc>

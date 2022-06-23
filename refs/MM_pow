@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='15'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_carith.c' l='204' c='carith_int64'/>
+<use f='luajit/lj_recdef.h' l='181' u='r'/>
+<use f='luajit/lj_record.c' l='2276' u='r' c='lj_record_ins'/>

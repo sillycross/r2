@@ -1,0 +1,5 @@
+<dec f='luajit/lj_target_x86.h' l='31' macro='1' type='24'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>

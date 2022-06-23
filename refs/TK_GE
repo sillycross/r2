@@ -1,0 +1,3 @@
+<dec f='luajit/host/minilua.c' l='131' type='281'/>
+<use f='luajit/host/minilua.c' l='2924' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='4258' c='getbinopr'/>

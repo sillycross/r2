@@ -1,0 +1,4 @@
+<dec f='include/signal.h' l='88' type='__sighandler_t signal(int __sig, __sighandler_t __handler)'/>
+<use f='luajit/luajit.c' l='56' u='c' c='laction'/>
+<use f='luajit/luajit.c' l='119' u='c' c='docall'/>
+<use f='luajit/luajit.c' l='123' u='c' c='docall'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='324'/>
+<use f='luajit/lib_debug.c' l='307' u='c'/>
+<use f='luajit/lib_debug.c' l='317' u='c'/>
+<use f='luajit/lj_dispatch.c' l='118' u='c'/>
+<use f='luajit/lj_dispatch.c' l='437' u='c'/>
+<use f='luajit/luajit.c' l='58' u='c'/>

@@ -1,0 +1,4 @@
+<def f='luajit/lj_cparse.c' l='371' ll='386'/>
+<use f='luajit/lj_cparse.c' l='371'/>
+<size>2464</size>
+<doc f='luajit/lj_cparse.c' l='370'>/* Type declaration context. */</doc>

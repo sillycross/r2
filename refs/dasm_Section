@@ -1,0 +1,10 @@
+<def f='luajit/dasm_x86.h' l='54' ll='61'/>
+<use f='luajit/dasm_x86.h' l='54'/>
+<size>40</size>
+<doc f='luajit/dasm_x86.h' l='53'>/* Per-section structure. */</doc>
+<mbr r='dasm_Section::rbuf' o='0' t='int *'/>
+<mbr r='dasm_Section::buf' o='64' t='int *'/>
+<mbr r='dasm_Section::bsize' o='128' t='size_t'/>
+<mbr r='dasm_Section::pos' o='192' t='int'/>
+<mbr r='dasm_Section::epos' o='224' t='int'/>
+<mbr r='dasm_Section::ofs' o='256' t='int'/>

@@ -1,0 +1,16 @@
+<dec f='luajit/lj_bc.h' l='71'/>
+<use f='luajit/lj_bc.h' l='202' u='c'/>
+<use f='luajit/host/buildvm.c' l='248' u='c'/>
+<doc f='luajit/lj_bc.h' l='59'>/* Bytecode instruction definition. Order matters, see below.
+**
+** (name, filler, Amode, Bmode, Cmode or Dmode, metamethod)
+**
+** The opcode name suffixes specify the type for RB/RC or RD:
+** V = variable slot
+** S = string const
+** N = number const
+** P = primitive type (~itype)
+** B = unsigned byte literal
+** M = multiple args/results
+*/</doc>
+<use f='luajit/lj_bcdef.h' l='161' u='c'/>

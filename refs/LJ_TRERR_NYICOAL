@@ -1,0 +1,4 @@
+<use f='luajit/lj_asm.c' l='1941' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2006' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2012' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2158' u='r' c='asm_setup_regsp'/>

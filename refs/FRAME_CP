@@ -1,0 +1,6 @@
+<dec f='luajit/lj_frame.h' l='26' type='5'/>
+<use f='luajit/host/buildvm_arch.h' l='576' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='610' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='704' c='build_subroutines'/>
+<use f='luajit/lj_err.c' l='152' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='812' c='finderrfunc'/>

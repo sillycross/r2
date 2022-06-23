@@ -1,0 +1,4 @@
+<dec f='luajit/lj_bcdump.h' l='45'/>
+<use f='luajit/lj_bcread.c' l='398' u='c'/>
+<use f='luajit/lj_bcread.c' l='398' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='322' u='c'/>

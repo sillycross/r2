@@ -1,0 +1,4 @@
+<dec f='luajit/lj_emit_x86.h' l='266'/>
+<use f='luajit/lj_asm_x86.h' l='1861' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2787' u='c'/>
+<doc f='luajit/lj_emit_x86.h' l='265'>/* Get/set global_State fields. */</doc>

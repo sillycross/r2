@@ -1,0 +1,16 @@
+<dec f='luajit/lj_lex.h' l='39' type='BCLine'/>
+<offset>32</offset>
+<doc f='luajit/lj_lex.h' l='39'>/* Line number for this bytecode. */</doc>
+<use f='luajit/lj_parse.c' l='429' u='w' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='1218' u='r' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1251' u='r' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1434' u='r' c='fs_fixup_line'/>
+<use f='luajit/lj_parse.c' l='1441' u='r' c='fs_fixup_line'/>
+<use f='luajit/lj_parse.c' l='1448' u='r' c='fs_fixup_line'/>
+<use f='luajit/lj_parse.c' l='1550' u='w' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='1550' u='r' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='1947' u='w' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='2308' u='w' c='parse_func'/>
+<use f='luajit/lj_parse.c' l='2505' u='w' c='parse_for_num'/>
+<use f='luajit/lj_parse.c' l='2579' u='w' c='parse_for_iter'/>
+<use f='luajit/lj_parse.c' l='2580' u='w' c='parse_for_iter'/>

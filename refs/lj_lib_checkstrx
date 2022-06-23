@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lib.h' l='50' type='GCstr * lj_lib_checkstrx(lua_State * L, int narg)'/>
+<use f='luajit/lib_buffer.c' l='101' u='c' c='lj_cf_buffer_method_set'/>
+<use f='luajit/lib_buffer.c' l='333' u='c' c='lj_cf_buffer_decode'/>
+<def f='luajit/lj_lib.c' l='314' ll='319' type='GCstr * lj_lib_checkstrx(lua_State * L, int narg)'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='110' type='void lj_cont_stitch()'/>
+<use f='luajit/lj_ffrecord.c' l='102' u='r' c='recff_stitch'/>

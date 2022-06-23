@@ -1,0 +1,6 @@
+<dec f='luajit/lj_lex.h' l='64' type='void *'/>
+<offset>832</offset>
+<doc f='luajit/lj_lex.h' l='64'>/* Reader callback data. */</doc>
+<use f='luajit/lj_bcread.c' l='70' u='r' c='bcread_fill'/>
+<use f='luajit/lj_lex.c' l='49' u='r' c='lex_more'/>
+<use f='luajit/lj_load.c' l='54' u='w' c='lua_loadx'/>

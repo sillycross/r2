@@ -1,0 +1,28 @@
+<dec f='luajit/lua.h' l='36'/>
+<doc f='luajit/lua.h' l='33'>/*
+** pseudo-indices
+*/</doc>
+<use f='luajit/lib_aux.c' l='116' u='c'/>
+<use f='luajit/lib_debug.c' l='293' u='c'/>
+<use f='luajit/lib_debug.c' l='339' u='c'/>
+<use f='luajit/lib_debug.c' l='353' u='c'/>
+<use f='luajit/lib_init.c' l='47' u='c'/>
+<use f='luajit/lib_io.c' l='536' u='c'/>
+<use f='luajit/lib_jit.c' l='130' u='c'/>
+<use f='luajit/lib_package.c' l='211' u='c'/>
+<use f='luajit/lib_package.c' l='221' u='c'/>
+<use f='luajit/lib_package.c' l='435' u='c'/>
+<use f='luajit/lib_package.c' l='612' u='c'/>
+<use f='luajit/lib_package.c' l='619' u='c'/>
+<use f='luajit/lib_package.c' l='621' u='c'/>
+<use f='luajit/lj_api.c' l='39' u='c'/>
+<use f='luajit/lj_api.c' l='47' u='c'/>
+<use f='luajit/lj_api.c' l='1063' u='c'/>
+<use f='luajit/lj_err.c' l='992' u='c'/>
+<use f='luajit/lj_err.c' l='1022' u='c'/>
+<use f='luajit/lj_lib.c' l='34' u='c'/>
+<use f='luajit/lj_lib.c' l='167' u='c'/>
+<use f='luajit/luajit.c' l='140' u='c'/>
+<use f='luajit/luajit.c' l='349' u='c'/>
+<use f='luajit/luajit.c' l='368' u='c'/>
+<use f='luajit/luajit.c' l='532' u='c'/>

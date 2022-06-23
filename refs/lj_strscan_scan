@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strscan.h' l='25' type='StrScanFmt lj_strscan_scan(const uint8_t * p, MSize len, TValue * o, uint32_t opt)'/>
+<use f='luajit/lj_cparse.c' l='178' u='c' c='cp_number'/>
+<use f='luajit/lj_lex.c' l='108' u='c' c='lex_number'/>
+<def f='luajit/lj_strscan.c' l='373' ll='526' type='StrScanFmt lj_strscan_scan(const uint8_t * p, MSize len, TValue * o, uint32_t opt)'/>
+<use f='luajit/lj_strscan.c' l='530' u='c' c='lj_strscan_num'/>
+<doc f='luajit/lj_strscan.c' l='372'>/* Scan string containing a number. Returns format. Returns value in o. */</doc>

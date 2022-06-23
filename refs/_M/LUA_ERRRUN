@@ -1,0 +1,8 @@
+<dec f='luajit/lua.h' l='45'/>
+<use f='luajit/lj_api.c' l='1246' u='c'/>
+<use f='luajit/lj_err.c' l='440' u='c'/>
+<use f='luajit/lj_err.c' l='851' u='c'/>
+<use f='luajit/lj_err.c' l='857' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='429' u='c'/>
+<use f='luajit/lj_trace.c' l='42' u='c'/>
+<use f='luajit/lj_trace.c' l='49' u='c'/>

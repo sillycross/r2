@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ir.h' l='550' type='IRRef2'/>
+<offset>0</offset>
+<doc f='luajit/lj_ir.h' l='550'>/* IR operand 1 and 2 (overlaps op1 and op2). */</doc>
+<use f='luajit/lj_ir.c' l='231' u='w' c='lj_ir_k64'/>
+<use f='luajit/lj_ir.c' l='289' u='w' c='lj_ir_kgc'/>
+<use f='luajit/lj_ir.c' l='307' u='w' c='lj_ir_ktrace'/>
+<use f='luajit/lj_ir.c' l='329' u='w' c='lj_ir_kptr_'/>
+<use f='luajit/lj_ir.c' l='368' u='r' c='lj_ir_kslot'/>
+<use f='luajit/lj_ir.c' l='372' u='w' c='lj_ir_kslot'/>
+<use f='luajit/lj_opt_fold.c' l='2542' u='r' c='lj_opt_cse'/>
+<use f='luajit/lj_opt_fold.c' l='2552' u='w' c='lj_opt_cse'/>
+<use f='luajit/lj_opt_fold.c' l='2566' u='r' c='lj_opt_cselim'/>
+<use f='luajit/lj_opt_mem.c' l='498' u='r' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_opt_mem.c' l='498' u='r' c='lj_opt_fwd_uload'/>

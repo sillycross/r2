@@ -1,0 +1,2 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='0'/>
+<use f='luajit/lj_trace.c' l='70' u='r' c='trace_findfree'/>

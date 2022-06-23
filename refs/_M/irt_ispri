@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ir.h' l='357'/>
+<use f='luajit/lj_asm.c' l='1071' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1295' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1650' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1763' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='163' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='336' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='187' u='c'/>
+<use f='luajit/lj_snap.c' l='700' u='c'/>

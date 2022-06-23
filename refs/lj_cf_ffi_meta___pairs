@@ -1,0 +1,1 @@
+<def f='luajit/lib_ffi.c' l='342' macro='1' type='int lj_cf_ffi_meta___pairs(lua_State * L)'/>

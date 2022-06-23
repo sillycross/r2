@@ -1,0 +1,10 @@
+<dec f='luajit/lj_emit_x86.h' l='472'/>
+<use f='luajit/lj_asm_x86.h' l='844' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='868' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1135' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1145' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1876' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1896' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2378' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2771' u='c'/>
+<doc f='luajit/lj_emit_x86.h' l='471'>/* Return label pointing to current PC. */</doc>

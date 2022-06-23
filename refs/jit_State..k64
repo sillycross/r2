@@ -1,0 +1,9 @@
+<dec f='luajit/lj_jit.h' l='444' type='TValue [3]'/>
+<offset>2432</offset>
+<doc f='luajit/lj_jit.h' l='444'>/* Common 8 byte constants. */</doc>
+<use f='luajit/lj_asm_x86.h' l='830' u='a' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='845' u='a' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='873' u='a' c='asm_conv'/>
+<use f='luajit/lj_trace.c' l='325' u='m' c='lj_trace_initstate'/>
+<use f='luajit/lj_trace.c' l='329' u='m' c='lj_trace_initstate'/>
+<use f='luajit/lj_trace.c' l='333' u='m' c='lj_trace_initstate'/>

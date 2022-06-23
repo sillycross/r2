@@ -1,0 +1,24 @@
+<dec f='luajit/lj_jit.h' l='468' type='TRef [257]'/>
+<offset>4832</offset>
+<doc f='luajit/lj_jit.h' l='468'>/* Stack slot map. */</doc>
+<use f='luajit/lj_opt_fold.c' l='2346' u='r' c='fold_fwd_sload'/>
+<use f='luajit/lj_opt_loop.c' l='159' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_record.c' l='277' u='r' c='canonicalize_slots'/>
+<use f='luajit/lj_record.c' l='281' u='w' c='canonicalize_slots'/>
+<use f='luajit/lj_record.c' l='2581' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2581' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2591' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='69' u='r' c='snapshot_slots'/>
+<use f='luajit/lj_snap.c' l='79' u='w' c='snapshot_slots'/>
+<use f='luajit/lj_snap.c' l='94' u='r' c='snapshot_slots'/>
+<use f='luajit/lj_snap.c' l='432' u='r' c='snap_dedup'/>
+<use f='luajit/lj_snap.c' l='510' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='524' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='548' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='558' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='559' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='559' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='559' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='572' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='576' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='627' u='r' c='lj_snap_replay'/>

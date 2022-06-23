@@ -1,0 +1,3 @@
+<def f='luajit/dasm_x86.h' l='378' ll='385' type='unsigned char * dasma_(unsigned char * cp, ptrdiff_t x)'/>
+<use f='luajit/dasm_x86.h' l='386' u='c' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='386' u='c' c='dasm_encode'/>

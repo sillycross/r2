@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='66' macro='1' type='951'/>
+<use f='luajit/lj_errmsg.h' l='66' macro='1' u='r'/>
+<use f='luajit/lib_base.c' l='135' u='r' c='lj_ffh_setmetatable'/>
+<use f='luajit/lib_ffi.c' l='780' u='r' c='lj_cf_ffi_metatype'/>

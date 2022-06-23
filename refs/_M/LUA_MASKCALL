@@ -1,0 +1,9 @@
+<dec f='luajit/lua.h' l='323'/>
+<doc f='luajit/lua.h' l='320'>/*
+** Event masks
+*/</doc>
+<use f='luajit/lib_debug.c' l='306' u='c'/>
+<use f='luajit/lib_debug.c' l='316' u='c'/>
+<use f='luajit/lj_dispatch.c' l='117' u='c'/>
+<use f='luajit/lj_dispatch.c' l='493' u='c'/>
+<use f='luajit/luajit.c' l='58' u='c'/>

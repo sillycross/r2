@@ -1,0 +1,12 @@
+<dec f='include/stdio.h' l='139'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='46' u='c'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='72' u='c'/>
+<doc f='include/stdio.h' l='138'>/* C89/C99 say they&apos;re macros.  Make them happy.  */</doc>
+<use f='luajit/host/buildvm_fold.c' l='180' u='c'/>
+<use f='luajit/host/buildvm_lib.c' l='366' u='c'/>
+<use f='luajit/host/minilua.c' l='6150' u='c'/>
+<use f='luajit/host/minilua.c' l='6958' u='c'/>
+<use f='luajit/lib_debug.c' l='367' u='c'/>
+<use f='luajit/lib_io.c' l='538' u='c'/>
+<use f='luajit/lj_load.c' l='98' u='c'/>
+<use f='luajit/luajit.c' l='215' u='c'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='583'/>
+<use f='luajit/lj_api.c' l='855' u='c'/>
+<use f='luajit/lj_api.c' l='1054' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='1168' u='c'/>
+<use f='luajit/lj_meta.c' l='67' u='c'/>
+<use f='luajit/lj_record.c' l='1011' u='c'/>

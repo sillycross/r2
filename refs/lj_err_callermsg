@@ -1,0 +1,12 @@
+<dec f='luajit/lj_err.h' l='36' type='void lj_err_callermsg(lua_State * L, const char * msg)'/>
+<use f='luajit/lib_base.c' l='50' u='c' c='lj_ffh_assert'/>
+<use f='luajit/lib_base.c' l='646' u='c' c='lj_ffh_coroutine_wrap_err'/>
+<use f='luajit/lib_io.c' l='262' u='c' c='io_file_iter'/>
+<use f='luajit/lj_clib.c' l='38' u='c' c='clib_error_'/>
+<use f='luajit/lj_clib.c' l='129' u='c' c='clib_loadlib'/>
+<use f='luajit/lj_cparse.c' l='150' u='c' c='cp_errmsg'/>
+<def f='luajit/lj_err.c' l='942' ll='967' macro='1' type='void lj_err_callermsg(lua_State * L, const char * msg)'/>
+<use f='luajit/lj_err.c' l='977' u='c' c='lj_err_callerv'/>
+<use f='luajit/lj_err.c' l='983' u='c' c='lj_err_caller'/>
+<use f='luajit/lj_err.c' l='998' u='c' c='err_argmsg'/>
+<use f='luajit/lj_err.c' l='1089' u='c' c='luaL_error'/>

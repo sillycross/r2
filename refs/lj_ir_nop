@@ -1,0 +1,9 @@
+<def f='luajit/lj_ir.h' l='592' ll='597' type='void lj_ir_nop(IRIns * ir)'/>
+<doc f='luajit/lj_ir.h' l='591'>/* Replace IR instruction with NOP. */</doc>
+<use f='luajit/lj_asm.c' l='2388' u='c' c='lj_asm_trace'/>
+<use f='luajit/lj_opt_dce.c' l='50' u='c' c='dce_propagate'/>
+<use f='luajit/lj_opt_mem.c' l='373' u='c' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='534' u='c' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='543' u='c' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='634' u='c' c='lj_opt_dse_fstore'/>
+<use f='luajit/lj_opt_mem.c' l='885' u='c' c='lj_opt_dse_xstore'/>

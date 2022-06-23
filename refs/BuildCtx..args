@@ -1,0 +1,5 @@
+<dec f='luajit/host/buildvm.h' l='73' type='char **'/>
+<use f='luajit/host/buildvm.c' l='428' u='w' c='parseargs'/>
+<offset>256</offset>
+<use f='luajit/host/buildvm_fold.c' l='171' u='r' c='emit_fold'/>
+<use f='luajit/host/buildvm_lib.c' l='362' u='w' c='emit_lib'/>

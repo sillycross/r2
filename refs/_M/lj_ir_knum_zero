@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='73'/>
+<doc f='luajit/lj_iropt.h' l='72'>/* Special FP constants. */</doc>
+<use f='luajit/lj_record.c' l='418' u='c'/>
+<use f='luajit/lj_record.c' l='1345' u='c'/>

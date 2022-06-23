@@ -1,0 +1,26 @@
+<def f='luajit/host/buildvm.h' l='66' ll='90'/>
+<use f='luajit/host/buildvm.h' l='66'/>
+<size>2552</size>
+<doc f='luajit/host/buildvm.h' l='65'>/* Build context structure. */</doc>
+<mbr r='BuildCtx::D' o='0' t='struct dasm_State *'/>
+<mbr r='BuildCtx::mode' o='64' t='BuildMode'/>
+<mbr r='BuildCtx::fp' o='128' t='FILE *'/>
+<mbr r='BuildCtx::outname' o='192' t='const char *'/>
+<mbr r='BuildCtx::args' o='256' t='char **'/>
+<mbr r='BuildCtx::code' o='320' t='uint8_t *'/>
+<mbr r='BuildCtx::codesz' o='384' t='size_t'/>
+<mbr r='BuildCtx::npc' o='448' t='int'/>
+<mbr r='BuildCtx::nglob' o='480' t='int'/>
+<mbr r='BuildCtx::nsym' o='512' t='int'/>
+<mbr r='BuildCtx::nreloc' o='544' t='int'/>
+<mbr r='BuildCtx::nrelocsym' o='576' t='int'/>
+<mbr r='BuildCtx::glob' o='640' t='void **'/>
+<mbr r='BuildCtx::sym' o='704' t='BuildSym *'/>
+<mbr r='BuildCtx::relocsym' o='768' t='const char **'/>
+<mbr r='BuildCtx::bc_ofs' o='832' t='int32_t *'/>
+<mbr r='BuildCtx::beginsym' o='896' t='const char *'/>
+<mbr r='BuildCtx::globnames' o='960' t='const char *const *'/>
+<mbr r='BuildCtx::extnames' o='1024' t='const char *const *'/>
+<mbr r='BuildCtx::dasm_ident' o='1088' t='const char *'/>
+<mbr r='BuildCtx::dasm_arch' o='1152' t='const char *'/>
+<mbr r='BuildCtx::reloc' o='1216' t='BuildReloc [200]'/>

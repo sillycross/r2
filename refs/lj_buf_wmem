@@ -1,0 +1,19 @@
+<def f='luajit/lj_buf.h' l='157' ll='160' type='char * lj_buf_wmem(char * p, const void * q, MSize len)'/>
+<use f='luajit/lj_bcwrite.c' l='54' u='c' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='160' u='c' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='219' u='c' c='bcwrite_bytecode'/>
+<use f='luajit/lj_bcwrite.c' l='283' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='293' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='325' u='c' c='bcwrite_header'/>
+<use f='luajit/lj_buf.c' l='116' u='c' c='lj_buf_putmem'/>
+<use f='luajit/lj_buf.c' l='133' u='c' c='lj_buf_putstr'/>
+<use f='luajit/lj_buf.c' l='224' u='c' c='lj_buf_puttab'/>
+<use f='luajit/lj_buf.c' l='236' u='c' c='lj_buf_puttab'/>
+<use f='luajit/lj_parse.c' l='1467' u='c' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1484' u='c' c='fs_prep_var'/>
+<use f='luajit/lj_serialize.c' l='153' u='c' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='218' u='c' c='serialize_put'/>
+<use f='luajit/lj_strfmt.c' l='264' u='c' c='strfmt_putfstrlen'/>
+<use f='luajit/lj_strfmt.c' l='266' u='c' c='strfmt_putfstrlen'/>
+<use f='luajit/lj_strfmt.c' l='521' u='c' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt.c' l='524' u='c' c='lj_strfmt_obj'/>

@@ -1,0 +1,20 @@
+<dec f='luajit/lj_frame.h' l='25' type='0'/>
+<use f='luajit/lj_crecord.c' l='1208' macro='1' u='r' c='crec_snap_caller'/>
+<use f='luajit/lj_crecord.c' l='1258' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_debug.c' l='37' macro='1' u='r' c='lj_debug_frame'/>
+<use f='luajit/lj_debug.c' l='68' macro='1' u='r' c='debug_framepc'/>
+<use f='luajit/lj_debug.c' l='88' macro='1' u='r' c='debug_framepc'/>
+<use f='luajit/lj_debug.c' l='302' macro='1' u='r' c='lj_debug_funcname'/>
+<use f='luajit/lj_dispatch.c' l='263' macro='1' u='r' c='luaJIT_setmode'/>
+<use f='luajit/lj_err.c' l='129' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='797' c='finderrfunc'/>
+<use f='luajit/lj_err.c' l='930' u='r' c='lj_err_optype_call'/>
+<use f='luajit/lj_err.c' l='946' macro='1' u='r' c='lj_err_callermsg'/>
+<use f='luajit/lj_ffrecord.c' l='93' macro='1' u='r' c='results_wanted'/>
+<use f='luajit/lj_ffrecord.c' l='153' macro='1' u='r' c='recff_nyi'/>
+<use f='luajit/lj_gc.c' l='293' macro='1' u='r' c='gc_traverse_frames'/>
+<use f='luajit/lj_record.c' l='839' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='859' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1688' macro='1' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_snap.c' l='128' macro='1' u='r' c='snapshot_framelinks'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='r' c='trace_abort'/>

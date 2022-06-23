@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_dispatch.h source code [luajit/lj_dispatch.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="GG_State "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_dispatch.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_dispatch.h.html'>lj_dispatch.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Instruction dispatch handling.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_DISPATCH_H">_LJ_DISPATCH_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_DISPATCH_H" data-ref="_M/_LJ_DISPATCH_H">_LJ_DISPATCH_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_bc.h.html">"lj_bc.h"</a></u></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="lj_jit.h.html">"lj_jit.h"</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><u>#<span data-ppcond="15">if</span> LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="16">16</th><td><i>/* Need our own global offset table for the dreaded MIPS calling conventions. */</i></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#ifndef _LJ_VM_H</u></td></tr>
+<tr><th id="19">19</th><td>LJ_ASMF int32_t LJ_FASTCALL lj_vm_modi(int32_t a, int32_t b);</td></tr>
+<tr><th id="20">20</th><td><u>#endif</u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#if LJ_SOFTFP</u></td></tr>
+<tr><th id="23">23</th><td><u>#ifndef _LJ_IRCALL_H</u></td></tr>
+<tr><th id="24">24</th><td><b>extern</b> <em>double</em> __adddf3(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="25">25</th><td><b>extern</b> <em>double</em> __subdf3(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="26">26</th><td><b>extern</b> <em>double</em> __muldf3(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="27">27</th><td><b>extern</b> <em>double</em> __divdf3(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="28">28</th><td><u>#endif</u></td></tr>
+<tr><th id="29">29</th><td><u>#define SFGOTDEF(_)	_(sqrt) _(__adddf3) _(__subdf3) _(__muldf3) _(__divdf3)</u></td></tr>
+<tr><th id="30">30</th><td><u>#else</u></td></tr>
+<tr><th id="31">31</th><td><u>#define SFGOTDEF(_)</u></td></tr>
+<tr><th id="32">32</th><td><u>#endif</u></td></tr>
+<tr><th id="33">33</th><td><u>#if LJ_HASJIT</u></td></tr>
+<tr><th id="34">34</th><td><u>#define JITGOTDEF(_)	_(lj_err_trace) _(lj_trace_exit) _(lj_trace_hot)</u></td></tr>
+<tr><th id="35">35</th><td><u>#else</u></td></tr>
+<tr><th id="36">36</th><td><u>#define JITGOTDEF(_)</u></td></tr>
+<tr><th id="37">37</th><td><u>#endif</u></td></tr>
+<tr><th id="38">38</th><td><u>#if LJ_HASFFI</u></td></tr>
+<tr><th id="39">39</th><td><u>#define FFIGOTDEF(_) \</u></td></tr>
+<tr><th id="40">40</th><td><u>  _(lj_meta_equal_cd) _(lj_ccallback_enter) _(lj_ccallback_leave)</u></td></tr>
+<tr><th id="41">41</th><td><u>#else</u></td></tr>
+<tr><th id="42">42</th><td><u>#define FFIGOTDEF(_)</u></td></tr>
+<tr><th id="43">43</th><td><u>#endif</u></td></tr>
+<tr><th id="44">44</th><td><u>#define GOTDEF(_) \</u></td></tr>
+<tr><th id="45">45</th><td><u>  _(floor) _(ceil) _(trunc) _(log) _(log10) _(exp) _(sin) _(cos) _(tan) \</u></td></tr>
+<tr><th id="46">46</th><td><u>  _(asin) _(acos) _(atan) _(sinh) _(cosh) _(tanh) _(frexp) _(modf) _(atan2) \</u></td></tr>
+<tr><th id="47">47</th><td><u>  _(pow) _(fmod) _(ldexp) _(lj_vm_modi) \</u></td></tr>
+<tr><th id="48">48</th><td><u>  _(lj_dispatch_call) _(lj_dispatch_ins) _(lj_dispatch_stitch) \</u></td></tr>
+<tr><th id="49">49</th><td><u>  _(lj_dispatch_profile) _(lj_err_throw) \</u></td></tr>
+<tr><th id="50">50</th><td><u>  _(lj_ffh_coroutine_wrap_err) _(lj_func_closeuv) _(lj_func_newL_gc) \</u></td></tr>
+<tr><th id="51">51</th><td><u>  _(lj_gc_barrieruv) _(lj_gc_step) _(lj_gc_step_fixtop) _(lj_meta_arith) \</u></td></tr>
+<tr><th id="52">52</th><td><u>  _(lj_meta_call) _(lj_meta_cat) _(lj_meta_comp) _(lj_meta_equal) \</u></td></tr>
+<tr><th id="53">53</th><td><u>  _(lj_meta_for) _(lj_meta_istype) _(lj_meta_len) _(lj_meta_tget) \</u></td></tr>
+<tr><th id="54">54</th><td><u>  _(lj_meta_tset) _(lj_state_growstack) _(lj_strfmt_number) \</u></td></tr>
+<tr><th id="55">55</th><td><u>  _(lj_str_new) _(lj_tab_dup) _(lj_tab_get) _(lj_tab_getinth) _(lj_tab_len) \</u></td></tr>
+<tr><th id="56">56</th><td><u>  _(lj_tab_new) _(lj_tab_newkey) _(lj_tab_next) _(lj_tab_reasize) \</u></td></tr>
+<tr><th id="57">57</th><td><u>  _(lj_tab_setinth) _(lj_buf_putstr_reverse) _(lj_buf_putstr_lower) \</u></td></tr>
+<tr><th id="58">58</th><td><u>  _(lj_buf_putstr_upper) _(lj_buf_tostr) \</u></td></tr>
+<tr><th id="59">59</th><td><u>  JITGOTDEF(_) FFIGOTDEF(_) SFGOTDEF(_)</u></td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td><b>enum</b> {</td></tr>
+<tr><th id="62">62</th><td><u>#define GOTENUM(name) LJ_GOT_##name,</u></td></tr>
+<tr><th id="63">63</th><td>GOTDEF(GOTENUM)</td></tr>
+<tr><th id="64">64</th><td><u>#undef GOTENUM</u></td></tr>
+<tr><th id="65">65</th><td>  LJ_GOT__MAX</td></tr>
+<tr><th id="66">66</th><td>};</td></tr>
+<tr><th id="67">67</th><td><u>#<span data-ppcond="15">endif</span></u></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+<tr><th id="69">69</th><td><i>/* Type of hot counter. Must match the code in the assembler VM. */</i></td></tr>
+<tr><th id="70">70</th><td><i>/* 16 bits are sufficient. Only 0.0015% overhead with maximum slot penalty. */</i></td></tr>
+<tr><th id="71">71</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="typedef" id="HotCount" title='HotCount' data-type='uint16_t' data-ref="HotCount" data-ref-filename="HotCount">HotCount</dfn>;</td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td><i>/* Number of hot counter hash table entries (must be a power of two). */</i></td></tr>
+<tr><th id="74">74</th><td><u>#define <dfn class="macro" id="_M/HOTCOUNT_SIZE" data-ref="_M/HOTCOUNT_SIZE">HOTCOUNT_SIZE</dfn>		64</u></td></tr>
+<tr><th id="75">75</th><td><u>#define <dfn class="macro" id="_M/HOTCOUNT_PCMASK" data-ref="_M/HOTCOUNT_PCMASK">HOTCOUNT_PCMASK</dfn>		((HOTCOUNT_SIZE-1)*sizeof(HotCount))</u></td></tr>
+<tr><th id="76">76</th><td></td></tr>
+<tr><th id="77">77</th><td><i>/* Hotcount decrements. */</i></td></tr>
+<tr><th id="78">78</th><td><u>#define <dfn class="macro" id="_M/HOTCOUNT_LOOP" data-ref="_M/HOTCOUNT_LOOP">HOTCOUNT_LOOP</dfn>		2</u></td></tr>
+<tr><th id="79">79</th><td><u>#define <dfn class="macro" id="_M/HOTCOUNT_CALL" data-ref="_M/HOTCOUNT_CALL">HOTCOUNT_CALL</dfn>		1</u></td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><i>/* This solves a circular dependency problem -- bump as needed. Sigh. */</i></td></tr>
+<tr><th id="82">82</th><td><u>#define <dfn class="macro" id="_M/GG_NUM_ASMFF" data-ref="_M/GG_NUM_ASMFF">GG_NUM_ASMFF</dfn>	57</u></td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><u>#define <dfn class="macro" id="_M/GG_LEN_DDISP" data-ref="_M/GG_LEN_DDISP">GG_LEN_DDISP</dfn>	(<a class="enum" href="lj_bc.h.html#BC__MAX" title='BC__MAX' data-ref="BC__MAX" data-ref-filename="BC__MAX">BC__MAX</a> + GG_NUM_ASMFF)</u></td></tr>
+<tr><th id="85">85</th><td><u>#define <dfn class="macro" id="_M/GG_LEN_SDISP" data-ref="_M/GG_LEN_SDISP">GG_LEN_SDISP</dfn>	<a class="enum" href="lj_bc.h.html#202" title='BC_FUNCF' data-ref="BC_FUNCF" data-ref-filename="BC_FUNCF">BC_FUNCF</a></u></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/GG_LEN_DISP" data-ref="_M/GG_LEN_DISP">GG_LEN_DISP</dfn>	(GG_LEN_DDISP + GG_LEN_SDISP)</u></td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td><i>/* Global state, main thread and extra fields are allocated together. */</i></td></tr>
+<tr><th id="89">89</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="GG_State" title='GG_State' data-ref="GG_State" data-ref-filename="GG_State"><a class="type" href="#GG_State" title='GG_State' data-ref="GG_State" data-ref-filename="GG_State">GG_State</a></dfn> {</td></tr>
+<tr><th id="90">90</th><td>  <a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> <dfn class="decl field" id="GG_State::L" title='GG_State::L' data-ref="GG_State::L" data-ref-filename="GG_State..L">L</dfn>;				<i>/* Main thread. */</i></td></tr>
+<tr><th id="91">91</th><td>  <a class="typedef" href="lj_obj.h.html#global_State" title='global_State' data-type='struct global_State' data-ref="global_State" data-ref-filename="global_State">global_State</a> <dfn class="decl field" id="GG_State::g" title='GG_State::g' data-ref="GG_State::g" data-ref-filename="GG_State..g">g</dfn>;			<i>/* Global state. */</i></td></tr>
+<tr><th id="92">92</th><td><u>#<span data-ppcond="92">if</span> LJ_TARGET_ARM</u></td></tr>
+<tr><th id="93">93</th><td>  <i>/* Make g reachable via K12 encoded DISPATCH-relative addressing. */</i></td></tr>
+<tr><th id="94">94</th><td>  uint8_t align1[(<var>16</var>-<b>sizeof</b>(global_State))&amp;<var>15</var>];</td></tr>
+<tr><th id="95">95</th><td><u>#<span data-ppcond="92">endif</span></u></td></tr>
+<tr><th id="96">96</th><td><u>#<span data-ppcond="96">if</span> LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="97">97</th><td>  ASMFunction got[LJ_GOT__MAX];		<i>/* Global offset table. */</i></td></tr>
+<tr><th id="98">98</th><td><u>#<span data-ppcond="96">endif</span></u></td></tr>
+<tr><th id="99">99</th><td><u>#<span data-ppcond="99">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="100">100</th><td>  <a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> <dfn class="decl field" id="GG_State::J" title='GG_State::J' data-ref="GG_State::J" data-ref-filename="GG_State..J">J</dfn>;				<i>/* JIT state. */</i></td></tr>
+<tr><th id="101">101</th><td>  <a class="typedef" href="#HotCount" title='HotCount' data-type='uint16_t' data-ref="HotCount" data-ref-filename="HotCount">HotCount</a> <dfn class="decl field" id="GG_State::hotcount" title='GG_State::hotcount' data-ref="GG_State::hotcount" data-ref-filename="GG_State..hotcount">hotcount</dfn>[<a class="macro" href="#74" title="64" data-ref="_M/HOTCOUNT_SIZE">HOTCOUNT_SIZE</a>];	<i>/* Hot counters. */</i></td></tr>
+<tr><th id="102">102</th><td><u>#<span data-ppcond="102">if</span> LJ_TARGET_ARM</u></td></tr>
+<tr><th id="103">103</th><td>  <i>/* Ditto for J. */</i></td></tr>
+<tr><th id="104">104</th><td>  uint8_t align2[(<var>16</var>-<b>sizeof</b>(jit_State)-<b>sizeof</b>(HotCount)*HOTCOUNT_SIZE)&amp;<var>15</var>];</td></tr>
+<tr><th id="105">105</th><td><u>#<span data-ppcond="102">endif</span></u></td></tr>
+<tr><th id="106">106</th><td><u>#<span data-ppcond="99">endif</span></u></td></tr>
+<tr><th id="107">107</th><td>  <a class="typedef" href="lj_obj.h.html#ASMFunction" title='ASMFunction' data-type='void (*)(void)' data-ref="ASMFunction" data-ref-filename="ASMFunction">ASMFunction</a> <dfn class="decl field" id="GG_State::dispatch" title='GG_State::dispatch' data-ref="GG_State::dispatch" data-ref-filename="GG_State..dispatch">dispatch</dfn>[<a class="macro" href="#86" title="((BC__MAX + 57) + BC_FUNCF)" data-ref="_M/GG_LEN_DISP">GG_LEN_DISP</a>];	<i>/* Instruction dispatch tables. */</i></td></tr>
+<tr><th id="108">108</th><td>  <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> <dfn class="decl field" id="GG_State::bcff" title='GG_State::bcff' data-ref="GG_State::bcff" data-ref-filename="GG_State..bcff">bcff</dfn>[<a class="macro" href="#82" title="57" data-ref="_M/GG_NUM_ASMFF">GG_NUM_ASMFF</a>];		<i>/* Bytecode for ASM fast functions. */</i></td></tr>
+<tr><th id="109">109</th><td>} <dfn class="typedef" id="GG_State" title='GG_State' data-type='struct GG_State' data-ref="GG_State" data-ref-filename="GG_State">GG_State</dfn>;</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><u>#define <dfn class="macro" id="_M/GG_OFS" data-ref="_M/GG_OFS">GG_OFS</dfn>(field)	((int)offsetof(GG_State, field))</u></td></tr>
+<tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/G2GG" data-ref="_M/G2GG">G2GG</dfn>(gl)	((GG_State *)((char *)(gl) - GG_OFS(g)))</u></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/J2GG" data-ref="_M/J2GG">J2GG</dfn>(j)		((GG_State *)((char *)(j) - GG_OFS(J)))</u></td></tr>
+<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/L2GG" data-ref="_M/L2GG">L2GG</dfn>(L)		(G2GG(G(L)))</u></td></tr>
+<tr><th id="115">115</th><td><u>#define <dfn class="macro" id="_M/J2G" data-ref="_M/J2G">J2G</dfn>(J)		(&amp;J2GG(J)-&gt;g)</u></td></tr>
+<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/G2J" data-ref="_M/G2J">G2J</dfn>(gl)		(&amp;G2GG(gl)-&gt;J)</u></td></tr>
+<tr><th id="117">117</th><td><u>#define <dfn class="macro" id="_M/L2J" data-ref="_M/L2J">L2J</dfn>(L)		(&amp;L2GG(L)-&gt;J)</u></td></tr>
+<tr><th id="118">118</th><td><u>#define <dfn class="macro" id="_M/GG_G2J" data-ref="_M/GG_G2J">GG_G2J</dfn>		(GG_OFS(J) - GG_OFS(g))</u></td></tr>
+<tr><th id="119">119</th><td><u>#define <dfn class="macro" id="_M/GG_G2DISP" data-ref="_M/GG_G2DISP">GG_G2DISP</dfn>	(GG_OFS(dispatch) - GG_OFS(g))</u></td></tr>
+<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/GG_DISP2G" data-ref="_M/GG_DISP2G">GG_DISP2G</dfn>	(GG_OFS(g) - GG_OFS(dispatch))</u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/GG_DISP2J" data-ref="_M/GG_DISP2J">GG_DISP2J</dfn>	(GG_OFS(J) - GG_OFS(dispatch))</u></td></tr>
+<tr><th id="122">122</th><td><u>#define <dfn class="macro" id="_M/GG_DISP2HOT" data-ref="_M/GG_DISP2HOT">GG_DISP2HOT</dfn>	(GG_OFS(hotcount) - GG_OFS(dispatch))</u></td></tr>
+<tr><th id="123">123</th><td><u>#define <dfn class="macro" id="_M/GG_DISP2STATIC" data-ref="_M/GG_DISP2STATIC">GG_DISP2STATIC</dfn>	(GG_LEN_DDISP*(int)sizeof(ASMFunction))</u></td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><u>#define <dfn class="macro" id="_M/hotcount_get" data-ref="_M/hotcount_get">hotcount_get</dfn>(gg, pc) \</u></td></tr>
+<tr><th id="126">126</th><td><u>  (gg)-&gt;hotcount[(u32ptr(pc)&gt;&gt;2) &amp; (HOTCOUNT_SIZE-1)]</u></td></tr>
+<tr><th id="127">127</th><td><u>#define <dfn class="macro" id="_M/hotcount_set" data-ref="_M/hotcount_set">hotcount_set</dfn>(gg, pc, val) \</u></td></tr>
+<tr><th id="128">128</th><td><u>  (hotcount_get((gg), (pc)) = (HotCount)(val))</u></td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td><i>/* Dispatch table management. */</i></td></tr>
+<tr><th id="131">131</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_dispatch_init" title='lj_dispatch_init' data-ref="lj_dispatch_init" data-ref-filename="lj_dispatch_init">lj_dispatch_init</dfn>(<a class="typedef" href="#GG_State" title='GG_State' data-type='struct GG_State' data-ref="GG_State" data-ref-filename="GG_State">GG_State</a> *<dfn class="local col9 decl" id="869GG" title='GG' data-type='GG_State *' data-ref="869GG" data-ref-filename="869GG">GG</dfn>);</td></tr>
+<tr><th id="132">132</th><td><u>#<span data-ppcond="132">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="133">133</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_dispatch_init_hotcount" title='lj_dispatch_init_hotcount' data-ref="lj_dispatch_init_hotcount" data-ref-filename="lj_dispatch_init_hotcount">lj_dispatch_init_hotcount</dfn>(<a class="typedef" href="lj_obj.h.html#global_State" title='global_State' data-type='struct global_State' data-ref="global_State" data-ref-filename="global_State">global_State</a> *<dfn class="local col0 decl" id="870g" title='g' data-type='global_State *' data-ref="870g" data-ref-filename="870g">g</dfn>);</td></tr>
+<tr><th id="134">134</th><td><u>#<span data-ppcond="132">endif</span></u></td></tr>
+<tr><th id="135">135</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_dispatch_update" title='lj_dispatch_update' data-ref="lj_dispatch_update" data-ref-filename="lj_dispatch_update">lj_dispatch_update</dfn>(<a class="typedef" href="lj_obj.h.html#global_State" title='global_State' data-type='struct global_State' data-ref="global_State" data-ref-filename="global_State">global_State</a> *<dfn class="local col1 decl" id="871g" title='g' data-type='global_State *' data-ref="871g" data-ref-filename="871g">g</dfn>);</td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td><i>/* Instruction dispatch callback for hooks or when recording. */</i></td></tr>
+<tr><th id="138">138</th><td><a class="macro" href="lj_def.h.html#331" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNCA">LJ_FUNCA</a> <em>void</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_dispatch_ins" title='lj_dispatch_ins' data-ref="lj_dispatch_ins" data-ref-filename="lj_dispatch_ins">lj_dispatch_ins</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col2 decl" id="872L" title='L' data-type='lua_State *' data-ref="872L" data-ref-filename="872L">L</dfn>, <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="local col3 decl" id="873pc" title='pc' data-type='const BCIns *' data-ref="873pc" data-ref-filename="873pc">pc</dfn>);</td></tr>
+<tr><th id="139">139</th><td><a class="macro" href="lj_def.h.html#331" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNCA">LJ_FUNCA</a> <a class="typedef" href="lj_obj.h.html#ASMFunction" title='ASMFunction' data-type='void (*)(void)' data-ref="ASMFunction" data-ref-filename="ASMFunction">ASMFunction</a> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_dispatch_call" title='lj_dispatch_call' data-ref="lj_dispatch_call" data-ref-filename="lj_dispatch_call">lj_dispatch_call</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col4 decl" id="874L" title='L' data-type='lua_State *' data-ref="874L" data-ref-filename="874L">L</dfn>, <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a>*<dfn class="local col5 decl" id="875pc" title='pc' data-type='const BCIns *' data-ref="875pc" data-ref-filename="875pc">pc</dfn>);</td></tr>
+<tr><th id="140">140</th><td><u>#<span data-ppcond="140">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="141">141</th><td><a class="macro" href="lj_def.h.html#331" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNCA">LJ_FUNCA</a> <em>void</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_dispatch_stitch" title='lj_dispatch_stitch' data-ref="lj_dispatch_stitch" data-ref-filename="lj_dispatch_stitch">lj_dispatch_stitch</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col6 decl" id="876J" title='J' data-type='jit_State *' data-ref="876J" data-ref-filename="876J">J</dfn>, <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="local col7 decl" id="877pc" title='pc' data-type='const BCIns *' data-ref="877pc" data-ref-filename="877pc">pc</dfn>);</td></tr>
+<tr><th id="142">142</th><td><u>#<span data-ppcond="140">endif</span></u></td></tr>
+<tr><th id="143">143</th><td><u>#<span data-ppcond="143">if</span> <a class="macro" href="lj_arch.h.html#562" title="1" data-ref="_M/LJ_HASPROFILE">LJ_HASPROFILE</a></u></td></tr>
+<tr><th id="144">144</th><td><a class="macro" href="lj_def.h.html#331" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNCA">LJ_FUNCA</a> <em>void</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_dispatch_profile" title='lj_dispatch_profile' data-ref="lj_dispatch_profile" data-ref-filename="lj_dispatch_profile">lj_dispatch_profile</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col8 decl" id="878L" title='L' data-type='lua_State *' data-ref="878L" data-ref-filename="878L">L</dfn>, <em>const</em> <a class="typedef" href="lj_obj.h.html#BCIns" title='BCIns' data-type='uint32_t' data-ref="BCIns" data-ref-filename="BCIns">BCIns</a> *<dfn class="local col9 decl" id="879pc" title='pc' data-type='const BCIns *' data-ref="879pc" data-ref-filename="879pc">pc</dfn>);</td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="143">endif</span></u></td></tr>
+<tr><th id="146">146</th><td></td></tr>
+<tr><th id="147">147</th><td><u>#<span data-ppcond="147">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a> &amp;&amp; !defined(<a class="macro" href="host/buildvm.h.html#7" data-ref="_M/_BUILDVM_H">_BUILDVM_H</a>)</u></td></tr>
+<tr><th id="148">148</th><td><i>/* Save/restore errno and GetLastError() around hooks, exits and recording. */</i></td></tr>
+<tr><th id="149">149</th><td><u>#include &lt;errno.h&gt;</u></td></tr>
+<tr><th id="150">150</th><td><u>#if LJ_TARGET_WINDOWS</u></td></tr>
+<tr><th id="151">151</th><td><u>#define WIN32_LEAN_AND_MEAN</u></td></tr>
+<tr><th id="152">152</th><td><u>#include &lt;windows.h&gt;</u></td></tr>
+<tr><th id="153">153</th><td><u>#define ERRNO_SAVE	int olderr = errno; DWORD oldwerr = GetLastError();</u></td></tr>
+<tr><th id="154">154</th><td><u>#define ERRNO_RESTORE	errno = olderr; SetLastError(oldwerr);</u></td></tr>
+<tr><th id="155">155</th><td><u>#else</u></td></tr>
+<tr><th id="156">156</th><td><u>#define ERRNO_SAVE	int olderr = errno;</u></td></tr>
+<tr><th id="157">157</th><td><u>#define ERRNO_RESTORE	errno = olderr;</u></td></tr>
+<tr><th id="158">158</th><td><u>#endif</u></td></tr>
+<tr><th id="159">159</th><td><u>#<span data-ppcond="147">else</span></u></td></tr>
+<tr><th id="160">160</th><td><u>#define <dfn class="macro" id="_M/ERRNO_SAVE" data-ref="_M/ERRNO_SAVE">ERRNO_SAVE</dfn></u></td></tr>
+<tr><th id="161">161</th><td><u>#define <dfn class="macro" id="_M/ERRNO_RESTORE" data-ref="_M/ERRNO_RESTORE">ERRNO_RESTORE</dfn></u></td></tr>
+<tr><th id="162">162</th><td><u>#<span data-ppcond="147">endif</span></u></td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="165">165</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

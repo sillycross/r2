@@ -1,0 +1,4 @@
+<dec f='luajit/lj_dispatch.h' l='131' type='void lj_dispatch_init(GG_State * GG)'/>
+<def f='luajit/lj_dispatch.c' l='60' ll='80' type='void lj_dispatch_init(GG_State * GG)'/>
+<doc f='luajit/lj_dispatch.c' l='59'>/* Initialize instruction dispatch table and hot counters. */</doc>
+<use f='luajit/lj_state.c' l='255' u='c' c='lua_newstate'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_str.h' l='17' type='int lj_str_haspattern(GCstr * s)'/>
+<use f='luajit/lib_string.c' l='468' u='c' c='str_find_aux'/>
+<use f='luajit/lj_ffrecord.c' l='918' u='c' c='recff_string_find'/>
+<def f='luajit/lj_str.c' l='62' ll='71' type='int lj_str_haspattern(GCstr * s)'/>
+<doc f='luajit/lj_str.c' l='61'>/* Check whether a string has a pattern matching character. */</doc>

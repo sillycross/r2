@@ -1,0 +1,5 @@
+<dec f='luajit/lj_errmsg.h' l='157' macro='1' type='3131'/>
+<use f='luajit/lj_errmsg.h' l='157' macro='1' u='r'/>
+<use f='luajit/lj_cparse.c' l='1234' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1252' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1453' u='r' c='cp_decl_enum'/>

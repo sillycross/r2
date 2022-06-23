@@ -1,0 +1,5 @@
+<dec f='luajit/lj_opt_narrow.c' l='194' type='3'/>
+<use f='luajit/lj_opt_narrow.c' l='288' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='296' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='378' u='r' c='narrow_conv_emit'/>
+<doc f='luajit/lj_opt_narrow.c' l='194'>/* Push KINT ref. The next code holds an int32_t. */</doc>

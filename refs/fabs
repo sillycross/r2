@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='162' type='double fabs(double __x)'/>
+<use f='luajit/lj_vmmath.c' l='49' u='c' c='lj_vm_foldarith'/>

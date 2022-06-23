@@ -1,0 +1,14 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='0'/>
+<use f='luajit/lj_bc.h' l='212' u='r' c='lj_assert_29'/>
+<use f='luajit/lj_bc.h' l='214' u='r' c='lj_assert_33'/>
+<use f='luajit/host/buildvm_arch.h' l='2815' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='2870' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='158' u='r' c='lj_assert_34'/>
+<use f='luajit/lj_parse.c' l='159' u='r' c='lj_assert_36'/>
+<use f='luajit/lj_parse.c' l='160' u='r' c='lj_assert_38'/>
+<use f='luajit/lj_parse.c' l='859' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='861' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='863' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='863' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_record.c' l='2122' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2149' u='r' c='lj_record_ins'/>

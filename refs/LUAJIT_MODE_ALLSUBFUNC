@@ -1,0 +1,5 @@
+<dec f='luajit/luajit.h' l='48' type='4'/>
+<doc f='luajit/luajit.h' l='48'>/* Change only the subroutines. */</doc>
+<use f='luajit/lib_jit.c' l='55' u='r' c='setjitmode'/>
+<use f='luajit/lj_dispatch.c' l='262' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='272' u='r' c='luaJIT_setmode'/>

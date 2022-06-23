@@ -1,0 +1,4 @@
+<dec f='luajit/lj_mcode.h' l='21' type='void lj_mcode_commit(jit_State * J, MCode * m)'/>
+<def f='luajit/lj_mcode.c' l='309' ll='313' type='void lj_mcode_commit(jit_State * J, MCode * top)'/>
+<doc f='luajit/lj_mcode.c' l='308'>/* Commit the top part of the current MCode area. */</doc>
+<use f='luajit/lj_trace.c' l='530' u='c' c='trace_stop'/>

@@ -1,0 +1,15 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='88'/>
+<use f='luajit/host/buildvm_arch.h' l='4135' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4521' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='298' u='r' c='jmp_patchtestreg'/>
+<use f='luajit/lj_parse.c' l='574' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='702' u='r' c='bcemit_jmp'/>
+<use f='luajit/lj_parse.c' l='1200' u='r' c='gola_close'/>
+<use f='luajit/lj_parse.c' l='2569' u='r' c='parse_for_iter'/>
+<use f='luajit/lj_record.c' l='331' u='r' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='2453' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2544' u='r' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2621' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='206' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='222' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='504' c='trace_stop'/>

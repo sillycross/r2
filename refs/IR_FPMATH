@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='52'/>
+<use f='luajit/lj_asm.c' l='1770' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2304' c='asm_setup_regsp'/>
+<use f='luajit/lj_ffrecord.c' l='528' u='r' c='recff_math_round'/>
+<use f='luajit/lj_ffrecord.c' l='542' u='r' c='recff_math_unary'/>
+<use f='luajit/lj_ffrecord.c' l='556' u='r' c='recff_math_log'/>
+<use f='luajit/lj_ffrecord.c' l='557' u='r' c='recff_math_log'/>
+<use f='luajit/lj_ffrecord.c' l='561' u='r' c='recff_math_log'/>
+<use f='luajit/lj_ffrecord.c' l='635' u='r' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='639' u='r' c='recff_math_random'/>
+<use f='luajit/lj_opt_fold.c' l='1121' u='r' c='fold_simplify_numpow_xknum'/>
+<use f='luajit/lj_opt_narrow.c' l='582' u='r' c='lj_opt_narrow_mod'/>

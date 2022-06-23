@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='178' type='void lua_gettable(lua_State * L, int idx)'/>
+<use f='luajit/lib_base.c' l='517' u='c' c='lj_cf_print'/>
+<use f='luajit/lib_package.c' l='211' u='c' c='ll_register'/>
+<use f='luajit/lib_string.c' l='587' u='c' c='add_value'/>
+<def f='luajit/lj_api.c' l='797' ll='808' macro='1' type='void lua_gettable(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='353' u='c' c='dojitcmd'/>

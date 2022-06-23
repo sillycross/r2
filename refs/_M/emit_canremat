@@ -1,0 +1,9 @@
+<dec f='luajit/lj_emit_x86.h' l='571'/>
+<use f='luajit/lj_asm.c' l='356' u='c'/>
+<use f='luajit/lj_asm.c' l='359' u='c'/>
+<use f='luajit/lj_asm.c' l='424' u='c'/>
+<use f='luajit/lj_asm.c' l='528' u='c'/>
+<use f='luajit/lj_asm.c' l='539' u='c'/>
+<use f='luajit/lj_asm.c' l='634' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='490' u='c'/>
+<doc f='luajit/lj_emit_x86.h' l='570'>/* Prefer rematerialization of BASE/L from global_State over spills. */</doc>

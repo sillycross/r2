@@ -1,0 +1,13 @@
+<dec f='include/string.h' l='46' type='void * memmove(void * __dest, const void * __src, size_t __n)'/>
+<doc f='include/string.h' l='44'>/* Copy N bytes of SRC to DEST, guaranteeing
+   correct behavior for overlapping strings.  */</doc>
+<use f='luajit/lj_bcread.c' l='61' u='c' c='bcread_fill'/>
+<use f='luajit/lj_buf.c' l='75' u='c' c='lj_buf_more2'/>
+<use f='luajit/lj_ffrecord.c' l='115' u='c' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='124' u='c' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='140' u='c' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='458' u='c' c='recff_pcall'/>
+<use f='luajit/lj_ffrecord.c' l='488' u='c' c='recff_xpcall'/>
+<use f='luajit/lj_ir.c' l='99' u='c' c='lj_ir_growbot'/>
+<use f='luajit/lj_record.c' l='785' u='c' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='897' u='c' c='lj_record_ret'/>

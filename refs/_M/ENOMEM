@@ -1,0 +1,2 @@
+<dec f='include/asm-generic/errno-base.h' l='16'/>
+<use f='luajit/lj_alloc.c' l='251' u='c'/>

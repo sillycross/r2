@@ -1,0 +1,21 @@
+<dec f='luajit/lua.h' l='124' type='void lua_remove(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='101' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='125' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_debug.c' l='103' u='c' c='treatstackoption'/>
+<use f='luajit/lib_package.c' l='234' u='c' c='mksymname'/>
+<use f='luajit/lib_package.c' l='327' u='c' c='searchpath'/>
+<use f='luajit/lib_package.c' l='331' u='c' c='searchpath'/>
+<use f='luajit/lib_package.c' l='565' u='c' c='setpath'/>
+<def f='luajit/lj_api.c' l='162' ll='167' macro='1' type='void lua_remove(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='106' u='c' c='traceback'/>
+<use f='luajit/luajit.c' l='125' u='c' c='docall'/>
+<use f='luajit/luajit.c' l='142' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='144' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='243' u='c' c='loadline'/>
+<use f='luajit/luajit.c' l='287' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='317' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='351' u='c' c='dojitcmd'/>
+<use f='luajit/luajit.c' l='359' u='c' c='dojitcmd'/>
+<use f='luajit/luajit.c' l='361' u='c' c='dojitcmd'/>
+<use f='luajit/luajit.c' l='370' u='c' c='dojitopt'/>
+<use f='luajit/luajit.c' l='372' u='c' c='dojitopt'/>

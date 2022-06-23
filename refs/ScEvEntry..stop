@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='327' type='IRRef1'/>
+<offset>96</offset>
+<doc f='luajit/lj_jit.h' l='327'>/* Constant stop reference. */</doc>
+<use f='luajit/lj_opt_fold.c' l='1268' u='r' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_record.c' l='464' u='w' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='469' u='r' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='501' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='508' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='1305' u='r' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1306' u='r' c='rec_idx_abc'/>

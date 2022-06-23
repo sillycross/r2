@@ -1,0 +1,14 @@
+<dec f='luajit/lj_obj.h' l='775'/>
+<use f='luajit/lj_ir.h' l='412' u='c'/>
+<use f='luajit/lib_ffi.c' l='801' u='c'/>
+<use f='luajit/lj_api.c' l='229' u='c'/>
+<use f='luajit/lj_api.c' l='298' u='c'/>
+<use f='luajit/lj_api.c' l='298' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='74' u='c'/>
+<use f='luajit/lj_crecord.c' l='953' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='206' u='c'/>
+<use f='luajit/lj_meta.c' l='392' u='c'/>
+<use f='luajit/lj_meta.c' l='392' u='c'/>
+<use f='luajit/lj_obj.c' l='25' u='c'/>
+<use f='luajit/lj_obj.c' l='25' u='c'/>
+<use f='luajit/lj_serialize.c' l='164' u='c'/>

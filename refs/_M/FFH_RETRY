@@ -1,0 +1,15 @@
+<dec f='luajit/lj_lib.h' l='28'/>
+<doc f='luajit/lj_lib.h' l='27'>/* Return values from fallback handler. */</doc>
+<use f='luajit/lib_base.c' l='619' u='c'/>
+<use f='luajit/lib_bit.c' l='72' u='c'/>
+<use f='luajit/lib_bit.c' l='84' u='c'/>
+<use f='luajit/lib_bit.c' l='102' u='c'/>
+<use f='luajit/lib_bit.c' l='133' u='c'/>
+<use f='luajit/lib_math.c' l='27' u='c'/>
+<use f='luajit/lib_math.c' l='35' u='c'/>
+<use f='luajit/lib_math.c' l='64' u='c'/>
+<use f='luajit/lib_math.c' l='74' u='c'/>
+<use f='luajit/lib_math.c' l='87' u='c'/>
+<use f='luajit/lib_math.c' l='94' u='c'/>
+<use f='luajit/lib_string.c' l='84' u='c'/>
+<use f='luajit/lib_string.c' l='109' u='c'/>

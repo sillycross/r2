@@ -1,0 +1,9 @@
+<dec f='luajit/host/minilua.c' l='124' type='14'/>
+<use f='luajit/host/minilua.c' l='3185' u='r' c='luaK_setreturns'/>
+<use f='luajit/host/minilua.c' l='3196' u='r' c='luaK_setoneret'/>
+<use f='luajit/host/minilua.c' l='3224' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='adjust_assign'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='lastlistfield'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='funcargs'/>
+<use f='luajit/host/minilua.c' l='4217' u='r' c='simpleexp'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='retstat'/>

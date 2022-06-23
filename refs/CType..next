@@ -1,0 +1,18 @@
+<dec f='luajit/lj_ctype.h' l='147' type='CTypeID1'/>
+<offset>80</offset>
+<doc f='luajit/lj_ctype.h' l='147'>/* Next element in hash chain. */</doc>
+<use f='luajit/lj_cparse.c' l='776' u='w' c='cp_add'/>
+<use f='luajit/lj_cparse.c' l='776' u='r' c='cp_add'/>
+<use f='luajit/lj_cparse.c' l='777' u='w' c='cp_add'/>
+<use f='luajit/lj_cparse.c' l='860' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='883' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='935' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='973' u='w' c='cp_decl_reset'/>
+<use f='luajit/lj_cparse.c' l='1507' u='w' c='cp_decl_spec'/>
+<use f='luajit/lj_ctype.c' l='175' u='w' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='190' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='201' u='w' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='211' u='w' c='ctype_addtype'/>
+<use f='luajit/lj_ctype.c' l='219' u='w' c='lj_ctype_addname'/>
+<use f='luajit/lj_ctype.c' l='234' u='r' c='lj_ctype_getname'/>
+<use f='luajit/lj_ctype.c' l='618' u='w' c='lj_ctype_init'/>

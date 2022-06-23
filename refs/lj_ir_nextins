@@ -1,0 +1,7 @@
+<def f='luajit/lj_iropt.h' l='31' ll='37' type='IRRef lj_ir_nextins(jit_State * J)'/>
+<doc f='luajit/lj_iropt.h' l='28'>/* Get ref of next IR instruction and optionally grow IR.
+** Note: this may invalidate all IRIns*!
+*/</doc>
+<use f='luajit/lj_asm.c' l='2387' u='c' c='lj_asm_trace'/>
+<use f='luajit/lj_ir.c' l='118' u='c' c='lj_ir_emit'/>
+<use f='luajit/lj_opt_fold.c' l='2549' u='c' c='lj_opt_cse'/>

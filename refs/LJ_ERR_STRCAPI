@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='97' macro='1' type='1849'/>
+<use f='luajit/lj_errmsg.h' l='97' macro='1' u='r'/>
+<use f='luajit/lib_string.c' l='162' u='r' c='check_capture'/>
+<use f='luajit/lib_string.c' l='429' u='r' c='push_onecapture'/>

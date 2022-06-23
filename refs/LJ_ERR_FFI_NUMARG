@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='166' macro='1' type='3416'/>
+<use f='luajit/lj_errmsg.h' l='166' macro='1' u='r'/>
+<use f='luajit/lj_ccall.c' l='1001' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1097' u='r' c='ccall_set_args'/>

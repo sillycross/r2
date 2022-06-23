@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cconv.h' l='66' type='void lj_cconv_ct_init(CTState * cts, CType * d, CTSize sz, uint8_t * dp, TValue * o, MSize len)'/>
+<use f='luajit/lib_ffi.c' l='510' u='c' c='lj_cf_ffi_new'/>
+<def f='luajit/lj_cconv.c' l='755' ll='768' type='void lj_cconv_ct_init(CTState * cts, CType * d, CTSize sz, uint8_t * dp, TValue * o, MSize len)'/>
+<doc f='luajit/lj_cconv.c' l='754'>/* Initialize C type with TValues. Caveat: expects to get the raw CType! */</doc>

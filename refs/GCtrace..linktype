@@ -1,0 +1,9 @@
+<dec f='luajit/lj_jit.h' l='279' type='uint8_t'/>
+<offset>928</offset>
+<doc f='luajit/lj_jit.h' l='279'>/* Type of link. */</doc>
+<use f='luajit/lib_jit.c' l='310' u='r' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lib_jit.c' l='310' u='r' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lj_record.c' l='294' u='w' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='1765' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_trace.c' l='595' u='w' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='683' u='w' c='trace_state'/>

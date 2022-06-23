@@ -1,0 +1,37 @@
+<dec f='luajit/lj_jit.h' l='422' type='BCReg'/>
+<offset>1408</offset>
+<doc f='luajit/lj_jit.h' l='422'>/* Current frame base, offset into J-&gt;slots. */</doc>
+<use f='luajit/lj_crecord.c' l='1213' u='w' c='crec_snap_caller'/>
+<use f='luajit/lj_crecord.c' l='1218' u='w' c='crec_snap_caller'/>
+<use f='luajit/lj_ffrecord.c' l='134' u='w' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='815' u='r' c='recff_string_range'/>
+<use f='luajit/lj_opt_loop.c' l='157' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_record.c' l='190' u='r' c='sloadt'/>
+<use f='luajit/lj_record.c' l='199' u='r' c='sload'/>
+<use f='luajit/lj_record.c' l='276' u='r' c='canonicalize_slots'/>
+<use f='luajit/lj_record.c' l='765' u='w' c='lj_record_call'/>
+<use f='luajit/lj_record.c' l='766' u='r' c='lj_record_call'/>
+<use f='luajit/lj_record.c' l='778' u='w' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='783' u='r' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='831' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='855' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='881' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='905' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1301' u='r' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1636' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1642' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1654' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1719' u='r' c='rec_func_setup'/>
+<use f='luajit/lj_record.c' l='1734' u='r' c='rec_func_vararg'/>
+<use f='luajit/lj_record.c' l='1749' u='w' c='rec_func_vararg'/>
+<use f='luajit/lj_record.c' l='1896' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2590' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2591' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='78' u='r' c='snapshot_slots'/>
+<use f='luajit/lj_snap.c' l='113' u='r' c='snapshot_framelinks'/>
+<use f='luajit/lj_snap.c' l='117' u='r' c='snapshot_framelinks'/>
+<use f='luajit/lj_snap.c' l='163' u='r' c='snapshot_stack'/>
+<use f='luajit/lj_snap.c' l='331' u='r' c='lj_snap_shrink'/>
+<use f='luajit/lj_snap.c' l='513' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='627' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='628' u='r' c='lj_snap_replay'/>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_obj.h' l='500' type='GCRef'/>
+<use f='luajit/lj_gc.h' l='89' u='m' c='lj_gc_barrierback'/>
+<use f='luajit/host/buildvm_arch.h' l='1279' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='3800' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3866' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3896' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3922' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3969' u='a' c='build_ins'/>
+<offset>192</offset>
+<use f='luajit/lj_gc.c' l='194' u='m' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='496' u='m' c='gc_clearweak'/>

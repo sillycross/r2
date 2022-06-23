@@ -1,0 +1,22 @@
+<dec f='include/stdio.h' l='626' type='int fputs(const char *restrict __s, FILE *restrict __stream)'/>
+<doc f='include/stdio.h' l='622'>/* Write a string to STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='luajit/lib_aux.c' l='314' u='c' c='panic'/>
+<use f='luajit/lib_aux.c' l='315' u='c' c='panic'/>
+<use f='luajit/lib_debug.c' l='366' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_debug.c' l='373' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_debug.c' l='374' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lj_vmevent.c' l='50' u='c' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='51' u='c' c='lj_vmevent_call'/>
+<use f='luajit/luajit.c' l='64' u='c' c='print_usage'/>
+<use f='luajit/luajit.c' l='65' u='c' c='print_usage'/>
+<use f='luajit/luajit.c' l='66' u='c' c='print_usage'/>
+<use f='luajit/luajit.c' l='83' u='c' c='l_message'/>
+<use f='luajit/luajit.c' l='84' u='c' c='l_message'/>
+<use f='luajit/luajit.c' l='133' u='c' c='print_version'/>
+<use f='luajit/luajit.c' l='147' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='150' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='192' u='c' c='write_prompt'/>
+<use f='luajit/luajit.c' l='265' u='c' c='dotty'/>

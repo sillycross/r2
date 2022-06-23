@@ -1,0 +1,19 @@
+<dec f='luajit/lj_err.h' l='20' type='const char *'/>
+<use f='luajit/lj_bcread.c' l='43' macro='1' u='r' c='bcread_error'/>
+<use f='luajit/lj_cparse.c' l='144' macro='1' u='r' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='147' macro='1' u='r' c='cp_errmsg'/>
+<def f='luajit/lj_err.c' l='90' ll='192' type='const char *'/>
+<use f='luajit/lj_err.c' l='769' macro='1' u='r' c='lj_err_str'/>
+<use f='luajit/lj_err.c' l='769' macro='1' u='r' c='lj_err_str'/>
+<use f='luajit/lj_err.c' l='871' macro='1' u='r' c='err_msgv'/>
+<use f='luajit/lj_err.c' l='890' macro='1' u='r' c='lj_err_lex'/>
+<use f='luajit/lj_err.c' l='893' macro='1' u='r' c='lj_err_lex'/>
+<use f='luajit/lj_err.c' l='901' macro='1' u='r' c='lj_err_optype'/>
+<use f='luajit/lj_err.c' l='975' macro='1' u='r' c='lj_err_callerv'/>
+<use f='luajit/lj_err.c' l='983' macro='1' u='r' c='lj_err_caller'/>
+<use f='luajit/lj_err.c' l='995' macro='1' u='r' c='err_argmsg'/>
+<use f='luajit/lj_err.c' l='997' macro='1' u='r' c='err_argmsg'/>
+<use f='luajit/lj_err.c' l='1007' macro='1' u='r' c='lj_err_argv'/>
+<use f='luajit/lj_err.c' l='1015' macro='1' u='r' c='lj_err_arg'/>
+<use f='luajit/lj_err.c' l='1037' macro='1' u='r' c='lj_err_argtype'/>
+<doc f='luajit/lj_err.c' l='89'>/* Error message strings. */</doc>

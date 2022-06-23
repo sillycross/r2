@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ir.h' l='255'/>
+<doc f='luajit/lj_ir.h' l='254'>/* TOSTR mode, stored in op2. */</doc>
+<use f='luajit/lj_asm.c' l='1205' u='c'/>
+<use f='luajit/lj_asm.c' l='1251' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='412' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='981' u='c'/>
+<use f='luajit/lj_ir.c' l='444' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='907' u='c'/>
+<use f='luajit/lj_record.c' l='1934' u='c'/>

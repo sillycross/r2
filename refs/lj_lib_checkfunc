@@ -1,0 +1,12 @@
+<dec f='luajit/lj_lib.h' l='44' type='GCfunc * lj_lib_checkfunc(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='352' u='c' c='lj_ffh_pcall'/>
+<use f='luajit/lib_base.c' l='428' u='c' c='lj_cf_load'/>
+<use f='luajit/lib_debug.c' l='205' u='c' c='debug_getupvalue'/>
+<use f='luajit/lib_debug.c' l='230' u='c' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='246' u='c' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lib_ffi.c' l='464' u='c' c='lj_cf_ffi_callback_set'/>
+<use f='luajit/lib_jit.c' l='128' u='c' c='lj_cf_jit_attach'/>
+<use f='luajit/lib_jit.c' l='577' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lib_string.c' l='125' u='c' c='lj_cf_string_dump'/>
+<use f='luajit/lib_table.c' l='265' u='c' c='lj_cf_table_sort'/>
+<def f='luajit/lj_lib.c' l='261' ll='267' type='GCfunc * lj_lib_checkfunc(lua_State * L, int narg)'/>

@@ -1,0 +1,6 @@
+<def f='luajit/lj_cconv.h' l='27' ll='39' type='uint32_t cconv_idx(CTInfo info)'/>
+<doc f='luajit/lj_cconv.h' l='26'>/* Convert C type info to compressed C type index. ORDER CT. ORDER CCX. */</doc>
+<use f='luajit/lj_cconv.c' l='146' macro='1' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='146' macro='1' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='406' macro='1' u='c' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='406' macro='1' u='c' c='crec_ct_ct'/>

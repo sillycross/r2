@@ -1,0 +1,4 @@
+<dec f='luajit/luajit.h' l='47' type='3'/>
+<doc f='luajit/luajit.h' l='47'>/* Recurse into subroutine protos. */</doc>
+<use f='luajit/lib_jit.c' l='55' u='r' c='setjitmode'/>
+<use f='luajit/lj_dispatch.c' l='261' c='luaJIT_setmode'/>

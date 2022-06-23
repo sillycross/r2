@@ -1,0 +1,8 @@
+<dec f='luajit/dasm_x86.h' l='31'/>
+<use f='luajit/dasm_x86.h' l='143' u='c'/>
+<use f='luajit/dasm_x86.h' l='285' u='c'/>
+<use f='luajit/dasm_x86.h' l='362' u='c'/>
+<use f='luajit/dasm_x86.h' l='495' u='c'/>
+<use f='luajit/dasm_x86.h' l='515' u='c'/>
+<use f='luajit/dasm_x86.h' l='522' u='c'/>
+<doc f='luajit/dasm_x86.h' l='30'>/* DynASM encoder status codes. Action list offset or number are or&apos;ed in. */</doc>

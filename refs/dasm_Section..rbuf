@@ -1,0 +1,14 @@
+<dec f='luajit/dasm_x86.h' l='55' type='int *'/>
+<use f='luajit/dasm_x86.h' l='101' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='179' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='183' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='48' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='48' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='305' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='48' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='400' u='r' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='48' u='r' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='48' u='r' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='48' u='r' c='dasm_getpclabel'/>
+<offset>0</offset>
+<doc f='luajit/dasm_x86.h' l='55'>/* Biased buffer pointer (negative section bias). */</doc>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_ctype.h' l='261'/>
+<use f='luajit/lj_cdata.c' l='33' u='c'/>
+<use f='luajit/lj_cdata.c' l='33' u='c'/>
+<use f='luajit/lj_cdata.c' l='55' u='c'/>
+<use f='luajit/lj_crecord.c' l='987' u='c'/>
+<use f='luajit/lj_crecord.c' l='1000' u='c'/>
+<use f='luajit/lj_crecord.c' l='1000' u='c'/>

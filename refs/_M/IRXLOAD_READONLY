@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='230'/>
+<doc f='luajit/lj_ir.h' l='229'>/* XLOAD mode, stored in op2. */</doc>
+<use f='luajit/lj_ffrecord.c' l='302' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='821' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='1132' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2102' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='792' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='839' u='c'/>

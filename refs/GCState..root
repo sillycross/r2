@@ -1,0 +1,20 @@
+<dec f='luajit/lj_obj.h' l='599' type='GCRef'/>
+<offset>192</offset>
+<doc f='luajit/lj_obj.h' l='599'>/* List of all collectable objects. */</doc>
+<use f='luajit/lj_cdata.c' l='43' u='m' c='lj_cdata_newv'/>
+<use f='luajit/lj_cdata.c' l='44' u='m' c='lj_cdata_newv'/>
+<use f='luajit/lj_gc.c' l='419' u='m' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='420' u='m' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='542' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='543' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='606' u='a' c='lj_gc_freeall'/>
+<use f='luajit/lj_gc.c' l='646' u='a' c='atomic'/>
+<use f='luajit/lj_gc.c' l='780' u='a' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='835' u='m' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='836' u='m' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='886' u='m' c='lj_mem_newgco'/>
+<use f='luajit/lj_gc.c' l='887' u='m' c='lj_mem_newgco'/>
+<use f='luajit/lj_state.c' l='250' u='m' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='251' u='a' c='lua_newstate'/>
+<use f='luajit/lj_trace.c' l='151' u='m' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='152' u='m' c='trace_save'/>

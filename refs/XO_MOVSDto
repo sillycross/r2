@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='281' type='286257916'/>
+<use f='luajit/lj_emit_x86.h' l='557' u='r' c='emit_storeofs'/>
+<use f='luajit/lj_asm_x86.h' l='630' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1457' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1605' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='2709' u='r' c='asm_stack_restore'/>

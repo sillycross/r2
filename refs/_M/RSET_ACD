@@ -1,0 +1,2 @@
+<dec f='luajit/lj_target_x86.h' l='83'/>
+<doc f='luajit/lj_target_x86.h' l='82'>/* ABI-specific register sets. */</doc>

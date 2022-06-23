@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='121' type='TRef lj_opt_fwd_fload(jit_State * J)'/>
+<use f='luajit/lj_folddef.h' l='148' u='r'/>
+<def f='luajit/lj_opt_mem.c' l='574' ll='603' type='TRef lj_opt_fwd_fload(jit_State * J)'/>
+<doc f='luajit/lj_opt_mem.c' l='573'>/* Only the loads for mutable fields end up here (see FOLD). */</doc>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_serialize.h' l='18' type='SBufExt * lj_serialize_get(SBufExt * sbx, TValue * o)'/>
+<use f='luajit/lib_buffer.c' l='250' u='c' c='lj_cf_buffer_method_decode'/>
+<use f='luajit/lib_buffer.c' l='339' u='c' c='lj_cf_buffer_decode'/>
+<def f='luajit/lj_serialize.c' l='410' ll='414' type='SBufExt * lj_serialize_get(SBufExt * sbx, TValue * o)'/>

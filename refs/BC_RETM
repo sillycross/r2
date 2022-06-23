@@ -1,0 +1,19 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='73'/>
+<use f='luajit/lj_bc.h' l='218' u='r' c='lj_assert_41'/>
+<use f='luajit/lj_bc.h' l='259' u='r' c='bc_isret'/>
+<use f='luajit/host/buildvm_arch.h' l='4208' c='build_ins'/>
+<use f='luajit/lj_asm.c' l='2082' c='asm_tail_link'/>
+<use f='luajit/lj_dispatch.c' l='151' u='w' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='171' u='w' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='176' u='w' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='176' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='390' c='cur_topslot'/>
+<use f='luajit/lj_ffrecord.c' l='157' u='r' c='recff_nyi'/>
+<use f='luajit/lj_parse.c' l='1521' c='bcopisret'/>
+<use f='luajit/lj_parse.c' l='1548' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='2350' u='r' c='parse_return'/>
+<use f='luajit/lj_record.c' l='2399' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='263' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='946' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='548' u='r' c='trace_downrec'/>
+<use f='luajit/lj_trace.c' l='919' c='lj_trace_exit'/>

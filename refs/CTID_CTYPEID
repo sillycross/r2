@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='22'/>
+<use f='luajit/lib_ffi.c' l='64' u='r' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='226' u='r' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='287' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='552' u='r' c='lj_cf_ffi_typeof'/>
+<use f='luajit/lib_ffi.c' l='592' u='r' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='783' u='r' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lj_cdata.c' l='185' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cparse.c' l='223' u='r' c='cp_param'/>
+<use f='luajit/lj_crecord.c' l='92' u='r' c='argv2ctype'/>
+<use f='luajit/lj_crecord.c' l='867' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1299' u='r' c='recff_cdata_call'/>
+<use f='luajit/lj_crecord.c' l='1708' u='r' c='recff_ffi_typeof'/>
+<use f='luajit/lj_ctype.c' l='482' u='r' c='ctype_repr'/>

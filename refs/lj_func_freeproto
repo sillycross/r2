@@ -1,0 +1,4 @@
+<dec f='luajit/lj_func.h' l='12' type='void lj_func_freeproto(global_State * g, GCproto * pt)'/>
+<def f='luajit/lj_func.c' l='20' ll='23' type='void lj_func_freeproto(global_State * g, GCproto * pt)'/>
+<doc f='luajit/lj_func.c' l='18'>/* -- Prototypes ---------------------------------------------------------- */</doc>
+<use f='luajit/lj_gc.c' l='382' u='r'/>

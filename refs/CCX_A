@@ -1,0 +1,10 @@
+<dec f='luajit/lj_cconv.h' l='22' type='6'/>
+<doc f='luajit/lj_cconv.h' l='22'>/* Refarray. */</doc>
+<use f='luajit/lj_cconv.c' l='226' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='349' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='356' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='356' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='450' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='512' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='531' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='531' macro='1' u='r' c='crec_ct_ct'/>

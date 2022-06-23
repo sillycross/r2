@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='19'/>
+<use f='luajit/lib_ffi.c' l='228' u='r' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lj_crecord.c' l='1301' u='r' c='recff_cdata_call'/>
+<use f='luajit/lj_crecord.c' l='1313' u='r' c='recff_cdata_call'/>

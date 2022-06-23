@@ -1,0 +1,9 @@
+<dec f='luajit/lj_dispatch.h' l='117'/>
+<use f='luajit/lib_jit.c' l='104' u='c'/>
+<use f='luajit/lib_jit.c' l='286' u='c'/>
+<use f='luajit/lib_jit.c' l='401' u='c'/>
+<use f='luajit/lib_jit.c' l='517' u='c'/>
+<use f='luajit/lib_jit.c' l='731' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='224' u='c'/>
+<use f='luajit/lj_profile.c' l='314' u='c'/>
+<use f='luajit/lj_trace.c' l='282' u='c'/>

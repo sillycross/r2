@@ -1,0 +1,16 @@
+<dec f='luajit/lj_dispatch.h' l='84'/>
+<use f='luajit/lj_dispatch.c' l='65' u='c'/>
+<use f='luajit/lj_dispatch.c' l='66' u='c'/>
+<use f='luajit/lj_dispatch.c' l='132' u='c'/>
+<use f='luajit/lj_dispatch.c' l='133' u='c'/>
+<use f='luajit/lj_dispatch.c' l='134' u='c'/>
+<use f='luajit/lj_dispatch.c' l='139' u='c'/>
+<use f='luajit/lj_dispatch.c' l='140' u='c'/>
+<use f='luajit/lj_dispatch.c' l='141' u='c'/>
+<use f='luajit/lj_dispatch.c' l='148' u='c'/>
+<use f='luajit/lj_dispatch.c' l='176' u='c'/>
+<use f='luajit/lj_dispatch.c' l='177' u='c'/>
+<use f='luajit/lj_dispatch.c' l='178' u='c'/>
+<use f='luajit/lj_dispatch.c' l='179' u='c'/>
+<use f='luajit/lj_dispatch.c' l='187' u='c'/>
+<use f='luajit/lj_dispatch.c' l='190' u='c'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/lua.h' l='121' type='int lua_gettop(lua_State * L)'/>
+<use f='luajit/lib_aux.c' l='274' u='c' c='luaL_ref'/>
+<use f='luajit/lib_aux.c' l='274' u='c' c='luaL_unref'/>
+<def f='luajit/lj_api.c' l='140' ll='143' macro='1' type='int lua_gettop(lua_State * L)'/>
+<use f='luajit/luajit.c' l='115' u='c' c='docall'/>
+<use f='luajit/luajit.c' l='145' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='255' u='c' c='dotty'/>
+<use f='luajit/luajit.c' l='258' u='c' c='dotty'/>

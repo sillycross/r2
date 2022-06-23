@@ -1,0 +1,5 @@
+<def f='luajit/lj_parse.c' l='2152' ll='2155'/>
+<use f='luajit/lj_parse.c' l='2154'/>
+<use f='luajit/lj_parse.c' l='2152'/>
+<size>32</size>
+<doc f='luajit/lj_parse.c' l='2151'>/* List of LHS variables. */</doc>

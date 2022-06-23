@@ -1,0 +1,17 @@
+<dec f='luajit/lj_def.h' l='125'/>
+<use f='luajit/lj_def.h' l='316' u='a'/>
+<use f='luajit/lj_asm.c' l='130' u='c'/>
+<use f='luajit/lj_cconv.c' l='21' u='c'/>
+<use f='luajit/lj_cconv.c' l='38' u='c'/>
+<use f='luajit/lj_cconv.c' l='50' u='c'/>
+<use f='luajit/lj_clib.c' l='36' u='c'/>
+<use f='luajit/lj_cparse.c' l='66' u='c'/>
+<use f='luajit/lj_cparse.c' l='127' u='c'/>
+<use f='luajit/lj_cparse.c' l='153' u='c'/>
+<use f='luajit/lj_cparse.c' l='158' u='c'/>
+<use f='luajit/lj_cparse.c' l='164' u='c'/>
+<use f='luajit/lj_err.c' l='865' u='c'/>
+<use f='luajit/lj_err.c' l='987' u='c'/>
+<use f='luajit/lj_parse.c' l='174' u='c'/>
+<use f='luajit/lj_parse.c' l='179' u='c'/>
+<use f='luajit/lj_parse.c' l='184' u='c'/>

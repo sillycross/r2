@@ -1,0 +1,15 @@
+<dec f='luajit/lauxlib.h' l='80' type='int luaL_fileresult(lua_State * L, int stat, const char * fname)'/>
+<def f='luajit/lib_aux.c' l='31' ll='47' macro='1' type='int luaL_fileresult(lua_State * L, int stat, const char * fname)'/>
+<use f='luajit/lib_aux.c' l='76' u='c' c='luaL_execresult'/>
+<use f='luajit/lib_io.c' l='119' u='c' c='io_file_close'/>
+<use f='luajit/lib_io.c' l='221' u='c' c='io_file_read'/>
+<use f='luajit/lib_io.c' l='244' u='c' c='io_file_write'/>
+<use f='luajit/lib_io.c' l='302' u='c' c='lj_cf_io_method_flush'/>
+<use f='luajit/lib_io.c' l='342' u='c' c='lj_cf_io_method_seek'/>
+<use f='luajit/lib_io.c' l='364' u='c' c='lj_cf_io_method_setvbuf'/>
+<use f='luajit/lib_io.c' l='408' u='c' c='lj_cf_io_open'/>
+<use f='luajit/lib_io.c' l='425' u='c' c='lj_cf_io_popen'/>
+<use f='luajit/lib_io.c' l='439' u='c' c='lj_cf_io_tmpfile'/>
+<use f='luajit/lib_io.c' l='459' u='c' c='lj_cf_io_flush'/>
+<use f='luajit/lib_os.c' l='67' u='c' c='lj_cf_os_remove'/>
+<use f='luajit/lib_os.c' l='74' u='c' c='lj_cf_os_rename'/>

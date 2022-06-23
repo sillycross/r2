@@ -1,0 +1,7 @@
+<dec f='luajit/lj_errmsg.h' l='43' macro='1' type='537'/>
+<use f='luajit/lj_errmsg.h' l='43' macro='1' u='r'/>
+<use f='luajit/lib_string.c' l='72' u='r' c='lj_ffh_string_char'/>
+<use f='luajit/lj_cparse.c' l='707' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='718' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='753' u='r' c='cp_expr_kint'/>
+<use f='luajit/lj_cparse.c' l='1414' u='r' c='cp_decl_struct'/>

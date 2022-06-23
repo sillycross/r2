@@ -1,0 +1,6 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='259'/>
+<use f='luajit/lj_parse.c' l='2435' u='r' c='parse_while'/>
+<use f='luajit/lj_parse.c' l='2496' u='r' c='parse_for_num'/>
+<use f='luajit/lj_parse.c' l='2568' u='r' c='parse_for_iter'/>
+<use f='luajit/lj_parse.c' l='2651' c='parse_stmt'/>
+<use f='luajit/lj_parse.c' l='2654' u='r' c='parse_stmt'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ircall.h' l='254' macro='1' type='3'/>
+<use f='luajit/lj_asm_x86.h' l='1034' u='a' c='asm_strto'/>

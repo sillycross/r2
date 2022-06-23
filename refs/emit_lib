@@ -1,0 +1,6 @@
+<dec f='luajit/host/buildvm.h' l='95' type='void emit_lib(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='489' u='c' c='main'/>
+<use f='luajit/host/buildvm.c' l='493' u='c' c='main'/>
+<use f='luajit/host/buildvm.c' l='499' u='c' c='main'/>
+<def f='luajit/host/buildvm_lib.c' l='348' ll='456' type='void emit_lib(BuildCtx * ctx)'/>
+<doc f='luajit/host/buildvm_lib.c' l='347'>/* Emit C source code for library function definitions. */</doc>

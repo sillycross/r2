@@ -1,0 +1,2 @@
+<def f='luajit/lj_clib.c' l='36' ll='39' macro='1' type='void clib_error_(lua_State * L)'/>
+<use f='luajit/lj_clib.c' l='41' u='c' c='lj_clib_index'/>

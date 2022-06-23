@@ -1,0 +1,4 @@
+<dec f='luajit/lj_vm.h' l='74'/>
+<use f='luajit/lib_math.c' l='59' u='c'/>
+<use f='luajit/lib_math.c' l='59' u='c'/>
+<use f='luajit/lj_vmmath.c' l='126' u='c'/>

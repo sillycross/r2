@@ -1,0 +1,17 @@
+<dec f='luajit/lj_jit.h' l='273' type='TraceNo1'/>
+<use f='luajit/host/buildvm_arch.h' l='2355' u='a' c='build_subroutines'/>
+<offset>848</offset>
+<doc f='luajit/lj_jit.h' l='273'>/* Linked trace (or self for loops). */</doc>
+<use f='luajit/lib_jit.c' l='308' u='r' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lj_asm.c' l='2063' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2519' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_gc.c' l='264' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_gc.c' l='264' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_record.c' l='295' u='w' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='301' u='w' c='lj_record_stop'/>
+<use f='luajit/lj_trace.c' l='292' u='w' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='522' u='w' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='586' u='w' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='594' u='w' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='678' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='682' u='w' c='trace_state'/>

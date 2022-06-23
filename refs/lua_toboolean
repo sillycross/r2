@@ -1,0 +1,10 @@
+<dec f='luajit/lua.h' l='149' type='int lua_toboolean(lua_State * L, int idx)'/>
+<use f='luajit/lib_base.c' l='485' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_base.c' l='496' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_os.c' l='151' u='c' c='getboolfield'/>
+<use f='luajit/lib_package.c' l='437' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='613' u='c' c='luaopen_package'/>
+<use f='luajit/lib_string.c' l='591' u='c' c='add_value'/>
+<use f='luajit/lib_table.c' l='188' u='c' c='sort_comp'/>
+<def f='luajit/lj_api.c' l='498' ll='502' macro='1' type='int lua_toboolean(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='147' u='c' c='print_jit_status'/>

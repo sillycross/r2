@@ -1,0 +1,15 @@
+<dec f='luajit/lj_ctype.h' l='472' type='GCstr * lj_ctype_repr(lua_State * L, CTypeID id, GCstr * name)'/>
+<use f='luajit/lib_ffi.c' l='115' u='c' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='120' u='c' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='241' u='c' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='322' u='c' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='337' u='c' c='ffi_pairs'/>
+<use f='luajit/lj_carith.c' l='249' u='c' c='lj_carith_meta'/>
+<use f='luajit/lj_cconv.c' l='24' u='c' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='30' u='c' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='41' u='c' c='cconv_err_convtv'/>
+<use f='luajit/lj_cconv.c' l='52' u='c' c='cconv_err_initov'/>
+<use f='luajit/lj_cparse.c' l='160' u='c' c='cp_err_badidx'/>
+<use f='luajit/lj_cparse.c' l='574' u='c' c='cp_expr_postfix'/>
+<def f='luajit/lj_ctype.c' l='540' ll='553' type='GCstr * lj_ctype_repr(lua_State * L, CTypeID id, GCstr * name)'/>
+<doc f='luajit/lj_ctype.c' l='539'>/* Return a printable representation of a C type. */</doc>

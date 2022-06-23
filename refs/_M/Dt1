@@ -1,0 +1,229 @@
+<dec f='luajit/host/buildvm_arch.h' l='85'/>
+<use f='luajit/host/buildvm_arch.h' l='458' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='458' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='458' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='491' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='491' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='491' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='747' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='798' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='798' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='798' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='906' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='906' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='906' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='906' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='906' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='942' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1011' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1011' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1011' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1011' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1070' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1070' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1070' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1070' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1191' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1191' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1191' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1191' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1357' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1357' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1389' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1389' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1389' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1654' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1664' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1664' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1664' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1664' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1664' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1699' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1699' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1941' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1941' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2024' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2025' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2061' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2208' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2208' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2208' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2208' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2238' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2259' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2299' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2299' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2299' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2355' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2355' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2355' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2355' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2377' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2377' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2387' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2387' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2502' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3354' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3354' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3527' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3527' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3527' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3546' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3546' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3582' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3582' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3607' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3607' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3866' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3866' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3963' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3963' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4180' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4204' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4204' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4204' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4204' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4559' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4609' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4637' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4637' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4637' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4660' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4660' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='12'>//|
+//|//-----------------------------------------------------------------------
+//|
+//|.if WIN
+//|.define X64WIN, 1			// Windows/x64 calling conventions.
+//|.endif
+//|
+//|// Fixed register assignments for the interpreter.
+//|// This is very fragile and has many dependencies. Caveat emptor.
+//|.define BASE,		rdx		// Not C callee-save, refetched anyway.
+//|.if X64WIN
+//|.define KBASE,		rdi		// Must be C callee-save.
+//|.define PC,		rsi		// Must be C callee-save.
+//|.define DISPATCH,	rbx		// Must be C callee-save.
+//|.define KBASEd,	edi
+//|.define PCd,		esi
+//|.define DISPATCHd,	ebx
+//|.else
+//|.define KBASE,		r15		// Must be C callee-save.
+//|.define PC,		rbx		// Must be C callee-save.
+//|.define DISPATCH,	r14		// Must be C callee-save.
+//|.define KBASEd,	r15d
+//|.define PCd,		ebx
+//|.define DISPATCHd,	r14d
+//|.endif
+//|
+//|.define RA,		rcx
+//|.define RAd,		ecx
+//|.define RAH,		ch
+//|.define RAL,		cl
+//|.define RB,		rbp		// Must be rbp (C callee-save).
+//|.define RBd,		ebp
+//|.define RC,		rax		// Must be rax.
+//|.define RCd,		eax
+//|.define RCW,		ax
+//|.define RCH,		ah
+//|.define RCL,		al
+//|.define OP,		RBd
+//|.define RD,		RC
+//|.define RDd,		RCd
+//|.define RDW,		RCW
+//|.define RDL,		RCL
+//|.define TMPR,		r10
+//|.define TMPRd,		r10d
+//|.define ITYPE,		r11
+//|.define ITYPEd,	r11d
+//|
+//|.if X64WIN
+//|.define CARG1,		rcx		// x64/WIN64 C call arguments.
+//|.define CARG2,		rdx
+//|.define CARG3,		r8
+//|.define CARG4,		r9
+//|.define CARG1d,	ecx
+//|.define CARG2d,	edx
+//|.define CARG3d,	r8d
+//|.define CARG4d,	r9d
+//|.else
+//|.define CARG1,		rdi		// x64/POSIX C call arguments.
+//|.define CARG2,		rsi
+//|.define CARG3,		rdx
+//|.define CARG4,		rcx
+//|.define CARG5,		r8
+//|.define CARG6,		r9
+//|.define CARG1d,	edi
+//|.define CARG2d,	esi
+//|.define CARG3d,	edx
+//|.define CARG4d,	ecx
+//|.define CARG5d,	r8d
+//|.define CARG6d,	r9d
+//|.endif
+//|
+//|// Type definitions. Some of these are only used for documentation.
+//|.type L,		lua_State</doc>

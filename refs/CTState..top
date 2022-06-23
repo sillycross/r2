@@ -1,0 +1,13 @@
+<dec f='luajit/lj_ctype.h' l='176' type='CTypeID'/>
+<offset>64</offset>
+<doc f='luajit/lj_ctype.h' l='176'>/* Current top of C type table. */</doc>
+<use f='luajit/lib_ffi.c' l='564' u='r' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lj_cparse.c' l='1922' macro='1' u='w' c='lj_cparse'/>
+<use f='luajit/lj_cparse.c' l='1922' macro='1' u='r' c='lj_cparse'/>
+<use f='luajit/lj_crecord.c' l='82' u='r' c='argv2ctype'/>
+<use f='luajit/lj_crecord.c' l='87' u='r' c='argv2ctype'/>
+<use f='luajit/lj_ctype.c' l='154' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='170' u='w' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='192' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='197' u='w' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='602' u='w' c='lj_ctype_init'/>

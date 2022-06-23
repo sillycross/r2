@@ -1,0 +1,8 @@
+<def f='luajit/lj_buf.h' l='97' ll='102' type='char * lj_buf_need(SBuf * sb, MSize sz)'/>
+<use f='luajit/lib_os.c' l='214' u='c' c='lj_cf_os_date'/>
+<use f='luajit/lj_bcread.c' l='63' u='c' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='79' u='c' c='bcread_fill'/>
+<use f='luajit/lj_bcwrite.c' l='259' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='314' u='c' c='bcwrite_header'/>
+<use f='luajit/lj_bcwrite.c' l='345' u='c' c='cpwriter'/>
+<use f='luajit/lj_buf.c' l='108' u='c' c='lj_buf_tmp'/>

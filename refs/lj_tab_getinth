@@ -1,0 +1,19 @@
+<dec f='luajit/lj_tab.h' l='71' type='cTValue * lj_tab_getinth(GCtab * t, int32_t key)'/>
+<use f='luajit/lib_base.c' l='235' macro='1' u='c' c='lj_cf_unpack'/>
+<use f='luajit/lib_ffi.c' l='514' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_table.c' l='91' macro='1' u='c' c='lj_cf_table_insert'/>
+<use f='luajit/lib_table.c' l='163' macro='1' u='c' c='lj_cf_table_concat'/>
+<use f='luajit/lj_api.c' l='837' macro='1' u='c' c='lua_rawgeti'/>
+<use f='luajit/lj_buf.c' l='216' macro='1' u='c' c='lj_buf_puttab'/>
+<use f='luajit/lj_ccallback.c' l='545' macro='1' u='c' c='callback_conv_args'/>
+<use f='luajit/lj_cconv.c' l='479' macro='1' u='c' c='cconv_array_tab'/>
+<use f='luajit/lj_cconv.c' l='512' macro='1' u='c' c='cconv_substruct_tab'/>
+<use f='luajit/lj_ctype.c' l='349' u='c' c='lj_ctype_meta'/>
+<def f='luajit/lj_tab.c' l='384' ll='395' type='cTValue * lj_tab_getinth(GCtab * t, int32_t key)'/>
+<use f='luajit/lj_tab.c' l='414' macro='1' u='c' c='lj_tab_get'/>
+<use f='luajit/lj_tab.c' l='421' macro='1' u='c' c='lj_tab_get'/>
+<use f='luajit/lj_tab.c' l='632' macro='1' u='c' c='tab_len_slow'/>
+<use f='luajit/lj_tab.c' l='637' macro='1' u='c' c='tab_len_slow'/>
+<use f='luajit/lj_tab.c' l='644' macro='1' u='c' c='tab_len_slow'/>
+<doc f='luajit/lj_tab.c' l='382'>/* -- Table getters ------------------------------------------------------- */</doc>
+<use f='luajit/lj_vmevent.c' l='26' macro='1' u='c' c='lj_vmevent_prepare'/>

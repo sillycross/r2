@@ -1,0 +1,3 @@
+<use f='luajit/lj_record.c' l='588' u='r' c='innerloopleft'/>
+<use f='luajit/lj_record.c' l='613' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='631' u='r' c='rec_loop_jit'/>

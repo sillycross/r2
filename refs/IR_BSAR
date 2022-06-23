@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='38'/>
+<use f='luajit/lj_asm.c' l='1748' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2326' c='asm_setup_regsp'/>
+<use f='luajit/lj_carith.c' l='303' u='r' c='lj_carith_shift64'/>
+<use f='luajit/lj_crecord.c' l='774' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='1391' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_recdef.h' l='73' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='280' c='kfold_intop'/>
+<use f='luajit/lj_opt_fold.c' l='385' c='kfold_int64arith'/>
+<use f='luajit/lj_opt_fold.c' l='1863' u='r' c='fold_reassoc_shift'/>

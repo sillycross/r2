@@ -1,0 +1,4 @@
+<def f='luajit/luajit.c' l='506' ll='510'/>
+<use f='luajit/luajit.c' l='506'/>
+<use f='luajit/luajit.c' l='514' c='pmain'/>
+<size>16</size>

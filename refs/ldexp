@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='101' type='double ldexp(double __x, int __exponent)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_strscan.c' l='99' u='c' c='strscan_double'/>
+<use f='luajit/lj_vmmath.c' l='51' u='c' c='lj_vm_foldarith'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='99'/>
+<use f='luajit/lj_asm.c' l='1345' u='r' c='asm_callx_flags'/>
+<use f='luajit/lj_asm.c' l='1348' u='r' c='asm_callx_flags'/>
+<use f='luajit/lj_asm_x86.h' l='745' u='r' c='asm_callx'/>
+<use f='luajit/lj_asm.c' l='1837' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='1196' u='r' c='crec_call_args'/>
+<use f='luajit/lj_crecord.c' l='1254' u='r' c='crec_call'/>
+<use f='luajit/lj_ir.c' l='142' u='r' c='lj_ir_call'/>
+<use f='luajit/lj_opt_loop.c' l='135' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='137' u='r' c='loop_emit_phi'/>

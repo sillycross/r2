@@ -1,0 +1,28 @@
+<dec f='luajit/lj_tab.h' l='55' type='GCtab * lj_tab_new(lua_State * L, uint32_t asize, uint32_t hbits)'/>
+<use f='luajit/lib_base.c' l='676' u='c' c='newproxy_weaktable'/>
+<use f='luajit/lib_ffi.c' l='828' u='c' c='ffi_finalizer'/>
+<use f='luajit/lib_ffi.c' l='851' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_string.c' l='665' u='c' c='luaopen_string'/>
+<use f='luajit/lj_api.c' l='731' u='c' c='luaL_newmetatable'/>
+<use f='luajit/lj_bcread.c' l='205' u='c' c='bcread_ktab'/>
+<use f='luajit/lj_clib.c' l='401' u='c' c='clib_new'/>
+<use f='luajit/lj_debug.c' l='508' u='c' c='lj_debug_getinfo'/>
+<use f='luajit/lj_parse.c' l='1634' u='c' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='1758' u='c' c='expr_table'/>
+<use f='luajit/lj_serialize.c' l='341' u='c' c='serialize_get'/>
+<use f='luajit/lj_snap.c' l='835' u='c' c='snap_unsink'/>
+<use f='luajit/lj_state.c' l='151' u='c' c='cpluaopen'/>
+<use f='luajit/lj_state.c' l='152' u='c' c='cpluaopen'/>
+<def f='luajit/lj_tab.c' l='139' ll='145' type='GCtab * lj_tab_new(lua_State * L, uint32_t asize, uint32_t hbits)'/>
+<use f='luajit/lj_tab.c' l='150' u='c' c='lj_tab_new_ah'/>
+<doc f='luajit/lj_tab.c' l='128'>/* Create a new table.
+**
+** IMPORTANT NOTE: The API differs from lua_createtable()!
+**
+** The array size is non-inclusive. E.g. asize=128 creates array slots
+** for 0..127, but not for 128. If you need slots 1..128, pass asize=129
+** (slot 0 is wasted in this case).
+**
+** The hash size is given in hash bits. hbits=0 means no hash part.
+** hbits=1 creates 2 hash slots, hbits=2 creates 4 hash slots and so on.
+*/</doc>

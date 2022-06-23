@@ -1,0 +1,21 @@
+<dec f='luajit/lj_ir.h' l='546' type='IROpT'/>
+<use f='luajit/lj_ir.h' l='594' u='w' c='lj_ir_nop'/>
+<offset>32</offset>
+<doc f='luajit/lj_ir.h' l='546'>/* IR opcode and type (overlaps t and o). */</doc>
+<use f='luajit/lj_iropt.h' l='22' u='w' c='lj_ir_set_'/>
+<use f='luajit/lib_jit.c' l='327' u='r' c='lj_cf_jit_util_traceir'/>
+<use f='luajit/lj_asm.c' l='1167' u='w' c='asm_bufhdr'/>
+<use f='luajit/lj_opt_fold.c' l='546' u='w' c='fold_kfold_strref_snew'/>
+<use f='luajit/lj_opt_fold.c' l='1306' u='w' c='fold_simplify_conv_narrow'/>
+<use f='luajit/lj_opt_fold.c' l='1707' u='w' c='fold_simplify_shiftk_andk'/>
+<use f='luajit/lj_opt_fold.c' l='1712' u='r' c='fold_simplify_shiftk_andk'/>
+<use f='luajit/lj_opt_fold.c' l='1716' u='w' c='fold_simplify_shiftk_andk'/>
+<use f='luajit/lj_opt_fold.c' l='2109' u='w' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_loop.c' l='330' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_mem.c' l='818' u='w' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_narrow.c' l='362' u='r' c='narrow_conv_emit'/>
+<use f='luajit/lj_snap.c' l='572' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='575' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='590' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='593' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='619' u='r' c='lj_snap_replay'/>

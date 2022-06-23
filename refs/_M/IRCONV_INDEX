@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='251'/>
+<use f='luajit/lj_opt_narrow.c' l='324' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='325' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='332' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='388' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='393' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='457' u='c'/>
+<use f='luajit/lj_record.c' l='1853' u='c'/>

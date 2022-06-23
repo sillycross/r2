@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strfmt.h' l='76' type='SFormat lj_strfmt_parse(FormatState * fs)'/>
+<use f='luajit/lj_ffrecord.c' l='956' u='c' c='recff_string_format'/>
+<def f='luajit/lj_strfmt.c' l='34' ll='94' type='SFormat lj_strfmt_parse(FormatState * fs)'/>
+<use f='luajit/lj_strfmt.c' l='380' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='554' u='c' c='lj_strfmt_pushvf'/>

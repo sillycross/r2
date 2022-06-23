@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ircall.h' l='254' macro='1' type='18'/>
+<use f='luajit/lj_asm.c' l='1194' u='a' c='asm_bufput'/>
+<use f='luajit/lj_asm.c' l='1208' u='a' c='asm_bufput'/>

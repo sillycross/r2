@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='241' type='4034651076'/>
+<doc f='luajit/lj_target_x86.h' l='240'>/* VEX-encoded instructions. XV_* prefix. */</doc>
+<use f='luajit/lj_asm_x86.h' l='1259' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1545' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1724' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='2281' u='r' c='asm_bitshift'/>

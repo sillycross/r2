@@ -1,0 +1,5 @@
+<def f='luajit/lj_recdef.h' l='3' ll='207' type='const uint16_t [203]'/>
+<use f='luajit/lj_ffrecord.c' l='1182' u='r' c='recdef_lookup'/>
+<use f='luajit/lj_ffrecord.c' l='1182' u='r' c='recdef_lookup'/>
+<use f='luajit/lj_ffrecord.c' l='1183' u='r' c='recdef_lookup'/>
+<doc f='luajit/lj_recdef.h' l='1'>/* This is a generated file. DO NOT EDIT! */</doc>

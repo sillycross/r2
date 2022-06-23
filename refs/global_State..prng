@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='655' type='PRNGState'/>
+<offset>3136</offset>
+<doc f='luajit/lj_obj.h' l='655'>/* Global PRNG state. */</doc>
+<use f='luajit/lj_mcode.c' l='233' u='a' c='mcode_alloc'/>
+<use f='luajit/lj_record.c' l='1705' u='a' c='check_call_unroll'/>
+<use f='luajit/lj_state.c' l='232' u='w' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='235' u='a' c='lua_newstate'/>
+<use f='luajit/lj_str.c' l='289' u='a' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='367' u='a' c='lj_str_init'/>
+<use f='luajit/lj_trace.c' l='388' u='a' c='penalty_pc'/>

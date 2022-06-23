@@ -1,0 +1,11 @@
+<dec f='luajit/lj_obj.h' l='630' type='void *'/>
+<use f='luajit/lj_gc.h' l='122' u='r' c='lj_mem_free'/>
+<offset>64</offset>
+<doc f='luajit/lj_obj.h' l='630'>/* Memory allocator data. */</doc>
+<use f='luajit/lj_api.c' l='1301' u='r' c='lua_getallocf'/>
+<use f='luajit/lj_api.c' l='1308' u='w' c='lua_setallocf'/>
+<use f='luajit/lj_gc.c' l='866' u='r' c='lj_mem_realloc'/>
+<use f='luajit/lj_gc.c' l='880' u='r' c='lj_mem_newgco'/>
+<use f='luajit/lj_state.c' l='189' u='r' c='close_state'/>
+<use f='luajit/lj_state.c' l='192' u='r' c='close_state'/>
+<use f='luajit/lj_state.c' l='231' u='w' c='lua_newstate'/>

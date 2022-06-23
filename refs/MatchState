@@ -1,0 +1,6 @@
+<def f='luajit/host/minilua.c' l='7077' ll='7086'/>
+<use f='luajit/host/minilua.c' l='7077'/>
+<size>544</size>
+<def f='luajit/lib_string.c' l='144' ll='154'/>
+<use f='luajit/lib_string.c' l='144'/>
+<size>544</size>

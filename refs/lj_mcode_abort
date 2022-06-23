@@ -1,0 +1,5 @@
+<dec f='luajit/lj_mcode.h' l='22' type='void lj_mcode_abort(jit_State * J)'/>
+<def f='luajit/lj_mcode.c' l='316' ll='320' type='void lj_mcode_abort(jit_State * J)'/>
+<use f='luajit/lj_mcode.c' l='361' u='c' c='lj_mcode_limiterr'/>
+<doc f='luajit/lj_mcode.c' l='315'>/* Abort the reservation. */</doc>
+<use f='luajit/lj_trace.c' l='565' u='c' c='trace_abort'/>

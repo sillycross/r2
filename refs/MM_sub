@@ -1,0 +1,13 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='11'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_carith.c' l='101' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='110' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='130' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='134' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='190' c='carith_int64'/>
+<use f='luajit/lj_crecord.c' l='1383' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1385' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1404' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_recdef.h' l='177' u='r'/>

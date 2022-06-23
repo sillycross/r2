@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ctype.h' l='404'/>
+<doc f='luajit/lj_ctype.h' l='403'>/* Save and restore state of C type table. */</doc>
+<use f='luajit/lj_cparse.c' l='1919' u='c'/>

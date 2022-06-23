@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm.h' l='93' type='void emit_asm(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='478' u='c' c='main'/>
+<def f='luajit/host/buildvm_asm.c' l='240' ll='347' type='void emit_asm(BuildCtx * ctx)'/>
+<doc f='luajit/host/buildvm_asm.c' l='239'>/* Emit assembler source code. */</doc>

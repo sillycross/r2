@@ -1,0 +1,17 @@
+<def f='luajit/lj_obj.h' l='919' ll='923' type='void setgcV(lua_State * L, TValue * o, GCobj * v, uint32_t it)'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='setstrV'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='setthreadV'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='setprotoV'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='setfuncV'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='setcdataV'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='settabV'/>
+<use f='luajit/lj_obj.h' l='928' u='c' c='setudataV'/>
+<use f='luajit/lib_jit.c' l='259' u='c' c='lj_cf_jit_util_funck'/>
+<use f='luajit/lj_cdata.c' l='100' u='c' c='lj_cdata_setfin'/>
+<use f='luajit/lj_gc.c' l='516' u='c' c='gc_call_finalizer'/>
+<use f='luajit/lj_ir.c' l='391' u='c' c='lj_ir_kvalue'/>
+<use f='luajit/lj_meta.c' l='347' u='c' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='348' u='c' c='lj_meta_equal'/>
+<use f='luajit/lj_parse.c' l='222' u='c' c='const_gc'/>
+<use f='luajit/lj_snap.c' l='676' u='c' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='703' u='c' c='snap_restoreval'/>

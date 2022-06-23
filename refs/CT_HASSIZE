@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ctype.h' l='26' type='5'/>
+<doc f='luajit/lj_ctype.h' l='26'>/* Last type where ct-&gt;size holds the actual size. */</doc>
+<use f='luajit/lib_ffi.c' l='626' macro='1' u='r' c='lj_cf_ffi_sizeof'/>
+<use f='luajit/lj_cdata.c' l='78' macro='1' u='r' c='lj_cdata_free'/>
+<use f='luajit/lj_ctype.c' l='283' macro='1' u='r' c='lj_ctype_size'/>
+<use f='luajit/lj_record.c' l='1588' macro='1' u='r' c='rec_upvalue_constify'/>

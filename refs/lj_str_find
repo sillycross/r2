@@ -1,0 +1,6 @@
+<dec f='luajit/lj_str.h' l='15' type='const char * lj_str_find(const char * s, const char * f, MSize slen, MSize flen)'/>
+<use f='luajit/lib_string.c' l='469' u='c' c='str_find_aux'/>
+<use f='luajit/lj_ffrecord.c' l='925' u='c' c='recff_string_find'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_str.c' l='42' ll='59' type='const char * lj_str_find(const char * s, const char * p, MSize slen, MSize plen)'/>
+<doc f='luajit/lj_str.c' l='41'>/* Find fixed string p inside string s. */</doc>

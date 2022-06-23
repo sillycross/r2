@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='21'/>
+<use f='luajit/lj_cconv.c' l='600' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cparse.c' l='475' u='r' c='cp_expr_sizeof'/>
+<use f='luajit/lj_cparse.c' l='537' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_crecord.c' l='647' u='r' c='crec_ct_tv'/>

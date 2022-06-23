@@ -1,0 +1,2 @@
+<dec f='luajit/lj_frame.h' l='81'/>
+<use f='luajit/lj_record.c' l='824' u='c'/>

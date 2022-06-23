@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='52' type='void dasm_free(BuildCtx * ctx)'/>
+<def f='luajit/dasm_x86.h' l='108' ll='118' type='void dasm_free(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='239' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='107'>/* Free DynASM state. */</doc>

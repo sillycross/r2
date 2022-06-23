@@ -1,0 +1,4 @@
+<dec f='luajit/lj_serialize.h' l='16' type='void lj_serialize_dict_prep(lua_State * L, GCtab * dict)'/>
+<use f='luajit/lib_buffer.c' l='303' u='c' c='lj_cf_buffer_new'/>
+<def f='luajit/lj_serialize.c' l='124' ll='141' type='void lj_serialize_dict_prep(lua_State * L, GCtab * dict)'/>
+<doc f='luajit/lj_serialize.c' l='123'>/* Prepare string dictionary for use (once). */</doc>

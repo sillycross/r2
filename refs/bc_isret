@@ -1,0 +1,10 @@
+<def f='luajit/lj_bc.h' l='257' ll='260' type='int bc_isret(BCOp op)'/>
+<use f='luajit/lj_asm.c' l='2069' u='c' c='asm_tail_link'/>
+<use f='luajit/lj_dispatch.c' l='437' u='c' c='lj_dispatch_ins'/>
+<use f='luajit/lj_record.c' l='838' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='841' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='884' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='2442' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='262' u='c' c='snap_usedef'/>
+<use f='luajit/lj_trace.c' l='578' u='c' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='902' u='c' c='lj_trace_exit'/>

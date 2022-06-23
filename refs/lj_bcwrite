@@ -1,0 +1,5 @@
+<dec f='luajit/lj_bcdump.h' l='63' type='int lj_bcwrite(lua_State * L, GCproto * pt, lua_Writer writer, void * data, int strip)'/>
+<use f='luajit/lib_string.c' l='129' u='c' c='lj_cf_string_dump'/>
+<def f='luajit/lj_bcwrite.c' l='353' ll='371' type='int lj_bcwrite(lua_State * L, GCproto * pt, lua_Writer writer, void * data, int strip)'/>
+<doc f='luajit/lj_bcwrite.c' l='352'>/* Write bytecode for a prototype. */</doc>
+<use f='luajit/lj_load.c' l='164' u='c' c='lua_dump'/>

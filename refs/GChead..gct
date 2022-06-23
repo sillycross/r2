@@ -1,0 +1,15 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lib_jit.c' l='259' u='r' c='lj_cf_jit_util_funck'/>
+<use f='luajit/lj_bcwrite.c' l='129' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='132' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='136' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='253' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_dispatch.c' l='230' u='r' c='setptmode_all'/>
+<use f='luajit/lj_gc.c' l='59' u='r' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='324' u='r' c='propagatemark'/>
+<use f='luajit/lj_gc.c' l='408' u='r' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='421' u='r' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='516' u='r' c='gc_call_finalizer'/>
+<use f='luajit/lj_gc.c' l='539' u='r' c='gc_finalize'/>
+<use f='luajit/lj_meta.c' l='346' u='r' c='lj_meta_equal'/>

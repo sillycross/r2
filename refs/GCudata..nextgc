@@ -1,0 +1,3 @@
+<dec f='luajit/lj_obj.h' l='63' type='GCRef'/>
+<offset>0</offset>
+<use f='luajit/lj_udata.c' l='26' u='m' c='lj_udata_new'/>

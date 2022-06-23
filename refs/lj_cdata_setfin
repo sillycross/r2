@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cdata.h' l='68' type='void lj_cdata_setfin(lua_State * L, GCcdata * cd, GCobj * obj, uint32_t it)'/>
+<use f='luajit/lib_ffi.c' l='801' u='c' c='lj_cf_ffi_gc'/>
+<def f='luajit/lj_cdata.c' l='87' ll='104' type='void lj_cdata_setfin(lua_State * L, GCcdata * cd, GCobj * obj, uint32_t it)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

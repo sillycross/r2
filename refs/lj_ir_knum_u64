@@ -1,0 +1,15 @@
+<dec f='luajit/lj_iropt.h' l='44' type='TRef lj_ir_knum_u64(jit_State * J, uint64_t u64)'/>
+<use f='luajit/lj_iropt.h' l='63' u='c' c='lj_ir_knum'/>
+<use f='luajit/lj_ffrecord.c' l='558' macro='1' u='c' c='recff_math_log'/>
+<use f='luajit/lj_ffrecord.c' l='626' macro='1' u='c' c='recff_math_random'/>
+<def f='luajit/lj_ir.c' l='239' ll='242' type='TRef lj_ir_knum_u64(jit_State * J, uint64_t u64)'/>
+<doc f='luajit/lj_ir.c' l='238'>/* Intern FP constant, given by its 64 bit pattern. */</doc>
+<use f='luajit/lj_opt_fold.c' l='1059' u='c' c='fold_simplify_nummuldiv_k'/>
+<use f='luajit/lj_opt_fold.c' l='1093' macro='1' u='c' c='fold_simplify_numpow_xkint'/>
+<use f='luajit/lj_opt_fold.c' l='1099' macro='1' u='c' c='fold_simplify_numpow_xkint'/>
+<use f='luajit/lj_opt_fold.c' l='1137' macro='1' u='c' c='fold_simplify_numpow_kx'/>
+<use f='luajit/lj_opt_fold.c' l='2048' u='c' c='kfold_xload'/>
+<use f='luajit/lj_opt_mem.c' l='200' u='c' c='fwd_ahload'/>
+<use f='luajit/lj_opt_narrow.c' l='488' macro='1' u='c' c='lj_opt_narrow_tobit'/>
+<use f='luajit/lj_record.c' l='418' macro='1' u='c' c='rec_for_check'/>
+<use f='luajit/lj_record.c' l='1345' macro='1' u='c' c='rec_idx_key'/>

@@ -1,0 +1,21 @@
+<dec f='luajit/dasm_x86.h' l='75' type='int'/>
+<use f='luajit/dasm_x86.h' l='143' u='w' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='157' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='285' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='285' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='515' u='r' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='518' u='w' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='522' u='r' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='524' u='w' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='525' u='r' c='dasm_checkstep'/>
+<offset>608</offset>
+<doc f='luajit/dasm_x86.h' l='75'>/* Status code. */</doc>

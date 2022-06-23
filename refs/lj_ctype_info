@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ctype.h' l='470' type='CTInfo lj_ctype_info(CTState * cts, CTypeID id, CTSize * szp)'/>
+<use f='luajit/lib_ffi.c' l='499' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='641' u='c' c='lj_cf_ffi_alignof'/>
+<use f='luajit/lj_asm_x86.h' l='1796' u='c' c='asm_cnew'/>
+<use f='luajit/lj_cparse.c' l='471' u='c' c='cp_expr_sizeof'/>
+<use f='luajit/lj_cparse.c' l='1295' u='c' c='cp_struct_layout'/>
+<use f='luajit/lj_crecord.c' l='962' u='c' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1690' u='c' c='recff_ffi_fill'/>
+<def f='luajit/lj_ctype.c' l='310' ll='334' type='CTInfo lj_ctype_info(CTState * cts, CTypeID id, CTSize * szp)'/>
+<doc f='luajit/lj_ctype.c' l='309'>/* Get type, qualifiers, size and alignment for a C type ID. */</doc>
+<use f='luajit/lj_snap.c' l='786' u='c' c='snap_unsink'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_vmevent.h' l='27' macro='1' type='2529731385'/>
+<use f='luajit/lj_trace.c' l='303' macro='1' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='303' macro='1' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='455' macro='1' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='455' macro='1' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='535' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='535' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='r' c='trace_abort'/>

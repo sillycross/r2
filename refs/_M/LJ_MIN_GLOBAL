@@ -1,0 +1,3 @@
+<dec f='luajit/lj_def.h' l='77'/>
+<doc f='luajit/lj_def.h' l='76'>/* Minimum table/buffer sizes. */</doc>
+<use f='luajit/lj_state.c' l='151' u='c'/>

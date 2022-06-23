@@ -1,0 +1,8 @@
+<dec f='luajit/lj_gc.h' l='125'/>
+<use f='luajit/lj_ctype.c' l='596' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='281' u='c'/>
+<use f='luajit/lj_state.c' l='129' u='c'/>
+<use f='luajit/lj_str.c' l='139' u='c'/>
+<use f='luajit/lj_tab.c' l='45' u='c'/>
+<use f='luajit/lj_tab.c' l='119' u='c'/>
+<use f='luajit/lj_tab.c' l='243' u='c'/>

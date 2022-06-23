@@ -1,0 +1,6 @@
+<dec f='luajit/lj_str.h' l='20' type='void lj_str_resize(lua_State * L, MSize newmask)'/>
+<use f='luajit/lj_gc.c' l='686' u='c' c='gc_onestep'/>
+<def f='luajit/lj_str.c' l='129' ll='215' type='void lj_str_resize(lua_State * L, MSize newmask)'/>
+<use f='luajit/lj_str.c' l='309' u='c' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='368' u='c' c='lj_str_init'/>
+<doc f='luajit/lj_str.c' l='128'>/* Resize the string interning hash table (grow and shrink). */</doc>

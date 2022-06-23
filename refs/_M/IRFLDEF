@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='192'/>
+<use f='luajit/lj_ir.h' l='216' u='c'/>
+<use f='luajit/host/buildvm.c' l='276' u='c'/>
+<doc f='luajit/lj_ir.h' l='191'>/* FLOAD fields. */</doc>
+<use f='luajit/lj_asm.c' l='171' u='c'/>

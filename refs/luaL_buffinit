@@ -1,0 +1,5 @@
+<dec f='luajit/lauxlib.h' l='151' type='void luaL_buffinit(lua_State * L, luaL_Buffer * B)'/>
+<use f='luajit/lib_aux.c' l='167' u='c' c='luaL_gsub'/>
+<def f='luajit/lib_aux.c' l='261' ll='266' macro='1' type='void luaL_buffinit(lua_State * L, luaL_Buffer * B)'/>
+<use f='luajit/lib_package.c' l='321' u='c' c='searchpath'/>
+<use f='luajit/lib_string.c' l='614' u='c' c='lj_cf_string_gsub'/>

@@ -1,0 +1,24 @@
+<dec f='luajit/host/minilua.c' l='123' type='13'/>
+<use f='luajit/host/minilua.c' l='3182' u='r' c='luaK_setreturns'/>
+<use f='luajit/host/minilua.c' l='3192' u='r' c='luaK_setoneret'/>
+<use f='luajit/host/minilua.c' l='3225' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='adjust_assign'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='lastlistfield'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='funcargs'/>
+<use f='luajit/host/minilua.c' l='4132' u='r' c='funcargs'/>
+<use f='luajit/host/minilua.c' l='4591' u='r' c='exprstat'/>
+<use f='luajit/host/minilua.c' l='3655' u='r' c='retstat'/>
+<use f='luajit/host/minilua.c' l='4609' u='r' c='retstat'/>
+<dec f='luajit/lj_parse.c' l='51' type='13'/>
+<use f='luajit/lj_parse.c' l='461' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='1775' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1922' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1938' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1945' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='2018' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2187' u='r' c='assign_adjust'/>
+<use f='luajit/lj_parse.c' l='2223' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2248' u='r' c='parse_call_assign'/>
+<use f='luajit/lj_parse.c' l='2337' u='r' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2347' u='r' c='parse_return'/>
+<doc f='luajit/lj_parse.c' l='51'>/* info = instruction PC, aux = base */</doc>

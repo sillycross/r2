@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='195' type='int lua_setmetatable(lua_State * L, int objindex)'/>
+<use f='luajit/lib_base.c' l='503' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='45' u='c' c='lj_cf_debug_setmetatable'/>
+<use f='luajit/lib_package.c' l='539' u='c' c='lj_cf_package_seeall'/>
+<def f='luajit/lj_api.c' l='1023' ll='1059' macro='1' type='int lua_setmetatable(lua_State * L, int idx)'/>
+<use f='luajit/lj_api.c' l='1064' u='c' c='luaL_setmetatable'/>

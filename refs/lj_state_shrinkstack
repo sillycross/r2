@@ -1,0 +1,4 @@
+<dec f='luajit/lj_state.h' l='18' type='void lj_state_shrinkstack(lua_State * L, MSize used)'/>
+<use f='luajit/lj_gc.c' l='317' u='c' c='gc_traverse_thread'/>
+<def f='luajit/lj_state.c' l='91' ll='100' type='void lj_state_shrinkstack(lua_State * L, MSize used)'/>
+<doc f='luajit/lj_state.c' l='90'>/* Try to shrink the stack (called from GC). */</doc>

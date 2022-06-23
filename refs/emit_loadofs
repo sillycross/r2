@@ -1,0 +1,9 @@
+<def f='luajit/lj_emit_x86.h' l='543' ll='549' type='void emit_loadofs(ASMState * as, IRIns * ir, Reg r, Reg base, int32_t ofs)'/>
+<use f='luajit/lj_asm.c' l='194' u='c' c='ra_restore'/>
+<use f='luajit/lj_asm.c' l='1169' u='c' c='asm_bufhdr'/>
+<use f='luajit/lj_asm.c' l='194' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='c' c='asm_head_side'/>
+<doc f='luajit/lj_emit_x86.h' l='542'>/* Generic load of register with base and (small) offset address. */</doc>

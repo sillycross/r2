@@ -1,0 +1,5 @@
+<dec f='luajit/lj_cparse.h' l='63' type='int lj_cparse_case(GCstr * str, const char * match)'/>
+<use f='luajit/lib_ffi.c' l='727' u='c' c='lj_cf_ffi_abi'/>
+<def f='luajit/lj_cparse.c' l='44' ll='53' type='int lj_cparse_case(GCstr * str, const char * match)'/>
+<use f='luajit/lj_cparse.c' l='1096' u='c' c='cp_decl_gccattribute'/>
+<doc f='luajit/lj_cparse.c' l='43'>/* Check string against a linear list of matches. */</doc>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_state.h' l='29' type='lua_State * lj_state_new(lua_State * L)'/>
+<use f='luajit/lj_api.c' l='753' u='c' c='lua_newthread'/>
+<def f='luajit/lj_state.c' l='307' ll='323' type='lua_State * lj_state_new(lua_State * L)'/>

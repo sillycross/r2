@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strfmt.h' l='97' type='SBuf * lj_strfmt_putptr(SBuf * sb, const void * v)'/>
+<use f='luajit/lj_debug.c' l='632' u='c' c='lj_debug_dumpstack'/>
+<def f='luajit/lj_strfmt.c' l='202' ll='206' type='SBuf * lj_strfmt_putptr(SBuf * sb, const void * v)'/>
+<use f='luajit/lj_strfmt.c' l='469' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='578' u='c' c='lj_strfmt_pushvf'/>

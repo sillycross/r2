@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='318' macro='1' type='23'/>
+<use f='luajit/lj_snap.c' l='605' u='r' c='lj_snap_replay'/>

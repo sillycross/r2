@@ -1,0 +1,58 @@
+<dec f='luajit/lj_ctype.h' l='22' type='3'/>
+<use f='luajit/lj_ctype.h' l='23'/>
+<use f='luajit/lj_ctype.h' l='38' u='r' c='lj_assert_89'/>
+<use f='luajit/lj_ctype.h' l='39' u='r' c='lj_assert_91'/>
+<doc f='luajit/lj_ctype.h' l='22'>/* Array or complex type. */</doc>
+<use f='luajit/lib_base.c' l='276' macro='1' u='r' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_ffi.c' l='297' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='314' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='775' macro='1' u='r' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='776' macro='1' u='r' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='799' macro='1' u='r' c='lj_cf_ffi_gc'/>
+<use f='luajit/lj_carith.c' l='100' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='102' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='136' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_ccall.c' l='637' macro='1' u='r' c='ccall_classify_ct'/>
+<use f='luajit/lj_ccall.c' l='902' macro='1' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_ccall.c' l='958' macro='1' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='961' macro='1' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1013' macro='1' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1020' macro='1' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1028' macro='1' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1128' macro='1' u='r' c='ccall_get_results'/>
+<use f='luajit/lj_ccall.c' l='1138' macro='1' u='r' c='ccall_get_results'/>
+<use f='luajit/lj_cconv.c' l='28' macro='1' u='r' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='407' macro='1' u='r' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='589' macro='1' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cconv.c' l='604' macro='1' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cconv.c' l='745' macro='1' u='r' c='lj_cconv_multi_init'/>
+<use f='luajit/lj_cconv.c' l='762' macro='1' u='r' c='lj_cconv_ct_init'/>
+<use f='luajit/lj_cdata.c' l='174' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cparse.c' l='826' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='876' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='920' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='938' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='1301' macro='1' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1396' macro='1' u='r' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1610' u='r' c='cp_decl_array'/>
+<use f='luajit/lj_cparse.c' l='1645' macro='1' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_crecord.c' l='114' macro='1' u='r' c='crec_ct2irt'/>
+<use f='luajit/lj_crecord.c' l='167' macro='1' u='r' c='crec_copy_struct'/>
+<use f='luajit/lj_crecord.c' l='243' macro='1' u='r' c='crec_copy'/>
+<use f='luajit/lj_crecord.c' l='574' macro='1' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='577' macro='1' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='642' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='895' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1005' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1382' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1384' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1407' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1902' macro='1' u='r' c='lj_crecord_tonumber'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='503' c='ctype_repr'/>
+<use f='luajit/lj_ctype.c' l='504' macro='1' u='r' c='ctype_repr'/>
+<use f='luajit/lj_opt_fold.c' l='757' macro='1' u='r' c='fold_kfold_add_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='757' macro='1' u='r' c='fold_kfold_add_kgc'/>
+<use f='luajit/lj_serialize.c' l='252' macro='1' u='r' c='serialize_put'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ccallback.h' l='21' type='void lj_ccallback_mcode_free(CTState * cts)'/>
+<def f='luajit/lj_ccallback.c' l='304' ll='317' type='void lj_ccallback_mcode_free(CTState * cts)'/>
+<doc f='luajit/lj_ccallback.c' l='303'>/* Free area for callback function pointers. */</doc>
+<use f='luajit/lj_ctype.c' l='631' u='c' c='lj_ctype_freestate'/>

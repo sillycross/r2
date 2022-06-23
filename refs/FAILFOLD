@@ -1,0 +1,28 @@
+<dec f='luajit/lj_iropt.h' l='104' type='3'/>
+<doc f='luajit/lj_iropt.h' l='104'>/* Guard would always fail. */</doc>
+<use f='luajit/lj_opt_fold.c' l='262' macro='1' u='r' c='fold_kfold_numcomp'/>
+<use f='luajit/lj_opt_fold.c' l='319' u='r' c='fold_kfold_intovarith'/>
+<use f='luajit/lj_opt_fold.c' l='348' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='349' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='350' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='351' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='352' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='353' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='354' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='356' macro='1' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='357' u='r' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='480' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='481' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='482' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='483' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='484' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='485' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='486' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='487' macro='1' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='488' u='r' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_opt_fold.c' l='868' u='r' c='fold_kfold_conv_knum_int_num'/>
+<use f='luajit/lj_opt_fold.c' l='918' u='r' c='fold_kfold_strto'/>
+<use f='luajit/lj_opt_fold.c' l='941' macro='1' u='r' c='fold_kfold_kref'/>
+<use f='luajit/lj_opt_fold.c' l='1989' macro='1' u='r' c='fold_comm_equal'/>
+<use f='luajit/lj_opt_fold.c' l='2005' macro='1' u='r' c='fold_comm_comp'/>
+<use f='luajit/lj_opt_fold.c' l='2522' u='r' c='lj_opt_fold'/>

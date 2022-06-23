@@ -1,0 +1,7 @@
+<dec f='luajit/host/minilua.c' l='114' type='4'/>
+<use f='luajit/host/minilua.c' l='3247' c='discharge2reg'/>
+<use f='luajit/host/minilua.c' l='3335' u='r' c='luaK_exp2RK'/>
+<use f='luajit/host/minilua.c' l='3340' c='luaK_exp2RK'/>
+<use f='luajit/host/minilua.c' l='3408' c='luaK_goiftrue'/>
+<use f='luajit/host/minilua.c' l='3454' c='codenot'/>
+<use f='luajit/host/minilua.c' l='3724' u='r' c='codestring'/>

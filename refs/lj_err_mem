@@ -1,0 +1,10 @@
+<dec f='luajit/lj_err.h' l='25' type='void lj_err_mem(lua_State * L)'/>
+<use f='luajit/lj_bcread.c' l='76' u='c' c='bcread_fill'/>
+<use f='luajit/lj_buf.c' l='55' u='c' c='lj_buf_need2'/>
+<use f='luajit/lj_buf.c' l='66' u='c' c='lj_buf_more2'/>
+<use f='luajit/lj_buf.c' l='84' u='c' c='lj_buf_more2'/>
+<use f='luajit/lj_buf.c' l='194' u='c' c='lj_buf_putstr_rep'/>
+<def f='luajit/lj_err.c' l='773' ll='779' macro='1' type='void lj_err_mem(lua_State * L)'/>
+<use f='luajit/lj_gc.c' l='868' u='c' c='lj_mem_realloc'/>
+<use f='luajit/lj_gc.c' l='882' u='c' c='lj_mem_newgco'/>
+<use f='luajit/lj_lex.c' l='52' u='c' c='lex_more'/>

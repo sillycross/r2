@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='381'/>
+<doc f='luajit/lj_ir.h' l='380'>/* Include IRT_NIL, so IR(ASMREF_L) (aka REF_NIL) is considered 64 bit. */</doc>

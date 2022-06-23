@@ -1,0 +1,7 @@
+<def f='luajit/lj_jit.h' l='313' ll='317'/>
+<use f='luajit/lj_jit.h' l='313'/>
+<size>8</size>
+<doc f='luajit/lj_jit.h' l='312'>/* Round-robin backpropagation cache for narrowing conversions. */</doc>
+<mbr r='BPropEntry::key' o='0' t='IRRef1'/>
+<mbr r='BPropEntry::val' o='16' t='IRRef1'/>
+<mbr r='BPropEntry::mode' o='32' t='IRRef'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_target_x86.h' l='252' type='3338666238'/>
+<use f='luajit/lj_emit_x86.h' l='258' u='r' c='emit_movmroi'/>
+<use f='luajit/lj_emit_x86.h' l='319' u='r' c='emit_loadu64'/>
+<use f='luajit/lj_asm_x86.h' l='1486' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1619' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1622' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1625' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1654' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1663' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1817' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='2734' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm.c' l='1853' macro='1' u='r' c='asm_head_root'/>
+<use f='luajit/lj_asm.c' l='1957' macro='1' u='r' c='asm_head_side'/>

@@ -1,0 +1,4 @@
+<def f='luajit/lj_ctype.h' l='410' ll='415' type='CTypeID ctype_check(CTState * cts, CTypeID id)'/>
+<use f='luajit/lj_ctype.h' l='420' u='c' c='ctype_get'/>
+<doc f='luajit/lj_ctype.h' l='409'>/* Check C type ID for validity when assertions are enabled. */</doc>
+<use f='luajit/lj_cdata.h' l='48' u='c' c='lj_cdata_new'/>

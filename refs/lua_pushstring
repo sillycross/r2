@@ -1,0 +1,27 @@
+<dec f='luajit/lua.h' l='165' type='void lua_pushstring(lua_State * L, const char * s)'/>
+<use f='luajit/lib_base.c' l='569' u='c' c='lj_cf_coroutine_status'/>
+<use f='luajit/lib_debug.c' l='72' u='c' c='settabss'/>
+<use f='luajit/lib_debug.c' l='170' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='178' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='197' u='c' c='lj_cf_debug_setlocal'/>
+<use f='luajit/lib_debug.c' l='208' u='c' c='debug_getupvalue'/>
+<use f='luajit/lib_debug.c' l='295' u='c' c='hookf'/>
+<use f='luajit/lib_debug.c' l='355' u='c' c='lj_cf_debug_gethook'/>
+<use f='luajit/lib_init.c' l='44' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_os.c' l='97' u='c' c='lj_cf_os_tmpname'/>
+<use f='luajit/lib_os.c' l='107' u='c' c='lj_cf_os_getenv'/>
+<use f='luajit/lib_os.c' l='278' u='c' c='lj_cf_os_setlocale'/>
+<use f='luajit/lib_package.c' l='47' u='c' c='ll_load'/>
+<use f='luajit/lib_package.c' l='54' u='c' c='ll_sym'/>
+<use f='luajit/lib_package.c' l='282' u='c' c='lj_cf_package_loadlib'/>
+<use f='luajit/lib_package.c' l='452' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='463' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='506' u='c' c='modinit'/>
+<use f='luajit/lib_package.c' l='560' u='c' c='setpath'/>
+<def f='luajit/lj_api.c' l='658' ll='669' macro='1' type='void lua_pushstring(lua_State * L, const char * str)'/>
+<use f='luajit/luajit.c' l='161' u='c' c='createargtable'/>
+<use f='luajit/luajit.c' l='182' u='c' c='dolibrary'/>
+<use f='luajit/luajit.c' l='222' u='c' c='pushline'/>
+<use f='luajit/luajit.c' l='337' u='c' c='runcmdopt'/>
+<use f='luajit/luajit.c' l='386' u='c' c='dobytecode'/>
+<use f='luajit/luajit.c' l='389' u='c' c='dobytecode'/>

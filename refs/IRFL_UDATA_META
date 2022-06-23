@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='11'/>
+<use f='luajit/lj_ffrecord.c' l='1166' u='r' c='recff_debug_getmetatable'/>
+<use f='luajit/lj_record.c' l='1008' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1128' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1169' u='r' c='rec_mm_comp'/>

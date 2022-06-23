@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_strscan.h source code [luajit/lj_strscan.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_strscan.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_strscan.h.html'>lj_strscan.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** String scanning.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_STRSCAN_H">_LJ_STRSCAN_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_STRSCAN_H" data-ref="_M/_LJ_STRSCAN_H">_LJ_STRSCAN_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><i>/* Options for accepted/returned formats. */</i></td></tr>
+<tr><th id="12">12</th><td><u>#define <dfn class="macro" id="_M/STRSCAN_OPT_TOINT" data-ref="_M/STRSCAN_OPT_TOINT">STRSCAN_OPT_TOINT</dfn>	0x01  /* Convert to int32_t, if possible. */</u></td></tr>
+<tr><th id="13">13</th><td><u>#define <dfn class="macro" id="_M/STRSCAN_OPT_TONUM" data-ref="_M/STRSCAN_OPT_TONUM">STRSCAN_OPT_TONUM</dfn>	0x02  /* Always convert to double. */</u></td></tr>
+<tr><th id="14">14</th><td><u>#define <dfn class="macro" id="_M/STRSCAN_OPT_IMAG" data-ref="_M/STRSCAN_OPT_IMAG">STRSCAN_OPT_IMAG</dfn>	0x04</u></td></tr>
+<tr><th id="15">15</th><td><u>#define <dfn class="macro" id="_M/STRSCAN_OPT_LL" data-ref="_M/STRSCAN_OPT_LL">STRSCAN_OPT_LL</dfn>		0x08</u></td></tr>
+<tr><th id="16">16</th><td><u>#define <dfn class="macro" id="_M/STRSCAN_OPT_C" data-ref="_M/STRSCAN_OPT_C">STRSCAN_OPT_C</dfn>		0x10</u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><i>/* Returned format. */</i></td></tr>
+<tr><th id="19">19</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="20">20</th><td>  <dfn class="enum" id="STRSCAN_ERROR" title='STRSCAN_ERROR' data-ref="STRSCAN_ERROR" data-ref-filename="STRSCAN_ERROR">STRSCAN_ERROR</dfn>,</td></tr>
+<tr><th id="21">21</th><td>  <dfn class="enum" id="STRSCAN_NUM" title='STRSCAN_NUM' data-ref="STRSCAN_NUM" data-ref-filename="STRSCAN_NUM">STRSCAN_NUM</dfn>, <dfn class="enum" id="STRSCAN_IMAG" title='STRSCAN_IMAG' data-ref="STRSCAN_IMAG" data-ref-filename="STRSCAN_IMAG">STRSCAN_IMAG</dfn>,</td></tr>
+<tr><th id="22">22</th><td>  <dfn class="enum" id="STRSCAN_INT" title='STRSCAN_INT' data-ref="STRSCAN_INT" data-ref-filename="STRSCAN_INT">STRSCAN_INT</dfn>, <dfn class="enum" id="STRSCAN_U32" title='STRSCAN_U32' data-ref="STRSCAN_U32" data-ref-filename="STRSCAN_U32">STRSCAN_U32</dfn>, <dfn class="enum" id="STRSCAN_I64" title='STRSCAN_I64' data-ref="STRSCAN_I64" data-ref-filename="STRSCAN_I64">STRSCAN_I64</dfn>, <dfn class="enum" id="STRSCAN_U64" title='STRSCAN_U64' data-ref="STRSCAN_U64" data-ref-filename="STRSCAN_U64">STRSCAN_U64</dfn>,</td></tr>
+<tr><th id="23">23</th><td>} <dfn class="typedef" id="StrScanFmt" title='StrScanFmt' data-type='enum StrScanFmt' data-ref="StrScanFmt" data-ref-filename="StrScanFmt">StrScanFmt</dfn>;</td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#StrScanFmt" title='StrScanFmt' data-type='enum StrScanFmt' data-ref="StrScanFmt" data-ref-filename="StrScanFmt">StrScanFmt</a> <dfn class="decl fn" id="lj_strscan_scan" title='lj_strscan_scan' data-ref="lj_strscan_scan" data-ref-filename="lj_strscan_scan">lj_strscan_scan</dfn>(<em>const</em> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> *<dfn class="local col4 decl" id="264p" title='p' data-type='const uint8_t *' data-ref="264p" data-ref-filename="264p">p</dfn>, <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="local col5 decl" id="265len" title='len' data-type='MSize' data-ref="265len" data-ref-filename="265len">len</dfn>, <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="local col6 decl" id="266o" title='o' data-type='TValue *' data-ref="266o" data-ref-filename="266o">o</dfn>,</td></tr>
+<tr><th id="26">26</th><td>				   <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col7 decl" id="267opt" title='opt' data-type='uint32_t' data-ref="267opt" data-ref-filename="267opt">opt</dfn>);</td></tr>
+<tr><th id="27">27</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>int</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_strscan_num" title='lj_strscan_num' data-ref="lj_strscan_num" data-ref-filename="lj_strscan_num">lj_strscan_num</dfn>(<a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col8 decl" id="268str" title='str' data-type='GCstr *' data-ref="268str" data-ref-filename="268str">str</dfn>, <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="local col9 decl" id="269o" title='o' data-type='TValue *' data-ref="269o" data-ref-filename="269o">o</dfn>);</td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="28">if</span> <a class="macro" href="lj_arch.h.html#513" title="0" data-ref="_M/LJ_DUALNUM">LJ_DUALNUM</a></u></td></tr>
+<tr><th id="29">29</th><td>LJ_FUNC <em>int</em> LJ_FASTCALL lj_strscan_number(GCstr *str, TValue *o);</td></tr>
+<tr><th id="30">30</th><td><u>#<span data-ppcond="28">else</span></u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/lj_strscan_number" data-ref="_M/lj_strscan_number">lj_strscan_number</dfn>(s, o)		<a class="ref fn" href="#lj_strscan_num" title='lj_strscan_num' data-ref="lj_strscan_num" data-ref-filename="lj_strscan_num">lj_strscan_num</a>((s), (o))</u></td></tr>
+<tr><th id="32">32</th><td><u>#<span data-ppcond="28">endif</span></u></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><i>/* Check for number or convert string to number/int in-place (!). */</i></td></tr>
+<tr><th id="35">35</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <em>int</em> <dfn class="decl def fn" id="lj_strscan_numberobj" title='lj_strscan_numberobj' data-ref="lj_strscan_numberobj" data-ref-filename="lj_strscan_numberobj">lj_strscan_numberobj</dfn>(<a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="local col0 decl" id="270o" title='o' data-type='TValue *' data-ref="270o" data-ref-filename="270o">o</dfn>)</td></tr>
+<tr><th id="36">36</th><td>{</td></tr>
+<tr><th id="37">37</th><td>  <b>return</b> <a class="macro" href="lj_obj.h.html#796" title="(((uint32_t)((o)-&gt;it64 &gt;&gt; 47)) &lt;= (~13u))" data-ref="_M/tvisnumber">tvisnumber</a>(<a class="local col0 ref" href="#270o" title='o' data-ref="270o" data-ref-filename="270o">o</a>) || (<a class="macro" href="lj_obj.h.html#789" title="(((uint32_t)((o)-&gt;it64 &gt;&gt; 47)) == (~4u))" data-ref="_M/tvisstr">tvisstr</a>(<a class="local col0 ref" href="#270o" title='o' data-ref="270o" data-ref-filename="270o">o</a>) &amp;&amp; <a class="macro" href="#31" title="lj_strscan_num(((&amp;((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;str)), (o))" data-ref="_M/lj_strscan_number">lj_strscan_number</a>(<a class="macro" href="lj_obj.h.html#852" title="(&amp;((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;str)" data-ref="_M/strV">strV</a>(<a class="local col0 ref" href="#270o" title='o' data-ref="270o" data-ref-filename="270o">o</a>), <a class="local col0 ref" href="#270o" title='o' data-ref="270o" data-ref-filename="270o">o</a>));</td></tr>
+<tr><th id="38">38</th><td>}</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_base.c.html'>luajit/lib_base.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

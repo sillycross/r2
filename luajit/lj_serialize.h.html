@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_serialize.h source code [luajit/lj_serialize.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_serialize.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_serialize.h.html'>lj_serialize.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Object de/serialization.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_SERIALIZE_H">_LJ_SERIALIZE_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_SERIALIZE_H" data-ref="_M/_LJ_SERIALIZE_H">_LJ_SERIALIZE_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_buf.h.html">"lj_buf.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> <a class="macro" href="lj_arch.h.html#556" title="1" data-ref="_M/LJ_HASBUFFER">LJ_HASBUFFER</a></u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><u>#define <dfn class="macro" id="_M/LJ_SERIALIZE_DEPTH" data-ref="_M/LJ_SERIALIZE_DEPTH">LJ_SERIALIZE_DEPTH</dfn>	100	/* Default depth. */</u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_serialize_dict_prep" title='lj_serialize_dict_prep' data-ref="lj_serialize_dict_prep" data-ref-filename="lj_serialize_dict_prep">lj_serialize_dict_prep</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col8 decl" id="8L" title='L' data-type='lua_State *' data-ref="8L" data-ref-filename="8L">L</dfn>, <a class="typedef" href="lj_obj.h.html#GCtab" title='GCtab' data-type='struct GCtab' data-ref="GCtab" data-ref-filename="GCtab">GCtab</a> *<dfn class="local col9 decl" id="9dict" title='dict' data-type='GCtab *' data-ref="9dict" data-ref-filename="9dict">dict</dfn>);</td></tr>
+<tr><th id="17">17</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_buf.h.html#SBufExt" title='SBufExt' data-type='struct SBufExt' data-ref="SBufExt" data-ref-filename="SBufExt">SBufExt</a> * <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_serialize_put" title='lj_serialize_put' data-ref="lj_serialize_put" data-ref-filename="lj_serialize_put">lj_serialize_put</dfn>(<a class="typedef" href="lj_buf.h.html#SBufExt" title='SBufExt' data-type='struct SBufExt' data-ref="SBufExt" data-ref-filename="SBufExt">SBufExt</a> *<dfn class="local col0 decl" id="10sbx" title='sbx' data-type='SBufExt *' data-ref="10sbx" data-ref-filename="10sbx">sbx</dfn>, <a class="typedef" href="lj_obj.h.html#cTValue" title='cTValue' data-type='const TValue' data-ref="cTValue" data-ref-filename="cTValue">cTValue</a> *<dfn class="local col1 decl" id="11o" title='o' data-type='cTValue *' data-ref="11o" data-ref-filename="11o">o</dfn>);</td></tr>
+<tr><th id="18">18</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_buf.h.html#SBufExt" title='SBufExt' data-type='struct SBufExt' data-ref="SBufExt" data-ref-filename="SBufExt">SBufExt</a> * <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_serialize_get" title='lj_serialize_get' data-ref="lj_serialize_get" data-ref-filename="lj_serialize_get">lj_serialize_get</dfn>(<a class="typedef" href="lj_buf.h.html#SBufExt" title='SBufExt' data-type='struct SBufExt' data-ref="SBufExt" data-ref-filename="SBufExt">SBufExt</a> *<dfn class="local col2 decl" id="12sbx" title='sbx' data-type='SBufExt *' data-ref="12sbx" data-ref-filename="12sbx">sbx</dfn>, <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="local col3 decl" id="13o" title='o' data-type='TValue *' data-ref="13o" data-ref-filename="13o">o</dfn>);</td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_buffer.c.html'>luajit/lib_buffer.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

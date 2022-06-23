@@ -1,0 +1,4 @@
+<dec f='luajit/lj_crecord.h' l='26' type='void recff_ffi_xof(jit_State * J, RecordFFData * rd)'/>
+<def f='luajit/lj_crecord.c' l='1740' ll='1755' type='void recff_ffi_xof(jit_State * J, RecordFFData * rd)'/>
+<doc f='luajit/lj_crecord.c' l='1739'>/* Record ffi.sizeof(), ffi.alignof(), ffi.offsetof(). */</doc>
+<use f='luajit/lj_recdef.h' l='262'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_record.c' l='266' type='0'/>
+<use f='luajit/lj_record.c' l='402' u='r' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='408' u='r' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='535' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='546' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='569' u='r' c='rec_iterl'/>
+<use f='luajit/lj_record.c' l='602' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='605' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='619' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='632' u='r' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='2413' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2419' u='r' c='lj_record_ins'/>
+<doc f='luajit/lj_record.c' l='266'>/* Loop is left or not entered. */</doc>

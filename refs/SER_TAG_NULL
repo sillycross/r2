@@ -1,0 +1,2 @@
+<dec f='luajit/lj_serialize.c' l='28' type='3'/>
+<use f='luajit/lj_serialize.c' l='272' u='r' c='serialize_put'/>

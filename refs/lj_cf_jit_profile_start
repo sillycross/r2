@@ -1,0 +1,1 @@
+<def f='luajit/lib_jit.c' l='573' macro='1' type='int lj_cf_jit_profile_start(lua_State * L)'/>

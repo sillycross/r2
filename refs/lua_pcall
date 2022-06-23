@@ -1,0 +1,9 @@
+<dec f='luajit/lua.h' l='203' type='int lua_pcall(lua_State * L, int nargs, int nresults, int errfunc)'/>
+<use f='luajit/lib_debug.c' l='371' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_jit.c' l='563' u='c' c='jit_profile_callback'/>
+<def f='luajit/lj_api.c' l='1128' ll='1146' macro='1' type='int lua_pcall(lua_State * L, int nargs, int nresults, int errfunc)'/>
+<use f='luajit/luajit.c' l='121' u='c' c='docall'/>
+<use f='luajit/luajit.c' l='258' u='c' c='dotty'/>
+<use f='luajit/luajit.c' l='304' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='341' u='c' c='runcmdopt'/>
+<use f='luajit/luajit.c' l='390' u='c' c='dobytecode'/>

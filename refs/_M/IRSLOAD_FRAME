@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='223'/>
+<use f='luajit/lj_asm_x86.h' l='455' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1670' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2341' u='c'/>
+<use f='luajit/lj_record.c' l='1817' u='c'/>

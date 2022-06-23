@@ -1,0 +1,11 @@
+<def f='luajit/lj_emit_x86.h' l='37' ll='71' type='MCode * emit_op(x86Op xo, Reg rr, Reg rb, Reg rx, MCode * p, int delta)'/>
+<use f='luajit/lj_emit_x86.h' l='76' u='c' c='emit_rr'/>
+<use f='luajit/lj_emit_x86.h' l='76' u='c' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='82' u='c' c='emit_rmrxo'/>
+<use f='luajit/lj_emit_x86.h' l='76' u='c' c='emit_gri'/>
+<use f='luajit/lj_emit_x86.h' l='82' u='c' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='76' u='c' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='76' u='c' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='76' u='c' c='emit_rma'/>
+<use f='luajit/lj_asm_x86.h' l='2259' u='c' c='asm_bswap'/>
+<doc f='luajit/lj_emit_x86.h' l='36'>/* op */</doc>

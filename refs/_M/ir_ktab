@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ir.h' l='573'/>
+<use f='luajit/lj_opt_fold.c' l='2195' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2228' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2236' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='196' u='c'/>
+<use f='luajit/lj_snap.c' l='836' u='c'/>

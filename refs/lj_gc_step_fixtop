@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='58' type='void lj_gc_step_fixtop(lua_State * L)'/>
+<use f='luajit/lj_func.c' l='163' macro='1' u='c' c='lj_func_newL_gc'/>
+<def f='luajit/lj_gc.c' l='753' ll='757' type='void lj_gc_step_fixtop(lua_State * L)'/>
+<doc f='luajit/lj_gc.c' l='752'>/* Ditto, but fix the stack top first. */</doc>

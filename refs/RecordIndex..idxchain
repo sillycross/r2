@@ -1,0 +1,18 @@
+<dec f='luajit/lj_record.h' l='26' type='int'/>
+<offset>544</offset>
+<doc f='luajit/lj_record.h' l='26'>/* Index indirections left or 0 for raw lookup. */</doc>
+<use f='luajit/lj_ffrecord.c' l='250' u='w' c='recff_rawget'/>
+<use f='luajit/lj_ffrecord.c' l='262' u='w' c='recff_rawset'/>
+<use f='luajit/lj_ffrecord.c' l='431' u='w' c='recff_ipairs_aux'/>
+<use f='luajit/lj_ffrecord.c' l='1049' u='w' c='recff_table_insert'/>
+<use f='luajit/lj_record.c' l='1035' u='w' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1443' u='w' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1452' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1478' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1492' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1501' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1521' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1557' u='w' c='rec_tsetm'/>
+<use f='luajit/lj_record.c' l='2329' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2338' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2342' u='w' c='lj_record_ins'/>

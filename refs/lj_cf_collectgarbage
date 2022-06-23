@@ -1,0 +1,2 @@
+<def f='luajit/lib_base.c' l='460' macro='1' type='int lj_cf_collectgarbage(lua_State * L)'/>
+<use f='luajit/lj_libdef.h' l='28' u='r'/>

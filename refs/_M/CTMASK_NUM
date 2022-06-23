@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='90'/>
+<use f='luajit/lj_carith.c' l='334' u='c'/>
+<use f='luajit/lj_cparse.c' l='1233' u='c'/>
+<use f='luajit/lj_crecord.c' l='1773' u='c'/>

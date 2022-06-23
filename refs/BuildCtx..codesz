@@ -1,0 +1,11 @@
+<dec f='luajit/host/buildvm.h' l='76' type='size_t'/>
+<use f='luajit/host/buildvm_arch.h' l='4734' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm_arch.h' l='4805' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm.c' l='91' u='r' c='emit_raw'/>
+<use f='luajit/host/buildvm.c' l='199' u='a' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='200' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='236' u='r' c='build_code'/>
+<offset>384</offset>
+<use f='luajit/host/buildvm_peobj.c' l='185' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='251' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='267' u='r' c='emit_peobj'/>

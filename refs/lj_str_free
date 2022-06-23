@@ -1,0 +1,5 @@
+<dec f='luajit/lj_str.h' l='22' type='void lj_str_free(global_State * g, GCstr * s)'/>
+<use f='luajit/lj_gc.c' l='379' u='r'/>
+<use f='luajit/lj_gc.c' l='447' u='c' c='gc_sweepstr'/>
+<use f='luajit/lj_str.c' l='242' u='c' c='lj_str_rehash_chain'/>
+<def f='luajit/lj_str.c' l='358' ll='362' type='void lj_str_free(global_State * g, GCstr * s)'/>

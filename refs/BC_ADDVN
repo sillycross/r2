@@ -1,0 +1,18 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='22'/>
+<use f='luajit/host/buildvm_arch.h' l='3303' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3306' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3306' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3307' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3307' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3310' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3310' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3313' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3313' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3316' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3316' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3323' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3323' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3327' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3327' u='r' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='810' u='r' c='bcemit_arith'/>
+<use f='luajit/lj_record.c' l='2253' c='lj_record_ins'/>

@@ -1,0 +1,36 @@
+<def f='luajit/lj_obj.h' l='628' ll='657'/>
+<use f='luajit/lj_obj.h' l='628'/>
+<size>728</size>
+<doc f='luajit/lj_obj.h' l='627'>/* Global state, shared by all threads of a Lua universe. */</doc>
+<mbr r='global_State::allocf' o='0' t='lua_Alloc'/>
+<mbr r='global_State::allocd' o='64' t='void *'/>
+<mbr r='global_State::gc' o='128' t='GCState'/>
+<mbr r='global_State::strempty' o='960' t='GCstr'/>
+<mbr r='global_State::stremptyz' o='1152' t='uint8_t'/>
+<mbr r='global_State::hookmask' o='1160' t='uint8_t'/>
+<mbr r='global_State::dispatchmode' o='1168' t='uint8_t'/>
+<mbr r='global_State::vmevmask' o='1176' t='uint8_t'/>
+<mbr r='global_State::str' o='1216' t='StrInternState'/>
+<mbr r='global_State::vmstate' o='1472' t='volatile int32_t'/>
+<mbr r='global_State::mainthref' o='1536' t='GCRef'/>
+<mbr r='global_State::tmpbuf' o='1600' t='SBuf'/>
+<mbr r='global_State::tmptv' o='1856' t='TValue'/>
+<mbr r='global_State::tmptv2' o='1920' t='TValue'/>
+<mbr r='global_State::nilnode' o='1984' t='Node'/>
+<mbr r='global_State::registrytv' o='2176' t='TValue'/>
+<mbr r='global_State::uvhead' o='2240' t='GCupval'/>
+<mbr r='global_State::hookcount' o='2624' t='int32_t'/>
+<mbr r='global_State::hookcstart' o='2656' t='int32_t'/>
+<mbr r='global_State::hookf' o='2688' t='lua_Hook'/>
+<mbr r='global_State::wrapf' o='2752' t='lua_CFunction'/>
+<mbr r='global_State::panic' o='2816' t='lua_CFunction'/>
+<mbr r='global_State::bc_cfunc_int' o='2880' t='BCIns'/>
+<mbr r='global_State::bc_cfunc_ext' o='2912' t='BCIns'/>
+<mbr r='global_State::cur_L' o='2944' t='GCRef'/>
+<mbr r='global_State::jit_base' o='3008' t='MRef'/>
+<mbr r='global_State::ctype_state' o='3072' t='MRef'/>
+<mbr r='global_State::prng' o='3136' t='PRNGState'/>
+<mbr r='global_State::gcroot' o='3392' t='GCRef [38]'/>
+<def f='luajit/host/minilua.c' l='434' ll='460'/>
+<use f='luajit/host/minilua.c' l='434'/>
+<size>432</size>

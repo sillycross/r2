@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='97' type='TRef lj_opt_cselim(jit_State * J, IRRef lim)'/>
+<def f='luajit/lj_opt_fold.c' l='2561' ll='2571' type='TRef lj_opt_cselim(jit_State * J, IRRef lim)'/>
+<doc f='luajit/lj_opt_fold.c' l='2560'>/* CSE with explicit search limit. */</doc>
+<use f='luajit/lj_opt_mem.c' l='602' u='c' c='lj_opt_fwd_fload'/>

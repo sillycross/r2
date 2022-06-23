@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ffdef.h' l='22' macro='1' type='21'/>
+<use f='luajit/lj_err.c' l='821' u='r' c='finderrfunc'/>

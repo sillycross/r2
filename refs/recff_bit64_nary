@@ -1,0 +1,3 @@
+<dec f='luajit/lj_crecord.h' l='31' type='int recff_bit64_nary(jit_State * J, RecordFFData * rd)'/>
+<def f='luajit/lj_crecord.c' l='1804' ll='1825' type='int recff_bit64_nary(jit_State * J, RecordFFData * rd)'/>
+<use f='luajit/lj_ffrecord.c' l='674' u='c' c='recff_bit_nary'/>

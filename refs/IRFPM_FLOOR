@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='186' macro='1' type='0'/>
+<use f='luajit/lj_asm_x86.h' l='1969' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_ffrecord.c' l='635' u='r' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='639' u='r' c='recff_math_random'/>
+<use f='luajit/lj_recdef.h' l='43' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='952' u='r' c='fold_shortcut_round'/>
+<use f='luajit/lj_opt_narrow.c' l='582' u='r' c='lj_opt_narrow_mod'/>
+<use f='luajit/lj_vmmath.c' l='121' c='lj_vm_foldfpm'/>

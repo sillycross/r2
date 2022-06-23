@@ -1,0 +1,4 @@
+<dec f='include/ctype.h' l='49' type='512'/>
+<use f='luajit/host/minilua.c' l='7127' macro='1' u='r' c='match_class'/>
+<use f='luajit/host/minilua.c' l='7136' macro='1' u='r' c='match_class'/>
+<doc f='include/ctype.h' l='49'>/* lowercase.  */</doc>

@@ -1,0 +1,2 @@
+<dec f='luajit/host/minilua.c' l='130' type='274'/>
+<use f='luajit/host/minilua.c' l='4515' u='r' c='test_then_block'/>

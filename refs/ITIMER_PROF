@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/sys/time.h' l='98' type='2'/>
+<use f='luajit/lj_profile.c' l='187' macro='1' u='r' c='profile_timer_start'/>
+<use f='luajit/lj_profile.c' l='200' macro='1' u='r' c='profile_timer_stop'/>
+<doc f='include/x86_64-linux-gnu/sys/time.h' l='96'>/* Timers run when the process is executing and when
+       the system is executing on behalf of the process.  */</doc>

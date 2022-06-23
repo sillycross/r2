@@ -1,0 +1,4 @@
+<dec f='include/ctype.h' l='57' type='2'/>
+<use f='luajit/host/minilua.c' l='2693' macro='1' u='r' c='luaX_token2str'/>
+<use f='luajit/host/minilua.c' l='7125' macro='1' u='r' c='match_class'/>
+<doc f='include/ctype.h' l='57'>/* Control character.  */</doc>

@@ -1,0 +1,1 @@
+<def f='luajit/lib_math.c' l='90' macro='1' type='int lj_ffh_math_min(lua_State * L)'/>

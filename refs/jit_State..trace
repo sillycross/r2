@@ -1,0 +1,40 @@
+<dec f='luajit/lj_jit.h' l='462' type='GCRef *'/>
+<offset>3072</offset>
+<doc f='luajit/lj_jit.h' l='462'>/* Array of traces. */</doc>
+<use f='luajit/lib_jit.c' l='288' macro='1' u='r' c='jit_checktrace'/>
+<use f='luajit/lj_asm_x86.h' l='2907' macro='1' u='r' c='asm_tail_fixup'/>
+<use f='luajit/lj_asm.c' l='2068' macro='1' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2398' macro='1' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_bcwrite.c' l='233' macro='1' u='r' c='bcwrite_bytecode'/>
+<use f='luajit/lj_gc.c' l='243' macro='1' u='r' c='gc_marktrace'/>
+<use f='luajit/lj_record.c' l='1764' macro='1' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2435' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2438' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2442' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2618' macro='1' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2636' macro='1' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='873' macro='1' u='r' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='67' macro='1' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='75' u='w' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='75' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='77' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='161' u='r' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='176' u='r' c='lj_trace_free'/>
+<use f='luajit/lj_trace.c' l='251' macro='1' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='253' macro='1' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='266' macro='1' u='r' c='lj_trace_flush'/>
+<use f='luajit/lj_trace.c' l='276' macro='1' u='r' c='lj_trace_flushproto'/>
+<use f='luajit/lj_trace.c' l='287' macro='1' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='293' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='368' u='r' c='lj_trace_freestate'/>
+<use f='luajit/lj_trace.c' l='435' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='507' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='509' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='512' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='522' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='586' macro='1' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='616' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='755' macro='1' u='r' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='861' macro='1' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='901' macro='1' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='939' macro='1' u='r' c='lj_trace_unwind'/>

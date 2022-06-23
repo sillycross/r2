@@ -1,0 +1,2 @@
+<dec f='luajit/lj_err.c' l='405' type='void _Unwind_DeleteException(_Unwind_Exception * )'/>
+<use f='luajit/lj_err.c' l='439' u='c' c='lj_err_unwind_dwarf'/>

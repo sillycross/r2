@@ -1,0 +1,11 @@
+<dec f='luajit/dasm_proto.h' l='25'/>
+<use f='luajit/dasm_proto.h' l='51' u='c'/>
+<use f='luajit/dasm_proto.h' l='52' u='c'/>
+<use f='luajit/dasm_proto.h' l='55' u='c'/>
+<use f='luajit/dasm_proto.h' l='58' u='c'/>
+<use f='luajit/dasm_proto.h' l='61' u='c'/>
+<use f='luajit/dasm_proto.h' l='64' u='c'/>
+<use f='luajit/dasm_proto.h' l='67' u='c'/>
+<use f='luajit/dasm_proto.h' l='70' u='c'/>
+<use f='luajit/dasm_proto.h' l='73' u='c'/>
+<use f='luajit/dasm_proto.h' l='77' u='c'/>

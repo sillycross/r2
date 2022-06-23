@@ -1,0 +1,4 @@
+<def f='luajit/lj_obj.h' l='932' macro='1' type='void setprotoV(lua_State * L, TValue * o, const GCproto * v)'/>
+<use f='luajit/lib_jit.c' l='214' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lj_bcread.c' l='444' u='c' c='lj_bcread'/>
+<use f='luajit/lj_parse.c' l='1605' u='c' c='fs_finish'/>

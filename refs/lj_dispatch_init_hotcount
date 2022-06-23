@@ -1,0 +1,5 @@
+<dec f='luajit/lj_dispatch.h' l='133' type='void lj_dispatch_init_hotcount(global_State * g)'/>
+<use f='luajit/lib_jit.c' l='506' u='c' c='jitopt_param'/>
+<def f='luajit/lj_dispatch.c' l='84' ll='92' type='void lj_dispatch_init_hotcount(global_State * g)'/>
+<use f='luajit/lj_dispatch.c' l='202' u='c' c='lj_dispatch_update'/>
+<doc f='luajit/lj_dispatch.c' l='83'>/* Initialize hotcount table. */</doc>

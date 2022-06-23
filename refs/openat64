@@ -1,0 +1,2 @@
+<dec f='include/fcntl.h' l='185' type='int openat(int __fd, const char * __file, int __oflag)'/>
+<dec f='include/fcntl.h' l='192' type='int openat64(int __fd, const char * __file, int __oflag)'/>

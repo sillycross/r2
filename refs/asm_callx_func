@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='708' ll='727' type='void * asm_callx_func(ASMState * as, IRIns * irf, IRRef func)'/>
+<use f='luajit/lj_asm_x86.h' l='746' u='c' c='asm_callx'/>
+<doc f='luajit/lj_asm_x86.h' l='707'>/* Return a constant function pointer or NULL for indirect calls. */</doc>

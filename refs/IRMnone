@@ -1,0 +1,34 @@
+<dec f='luajit/lj_ir.h' l='266' type='3'/>
+<doc f='luajit/lj_ir.h' l='266'>/* Unused operand. */</doc>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>

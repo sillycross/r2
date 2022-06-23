@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ir.h' l='364'/>
+<use f='luajit/lj_asm_x86.h' l='461' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1680' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1702' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1703' u='c'/>
+<use f='luajit/lj_asm.c' l='1686' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1129' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='1952' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='189' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='201' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='762' u='c'/>

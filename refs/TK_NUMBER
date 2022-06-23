@@ -1,0 +1,6 @@
+<dec f='luajit/host/minilua.c' l='131' type='284'/>
+<use f='luajit/host/minilua.c' l='2703' c='txtToken'/>
+<use f='luajit/host/minilua.c' l='2774' u='r' c='read_numeral'/>
+<use f='luajit/host/minilua.c' l='2946' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='2959' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='4191' c='simpleexp'/>

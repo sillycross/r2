@@ -1,0 +1,15 @@
+<dec f='luajit/lj_obj.h' l='751' type='GCproto'/>
+<offset>0</offset>
+<use f='luajit/lib_jit.c' l='170' macro='1' u='a' c='check_Lproto'/>
+<use f='luajit/lj_asm.c' l='1858' u='m' c='asm_head_root'/>
+<use f='luajit/lj_bcread.c' l='258' macro='1' u='a' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='451' macro='1' u='a' c='lj_bcread'/>
+<use f='luajit/lj_bcwrite.c' l='254' macro='1' u='a' c='bcwrite_proto'/>
+<use f='luajit/lj_dispatch.c' l='231' macro='1' u='a' c='setptmode_all'/>
+<use f='luajit/lj_dispatch.c' l='232' macro='1' u='a' c='setptmode_all'/>
+<use f='luajit/lj_dispatch.c' l='269' macro='1' u='a' c='luaJIT_setmode'/>
+<use f='luajit/lj_gc.c' l='340' macro='1' u='a' c='propagatemark'/>
+<use f='luajit/lj_parse.c' l='1400' macro='1' u='a' c='fs_fixup_k'/>
+<use f='luajit/lj_trace.c' l='242' u='a' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='479' u='a' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='584' u='a' c='trace_abort'/>

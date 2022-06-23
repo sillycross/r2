@@ -1,0 +1,2 @@
+<use f='luajit/lj_asm.c' l='1027' u='r' c='asm_snap_prev'/>
+<use f='luajit/lj_mcode.c' l='366' u='r' c='lj_mcode_limiterr'/>

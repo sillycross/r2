@@ -1,0 +1,19 @@
+<dec f='luajit/lj_obj.h' l='388' type='BCLine'/>
+<offset>576</offset>
+<doc f='luajit/lj_obj.h' l='388'>/* First line of the function definition. */</doc>
+<use f='luajit/lib_jit.c' l='196' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='197' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lj_bcread.c' l='372' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='276' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_debug.c' l='119' u='r' c='lj_debug_line'/>
+<use f='luajit/lj_debug.c' l='365' u='r' c='lj_debug_addloc'/>
+<use f='luajit/lj_debug.c' l='381' u='r' c='lj_debug_pushloc'/>
+<use f='luajit/lj_debug.c' l='457' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='460' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='512' u='r' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='556' u='r' c='debug_putchunkname'/>
+<use f='luajit/lj_debug.c' l='606' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='622' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='624' u='r' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_lib.c' l='67' u='w' c='lib_read_lfunc'/>
+<use f='luajit/lj_parse.c' l='1428' u='w' c='fs_fixup_line'/>

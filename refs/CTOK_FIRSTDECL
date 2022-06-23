@@ -1,0 +1,26 @@
+<dec f='luajit/lj_ctype.h' l='365' type='269'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_ctype.h' l='373' u='r'/>
+<use f='luajit/lj_cparse.c' l='135' u='r' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='432' u='r' c='cp_istypedecl'/>
+<use f='luajit/lj_cparse.c' l='1154' u='r' c='cp_decl_gccattribute'/>
+<use f='luajit/lj_cparse.c' l='1511' u='r' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1517' u='r' c='cp_decl_spec'/>

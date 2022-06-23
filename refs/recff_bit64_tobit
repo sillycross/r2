@@ -1,0 +1,3 @@
+<dec f='luajit/lj_crecord.h' l='29' type='void recff_bit64_tobit(jit_State * J, RecordFFData * rd)'/>
+<def f='luajit/lj_crecord.c' l='1781' ll='1789' type='void recff_bit64_tobit(jit_State * J, RecordFFData * rd)'/>
+<use f='luajit/lj_ffrecord.c' l='654' u='c' c='recff_bit_tobit'/>

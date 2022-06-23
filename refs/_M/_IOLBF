@@ -1,0 +1,2 @@
+<dec f='include/stdio.h' l='88'/>
+<use f='luajit/lib_io.c' l='362' u='c'/>

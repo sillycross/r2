@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='70' type='int dasm_encode(BuildCtx * ctx, void * buffer)'/>
+<def f='luajit/dasm_x86.h' l='389' ll='496' type='int dasm_encode(BuildCtx * ctx, void * buffer)'/>
+<use f='luajit/host/buildvm.c' l='201' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='388'>/* Pass 3: Encode sections. */</doc>

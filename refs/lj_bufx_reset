@@ -1,0 +1,2 @@
+<def f='luajit/lj_buf.h' l='134' ll='142' type='void lj_bufx_reset(SBufExt * sbx)'/>
+<use f='luajit/lib_buffer.c' l='67' u='c' c='lj_cf_buffer_method_reset'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='27' type='void lj_vm_unwind_rethrow()'/>
+<use f='luajit/lj_err.c' l='459' u='r' c='lj_err_unwind_dwarf'/>

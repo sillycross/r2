@@ -1,0 +1,8 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='262'/>
+<use f='luajit/lj_parse.c' l='1873' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1873' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='2317' c='parse_isend'/>
+<use f='luajit/lj_parse.c' l='2439' u='r' c='parse_while'/>
+<use f='luajit/lj_parse.c' l='2599' u='r' c='parse_for'/>
+<use f='luajit/lj_parse.c' l='2635' u='r' c='parse_if'/>
+<use f='luajit/lj_parse.c' l='2654' u='r' c='parse_stmt'/>

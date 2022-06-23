@@ -1,0 +1,2 @@
+<def f='luajit/lj_asm_x86.h' l='1994' ll='2005' type='void asm_fppowi(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='1668' u='c' c='asm_pow'/>

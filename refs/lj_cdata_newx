@@ -1,0 +1,5 @@
+<dec f='luajit/lj_cdata.h' l='64' type='GCcdata * lj_cdata_newx(CTState * cts, CTypeID id, CTSize sz, CTInfo info)'/>
+<use f='luajit/lib_ffi.c' l='508' u='c' c='lj_cf_ffi_new'/>
+<def f='luajit/lj_cdata.c' l='53' ll='59' type='GCcdata * lj_cdata_newx(CTState * cts, CTypeID id, CTSize sz, CTInfo info)'/>
+<doc f='luajit/lj_cdata.c' l='52'>/* Allocate arbitrary C data object. */</doc>
+<use f='luajit/lj_snap.c' l='787' u='c' c='snap_unsink'/>

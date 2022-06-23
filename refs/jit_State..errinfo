@@ -1,0 +1,9 @@
+<dec f='luajit/lj_jit.h' l='501' type='TValue'/>
+<offset>24704</offset>
+<doc f='luajit/lj_jit.h' l='501'>/* Additional info element for trace errors. */</doc>
+<use f='luajit/lj_asm.c' l='1840' u='a' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='1710' u='a' c='recff_ffi_typeof'/>
+<use f='luajit/lj_record.c' l='1892' u='a' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2491' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='40' u='a' c='lj_trace_err'/>
+<use f='luajit/lj_trace.c' l='613' u='a' c='trace_abort'/>

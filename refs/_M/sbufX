@@ -1,0 +1,5 @@
+<dec f='luajit/lj_buf.h' l='58'/>
+<use f='luajit/lj_buf.c' l='31' u='c'/>
+<use f='luajit/lj_buf.c' l='37' u='c'/>
+<use f='luajit/lj_buf.c' l='37' u='c'/>
+<use f='luajit/lj_buf.c' l='44' u='c'/>

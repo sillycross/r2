@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ccall.h' l='187' type='void lj_vm_ffi_call(CCallState * cc)'/>
+<use f='luajit/lj_ccall.c' l='1167' u='c' c='lj_ccall_func'/>

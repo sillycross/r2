@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='19'/>
+<use f='luajit/lib_ffi.c' l='689' u='r' c='lj_cf_ffi_string'/>
+<use f='luajit/lj_ccall.c' l='914' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_crecord.c' l='1654' u='r' c='recff_ffi_string'/>

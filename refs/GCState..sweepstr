@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='598' type='MSize'/>
+<offset>160</offset>
+<doc f='luajit/lj_obj.h' l='598'>/* Sweep position in string table. */</doc>
+<use f='luajit/lj_gc.c' l='668' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='672' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='673' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='785' u='w' c='lj_gc_fullgc'/>

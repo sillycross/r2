@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='58' type='void dasm_growpc(BuildCtx * ctx, unsigned int maxpc)'/>
+<def f='luajit/dasm_x86.h' l='129' ll='135' type='void dasm_growpc(BuildCtx * ctx, unsigned int maxpc)'/>
+<use f='luajit/host/buildvm_arch.h' l='4674' u='c' c='build_backend'/>
+<doc f='luajit/dasm_x86.h' l='128'>/* Grow PC label array. Can be called after dasm_setup(), too. */</doc>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='760'/>
+<use f='luajit/lj_func.c' l='44' u='c'/>
+<use f='luajit/lj_func.c' l='88' u='c'/>
+<use f='luajit/lj_gc.c' l='76' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2160' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2165' u='c'/>
+<use f='luajit/lj_snap.c' l='225' u='c'/>
+<use f='luajit/lj_snap.c' l='226' u='c'/>
+<use f='luajit/lj_state.c' l='80' u='c'/>
+<use f='luajit/lj_state.c' l='80' u='c'/>

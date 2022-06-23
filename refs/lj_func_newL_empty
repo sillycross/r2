@@ -1,0 +1,5 @@
+<dec f='luajit/lj_func.h' l='20' type='GCfunc * lj_func_newL_empty(lua_State * L, GCproto * pt, GCtab * env)'/>
+<def f='luajit/lj_func.c' l='140' ll='154' type='GCfunc * lj_func_newL_empty(lua_State * L, GCproto * pt, GCtab * env)'/>
+<doc f='luajit/lj_func.c' l='139'>/* Create a new Lua function with empty upvalues. */</doc>
+<use f='luajit/lj_lib.c' l='68' u='c' c='lib_read_lfunc'/>
+<use f='luajit/lj_load.c' l='42' u='c' c='cpparser'/>

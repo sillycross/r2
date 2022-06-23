@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strfmt.h' l='28'/>
+<doc f='luajit/lj_strfmt.h' l='27'>/* Format subtypes (bits are reused). */</doc>
+<use f='luajit/lib_bit.c' l='157' u='c'/>
+<use f='luajit/lj_crecord.c' l='1865' u='c'/>
+<use f='luajit/lj_strfmt.c' l='306' u='c'/>
+<use f='luajit/lj_strfmt.c' l='311' u='c'/>

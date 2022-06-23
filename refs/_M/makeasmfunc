@@ -1,0 +1,13 @@
+<dec f='luajit/lj_vm.h' l='116'/>
+<doc f='luajit/lj_vm.h' l='115'>/* Bytecode offsets are relative to lj_vm_asm_begin. */</doc>
+<use f='luajit/lj_dispatch.c' l='65' u='c'/>
+<use f='luajit/lj_dispatch.c' l='67' u='c'/>
+<use f='luajit/lj_dispatch.c' l='126' u='c'/>
+<use f='luajit/lj_dispatch.c' l='127' u='c'/>
+<use f='luajit/lj_dispatch.c' l='128' u='c'/>
+<use f='luajit/lj_dispatch.c' l='129' u='c'/>
+<use f='luajit/lj_dispatch.c' l='130' u='c'/>
+<use f='luajit/lj_dispatch.c' l='135' u='c'/>
+<use f='luajit/lj_dispatch.c' l='136' u='c'/>
+<use f='luajit/lj_dispatch.c' l='188' u='c'/>
+<use f='luajit/lj_dispatch.c' l='513' u='c'/>

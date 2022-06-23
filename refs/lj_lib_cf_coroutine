@@ -1,0 +1,2 @@
+<def f='luajit/lj_libdef.h' l='54' ll='62' type='const lua_CFunction [7]'/>
+<use f='luajit/lib_base.c' l='692' macro='1' u='r' c='luaopen_base'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cdata.h' l='73' type='int lj_cdata_get(CTState * cts, CType * s, TValue * o, uint8_t * sp)'/>
+<use f='luajit/lib_ffi.c' l='158' u='c' c='lj_cf_ffi_meta___index'/>
+<def f='luajit/lj_cdata.c' l='226' ll='256' type='int lj_cdata_get(CTState * cts, CType * s, TValue * o, uint8_t * sp)'/>
+<doc f='luajit/lj_cdata.c' l='225'>/* Get C data value and convert to TValue. */</doc>

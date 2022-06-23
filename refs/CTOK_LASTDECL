@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ctype.h' l='368' type='297'/>
+<use f='luajit/lj_cparse.c' l='432' u='r' c='cp_istypedecl'/>

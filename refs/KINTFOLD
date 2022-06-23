@@ -1,0 +1,25 @@
+<dec f='luajit/lj_iropt.h' l='103' type='2'/>
+<doc f='luajit/lj_iropt.h' l='103'>/* Return ref for int constant in fins-&gt;i. */</doc>
+<use f='luajit/lj_opt_fold.c' l='307' macro='1' u='r' c='fold_kfold_intarith'/>
+<use f='luajit/lj_opt_fold.c' l='320' macro='1' u='r' c='fold_kfold_intovarith'/>
+<use f='luajit/lj_opt_fold.c' l='326' macro='1' u='r' c='fold_kfold_bnot'/>
+<use f='luajit/lj_opt_fold.c' l='332' macro='1' u='r' c='fold_kfold_bswap'/>
+<use f='luajit/lj_opt_fold.c' l='559' macro='1' u='r' c='fold_kfold_strcmp'/>
+<use f='luajit/lj_opt_fold.c' l='796' macro='1' u='r' c='fold_kfold_tobit'/>
+<use f='luajit/lj_opt_fold.c' l='822' macro='1' u='r' c='fold_kfold_conv_kint_ext'/>
+<use f='luajit/lj_opt_fold.c' l='853' macro='1' u='r' c='fold_kfold_conv_kint64_int_i64'/>
+<use f='luajit/lj_opt_fold.c' l='870' macro='1' u='r' c='fold_kfold_conv_knum_int_num'/>
+<use f='luajit/lj_opt_fold.c' l='882' macro='1' u='r' c='fold_kfold_conv_knum_u32_num'/>
+<use f='luajit/lj_opt_fold.c' l='1473' macro='1' u='r' c='fold_simplify_intmod_kleft'/>
+<use f='luajit/lj_opt_fold.c' l='1482' macro='1' u='r' c='fold_simplify_intsub'/>
+<use f='luajit/lj_opt_fold.c' l='1862' macro='1' u='r' c='fold_reassoc_shift'/>
+<use f='luajit/lj_opt_fold.c' l='2038' macro='1' u='r' c='fold_comm_bxor'/>
+<use f='luajit/lj_opt_fold.c' l='2212' macro='1' u='r' c='fold_fload_tab_tnew_asize'/>
+<use f='luajit/lj_opt_fold.c' l='2220' macro='1' u='r' c='fold_fload_tab_tnew_hmask'/>
+<use f='luajit/lj_opt_fold.c' l='2228' macro='1' u='r' c='fold_fload_tab_tdup_asize'/>
+<use f='luajit/lj_opt_fold.c' l='2236' macro='1' u='r' c='fold_fload_tab_tdup_hmask'/>
+<use f='luajit/lj_opt_fold.c' l='2256' macro='1' u='r' c='fold_fload_str_len_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2274' macro='1' u='r' c='fold_fload_str_len_tostr'/>
+<use f='luajit/lj_opt_fold.c' l='2283' macro='1' u='r' c='fold_fload_cdata_typeid_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2298' macro='1' u='r' c='fold_fload_cdata_int64_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2520' u='r' c='lj_opt_fold'/>

@@ -1,0 +1,34 @@
+<dec f='luajit/lj_target.h' l='21'/>
+<doc f='luajit/lj_target.h' l='17'>/* The hi-bit is NOT set for an allocated register. This means the value
+** can be directly used without masking. The hi-bit is set for a register
+** allocation hint or for RID_INIT, RID_SINK or RID_SUNK.
+*/</doc>
+<use f='luajit/lj_emit_x86.h' l='199' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='204' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='226' u='c'/>
+<use f='luajit/lj_asm.c' l='1437' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='158' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='196' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='209' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='228' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='236' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='277' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='300' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='310' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='374' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='399' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='421' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='441' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='456' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1100' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1120' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1120' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1277' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1384' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1386' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1428' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1428' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1517' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1631' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2128' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2416' u='c'/>

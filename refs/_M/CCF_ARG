@@ -1,0 +1,10 @@
+<dec f='luajit/lj_cconv.h' l='53'/>
+<use f='luajit/lib_buffer.c' l='96' u='c'/>
+<use f='luajit/lib_buffer.c' l='189' u='c'/>
+<use f='luajit/lib_ffi.c' l='85' u='c'/>
+<use f='luajit/lib_ffi.c' l='98' u='c'/>
+<use f='luajit/lib_ffi.c' l='687' u='c'/>
+<use f='luajit/lib_ffi.c' l='690' u='c'/>
+<use f='luajit/lj_carith.c' l='340' u='c'/>
+<use f='luajit/lj_ccall.c' l='698' u='c'/>
+<use f='luajit/lj_ccall.c' l='1049' u='c'/>

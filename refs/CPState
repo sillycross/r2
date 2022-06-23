@@ -1,0 +1,21 @@
+<def f='luajit/lj_cparse.h' l='41' ll='59'/>
+<use f='luajit/lj_cparse.h' l='41'/>
+<size>128</size>
+<doc f='luajit/lj_cparse.h' l='40'>/* C parser state. */</doc>
+<mbr r='CPState::c' o='0' t='CPChar'/>
+<mbr r='CPState::tok' o='32' t='CPToken'/>
+<mbr r='CPState::val' o='64' t='CPValue'/>
+<mbr r='CPState::str' o='128' t='GCstr *'/>
+<mbr r='CPState::ct' o='192' t='CType *'/>
+<mbr r='CPState::p' o='256' t='const char *'/>
+<mbr r='CPState::sb' o='320' t='SBuf'/>
+<mbr r='CPState::L' o='576' t='lua_State *'/>
+<mbr r='CPState::cts' o='640' t='CTState *'/>
+<mbr r='CPState::param' o='704' t='TValue *'/>
+<mbr r='CPState::srcname' o='768' t='const char *'/>
+<mbr r='CPState::linenumber' o='832' t='BCLine'/>
+<mbr r='CPState::depth' o='864' t='int'/>
+<mbr r='CPState::tmask' o='896' t='uint32_t'/>
+<mbr r='CPState::mode' o='928' t='uint32_t'/>
+<mbr r='CPState::packstack' o='960' t='uint8_t [7]'/>
+<mbr r='CPState::curpack' o='1016' t='uint8_t'/>

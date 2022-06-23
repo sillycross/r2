@@ -1,0 +1,7 @@
+<dec f='luajit/lj_errmsg.h' l='18' macro='1' type='139'/>
+<use f='luajit/lj_errmsg.h' l='18' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='158' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='194' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_tab.c' l='43' u='r' c='newhpart'/>
+<use f='luajit/lj_tab.c' l='118' u='r' c='newtab'/>
+<use f='luajit/lj_tab.c' l='239' u='r' c='lj_tab_resize'/>

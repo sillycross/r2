@@ -1,0 +1,5 @@
+<dec f='luajit/lj_lib.h' l='88'/>
+<use f='luajit/lib_base.c' l='629' u='c'/>
+<use f='luajit/lib_string.c' l='513' u='c'/>
+<use f='luajit/lib_table.c' l='288' u='c'/>
+<use f='luajit/lib_table.c' l='296' u='c'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='47' type='void luaL_checkany(lua_State * L, int narg)'/>
+<def f='luajit/lj_api.c' l='246' ll='250' macro='1' type='void luaL_checkany(lua_State * L, int idx)'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='60'/>
+<use f='luajit/lib_aux.c' l='282' u='c'/>

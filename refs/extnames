@@ -1,0 +1,10 @@
+<def f='luajit/host/buildvm_arch.h' l='12' ll='74' type='const char *const [61]'/>
+<use f='luajit/host/buildvm.c' l='127' u='r'/>
+<use f='luajit/host/buildvm.c' l='127' u='r'/>
+<use f='luajit/host/buildvm.c' l='140' u='r' c='collect_reloc'/>
+<use f='luajit/host/buildvm.c' l='182' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='127' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='127' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='127' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='127' u='r' c='build_code'/>
+<doc f='luajit/host/buildvm_arch.h' l='11'>//|.externnames extnames</doc>

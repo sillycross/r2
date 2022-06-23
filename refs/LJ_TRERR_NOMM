@@ -1,0 +1,4 @@
+<use f='luajit/lj_record.c' l='739' u='r' c='rec_call_setup'/>
+<use f='luajit/lj_record.c' l='1059' u='r' c='rec_mm_arith'/>
+<use f='luajit/lj_record.c' l='1094' u='r' c='rec_mm_len'/>
+<use f='luajit/lj_record.c' l='1420' u='r' c='lj_record_idx'/>

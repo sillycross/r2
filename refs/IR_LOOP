@@ -1,0 +1,16 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='17'/>
+<use f='luajit/lj_asm.c' l='1718' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2182' c='asm_setup_regsp'/>
+<use f='luajit/lj_opt_fold.c' l='1343' u='r' c='fold_narrow_convert'/>
+<use f='luajit/lj_opt_fold.c' l='1952' u='r' c='fold_abc_invar'/>
+<use f='luajit/lj_opt_fold.c' l='164' u='r' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='164' u='r' c='fold_barrier_tab'/>
+<use f='luajit/lj_opt_fold.c' l='2386' u='r' c='fold_barrier_tnew_tdup'/>
+<use f='luajit/lj_opt_loop.c' l='109' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='286' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_mem.c' l='365' u='r' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='526' u='r' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='626' u='r' c='lj_opt_dse_fstore'/>
+<use f='luajit/lj_opt_mem.c' l='839' u='r' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='877' u='r' c='lj_opt_dse_xstore'/>
+<use f='luajit/lj_trace.c' l='688' u='r' c='trace_state'/>

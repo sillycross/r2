@@ -1,0 +1,5 @@
+<dec f='luajit/lj_lex.h' l='56' type='TValue'/>
+<offset>192</offset>
+<doc f='luajit/lj_lex.h' l='56'>/* Lookahead token value. */</doc>
+<use f='luajit/lj_lex.c' l='463' u='r' c='lj_lex_next'/>
+<use f='luajit/lj_lex.c' l='471' u='a' c='lj_lex_lookahead'/>

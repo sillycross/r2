@@ -1,0 +1,6 @@
+<dec f='luajit/lj_bcdump.h' l='39'/>
+<doc f='luajit/lj_bcdump.h' l='36'>/* If you perform *any* kind of private modifications to the bytecode itself
+** or to the dump format, you *must* set BCDUMP_VERSION to 0x80 or higher.
+*/</doc>
+<use f='luajit/lj_bcread.c' l='395' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='318' u='c'/>

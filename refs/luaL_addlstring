@@ -1,0 +1,6 @@
+<dec f='luajit/lauxlib.h' l='153' type='void luaL_addlstring(luaL_Buffer * B, const char * s, size_t l)'/>
+<use f='luajit/lib_aux.c' l='169' u='c' c='luaL_gsub'/>
+<def f='luajit/lib_aux.c' l='219' ll='230' macro='1' type='void luaL_addlstring(luaL_Buffer * B, const char * s, size_t l)'/>
+<use f='luajit/lib_aux.c' l='234' u='c' c='luaL_addstring'/>
+<use f='luajit/lib_string.c' l='559' u='c' c='add_s'/>
+<use f='luajit/lib_string.c' l='635' u='c' c='lj_cf_string_gsub'/>

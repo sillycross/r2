@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='118' type='TRef lj_opt_fwd_aload(jit_State * J)'/>
+<use f='luajit/lj_folddef.h' l='126' u='r'/>
+<def f='luajit/lj_opt_mem.c' l='246' ll='253' type='TRef lj_opt_fwd_aload(jit_State * J)'/>
+<doc f='luajit/lj_opt_mem.c' l='245'>/* ALOAD forwarding. */</doc>

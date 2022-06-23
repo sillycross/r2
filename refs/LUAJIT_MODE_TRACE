@@ -1,0 +1,4 @@
+<dec f='luajit/luajit.h' l='50' type='5'/>
+<doc f='luajit/luajit.h' l='50'>/* Flush a compiled trace. */</doc>
+<use f='luajit/lib_jit.c' l='83' u='r' c='lj_cf_jit_flush'/>
+<use f='luajit/lj_dispatch.c' l='278' c='luaJIT_setmode'/>

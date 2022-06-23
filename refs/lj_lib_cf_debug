@@ -1,0 +1,1 @@
+<use f='luajit/lib_debug.c' l='403' macro='1' u='r' c='luaopen_debug'/>

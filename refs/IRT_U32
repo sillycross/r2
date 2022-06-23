@@ -1,0 +1,27 @@
+<dec f='luajit/lj_ir.h' l='318' macro='1' type='20'/>
+<use f='luajit/lj_ir.h' l='327'/>
+<use f='luajit/lj_asm_x86.h' l='461' macro='1' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='828' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='840' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='851' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='863' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='881' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='885' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_crecord.c' l='331' u='r' c='crec_fill'/>
+<use f='luajit/lj_crecord.c' l='521' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='521' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='526' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='526' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='559' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='679' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='1277' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1340' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1343' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1363' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1502' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_opt_fold.c' l='1177' u='r' c='fold_simplify_conv_i64_num'/>
+<use f='luajit/lj_opt_fold.c' l='1199' u='r' c='fold_simplify_conv_int_i64'/>
+<use f='luajit/lj_opt_fold.c' l='1228' u='r' c='fold_simplify_tobit_conv'/>
+<use f='luajit/lj_opt_fold.c' l='1232' u='r' c='fold_simplify_tobit_conv'/>
+<use f='luajit/lj_opt_fold.c' l='1245' u='r' c='fold_simplify_floor_conv'/>
+<use f='luajit/lj_opt_fold.c' l='2053' c='kfold_xload'/>

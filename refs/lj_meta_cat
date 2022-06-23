@@ -1,0 +1,4 @@
+<dec f='luajit/lj_meta.h' l='29' type='TValue * lj_meta_cat(lua_State * L, TValue * top, int left)'/>
+<use f='luajit/lj_api.c' l='777' u='c' c='lua_concat'/>
+<def f='luajit/lj_meta.c' l='238' ll='312' type='TValue * lj_meta_cat(lua_State * L, TValue * top, int left)'/>
+<doc f='luajit/lj_meta.c' l='237'>/* Helper for CAT. Coercion, iterative concat, __concat metamethod. */</doc>

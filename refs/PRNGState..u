@@ -1,0 +1,37 @@
+<dec f='luajit/lj_def.h' l='378' type='uint64_t [4]'/>
+<offset>0</offset>
+<use f='luajit/lj_prng.h' l='18' u='w' c='lj_prng_seed_fixed'/>
+<use f='luajit/lj_prng.h' l='19' u='w' c='lj_prng_seed_fixed'/>
+<use f='luajit/lj_prng.h' l='20' u='w' c='lj_prng_seed_fixed'/>
+<use f='luajit/lj_prng.h' l='21' u='w' c='lj_prng_seed_fixed'/>
+<use f='luajit/lib_math.c' l='123' u='w' c='random_seed'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='36' u='r' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='38' u='w' c='lj_prng_u64d'/>
+<use f='luajit/lj_prng.c' l='66' u='r' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='66' u='w' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='67' u='r' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='67' u='w' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='68' u='r' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='68' u='w' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='69' u='r' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='69' u='w' c='lj_prng_condition'/>
+<use f='luajit/lj_prng.c' l='201' c='lj_prng_seed_secure'/>
+<use f='luajit/lj_prng.c' l='201' c='lj_prng_seed_secure'/>
+<use f='luajit/lj_prng.c' l='201' u='r' c='lj_prng_seed_secure'/>
+<use f='luajit/lj_prng.c' l='223' u='r' c='lj_prng_seed_secure'/>
+<use f='luajit/lj_prng.c' l='223' u='r' c='lj_prng_seed_secure'/>
+<use f='luajit/lj_prng.c' l='225' u='r' c='lj_prng_seed_secure'/>

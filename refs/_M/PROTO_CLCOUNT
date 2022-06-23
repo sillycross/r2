@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='405'/>
+<doc f='luajit/lj_obj.h' l='404'>/* Top bits used for counting created closures. */</doc>
+<use f='luajit/lj_func.c' l='134' u='c'/>
+<use f='luajit/lj_func.c' l='135' u='c'/>

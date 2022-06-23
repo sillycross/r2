@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='63'/>
+<use f='luajit/lj_obj.h' l='304' u='c'/>
+<use f='luajit/lj_obj.h' l='321' u='c'/>
+<use f='luajit/lj_obj.h' l='346' u='c'/>
+<use f='luajit/lj_obj.h' l='370' u='c'/>
+<use f='luajit/lj_obj.h' l='430' u='c'/>
+<use f='luajit/lj_obj.h' l='496' u='c'/>
+<use f='luajit/lj_obj.h' l='684' u='c'/>
+<use f='luajit/lj_obj.h' l='724' u='c'/>
+<use f='luajit/lj_jit.h' l='252' u='c'/>

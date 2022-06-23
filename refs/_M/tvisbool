@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='783'/>
+<use f='luajit/lib_jit.c' l='54' u='c'/>
+<use f='luajit/lib_os.c' l='115' u='c'/>
+<use f='luajit/lj_api.c' l='1048' u='c'/>
+<use f='luajit/lj_ccall.c' l='915' u='c'/>
+<use f='luajit/lj_cconv.c' l='613' u='c'/>
+<use f='luajit/lj_meta.c' l='420' u='c'/>
+<use f='luajit/lj_meta.c' l='420' u='c'/>
+<use f='luajit/lj_record.c' l='256' u='c'/>
+<use f='luajit/lj_tab.c' l='27' u='c'/>

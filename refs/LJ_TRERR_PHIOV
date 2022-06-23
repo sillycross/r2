@@ -1,0 +1,3 @@
+<use f='luajit/lj_opt_loop.c' l='167' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='339' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='368' u='r' c='loop_unroll'/>

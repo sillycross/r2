@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='219' type='184'/>
+<doc f='luajit/lj_target_x86.h' l='219'>/* Really b8+r. */</doc>
+<use f='luajit/lj_emit_x86.h' l='287' u='r' c='emit_loadi'/>
+<use f='luajit/lj_emit_x86.h' l='332' u='r' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='360' u='r' c='emit_rma'/>
+<use f='luajit/lj_ccallback.c' l='128' u='r' c='callback_mcode_init'/>

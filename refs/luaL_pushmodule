@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='89' type='void luaL_pushmodule(lua_State * L, const char * modname, int sizehint)'/>
+<def f='luajit/lib_aux.c' l='114' ll='126' macro='1' type='void luaL_pushmodule(lua_State * L, const char * modname, int sizehint)'/>
+<use f='luajit/lib_aux.c' l='133' u='c' c='luaL_openlib'/>
+<use f='luajit/lib_package.c' l='519' u='c' c='lj_cf_package_module'/>

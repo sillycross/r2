@@ -1,0 +1,2 @@
+<dec f='luajit/lj_obj.h' l='285'/>
+<use f='luajit/host/buildvm_arch.h' l='2978' u='c'/>

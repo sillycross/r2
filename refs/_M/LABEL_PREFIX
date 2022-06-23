@@ -1,0 +1,6 @@
+<dec f='luajit/host/buildvm.h' l='29'/>
+<use f='luajit/host/buildvm.c' l='204' u='c'/>
+<use f='luajit/host/buildvm.c' l='232' u='c'/>
+<doc f='luajit/host/buildvm.h' l='28'>/* Prefixes for generated labels. */</doc>
+<use f='luajit/host/buildvm_asm.c' l='74' u='c'/>
+<use f='luajit/host/buildvm_asm.c' l='74' u='c'/>

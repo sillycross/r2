@@ -1,0 +1,18 @@
+<dec f='luajit/lj_ir.h' l='562' type='MRef'/>
+<offset>0</offset>
+<doc f='luajit/lj_ir.h' l='562'>/* Pointer constant (overlaps op12 or entire slot). */</doc>
+<use f='luajit/lj_asm.c' l='370' macro='1' u='m' c='ra_rematk'/>
+<use f='luajit/lj_asm_x86.h' l='256' macro='1' u='m' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='313' macro='1' u='m' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='768' macro='1' u='m' c='asm_retf'/>
+<use f='luajit/lj_ir.c' l='321' macro='1' u='m' c='lj_ir_kptr_'/>
+<use f='luajit/lj_ir.c' l='330' u='m' c='lj_ir_kptr_'/>
+<use f='luajit/lj_ir.c' l='393' macro='1' u='m' c='lj_ir_kvalue'/>
+<use f='luajit/lj_opt_fold.c' l='512' macro='1' u='m' c='fold_kfold_snew_kptr'/>
+<use f='luajit/lj_opt_fold.c' l='770' macro='1' u='m' c='fold_kfold_add_kptr'/>
+<use f='luajit/lj_opt_fold.c' l='2354' macro='1' u='m' c='fold_xload_kptr'/>
+<use f='luajit/lj_opt_mem.c' l='697' macro='1' u='m' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='697' macro='1' u='m' c='aa_xref'/>
+<use f='luajit/lj_record.c' l='1463' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_snap.c' l='421' macro='1' u='m' c='snap_replay_const'/>
+<use f='luajit/lj_snap.c' l='650' macro='1' u='m' c='snap_restoreval'/>

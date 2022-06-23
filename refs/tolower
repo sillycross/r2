@@ -1,0 +1,5 @@
+<dec f='include/ctype.h' l='122' type='int tolower(int __c)'/>
+<def f='include/ctype.h' l='206' ll='210' macro='1' type='int tolower(int __c)'/>
+<use f='luajit/host/minilua.c' l='7021' macro='1' u='c' c='str_lower'/>
+<use f='luajit/host/minilua.c' l='7123' macro='1' u='c' c='match_class'/>
+<doc f='include/ctype.h' l='121'>/* Return the lowercase version of C.  */</doc>

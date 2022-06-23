@@ -1,0 +1,5 @@
+<dec f='luajit/lj_debug.h' l='34' type='const char * lj_debug_slotname(GCproto * pt, const BCIns * pc, BCReg slot, const char ** name)'/>
+<def f='luajit/lj_debug.c' l='250' ll='290' type='const char * lj_debug_slotname(GCproto * pt, const BCIns * ip, BCReg slot, const char ** name)'/>
+<use f='luajit/lj_debug.c' l='312' u='c' c='lj_debug_funcname'/>
+<doc f='luajit/lj_debug.c' l='249'>/* Deduce name of an object from slot number and PC. */</doc>
+<use f='luajit/lj_err.c' l='906' u='c' c='lj_err_optype'/>

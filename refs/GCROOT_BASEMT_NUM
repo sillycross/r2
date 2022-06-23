@@ -1,0 +1,2 @@
+<dec f='luajit/lj_obj.h' l='576' type='35'/>
+<use f='luajit/host/buildvm_arch.h' l='1327' u='r' c='build_subroutines'/>

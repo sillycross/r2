@@ -1,0 +1,18 @@
+<dec f='luajit/lj_obj.h' l='653' type='MRef'/>
+<offset>3008</offset>
+<doc f='luajit/lj_obj.h' l='653'>/* Current JIT code L-&gt;base or NULL. */</doc>
+<use f='luajit/lj_asm.c' l='358' u='a' c='ra_rematk'/>
+<use f='luajit/lj_asm_x86.h' l='435' u='a' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='773' u='a' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='2679' u='a' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2872' u='a' c='asm_head_side_base'/>
+<use f='luajit/lj_asm.c' l='2089' u='a' c='asm_tail_link'/>
+<use f='luajit/lj_ccallback.c' l='684' u='m' c='lj_ccallback_enter'/>
+<use f='luajit/lj_err.c' l='835' u='m' c='lj_err_run'/>
+<use f='luajit/lj_gc.c' l='664' u='m' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='701' u='m' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='764' u='m' c='lj_gc_step_jit'/>
+<use f='luajit/lj_state.c' l='75' u='m' c='resizestack'/>
+<use f='luajit/lj_state.c' l='76' u='m' c='resizestack'/>
+<use f='luajit/lj_state.c' l='76' u='m' c='resizestack'/>
+<use f='luajit/lj_state.c' l='98' u='m' c='lj_state_shrinkstack'/>

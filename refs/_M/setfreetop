@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='516'/>
+<use f='luajit/lj_tab.c' l='47' u='c'/>
+<use f='luajit/lj_tab.c' l='190' u='c'/>
+<use f='luajit/lj_tab.c' l='209' u='c'/>
+<use f='luajit/lj_tab.c' l='456' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='33' type='void lj_trace_freestate(global_State * g)'/>
+<use f='luajit/lj_state.c' l='171' u='c' c='close_state'/>
+<def f='luajit/lj_trace.c' l='353' ll='369' type='void lj_trace_freestate(global_State * g)'/>
+<doc f='luajit/lj_trace.c' l='352'>/* Free everything associated with the JIT compiler state. */</doc>

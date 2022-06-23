@@ -1,0 +1,32 @@
+<dec f='luajit/host/minilua.c' l='122' type='12'/>
+<use f='luajit/host/minilua.c' l='3139' u='r' c='freeexp'/>
+<use f='luajit/host/minilua.c' l='3193' u='r' c='luaK_setoneret'/>
+<use f='luajit/host/minilua.c' l='3204' u='r' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3260' c='discharge2reg'/>
+<use f='luajit/host/minilua.c' l='3270' u='r' c='discharge2reg'/>
+<use f='luajit/host/minilua.c' l='3273' u='r' c='discharge2anyreg'/>
+<use f='luajit/host/minilua.c' l='3298' u='r' c='exp2reg'/>
+<use f='luajit/host/minilua.c' l='3308' u='r' c='luaK_exp2anyreg'/>
+<use f='luajit/host/minilua.c' l='3386' u='r' c='luaK_self'/>
+<use f='luajit/host/minilua.c' l='3463' c='codenot'/>
+<use f='luajit/host/minilua.c' l='4370' u='r' c='assignment'/>
+<dec f='luajit/lj_parse.c' l='50' type='12'/>
+<use f='luajit/lj_parse.c' l='408' u='r' c='expr_free'/>
+<use f='luajit/lj_parse.c' l='463' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='466' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='541' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='557' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='585' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='601' u='r' c='expr_toanyreg'/>
+<use f='luajit/lj_parse.c' l='686' u='r' c='bcemit_method'/>
+<use f='luajit/lj_parse.c' l='726' u='r' c='bcemit_branch'/>
+<use f='luajit/lj_parse.c' l='826' u='r' c='bcemit_arith'/>
+<use f='luajit/lj_parse.c' l='827' u='r' c='bcemit_arith'/>
+<use f='luajit/lj_parse.c' l='874' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='875' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='957' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='1729' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1801' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='2229' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2238' u='r' c='parse_assignment'/>
+<doc f='luajit/lj_parse.c' l='50'>/* info = result register */</doc>

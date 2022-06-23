@@ -1,0 +1,3 @@
+<dec f='luajit/lj_buf.h' l='171' type='SBuf * lj_buf_putstr_lower(SBuf * sb, GCstr * s)'/>
+<def f='luajit/lj_buf.c' l='151' ll='167' type='SBuf * lj_buf_putstr_lower(SBuf * sb, GCstr * s)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_mcode.h' l='20' type='MCode * lj_mcode_reserve(jit_State * J, MCode ** lim)'/>
+<use f='luajit/lj_asm.c' l='2401' u='c' c='lj_asm_trace'/>
+<def f='luajit/lj_mcode.c' l='298' ll='306' type='MCode * lj_mcode_reserve(jit_State * J, MCode ** lim)'/>
+<doc f='luajit/lj_mcode.c' l='297'>/* Reserve the remainder of the current MCode area. */</doc>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target.h' l='33'/>
+<use f='luajit/lj_asm.c' l='357' u='c'/>
+<use f='luajit/lj_asm.c' l='431' u='c'/>
+<use f='luajit/lj_asm.c' l='782' u='c'/>
+<use f='luajit/lj_asm.c' l='1598' u='c'/>
+<use f='luajit/lj_asm.c' l='1936' u='c'/>

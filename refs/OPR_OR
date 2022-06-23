@@ -1,0 +1,8 @@
+<dec f='luajit/host/minilua.c' l='139' type='14'/>
+<use f='luajit/host/minilua.c' l='3563' c='luaK_infix'/>
+<use f='luajit/host/minilua.c' l='3590' c='luaK_posfix'/>
+<use f='luajit/host/minilua.c' l='4260' u='r' c='getbinopr'/>
+<dec f='luajit/lj_parse.c' l='154' type='14'/>
+<use f='luajit/lj_parse.c' l='886' u='r' c='bcemit_binop_left'/>
+<use f='luajit/lj_parse.c' l='907' u='r' c='bcemit_binop'/>
+<use f='luajit/lj_parse.c' l='2063' u='r' c='token2binop'/>

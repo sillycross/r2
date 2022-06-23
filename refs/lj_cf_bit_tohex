@@ -1,0 +1,1 @@
+<def f='luajit/lib_bit.c' l='145' macro='1' type='int lj_cf_bit_tohex(lua_State * L)'/>

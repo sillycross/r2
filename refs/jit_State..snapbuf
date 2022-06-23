@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='452' type='SnapShot *'/>
+<offset>2816</offset>
+<doc f='luajit/lj_jit.h' l='452'>/* Temp. snapshot buffer. */</doc>
+<use f='luajit/lj_snap.c' l='43' u='w' c='lj_snap_grow_buf_'/>
+<use f='luajit/lj_snap.c' l='43' u='r' c='lj_snap_grow_buf_'/>
+<use f='luajit/lj_snap.c' l='44' u='r' c='lj_snap_grow_buf_'/>
+<use f='luajit/lj_trace.c' l='366' u='r' c='lj_trace_freestate'/>
+<use f='luajit/lj_trace.c' l='442' u='r' c='trace_start'/>

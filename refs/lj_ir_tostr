@@ -1,0 +1,13 @@
+<dec f='luajit/lj_iropt.h' l='87' type='TRef lj_ir_tostr(jit_State * J, TRef tr)'/>
+<use f='luajit/lj_ffrecord.c' l='753' u='c' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='852' u='c' c='recff_string_rep'/>
+<use f='luajit/lj_ffrecord.c' l='856' u='c' c='recff_string_rep'/>
+<use f='luajit/lj_ffrecord.c' l='878' u='c' c='recff_string_op'/>
+<use f='luajit/lj_ffrecord.c' l='886' u='c' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='887' u='c' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='946' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1063' u='c' c='recff_table_concat'/>
+<use f='luajit/lj_ffrecord.c' l='1125' u='c' c='recff_io_write'/>
+<def f='luajit/lj_ir.c' l='438' ll='447' type='TRef lj_ir_tostr(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_ir.c' l='437'>/* Convert from integer or number to string. */</doc>
+<use f='luajit/lj_record.c' l='2211' u='c' c='lj_record_ins'/>

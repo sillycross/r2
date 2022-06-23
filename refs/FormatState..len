@@ -1,0 +1,10 @@
+<dec f='luajit/lj_strfmt.h' l='18' type='MSize'/>
+<offset>192</offset>
+<doc f='luajit/lj_strfmt.h' l='18'>/* Size of literal string. */</doc>
+<use f='luajit/lj_ffrecord.c' l='963' u='r' c='recff_string_format'/>
+<use f='luajit/lj_strfmt.c' l='84' u='w' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='92' u='w' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='93' u='r' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='382' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='385' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='557' u='r' c='lj_strfmt_pushvf'/>

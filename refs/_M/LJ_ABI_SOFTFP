@@ -1,0 +1,4 @@
+<use f='luajit/lib_ffi.c' l='736' u='c'/>
+<use f='luajit/lj_vm.h' l='60' u='c'/>
+<use f='luajit/lj_ccall.c' l='728' u='c'/>
+<use f='luajit/lj_ccall.c' l='1099' u='c'/>

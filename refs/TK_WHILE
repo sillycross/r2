@@ -1,0 +1,4 @@
+<dec f='luajit/host/minilua.c' l='130' type='277'/>
+<use f='luajit/host/minilua.c' l='2685' u='r' c='luaX_init'/>
+<use f='luajit/host/minilua.c' l='4406' u='r' c='whilestat'/>
+<use f='luajit/host/minilua.c' l='4633' c='statement'/>

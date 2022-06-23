@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ccall.h' l='31'/>
+<use f='luajit/lj_ccall.c' l='680' u='c'/>
+<use f='luajit/lj_ccall.c' l='953' u='c'/>
+<use f='luajit/lj_ccallback.c' l='534' u='c'/>

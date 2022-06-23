@@ -1,0 +1,16 @@
+<dec f='luajit/lj_record.h' l='18' type='TValue'/>
+<offset>192</offset>
+<doc f='luajit/lj_record.h' l='18'>/* Runtime value of metamethod object. */</doc>
+<use f='luajit/lj_ffrecord.c' l='390' u='a' c='recff_metacall'/>
+<use f='luajit/lj_record.c' l='746' u='a' c='rec_call_setup'/>
+<use f='luajit/lj_record.c' l='1002' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1029' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1066' u='a' c='rec_mm_arith'/>
+<use f='luajit/lj_record.c' l='1081' u='a' c='rec_mm_len'/>
+<use f='luajit/lj_record.c' l='1106' u='a' c='rec_mm_callcomp'/>
+<use f='luajit/lj_record.c' l='1121' u='a' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1134' u='a' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1162' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1175' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1427' u='a' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1442' u='a' c='lj_record_idx'/>

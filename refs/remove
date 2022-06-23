@@ -1,0 +1,4 @@
+<dec f='include/stdio.h' l='144' type='int remove(const char * __filename)'/>
+<doc f='include/stdio.h' l='143'>/* Remove file FILENAME.  */</doc>
+<use f='luajit/host/minilua.c' l='6983' u='c' c='os_remove'/>
+<use f='luajit/lib_os.c' l='67' u='c' c='lj_cf_os_remove'/>

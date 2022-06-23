@@ -1,0 +1,6 @@
+<def f='luajit/lj_err.c' l='865' ll='875' macro='1' type='void err_msgv(lua_State * L, ErrMsg em)'/>
+<use f='luajit/lj_err.c' l='880' u='c' c='lj_err_msg'/>
+<use f='luajit/lj_err.c' l='908' u='c' c='lj_err_optype'/>
+<use f='luajit/lj_err.c' l='910' u='c' c='lj_err_optype'/>
+<use f='luajit/lj_err.c' l='918' u='c' c='lj_err_comp'/>
+<use f='luajit/lj_err.c' l='936' u='c' c='lj_err_optype_call'/>

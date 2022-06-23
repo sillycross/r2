@@ -1,0 +1,31 @@
+<dec f='luajit/lua.h' l='140' type='int lua_type(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='91' macro='1' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='97' macro='1' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='118' macro='1' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_aux.c' l='280' macro='1' u='c' c='luaL_ref'/>
+<use f='luajit/lib_base.c' l='487' macro='1' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='294' macro='1' u='c' c='hookf'/>
+<use f='luajit/lib_debug.c' l='328' macro='1' u='c' c='lj_cf_debug_sethook'/>
+<use f='luajit/lib_os.c' l='151' macro='1' u='c' c='getboolfield'/>
+<use f='luajit/lib_os.c' l='174' macro='1' u='c' c='lj_cf_os_date'/>
+<use f='luajit/lib_os.c' l='232' macro='1' u='c' c='lj_cf_os_time'/>
+<use f='luajit/lib_package.c' l='212' macro='1' u='c' c='ll_register'/>
+<use f='luajit/lib_package.c' l='414' macro='1' u='c' c='lj_cf_package_loader_preload'/>
+<use f='luajit/lib_package.c' l='417' macro='1' u='c' c='lj_cf_package_loader_preload'/>
+<use f='luajit/lib_package.c' l='444' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='449' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='454' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='465' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='521' macro='1' u='c' c='lj_cf_package_module'/>
+<use f='luajit/lib_string.c' l='572' u='c' c='add_value'/>
+<use f='luajit/lib_string.c' l='595' macro='1' u='c' c='add_value'/>
+<use f='luajit/lib_string.c' l='605' u='c' c='lj_cf_string_gsub'/>
+<use f='luajit/lib_table.c' l='182' macro='1' u='c' c='sort_comp'/>
+<def f='luajit/lj_api.c' l='217' ll='238' macro='1' type='int lua_type(lua_State * L, int idx)'/>
+<use f='luajit/lj_api.c' l='242' u='c' c='luaL_checktype'/>
+<use f='luajit/luajit.c' l='90' macro='1' u='c' c='report'/>
+<use f='luajit/luajit.c' l='102' macro='1' u='c' c='traceback'/>
+<use f='luajit/luajit.c' l='281' macro='1' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='285' macro='1' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='311' macro='1' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='354' macro='1' u='c' c='dojitcmd'/>

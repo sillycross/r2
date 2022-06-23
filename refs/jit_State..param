@@ -1,0 +1,26 @@
+<dec f='luajit/lj_jit.h' l='470' type='int32_t [15]'/>
+<offset>13056</offset>
+<doc f='luajit/lj_jit.h' l='470'>/* JIT engine parameters. */</doc>
+<use f='luajit/lib_jit.c' l='504' u='w' c='jitopt_param'/>
+<use f='luajit/lib_jit.c' l='733' u='r' c='jit_init'/>
+<use f='luajit/lib_jit.c' l='733' u='r' c='jit_init'/>
+<use f='luajit/lj_dispatch.c' l='86' u='r' c='lj_dispatch_init_hotcount'/>
+<use f='luajit/lj_ffrecord.c' l='111' u='r' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='149' u='r' c='recff_nyi'/>
+<use f='luajit/lj_mcode.c' l='267' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='362' u='r' c='lj_mcode_limiterr'/>
+<use f='luajit/lj_mcode.c' l='364' u='r' c='lj_mcode_limiterr'/>
+<use f='luajit/lj_record.c' l='805' u='r' c='check_downrec_unroll'/>
+<use f='luajit/lj_record.c' l='1693' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1701' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='2512' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2513' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2596' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2597' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2636' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2637' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2638' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='40' u='r' c='lj_snap_grow_buf_'/>
+<use f='luajit/lj_trace.c' l='70' u='r' c='trace_findfree'/>
+<use f='luajit/lj_trace.c' l='740' u='r' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='759' u='r' c='trace_hotside'/>

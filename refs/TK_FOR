@@ -1,0 +1,3 @@
+<dec f='luajit/host/minilua.c' l='128' type='264'/>
+<use f='luajit/host/minilua.c' l='4508' u='r' c='forstat'/>
+<use f='luajit/host/minilua.c' l='4643' c='statement'/>

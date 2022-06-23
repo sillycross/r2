@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='496' type='MCode *'/>
+<offset>24448</offset>
+<doc f='luajit/lj_jit.h' l='496'>/* Top of current mcode area. */</doc>
+<use f='luajit/lj_mcode.c' l='272' u='w' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='305' u='r' c='lj_mcode_reserve'/>
+<use f='luajit/lj_mcode.c' l='311' u='w' c='lj_mcode_commit'/>

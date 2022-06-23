@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='424' type='uint8_t'/>
+<offset>1440</offset>
+<doc f='luajit/lj_jit.h' l='424'>/* Allowed to merge with next snapshot. */</doc>
+<use f='luajit/lj_record.c' l='308' u='w' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='2059' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='187' u='r' c='lj_snap_add'/>
+<use f='luajit/lj_snap.c' l='198' u='w' c='lj_snap_add'/>
+<use f='luajit/lj_trace.c' l='444' u='w' c='trace_start'/>

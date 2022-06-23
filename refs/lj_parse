@@ -1,0 +1,4 @@
+<dec f='luajit/lj_parse.h' l='12' type='GCproto * lj_parse(LexState * ls)'/>
+<use f='luajit/lj_load.c' l='41' u='c' c='cpparser'/>
+<def f='luajit/lj_parse.c' l='2715' ll='2746' type='GCproto * lj_parse(LexState * ls)'/>
+<doc f='luajit/lj_parse.c' l='2714'>/* Entry point of bytecode parser. */</doc>

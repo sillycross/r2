@@ -1,0 +1,19 @@
+<dec f='luajit/lj_parse.c' l='139' type='uint8_t'/>
+<use f='luajit/lj_parse.c' l='534' u='w' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='1330' u='r' c='fs_fixup_bc'/>
+<use f='luajit/lj_parse.c' l='1541' u='r' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='1591' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1632' u='w' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='1841' u='w' c='parse_params'/>
+<use f='luajit/lj_parse.c' l='1881' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1881' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1883' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1884' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1885' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1886' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='2015' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2330' u='w' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2357' u='r' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2734' u='w' c='lj_parse'/>
+<offset>704</offset>
+<doc f='luajit/lj_parse.c' l='139'>/* Prototype flags. */</doc>

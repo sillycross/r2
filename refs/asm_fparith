@@ -1,0 +1,9 @@
+<def f='luajit/lj_asm_x86.h' l='2031' ll='2053' type='void asm_fparith(ASMState * as, IRIns * ir, x86Op xo)'/>
+<use f='luajit/lj_asm_x86.h' l='2182' u='c' c='asm_add'/>
+<use f='luajit/lj_asm_x86.h' l='2190' u='c' c='asm_sub'/>
+<use f='luajit/lj_asm_x86.h' l='2198' u='c' c='asm_mul'/>
+<use f='luajit/lj_asm_x86.h' l='2215' u='c' c='asm_neg'/>
+<use f='luajit/lj_asm_x86.h' l='2236' u='c' c='asm_min'/>
+<use f='luajit/lj_asm_x86.h' l='2244' u='c' c='asm_max'/>
+<use f='luajit/lj_asm.c' l='1679' macro='1' u='c' c='asm_div'/>
+<use f='luajit/lj_asm.c' l='1768' macro='1' u='c' c='asm_ir'/>

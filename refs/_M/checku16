@@ -1,0 +1,2 @@
+<dec f='luajit/lj_def.h' l='104'/>
+<use f='luajit/lj_asm_x86.h' l='2455' u='c'/>

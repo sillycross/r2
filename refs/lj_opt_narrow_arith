@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='143' type='TRef lj_opt_narrow_arith(jit_State * J, TRef rb, TRef rc, TValue * vb, TValue * vc, IROp op)'/>
+<def f='luajit/lj_opt_narrow.c' l='533' ll='547' type='TRef lj_opt_narrow_arith(jit_State * J, TRef rb, TRef rc, TValue * vb, TValue * vc, IROp op)'/>
+<doc f='luajit/lj_opt_narrow.c' l='532'>/* Narrowing of arithmetic operations. */</doc>
+<use f='luajit/lj_record.c' l='2257' u='c' c='lj_record_ins'/>

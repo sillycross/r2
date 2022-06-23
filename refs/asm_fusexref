@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='307' ll='366' type='void asm_fusexref(ASMState * as, IRRef ref, RegSet allow)'/>
+<use f='luajit/lj_asm_x86.h' l='478' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='1401' u='c' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1449' u='c' c='asm_fxstore'/>

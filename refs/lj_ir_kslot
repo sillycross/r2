@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='50' type='TRef lj_ir_kslot(jit_State * J, TRef key, IRRef slot)'/>
+<def f='luajit/lj_ir.c' l='359' ll='379' type='TRef lj_ir_kslot(jit_State * J, TRef key, IRRef slot)'/>
+<doc f='luajit/lj_ir.c' l='358'>/* Intern key slot. */</doc>
+<use f='luajit/lj_record.c' l='1382' u='c' c='rec_idx_key'/>
+<use f='luajit/lj_snap.c' l='584' u='c' c='lj_snap_replay'/>

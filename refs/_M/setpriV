@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='866'/>
+<use f='luajit/lj_bcread.c' l='196' u='c'/>
+<use f='luajit/lj_ir.c' l='389' u='c'/>
+<use f='luajit/lj_meta.c' l='372' u='c'/>
+<use f='luajit/lj_parse.c' l='1709' u='c'/>
+<use f='luajit/lj_record.c' l='2109' u='c'/>
+<use f='luajit/lj_serialize.c' l='321' u='c'/>
+<use f='luajit/lj_snap.c' l='701' u='c'/>

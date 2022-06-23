@@ -1,0 +1,11 @@
+<dec f='luajit/lj_strfmt.h' l='87' type='char * lj_strfmt_wint(char * p, int32_t k)'/>
+<use f='luajit/lj_buf.c' l='226' u='c' c='lj_buf_puttab'/>
+<def f='luajit/lj_strfmt.c' l='102' ll='131' type='char * lj_strfmt_wint(char * p, int32_t k)'/>
+<use f='luajit/lj_strfmt.c' l='190' u='c' c='lj_strfmt_putint'/>
+<use f='luajit/lj_strfmt.c' l='486' u='c' c='lj_strfmt_int'/>
+<use f='luajit/lj_strfmt.c' l='525' u='c' c='lj_strfmt_obj'/>
+<doc f='luajit/lj_strfmt.c' l='101'>/* Write integer to buffer. */</doc>
+<use f='luajit/lj_strfmt_num.c' l='347' u='c' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='478' u='c' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='505' u='c' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='547' u='c' c='lj_strfmt_wfnum'/>

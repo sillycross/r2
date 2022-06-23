@@ -1,0 +1,6 @@
+<dec f='luajit/lj_meta.h' l='26' type='TValue * lj_meta_tset(lua_State * L, cTValue * o, cTValue * k)'/>
+<use f='luajit/lib_ffi.c' l='134' u='c' c='ffi_index_meta'/>
+<use f='luajit/lj_api.c' l='965' u='c' c='lua_settable'/>
+<use f='luajit/lj_api.c' l='986' u='c' c='lua_setfield'/>
+<def f='luajit/lj_meta.c' l='161' ll='198' type='TValue * lj_meta_tset(lua_State * L, cTValue * o, cTValue * k)'/>
+<doc f='luajit/lj_meta.c' l='160'>/* Helper for TSET*. __newindex chain and metamethod. */</doc>

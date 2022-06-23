@@ -1,0 +1,11 @@
+<dec f='luajit/lj_target.h' l='45'/>
+<use f='luajit/lj_asm_x86.h' l='2952' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2952' u='c'/>
+<use f='luajit/lj_asm.c' l='2141' u='c'/>
+<use f='luajit/lj_asm.c' l='2164' u='c'/>
+<use f='luajit/lj_asm.c' l='2266' u='c'/>
+<use f='luajit/lj_asm.c' l='2291' u='c'/>
+<use f='luajit/lj_asm.c' l='2298' u='c'/>
+<use f='luajit/lj_asm.c' l='2308' u='c'/>
+<use f='luajit/lj_asm.c' l='2321' u='c'/>
+<use f='luajit/lj_asm.c' l='2332' u='c'/>

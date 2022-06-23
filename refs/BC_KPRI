@@ -1,0 +1,8 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='43'/>
+<use f='luajit/host/buildvm_arch.h' l='3393' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='482' c='bcemit_nil'/>
+<use f='luajit/lj_parse.c' l='507' u='r' c='bcemit_nil'/>
+<use f='luajit/lj_parse.c' l='549' u='r' c='expr_toreg_nobranch'/>
+<use f='luajit/lj_parse.c' l='573' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='575' u='r' c='expr_toreg'/>
+<use f='luajit/lj_record.c' l='2297' c='lj_record_ins'/>

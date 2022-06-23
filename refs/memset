@@ -1,0 +1,43 @@
+<dec f='include/string.h' l='60' type='void * memset(void * __s, int __c, size_t __n)'/>
+<use f='luajit/dasm_x86.h' l='134' u='c' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='145' u='c' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='146' u='c' c='dasm_setup'/>
+<use f='luajit/host/buildvm.c' l='178' u='c' c='build_code'/>
+<doc f='include/string.h' l='59'>/* Set N bytes of S to C.  */</doc>
+<use f='luajit/host/buildvm_fold.c' l='22' u='c' c='tryhash'/>
+<use f='luajit/host/buildvm_peobj.c' l='135' u='c' c='emit_peobj_sym'/>
+<use f='luajit/host/buildvm_peobj.c' l='164' u='c' c='emit_peobj_sym_sect'/>
+<use f='luajit/host/buildvm_peobj.c' l='182' u='c' c='emit_peobj'/>
+<use f='luajit/lj_buf.h' l='114' u='c' c='lj_bufx_init'/>
+<use f='luajit/lib_buffer.c' l='323' u='c' c='lj_cf_buffer_encode'/>
+<use f='luajit/lib_buffer.c' l='335' u='c' c='lj_cf_buffer_decode'/>
+<use f='luajit/lib_ffi.c' l='719' u='c' c='lj_cf_ffi_fill'/>
+<use f='luajit/lj_alloc.c' l='1238' u='c' c='lj_alloc_create'/>
+<use f='luajit/lj_asm.c' l='320' u='c' c='ra_setup'/>
+<use f='luajit/lj_ccall.c' l='939' u='c' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='941' u='c' c='ccall_set_args'/>
+<use f='luajit/lj_ccallback.c' l='742' u='c' c='callback_slot_new'/>
+<use f='luajit/lj_cconv.c' l='177' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='292' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='298' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='493' u='c' c='cconv_array_tab'/>
+<use f='luajit/lj_cconv.c' l='541' u='c' c='cconv_struct_tab'/>
+<use f='luajit/lj_cconv.c' l='698' u='c' c='cconv_array_init'/>
+<use f='luajit/lj_cconv.c' l='733' u='c' c='cconv_struct_init'/>
+<use f='luajit/lj_cconv.c' l='759' u='c' c='lj_cconv_ct_init'/>
+<use f='luajit/lj_ctype.c' l='599' u='c' c='lj_ctype_init'/>
+<use f='luajit/lj_err.c' l='721' u='c' c='err_raise_ext'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_lib.c' l='59' u='c' c='lib_read_lfunc'/>
+<use f='luajit/lj_opt_dce.c' l='69' u='c' c='lj_opt_dce'/>
+<use f='luajit/lj_record.c' l='898' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='2291' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2581' u='c' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2582' u='c' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2586' u='c' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='219' u='c' c='snap_usedef'/>
+<use f='luajit/lj_state.c' l='220' u='c' c='lua_newstate'/>
+<use f='luajit/lj_str.c' l='140' u='c' c='lj_str_resize'/>
+<use f='luajit/lj_trace.c' l='299' u='c' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='302' u='c' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='438' u='c' c='trace_start'/>

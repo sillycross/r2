@@ -1,0 +1,8 @@
+<dec f='luajit/lj_err.h' l='33' type='void lj_err_optype(lua_State * L, cTValue * o, ErrMsg opm)'/>
+<def f='luajit/lj_err.c' l='898' ll='911' macro='1' type='void lj_err_optype(lua_State * L, cTValue * o, ErrMsg opm)'/>
+<use f='luajit/lj_err.c' l='938' u='c' c='lj_err_optype_call'/>
+<use f='luajit/lj_meta.c' l='147' u='c' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='185' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='229' u='c' c='lj_meta_arith'/>
+<use f='luajit/lj_meta.c' l='250' u='c' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='322' u='c' c='lj_meta_len'/>

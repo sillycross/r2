@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='267' type='MSize'/>
+<offset>672</offset>
+<doc f='luajit/lj_jit.h' l='267'>/* Size of machine code. */</doc>
+<use f='luajit/lib_jit.c' l='388' u='r' c='lj_cf_jit_util_tracemc'/>
+<use f='luajit/lj_asm_x86.h' l='3072' u='r' c='lj_asm_patchexit'/>
+<use f='luajit/lj_asm_x86.h' l='3099' u='r' c='lj_asm_patchexit'/>
+<use f='luajit/lj_asm.c' l='2520' u='w' c='lj_asm_trace'/>
+<use f='luajit/lj_trace.c' l='942' u='r' c='lj_trace_unwind'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ctype.h' l='343'/>
+<use f='luajit/lj_ctype.h' l='374' u='c'/>
+<doc f='luajit/lj_ctype.h' l='342'>/* Simple declaration specifiers. */</doc>

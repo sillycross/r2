@@ -1,0 +1,3 @@
+<dec f='luajit/lj_func.h' l='21' type='GCfunc * lj_func_newL_gc(lua_State * L, GCproto * pt, GCfuncL * parent)'/>
+<def f='luajit/lj_func.c' l='157' ll='183' type='GCfunc * lj_func_newL_gc(lua_State * L, GCproto * pt, GCfuncL * parent)'/>
+<doc f='luajit/lj_func.c' l='156'>/* Do a GC check and create a new Lua function with inherited upvalues. */</doc>

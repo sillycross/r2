@@ -1,0 +1,4 @@
+<dec f='luajit/lj_buf.h' l='67' type='char * lj_buf_need2(SBuf * sb, MSize sz)'/>
+<use f='luajit/lj_buf.h' l='100' u='c' c='lj_buf_need'/>
+<use f='luajit/lib_buffer.c' l='315' u='c' c='lj_cf_buffer_new'/>
+<def f='luajit/lj_buf.c' l='51' ll='58' macro='1' type='char * lj_buf_need2(SBuf * sb, MSize sz)'/>

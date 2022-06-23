@@ -1,0 +1,4 @@
+<dec f='luajit/lj_snap.h' l='18' type='void lj_snap_replay(jit_State * J, GCtrace * T)'/>
+<use f='luajit/lj_record.c' l='2634' u='c' c='lj_record_setup'/>
+<def f='luajit/lj_snap.c' l='473' ll='632' type='void lj_snap_replay(jit_State * J, GCtrace * T)'/>
+<doc f='luajit/lj_snap.c' l='472'>/* Replay snapshot state to setup side trace. */</doc>

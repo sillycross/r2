@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='618' type='MSize'/>
+<offset>96</offset>
+<doc f='luajit/lj_obj.h' l='618'>/* Number of strings in hash table. */</doc>
+<use f='luajit/lj_gc.c' l='685' u='r' c='gc_onestep'/>
+<use f='luajit/lj_str.c' l='308' u='w' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='360' u='w' c='lj_str_free'/>

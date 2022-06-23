@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='20'/>
+<use f='luajit/lib_base.c' l='98' u='r' c='ffh_pairs'/>
+<use f='luajit/lib_base.c' l='109' u='r' c='lj_ffh_pairs'/>
+<use f='luajit/lib_ffi.c' l='344' u='r' c='lj_cf_ffi_meta___pairs'/>
+<use f='luajit/lj_ffrecord.c' l='443' u='r' c='recff_xpairs'/>

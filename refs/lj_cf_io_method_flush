@@ -1,0 +1,1 @@
+<def f='luajit/lib_io.c' l='300' macro='1' type='int lj_cf_io_method_flush(lua_State * L)'/>

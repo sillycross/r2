@@ -1,0 +1,6 @@
+<dec f='luajit/lj_meta.h' l='25' type='cTValue * lj_meta_tget(lua_State * L, cTValue * o, cTValue * k)'/>
+<use f='luajit/lib_ffi.c' l='127' u='c' c='ffi_index_meta'/>
+<use f='luajit/lj_api.c' l='800' u='c' c='lua_gettable'/>
+<use f='luajit/lj_api.c' l='815' u='c' c='lua_getfield'/>
+<def f='luajit/lj_meta.c' l='135' ll='158' type='cTValue * lj_meta_tget(lua_State * L, cTValue * o, cTValue * k)'/>
+<doc f='luajit/lj_meta.c' l='134'>/* Helper for TGET*. __index chain and metamethod. */</doc>

@@ -1,0 +1,8 @@
+<def f='luajit/lj_asm_x86.h' l='544' ll='648' type='void asm_gencall(ASMState * as, const CCallInfo * ci, IRRef * args)'/>
+<use f='luajit/lj_asm_x86.h' l='756' u='c' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='1044' u='c' c='asm_strto'/>
+<use f='luajit/lj_asm_x86.h' l='1851' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1865' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1899' u='c' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='2777' u='c' c='asm_gc_check'/>
+<doc f='luajit/lj_asm_x86.h' l='543'>/* Generate a call to a C function. */</doc>

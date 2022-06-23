@@ -1,0 +1,9 @@
+<dec f='luajit/lj_arch.h' l='556'/>
+<use f='luajit/lj_lib.h' l='49' u='c'/>
+<use f='luajit/lj_errmsg.h' l='183' u='c'/>
+<use f='luajit/lib_buffer.c' l='15' u='c'/>
+<use f='luajit/lj_serialize.h' l='12' u='c'/>
+<use f='luajit/lib_string.c' l='671' u='c'/>
+<use f='luajit/lj_gc.c' l='68' u='c'/>
+<use f='luajit/lj_lib.c' l='313' u='c'/>
+<use f='luajit/lj_serialize.c' l='11' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='55' type='void dasm_setupglobal(BuildCtx * ctx, void ** gl, unsigned int maxgl)'/>
+<def f='luajit/dasm_x86.h' l='121' ll='126' type='void dasm_setupglobal(BuildCtx * ctx, void ** gl, unsigned int maxgl)'/>
+<use f='luajit/host/buildvm.c' l='191' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='120'>/* Setup global label array. Must be called before dasm_setup(). */</doc>

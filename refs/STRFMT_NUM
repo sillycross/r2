@@ -1,0 +1,21 @@
+<dec f='luajit/lj_strfmt.h' l='24' type='5'/>
+<use f='luajit/lib_buffer.c' l='126' macro='1' u='r' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lj_buf.c' l='228' macro='1' u='r' c='lj_buf_puttab'/>
+<use f='luajit/lj_ctype.c' l='583' macro='1' u='r' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='585' macro='1' u='r' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ffrecord.c' l='997' c='recff_string_format'/>
+<use f='luajit/lj_meta.c' l='301' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_strfmt.c' l='27' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='27' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='27' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='27' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='30' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='30' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='30' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='30' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='177' macro='1' u='r' c='lj_strfmt_wstrnum'/>
+<use f='luajit/lj_strfmt.c' l='198' macro='1' u='r' c='lj_strfmt_putnum'/>
+<use f='luajit/lj_strfmt.c' l='427' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='565' c='lj_strfmt_pushvf'/>
+<use f='luajit/lj_strfmt.c' l='566' macro='1' u='r' c='lj_strfmt_pushvf'/>
+<use f='luajit/lj_strfmt_num.c' l='589' macro='1' u='r' c='lj_strfmt_num'/>

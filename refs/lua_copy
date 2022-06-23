@@ -1,0 +1,3 @@
+<dec f='luajit/lua.h' l='352' type='void lua_copy(lua_State * L, int fromidx, int toidx)'/>
+<use f='luajit/lib_package.c' l='601' u='c' c='luaopen_package'/>
+<def f='luajit/lj_api.c' l='204' ll='207' macro='1' type='void lua_copy(lua_State * L, int fromidx, int toidx)'/>

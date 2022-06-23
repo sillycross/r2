@@ -1,0 +1,3 @@
+<def f='luajit/lj_emit_x86.h' l='239' ll='250' type='void emit_gmrmi(ASMState * as, x86Group xg, Reg rb, int32_t i)'/>
+<use f='luajit/lj_asm_x86.h' l='2501' u='c' c='asm_comp'/>
+<doc f='luajit/lj_emit_x86.h' l='238'>/* op rm/mrm, i */</doc>

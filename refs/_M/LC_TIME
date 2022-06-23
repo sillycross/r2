@@ -1,0 +1,2 @@
+<dec f='include/locale.h' l='37'/>
+<use f='luajit/lib_os.c' l='274' u='c'/>

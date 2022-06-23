@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='391' type='MRef'/>
+<offset>704</offset>
+<doc f='luajit/lj_obj.h' l='391'>/* Upvalue names. */</doc>
+<use f='luajit/lj_bcread.c' l='175' macro='1' u='m' c='bcread_varinfo'/>
+<use f='luajit/lj_bcread.c' l='377' u='m' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcread.c' l='382' u='m' c='lj_bcread_proto'/>
+<use f='luajit/lj_debug.c' l='218' macro='1' u='m' c='lj_debug_uvname'/>
+<use f='luajit/lj_parse.c' l='1500' u='m' c='fs_fixup_var'/>

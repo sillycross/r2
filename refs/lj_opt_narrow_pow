@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='147' type='TRef lj_opt_narrow_pow(jit_State * J, TRef rb, TRef rc, TValue * vb, TValue * vc)'/>
+<use f='luajit/lj_ffrecord.c' l='597' u='c' c='recff_math_pow'/>
+<def f='luajit/lj_opt_narrow.c' l='588' ll='615' type='TRef lj_opt_narrow_pow(jit_State * J, TRef rb, TRef rc, TValue * vb, TValue * vc)'/>
+<doc f='luajit/lj_opt_narrow.c' l='587'>/* Narrowing of power operator or math.pow. */</doc>
+<use f='luajit/lj_record.c' l='2274' u='c' c='lj_record_ins'/>

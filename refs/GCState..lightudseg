@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='610' type='MRef'/>
+<use f='luajit/lj_obj.h' l='843' u='m' c='lightudV'/>
+<offset>768</offset>
+<doc f='luajit/lj_obj.h' l='610'>/* Upper bits of lightuserdata segments. */</doc>
+<use f='luajit/lj_state.c' l='179' u='m' c='close_state'/>
+<use f='luajit/lj_state.c' l='181' u='m' c='close_state'/>
+<use f='luajit/lj_udata.c' l='42' u='m' c='lj_lightud_intern'/>
+<use f='luajit/lj_udata.c' l='55' u='m' c='lj_lightud_intern'/>

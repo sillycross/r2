@@ -1,0 +1,5 @@
+<def f='luajit/host/minilua.c' l='134' ll='141'/>
+<use f='luajit/host/minilua.c' l='134'/>
+<def f='luajit/lj_parse.c' l='149' ll='156'/>
+<use f='luajit/lj_parse.c' l='149'/>
+<doc f='luajit/lj_parse.c' l='148'>/* Binary and unary operators. ORDER OPR */</doc>

@@ -1,0 +1,5 @@
+<dec f='luajit/luajit.h' l='65' type='int luaJIT_setmode(lua_State * L, int idx, int mode)'/>
+<use f='luajit/lib_jit.c' l='59' u='c' c='setjitmode'/>
+<use f='luajit/lib_jit.c' l='83' u='c' c='lj_cf_jit_flush'/>
+<def f='luajit/lj_dispatch.c' l='239' ll='313' type='int luaJIT_setmode(lua_State * L, int idx, int mode)'/>
+<doc f='luajit/lj_dispatch.c' l='238'>/* Public API function: control the JIT engine. */</doc>

@@ -1,0 +1,3 @@
+<def f='luajit/lj_emit_x86.h' l='456' ll='463' type='MCLabel emit_sjcc_label(ASMState * as, int cc)'/>
+<use f='luajit/lj_asm_x86.h' l='1142' u='c' c='asm_href'/>
+<doc f='luajit/lj_emit_x86.h' l='455'>/* jcc short (pending target) */</doc>

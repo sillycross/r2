@@ -1,0 +1,10 @@
+<dec f='luajit/lua.h' l='169' type='void lua_pushcclosure(lua_State * L, lua_CFunction fn, int n)'/>
+<use f='luajit/lib_aux.c' l='155' u='c' c='luaL_setfuncs'/>
+<use f='luajit/lib_init.c' l='43' macro='1' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_init.c' l='50' macro='1' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_io.c' l='275' u='c' c='io_file_lines'/>
+<use f='luajit/lib_package.c' l='256' macro='1' u='c' c='ll_loadfunc'/>
+<def f='luajit/lj_api.c' l='689' ll='702' macro='1' type='void lua_pushcclosure(lua_State * L, lua_CFunction f, int n)'/>
+<use f='luajit/lj_lib.c' l='158' u='c' c='lj_lib_pushcc'/>
+<use f='luajit/lj_lib.c' l='168' macro='1' u='c' c='lj_lib_prereg'/>
+<use f='luajit/luajit.c' l='116' macro='1' u='c' c='docall'/>

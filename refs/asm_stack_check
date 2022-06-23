@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='2662' ll='2688' type='void asm_stack_check(ASMState * as, BCReg topslot, IRIns * irp, RegSet allow, ExitNo exitno)'/>
+<use f='luajit/lj_asm.c' l='2030' u='c' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2103' u='c' c='asm_tail_link'/>
+<doc f='luajit/lj_asm_x86.h' l='2661'>/* Check Lua stack size for overflow. Use exit handler as fallback. */</doc>

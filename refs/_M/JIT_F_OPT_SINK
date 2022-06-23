@@ -1,0 +1,2 @@
+<dec f='luajit/lj_jit.h' l='87'/>
+<use f='luajit/lj_opt_sink.c' l='234' u='c'/>

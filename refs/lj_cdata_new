@@ -1,0 +1,12 @@
+<def f='luajit/lj_cdata.h' l='38' ll='50' type='GCcdata * lj_cdata_new(CTState * cts, CTypeID id, CTSize sz)'/>
+<doc f='luajit/lj_cdata.h' l='37'>/* Allocate fixed-size C data object. */</doc>
+<use f='luajit/lib_ffi.c' l='540' u='c' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='552' u='c' c='lj_cf_ffi_typeof'/>
+<use f='luajit/lib_ffi.c' l='783' u='c' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lj_carith.c' l='150' u='c' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='185' u='c' c='carith_int64'/>
+<use f='luajit/lj_ccall.c' l='964' u='c' c='ccall_set_args'/>
+<use f='luajit/lj_cconv.c' l='418' u='c' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cdata.c' l='23' u='c' c='lj_cdata_newref'/>
+<use f='luajit/lj_cdata.c' l='56' u='c' c='lj_cdata_newx'/>
+<use f='luajit/lj_clib.c' l='387' u='c' c='lj_clib_index'/>

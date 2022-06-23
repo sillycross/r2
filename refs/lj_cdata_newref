@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cdata.h' l='61' type='GCcdata * lj_cdata_newref(CTState * cts, const void * pp, CTypeID id)'/>
+<use f='luajit/lj_cconv.c' l='409' u='c' c='lj_cconv_tv_ct'/>
+<def f='luajit/lj_cdata.c' l='20' ll='26' type='GCcdata * lj_cdata_newref(CTState * cts, const void * p, CTypeID id)'/>
+<doc f='luajit/lj_cdata.c' l='19'>/* Allocate a new C data object holding a reference to another object. */</doc>

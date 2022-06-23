@@ -1,0 +1,8 @@
+<dec f='luajit/dasm_x86.h' l='58' type='int'/>
+<use f='luajit/dasm_x86.h' l='148' u='w' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='173' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='271' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='307' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='400' u='r' c='dasm_encode'/>
+<offset>192</offset>
+<doc f='luajit/dasm_x86.h' l='58'>/* Biased buffer position. */</doc>

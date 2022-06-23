@@ -1,0 +1,3 @@
+<dec f='luajit/host/buildvm.h' l='85' type='const char *const *'/>
+<use f='luajit/host/buildvm.c' l='182' u='w' c='build_code'/>
+<offset>1024</offset>

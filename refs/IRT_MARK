@@ -1,0 +1,59 @@
+<dec f='luajit/lj_ir.h' l='330' type='32'/>
+<doc f='luajit/lj_ir.h' l='329'>/* Additional flags. */</doc>
+<doc f='luajit/lj_ir.h' l='330'>/* Marker for misc. purposes. */</doc>
+<use f='luajit/lj_asm.c' l='1433' macro='1' u='r' c='asm_phi_shuffle'/>
+<use f='luajit/lj_asm.c' l='1483' macro='1' u='r' c='asm_phi_shuffle'/>
+<use f='luajit/lj_asm.c' l='1560' macro='1' u='r' c='asm_phi_fixup'/>
+<use f='luajit/lj_asm.c' l='1561' macro='1' u='r' c='asm_phi_fixup'/>
+<use f='luajit/lj_asm.c' l='1596' macro='1' u='r' c='asm_phi'/>
+<use f='luajit/lj_asm_x86.h' l='772' macro='1' u='r' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='2849' macro='1' u='r' c='asm_head_root_base'/>
+<use f='luajit/lj_asm_x86.h' l='2863' macro='1' u='r' c='asm_head_side_base'/>
+<use f='luajit/lj_asm.c' l='1902' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1929' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1933' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_opt_dce.c' l='31' macro='1' u='r' c='dce_marksnap'/>
+<use f='luajit/lj_opt_dce.c' l='45' macro='1' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_dce.c' l='46' macro='1' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_dce.c' l='53' macro='1' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_dce.c' l='54' macro='1' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_loop.c' l='120' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='131' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='133' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='138' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='141' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='152' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='162' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='180' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='182' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='183' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='193' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='199' macro='1' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='402' macro='1' u='r' c='loop_undo'/>
+<use f='luajit/lj_opt_sink.c' l='82' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='85' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='86' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='91' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='92' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='101' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='105' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='111' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='120' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='121' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='125' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='126' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='127' macro='1' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='142' macro='1' u='r' c='sink_mark_snap'/>
+<use f='luajit/lj_opt_sink.c' l='155' u='r' c='sink_remark_phi'/>
+<use f='luajit/lj_opt_sink.c' l='157' u='r' c='sink_remark_phi'/>
+<use f='luajit/lj_opt_sink.c' l='158' macro='1' u='r' c='sink_remark_phi'/>
+<use f='luajit/lj_opt_sink.c' l='159' macro='1' u='r' c='sink_remark_phi'/>
+<use f='luajit/lj_opt_sink.c' l='172' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='181' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='184' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='192' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='197' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='203' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='213' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='219' macro='1' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_snap.c' l='572' u='r' c='lj_snap_replay'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm.h' l='48' macro='1' type='3'/>
+<use f='luajit/host/buildvm.c' l='112' u='r' c='sym_decorate'/>
+<use f='luajit/host/buildvm.c' l='453' c='main'/>
+<use f='luajit/host/buildvm.c' l='481' c='main'/>

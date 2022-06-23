@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='357' type='int lua_isyieldable(lua_State * L)'/>
+<def f='luajit/lj_api.c' l='1191' ll='1194' macro='1' type='int lua_isyieldable(lua_State * L)'/>

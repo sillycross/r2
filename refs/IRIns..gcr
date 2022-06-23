@@ -1,0 +1,42 @@
+<dec f='luajit/lj_ir.h' l='561' type='GCRef'/>
+<offset>0</offset>
+<doc f='luajit/lj_ir.h' l='561'>/* GCobj constant (overlaps op12 or entire slot). */</doc>
+<use f='luajit/lj_asm.c' l='368' macro='1' u='m' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='1067' macro='1' u='m' c='ir_khash'/>
+<use f='luajit/lj_asm.c' l='1076' macro='1' u='m' c='ir_khash'/>
+<use f='luajit/lj_asm.c' l='1078' macro='1' u='m' c='ir_khash'/>
+<use f='luajit/lj_asm.c' l='1190' macro='1' u='m' c='asm_bufput'/>
+<use f='luajit/lj_asm_x86.h' l='202' macro='1' u='m' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='1305' macro='1' u='m' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1353' macro='1' u='m' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1905' macro='1' u='m' c='asm_obar'/>
+<use f='luajit/lj_asm.c' l='2094' u='m' c='asm_tail_link'/>
+<use f='luajit/lj_gc.c' l='260' macro='1' u='m' c='gc_traverse_trace'/>
+<use f='luajit/lj_gc.c' l='260' macro='1' u='m' c='gc_traverse_trace'/>
+<use f='luajit/lj_ir.c' l='284' macro='1' u='m' c='lj_ir_kgc'/>
+<use f='luajit/lj_ir.c' l='290' u='m' c='lj_ir_kgc'/>
+<use f='luajit/lj_ir.c' l='391' macro='1' u='m' c='lj_ir_kvalue'/>
+<use f='luajit/lj_opt_fold.c' l='527' macro='1' u='m' c='fold_kfold_strref'/>
+<use f='luajit/lj_opt_fold.c' l='557' macro='1' u='m' c='fold_kfold_strcmp'/>
+<use f='luajit/lj_opt_fold.c' l='558' macro='1' u='m' c='fold_kfold_strcmp'/>
+<use f='luajit/lj_opt_fold.c' l='604' macro='1' u='m' c='fold_bufput_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='610' macro='1' u='m' c='fold_bufput_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='672' macro='1' u='m' c='fold_bufput_kfold_op'/>
+<use f='luajit/lj_opt_fold.c' l='688' macro='1' u='m' c='fold_bufput_kfold_rep'/>
+<use f='luajit/lj_opt_fold.c' l='717' macro='1' u='m' c='fold_bufput_kfold_fmt'/>
+<use f='luajit/lj_opt_fold.c' l='746' macro='1' u='m' c='fold_kfold_add_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='916' macro='1' u='m' c='fold_kfold_strto'/>
+<use f='luajit/lj_opt_fold.c' l='2068' macro='1' u='m' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2159' macro='1' u='m' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='2164' macro='1' u='m' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='2195' macro='1' u='m' c='fold_fwd_href_tdup'/>
+<use f='luajit/lj_opt_fold.c' l='2228' macro='1' u='m' c='fold_fload_tab_tdup_asize'/>
+<use f='luajit/lj_opt_fold.c' l='2236' macro='1' u='m' c='fold_fload_tab_tdup_hmask'/>
+<use f='luajit/lj_opt_fold.c' l='2256' macro='1' u='m' c='fold_fload_str_len_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2283' macro='1' u='m' c='fold_fload_cdata_typeid_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2294' macro='1' u='m' c='fold_fload_cdata_int64_kgc'/>
+<use f='luajit/lj_opt_mem.c' l='196' macro='1' u='m' c='fwd_ahload'/>
+<use f='luajit/lj_record.c' l='797' macro='1' u='m' c='check_downrec_unroll'/>
+<use f='luajit/lj_record.c' l='1395' macro='1' u='m' c='nommstr'/>
+<use f='luajit/lj_snap.c' l='418' macro='1' u='m' c='snap_replay_const'/>
+<use f='luajit/lj_snap.c' l='836' macro='1' u='m' c='snap_unsink'/>

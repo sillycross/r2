@@ -1,0 +1,5 @@
+<dec f='include/x86_64-linux-gnu/sys/mman.h' l='61' type='void * mmap(void * __addr, size_t __len, int __prot, int __flags, int __fd, __off64_t __offset)'/>
+<dec f='include/x86_64-linux-gnu/sys/mman.h' l='70' type='void * mmap64(void * __addr, size_t __len, int __prot, int __flags, int __fd, __off64_t __offset)'/>
+<use f='luajit/lj_alloc.c' l='240' u='c' c='mmap_probe'/>
+<use f='luajit/lj_ccallback.c' l='279' u='c' c='callback_mcode_new'/>
+<use f='luajit/lj_mcode.c' l='108' u='c' c='mcode_alloc_at'/>

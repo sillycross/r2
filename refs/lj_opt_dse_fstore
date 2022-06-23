@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='132' type='TRef lj_opt_dse_fstore(jit_State * J)'/>
+<use f='luajit/lj_folddef.h' l='157' u='r'/>
+<def f='luajit/lj_opt_mem.c' l='606' ll='643' type='TRef lj_opt_dse_fstore(jit_State * J)'/>
+<doc f='luajit/lj_opt_mem.c' l='605'>/* FSTORE elimination. */</doc>

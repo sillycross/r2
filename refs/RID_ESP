@@ -1,0 +1,176 @@
+<dec f='luajit/lj_target_x86.h' l='30' macro='1' type='4'/>
+<use f='luajit/lj_target_x86.h' l='37'/>
+<use f='luajit/lj_emit_x86.h' l='122' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='123' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='123' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='127' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='129' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='81' u='r' c='emit_rmrxo'/>
+<use f='luajit/lj_emit_x86.h' l='207' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='208' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='81' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='231' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='232' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='232' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='375' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='376' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='376' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='406' macro='1' u='r' c='emit_loadk64'/>
+<use f='luajit/lj_asm.c' l='316' macro='1' u='r' c='ra_setup'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='535' macro='1' u='r' c='ra_evictk'/>
+<use f='luajit/lj_asm.c' l='783' macro='1' u='r' c='ra_left'/>
+<use f='luajit/lj_asm.c' l='946' macro='1' u='r' c='asm_snap_alloc1'/>
+<use f='luajit/lj_asm.c' l='1151' macro='1' u='r' c='asm_bufhdr'/>
+<use f='luajit/lj_asm.c' l='1160' macro='1' u='r' c='asm_bufhdr'/>
+<use f='luajit/lj_asm.c' l='1165' macro='1' u='r' c='asm_bufhdr'/>
+<use f='luajit/lj_asm.c' l='1311' macro='1' u='r' c='asm_lref'/>
+<use f='luajit/lj_asm.c' l='1452' macro='1' u='r' c='asm_phi_shuffle'/>
+<use f='luajit/lj_asm.c' l='1505' macro='1' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='1506' macro='1' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='1574' macro='1' u='r' c='asm_phi'/>
+<use f='luajit/lj_asm_x86.h' l='419' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='430' macro='1' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='448' macro='1' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='448' macro='1' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='626' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='627' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='631' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='636' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='638' macro='1' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='639' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='673' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='749' macro='1' u='r' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='751' macro='1' u='r' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='754' macro='1' u='r' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='764' macro='1' u='r' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='766' macro='1' u='r' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='789' macro='1' u='r' c='asm_tointg'/>
+<use f='luajit/lj_asm_x86.h' l='801' macro='1' u='r' c='asm_tobit'/>
+<use f='luajit/lj_asm_x86.h' l='837' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='841' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='842' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='861' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='890' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='891' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='895' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='897' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='914' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='917' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='922' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='926' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='928' macro='1' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1047' u='r' c='asm_strto'/>
+<use f='luajit/lj_asm_x86.h' l='1061' u='r' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1072' macro='1' u='r' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1098' macro='1' u='r' c='asm_aref'/>
+<use f='luajit/lj_asm_x86.h' l='1099' macro='1' u='r' c='asm_aref'/>
+<use f='luajit/lj_asm_x86.h' l='1116' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1277' macro='1' u='r' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1278' macro='1' u='r' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1296' macro='1' u='r' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1351' macro='1' u='r' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1357' macro='1' u='r' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1358' macro='1' u='r' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1375' macro='1' u='r' c='asm_fref'/>
+<use f='luajit/lj_asm_x86.h' l='1376' macro='1' u='r' c='asm_fref'/>
+<use f='luajit/lj_asm_x86.h' l='1382' macro='1' u='r' c='asm_strref'/>
+<use f='luajit/lj_asm_x86.h' l='1383' macro='1' u='r' c='asm_strref'/>
+<use f='luajit/lj_asm_x86.h' l='1396' macro='1' u='r' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1399' macro='1' u='r' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1401' macro='1' u='r' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1427' macro='1' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1438' macro='1' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1438' macro='1' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1533' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1535' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1555' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1558' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1604' macro='1' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1616' macro='1' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1630' macro='1' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='1683' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1696' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1698' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1740' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1774' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1807' macro='1' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1874' macro='1' u='r' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1875' macro='1' u='r' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1908' macro='1' u='r' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1934' u='r' c='asm_x87load'/>
+<use f='luajit/lj_asm_x86.h' l='1985' u='r' c='asm_ldexp'/>
+<use f='luajit/lj_asm_x86.h' l='1987' u='r' c='asm_ldexp'/>
+<use f='luajit/lj_asm_x86.h' l='2059' macro='1' u='r' c='asm_intarith'/>
+<use f='luajit/lj_asm_x86.h' l='2096' macro='1' u='r' c='asm_intarith'/>
+<use f='luajit/lj_asm_x86.h' l='2126' macro='1' u='r' c='asm_lea'/>
+<use f='luajit/lj_asm_x86.h' l='2207' macro='1' u='r' c='asm_neg_not'/>
+<use f='luajit/lj_asm_x86.h' l='2224' macro='1' u='r' c='asm_intmin_max'/>
+<use f='luajit/lj_asm_x86.h' l='2227' macro='1' u='r' c='asm_intmin_max'/>
+<use f='luajit/lj_asm_x86.h' l='2258' macro='1' u='r' c='asm_bswap'/>
+<use f='luajit/lj_asm_x86.h' l='2275' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2278' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2292' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2293' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2294' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2300' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2302' macro='1' u='r' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2417' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2428' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2465' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2478' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2478' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2505' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2506' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2670' u='r' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2687' u='r' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2715' macro='1' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2904' u='r' c='asm_tail_fixup'/>
+<use f='luajit/lj_asm.c' l='1724' macro='1' u='r' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1856' macro='1' u='r' c='asm_head_root'/>
+<use f='luajit/lj_asm.c' l='1872' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1939' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1958' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1968' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2003' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2004' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2007' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2030' macro='1' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2103' macro='1' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2300' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2512' macro='1' u='r' c='lj_asm_trace'/>

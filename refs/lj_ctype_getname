@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ctype.h' l='461' type='CTypeID lj_ctype_getname(CTState * cts, CType ** ctp, GCstr * name, uint32_t tmask)'/>
+<use f='luajit/lj_clib.c' l='348' u='c' c='lj_clib_index'/>
+<use f='luajit/lj_cparse.c' l='193' u='c' c='cp_ident'/>
+<use f='luajit/lj_crecord.c' l='1588' u='c' c='recff_clib_index'/>
+<def f='luajit/lj_ctype.c' l='224' ll='238' type='CTypeID lj_ctype_getname(CTState * cts, CType ** ctp, GCstr * name, uint32_t tmask)'/>
+<doc f='luajit/lj_ctype.c' l='223'>/* Get a C type by name, matching the type mask. */</doc>

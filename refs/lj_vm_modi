@@ -1,0 +1,4 @@
+<dec f='luajit/lj_vm.h' l='77' type='int32_t lj_vm_modi(int32_t , int32_t )'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='273' u='c' c='kfold_intop'/>
+<def f='luajit/lj_vmmath.c' l='60' ll='71' type='int32_t lj_vm_modi(int32_t a, int32_t b)'/>

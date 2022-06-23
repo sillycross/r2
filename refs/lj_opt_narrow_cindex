@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='141' type='TRef lj_opt_narrow_cindex(jit_State * J, TRef key)'/>
+<use f='luajit/lj_crecord.c' l='821' u='c' c='recff_cdata_index'/>
+<def f='luajit/lj_opt_narrow.c' l='500' ll='509' type='TRef lj_opt_narrow_cindex(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_opt_narrow.c' l='499'>/* Narrow C array index (overflow undefined). */</doc>

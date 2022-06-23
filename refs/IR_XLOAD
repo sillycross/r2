@@ -1,0 +1,33 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='69'/>
+<use f='luajit/lj_ir.h' l='174' u='r' c='lj_assert_79'/>
+<use f='luajit/lj_asm_x86.h' l='472' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='2026' macro='1' u='r' c='asm_swapops'/>
+<use f='luajit/lj_asm_x86.h' l='2405' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2423' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2452' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm.c' l='1796' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2340' c='asm_setup_regsp'/>
+<use f='luajit/lj_crecord.c' l='213' u='r' c='crec_copy_emit'/>
+<use f='luajit/lj_crecord.c' l='443' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='468' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='490' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='492' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='558' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='573' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='581' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='583' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='687' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='762' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='855' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='925' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1520' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_ffrecord.c' l='302' u='r' c='lj_ffrecord_select_mode'/>
+<use f='luajit/lj_ffrecord.c' l='821' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='1132' u='r' c='recff_io_write'/>
+<use f='luajit/lj_opt_fold.c' l='1260' u='r' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_opt_fold.c' l='2098' u='r' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2099' u='r' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='2100' u='r' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_mem.c' l='830' u='r' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='881' u='r' c='lj_opt_dse_xstore'/>
+<use f='luajit/lj_opt_sink.c' l='81' c='sink_mark_ins'/>

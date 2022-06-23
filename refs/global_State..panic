@@ -1,0 +1,15 @@
+<dec f='luajit/lj_obj.h' l='649' type='lua_CFunction'/>
+<offset>2816</offset>
+<doc f='luajit/lj_obj.h' l='649'>/* Called as a last resort for errors. */</doc>
+<use f='luajit/lib_aux.c' l='356' u='w' c='luaL_newstate'/>
+<use f='luajit/lib_jit.c' l='565' u='r' c='jit_profile_callback'/>
+<use f='luajit/lib_jit.c' l='565' u='r' c='jit_profile_callback'/>
+<use f='luajit/lj_ccallback.c' l='686' u='r' c='lj_ccallback_enter'/>
+<use f='luajit/lj_ccallback.c' l='686' u='r' c='lj_ccallback_enter'/>
+<use f='luajit/lj_err.c' l='195' u='r' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='196' u='r' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='749' u='r' c='lj_err_throw'/>
+<use f='luajit/lj_err.c' l='750' u='r' c='lj_err_throw'/>
+<use f='luajit/lj_err.c' l='1051' u='r' c='lua_atpanic'/>
+<use f='luajit/lj_err.c' l='1052' u='w' c='lua_atpanic'/>
+<use f='luajit/lj_mcode.c' l='173' u='r' c='mcode_protfail'/>

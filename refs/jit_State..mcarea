@@ -1,0 +1,19 @@
+<dec f='luajit/lj_jit.h' l='495' type='MCode *'/>
+<offset>24384</offset>
+<doc f='luajit/lj_jit.h' l='495'>/* Base of current mcode area. */</doc>
+<use f='luajit/lj_mcode.c' l='185' u='r' c='mcode_protect'/>
+<use f='luajit/lj_mcode.c' l='219' u='r' c='mcode_alloc'/>
+<use f='luajit/lj_mcode.c' l='219' u='r' c='mcode_alloc'/>
+<use f='luajit/lj_mcode.c' l='266' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='269' u='w' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='272' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='273' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='274' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='275' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='277' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='283' u='r' c='lj_mcode_free'/>
+<use f='luajit/lj_mcode.c' l='284' u='w' c='lj_mcode_free'/>
+<use f='luajit/lj_mcode.c' l='300' u='r' c='lj_mcode_reserve'/>
+<use f='luajit/lj_mcode.c' l='318' u='r' c='lj_mcode_abort'/>
+<use f='luajit/lj_mcode.c' l='327' u='r' c='lj_mcode_patch'/>
+<use f='luajit/lj_mcode.c' l='334' u='r' c='lj_mcode_patch'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_buf.h' l='68' type='char * lj_buf_more2(SBuf * sb, MSize sz)'/>
+<use f='luajit/lj_buf.h' l='107' u='c' c='lj_buf_more'/>
+<def f='luajit/lj_buf.c' l='60' ll='88' macro='1' type='char * lj_buf_more2(SBuf * sb, MSize sz)'/>
+<use f='luajit/lj_serialize.c' l='62' u='c' c='serialize_more'/>

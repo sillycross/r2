@@ -1,0 +1,65 @@
+<dec f='luajit/lj_ctype.h' l='35' type='13'/>
+<doc f='luajit/lj_ctype.h' l='35'>/* Keyword. */</doc>
+<use f='luajit/lj_cparse.c' l='194' u='r' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='365' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='118' u='r'/>
+<use f='luajit/lj_ctype.c' l='610' u='r' c='lj_ctype_init'/>

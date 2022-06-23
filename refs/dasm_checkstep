@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='77' type='int dasm_checkstep(BuildCtx * ctx, int secmatch)'/>
+<def f='luajit/dasm_x86.h' l='512' ll='526' type='int dasm_checkstep(BuildCtx * ctx, int secmatch)'/>
+<use f='luajit/host/buildvm.c' l='198' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='511'>/* Optional sanity checker to call between isolated encoding steps. */</doc>

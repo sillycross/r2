@@ -1,0 +1,8 @@
+<dec f='luajit/dasm_x86.h' l='60' type='int'/>
+<use f='luajit/dasm_x86.h' l='149' u='w' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='173' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='272' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='326' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='357' u='r' c='dasm_link'/>
+<offset>256</offset>
+<doc f='luajit/dasm_x86.h' l='60'>/* Byte offset into section. */</doc>

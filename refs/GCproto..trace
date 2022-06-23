@@ -1,0 +1,16 @@
+<dec f='luajit/lj_obj.h' l='385' type='uint16_t'/>
+<offset>496</offset>
+<doc f='luajit/lj_obj.h' l='385'>/* Anchor for chain of root traces. */</doc>
+<use f='luajit/lj_bcread.c' l='356' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='223' u='r' c='bcwrite_bytecode'/>
+<use f='luajit/lj_gc.c' l='284' u='r' c='gc_traverse_proto'/>
+<use f='luajit/lj_gc.c' l='284' u='r' c='gc_traverse_proto'/>
+<use f='luajit/lj_parse.c' l='1590' u='w' c='fs_finish'/>
+<use f='luajit/lj_trace.c' l='248' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='249' u='w' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='250' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='251' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='275' u='r' c='lj_trace_flushproto'/>
+<use f='luajit/lj_trace.c' l='276' u='r' c='lj_trace_flushproto'/>
+<use f='luajit/lj_trace.c' l='496' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='497' u='w' c='trace_stop'/>

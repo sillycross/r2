@@ -1,0 +1,9 @@
+<dec f='luajit/lj_trace.h' l='23' type='void lj_trace_err_info(jit_State * J, TraceError e)'/>
+<use f='luajit/lj_asm.c' l='1841' u='c' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='1711' u='c' c='recff_ffi_typeof'/>
+<use f='luajit/lj_ffrecord.c' l='150' u='c' c='recff_nyi'/>
+<use f='luajit/lj_ffrecord.c' l='816' u='c' c='recff_string_range'/>
+<use f='luajit/lj_record.c' l='1893' u='c' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2492' u='c' c='lj_record_ins'/>
+<def f='luajit/lj_trace.c' l='46' ll='50' type='void lj_trace_err_info(jit_State * J, TraceError e)'/>
+<doc f='luajit/lj_trace.c' l='45'>/* Synchronous abort with error message and error info. */</doc>

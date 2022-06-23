@@ -1,0 +1,10 @@
+<def f='luajit/lj_obj.h' l='1013' ll='1019' type='int32_t numberVint(cTValue * o)'/>
+<use f='luajit/lj_cparse.c' l='215' u='c' c='cp_param'/>
+<use f='luajit/lj_ffrecord.c' l='429' u='c' c='recff_ipairs_aux'/>
+<use f='luajit/lj_opt_loop.c' l='430' u='c' c='lj_opt_loop'/>
+<use f='luajit/lj_opt_narrow.c' l='554' u='c' c='lj_opt_narrow_unm'/>
+<use f='luajit/lj_opt_narrow.c' l='598' u='c' c='lj_opt_narrow_pow'/>
+<use f='luajit/lj_record.c' l='342' u='c' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='1301' u='c' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1331' u='c' c='rec_idx_key'/>
+<use f='luajit/lj_trace.c' l='571' u='c' c='trace_abort'/>

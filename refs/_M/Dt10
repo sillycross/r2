@@ -1,0 +1,58 @@
+<dec f='luajit/host/buildvm_arch.h' l='2728'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='2693'>//|  mov CARG2, rsp
+  //|  mov SAVE_PC, CTSTATE		// Any value outside of bytecode is ok.
+  //|  mov CARG1, CTSTATE
+  //|  call extern lj_ccallback_enter	// (CTState *cts, void *cf)
+  //|  // lua_State * returned in eax (RD).
+  //|  set_vmstate INTERP
+  //|  mov BASE, L:RD-&gt;base
+  //|  mov RD, L:RD-&gt;top
+  //|  sub RD, BASE
+  //|  mov LFUNC:RB, [BASE-16]
+  //|  cleartp LFUNC:RB
+  //|  shr RD, 3
+  //|  add RD, 1
+  //|  ins_callt
+  //|.endif
+  //|
+  //|-&gt;cont_ffi_callback:			// Return from FFI callback.
+  //|.if FFI
+  //|  mov L:RA, SAVE_L
+  //|  mov CTSTATE, [DISPATCH+DISPATCH_GL(ctype_state)]
+  //|  mov aword CTSTATE-&gt;L, L:RA
+  //|  mov L:RA-&gt;base, BASE
+  //|  mov L:RA-&gt;top, RB
+  //|  mov CARG1, CTSTATE
+  //|  mov CARG2, RC
+  //|  call extern lj_ccallback_leave	// (CTState *cts, TValue *o)
+  //|  mov rax, CTSTATE-&gt;cb.gpr[0]
+  //|  movsd xmm0, qword CTSTATE-&gt;cb.fpr[0]
+  //|  jmp -&gt;vm_leave_unw
+  //|.endif
+  //|
+  //|-&gt;vm_ffi_call:			// Call C function via FFI.
+  //|  // Caveat: needs special frame unwinding, see below.
+  //|.if FFI
+  //|  .type CCSTATE, CCallState, rbx</doc>

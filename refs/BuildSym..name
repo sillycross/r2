@@ -1,0 +1,6 @@
+<dec f='luajit/host/buildvm.h' l='61' type='const char *'/>
+<use f='luajit/host/buildvm_arch.h' l='4839' u='r' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm.c' l='166' u='w' c='sym_insert'/>
+<offset>0</offset>
+<use f='luajit/host/buildvm_asm.c' l='289' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_peobj.c' l='354' u='r' c='emit_peobj'/>

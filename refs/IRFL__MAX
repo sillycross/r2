@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='218' type='20'/>
+<use f='luajit/lj_asm.c' l='169' u='r'/>

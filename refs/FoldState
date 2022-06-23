@@ -1,0 +1,7 @@
+<def f='luajit/lj_jit.h' l='403' ll='407'/>
+<use f='luajit/lj_jit.h' l='403'/>
+<size>40</size>
+<doc f='luajit/lj_jit.h' l='402'>/* Fold state is used to fold instructions on-the-fly. */</doc>
+<mbr r='FoldState::ins' o='0' t='IRIns'/>
+<mbr r='FoldState::left' o='64' t='IRIns [2]'/>
+<mbr r='FoldState::right' o='192' t='IRIns [2]'/>

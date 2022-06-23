@@ -1,0 +1,5 @@
+<dec f='luajit/lj_record.h' l='36' type='void lj_record_ret(jit_State * J, BCReg rbase, ptrdiff_t gotresults)'/>
+<use f='luajit/lj_ffrecord.c' l='1200' u='c' c='lj_ffrecord_func'/>
+<def f='luajit/lj_record.c' l='818' ll='953' type='void lj_record_ret(jit_State * J, BCReg rbase, ptrdiff_t gotresults)'/>
+<use f='luajit/lj_record.c' l='2407' u='c' c='lj_record_ins'/>
+<doc f='luajit/lj_record.c' l='817'>/* Record return. */</doc>

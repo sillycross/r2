@@ -1,0 +1,5 @@
+<dec f='luajit/lj_target_x86.h' l='161' type='int32_t [256]'/>
+<offset>2048</offset>
+<doc f='luajit/lj_target_x86.h' l='161'>/* Spill slots. */</doc>
+<use f='luajit/lj_snap.c' l='662' u='a' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='732' u='a' c='snap_restoredata'/>

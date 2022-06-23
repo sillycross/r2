@@ -1,0 +1,13 @@
+<def f='luajit/lj_ccall.h' l='159' ll='182'/>
+<use f='luajit/lj_ccall.h' l='159'/>
+<size>448</size>
+<doc f='luajit/lj_ccall.h' l='157'>/* -- C call state -------------------------------------------------------- */</doc>
+<mbr r='CCallState::func' o='0' t='void (*)(void)'/>
+<mbr r='CCallState::spadj' o='64' t='uint32_t'/>
+<mbr r='CCallState::nsp' o='96' t='uint8_t'/>
+<mbr r='CCallState::retref' o='104' t='uint8_t'/>
+<mbr r='CCallState::ngpr' o='112' t='uint8_t'/>
+<mbr r='CCallState::nfpr' o='120' t='uint8_t'/>
+<mbr r='CCallState::fpr' o='128' t='FPRArg [8]'/>
+<mbr r='CCallState::gpr' o='1152' t='GPRArg [6]'/>
+<mbr r='CCallState::stack' o='1536' t='GPRArg [32]'/>

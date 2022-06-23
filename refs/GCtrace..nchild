@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='270' type='uint16_t'/>
+<offset>800</offset>
+<doc f='luajit/lj_jit.h' l='270'>/* Number of child traces (root trace only). */</doc>
+<use f='luajit/lj_record.c' l='2636' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='513' u='w' c='trace_stop'/>

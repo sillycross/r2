@@ -1,0 +1,4 @@
+<dec f='luajit/lj_strscan.h' l='12'/>
+<doc f='luajit/lj_strscan.h' l='11'>/* Options for accepted/returned formats. */</doc>
+<use f='luajit/lj_lex.c' l='109' u='c'/>
+<use f='luajit/lj_strscan.c' l='519' u='c'/>

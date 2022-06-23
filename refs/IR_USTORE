@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='75'/>
+<use f='luajit/lj_ir.h' l='172' u='r' c='lj_assert_75'/>
+<use f='luajit/lj_asm.c' l='1800' c='asm_ir'/>
+<use f='luajit/lj_opt_mem.c' l='50' u='r' c='aa_escape'/>
+<use f='luajit/lj_opt_mem.c' l='481' u='r' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_opt_mem.c' l='511' u='a' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_sink.c' l='104' c='sink_mark_ins'/>
+<use f='luajit/lj_record.c' l='1668' u='r' c='rec_upvalue'/>

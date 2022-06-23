@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='214' type='int lua_yield(lua_State * L, int nresults)'/>
+<def f='luajit/lj_api.c' l='1196' ll='1235' macro='1' type='int lua_yield(lua_State * L, int nresults)'/>

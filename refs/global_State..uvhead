@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='644' type='GCupval'/>
+<offset>2240</offset>
+<doc f='luajit/lj_obj.h' l='644'>/* Head of double-linked list of all open upvalues. */</doc>
+<use f='luajit/lj_func.c' l='62' u='a' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='63' u='m' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='65' u='m' c='func_finduv'/>
+<use f='luajit/lj_gc.c' l='115' u='a' c='gc_mark_uv'/>
+<use f='luajit/lj_gc.c' l='115' u='a' c='gc_mark_uv'/>
+<use f='luajit/lj_state.c' l='239' u='m' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='239' u='a' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='240' u='m' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='240' u='a' c='lua_newstate'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_tab.h' l='86'/>
+<use f='luajit/lib_ffi.c' l='441' u='c'/>
+<use f='luajit/lib_jit.c' l='373' u='c'/>
+<use f='luajit/lib_jit.c' l='374' u='c'/>
+<use f='luajit/lib_jit.c' l='376' u='c'/>
+<use f='luajit/lib_jit.c' l='377' u='c'/>
+<use f='luajit/lib_table.c' l='90' u='c'/>
+<use f='luajit/lib_table.c' l='101' u='c'/>
+<use f='luajit/lj_api.c' l='1016' u='c'/>
+<use f='luajit/lj_ccallback.c' l='789' u='c'/>
+<use f='luajit/lj_debug.c' l='520' u='c'/>
+<use f='luajit/lj_tab.c' l='549' u='c'/>
+<use f='luajit/lj_tab.c' l='554' u='c'/>

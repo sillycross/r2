@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/fp-logb.h' l='24'/>
+<use f='include/math.h' l='197' u='c'/>

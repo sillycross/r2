@@ -1,0 +1,25 @@
+<dec f='luajit/lj_jit.h' l='425' type='uint8_t'/>
+<offset>1448</offset>
+<doc f='luajit/lj_jit.h' l='425'>/* Need snapshot before recording next bytecode. */</doc>
+<use f='luajit/lj_crecord.c' l='796' u='w' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='937' u='w' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='954' u='w' c='crec_finalizer'/>
+<use f='luajit/lj_crecord.c' l='1285' u='w' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1612' u='w' c='recff_clib_index'/>
+<use f='luajit/lj_ffrecord.c' l='241' u='w' c='recff_setmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='462' u='w' c='recff_pcall'/>
+<use f='luajit/lj_ffrecord.c' l='498' u='w' c='recff_xpcall'/>
+<use f='luajit/lj_ffrecord.c' l='894' u='w' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='1091' u='w' c='recff_table_clear'/>
+<use f='luajit/lj_ir.c' l='145' u='w' c='lj_ir_call'/>
+<use f='luajit/lj_record.c' l='307' u='w' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='553' u='w' c='rec_for'/>
+<use f='luajit/lj_record.c' l='835' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='887' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='894' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1545' u='w' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1671' u='w' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1992' u='w' c='rec_comp_fixup'/>
+<use f='luajit/lj_record.c' l='2055' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2056' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='445' u='w' c='trace_start'/>

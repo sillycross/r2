@@ -1,0 +1,7 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='58'/>
+<use f='luajit/lj_asm.c' l='1697' u='r' c='asm_fuseequal'/>
+<use f='luajit/lj_asm.c' l='1783' c='asm_ir'/>
+<use f='luajit/lj_opt_sink.c' l='29' u='r' c='sink_checkalloc'/>
+<use f='luajit/lj_record.c' l='1387' u='r' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1498' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1519' u='r' c='lj_record_idx'/>

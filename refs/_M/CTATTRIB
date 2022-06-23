@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ctype.h' l='188'/>
+<use f='luajit/lj_cparse.c' l='800' u='c'/>
+<use f='luajit/lj_cparse.c' l='815' u='c'/>
+<use f='luajit/lj_cparse.c' l='1404' u='c'/>
+<use f='luajit/lj_cparse.c' l='1868' u='c'/>

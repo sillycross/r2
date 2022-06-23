@@ -1,0 +1,5 @@
+<def f='luajit/lj_ctype.h' l='158'/>
+<use f='luajit/lj_ctype.h' l='158'/>
+<size>8</size>
+<mbr r='FPRCBArg::d' o='0' t='double'/>
+<mbr r='FPRCBArg::f' o='0' t='float [2]'/>

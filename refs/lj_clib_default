@@ -1,0 +1,4 @@
+<dec f='luajit/lj_clib.h' l='25' type='void lj_clib_default(lua_State * L, GCtab * mt)'/>
+<use f='luajit/lib_ffi.c' l='861' u='c' c='luaopen_ffi'/>
+<def f='luajit/lj_clib.c' l='428' ll='432' type='void lj_clib_default(lua_State * L, GCtab * mt)'/>
+<doc f='luajit/lj_clib.c' l='427'>/* Create the default C library object. */</doc>

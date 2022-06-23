@@ -1,0 +1,8 @@
+<dec f='luajit/dasm_x86.h' l='155'/>
+<use f='luajit/dasm_x86.h' l='201' u='c'/>
+<use f='luajit/dasm_x86.h' l='202' u='c'/>
+<use f='luajit/dasm_x86.h' l='204' u='c'/>
+<use f='luajit/dasm_x86.h' l='207' u='c'/>
+<use f='luajit/dasm_x86.h' l='225' u='c'/>
+<use f='luajit/dasm_x86.h' l='264' u='c'/>
+<use f='luajit/dasm_x86.h' l='274' u='w'/>

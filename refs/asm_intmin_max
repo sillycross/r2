@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='2222' ll='2231' type='void asm_intmin_max(ASMState * as, IRIns * ir, int cc)'/>
+<use f='luajit/lj_asm_x86.h' l='2238' u='c' c='asm_min'/>
+<use f='luajit/lj_asm_x86.h' l='2246' u='c' c='asm_max'/>

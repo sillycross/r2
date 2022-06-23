@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lib_math.c source code [luajit/lib_math.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lib_math.c'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lib_math.c.html'>lib_math.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Math library.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#include <a href="../include/math.h.html">&lt;math.h&gt;</a></u></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><u>#define <dfn class="macro" id="_M/lib_math_c" data-ref="_M/lib_math_c">lib_math_c</dfn></u></td></tr>
+<tr><th id="9">9</th><td><u>#define <dfn class="macro" id="_M/LUA_LIB" data-ref="_M/LUA_LIB">LUA_LIB</dfn></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#include <a href="lua.h.html">"lua.h"</a></u></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="lauxlib.h.html">"lauxlib.h"</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="lualib.h.html">"lualib.h"</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="16">16</th><td><u>#include <a href="lj_lib.h.html">"lj_lib.h"</a></u></td></tr>
+<tr><th id="17">17</th><td><u>#include <a href="lj_vm.h.html">"lj_vm.h"</a></u></td></tr>
+<tr><th id="18">18</th><td><u>#include <a href="lj_prng.h.html">"lj_prng.h"</a></u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i>/* ------------------------------------------------------------------------ */</i></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/LJLIB_MODULE_math" data-ref="_M/LJLIB_MODULE_math">LJLIB_MODULE_math</dfn></u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><a class="macro" href="lj_lib.h.html#81" title="static int lj_ffh_math_abs(lua_State *L)" data-ref="_M/LJLIB_ASM">LJLIB_ASM</a>(math_abs)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(.)</td></tr>
+<tr><th id="25">25</th><td>{</td></tr>
+<tr><th id="26">26</th><td>  <a class="macro" href="lj_lib.h.html#39" title="lj_lib_checknum((L), (1))" data-ref="_M/lj_lib_checknumber">lj_lib_checknumber</a>(<a class="local col5 ref" href="#24" title='L' data-ref="5L" data-ref-filename="5L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="27">27</th><td>  <b>return</b> <a class="macro" href="lj_lib.h.html#28" title="0" data-ref="_M/FFH_RETRY">FFH_RETRY</a>;</td></tr>
+<tr><th id="28">28</th><td>}</td></tr>
+<tr><th id="29">29</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_floor)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_round IRFPM_FLOOR)</td></tr>
+<tr><th id="30">30</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_ceil)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_round IRFPM_CEIL)</td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><a class="macro" href="lj_lib.h.html#81" title="static int lj_ffh_math_sqrt(lua_State *L)" data-ref="_M/LJLIB_ASM">LJLIB_ASM</a>(math_sqrt)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_unary IRFPM_SQRT)</td></tr>
+<tr><th id="33">33</th><td>{</td></tr>
+<tr><th id="34">34</th><td>  <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col6 ref" href="#32" title='L' data-ref="6L" data-ref-filename="6L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="35">35</th><td>  <b>return</b> <a class="macro" href="lj_lib.h.html#28" title="0" data-ref="_M/FFH_RETRY">FFH_RETRY</a>;</td></tr>
+<tr><th id="36">36</th><td>}</td></tr>
+<tr><th id="37">37</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_log10)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_log10)</td></tr>
+<tr><th id="38">38</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_exp)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_exp)</td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_sin)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_sin)</td></tr>
+<tr><th id="40">40</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_cos)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_cos)</td></tr>
+<tr><th id="41">41</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_tan)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_tan)</td></tr>
+<tr><th id="42">42</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_asin)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_asin)</td></tr>
+<tr><th id="43">43</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_acos)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_acos)</td></tr>
+<tr><th id="44">44</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_atan)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_atan)</td></tr>
+<tr><th id="45">45</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_sinh)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_sinh)</td></tr>
+<tr><th id="46">46</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_cosh)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_cosh)</td></tr>
+<tr><th id="47">47</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_tanh)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_call IRCALL_tanh)</td></tr>
+<tr><th id="48">48</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_frexp)</td></tr>
+<tr><th id="49">49</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_modf)</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><a class="macro" href="lj_lib.h.html#81" title="static int lj_ffh_math_log(lua_State *L)" data-ref="_M/LJLIB_ASM">LJLIB_ASM</a>(math_log)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_log)</td></tr>
+<tr><th id="52">52</th><td>{</td></tr>
+<tr><th id="53">53</th><td>  <em>double</em> <dfn class="local col7 decl" id="7x" title='x' data-type='double' data-ref="7x" data-ref-filename="7x">x</dfn> = <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col8 ref" href="#51" title='L' data-ref="8L" data-ref-filename="8L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="54">54</th><td>  <b>if</b> (<a class="local col8 ref" href="#51" title='L' data-ref="8L" data-ref-filename="8L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::base" title='lua_State::base' data-ref="lua_State::base" data-ref-filename="lua_State..base">base</a>+<var>1</var> &lt; <a class="local col8 ref" href="#51" title='L' data-ref="8L" data-ref-filename="8L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::top" title='lua_State::top' data-ref="lua_State::top" data-ref-filename="lua_State..top">top</a>) {</td></tr>
+<tr><th id="55">55</th><td>    <em>double</em> <dfn class="local col9 decl" id="9y" title='y' data-type='double' data-ref="9y" data-ref-filename="9y">y</dfn> = <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col8 ref" href="#51" title='L' data-ref="8L" data-ref-filename="8L">L</a>, <var>2</var>);</td></tr>
+<tr><th id="56">56</th><td><u>#<span data-ppcond="56">ifdef</span> <span class="macro" data-ref="_M/LUAJIT_NO_LOG2">LUAJIT_NO_LOG2</span></u></td></tr>
+<tr><th id="57">57</th><td>    x = log(x); y = <var>1.0</var> / log(y);</td></tr>
+<tr><th id="58">58</th><td><u>#<span data-ppcond="56">else</span></u></td></tr>
+<tr><th id="59">59</th><td>    <a class="local col7 ref" href="#7x" title='x' data-ref="7x" data-ref-filename="7x">x</a> = <a class="macro" href="lj_vm.h.html#74" title="log2" data-ref="_M/lj_vm_log2">lj_vm_log2</a>(<a class="local col7 ref" href="#7x" title='x' data-ref="7x" data-ref-filename="7x">x</a>); <a class="local col9 ref" href="#9y" title='y' data-ref="9y" data-ref-filename="9y">y</a> = <var>1.0</var> / <a class="macro" href="lj_vm.h.html#74" title="log2" data-ref="_M/lj_vm_log2">lj_vm_log2</a>(<a class="local col9 ref" href="#9y" title='y' data-ref="9y" data-ref-filename="9y">y</a>);</td></tr>
+<tr><th id="60">60</th><td><u>#<span data-ppcond="56">endif</span></u></td></tr>
+<tr><th id="61">61</th><td>    <a class="macro" href="lj_obj.h.html#938" title="((L-&gt;base-1-1)-&gt;n = (x*y))" data-ref="_M/setnumV">setnumV</a>(<a class="local col8 ref" href="#51" title='L' data-ref="8L" data-ref-filename="8L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::base" title='lua_State::base' data-ref="lua_State::base" data-ref-filename="lua_State..base">base</a>-<var>1</var>-<a class="macro" href="lj_arch.h.html#533" title="1" data-ref="_M/LJ_FR2">LJ_FR2</a>, <a class="local col7 ref" href="#7x" title='x' data-ref="7x" data-ref-filename="7x">x</a>*<a class="local col9 ref" href="#9y" title='y' data-ref="9y" data-ref-filename="9y">y</a>);  <i>/* Do NOT join the expression to x / y. */</i></td></tr>
+<tr><th id="62">62</th><td>    <b>return</b> <a class="macro" href="lj_lib.h.html#30" title="((1)+1)" data-ref="_M/FFH_RES">FFH_RES</a>(<var>1</var>);</td></tr>
+<tr><th id="63">63</th><td>  }</td></tr>
+<tr><th id="64">64</th><td>  <b>return</b> <a class="macro" href="lj_lib.h.html#28" title="0" data-ref="_M/FFH_RETRY">FFH_RETRY</a>;</td></tr>
+<tr><th id="65">65</th><td>}</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><a class="macro" href="lj_lib.h.html#83" title="" data-ref="_M/LJLIB_LUA">LJLIB_LUA</a>(math_deg) <i>/* function(x) return x * 57.29577951308232 end */</i></td></tr>
+<tr><th id="68">68</th><td><a class="macro" href="lj_lib.h.html#83" title="" data-ref="_M/LJLIB_LUA">LJLIB_LUA</a>(math_rad) <i>/* function(x) return x * 0.017453292519943295 end */</i></td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><a class="macro" href="lj_lib.h.html#81" title="static int lj_ffh_math_atan2(lua_State *L)" data-ref="_M/LJLIB_ASM">LJLIB_ASM</a>(math_atan2)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(.)</td></tr>
+<tr><th id="71">71</th><td>{</td></tr>
+<tr><th id="72">72</th><td>  <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col0 ref" href="#70" title='L' data-ref="10L" data-ref-filename="10L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="73">73</th><td>  <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col0 ref" href="#70" title='L' data-ref="10L" data-ref-filename="10L">L</a>, <var>2</var>);</td></tr>
+<tr><th id="74">74</th><td>  <b>return</b> <a class="macro" href="lj_lib.h.html#28" title="0" data-ref="_M/FFH_RETRY">FFH_RETRY</a>;</td></tr>
+<tr><th id="75">75</th><td>}</td></tr>
+<tr><th id="76">76</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_pow)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(.)</td></tr>
+<tr><th id="77">77</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_fmod)</td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><a class="macro" href="lj_lib.h.html#81" title="static int lj_ffh_math_ldexp(lua_State *L)" data-ref="_M/LJLIB_ASM">LJLIB_ASM</a>(math_ldexp)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(.)</td></tr>
+<tr><th id="80">80</th><td>{</td></tr>
+<tr><th id="81">81</th><td>  <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col1 ref" href="#79" title='L' data-ref="11L" data-ref-filename="11L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="82">82</th><td><u>#<span data-ppcond="82">if</span> <a class="macro" href="lj_arch.h.html#513" title="0" data-ref="_M/LJ_DUALNUM">LJ_DUALNUM</a> &amp;&amp; !<a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="83">83</th><td>  lj_lib_checkint(L, <var>2</var>);</td></tr>
+<tr><th id="84">84</th><td><u>#<span data-ppcond="82">else</span></u></td></tr>
+<tr><th id="85">85</th><td>  <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col1 ref" href="#79" title='L' data-ref="11L" data-ref-filename="11L">L</a>, <var>2</var>);</td></tr>
+<tr><th id="86">86</th><td><u>#<span data-ppcond="82">endif</span></u></td></tr>
+<tr><th id="87">87</th><td>  <b>return</b> <a class="macro" href="lj_lib.h.html#28" title="0" data-ref="_M/FFH_RETRY">FFH_RETRY</a>;</td></tr>
+<tr><th id="88">88</th><td>}</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><a class="macro" href="lj_lib.h.html#81" title="static int lj_ffh_math_min(lua_State *L)" data-ref="_M/LJLIB_ASM">LJLIB_ASM</a>(math_min)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_minmax IR_MIN)</td></tr>
+<tr><th id="91">91</th><td>{</td></tr>
+<tr><th id="92">92</th><td>  <em>int</em> <dfn class="local col2 decl" id="12i" title='i' data-type='int' data-ref="12i" data-ref-filename="12i">i</dfn> = <var>0</var>;</td></tr>
+<tr><th id="93">93</th><td>  <b>do</b> { <a class="macro" href="lj_lib.h.html#39" title="lj_lib_checknum((L), (++i))" data-ref="_M/lj_lib_checknumber">lj_lib_checknumber</a>(<a class="local col3 ref" href="#90" title='L' data-ref="13L" data-ref-filename="13L">L</a>, ++<a class="local col2 ref" href="#12i" title='i' data-ref="12i" data-ref-filename="12i">i</a>); } <b>while</b> (<a class="local col3 ref" href="#90" title='L' data-ref="13L" data-ref-filename="13L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::base" title='lua_State::base' data-ref="lua_State::base" data-ref-filename="lua_State..base">base</a>+<a class="local col2 ref" href="#12i" title='i' data-ref="12i" data-ref-filename="12i">i</a> &lt; <a class="local col3 ref" href="#90" title='L' data-ref="13L" data-ref-filename="13L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::top" title='lua_State::top' data-ref="lua_State::top" data-ref-filename="lua_State..top">top</a>);</td></tr>
+<tr><th id="94">94</th><td>  <b>return</b> <a class="macro" href="lj_lib.h.html#28" title="0" data-ref="_M/FFH_RETRY">FFH_RETRY</a>;</td></tr>
+<tr><th id="95">95</th><td>}</td></tr>
+<tr><th id="96">96</th><td><a class="macro" href="lj_lib.h.html#82" title="" data-ref="_M/LJLIB_ASM_">LJLIB_ASM_</a>(math_max)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(math_minmax IR_MAX)</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><a class="macro" href="lj_lib.h.html#85" title="" data-ref="_M/LJLIB_PUSH">LJLIB_PUSH</a>(<var>3.14159265358979323846</var>) <a class="macro" href="lj_lib.h.html#84" title="" data-ref="_M/LJLIB_SET">LJLIB_SET</a>(pi)</td></tr>
+<tr><th id="99">99</th><td><a class="macro" href="lj_lib.h.html#85" title="" data-ref="_M/LJLIB_PUSH">LJLIB_PUSH</a>(<var>1e310</var>) <a class="macro" href="lj_lib.h.html#84" title="" data-ref="_M/LJLIB_SET">LJLIB_SET</a>(huge)</td></tr>
+<tr><th id="100">100</th><td></td></tr>
+<tr><th id="101">101</th><td><i>/* ------------------------------------------------------------------------ */</i></td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><i>/* This implements a Tausworthe PRNG with period 2^223. Based on:</i></td></tr>
+<tr><th id="104">104</th><td><i>**   Tables of maximally-equidistributed combined LFSR generators,</i></td></tr>
+<tr><th id="105">105</th><td><i>**   Pierre L'Ecuyer, 1991, table 3, 1st entry.</i></td></tr>
+<tr><th id="106">106</th><td><i>** Full-period ME-CF generator with L=64, J=4, k=223, N1=49.</i></td></tr>
+<tr><th id="107">107</th><td><i>*/</i></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><i>/* Union needed for bit-pattern conversion between uint64_t and double. */</i></td></tr>
+<tr><th id="110">110</th><td><b>typedef</b> <b>union</b> { <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="tu decl field" id="(anonymous)::u64" title='(anonymous union)::u64' data-type='uint64_t' data-ref="(anonymous)::u64" data-ref-filename="(anonymous)..u64">u64</dfn>; <em>double</em> <dfn class="tu decl field" id="(anonymous)::d" title='(anonymous union)::d' data-type='double' data-ref="(anonymous)::d" data-ref-filename="(anonymous)..d">d</dfn>; } <dfn class="typedef" id="U64double" title='U64double' data-type='union U64double' data-ref="U64double" data-ref-filename="U64double">U64double</dfn>;</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td><i  data-doc="random_seed">/* PRNG seeding function. */</i></td></tr>
+<tr><th id="113">113</th><td><em>static</em> <em>void</em> <dfn class="tu decl def fn" id="random_seed" title='random_seed' data-type='void random_seed(PRNGState * rs, double d)' data-ref="random_seed" data-ref-filename="random_seed">random_seed</dfn>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col4 decl" id="14rs" title='rs' data-type='PRNGState *' data-ref="14rs" data-ref-filename="14rs">rs</dfn>, <em>double</em> <dfn class="local col5 decl" id="15d" title='d' data-type='double' data-ref="15d" data-ref-filename="15d">d</dfn>)</td></tr>
+<tr><th id="114">114</th><td>{</td></tr>
+<tr><th id="115">115</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col6 decl" id="16r" title='r' data-type='uint32_t' data-ref="16r" data-ref-filename="16r">r</dfn> = <var>0x11090601</var>;  <i>/* 64-k[i] as four 8 bit constants. */</i></td></tr>
+<tr><th id="116">116</th><td>  <em>int</em> <dfn class="local col7 decl" id="17i" title='i' data-type='int' data-ref="17i" data-ref-filename="17i">i</dfn>;</td></tr>
+<tr><th id="117">117</th><td>  <b>for</b> (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> = <var>0</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> &lt; <var>4</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>++) {</td></tr>
+<tr><th id="118">118</th><td>    <a class="typedef" href="#U64double" title='U64double' data-type='union U64double' data-ref="U64double" data-ref-filename="U64double">U64double</a> <dfn class="local col8 decl" id="18u" title='u' data-type='U64double' data-ref="18u" data-ref-filename="18u">u</dfn>;</td></tr>
+<tr><th id="119">119</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col9 decl" id="19m" title='m' data-type='uint32_t' data-ref="19m" data-ref-filename="19m">m</dfn> = <var>1u</var> &lt;&lt; (<a class="local col6 ref" href="#16r" title='r' data-ref="16r" data-ref-filename="16r">r</a>&amp;<var>255</var>);</td></tr>
+<tr><th id="120">120</th><td>    <a class="local col6 ref" href="#16r" title='r' data-ref="16r" data-ref-filename="16r">r</a> &gt;&gt;= <var>8</var>;</td></tr>
+<tr><th id="121">121</th><td>    <a class="local col8 ref" href="#18u" title='u' data-ref="18u" data-ref-filename="18u">u</a>.<a class="tu ref field" href="#(anonymous)::d" title='(anonymous union)::d' data-use='w' data-ref="(anonymous)::d" data-ref-filename="(anonymous)..d">d</a> = <a class="local col5 ref" href="#15d" title='d' data-ref="15d" data-ref-filename="15d">d</a> = <a class="local col5 ref" href="#15d" title='d' data-ref="15d" data-ref-filename="15d">d</a> * <var>3.14159265358979323846</var> + <var>2.7182818284590452354</var>;</td></tr>
+<tr><th id="122">122</th><td>    <b>if</b> (<a class="local col8 ref" href="#18u" title='u' data-ref="18u" data-ref-filename="18u">u</a>.<a class="tu ref field" href="#(anonymous)::u64" title='(anonymous union)::u64' data-use='r' data-ref="(anonymous)::u64" data-ref-filename="(anonymous)..u64">u64</a> &lt; <a class="local col9 ref" href="#19m" title='m' data-ref="19m" data-ref-filename="19m">m</a>) <a class="local col8 ref" href="#18u" title='u' data-ref="18u" data-ref-filename="18u">u</a>.<a class="tu ref field" href="#(anonymous)::u64" title='(anonymous union)::u64' data-use='w' data-ref="(anonymous)::u64" data-ref-filename="(anonymous)..u64">u64</a> += <a class="local col9 ref" href="#19m" title='m' data-ref="19m" data-ref-filename="19m">m</a>;  <i>/* Ensure k[i] MSB of u[i] are non-zero. */</i></td></tr>
+<tr><th id="123">123</th><td>    <a class="local col4 ref" href="#14rs" title='rs' data-ref="14rs" data-ref-filename="14rs">rs</a>-&gt;<a class="ref field" href="lj_def.h.html#PRNGState::u" title='PRNGState::u' data-ref="PRNGState::u" data-ref-filename="PRNGState..u">u</a>[<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>] = <a class="local col8 ref" href="#18u" title='u' data-ref="18u" data-ref-filename="18u">u</a>.<a class="tu ref field" href="#(anonymous)::u64" title='(anonymous union)::u64' data-use='r' data-ref="(anonymous)::u64" data-ref-filename="(anonymous)..u64">u64</a>;</td></tr>
+<tr><th id="124">124</th><td>  }</td></tr>
+<tr><th id="125">125</th><td>  <b>for</b> (<a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> = <var>0</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a> &lt; <var>10</var>; <a class="local col7 ref" href="#17i" title='i' data-ref="17i" data-ref-filename="17i">i</a>++)</td></tr>
+<tr><th id="126">126</th><td>    (<em>void</em>)<a class="ref fn" href="lj_prng.h.html#lj_prng_u64" title='lj_prng_u64' data-ref="lj_prng_u64" data-ref-filename="lj_prng_u64">lj_prng_u64</a>(<a class="local col4 ref" href="#14rs" title='rs' data-ref="14rs" data-ref-filename="14rs">rs</a>);</td></tr>
+<tr><th id="127">127</th><td>}</td></tr>
+<tr><th id="128">128</th><td></td></tr>
+<tr><th id="129">129</th><td><i>/* PRNG extract function. */</i></td></tr>
+<tr><th id="130">130</th><td><a class="macro" href="lj_lib.h.html#85" title="" data-ref="_M/LJLIB_PUSH">LJLIB_PUSH</a>(top-<var>2</var>)  <i>/* Upvalue holds userdata with PRNGState. */</i></td></tr>
+<tr><th id="131">131</th><td><a class="macro" href="lj_lib.h.html#80" title="static int lj_cf_math_random(lua_State *L)" data-ref="_M/LJLIB_CF">LJLIB_CF</a>(math_random)		<a class="macro" href="lj_lib.h.html#86" title="" data-ref="_M/LJLIB_REC">LJLIB_REC</a>(.)</td></tr>
+<tr><th id="132">132</th><td>{</td></tr>
+<tr><th id="133">133</th><td>  <em>int</em> <dfn class="local col0 decl" id="20n" title='n' data-type='int' data-ref="20n" data-ref-filename="20n">n</dfn> = (<em>int</em>)(<a class="local col1 ref" href="#131" title='L' data-ref="21L" data-ref-filename="21L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::top" title='lua_State::top' data-ref="lua_State::top" data-ref-filename="lua_State..top">top</a> - <a class="local col1 ref" href="#131" title='L' data-ref="21L" data-ref-filename="21L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::base" title='lua_State::base' data-ref="lua_State::base" data-ref-filename="lua_State..base">base</a>);</td></tr>
+<tr><th id="134">134</th><td>  <a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col2 decl" id="22rs" title='rs' data-type='PRNGState *' data-ref="22rs" data-ref-filename="22rs">rs</dfn> = (<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *)(<a class="macro" href="lj_obj.h.html#339" title="((void *)(((&amp;((GCobj *)(((((&amp;((GCobj *)((((L-&gt;base-2)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;fn.c.upvalue[(1)-1]))-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;ud))+1))" data-ref="_M/uddata">uddata</a>(<a class="macro" href="lj_obj.h.html#858" title="(&amp;((GCobj *)(((((&amp;((GCobj *)((((L-&gt;base-2)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;fn.c.upvalue[(1)-1]))-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;ud)" data-ref="_M/udataV">udataV</a>(<a class="macro" href="lj_lib.h.html#57" title="(&amp;((GCobj *)((((L-&gt;base-2)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;fn.c.upvalue[(1)-1])" data-ref="_M/lj_lib_upvalue">lj_lib_upvalue</a>(<a class="local col1 ref" href="#131" title='L' data-ref="21L" data-ref-filename="21L">L</a>, <var>1</var>))));</td></tr>
+<tr><th id="135">135</th><td>  <a class="typedef" href="#U64double" title='U64double' data-type='union U64double' data-ref="U64double" data-ref-filename="U64double">U64double</a> <dfn class="local col3 decl" id="23u" title='u' data-type='U64double' data-ref="23u" data-ref-filename="23u">u</dfn>;</td></tr>
+<tr><th id="136">136</th><td>  <em>double</em> <dfn class="local col4 decl" id="24d" title='d' data-type='double' data-ref="24d" data-ref-filename="24d">d</dfn>;</td></tr>
+<tr><th id="137">137</th><td>  <a class="local col3 ref" href="#23u" title='u' data-ref="23u" data-ref-filename="23u">u</a>.<a class="tu ref field" href="#(anonymous)::u64" title='(anonymous union)::u64' data-use='w' data-ref="(anonymous)::u64" data-ref-filename="(anonymous)..u64">u64</a> = <a class="ref fn" href="lj_prng.h.html#lj_prng_u64d" title='lj_prng_u64d' data-ref="lj_prng_u64d" data-ref-filename="lj_prng_u64d">lj_prng_u64d</a>(<a class="local col2 ref" href="#22rs" title='rs' data-ref="22rs" data-ref-filename="22rs">rs</a>);</td></tr>
+<tr><th id="138">138</th><td>  <a class="local col4 ref" href="#24d" title='d' data-ref="24d" data-ref-filename="24d">d</a> = <a class="local col3 ref" href="#23u" title='u' data-ref="23u" data-ref-filename="23u">u</a>.<a class="tu ref field" href="#(anonymous)::d" title='(anonymous union)::d' data-use='r' data-ref="(anonymous)::d" data-ref-filename="(anonymous)..d">d</a> - <var>1.0</var>;</td></tr>
+<tr><th id="139">139</th><td>  <b>if</b> (<a class="local col0 ref" href="#20n" title='n' data-ref="20n" data-ref-filename="20n">n</a> &gt; <var>0</var>) {</td></tr>
+<tr><th id="140">140</th><td><u>#<span data-ppcond="140">if</span> <a class="macro" href="lj_arch.h.html#513" title="0" data-ref="_M/LJ_DUALNUM">LJ_DUALNUM</a></u></td></tr>
+<tr><th id="141">141</th><td>    <em>int</em> isint = <var>1</var>;</td></tr>
+<tr><th id="142">142</th><td>    <em>double</em> r1;</td></tr>
+<tr><th id="143">143</th><td>    lj_lib_checknumber(L, <var>1</var>);</td></tr>
+<tr><th id="144">144</th><td>    <b>if</b> (tvisint(L-&gt;base)) {</td></tr>
+<tr><th id="145">145</th><td>      r1 = (lua_Number)intV(L-&gt;base);</td></tr>
+<tr><th id="146">146</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="147">147</th><td>      isint = <var>0</var>;</td></tr>
+<tr><th id="148">148</th><td>      r1 = numV(L-&gt;base);</td></tr>
+<tr><th id="149">149</th><td>    }</td></tr>
+<tr><th id="150">150</th><td><u>#<span data-ppcond="140">else</span></u></td></tr>
+<tr><th id="151">151</th><td>    <em>double</em> <dfn class="local col5 decl" id="25r1" title='r1' data-type='double' data-ref="25r1" data-ref-filename="25r1">r1</dfn> = <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col1 ref" href="#131" title='L' data-ref="21L" data-ref-filename="21L">L</a>, <var>1</var>);</td></tr>
+<tr><th id="152">152</th><td><u>#<span data-ppcond="140">endif</span></u></td></tr>
+<tr><th id="153">153</th><td>    <b>if</b> (<a class="local col0 ref" href="#20n" title='n' data-ref="20n" data-ref-filename="20n">n</a> == <var>1</var>) {</td></tr>
+<tr><th id="154">154</th><td>      <a class="local col4 ref" href="#24d" title='d' data-ref="24d" data-ref-filename="24d">d</a> = <a class="ref fn" href="lj_vm.h.html#lj_vm_floor" title='lj_vm_floor' data-ref="lj_vm_floor" data-ref-filename="lj_vm_floor">lj_vm_floor</a>(<a class="local col4 ref" href="#24d" title='d' data-ref="24d" data-ref-filename="24d">d</a>*<a class="local col5 ref" href="#25r1" title='r1' data-ref="25r1" data-ref-filename="25r1">r1</a>) + <var>1.0</var>;  <i>/* d is an int in range [1, r1] */</i></td></tr>
+<tr><th id="155">155</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="156">156</th><td><u>#<span data-ppcond="156">if</span> <a class="macro" href="lj_arch.h.html#513" title="0" data-ref="_M/LJ_DUALNUM">LJ_DUALNUM</a></u></td></tr>
+<tr><th id="157">157</th><td>      <em>double</em> r2;</td></tr>
+<tr><th id="158">158</th><td>      lj_lib_checknumber(L, <var>2</var>);</td></tr>
+<tr><th id="159">159</th><td>      <b>if</b> (tvisint(L-&gt;base+<var>1</var>)) {</td></tr>
+<tr><th id="160">160</th><td>	r2 = (lua_Number)intV(L-&gt;base+<var>1</var>);</td></tr>
+<tr><th id="161">161</th><td>      } <b>else</b> {</td></tr>
+<tr><th id="162">162</th><td>	isint = <var>0</var>;</td></tr>
+<tr><th id="163">163</th><td>	r2 = numV(L-&gt;base+<var>1</var>);</td></tr>
+<tr><th id="164">164</th><td>      }</td></tr>
+<tr><th id="165">165</th><td><u>#<span data-ppcond="156">else</span></u></td></tr>
+<tr><th id="166">166</th><td>      <em>double</em> <dfn class="local col6 decl" id="26r2" title='r2' data-type='double' data-ref="26r2" data-ref-filename="26r2">r2</dfn> = <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col1 ref" href="#131" title='L' data-ref="21L" data-ref-filename="21L">L</a>, <var>2</var>);</td></tr>
+<tr><th id="167">167</th><td><u>#<span data-ppcond="156">endif</span></u></td></tr>
+<tr><th id="168">168</th><td>      <a class="local col4 ref" href="#24d" title='d' data-ref="24d" data-ref-filename="24d">d</a> = <a class="ref fn" href="lj_vm.h.html#lj_vm_floor" title='lj_vm_floor' data-ref="lj_vm_floor" data-ref-filename="lj_vm_floor">lj_vm_floor</a>(<a class="local col4 ref" href="#24d" title='d' data-ref="24d" data-ref-filename="24d">d</a>*(<a class="local col6 ref" href="#26r2" title='r2' data-ref="26r2" data-ref-filename="26r2">r2</a>-<a class="local col5 ref" href="#25r1" title='r1' data-ref="25r1" data-ref-filename="25r1">r1</a>+<var>1.0</var>)) + <a class="local col5 ref" href="#25r1" title='r1' data-ref="25r1" data-ref-filename="25r1">r1</a>;  <i>/* d is an int in range [r1, r2] */</i></td></tr>
+<tr><th id="169">169</th><td>    }</td></tr>
+<tr><th id="170">170</th><td><u>#<span data-ppcond="170">if</span> <a class="macro" href="lj_arch.h.html#513" title="0" data-ref="_M/LJ_DUALNUM">LJ_DUALNUM</a></u></td></tr>
+<tr><th id="171">171</th><td>    <b>if</b> (isint) {</td></tr>
+<tr><th id="172">172</th><td>      setintV(L-&gt;top-<var>1</var>, lj_num2int(d));</td></tr>
+<tr><th id="173">173</th><td>      <b>return</b> <var>1</var>;</td></tr>
+<tr><th id="174">174</th><td>    }</td></tr>
+<tr><th id="175">175</th><td><u>#<span data-ppcond="170">endif</span></u></td></tr>
+<tr><th id="176">176</th><td>  }  <i>/* else: d is a double in range [0, 1] */</i></td></tr>
+<tr><th id="177">177</th><td>  <a class="macro" href="lj_obj.h.html#938" title="((L-&gt;top++)-&gt;n = (d))" data-ref="_M/setnumV">setnumV</a>(<a class="local col1 ref" href="#131" title='L' data-ref="21L" data-ref-filename="21L">L</a>-&gt;<a class="ref field" href="lj_obj.h.html#lua_State::top" title='lua_State::top' data-ref="lua_State::top" data-ref-filename="lua_State..top">top</a>++, <a class="local col4 ref" href="#24d" title='d' data-ref="24d" data-ref-filename="24d">d</a>);</td></tr>
+<tr><th id="178">178</th><td>  <b>return</b> <var>1</var>;</td></tr>
+<tr><th id="179">179</th><td>}</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td><i>/* PRNG seed function. */</i></td></tr>
+<tr><th id="182">182</th><td><a class="macro" href="lj_lib.h.html#85" title="" data-ref="_M/LJLIB_PUSH">LJLIB_PUSH</a>(top-<var>2</var>)  <i>/* Upvalue holds userdata with PRNGState. */</i></td></tr>
+<tr><th id="183">183</th><td><a class="macro" href="lj_lib.h.html#80" title="static int lj_cf_math_randomseed(lua_State *L)" data-ref="_M/LJLIB_CF">LJLIB_CF</a>(math_randomseed)</td></tr>
+<tr><th id="184">184</th><td>{</td></tr>
+<tr><th id="185">185</th><td>  <a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col7 decl" id="27rs" title='rs' data-type='PRNGState *' data-ref="27rs" data-ref-filename="27rs">rs</dfn> = (<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *)(<a class="macro" href="lj_obj.h.html#339" title="((void *)(((&amp;((GCobj *)(((((&amp;((GCobj *)((((L-&gt;base-2)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;fn.c.upvalue[(1)-1]))-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;ud))+1))" data-ref="_M/uddata">uddata</a>(<a class="macro" href="lj_obj.h.html#858" title="(&amp;((GCobj *)(((((&amp;((GCobj *)((((L-&gt;base-2)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;fn.c.upvalue[(1)-1]))-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;ud)" data-ref="_M/udataV">udataV</a>(<a class="macro" href="lj_lib.h.html#57" title="(&amp;((GCobj *)((((L-&gt;base-2)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;fn.c.upvalue[(1)-1])" data-ref="_M/lj_lib_upvalue">lj_lib_upvalue</a>(<a class="local col8 ref" href="#183" title='L' data-ref="28L" data-ref-filename="28L">L</a>, <var>1</var>))));</td></tr>
+<tr><th id="186">186</th><td>  <a class="tu ref fn" href="#random_seed" title='random_seed' data-use='c' data-ref="random_seed" data-ref-filename="random_seed">random_seed</a>(<a class="local col7 ref" href="#27rs" title='rs' data-ref="27rs" data-ref-filename="27rs">rs</a>, <a class="ref fn" href="lj_lib.h.html#lj_lib_checknum" title='lj_lib_checknum' data-ref="lj_lib_checknum" data-ref-filename="lj_lib_checknum">lj_lib_checknum</a>(<a class="local col8 ref" href="#183" title='L' data-ref="28L" data-ref-filename="28L">L</a>, <var>1</var>));</td></tr>
+<tr><th id="187">187</th><td>  <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="188">188</th><td>}</td></tr>
+<tr><th id="189">189</th><td></td></tr>
+<tr><th id="190">190</th><td><i>/* ------------------------------------------------------------------------ */</i></td></tr>
+<tr><th id="191">191</th><td></td></tr>
+<tr><th id="192">192</th><td><u>#include <a href="lj_libdef.h.html">"lj_libdef.h"</a></u></td></tr>
+<tr><th id="193">193</th><td></td></tr>
+<tr><th id="194">194</th><td><a class="macro" href="luaconf.h.html#137" title="extern" data-ref="_M/LUALIB_API">LUALIB_API</a> <em>int</em> <dfn class="decl def fn" id="luaopen_math" title='luaopen_math' data-ref="luaopen_math" data-ref-filename="luaopen_math">luaopen_math</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col9 decl" id="29L" title='L' data-type='lua_State *' data-ref="29L" data-ref-filename="29L">L</dfn>)</td></tr>
+<tr><th id="195">195</th><td>{</td></tr>
+<tr><th id="196">196</th><td>  <a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col0 decl" id="30rs" title='rs' data-type='PRNGState *' data-ref="30rs" data-ref-filename="30rs">rs</dfn> = (<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *)<a class="ref fn" href="lua.h.html#lua_newuserdata" title='lua_newuserdata' data-ref="lua_newuserdata" data-ref-filename="lua_newuserdata">lua_newuserdata</a>(<a class="local col9 ref" href="#29L" title='L' data-ref="29L" data-ref-filename="29L">L</a>, <b>sizeof</b>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a>));</td></tr>
+<tr><th id="197">197</th><td>  <a class="ref fn" href="lj_prng.h.html#lj_prng_seed_fixed" title='lj_prng_seed_fixed' data-ref="lj_prng_seed_fixed" data-ref-filename="lj_prng_seed_fixed">lj_prng_seed_fixed</a>(<a class="local col0 ref" href="#30rs" title='rs' data-ref="30rs" data-ref-filename="30rs">rs</a>);</td></tr>
+<tr><th id="198">198</th><td>  <a class="macro" href="lj_lib.h.html#90" title="lj_lib_register(L, &quot;math&quot;, lj_lib_init_math, lj_lib_cf_math)" data-ref="_M/LJ_LIB_REG">LJ_LIB_REG</a>(<a class="local col9 ref" href="#29L" title='L' data-ref="29L" data-ref-filename="29L">L</a>, <a class="macro" href="lualib.h.html#14" title="&quot;math&quot;" data-ref="_M/LUA_MATHLIBNAME">LUA_MATHLIBNAME</a>, math);</td></tr>
+<tr><th id="199">199</th><td>  <b>return</b> <var>1</var>;</td></tr>
+<tr><th id="200">200</th><td>}</td></tr>
+<tr><th id="201">201</th><td></td></tr>
+<tr><th id="202">202</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

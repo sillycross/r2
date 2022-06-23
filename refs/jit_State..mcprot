@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='494' type='int'/>
+<offset>24352</offset>
+<doc f='luajit/lj_jit.h' l='494'>/* Protection of current mcode area. */</doc>
+<use f='luajit/lj_mcode.c' l='184' u='r' c='mcode_protect'/>
+<use f='luajit/lj_mcode.c' l='187' u='w' c='mcode_protect'/>
+<use f='luajit/lj_mcode.c' l='271' u='w' c='mcode_allocarea'/>

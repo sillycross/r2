@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<use f='luajit/lj_ctype.h' l='454' macro='1' u='w' c='ctype_setname'/>
+<offset>64</offset>
+<use f='luajit/lj_gc.c' l='54' u='w' c='gc_traverse_proto'/>
+<use f='luajit/lj_gc.c' l='54' u='w' c='gc_mayclear'/>
+<use f='luajit/lj_gc.c' l='645' u='w' c='atomic'/>
+<use f='luajit/lj_lex.c' l='510' macro='1' u='w' c='lj_lex_init'/>
+<use f='luajit/lj_state.c' l='156' macro='1' u='w' c='cpluaopen'/>
+<use f='luajit/lj_state.c' l='228' u='w' c='lua_newstate'/>

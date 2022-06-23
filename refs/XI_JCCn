@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='216' type='128'/>
+<doc f='luajit/lj_target_x86.h' l='216'>/* Really 0f8x. */</doc>
+<use f='luajit/lj_emit_x86.h' l='281' u='r' c='emit_loadi'/>
+<use f='luajit/lj_emit_x86.h' l='488' u='r' c='emit_jcc'/>

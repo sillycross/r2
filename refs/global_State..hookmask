@@ -1,0 +1,54 @@
+<dec f='luajit/lj_obj.h' l='634' type='uint8_t'/>
+<offset>1160</offset>
+<doc f='luajit/lj_obj.h' l='634'>/* Hook mask. */</doc>
+<use f='luajit/lj_api.c' l='1131' macro='1' u='r' c='lua_pcall'/>
+<use f='luajit/lj_api.c' l='1144' macro='1' u='w' c='lua_pcall'/>
+<use f='luajit/lj_api.c' l='1144' macro='1' u='r' c='lua_pcall'/>
+<use f='luajit/lj_api.c' l='1167' macro='1' u='r' c='lua_cpcall'/>
+<use f='luajit/lj_api.c' l='1172' macro='1' u='w' c='lua_cpcall'/>
+<use f='luajit/lj_api.c' l='1172' macro='1' u='r' c='lua_cpcall'/>
+<use f='luajit/lj_api.c' l='1202' macro='1' u='r' c='lua_yield'/>
+<use f='luajit/lj_api.c' l='1214' macro='1' u='w' c='lua_yield'/>
+<use f='luajit/lj_asm_x86.h' l='2656' u='a' c='asm_prof'/>
+<use f='luajit/lj_dispatch.c' l='114' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='116' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='117' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='118' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='245' u='r' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='330' u='w' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='330' u='r' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='343' u='r' c='lua_gethookmask'/>
+<use f='luajit/lj_dispatch.c' l='356' macro='1' u='r' c='callhook'/>
+<use f='luajit/lj_dispatch.c' l='367' macro='1' u='w' c='callhook'/>
+<use f='luajit/lj_dispatch.c' l='375' macro='1' u='w' c='callhook'/>
+<use f='luajit/lj_dispatch.c' l='423' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='428' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='437' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='483' u='r' c='lj_dispatch_call'/>
+<use f='luajit/lj_dispatch.c' l='493' u='r' c='lj_dispatch_call'/>
+<use f='luajit/lj_err.c' l='155' macro='1' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='182' macro='1' u='w' c='err_unwind'/>
+<use f='luajit/lj_gc.c' l='505' macro='1' u='r' c='gc_call_finalizer'/>
+<use f='luajit/lj_gc.c' l='510' macro='1' u='w' c='gc_call_finalizer'/>
+<use f='luajit/lj_gc.c' l='510' macro='1' u='r' c='gc_call_finalizer'/>
+<use f='luajit/lj_gc.c' l='519' macro='1' u='w' c='gc_call_finalizer'/>
+<use f='luajit/lj_gc.c' l='519' macro='1' u='r' c='gc_call_finalizer'/>
+<use f='luajit/lj_profile.c' l='132' u='r' c='lj_profile_interpreter'/>
+<use f='luajit/lj_profile.c' l='136' u='w' c='lj_profile_interpreter'/>
+<use f='luajit/lj_profile.c' l='141' u='r' c='lj_profile_interpreter'/>
+<use f='luajit/lj_profile.c' l='143' u='w' c='lj_profile_interpreter'/>
+<use f='luajit/lj_profile.c' l='155' u='r' c='profile_trigger'/>
+<use f='luajit/lj_profile.c' l='162' u='w' c='profile_trigger'/>
+<use f='luajit/lj_profile.c' l='342' u='w' c='luaJIT_profile_stop'/>
+<use f='luajit/lj_state.c' l='293' macro='1' u='w' c='lua_close'/>
+<use f='luajit/lj_trace.c' l='284' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='743' u='r' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='756' u='r' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='772' u='r' c='lj_trace_stitch'/>
+<use f='luajit/lj_trace.c' l='879' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='892' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='895' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_vmevent.c' l='42' macro='1' u='r' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='45' macro='1' u='w' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='54' macro='1' u='w' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='54' macro='1' u='r' c='lj_vmevent_call'/>

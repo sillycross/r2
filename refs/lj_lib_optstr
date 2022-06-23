@@ -1,0 +1,15 @@
+<dec f='luajit/lj_lib.h' l='35' type='GCstr * lj_lib_optstr(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='377' u='c' c='lj_cf_loadfile'/>
+<use f='luajit/lib_base.c' l='378' u='c' c='lj_cf_loadfile'/>
+<use f='luajit/lib_base.c' l='407' u='c' c='lj_cf_load'/>
+<use f='luajit/lib_base.c' l='408' u='c' c='lj_cf_load'/>
+<use f='luajit/lib_base.c' l='443' u='c' c='lj_cf_dofile'/>
+<use f='luajit/lib_io.c' l='404' u='c' c='lj_cf_io_open'/>
+<use f='luajit/lib_io.c' l='415' u='c' c='lj_cf_io_popen'/>
+<use f='luajit/lib_jit.c' l='129' u='c' c='lj_cf_jit_attach'/>
+<use f='luajit/lib_jit.c' l='576' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lib_os.c' l='268' u='c' c='lj_cf_os_setlocale'/>
+<use f='luajit/lib_string.c' l='91' u='c' c='lj_cf_string_rep'/>
+<use f='luajit/lib_table.c' l='155' u='c' c='lj_cf_table_concat'/>
+<def f='luajit/lj_lib.c' l='211' ll='215' type='GCstr * lj_lib_optstr(lua_State * L, int narg)'/>
+<use f='luajit/lj_lib.c' l='292' u='c' c='lj_lib_checkopt'/>

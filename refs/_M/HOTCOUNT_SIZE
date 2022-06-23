@@ -1,0 +1,4 @@
+<dec f='luajit/lj_dispatch.h' l='74'/>
+<use f='luajit/lj_dispatch.h' l='101' u='c'/>
+<doc f='luajit/lj_dispatch.h' l='73'>/* Number of hot counter hash table entries (must be a power of two). */</doc>
+<use f='luajit/lj_dispatch.c' l='90' u='c'/>

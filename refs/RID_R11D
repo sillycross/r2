@@ -1,0 +1,22 @@
+<dec f='luajit/lj_target_x86.h' l='30' macro='1' type='11'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='647' macro='1' u='r' c='ra_allocref'/>
+<use f='luajit/lj_asm.c' l='648' macro='1' u='r' c='ra_allocref'/>
+<use f='luajit/lj_asm_x86.h' l='653' macro='1' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='749' macro='1' u='r' c='asm_callx'/>
+<use f='luajit/lj_asm_x86.h' l='1036' macro='1' u='r' c='asm_strto'/>
+<use f='luajit/lj_asm_x86.h' l='1807' macro='1' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1895' macro='1' u='r' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1908' macro='1' u='r' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='2770' macro='1' u='r' c='asm_gc_check'/>
+<use f='luajit/lj_asm.c' l='2201' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2209' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2209' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2268' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2272' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2283' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2300' macro='1' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2317' macro='1' u='r' c='asm_setup_regsp'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_obj.h' l='169' type='int32_t'/>
+<offset>0</offset>
+<doc f='luajit/lj_obj.h' l='169'>/* Frame type and size of previous frame. */</doc>

@@ -1,0 +1,12 @@
+<dec f='luajit/lj_jit.h' l='472' type='MCode *[16]'/>
+<offset>13568</offset>
+<doc f='luajit/lj_jit.h' l='472'>/* Exit stub group addresses. */</doc>
+<use f='luajit/lib_jit.c' l='403' macro='1' u='r' c='lj_cf_jit_util_traceexitstub'/>
+<use f='luajit/lj_asm_x86.h' l='49' u='r' c='asm_exitstub_setup'/>
+<use f='luajit/lj_asm_x86.h' l='50' u='w' c='asm_exitstub_setup'/>
+<use f='luajit/lj_asm_x86.h' l='59' macro='1' u='r' c='asm_guardcc'/>
+<use f='luajit/lj_asm_x86.h' l='2668' macro='1' u='r' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='3073' macro='1' u='r' c='lj_asm_patchexit'/>
+<use f='luajit/lj_trace.c' l='302' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='302' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='956' macro='1' u='r' c='lj_trace_unwind'/>

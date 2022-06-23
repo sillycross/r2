@@ -1,0 +1,11 @@
+dasm_checkstep|dasm_checkstep
+dasm_encode|dasm_encode
+dasm_free|dasm_free
+dasm_getpclabel|dasm_getpclabel
+dasm_growpc|dasm_growpc
+dasm_init|dasm_init
+dasm_link|dasm_link
+dasm_put|dasm_put
+dasm_setup|dasm_setup
+dasm_setupglobal|dasm_setupglobal
+dasma_|dasma_

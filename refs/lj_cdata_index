@@ -1,0 +1,5 @@
+<dec f='luajit/lj_cdata.h' l='71' type='CType * lj_cdata_index(CTState * cts, GCcdata * cd, cTValue * key, uint8_t ** pp, CTInfo * qual)'/>
+<use f='luajit/lib_ffi.c' l='155' u='c' c='lj_cf_ffi_meta___index'/>
+<use f='luajit/lib_ffi.c' l='172' u='c' c='lj_cf_ffi_meta___newindex'/>
+<def f='luajit/lj_cdata.c' l='109' ll='208' type='CType * lj_cdata_index(CTState * cts, GCcdata * cd, cTValue * key, uint8_t ** pp, CTInfo * qual)'/>
+<doc f='luajit/lj_cdata.c' l='108'>/* Index C data by a TValue. Return CType and pointer. */</doc>

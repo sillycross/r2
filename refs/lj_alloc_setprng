@@ -1,0 +1,3 @@
+<dec f='luajit/lj_alloc.h' l='13' type='void lj_alloc_setprng(void * msp, PRNGState * rs)'/>
+<def f='luajit/lj_alloc.c' l='1251' ll='1255' type='void lj_alloc_setprng(void * msp, PRNGState * rs)'/>
+<use f='luajit/lj_state.c' l='235' u='c' c='lua_newstate'/>

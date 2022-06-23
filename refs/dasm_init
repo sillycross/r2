@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='51' type='void dasm_init(BuildCtx * ctx, int maxsection)'/>
+<def f='luajit/dasm_x86.h' l='84' ll='105' type='void dasm_init(BuildCtx * ctx, int maxsection)'/>
+<use f='luajit/host/buildvm.c' l='190' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='83'>/* Initialize DynASM state. */</doc>

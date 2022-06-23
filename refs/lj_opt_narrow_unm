@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='145' type='TRef lj_opt_narrow_unm(jit_State * J, TRef rc, TValue * vc)'/>
+<def f='luajit/lj_opt_narrow.c' l='550' ll='564' type='TRef lj_opt_narrow_unm(jit_State * J, TRef rc, TValue * vc)'/>
+<doc f='luajit/lj_opt_narrow.c' l='549'>/* Narrowing of unary minus operator. */</doc>
+<use f='luajit/lj_record.c' l='2236' u='c' c='lj_record_ins'/>

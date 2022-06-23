@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='693' type='GCRef'/>
+<use f='luajit/host/buildvm_arch.h' l='3527' u='a' c='build_ins'/>
+<offset>512</offset>
+<doc f='luajit/lj_obj.h' l='693'>/* List of open upvalues in the stack. */</doc>
+<use f='luajit/lj_func.c' l='40' u='a' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='87' u='m' c='lj_func_closeuv'/>
+<use f='luajit/lj_func.c' l='88' u='m' c='lj_func_closeuv'/>
+<use f='luajit/lj_func.c' l='92' u='m' c='lj_func_closeuv'/>
+<use f='luajit/lj_gc.c' l='409' u='a' c='gc_sweep'/>
+<use f='luajit/lj_snap.c' l='223' u='m' c='snap_usedef'/>
+<use f='luajit/lj_state.c' l='79' u='m' c='resizestack'/>
+<use f='luajit/lj_state.c' l='317' u='m' c='lj_state_new'/>

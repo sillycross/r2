@@ -1,0 +1,5 @@
+<dec f='luajit/host/minilua.c' l='128' type='259'/>
+<use f='luajit/host/minilua.c' l='4403' u='r' c='whilestat'/>
+<use f='luajit/host/minilua.c' l='4446' u='r' c='forbody'/>
+<use f='luajit/host/minilua.c' l='4637' c='statement'/>
+<use f='luajit/host/minilua.c' l='4640' u='r' c='statement'/>

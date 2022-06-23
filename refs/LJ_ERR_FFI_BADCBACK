@@ -1,0 +1,5 @@
+<dec f='luajit/lj_errmsg.h' l='173' macro='1' type='3648'/>
+<use f='luajit/lj_errmsg.h' l='173' macro='1' u='r'/>
+<use f='luajit/lib_ffi.c' l='453' u='r' c='ffi_callback_set'/>
+<use f='luajit/lj_ccallback.c' l='567' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='685' u='r' c='lj_ccallback_enter'/>

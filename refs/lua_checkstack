@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='127' type='int lua_checkstack(lua_State * L, int sz)'/>
+<use f='luajit/lib_base.c' l='232' u='c' c='lj_cf_unpack'/>
+<def f='luajit/lj_api.c' l='102' ll='110' macro='1' type='int lua_checkstack(lua_State * L, int size)'/>
+<use f='luajit/lj_api.c' l='114' u='c' c='luaL_checkstack'/>

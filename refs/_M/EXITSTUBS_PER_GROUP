@@ -1,0 +1,15 @@
+<dec f='luajit/lj_target_x86.h' l='166'/>
+<use f='luajit/lj_target.h' l='151' u='a'/>
+<use f='luajit/lj_target.h' l='157' u='c'/>
+<use f='luajit/lj_target.h' l='158' u='c'/>
+<use f='luajit/lib_jit.c' l='399' u='a'/>
+<use f='luajit/lib_jit.c' l='402' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='11' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='14' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='18' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='19' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='23' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='46' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='48' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='48' u='c'/>
+<use f='luajit/lj_trace.c' l='955' u='a'/>

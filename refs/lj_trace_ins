@@ -1,0 +1,8 @@
+<dec f='luajit/lj_trace.h' l='36' type='void lj_trace_ins(jit_State * J, const BCIns * pc)'/>
+<use f='luajit/lj_dispatch.c' l='417' u='c' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='488' u='c' c='lj_dispatch_call'/>
+<def f='luajit/lj_trace.c' l='724' ll='732' type='void lj_trace_ins(jit_State * J, const BCIns * pc)'/>
+<use f='luajit/lj_trace.c' l='747' u='c' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='763' u='c' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='776' u='c' c='lj_trace_stitch'/>
+<doc f='luajit/lj_trace.c' l='723'>/* A bytecode instruction is about to be executed. Record it. */</doc>

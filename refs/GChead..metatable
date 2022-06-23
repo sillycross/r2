@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='729' type='GCRef'/>
+<offset>256</offset>
+<use f='luajit/lj_meta.c' l='332' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='332' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='332' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='336' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='336' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' u='m' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' u='m' c='lj_meta_equal'/>

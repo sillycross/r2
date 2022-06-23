@@ -1,0 +1,4 @@
+<dec f='luajit/lj_tab.h' l='89' type='int lj_tab_next(lua_State * L, GCtab * t, TValue * key)'/>
+<use f='luajit/lj_api.c' l='896' u='c' c='lua_next'/>
+<def f='luajit/lj_tab.c' l='603' ll='621' type='int lj_tab_next(lua_State * L, GCtab * t, TValue * key)'/>
+<doc f='luajit/lj_tab.c' l='602'>/* Advance to the next step in a table traversal. */</doc>

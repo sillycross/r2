@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_ccallback.h source code [luajit/lj_ccallback.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_ccallback.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_ccallback.h.html'>lj_ccallback.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** FFI C callback handling.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_CCALLBACK_H">_LJ_CCALLBACK_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_CCALLBACK_H" data-ref="_M/_LJ_CCALLBACK_H">_LJ_CCALLBACK_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_ctype.h.html">"lj_ctype.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/* Really belongs to lj_vm.h. */</i></td></tr>
+<tr><th id="15">15</th><td><a class="macro" href="lj_def.h.html#330" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_ASMF">LJ_ASMF</a> <em>void</em> <dfn class="decl fn" id="lj_vm_ffi_callback" title='lj_vm_ffi_callback' data-ref="lj_vm_ffi_callback" data-ref-filename="lj_vm_ffi_callback">lj_vm_ffi_callback</dfn>(<em>void</em>);</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl fn" id="lj_ccallback_ptr2slot" title='lj_ccallback_ptr2slot' data-ref="lj_ccallback_ptr2slot" data-ref-filename="lj_ccallback_ptr2slot">lj_ccallback_ptr2slot</dfn>(<a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col4 decl" id="4cts" title='cts' data-type='CTState *' data-ref="4cts" data-ref-filename="4cts">cts</dfn>, <em>void</em> *<dfn class="local col5 decl" id="5p" title='p' data-type='void *' data-ref="5p" data-ref-filename="5p">p</dfn>);</td></tr>
+<tr><th id="18">18</th><td><a class="macro" href="lj_def.h.html#331" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNCA">LJ_FUNCA</a> <a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> * <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_ccallback_enter" title='lj_ccallback_enter' data-ref="lj_ccallback_enter" data-ref-filename="lj_ccallback_enter">lj_ccallback_enter</dfn>(<a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col6 decl" id="6cts" title='cts' data-type='CTState *' data-ref="6cts" data-ref-filename="6cts">cts</dfn>, <em>void</em> *<dfn class="local col7 decl" id="7cf" title='cf' data-type='void *' data-ref="7cf" data-ref-filename="7cf">cf</dfn>);</td></tr>
+<tr><th id="19">19</th><td><a class="macro" href="lj_def.h.html#331" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNCA">LJ_FUNCA</a> <em>void</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_ccallback_leave" title='lj_ccallback_leave' data-ref="lj_ccallback_leave" data-ref-filename="lj_ccallback_leave">lj_ccallback_leave</dfn>(<a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col8 decl" id="8cts" title='cts' data-type='CTState *' data-ref="8cts" data-ref-filename="8cts">cts</dfn>, <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="local col9 decl" id="9o" title='o' data-type='TValue *' data-ref="9o" data-ref-filename="9o">o</dfn>);</td></tr>
+<tr><th id="20">20</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> *<dfn class="decl fn" id="lj_ccallback_new" title='lj_ccallback_new' data-ref="lj_ccallback_new" data-ref-filename="lj_ccallback_new">lj_ccallback_new</dfn>(<a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col0 decl" id="10cts" title='cts' data-type='CTState *' data-ref="10cts" data-ref-filename="10cts">cts</dfn>, <a class="typedef" href="lj_ctype.h.html#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col1 decl" id="11ct" title='ct' data-type='CType *' data-ref="11ct" data-ref-filename="11ct">ct</dfn>, <a class="typedef" href="lj_obj.h.html#GCfunc" title='GCfunc' data-type='union GCfunc' data-ref="GCfunc" data-ref-filename="GCfunc">GCfunc</a> *<dfn class="local col2 decl" id="12fn" title='fn' data-type='GCfunc *' data-ref="12fn" data-ref-filename="12fn">fn</dfn>);</td></tr>
+<tr><th id="21">21</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_ccallback_mcode_free" title='lj_ccallback_mcode_free' data-ref="lj_ccallback_mcode_free" data-ref-filename="lj_ccallback_mcode_free">lj_ccallback_mcode_free</dfn>(<a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col3 decl" id="13cts" title='cts' data-type='CTState *' data-ref="13cts" data-ref-filename="13cts">cts</dfn>);</td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_ffi.c.html'>luajit/lib_ffi.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

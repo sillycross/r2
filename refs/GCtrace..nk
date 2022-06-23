@@ -1,0 +1,30 @@
+<dec f='luajit/lj_jit.h' l='260' type='IRRef'/>
+<offset>320</offset>
+<doc f='luajit/lj_jit.h' l='260'>/* Lowest IR constant. Biased with REF_BIAS. */</doc>
+<use f='luajit/lib_jit.c' l='307' u='r' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lib_jit.c' l='341' u='r' c='lj_cf_jit_util_tracek'/>
+<use f='luajit/lj_asm.c' l='2126' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_gc.c' l='257' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_gc.c' l='354' u='r' c='propagatemark'/>
+<use f='luajit/lj_ir.c' l='174' u='r' c='ir_nextk'/>
+<use f='luajit/lj_ir.c' l='176' u='w' c='ir_nextk'/>
+<use f='luajit/lj_ir.c' l='185' u='r' c='ir_nextk64'/>
+<use f='luajit/lj_ir.c' l='188' u='w' c='ir_nextk64'/>
+<use f='luajit/lj_opt_fold.c' l='2484' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2490' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_sink.c' l='218' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_record.c' l='2513' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2613' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='529' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='530' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='563' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='565' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_trace.c' l='126' u='r' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='135' u='r' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='137' u='w' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='137' u='r' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='140' u='r' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='148' u='r' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='155' u='r' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='179' u='r' c='lj_trace_free'/>
+<use f='luajit/lj_trace.c' l='440' u='w' c='trace_start'/>

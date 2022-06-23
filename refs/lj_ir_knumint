@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='45' type='TRef lj_ir_knumint(jit_State * J, lua_Number n)'/>
+<def f='luajit/lj_ir.c' l='268' ll='275' type='TRef lj_ir_knumint(jit_State * J, lua_Number n)'/>
+<doc f='luajit/lj_ir.c' l='267'>/* Intern number as int32_t constant if possible, otherwise as FP constant. */</doc>
+<use f='luajit/lj_record.c' l='255' u='c' c='lj_record_constify'/>
+<use f='luajit/lj_record.c' l='2112' u='c' c='lj_record_ins'/>

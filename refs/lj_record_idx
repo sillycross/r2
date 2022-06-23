@@ -1,0 +1,12 @@
+<dec f='luajit/lj_record.h' l='39' type='TRef lj_record_idx(jit_State * J, RecordIndex * ix)'/>
+<use f='luajit/lj_ffrecord.c' l='253' u='c' c='recff_rawget'/>
+<use f='luajit/lj_ffrecord.c' l='266' u='c' c='recff_rawset'/>
+<use f='luajit/lj_ffrecord.c' l='434' u='c' c='recff_ipairs_aux'/>
+<use f='luajit/lj_ffrecord.c' l='1050' u='c' c='recff_table_insert'/>
+<use f='luajit/lj_record.c' l='1036' u='c' c='lj_record_mm_lookup'/>
+<def f='luajit/lj_record.c' l='1408' ll='1548' type='TRef lj_record_idx(jit_State * J, RecordIndex * ix)'/>
+<use f='luajit/lj_record.c' l='1571' u='c' c='rec_tsetm'/>
+<use f='luajit/lj_record.c' l='2330' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2339' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2343' u='c' c='lj_record_ins'/>
+<doc f='luajit/lj_record.c' l='1407'>/* Record indexed load/store. */</doc>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_errmsg.h' l='185' macro='1' type='3742'/>
+<use f='luajit/lj_errmsg.h' l='185' macro='1' u='r'/>
+<use f='luajit/lj_serialize.c' l='137' u='r' c='lj_serialize_dict_prep'/>

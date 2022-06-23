@@ -1,0 +1,14 @@
+<dec f='luajit/host/minilua.c' l='110' type='0'/>
+<use f='luajit/host/minilua.c' l='3828' u='r' c='adjust_assign'/>
+<use f='luajit/host/minilua.c' l='3974' u='r' c='closelistfield'/>
+<use f='luajit/host/minilua.c' l='3976' u='r' c='closelistfield'/>
+<use f='luajit/host/minilua.c' l='3990' u='r' c='lastlistfield'/>
+<use f='luajit/host/minilua.c' l='4009' u='r' c='constructor'/>
+<use f='luajit/host/minilua.c' l='4102' u='r' c='funcargs'/>
+<use f='luajit/host/minilua.c' l='4128' u='r' c='funcargs'/>
+<use f='luajit/host/minilua.c' l='4561' u='r' c='localstat'/>
+<dec f='luajit/lj_parse.c' l='52' type='14'/>
+<use f='luajit/lj_parse.c' l='1919' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1941' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='2193' u='r' c='assign_adjust'/>
+<use f='luajit/lj_parse.c' l='2282' u='r' c='parse_local'/>

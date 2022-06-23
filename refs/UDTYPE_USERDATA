@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='332' type='0'/>
+<doc f='luajit/lj_obj.h' l='332'>/* Regular userdata. */</doc>
+<use f='luajit/lj_record.c' l='985' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_udata.c' l='20' u='r' c='lj_udata_new'/>

@@ -1,0 +1,22 @@
+<dec f='luajit/lj_dispatch.h' l='107' type='ASMFunction [243]'/>
+<offset>32512</offset>
+<doc f='luajit/lj_dispatch.h' l='107'>/* Instruction dispatch tables. */</doc>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='352' u='r' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_loadk64'/>
+<use f='luajit/lj_emit_x86.h' l='296' u='r' c='emit_loadk64'/>
+<use f='luajit/lj_asm_x86.h' l='205' macro='1' u='r' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='256' macro='1' u='r' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='313' macro='1' u='r' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='376' macro='1' u='r' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='376' macro='1' u='r' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='377' macro='1' u='r' c='asm_fuseloadk64'/>
+<use f='luajit/lj_asm_x86.h' l='435' macro='1' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='2679' macro='1' u='r' c='asm_stack_check'/>
+<use f='luajit/lj_dispatch.c' l='63' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='120' u='r' c='lj_dispatch_update'/>

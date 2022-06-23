@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='151' type='16'/>
+<use f='luajit/lib_aux.c' l='44' macro='1' u='r' c='luaL_fileresult'/>
+<use f='luajit/lib_jit.c' l='568' macro='1' u='r' c='jit_profile_callback'/>
+<use f='luajit/lj_ccallback.c' l='689' macro='1' u='r' c='lj_ccallback_enter'/>
+<use f='luajit/lj_dispatch.c' l='243' macro='1' u='r' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='331' macro='1' u='r' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='358' macro='1' u='r' c='callhook'/>
+<use f='luajit/lj_err.c' l='737' macro='1' u='r' c='lj_err_throw'/>
+<use f='luajit/lj_err.c' l='839' macro='1' u='r' c='lj_err_run'/>
+<use f='luajit/lj_gc.c' l='509' macro='1' u='r' c='gc_call_finalizer'/>

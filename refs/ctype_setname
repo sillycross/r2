@@ -1,0 +1,10 @@
+<def f='luajit/lj_ctype.h' l='451' ll='456' type='void ctype_setname(CType * ct, GCstr * s)'/>
+<doc f='luajit/lj_ctype.h' l='450'>/* Set the name of a C type table element. */</doc>
+<use f='luajit/lj_cparse.c' l='1241' u='c' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1388' u='c' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1420' u='c' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1478' u='c' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1658' u='c' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1871' u='c' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1874' u='c' c='cp_decl_multi'/>
+<use f='luajit/lj_ctype.c' l='613' u='c' c='lj_ctype_init'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='379' type='MRef'/>
+<offset>320</offset>
+<doc f='luajit/lj_obj.h' l='379'>/* Upvalue list. local slot|0x8000 or parent uv idx. */</doc>
+<use f='luajit/lj_bcread.c' l='298' macro='1' u='m' c='bcread_uv'/>
+<use f='luajit/lj_bcread.c' l='350' u='m' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='283' macro='1' u='m' c='bcwrite_proto'/>
+<use f='luajit/lj_func.c' l='147' macro='1' u='m' c='lj_func_newL_empty'/>
+<use f='luajit/lj_func.c' l='170' macro='1' u='m' c='lj_func_newL_gc'/>
+<use f='luajit/lj_parse.c' l='1340' macro='1' u='m' c='fs_fixup_uv2'/>
+<use f='luajit/lj_parse.c' l='1409' u='m' c='fs_fixup_uv1'/>

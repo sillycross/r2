@@ -1,0 +1,6 @@
+<dec f='luajit/lj_mcode.h' l='12' type='void lj_mcode_sync(void * start, void * end)'/>
+<use f='luajit/lj_asm_x86.h' l='3099' u='c' c='lj_asm_patchexit'/>
+<use f='luajit/lj_asm.c' l='2525' u='c' c='lj_asm_trace'/>
+<use f='luajit/lj_ccallback.c' l='292' u='c' c='callback_mcode_new'/>
+<def f='luajit/lj_mcode.c' l='37' ll='53' type='void lj_mcode_sync(void * start, void * end)'/>
+<doc f='luajit/lj_mcode.c' l='36'>/* Synchronize data/instruction cache. */</doc>

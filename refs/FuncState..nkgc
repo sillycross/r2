@@ -1,0 +1,9 @@
+<dec f='luajit/lj_parse.c' l='134' type='BCReg'/>
+<use f='luajit/lj_parse.c' l='227' u='r' c='const_gc'/>
+<use f='luajit/lj_parse.c' l='228' u='w' c='const_gc'/>
+<use f='luajit/lj_parse.c' l='1361' u='r' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='1364' u='r' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='1579' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1597' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1627' u='w' c='fs_init'/>
+<offset>512</offset>

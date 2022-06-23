@@ -1,0 +1,36 @@
+<dec f='luajit/lua.h' l='192' type='void lua_setfield(lua_State * L, int idx, const char * k)'/>
+<use f='luajit/lib_aux.c' l='123' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_aux.c' l='156' u='c' c='luaL_setfuncs'/>
+<use f='luajit/lib_buffer.c' l='353' u='c' c='luaopen_string_buffer'/>
+<use f='luajit/lib_debug.c' l='73' u='c' c='settabss'/>
+<use f='luajit/lib_debug.c' l='79' u='c' c='settabsi'/>
+<use f='luajit/lib_debug.c' l='85' u='c' c='settabsb'/>
+<use f='luajit/lib_debug.c' l='107' u='c' c='treatstackoption'/>
+<use f='luajit/lib_init.c' l='51' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_io.c' l='528' u='c' c='io_std_new'/>
+<use f='luajit/lib_io.c' l='536' u='c' c='luaopen_io'/>
+<use f='luajit/lib_jit.c' l='207' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='209' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='211' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='213' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='311' u='c' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lib_os.c' l='136' u='c' c='setfield'/>
+<use f='luajit/lib_os.c' l='144' u='c' c='setboolfield'/>
+<use f='luajit/lib_package.c' l='462' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='466' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='471' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='505' u='c' c='modinit'/>
+<use f='luajit/lib_package.c' l='507' u='c' c='modinit'/>
+<use f='luajit/lib_package.c' l='512' u='c' c='modinit'/>
+<use f='luajit/lib_package.c' l='542' u='c' c='lj_cf_package_seeall'/>
+<use f='luajit/lib_package.c' l='568' u='c' c='setpath'/>
+<use f='luajit/lib_package.c' l='599' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='611' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='618' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='620' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='622' u='c' c='luaopen_package'/>
+<def f='luajit/lj_api.c' l='979' ll='997' macro='1' type='void lua_setfield(lua_State * L, int idx, const char * k)'/>
+<use f='luajit/lj_lib.c' l='42' u='c' c='lib_create_table'/>
+<use f='luajit/lj_lib.c' l='171' u='c' c='lj_lib_prereg'/>
+<use f='luajit/luajit.c' l='164' macro='1' u='c' c='createargtable'/>
+<use f='luajit/luajit.c' l='532' u='c' c='pmain'/>

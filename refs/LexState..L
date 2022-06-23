@@ -1,0 +1,39 @@
+<dec f='luajit/lj_lex.h' l='54' type='struct lua_State *'/>
+<offset>64</offset>
+<doc f='luajit/lj_lex.h' l='54'>/* Lua state. */</doc>
+<use f='luajit/lj_bcread.c' l='39' u='r' c='bcread_error'/>
+<use f='luajit/lj_bcread.c' l='70' u='r' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='76' u='r' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='188' u='r' c='bcread_ktabk'/>
+<use f='luajit/lj_bcread.c' l='188' u='r' c='bcread_ktabk'/>
+<use f='luajit/lj_bcread.c' l='205' u='r' c='bcread_ktab'/>
+<use f='luajit/lj_bcread.c' l='218' u='r' c='bcread_ktab'/>
+<use f='luajit/lj_bcread.c' l='234' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='242' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='253' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='344' u='r' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcread.c' l='401' u='r' c='bcread_header'/>
+<use f='luajit/lj_bcread.c' l='408' u='r' c='bcread_header'/>
+<use f='luajit/lj_bcread.c' l='412' u='r' c='bcread_header'/>
+<use f='luajit/lj_bcread.c' l='420' u='r' c='lj_bcread'/>
+<use f='luajit/lj_lex.c' l='49' u='r' c='lex_more'/>
+<use f='luajit/lj_lex.c' l='52' u='r' c='lex_more'/>
+<use f='luajit/lj_lex.c' l='117' u='r' c='lex_number'/>
+<use f='luajit/lj_lex.c' l='181' u='r' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='284' u='r' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='306' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='401' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='481' u='r' c='lj_lex_token2str'/>
+<use f='luajit/lj_lex.c' l='483' u='r' c='lj_lex_token2str'/>
+<use f='luajit/lj_lex.c' l='500' u='r' c='lj_lex_error'/>
+<use f='luajit/lj_lib.c' l='60' u='w' c='lib_read_lfunc'/>
+<use f='luajit/lj_parse.c' l='242' u='r' c='lj_parse_keepstr'/>
+<use f='luajit/lj_parse.c' l='255' u='r' c='lj_parse_keepcdata'/>
+<use f='luajit/lj_parse.c' l='1055' u='r' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1163' u='r' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1569' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1618' u='r' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='1997' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2528' u='r' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='2531' u='r' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='2720' u='r' c='lj_parse'/>

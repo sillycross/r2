@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='608' type='MSize'/>
+<offset>736</offset>
+<doc f='luajit/lj_obj.h' l='608'>/* Pause between successive GC cycles. */</doc>
+<use f='luajit/lj_api.c' l='1260' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1282' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1283' u='w' c='lua_gc'/>
+<use f='luajit/lj_gc.c' l='735' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='794' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_state.c' l='253' u='w' c='lua_newstate'/>

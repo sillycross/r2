@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_proto.h' l='67' type='int dasm_link(BuildCtx * ctx, size_t * szp)'/>
+<def f='luajit/dasm_x86.h' l='277' ll='363' type='int dasm_link(BuildCtx * ctx, size_t * szp)'/>
+<use f='luajit/host/buildvm.c' l='199' u='c' c='build_code'/>
+<doc f='luajit/dasm_x86.h' l='276'>/* Pass 2: Link sections, shrink branches/aligns, fix label offsets. */</doc>

@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ir.h' l='504'/>
+<use f='luajit/lj_crecord.c' l='609' u='c'/>
+<use f='luajit/lj_crecord.c' l='1549' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='412' u='c'/>
+<use f='luajit/lj_ir.c' l='426' u='c'/>
+<use f='luajit/lj_ir.c' l='444' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='456' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='471' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='487' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='503' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='544' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='545' u='c'/>
+<use f='luajit/lj_record.c' l='524' u='c'/>
+<use f='luajit/lj_record.c' l='1934' u='c'/>

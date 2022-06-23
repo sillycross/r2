@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='252' macro='1' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_trace.c' l='132' u='w' c='lj_trace_alloc'/>
+<use f='luajit/lj_trace.c' l='154' u='w' c='trace_save'/>

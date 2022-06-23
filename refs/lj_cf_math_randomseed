@@ -1,0 +1,1 @@
+<def f='luajit/lib_math.c' l='183' macro='1' type='int lj_cf_math_randomseed(lua_State * L)'/>

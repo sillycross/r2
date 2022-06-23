@@ -1,0 +1,4 @@
+<dec f='luajit/lj_strfmt.h' l='95' type='SBuf * lj_strfmt_putnum(SBuf * sb, cTValue * o)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_strfmt.c' l='196' ll='199' type='SBuf * lj_strfmt_putnum(SBuf * sb, cTValue * o)'/>
+<doc f='luajit/lj_strfmt.c' l='195'>/* Add number to buffer. */</doc>

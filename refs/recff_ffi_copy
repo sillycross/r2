@@ -1,0 +1,3 @@
+<dec f='luajit/lj_crecord.h' l='21' type='void recff_ffi_copy(jit_State * J, RecordFFData * rd)'/>
+<def f='luajit/lj_crecord.c' l='1661' ll='1677' type='void recff_ffi_copy(jit_State * J, RecordFFData * rd)'/>
+<use f='luajit/lj_recdef.h' l='265'/>

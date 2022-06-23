@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='216' type='int lua_status(lua_State * L)'/>
+<def f='luajit/lj_api.c' l='97' ll='100' macro='1' type='int lua_status(lua_State * L)'/>

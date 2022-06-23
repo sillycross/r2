@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='635' type='uint8_t'/>
+<offset>1168</offset>
+<doc f='luajit/lj_obj.h' l='635'>/* Dispatch mode. */</doc>
+<use f='luajit/lj_dispatch.c' l='106' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='122' u='w' c='lj_dispatch_update'/>

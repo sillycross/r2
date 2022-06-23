@@ -1,0 +1,5 @@
+<dec f='luajit/lj_mcode.h' l='23' type='MCode * lj_mcode_patch(jit_State * J, MCode * ptr, int finish)'/>
+<use f='luajit/lj_asm_x86.h' l='3071' u='c' c='lj_asm_patchexit'/>
+<use f='luajit/lj_asm_x86.h' l='3100' u='c' c='lj_asm_patchexit'/>
+<def f='luajit/lj_mcode.c' l='323' ll='355' type='MCode * lj_mcode_patch(jit_State * J, MCode * ptr, int finish)'/>
+<doc f='luajit/lj_mcode.c' l='322'>/* Set/reset protection to allow patching of MCode areas. */</doc>

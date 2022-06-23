@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='155'/>
+<use f='luajit/lj_ctype.h' l='164' u='c'/>
+<use f='luajit/lj_ccall.h' l='152' u='c'/>
+<doc f='luajit/lj_ctype.h' l='154'>/* Simplify target-specific configuration. Checked in lj_ccall.h. */</doc>

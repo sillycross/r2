@@ -1,0 +1,21 @@
+<dec f='luajit/lj_obj.h' l='463' type='GCRef [1]'/>
+<offset>320</offset>
+<doc f='luajit/lj_obj.h' l='463'>/* Array of _pointers_ to upvalue objects (GCupval). */</doc>
+<use f='luajit/lib_debug.c' l='234' u='m' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='252' u='a' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lj_api.c' l='922' u='m' c='lua_upvalueid'/>
+<use f='luajit/lj_api.c' l='935' u='m' c='lua_upvaluejoin'/>
+<use f='luajit/lj_api.c' l='935' u='m' c='lua_upvaluejoin'/>
+<use f='luajit/lj_api.c' l='936' u='m' c='lua_upvaluejoin'/>
+<use f='luajit/lj_api.c' l='936' u='m' c='lua_upvaluejoin'/>
+<use f='luajit/lj_asm_x86.h' l='203' u='m' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='1354' u='m' c='asm_uref'/>
+<use f='luajit/lj_debug.c' l='233' u='m' c='lj_debug_uvnamev'/>
+<use f='luajit/lj_func.c' l='150' u='m' c='lj_func_newL_empty'/>
+<use f='luajit/lj_func.c' l='166' u='r' c='lj_func_newL_gc'/>
+<use f='luajit/lj_func.c' l='179' u='m' c='lj_func_newL_gc'/>
+<use f='luajit/lj_gc.c' l='231' u='m' c='gc_traverse_func'/>
+<use f='luajit/lj_gc.c' l='231' u='m' c='gc_traverse_func'/>
+<use f='luajit/lj_opt_fold.c' l='2160' u='m' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='2165' u='m' c='fold_cse_uref'/>
+<use f='luajit/lj_record.c' l='1605' u='m' c='rec_upvalue'/>

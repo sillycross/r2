@@ -1,0 +1,7 @@
+<def f='luajit/lj_obj.h' l='351' ll='355'/>
+<use f='luajit/lj_obj.h' l='351'/>
+<size>8</size>
+<doc f='luajit/lj_obj.h' l='350'>/* Prepended to variable-sized or realigned C data objects. */</doc>
+<mbr r='GCcdataVar::offset' o='0' t='uint16_t'/>
+<mbr r='GCcdataVar::extra' o='16' t='uint16_t'/>
+<mbr r='GCcdataVar::len' o='32' t='MSize'/>

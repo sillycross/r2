@@ -1,0 +1,14 @@
+<dec f='luajit/lj_jit.h' l='186' type='IRRef1'/>
+<offset>32</offset>
+<doc f='luajit/lj_jit.h' l='186'>/* First IR ref for this snapshot. */</doc>
+<use f='luajit/lib_jit.c' l='373' u='r' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lj_asm.c' l='1031' u='r' c='asm_snap_prev'/>
+<use f='luajit/lj_asm.c' l='2480' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_opt_loop.c' l='227' u='w' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='315' u='r' c='loop_unroll'/>
+<use f='luajit/lj_record.c' l='1971' u='r' c='rec_comp_prep'/>
+<use f='luajit/lj_snap.c' l='173' u='w' c='snapshot_stack'/>
+<use f='luajit/lj_snap.c' l='186' u='r' c='lj_snap_add'/>
+<use f='luajit/lj_snap.c' l='516' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='800' u='r' c='snap_unsink'/>
+<use f='luajit/lj_snap.c' l='838' u='r' c='snap_unsink'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_vm.h' l='64' type='double lj_vm_floor(double )'/>
+<use f='luajit/lib_math.c' l='154' u='c' c='lj_cf_math_random'/>
+<use f='luajit/lib_math.c' l='168' u='c' c='lj_cf_math_random'/>
+<use f='luajit/lj_vmmath.c' l='46' u='c' c='lj_vm_foldarith'/>
+<use f='luajit/lj_vmmath.c' l='121' u='c' c='lj_vm_foldfpm'/>

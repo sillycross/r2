@@ -1,0 +1,3 @@
+<dec f='luajit/lj_target_x86.h' l='234' type='55517'/>
+<doc f='luajit/lj_target_x86.h' l='234'>/* Really fstp st0. */</doc>
+<use f='luajit/lj_asm_x86.h' l='703' u='r' c='asm_setupresult'/>

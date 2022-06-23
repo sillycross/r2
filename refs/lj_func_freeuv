@@ -1,0 +1,4 @@
+<dec f='luajit/lj_func.h' l='16' type='void lj_func_freeuv(global_State * g, GCupval * uv)'/>
+<use f='luajit/lj_func.c' l='94' u='c' c='lj_func_closeuv'/>
+<def f='luajit/lj_func.c' l='102' ll='107' type='void lj_func_freeuv(global_State * g, GCupval * uv)'/>
+<use f='luajit/lj_gc.c' l='380' u='r'/>

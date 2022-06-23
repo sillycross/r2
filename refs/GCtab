@@ -1,0 +1,15 @@
+<def f='luajit/lj_obj.h' l='495' ll='508'/>
+<use f='luajit/lj_obj.h' l='495'/>
+<size>64</size>
+<mbr r='GCtab::nextgc' o='0' t='GCRef'/>
+<mbr r='GCtab::marked' o='64' t='uint8_t'/>
+<mbr r='GCtab::gct' o='72' t='uint8_t'/>
+<mbr r='GCtab::nomm' o='80' t='uint8_t'/>
+<mbr r='GCtab::colo' o='88' t='int8_t'/>
+<mbr r='GCtab::array' o='128' t='MRef'/>
+<mbr r='GCtab::gclist' o='192' t='GCRef'/>
+<mbr r='GCtab::metatable' o='256' t='GCRef'/>
+<mbr r='GCtab::node' o='320' t='MRef'/>
+<mbr r='GCtab::asize' o='384' t='uint32_t'/>
+<mbr r='GCtab::hmask' o='416' t='uint32_t'/>
+<mbr r='GCtab::freetop' o='448' t='MRef'/>

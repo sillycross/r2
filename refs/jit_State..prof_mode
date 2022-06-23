@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='506' type='int'/>
+<offset>24864</offset>
+<doc f='luajit/lj_jit.h' l='506'>/* Profiling mode: 0, &apos;f&apos;, &apos;l&apos;. */</doc>
+<use f='luajit/lj_profile.c' l='314' u='w' c='luaJIT_profile_start'/>
+<use f='luajit/lj_profile.c' l='345' u='w' c='luaJIT_profile_stop'/>
+<use f='luajit/lj_record.c' l='659' u='r' c='rec_profile_need'/>
+<use f='luajit/lj_record.c' l='671' u='r' c='rec_profile_ins'/>
+<use f='luajit/lj_record.c' l='679' u='r' c='rec_profile_ret'/>

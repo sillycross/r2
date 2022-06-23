@@ -1,0 +1,3 @@
+<dec f='luajit/lauxlib.h' l='88' type='void luaL_setfuncs(lua_State * L, const luaL_Reg * l, int nup)'/>
+<use f='luajit/lib_aux.c' l='137' u='c' c='luaL_openlib'/>
+<def f='luajit/lib_aux.c' l='148' ll='159' macro='1' type='void luaL_setfuncs(lua_State * L, const luaL_Reg * l, int nup)'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lib.h' l='46' type='GCtab * lj_lib_checktabornil(lua_State * L, int narg)'/>
+<use f='luajit/lib_base.c' l='133' u='c' c='lj_ffh_setmetatable'/>
+<use f='luajit/lib_debug.c' l='43' u='c' c='lj_cf_debug_setmetatable'/>
+<def f='luajit/lj_lib.c' l='277' ll='288' type='GCtab * lj_lib_checktabornil(lua_State * L, int narg)'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='77'/>
+<use f='luajit/host/buildvm_arch.h' l='4304' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4332' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4367' u='r' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4410' u='r' c='build_ins'/>
+<use f='luajit/lj_parse.c' l='2497' u='r' c='parse_for_num'/>
+<use f='luajit/lj_record.c' l='2412' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='253' u='r' c='snap_usedef'/>
+<use f='luajit/lj_trace.c' l='214' u='r' c='trace_unpatch'/>

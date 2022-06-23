@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='334' type='2'/>
+<doc f='luajit/lj_obj.h' l='334'>/* FFI C library namespace. */</doc>
+<use f='luajit/lib_ffi.c' l='365' u='r' c='ffi_clib_index'/>
+<use f='luajit/lib_ffi.c' l='421' u='r' c='lj_cf_ffi_clib___gc'/>
+<use f='luajit/lj_clib.c' l='405' u='r' c='clib_new'/>
+<use f='luajit/lj_crecord.c' l='1584' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_record.c' l='987' u='r' c='lj_record_mm_lookup'/>

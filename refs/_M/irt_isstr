@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='359'/>
+<use f='luajit/lj_asm.c' l='1066' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1130' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1230' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='190' u='c'/>

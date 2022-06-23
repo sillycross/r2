@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='17'/>
+<use f='luajit/host/buildvm_arch.h' l='1237' u='r' c='build_subroutines'/>
+<use f='luajit/lib_base.c' l='134' u='r' c='lj_ffh_setmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='218' u='r' c='recff_getmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='234' u='r' c='recff_setmetatable'/>

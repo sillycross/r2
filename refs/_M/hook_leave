@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='677'/>
+<use f='luajit/lj_api.c' l='1214' u='c'/>
+<use f='luajit/lj_dispatch.c' l='375' u='c'/>
+<use f='luajit/lj_err.c' l='155' u='c'/>
+<use f='luajit/lj_err.c' l='182' u='c'/>

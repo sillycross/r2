@@ -1,0 +1,17 @@
+<dec f='include/string.h' l='63' type='int memcmp(const void * __s1, const void * __s2, size_t __n)'/>
+<doc f='include/string.h' l='62'>/* Compare N bytes of S1 and S2.  */</doc>
+<use f='luajit/host/minilua.c' l='1317' u='c' c='luaS_newlstr'/>
+<use f='luajit/host/minilua.c' l='7235' u='c' c='match_capture'/>
+<use f='luajit/host/minilua.c' l='7325' u='c' c='lmemfind'/>
+<use f='luajit/lib_string.c' l='332' u='c' c='match_capture'/>
+<use f='luajit/lj_cparse.c' l='49' u='c' c='lj_cparse_case'/>
+<use f='luajit/lj_cparse.c' l='41' u='c' c='cp_decl_msvcattribute'/>
+<use f='luajit/lj_cparse.c' l='41' u='c' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='41' u='c' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='41' u='c' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='41' u='c' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='41' u='c' c='cp_decl_multi'/>
+<use f='luajit/lj_lib.c' l='298' u='c' c='lj_lib_checkopt'/>
+<use f='luajit/lj_str.c' l='53' u='c' c='lj_str_find'/>
+<use f='luajit/lj_str.c' l='334' u='c' c='lj_str_new'/>
+<use f='luajit/lj_strfmt_num.c' l='263' u='c' c='nd_similar'/>

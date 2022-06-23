@@ -1,0 +1,20 @@
+<def f='luajit/lj_obj.h' l='934' macro='1' type='void setcdataV(lua_State * L, TValue * o, const GCcdata * v)'/>
+<use f='luajit/lib_bit.c' l='36' u='c' c='bit_result64'/>
+<use f='luajit/lib_buffer.c' l='208' u='c' c='lj_cf_buffer_method_reserve'/>
+<use f='luajit/lib_buffer.c' l='230' u='c' c='lj_cf_buffer_method_ref'/>
+<use f='luajit/lib_ffi.c' l='509' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='542' u='c' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='554' u='c' c='lj_cf_ffi_typeof'/>
+<use f='luajit/lib_ffi.c' l='785' u='c' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lj_carith.c' l='152' u='c' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='187' u='c' c='carith_int64'/>
+<use f='luajit/lj_ccall.c' l='966' u='c' c='ccall_set_args'/>
+<use f='luajit/lj_cconv.c' l='409' u='c' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='419' u='c' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cdata.c' l='93' u='c' c='lj_cdata_setfin'/>
+<use f='luajit/lj_clib.c' l='389' u='c' c='lj_clib_index'/>
+<use f='luajit/lj_gc.c' l='547' u='c' c='gc_finalize'/>
+<use f='luajit/lj_ir.c' l='401' u='c' c='lj_ir_kvalue'/>
+<use f='luajit/lj_parse.c' l='256' u='c' c='lj_parse_keepcdata'/>
+<use f='luajit/lj_serialize.c' l='373' u='c' c='serialize_get'/>
+<use f='luajit/lj_snap.c' l='788' u='c' c='snap_unsink'/>

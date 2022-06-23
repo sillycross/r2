@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='320'/>
+<use f='luajit/lj_jit.h' l='481' u='c'/>
+<doc f='luajit/lj_jit.h' l='319'>/* Number of slots for the backpropagation cache. Must be a power of 2. */</doc>
+<use f='luajit/lj_opt_loop.c' l='394' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='217' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='232' u='c'/>

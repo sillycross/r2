@@ -1,0 +1,16 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='17'/>
+<use f='luajit/lib_ffi.c' l='701' u='r' c='lj_cf_ffi_copy'/>
+<use f='luajit/lib_ffi.c' l='715' u='r' c='lj_cf_ffi_fill'/>
+<use f='luajit/lj_carith.c' l='61' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_ccall.c' l='918' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_cconv.c' l='549' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='603' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='1525' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1542' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1547' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1551' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1666' u='r' c='recff_ffi_copy'/>
+<use f='luajit/lj_crecord.c' l='1692' u='r' c='recff_ffi_fill'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>

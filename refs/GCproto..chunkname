@@ -1,0 +1,13 @@
+<dec f='luajit/lj_obj.h' l='387' type='GCRef'/>
+<offset>512</offset>
+<doc f='luajit/lj_obj.h' l='386'>/* ------ The following fields are for debugging/tracebacks only ------ */</doc>
+<doc f='luajit/lj_obj.h' l='387'>/* Name of the chunk this function was defined in. */</doc>
+<use f='luajit/lib_jit.c' l='210' macro='1' u='m' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lj_bcread.c' l='357' u='m' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='311' macro='1' u='m' c='bcwrite_header'/>
+<use f='luajit/lj_debug.c' l='365' macro='1' u='m' c='lj_debug_addloc'/>
+<use f='luajit/lj_debug.c' l='377' macro='1' u='m' c='lj_debug_pushloc'/>
+<use f='luajit/lj_debug.c' l='458' macro='1' u='m' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='554' macro='1' u='m' c='debug_putchunkname'/>
+<use f='luajit/lj_gc.c' l='280' macro='1' u='m' c='gc_traverse_proto'/>
+<use f='luajit/lj_parse.c' l='1594' u='m' c='fs_finish'/>

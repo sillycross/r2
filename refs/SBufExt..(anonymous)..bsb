@@ -1,0 +1,5 @@
+<dec f='luajit/lj_buf.h' l='27' type='MRef'/>
+<use f='luajit/lj_buf.h' l='121' u='m' c='lj_bufx_set_borrow'/>
+<offset>0</offset>
+<doc f='luajit/lj_buf.h' l='27'>/* Borrowed string buffer. */</doc>
+<use f='luajit/lj_buf.c' l='44' u='m' c='buf_grow'/>

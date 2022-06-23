@@ -1,0 +1,6 @@
+<dec f='luajit/lj_debug.h' l='39' type='void lj_debug_addloc(lua_State * L, const char * msg, cTValue * frame, cTValue * nextframe)'/>
+<def f='luajit/lj_debug.c' l='355' ll='372' type='void lj_debug_addloc(lua_State * L, const char * msg, cTValue * frame, cTValue * nextframe)'/>
+<doc f='luajit/lj_debug.c' l='354'>/* Add current location of a frame to error message. */</doc>
+<use f='luajit/lj_err.c' l='873' u='c' c='err_msgv'/>
+<use f='luajit/lj_err.c' l='965' u='c' c='lj_err_callermsg'/>
+<use f='luajit/lj_err.c' l='1079' u='c' c='luaL_where'/>

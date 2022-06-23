@@ -1,0 +1,10 @@
+<dec f='luajit/host/minilua.c' l='117' type='7'/>
+<use f='luajit/host/minilua.c' l='3207' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3356' c='luaK_storevar'/>
+<use f='luajit/host/minilua.c' l='3807' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3808' u='r' c='singlevaraux'/>
+<dec f='luajit/lj_parse.c' l='45' type='7'/>
+<use f='luajit/lj_parse.c' l='446' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='630' u='r' c='bcemit_store'/>
+<use f='luajit/lj_parse.c' l='1138' u='r' c='var_lookup_'/>
+<doc f='luajit/lj_parse.c' l='45'>/* info = upvalue index, aux = vstack index */</doc>

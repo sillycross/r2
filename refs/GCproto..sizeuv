@@ -1,0 +1,16 @@
+<dec f='luajit/lj_obj.h' l='383' type='uint8_t'/>
+<offset>480</offset>
+<doc f='luajit/lj_obj.h' l='383'>/* Number of upvalues. */</doc>
+<use f='luajit/lib_jit.c' l='203' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='271' u='r' c='lj_cf_jit_util_funcuvname'/>
+<use f='luajit/lj_bcread.c' l='176' u='r' c='bcread_varinfo'/>
+<use f='luajit/lj_bcread.c' l='354' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='260' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='267' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='283' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_debug.c' l='232' u='r' c='lj_debug_uvnamev'/>
+<use f='luajit/lj_func.c' l='126' u='r' c='func_newL'/>
+<use f='luajit/lj_func.c' l='143' u='r' c='lj_func_newL_empty'/>
+<use f='luajit/lj_func.c' l='167' u='r' c='lj_func_newL_gc'/>
+<use f='luajit/lj_parse.c' l='1341' u='r' c='fs_fixup_uv2'/>
+<use f='luajit/lj_parse.c' l='1410' u='w' c='fs_fixup_uv1'/>

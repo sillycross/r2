@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='786' ll='797' type='void asm_tointg(ASMState * as, IRIns * ir, Reg left)'/>
+<use f='luajit/lj_asm_x86.h' l='859' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1682' u='c' c='asm_sload'/>
+<doc f='luajit/lj_asm_x86.h' l='784'>/* -- Type conversions ---------------------------------------------------- */</doc>

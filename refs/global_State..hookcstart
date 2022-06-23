@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='646' type='int32_t'/>
+<offset>2656</offset>
+<doc f='luajit/lj_obj.h' l='646'>/* Start count for instruction hook counter. */</doc>
+<use f='luajit/lj_dispatch.c' l='329' u='w' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='348' u='r' c='lua_gethookcount'/>
+<use f='luajit/lj_dispatch.c' l='424' u='r' c='lj_dispatch_ins'/>

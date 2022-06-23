@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='605' type='GCSize'/>
+<offset>576</offset>
+<doc f='luajit/lj_obj.h' l='605'>/* Debt (how much GC is behind schedule). */</doc>
+<use f='luajit/lj_gc.c' l='694' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='712' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='731' u='w' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='740' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='745' u='w' c='lj_gc_step'/>

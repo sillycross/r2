@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='352'/>
+<use f='luajit/lj_opt_loop.c' l='343' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='124' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='680' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='715' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='809' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='833' u='c'/>
+<use f='luajit/lj_opt_mem.c' l='922' u='c'/>

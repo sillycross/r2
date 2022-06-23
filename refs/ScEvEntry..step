@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='328' type='IRRef1'/>
+<offset>112</offset>
+<doc f='luajit/lj_jit.h' l='328'>/* Constant step reference. */</doc>
+<use f='luajit/lj_record.c' l='465' u='w' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='469' u='r' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='502' u='r' c='rec_for'/>

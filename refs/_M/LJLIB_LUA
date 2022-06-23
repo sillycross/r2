@@ -1,0 +1,9 @@
+<dec f='luajit/lj_lib.h' l='83'/>
+<use f='luajit/lib_math.c' l='67' u='c'/>
+<use f='luajit/lib_math.c' l='68' u='c'/>
+<use f='luajit/lib_string.c' l='34' u='c'/>
+<use f='luajit/lib_table.c' l='28' u='c'/>
+<use f='luajit/lib_table.c' l='39' u='c'/>
+<use f='luajit/lib_table.c' l='50' u='c'/>
+<use f='luajit/lib_table.c' l='108' u='c'/>
+<use f='luajit/lib_table.c' l='132' u='c'/>

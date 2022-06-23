@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='63' type='GCRef'/>
+<offset>0</offset>
+<use f='luajit/lj_func.c' l='51' u='a' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='60' u='m' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='92' u='m' c='lj_func_closeuv'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='390'/>
+<doc f='luajit/lj_jit.h' l='389'>/* Get 16 byte aligned pointer to SIMD constant. */</doc>
+<use f='luajit/lj_trace.c' l='316' u='c'/>
+<use f='luajit/lj_trace.c' l='319' u='c'/>

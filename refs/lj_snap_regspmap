@@ -1,0 +1,4 @@
+<dec f='luajit/lj_snap.h' l='16' type='IRIns * lj_snap_regspmap(jit_State * J, GCtrace * T, SnapNo snapno, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='2156' u='c' c='asm_setup_regsp'/>
+<def f='luajit/lj_snap.c' l='374' ll='407' type='IRIns * lj_snap_regspmap(jit_State * J, GCtrace * T, SnapNo snapno, IRIns * ir)'/>
+<doc f='luajit/lj_snap.c' l='373'>/* Copy RegSP from parent snapshot to the parent links of the IR. */</doc>

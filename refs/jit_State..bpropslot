@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='482' type='uint32_t'/>
+<offset>23840</offset>
+<doc f='luajit/lj_jit.h' l='482'>/* Round-robin index into bpropcache slots. */</doc>
+<use f='luajit/lj_opt_narrow.c' l='230' u='r' c='narrow_bpc_set'/>
+<use f='luajit/lj_opt_narrow.c' l='232' u='w' c='narrow_bpc_set'/>

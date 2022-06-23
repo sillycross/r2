@@ -1,0 +1,28 @@
+<dec f='luajit/lj_iropt.h' l='48' type='TRef lj_ir_kptr_(jit_State * J, IROp op, void * ptr)'/>
+<use f='luajit/lj_crecord.c' l='616' macro='1' u='c' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='946' macro='1' u='c' c='crec_finalizer'/>
+<use f='luajit/lj_crecord.c' l='948' macro='1' u='c' c='crec_finalizer'/>
+<use f='luajit/lj_crecord.c' l='969' macro='1' u='c' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1524' macro='1' u='c' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1608' macro='1' u='c' c='recff_clib_index'/>
+<use f='luajit/lj_ffrecord.c' l='185' macro='1' u='c' c='recff_bufhdr'/>
+<use f='luajit/lj_ffrecord.c' l='625' macro='1' u='c' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='924' macro='1' u='c' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='1071' macro='1' u='c' c='recff_table_concat'/>
+<def f='luajit/lj_ir.c' l='313' ll='337' type='TRef lj_ir_kptr_(jit_State * J, IROp op, void * ptr)'/>
+<doc f='luajit/lj_ir.c' l='312'>/* Intern pointer constant. */</doc>
+<use f='luajit/lj_opt_fold.c' l='529' macro='1' u='c' c='fold_kfold_strref'/>
+<use f='luajit/lj_opt_fold.c' l='758' macro='1' u='c' c='fold_kfold_add_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='761' macro='1' u='c' c='fold_kfold_add_kgc'/>
+<use f='luajit/lj_opt_fold.c' l='776' u='c' c='fold_kfold_add_kptr'/>
+<use f='luajit/lj_opt_fold.c' l='2184' macro='1' u='c' c='fold_fwd_href_tnew'/>
+<use f='luajit/lj_opt_fold.c' l='2197' macro='1' u='c' c='fold_fwd_href_tdup'/>
+<use f='luajit/lj_record.c' l='699' macro='1' u='c' c='rec_call_specialize'/>
+<use f='luajit/lj_record.c' l='891' macro='1' u='c' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='989' macro='1' u='c' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1367' macro='1' u='c' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1469' macro='1' u='c' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1499' macro='1' u='c' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1520' macro='1' u='c' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1939' macro='1' u='c' c='rec_cat'/>
+<use f='luajit/lj_snap.c' l='421' macro='1' u='c' c='snap_replay_const'/>

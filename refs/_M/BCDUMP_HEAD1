@@ -1,0 +1,4 @@
+<dec f='luajit/lj_bcdump.h' l='32'/>
+<doc f='luajit/lj_bcdump.h' l='31'>/* Bytecode dump header. */</doc>
+<use f='luajit/lj_bcread.c' l='41' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='315' u='c'/>

@@ -1,0 +1,21 @@
+<dec f='luajit/lj_ir.h' l='326' type='21'/>
+<use f='luajit/lj_crecord.c' l='826' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='840' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='858' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='858' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='860' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='860' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1390' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1391' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1393' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1420' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1420' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1422' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1422' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1430' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_ir.c' l='64' macro='1' u='r'/>
+<use f='luajit/lj_opt_narrow.c' l='446' u='r' c='narrow_stripov'/>
+<use f='luajit/lj_opt_narrow.c' l='504' u='r' c='lj_opt_narrow_cindex'/>
+<use f='luajit/lj_opt_narrow.c' l='504' u='r' c='lj_opt_narrow_cindex'/>
+<use f='luajit/lj_opt_narrow.c' l='507' u='r' c='lj_opt_narrow_cindex'/>
+<use f='luajit/lj_opt_narrow.c' l='508' u='r' c='lj_opt_narrow_cindex'/>

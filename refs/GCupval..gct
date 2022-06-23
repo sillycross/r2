@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_func.c' l='56' u='w' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='75' u='w' c='func_emptyuv'/>

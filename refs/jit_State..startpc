@@ -1,0 +1,11 @@
+<dec f='luajit/lj_jit.h' l='486' type='const BCIns *'/>
+<offset>24064</offset>
+<doc f='luajit/lj_jit.h' l='486'>/* Bytecode PC of starting instruction. */</doc>
+<use f='luajit/lj_record.c' l='600' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='634' u='r' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='804' u='r' c='check_downrec_unroll'/>
+<use f='luajit/lj_record.c' l='1692' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1774' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2615' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2632' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2652' u='w' c='lj_record_setup'/>

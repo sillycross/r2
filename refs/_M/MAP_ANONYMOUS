@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/mman-linux.h' l='55'/>
+<use f='luajit/lj_alloc.c' l='215' u='a'/>
+<use f='luajit/lj_ccallback.c' l='256' u='a'/>
+<use f='luajit/lj_ccallback.c' l='279' u='c'/>
+<use f='luajit/lj_mcode.c' l='93' u='a'/>
+<use f='luajit/lj_mcode.c' l='108' u='c'/>

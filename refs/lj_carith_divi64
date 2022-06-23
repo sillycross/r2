@@ -1,0 +1,6 @@
+<dec f='luajit/lj_carith.h' l='29' type='int64_t lj_carith_divi64(int64_t a, int64_t b)'/>
+<use f='luajit/lj_carith.c' l='194' u='c' c='carith_int64'/>
+<def f='luajit/lj_carith.c' l='372' ll='377' type='int64_t lj_carith_divi64(int64_t a, int64_t b)'/>
+<doc f='luajit/lj_carith.c' l='371'>/* Signed 64 bit division. */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='417' u='c' c='fold_kfold_int64arith2'/>

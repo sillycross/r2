@@ -1,0 +1,3 @@
+<dec f='luajit/lua.h' l='204' type='int lua_cpcall(lua_State * L, lua_CFunction func, void * ud)'/>
+<def f='luajit/lj_api.c' l='1164' ll='1174' macro='1' type='int lua_cpcall(lua_State * L, lua_CFunction func, void * ud)'/>
+<use f='luajit/luajit.c' l='582' u='c' c='main'/>

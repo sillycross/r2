@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_obj.c source code [luajit/lj_obj.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_obj.c'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_obj.c.html'>lj_obj.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Miscellaneous object handling.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#define <dfn class="macro" id="_M/lj_obj_c" data-ref="_M/lj_obj_c">lj_obj_c</dfn></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/LUA_CORE" data-ref="_M/LUA_CORE">LUA_CORE</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><i>/* Object type names. */</i></td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_def.h.html#329" title="" data-ref="_M/LJ_DATADEF">LJ_DATADEF</a> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl def" id="lj_obj_typename" title='lj_obj_typename' data-ref="lj_obj_typename" data-ref-filename="lj_obj_typename">lj_obj_typename</dfn>[] = {  <i>/* ORDER LUA_T */</i></td></tr>
+<tr><th id="13">13</th><td>  <q>"no value"</q>, <q>"nil"</q>, <q>"boolean"</q>, <q>"userdata"</q>, <q>"number"</q>, <q>"string"</q>,</td></tr>
+<tr><th id="14">14</th><td>  <q>"table"</q>, <q>"function"</q>, <q>"userdata"</q>, <q>"thread"</q>, <q>"proto"</q>, <q>"cdata"</q></td></tr>
+<tr><th id="15">15</th><td>};</td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><a class="macro" href="lj_def.h.html#329" title="" data-ref="_M/LJ_DATADEF">LJ_DATADEF</a> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl def" id="lj_obj_itypename" title='lj_obj_itypename' data-ref="lj_obj_itypename" data-ref-filename="lj_obj_itypename">lj_obj_itypename</dfn>[] = {  <i>/* ORDER LJ_T */</i></td></tr>
+<tr><th id="18">18</th><td>  <q>"nil"</q>, <q>"boolean"</q>, <q>"boolean"</q>, <q>"userdata"</q>, <q>"string"</q>, <q>"upval"</q>, <q>"thread"</q>,</td></tr>
+<tr><th id="19">19</th><td>  <q>"proto"</q>, <q>"function"</q>, <q>"trace"</q>, <q>"cdata"</q>, <q>"table"</q>, <q>"userdata"</q>, <q>"number"</q></td></tr>
+<tr><th id="20">20</th><td>};</td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><i>/* Compare two objects without calling metamethods. */</i></td></tr>
+<tr><th id="23">23</th><td><em>int</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl def fn" id="lj_obj_equal" title='lj_obj_equal' data-ref="lj_obj_equal" data-ref-filename="lj_obj_equal">lj_obj_equal</dfn>(<a class="typedef" href="lj_obj.h.html#cTValue" title='cTValue' data-type='const TValue' data-ref="cTValue" data-ref-filename="cTValue">cTValue</a> *<dfn class="local col1 decl" id="1o1" title='o1' data-type='cTValue *' data-ref="1o1" data-ref-filename="1o1">o1</dfn>, <a class="typedef" href="lj_obj.h.html#cTValue" title='cTValue' data-type='const TValue' data-ref="cTValue" data-ref-filename="cTValue">cTValue</a> *<dfn class="local col2 decl" id="2o2" title='o2' data-type='cTValue *' data-ref="2o2" data-ref-filename="2o2">o2</dfn>)</td></tr>
+<tr><th id="24">24</th><td>{</td></tr>
+<tr><th id="25">25</th><td>  <b>if</b> (<a class="macro" href="lj_obj.h.html#775" title="((uint32_t)((o1)-&gt;it64 &gt;&gt; 47))" data-ref="_M/itype">itype</a>(<a class="local col1 ref" href="#1o1" title='o1' data-ref="1o1" data-ref-filename="1o1">o1</a>) == <a class="macro" href="lj_obj.h.html#775" title="((uint32_t)((o2)-&gt;it64 &gt;&gt; 47))" data-ref="_M/itype">itype</a>(<a class="local col2 ref" href="#2o2" title='o2' data-ref="2o2" data-ref-filename="2o2">o2</a>)) {</td></tr>
+<tr><th id="26">26</th><td>    <b>if</b> (<a class="macro" href="lj_obj.h.html#801" title="(((uint32_t)((o1)-&gt;it64 &gt;&gt; 47)) &gt;= (~2u))" data-ref="_M/tvispri">tvispri</a>(<a class="local col1 ref" href="#1o1" title='o1' data-ref="1o1" data-ref-filename="1o1">o1</a>))</td></tr>
+<tr><th id="27">27</th><td>      <b>return</b> <var>1</var>;</td></tr>
+<tr><th id="28">28</th><td>    <b>if</b> (!<a class="macro" href="lj_obj.h.html#798" title="(((uint32_t)((o1)-&gt;it64 &gt;&gt; 47)) &lt; (~13u))" data-ref="_M/tvisnum">tvisnum</a>(<a class="local col1 ref" href="#1o1" title='o1' data-ref="1o1" data-ref-filename="1o1">o1</a>))</td></tr>
+<tr><th id="29">29</th><td>      <b>return</b> <a class="macro" href="lj_obj.h.html#70" title="((o1-&gt;gcr).gcptr64 == (o2-&gt;gcr).gcptr64)" data-ref="_M/gcrefeq">gcrefeq</a>(<a class="local col1 ref" href="#1o1" title='o1' data-ref="1o1" data-ref-filename="1o1">o1</a>-&gt;<a class="ref field" href="lj_obj.h.html#TValue::gcr" title='TValue::gcr' data-ref="TValue::gcr" data-ref-filename="TValue..gcr">gcr</a>, <a class="local col2 ref" href="#2o2" title='o2' data-ref="2o2" data-ref-filename="2o2">o2</a>-&gt;<a class="ref field" href="lj_obj.h.html#TValue::gcr" title='TValue::gcr' data-ref="TValue::gcr" data-ref-filename="TValue..gcr">gcr</a>);</td></tr>
+<tr><th id="30">30</th><td>  } <b>else</b> <b>if</b> (!<a class="macro" href="lj_obj.h.html#796" title="(((uint32_t)((o1)-&gt;it64 &gt;&gt; 47)) &lt;= (~13u))" data-ref="_M/tvisnumber">tvisnumber</a>(<a class="local col1 ref" href="#1o1" title='o1' data-ref="1o1" data-ref-filename="1o1">o1</a>) || !<a class="macro" href="lj_obj.h.html#796" title="(((uint32_t)((o2)-&gt;it64 &gt;&gt; 47)) &lt;= (~13u))" data-ref="_M/tvisnumber">tvisnumber</a>(<a class="local col2 ref" href="#2o2" title='o2' data-ref="2o2" data-ref-filename="2o2">o2</a>)) {</td></tr>
+<tr><th id="31">31</th><td>    <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="32">32</th><td>  }</td></tr>
+<tr><th id="33">33</th><td>  <b>return</b> <a class="ref fn" href="lj_obj.h.html#numberVnum" title='numberVnum' data-ref="numberVnum" data-ref-filename="numberVnum">numberVnum</a>(<a class="local col1 ref" href="#1o1" title='o1' data-ref="1o1" data-ref-filename="1o1">o1</a>) == <a class="ref fn" href="lj_obj.h.html#numberVnum" title='numberVnum' data-ref="numberVnum" data-ref-filename="numberVnum">numberVnum</a>(<a class="local col2 ref" href="#2o2" title='o2' data-ref="2o2" data-ref-filename="2o2">o2</a>);</td></tr>
+<tr><th id="34">34</th><td>}</td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><i>/* Return pointer to object or its object data. */</i></td></tr>
+<tr><th id="37">37</th><td><em>const</em> <em>void</em> * <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl def fn" id="lj_obj_ptr" title='lj_obj_ptr' data-ref="lj_obj_ptr" data-ref-filename="lj_obj_ptr">lj_obj_ptr</dfn>(<a class="typedef" href="lj_obj.h.html#global_State" title='global_State' data-type='struct global_State' data-ref="global_State" data-ref-filename="global_State">global_State</a> *<dfn class="local col3 decl" id="3g" title='g' data-type='global_State *' data-ref="3g" data-ref-filename="3g">g</dfn>, <a class="typedef" href="lj_obj.h.html#cTValue" title='cTValue' data-type='const TValue' data-ref="cTValue" data-ref-filename="cTValue">cTValue</a> *<dfn class="local col4 decl" id="4o" title='o' data-type='cTValue *' data-ref="4o" data-ref-filename="4o">o</dfn>)</td></tr>
+<tr><th id="38">38</th><td>{</td></tr>
+<tr><th id="39">39</th><td>  <a class="macro" href="lj_def.h.html#91" title="((void)(g))" data-ref="_M/UNUSED">UNUSED</a>(<a class="local col3 ref" href="#3g" title='g' data-ref="3g" data-ref-filename="3g">g</a>);</td></tr>
+<tr><th id="40">40</th><td>  <b>if</b> (<a class="macro" href="lj_obj.h.html#795" title="(((uint32_t)((o)-&gt;it64 &gt;&gt; 47)) == (~12u))" data-ref="_M/tvisudata">tvisudata</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>))</td></tr>
+<tr><th id="41">41</th><td>    <b>return</b> <a class="macro" href="lj_obj.h.html#339" title="((void *)(((&amp;((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;ud))+1))" data-ref="_M/uddata">uddata</a>(<a class="macro" href="lj_obj.h.html#858" title="(&amp;((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;ud)" data-ref="_M/udataV">udataV</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>));</td></tr>
+<tr><th id="42">42</th><td>  <b>else</b> <b>if</b> (<a class="macro" href="lj_obj.h.html#787" title="(((uint32_t)((o)-&gt;it64 &gt;&gt; 47)) == (~3u))" data-ref="_M/tvislightud">tvislightud</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>))</td></tr>
+<tr><th id="43">43</th><td>    <b>return</b> <a class="ref fn" href="lj_obj.h.html#lightudV" title='lightudV' data-ref="lightudV" data-ref-filename="lightudV">lightudV</a>(<a class="local col3 ref" href="#3g" title='g' data-ref="3g" data-ref-filename="3g">g</a>, <a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>);</td></tr>
+<tr><th id="44">44</th><td>  <b>else</b> <b>if</b> (<a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a> &amp;&amp; <a class="macro" href="lj_obj.h.html#793" title="(((uint32_t)((o)-&gt;it64 &gt;&gt; 47)) == (~10u))" data-ref="_M/tviscdata">tviscdata</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>))</td></tr>
+<tr><th id="45">45</th><td>    <b>return</b> <a class="macro" href="lj_obj.h.html#357" title="((void *)(((&amp;((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;cd))+1))" data-ref="_M/cdataptr">cdataptr</a>(<a class="macro" href="lj_obj.h.html#856" title="(&amp;((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1)))-&gt;cd)" data-ref="_M/cdataV">cdataV</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>));</td></tr>
+<tr><th id="46">46</th><td>  <b>else</b> <b>if</b> (<a class="macro" href="lj_obj.h.html#803" title="((((uint32_t)((o)-&gt;it64 &gt;&gt; 47)) - ((~4u)+1)) &gt; ((~13u) - ((~4u)+1)))" data-ref="_M/tvisgcv">tvisgcv</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>))</td></tr>
+<tr><th id="47">47</th><td>    <b>return</b> <a class="macro" href="lj_obj.h.html#851" title="(((GCobj *)((((o)-&gt;gcr).gcptr64) &amp; (((uint64_t)1 &lt;&lt; 47) - 1))))" data-ref="_M/gcV">gcV</a>(<a class="local col4 ref" href="#4o" title='o' data-ref="4o" data-ref-filename="4o">o</a>);</td></tr>
+<tr><th id="48">48</th><td>  <b>else</b></td></tr>
+<tr><th id="49">49</th><td>    <b>return</b> <span class="macro" title="((void*)0)" data-ref="_M/NULL">NULL</span>;</td></tr>
+<tr><th id="50">50</th><td>}</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

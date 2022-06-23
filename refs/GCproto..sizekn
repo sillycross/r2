@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='381' type='MSize'/>
+<offset>416</offset>
+<doc f='luajit/lj_obj.h' l='381'>/* Number of lua_Number constants. */</doc>
+<use f='luajit/lib_jit.c' l='202' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='252' u='r' c='lj_cf_jit_util_funck'/>
+<use f='luajit/lj_bcread.c' l='352' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='182' u='r' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='269' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_parse.c' l='1363' u='w' c='fs_fixup_k'/>

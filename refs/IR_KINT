@@ -1,0 +1,25 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='23'/>
+<use f='luajit/lj_asm_x86.h' l='606' u='r' c='asm_gencall'/>
+<use f='luajit/lj_ir.c' l='203' u='r' c='lj_ir_kint'/>
+<use f='luajit/lj_ir.c' l='210' u='r' c='lj_ir_kint'/>
+<use f='luajit/lj_ir.c' l='211' u='r' c='lj_ir_kint'/>
+<use f='luajit/lj_ir.c' l='212' u='w' c='lj_ir_kint'/>
+<use f='luajit/lj_ir.c' l='390' c='lj_ir_kvalue'/>
+<use f='luajit/lj_opt_fold.c' l='244' u='r' c='fold_kfold_numpow'/>
+<use f='luajit/lj_opt_fold.c' l='784' u='r' c='fold_kfold_add_kright'/>
+<use f='luajit/lj_opt_fold.c' l='1270' u='r' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_opt_fold.c' l='1391' u='r' c='fold_simplify_intsub_kleft'/>
+<use f='luajit/lj_opt_fold.c' l='1577' u='r' c='fold_simplify_band_k'/>
+<use f='luajit/lj_opt_fold.c' l='1590' u='r' c='fold_simplify_bor_k'/>
+<use f='luajit/lj_opt_fold.c' l='1603' u='r' c='fold_simplify_bxor_k'/>
+<use f='luajit/lj_opt_fold.c' l='1655' u='r' c='fold_simplify_shift_andk'/>
+<use f='luajit/lj_opt_fold.c' l='1672' u='r' c='fold_simplify_shift1_ki'/>
+<use f='luajit/lj_opt_fold.c' l='1687' u='r' c='fold_simplify_shift2_ki'/>
+<use f='luajit/lj_opt_fold.c' l='1702' u='r' c='fold_simplify_shiftk_andk'/>
+<use f='luajit/lj_opt_fold.c' l='1727' u='r' c='fold_simplify_andk_shiftk'/>
+<use f='luajit/lj_opt_fold.c' l='1739' u='r' c='fold_simplify_andor_k'/>
+<use f='luajit/lj_opt_fold.c' l='1784' u='r' c='fold_reassoc_intarith_k'/>
+<use f='luajit/lj_opt_fold.c' l='1857' u='r' c='fold_reassoc_shift'/>
+<use f='luajit/lj_opt_fold.c' l='1880' u='r' c='fold_reassoc_minmax_k'/>
+<use f='luajit/lj_opt_mem.c' l='426' u='r' c='lj_opt_fwd_alen'/>
+<use f='luajit/lj_snap.c' l='417' c='snap_replay_const'/>

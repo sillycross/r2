@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='77' type='void lj_gc_barriertrace(global_State * g, uint32_t traceno)'/>
+<def f='luajit/lj_gc.c' l='852' ll='856' type='void lj_gc_barriertrace(global_State * g, uint32_t traceno)'/>
+<doc f='luajit/lj_gc.c' l='851'>/* Mark a trace if it&apos;s saved during the propagation phase. */</doc>
+<use f='luajit/lj_trace.c' l='162' u='c' c='trace_save'/>

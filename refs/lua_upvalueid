@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='347' type='void * lua_upvalueid(lua_State * L, int idx, int n)'/>
+<def f='luajit/lj_api.c' l='917' ll='924' macro='1' type='void * lua_upvalueid(lua_State * L, int idx, int n)'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lualib.h' l='15'/>
+<use f='luajit/lib_init.c' l='24' u='c'/>
+<use f='luajit/lib_string.c' l='664' u='c'/>
+<use f='luajit/lib_string.c' l='672' u='c'/>

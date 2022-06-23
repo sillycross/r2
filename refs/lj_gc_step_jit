@@ -1,0 +1,5 @@
+<dec f='luajit/lj_gc.h' l='60' type='int lj_gc_step_jit(global_State * g, MSize steps)'/>
+<use f='luajit/lj_asm_x86.h' l='3095' u='r' c='lj_asm_patchexit'/>
+<def f='luajit/lj_gc.c' l='761' ll='770' type='int lj_gc_step_jit(global_State * g, MSize steps)'/>
+<doc f='luajit/lj_gc.c' l='760'>/* Perform multiple GC steps. Called from JIT-compiled code. */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

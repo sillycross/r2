@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='146' type='TRef lj_opt_narrow_mod(jit_State * J, TRef rb, TRef rc, TValue * vb, TValue * vc)'/>
+<def f='luajit/lj_opt_narrow.c' l='567' ll='585' type='TRef lj_opt_narrow_mod(jit_State * J, TRef rb, TRef rc, TValue * vb, TValue * vc)'/>
+<doc f='luajit/lj_opt_narrow.c' l='566'>/* Narrowing of modulo operator. */</doc>
+<use f='luajit/lj_record.c' l='2267' u='c' c='lj_record_ins'/>

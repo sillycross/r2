@@ -1,0 +1,5 @@
+<dec f='luajit/lj_udata.h' l='11' type='GCudata * lj_udata_new(lua_State * L, MSize sz, GCtab * env)'/>
+<use f='luajit/lib_buffer.c' l='307' u='c' c='lj_cf_buffer_new'/>
+<use f='luajit/lj_api.c' l='765' u='c' c='lua_newuserdata'/>
+<use f='luajit/lj_clib.c' l='402' u='c' c='clib_new'/>
+<def f='luajit/lj_udata.c' l='14' ll='29' type='GCudata * lj_udata_new(lua_State * L, MSize sz, GCtab * env)'/>

@@ -1,0 +1,22 @@
+<dec f='luajit/lj_tab.h' l='79' type='TValue * lj_tab_setstr(lua_State * L, GCtab * t, const GCstr * key)'/>
+<use f='luajit/lib_base.c' l='679' u='c' c='newproxy_weaktable'/>
+<use f='luajit/lib_base.c' l='688' u='c' c='luaopen_base'/>
+<use f='luajit/lib_ffi.c' l='569' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='571' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='573' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='576' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='831' u='c' c='ffi_finalizer'/>
+<use f='luajit/lib_ffi.c' l='843' u='c' c='ffi_register_module'/>
+<use f='luajit/lib_ffi.c' l='859' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_jit.c' l='184' u='c' c='setintfield'/>
+<use f='luajit/lib_jit.c' l='214' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='222' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_string.c' l='669' u='c' c='luaopen_string'/>
+<use f='luajit/lj_api.c' l='729' u='c' c='luaL_newmetatable'/>
+<use f='luajit/lj_clib.c' l='344' u='c' c='lj_clib_index'/>
+<use f='luajit/lj_lib.c' l='70' u='c' c='lib_read_lfunc'/>
+<use f='luajit/lj_lib.c' l='113' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='179' u='c' c='lj_lib_postreg'/>
+<use f='luajit/lj_parse.c' l='244' u='c' c='lj_parse_keepstr'/>
+<def f='luajit/lj_tab.c' l='530' ll='540' type='TValue * lj_tab_setstr(lua_State * L, GCtab * t, const GCstr * key)'/>
+<use f='luajit/lj_tab.c' l='547' u='c' c='lj_tab_set'/>

@@ -1,0 +1,29 @@
+<dec f='luajit/lj_ctype.h' l='27' type='6'/>
+<doc f='luajit/lj_ctype.h' l='27'>/* Function. */</doc>
+<use f='luajit/lib_ffi.c' l='304' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lj_carith.c' l='46' macro='1' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_ccall.c' l='905' macro='1' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_ccall.c' l='1160' macro='1' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccallback.c' l='756' macro='1' u='r' c='callback_checkfunc'/>
+<use f='luajit/lj_cconv.c' l='105' macro='1' u='r' c='lj_cconv_compatptr'/>
+<use f='luajit/lj_cconv.c' l='571' macro='1' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_clib.c' l='348' macro='1' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='526' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='792' macro='1' u='r' c='cp_push_attributes'/>
+<use f='luajit/lj_cparse.c' l='836' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='869' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='876' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1625' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1648' macro='1' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1851' macro='1' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_crecord.c' l='658' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='1232' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1506' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1588' macro='1' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_ctype.c' l='328' macro='1' u='r' c='lj_ctype_info'/>
+<use f='luajit/lj_ctype.c' l='346' macro='1' u='r' c='lj_ctype_meta'/>
+<use f='luajit/lj_ctype.c' l='525' c='ctype_repr'/>
+<use f='luajit/lj_opt_fold.c' l='756' macro='1' u='r' c='fold_kfold_add_kgc'/>

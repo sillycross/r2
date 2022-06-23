@@ -1,0 +1,11 @@
+<def f='luajit/lj_asm_x86.h' l='1114' ll='1270' type='void asm_href(ASMState * as, IRIns * ir, IROp merge)'/>
+<use f='luajit/lj_asm.c' l='1699' u='c' c='asm_fuseequal'/>
+<use f='luajit/lj_asm.c' l='1783' u='c' c='asm_ir'/>
+<doc f='luajit/lj_asm_x86.h' l='1106'>/* Inlined hash lookup. Specialized for key type and for const keys.
+** The equivalent C code is:
+**   Node *n = hashkey(t, key);
+**   do {
+**     if (lj_obj_equal(&amp;n-&gt;key, key)) return &amp;n-&gt;val;
+**   } while ((n = nextnode(n)));
+**   return niltv(L);
+*/</doc>

@@ -1,0 +1,1 @@
+<def f='luajit/lib_bit.c' l='114' macro='1' type='int lj_ffh_bit_band(lua_State * L)'/>

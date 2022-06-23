@@ -1,0 +1,4 @@
+<dec f='luajit/lj_debug.h' l='41' type='void lj_debug_pushloc(lua_State * L, GCproto * pt, BCPos pc)'/>
+<use f='luajit/lib_jit.c' l='212' u='c' c='lj_cf_jit_util_funcinfo'/>
+<def f='luajit/lj_debug.c' l='375' ll='398' type='void lj_debug_pushloc(lua_State * L, GCproto * pt, BCPos pc)'/>
+<doc f='luajit/lj_debug.c' l='374'>/* Push location string for a bytecode position to Lua stack. */</doc>

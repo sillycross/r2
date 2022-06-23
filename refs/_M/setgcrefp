@@ -1,0 +1,15 @@
+<dec f='luajit/lj_obj.h' l='75'/>
+<use f='luajit/lj_gc.c' l='436' u='c'/>
+<use f='luajit/lj_gc.c' l='450' u='c'/>
+<use f='luajit/lj_str.c' l='154' u='c'/>
+<use f='luajit/lj_str.c' l='162' u='c'/>
+<use f='luajit/lj_str.c' l='199' u='c'/>
+<use f='luajit/lj_str.c' l='200' u='c'/>
+<use f='luajit/lj_str.c' l='227' u='c'/>
+<use f='luajit/lj_str.c' l='256' u='c'/>
+<use f='luajit/lj_str.c' l='257' u='c'/>
+<use f='luajit/lj_str.c' l='305' u='c'/>
+<use f='luajit/lj_str.c' l='307' u='c'/>
+<use f='luajit/lj_trace.c' l='152' u='c'/>
+<use f='luajit/lj_trace.c' l='161' u='c'/>
+<use f='luajit/lj_trace.c' l='435' u='c'/>

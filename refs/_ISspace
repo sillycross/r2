@@ -1,0 +1,6 @@
+<dec f='include/ctype.h' l='53' type='8192'/>
+<use f='luajit/host/minilua.c' l='656' macro='1' u='r' c='luaO_str2d'/>
+<use f='luajit/host/minilua.c' l='2953' macro='1' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='6236' macro='1' u='r' c='luaB_tonumber'/>
+<use f='luajit/host/minilua.c' l='7129' macro='1' u='r' c='match_class'/>
+<doc f='include/ctype.h' l='53'>/* Whitespace.  */</doc>

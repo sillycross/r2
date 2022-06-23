@@ -1,0 +1,11 @@
+<dec f='luajit/lj_lex.h' l='66' type='BCLine'/>
+<offset>928</offset>
+<doc f='luajit/lj_lex.h' l='66'>/* Line of last token. */</doc>
+<use f='luajit/lj_bcread.c' l='30' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='32' u='w' c='lj_bcread'/>
+<use f='luajit/lj_bcread.c' l='30' u='r' c='lj_bcread'/>
+<use f='luajit/lj_lex.c' l='412' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='457' u='w' c='lj_lex_next'/>
+<use f='luajit/lj_parse.c' l='429' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='1874' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1914' u='r' c='parse_args'/>

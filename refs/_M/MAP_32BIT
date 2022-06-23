@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/mman.h' l='28'/>
+<use f='luajit/lj_alloc.c' l='112' u='a'/>

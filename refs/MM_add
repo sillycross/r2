@@ -1,0 +1,17 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='10'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_carith.c' l='130' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='135' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='189' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='259' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_crecord.c' l='1335' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1356' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1370' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1404' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1406' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1431' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_recdef.h' l='176' u='r'/>
+<use f='luajit/lj_meta.c' l='221' u='r' c='lj_meta_arith'/>
+<use f='luajit/lj_record.c' l='2258' u='r' c='lj_record_ins'/>

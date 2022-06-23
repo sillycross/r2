@@ -1,0 +1,8 @@
+<dec f='luajit/lj_dispatch.h' l='101' type='HotCount [64]'/>
+<offset>31488</offset>
+<doc f='luajit/lj_dispatch.h' l='101'>/* Hot counters. */</doc>
+<use f='luajit/lj_dispatch.c' l='88' u='r' c='lj_dispatch_init_hotcount'/>
+<use f='luajit/lj_record.c' l='1705' macro='1' u='w' c='check_call_unroll'/>
+<use f='luajit/lj_trace.c' l='402' macro='1' u='w' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='582' macro='1' u='w' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='740' macro='1' u='w' c='lj_trace_hot'/>

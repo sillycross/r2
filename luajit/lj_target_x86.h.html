@@ -1,0 +1,376 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_target_x86.h source code [luajit/lj_target_x86.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_target_x86.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_target_x86.h.html'>lj_target_x86.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Definitions for x86 and x64 CPUs.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_TARGET_X86_H">_LJ_TARGET_X86_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_TARGET_X86_H" data-ref="_M/_LJ_TARGET_X86_H">_LJ_TARGET_X86_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><i>/* -- Registers IDs ------------------------------------------------------- */</i></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="12">12</th><td><u>#define <dfn class="macro" id="_M/GPRDEF" data-ref="_M/GPRDEF">GPRDEF</dfn>(_) \</u></td></tr>
+<tr><th id="13">13</th><td><u>  _(EAX) _(ECX) _(EDX) _(EBX) _(ESP) _(EBP) _(ESI) _(EDI) \</u></td></tr>
+<tr><th id="14">14</th><td><u>  _(R8D) _(R9D) _(R10D) _(R11D) _(R12D) _(R13D) _(R14D) _(R15D)</u></td></tr>
+<tr><th id="15">15</th><td><u>#define <dfn class="macro" id="_M/FPRDEF" data-ref="_M/FPRDEF">FPRDEF</dfn>(_) \</u></td></tr>
+<tr><th id="16">16</th><td><u>  _(XMM0) _(XMM1) _(XMM2) _(XMM3) _(XMM4) _(XMM5) _(XMM6) _(XMM7) \</u></td></tr>
+<tr><th id="17">17</th><td><u>  _(XMM8) _(XMM9) _(XMM10) _(XMM11) _(XMM12) _(XMM13) _(XMM14) _(XMM15)</u></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="11">else</span></u></td></tr>
+<tr><th id="19">19</th><td><u>#define GPRDEF(_) \</u></td></tr>
+<tr><th id="20">20</th><td><u>  _(EAX) _(ECX) _(EDX) _(EBX) _(ESP) _(EBP) _(ESI) _(EDI)</u></td></tr>
+<tr><th id="21">21</th><td><u>#define FPRDEF(_) \</u></td></tr>
+<tr><th id="22">22</th><td><u>  _(XMM0) _(XMM1) _(XMM2) _(XMM3) _(XMM4) _(XMM5) _(XMM6) _(XMM7)</u></td></tr>
+<tr><th id="23">23</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/VRIDDEF" data-ref="_M/VRIDDEF">VRIDDEF</dfn>(_) \</u></td></tr>
+<tr><th id="25">25</th><td><u>  _(MRM) _(RIP)</u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/RIDENUM" data-ref="_M/RIDENUM">RIDENUM</dfn>(name)	RID_##name,</u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><b>enum</b> {</td></tr>
+<tr><th id="30">30</th><td>  <a class="macro" href="#12" title="RID_EAX, RID_ECX, RID_EDX, RID_EBX, RID_ESP, RID_EBP, RID_ESI, RID_EDI, RID_R8D, RID_R9D, RID_R10D, RID_R11D, RID_R12D, RID_R13D, RID_R14D, RID_R15D," data-ref="_M/GPRDEF">GPRDEF</a>(RIDENUM)		<i>/* General-purpose registers (GPRs). */</i></td></tr>
+<tr><th id="31">31</th><td>  <a class="macro" href="#15" title="RID_XMM0, RID_XMM1, RID_XMM2, RID_XMM3, RID_XMM4, RID_XMM5, RID_XMM6, RID_XMM7, RID_XMM8, RID_XMM9, RID_XMM10, RID_XMM11, RID_XMM12, RID_XMM13, RID_XMM14, RID_XMM15," data-ref="_M/FPRDEF">FPRDEF</a>(RIDENUM)		<i>/* Floating-point registers (FPRs). */</i></td></tr>
+<tr><th id="32">32</th><td>  <dfn class="enum" id="RID_MAX" title='RID_MAX' data-ref="RID_MAX" data-ref-filename="RID_MAX">RID_MAX</dfn>,</td></tr>
+<tr><th id="33">33</th><td>  <dfn class="enum" id="RID_MRM" title='RID_MRM' data-ref="RID_MRM" data-ref-filename="RID_MRM">RID_MRM</dfn> = <a class="enum" href="#RID_MAX" title='RID_MAX' data-ref="RID_MAX" data-ref-filename="RID_MAX">RID_MAX</a>,		<i>/* Pseudo-id for ModRM operand. */</i></td></tr>
+<tr><th id="34">34</th><td>  <dfn class="enum" id="RID_RIP" title='RID_RIP' data-ref="RID_RIP" data-ref-filename="RID_RIP">RID_RIP</dfn> = <a class="enum" href="#RID_MAX" title='RID_MAX' data-ref="RID_MAX" data-ref-filename="RID_MAX">RID_MAX</a>+<var>5</var>,		<i>/* Pseudo-id for RIP (x64 only), rm bits = 5. */</i></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td>  <i>/* Calling conventions. */</i></td></tr>
+<tr><th id="37">37</th><td>  <dfn class="enum" id="RID_SP" title='RID_SP' data-ref="RID_SP" data-ref-filename="RID_SP">RID_SP</dfn> = <a class="enum" href="#30" title='RID_ESP' data-ref="RID_ESP" data-ref-filename="RID_ESP">RID_ESP</a>,</td></tr>
+<tr><th id="38">38</th><td>  <dfn class="enum" id="RID_RET" title='RID_RET' data-ref="RID_RET" data-ref-filename="RID_RET">RID_RET</dfn> = <a class="enum" href="#30" title='RID_EAX' data-ref="RID_EAX" data-ref-filename="RID_EAX">RID_EAX</a>,</td></tr>
+<tr><th id="39">39</th><td><u>#<span data-ppcond="39">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="40">40</th><td>  <dfn class="enum" id="RID_FPRET" title='RID_FPRET' data-ref="RID_FPRET" data-ref-filename="RID_FPRET">RID_FPRET</dfn> = <a class="enum" href="#31" title='RID_XMM0' data-ref="RID_XMM0" data-ref-filename="RID_XMM0">RID_XMM0</a>,</td></tr>
+<tr><th id="41">41</th><td><u>#<span data-ppcond="39">else</span></u></td></tr>
+<tr><th id="42">42</th><td>  RID_RETLO = RID_EAX,</td></tr>
+<tr><th id="43">43</th><td>  RID_RETHI = RID_EDX,</td></tr>
+<tr><th id="44">44</th><td><u>#<span data-ppcond="39">endif</span></u></td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td>  <i>/* These definitions must match with the *.dasc file(s): */</i></td></tr>
+<tr><th id="47">47</th><td>  <dfn class="enum" id="RID_BASE" title='RID_BASE' data-ref="RID_BASE" data-ref-filename="RID_BASE">RID_BASE</dfn> = <a class="enum" href="#30" title='RID_EDX' data-ref="RID_EDX" data-ref-filename="RID_EDX">RID_EDX</a>,		<i>/* Interpreter BASE. */</i></td></tr>
+<tr><th id="48">48</th><td><u>#<span data-ppcond="48">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a> &amp;&amp; !<a class="macro" href="lj_arch.h.html#622" title="0" data-ref="_M/LJ_ABI_WIN">LJ_ABI_WIN</a></u></td></tr>
+<tr><th id="49">49</th><td>  <dfn class="enum" id="RID_LPC" title='RID_LPC' data-ref="RID_LPC" data-ref-filename="RID_LPC">RID_LPC</dfn> = <a class="enum" href="#30" title='RID_EBX' data-ref="RID_EBX" data-ref-filename="RID_EBX">RID_EBX</a>,		<i>/* Interpreter PC. */</i></td></tr>
+<tr><th id="50">50</th><td>  <dfn class="enum" id="RID_DISPATCH" title='RID_DISPATCH' data-ref="RID_DISPATCH" data-ref-filename="RID_DISPATCH">RID_DISPATCH</dfn> = <a class="enum" href="#30" title='RID_R14D' data-ref="RID_R14D" data-ref-filename="RID_R14D">RID_R14D</a>,	<i>/* Interpreter DISPATCH table. */</i></td></tr>
+<tr><th id="51">51</th><td><u>#<span data-ppcond="48">else</span></u></td></tr>
+<tr><th id="52">52</th><td>  RID_LPC = RID_ESI,		<i>/* Interpreter PC. */</i></td></tr>
+<tr><th id="53">53</th><td>  RID_DISPATCH = RID_EBX,	<i>/* Interpreter DISPATCH table. */</i></td></tr>
+<tr><th id="54">54</th><td><u>#<span data-ppcond="48">endif</span></u></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>  <i>/* Register ranges [min, max) and number of registers. */</i></td></tr>
+<tr><th id="57">57</th><td>  <dfn class="enum" id="RID_MIN_GPR" title='RID_MIN_GPR' data-ref="RID_MIN_GPR" data-ref-filename="RID_MIN_GPR">RID_MIN_GPR</dfn> = <a class="enum" href="#30" title='RID_EAX' data-ref="RID_EAX" data-ref-filename="RID_EAX">RID_EAX</a>,</td></tr>
+<tr><th id="58">58</th><td>  <dfn class="enum" id="RID_MIN_FPR" title='RID_MIN_FPR' data-ref="RID_MIN_FPR" data-ref-filename="RID_MIN_FPR">RID_MIN_FPR</dfn> = <a class="enum" href="#31" title='RID_XMM0' data-ref="RID_XMM0" data-ref-filename="RID_XMM0">RID_XMM0</a>,</td></tr>
+<tr><th id="59">59</th><td>  <dfn class="enum" id="RID_MAX_GPR" title='RID_MAX_GPR' data-ref="RID_MAX_GPR" data-ref-filename="RID_MAX_GPR">RID_MAX_GPR</dfn> = <a class="enum" href="#RID_MIN_FPR" title='RID_MIN_FPR' data-ref="RID_MIN_FPR" data-ref-filename="RID_MIN_FPR">RID_MIN_FPR</a>,</td></tr>
+<tr><th id="60">60</th><td>  <dfn class="enum" id="RID_MAX_FPR" title='RID_MAX_FPR' data-ref="RID_MAX_FPR" data-ref-filename="RID_MAX_FPR">RID_MAX_FPR</dfn> = <a class="enum" href="#RID_MAX" title='RID_MAX' data-ref="RID_MAX" data-ref-filename="RID_MAX">RID_MAX</a>,</td></tr>
+<tr><th id="61">61</th><td>  <dfn class="enum" id="RID_NUM_GPR" title='RID_NUM_GPR' data-ref="RID_NUM_GPR" data-ref-filename="RID_NUM_GPR">RID_NUM_GPR</dfn> = <a class="enum" href="#RID_MAX_GPR" title='RID_MAX_GPR' data-ref="RID_MAX_GPR" data-ref-filename="RID_MAX_GPR">RID_MAX_GPR</a> - <a class="enum" href="#RID_MIN_GPR" title='RID_MIN_GPR' data-ref="RID_MIN_GPR" data-ref-filename="RID_MIN_GPR">RID_MIN_GPR</a>,</td></tr>
+<tr><th id="62">62</th><td>  <dfn class="enum" id="RID_NUM_FPR" title='RID_NUM_FPR' data-ref="RID_NUM_FPR" data-ref-filename="RID_NUM_FPR">RID_NUM_FPR</dfn> = <a class="enum" href="#RID_MAX_FPR" title='RID_MAX_FPR' data-ref="RID_MAX_FPR" data-ref-filename="RID_MAX_FPR">RID_MAX_FPR</a> - <a class="enum" href="#RID_MIN_FPR" title='RID_MIN_FPR' data-ref="RID_MIN_FPR" data-ref-filename="RID_MIN_FPR">RID_MIN_FPR</a>,</td></tr>
+<tr><th id="63">63</th><td>};</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><i>/* -- Register sets ------------------------------------------------------- */</i></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><i>/* Make use of all registers, except the stack pointer (and maybe DISPATCH). */</i></td></tr>
+<tr><th id="68">68</th><td><u>#define <dfn class="macro" id="_M/RSET_GPR" data-ref="_M/RSET_GPR">RSET_GPR</dfn>	(RSET_RANGE(RID_MIN_GPR, RID_MAX_GPR) \</u></td></tr>
+<tr><th id="69">69</th><td><u>			 - RID2RSET(RID_ESP) \</u></td></tr>
+<tr><th id="70">70</th><td><u>			 - LJ_GC64*RID2RSET(RID_DISPATCH))</u></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/RSET_FPR" data-ref="_M/RSET_FPR">RSET_FPR</dfn>	(RSET_RANGE(RID_MIN_FPR, RID_MAX_FPR))</u></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/RSET_ALL" data-ref="_M/RSET_ALL">RSET_ALL</dfn>	(RSET_GPR|RSET_FPR)</u></td></tr>
+<tr><th id="73">73</th><td><u>#define <dfn class="macro" id="_M/RSET_INIT" data-ref="_M/RSET_INIT">RSET_INIT</dfn>	RSET_ALL</u></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="75">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="76">76</th><td><i>/* Note: this requires the use of FORCE_REX! */</i></td></tr>
+<tr><th id="77">77</th><td><u>#define <dfn class="macro" id="_M/RSET_GPR8" data-ref="_M/RSET_GPR8">RSET_GPR8</dfn>	RSET_GPR</u></td></tr>
+<tr><th id="78">78</th><td><u>#<span data-ppcond="75">else</span></u></td></tr>
+<tr><th id="79">79</th><td><u>#define RSET_GPR8	(RSET_RANGE(RID_EAX, RID_EBX+1))</u></td></tr>
+<tr><th id="80">80</th><td><u>#<span data-ppcond="75">endif</span></u></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><i>/* ABI-specific register sets. */</i></td></tr>
+<tr><th id="83">83</th><td><u>#define <dfn class="macro" id="_M/RSET_ACD" data-ref="_M/RSET_ACD">RSET_ACD</dfn>	(RID2RSET(RID_EAX)|RID2RSET(RID_ECX)|RID2RSET(RID_EDX))</u></td></tr>
+<tr><th id="84">84</th><td><u>#<span data-ppcond="84">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="85">85</th><td><u>#<span data-ppcond="85">if</span> <a class="macro" href="lj_arch.h.html#622" title="0" data-ref="_M/LJ_ABI_WIN">LJ_ABI_WIN</a></u></td></tr>
+<tr><th id="86">86</th><td><i>/* Windows x64 ABI. */</i></td></tr>
+<tr><th id="87">87</th><td><u>#define RSET_SCRATCH \</u></td></tr>
+<tr><th id="88">88</th><td><u>  (RSET_ACD|RSET_RANGE(RID_R8D, RID_R11D+1)|RSET_RANGE(RID_XMM0, RID_XMM5+1))</u></td></tr>
+<tr><th id="89">89</th><td><u>#define REGARG_GPRS \</u></td></tr>
+<tr><th id="90">90</th><td><u>  (RID_ECX|((RID_EDX|((RID_R8D|(RID_R9D&lt;&lt;5))&lt;&lt;5))&lt;&lt;5))</u></td></tr>
+<tr><th id="91">91</th><td><u>#define REGARG_NUMGPR	4</u></td></tr>
+<tr><th id="92">92</th><td><u>#define REGARG_NUMFPR	4</u></td></tr>
+<tr><th id="93">93</th><td><u>#define REGARG_FIRSTFPR	RID_XMM0</u></td></tr>
+<tr><th id="94">94</th><td><u>#define REGARG_LASTFPR	RID_XMM3</u></td></tr>
+<tr><th id="95">95</th><td><u>#define STACKARG_OFS	(4*8)</u></td></tr>
+<tr><th id="96">96</th><td><u>#<span data-ppcond="85">else</span></u></td></tr>
+<tr><th id="97">97</th><td><i>/* The rest of the civilized x64 world has a common ABI. */</i></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/RSET_SCRATCH" data-ref="_M/RSET_SCRATCH">RSET_SCRATCH</dfn> \</u></td></tr>
+<tr><th id="99">99</th><td><u>  (RSET_ACD|RSET_RANGE(RID_ESI, RID_R11D+1)|RSET_FPR)</u></td></tr>
+<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/REGARG_GPRS" data-ref="_M/REGARG_GPRS">REGARG_GPRS</dfn> \</u></td></tr>
+<tr><th id="101">101</th><td><u>  (RID_EDI|((RID_ESI|((RID_EDX|((RID_ECX|((RID_R8D|(RID_R9D \</u></td></tr>
+<tr><th id="102">102</th><td><u>   &lt;&lt;5))&lt;&lt;5))&lt;&lt;5))&lt;&lt;5))&lt;&lt;5))</u></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/REGARG_NUMGPR" data-ref="_M/REGARG_NUMGPR">REGARG_NUMGPR</dfn>	6</u></td></tr>
+<tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/REGARG_NUMFPR" data-ref="_M/REGARG_NUMFPR">REGARG_NUMFPR</dfn>	8</u></td></tr>
+<tr><th id="105">105</th><td><u>#define <dfn class="macro" id="_M/REGARG_FIRSTFPR" data-ref="_M/REGARG_FIRSTFPR">REGARG_FIRSTFPR</dfn>	RID_XMM0</u></td></tr>
+<tr><th id="106">106</th><td><u>#define <dfn class="macro" id="_M/REGARG_LASTFPR" data-ref="_M/REGARG_LASTFPR">REGARG_LASTFPR</dfn>	RID_XMM7</u></td></tr>
+<tr><th id="107">107</th><td><u>#define <dfn class="macro" id="_M/STACKARG_OFS" data-ref="_M/STACKARG_OFS">STACKARG_OFS</dfn>	0</u></td></tr>
+<tr><th id="108">108</th><td><u>#<span data-ppcond="85">endif</span></u></td></tr>
+<tr><th id="109">109</th><td><u>#<span data-ppcond="84">else</span></u></td></tr>
+<tr><th id="110">110</th><td><i>/* Common x86 ABI. */</i></td></tr>
+<tr><th id="111">111</th><td><u>#define RSET_SCRATCH	(RSET_ACD|RSET_FPR)</u></td></tr>
+<tr><th id="112">112</th><td><u>#define REGARG_GPRS	(RID_ECX|(RID_EDX&lt;&lt;5))  /* Fastcall only. */</u></td></tr>
+<tr><th id="113">113</th><td><u>#define REGARG_NUMGPR	2  /* Fastcall only. */</u></td></tr>
+<tr><th id="114">114</th><td><u>#define REGARG_NUMFPR	0</u></td></tr>
+<tr><th id="115">115</th><td><u>#define STACKARG_OFS	0</u></td></tr>
+<tr><th id="116">116</th><td><u>#<span data-ppcond="84">endif</span></u></td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td><u>#<span data-ppcond="118">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="119">119</th><td><i>/* Prefer the low 8 regs of each type to reduce REX prefixes. */</i></td></tr>
+<tr><th id="120">120</th><td><u>#undef <a class="macro" href="lj_target.h.html#76" data-ref="_M/rset_picktop">rset_picktop</a></u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/rset_picktop" data-ref="_M/rset_picktop">rset_picktop</dfn>(rs)	(lj_fls(lj_bswap(rs)) ^ 0x18)</u></td></tr>
+<tr><th id="122">122</th><td><u>#<span data-ppcond="118">endif</span></u></td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td><i>/* -- Spill slots --------------------------------------------------------- */</i></td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td><i>/* Spill slots are 32 bit wide. An even/odd pair is used for FPRs.</i></td></tr>
+<tr><th id="127">127</th><td><i>**</i></td></tr>
+<tr><th id="128">128</th><td><i>** SPS_FIXED: Available fixed spill slots in interpreter frame.</i></td></tr>
+<tr><th id="129">129</th><td><i>** This definition must match with the *.dasc file(s).</i></td></tr>
+<tr><th id="130">130</th><td><i>**</i></td></tr>
+<tr><th id="131">131</th><td><i>** SPS_FIRST: First spill slot for general use. Reserve min. two 32 bit slots.</i></td></tr>
+<tr><th id="132">132</th><td><i>*/</i></td></tr>
+<tr><th id="133">133</th><td><u>#<span data-ppcond="133">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="134">134</th><td><u>#<span data-ppcond="134">if</span> <a class="macro" href="lj_arch.h.html#622" title="0" data-ref="_M/LJ_ABI_WIN">LJ_ABI_WIN</a></u></td></tr>
+<tr><th id="135">135</th><td><u>#define SPS_FIXED	(4*2)</u></td></tr>
+<tr><th id="136">136</th><td><u>#define SPS_FIRST	(4*2)	/* Don't use callee register save area. */</u></td></tr>
+<tr><th id="137">137</th><td><u>#<span data-ppcond="134">else</span></u></td></tr>
+<tr><th id="138">138</th><td><u>#<span data-ppcond="138">if</span> <a class="macro" href="lj_arch.h.html#526" title="1" data-ref="_M/LJ_GC64">LJ_GC64</a></u></td></tr>
+<tr><th id="139">139</th><td><u>#define <dfn class="macro" id="_M/SPS_FIXED" data-ref="_M/SPS_FIXED">SPS_FIXED</dfn>	2</u></td></tr>
+<tr><th id="140">140</th><td><u>#<span data-ppcond="138">else</span></u></td></tr>
+<tr><th id="141">141</th><td><u>#define SPS_FIXED	4</u></td></tr>
+<tr><th id="142">142</th><td><u>#<span data-ppcond="138">endif</span></u></td></tr>
+<tr><th id="143">143</th><td><u>#define <dfn class="macro" id="_M/SPS_FIRST" data-ref="_M/SPS_FIRST">SPS_FIRST</dfn>	2</u></td></tr>
+<tr><th id="144">144</th><td><u>#<span data-ppcond="134">endif</span></u></td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="133">else</span></u></td></tr>
+<tr><th id="146">146</th><td><u>#define SPS_FIXED	6</u></td></tr>
+<tr><th id="147">147</th><td><u>#define SPS_FIRST	2</u></td></tr>
+<tr><th id="148">148</th><td><u>#<span data-ppcond="133">endif</span></u></td></tr>
+<tr><th id="149">149</th><td></td></tr>
+<tr><th id="150">150</th><td><u>#define <dfn class="macro" id="_M/SPOFS_TMP" data-ref="_M/SPOFS_TMP">SPOFS_TMP</dfn>	0</u></td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td><u>#define <dfn class="macro" id="_M/sps_scale" data-ref="_M/sps_scale">sps_scale</dfn>(slot)		(4 * (int32_t)(slot))</u></td></tr>
+<tr><th id="153">153</th><td><u>#define <dfn class="macro" id="_M/sps_align" data-ref="_M/sps_align">sps_align</dfn>(slot)		(((slot) - SPS_FIXED + 3) &amp; ~3)</u></td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td><i>/* -- Exit state ---------------------------------------------------------- */</i></td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><i>/* This definition must match with the *.dasc file(s). */</i></td></tr>
+<tr><th id="158">158</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="159">159</th><td>  <a class="typedef" href="lua.h.html#lua_Number" title='lua_Number' data-type='double' data-ref="lua_Number" data-ref-filename="lua_Number">lua_Number</a> <dfn class="decl field" id="(anonymous)::fpr" title='(anonymous struct)::fpr' data-ref="(anonymous)::fpr" data-ref-filename="(anonymous)..fpr">fpr</dfn>[<a class="enum" href="#RID_NUM_FPR" title='RID_NUM_FPR' data-ref="RID_NUM_FPR" data-ref-filename="RID_NUM_FPR">RID_NUM_FPR</a>];	<i>/* Floating-point registers. */</i></td></tr>
+<tr><th id="160">160</th><td>  <a class="typedef" href="../include/stdint.h.html#intptr_t" title='intptr_t' data-type='long' data-ref="intptr_t" data-ref-filename="intptr_t">intptr_t</a> <dfn class="decl field" id="(anonymous)::gpr" title='(anonymous struct)::gpr' data-ref="(anonymous)::gpr" data-ref-filename="(anonymous)..gpr">gpr</dfn>[<a class="enum" href="#RID_NUM_GPR" title='RID_NUM_GPR' data-ref="RID_NUM_GPR" data-ref-filename="RID_NUM_GPR">RID_NUM_GPR</a>];	<i>/* General-purpose registers. */</i></td></tr>
+<tr><th id="161">161</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="(anonymous)::spill" title='(anonymous struct)::spill' data-ref="(anonymous)::spill" data-ref-filename="(anonymous)..spill">spill</dfn>[<var>256</var>];		<i>/* Spill slots. */</i></td></tr>
+<tr><th id="162">162</th><td>} <dfn class="typedef" id="ExitState" title='ExitState' data-type='struct ExitState' data-ref="ExitState" data-ref-filename="ExitState">ExitState</dfn>;</td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td><i>/* Limited by the range of a short fwd jump (127): (2+2)*(32-1)-2 = 122. */</i></td></tr>
+<tr><th id="165">165</th><td><u>#define <dfn class="macro" id="_M/EXITSTUB_SPACING" data-ref="_M/EXITSTUB_SPACING">EXITSTUB_SPACING</dfn>	(2+2)</u></td></tr>
+<tr><th id="166">166</th><td><u>#define <dfn class="macro" id="_M/EXITSTUBS_PER_GROUP" data-ref="_M/EXITSTUBS_PER_GROUP">EXITSTUBS_PER_GROUP</dfn>	32</u></td></tr>
+<tr><th id="167">167</th><td></td></tr>
+<tr><th id="168">168</th><td><u>#define <dfn class="macro" id="_M/EXITTRACE_VMSTATE" data-ref="_M/EXITTRACE_VMSTATE">EXITTRACE_VMSTATE</dfn>	1	/* g-&gt;vmstate has traceno on exit. */</u></td></tr>
+<tr><th id="169">169</th><td></td></tr>
+<tr><th id="170">170</th><td><i>/* -- x86 ModRM operand encoding ------------------------------------------ */</i></td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="173">173</th><td>  <dfn class="enum" id="XM_OFS0" title='XM_OFS0' data-ref="XM_OFS0" data-ref-filename="XM_OFS0">XM_OFS0</dfn> = <var>0x00</var>, <dfn class="enum" id="XM_OFS8" title='XM_OFS8' data-ref="XM_OFS8" data-ref-filename="XM_OFS8">XM_OFS8</dfn> = <var>0x40</var>, <dfn class="enum" id="XM_OFS32" title='XM_OFS32' data-ref="XM_OFS32" data-ref-filename="XM_OFS32">XM_OFS32</dfn> = <var>0x80</var>, <dfn class="enum" id="XM_REG" title='XM_REG' data-ref="XM_REG" data-ref-filename="XM_REG">XM_REG</dfn> = <var>0xc0</var>,</td></tr>
+<tr><th id="174">174</th><td>  <dfn class="enum" id="XM_SCALE1" title='XM_SCALE1' data-ref="XM_SCALE1" data-ref-filename="XM_SCALE1">XM_SCALE1</dfn> = <var>0x00</var>, <dfn class="enum" id="XM_SCALE2" title='XM_SCALE2' data-ref="XM_SCALE2" data-ref-filename="XM_SCALE2">XM_SCALE2</dfn> = <var>0x40</var>, <dfn class="enum" id="XM_SCALE4" title='XM_SCALE4' data-ref="XM_SCALE4" data-ref-filename="XM_SCALE4">XM_SCALE4</dfn> = <var>0x80</var>, <dfn class="enum" id="XM_SCALE8" title='XM_SCALE8' data-ref="XM_SCALE8" data-ref-filename="XM_SCALE8">XM_SCALE8</dfn> = <var>0xc0</var>,</td></tr>
+<tr><th id="175">175</th><td>  <dfn class="enum" id="XM_MASK" title='XM_MASK' data-ref="XM_MASK" data-ref-filename="XM_MASK">XM_MASK</dfn> = <var>0xc0</var></td></tr>
+<tr><th id="176">176</th><td>} <dfn class="typedef" id="x86Mode" title='x86Mode' data-type='enum x86Mode' data-ref="x86Mode" data-ref-filename="x86Mode">x86Mode</dfn>;</td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td><i>/* Structure to hold variable ModRM operand. */</i></td></tr>
+<tr><th id="179">179</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="180">180</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="(anonymous)::ofs" title='(anonymous struct)::ofs' data-ref="(anonymous)::ofs" data-ref-filename="(anonymous)..ofs">ofs</dfn>;		<i>/* Offset. */</i></td></tr>
+<tr><th id="181">181</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="(anonymous)::base" title='(anonymous struct)::base' data-ref="(anonymous)::base" data-ref-filename="(anonymous)..base">base</dfn>;		<i>/* Base register or RID_NONE. */</i></td></tr>
+<tr><th id="182">182</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="(anonymous)::idx" title='(anonymous struct)::idx' data-ref="(anonymous)::idx" data-ref-filename="(anonymous)..idx">idx</dfn>;		<i>/* Index register or RID_NONE. */</i></td></tr>
+<tr><th id="183">183</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="(anonymous)::scale" title='(anonymous struct)::scale' data-ref="(anonymous)::scale" data-ref-filename="(anonymous)..scale">scale</dfn>;	<i>/* Index scale (XM_SCALE1 .. XM_SCALE8). */</i></td></tr>
+<tr><th id="184">184</th><td>} <dfn class="typedef" id="x86ModRM" title='x86ModRM' data-type='struct x86ModRM' data-ref="x86ModRM" data-ref-filename="x86ModRM">x86ModRM</dfn>;</td></tr>
+<tr><th id="185">185</th><td></td></tr>
+<tr><th id="186">186</th><td><i>/* -- Opcodes ------------------------------------------------------------- */</i></td></tr>
+<tr><th id="187">187</th><td></td></tr>
+<tr><th id="188">188</th><td><i>/* Macros to construct variable-length x86 opcodes. -(len+1) is in LSB. */</i></td></tr>
+<tr><th id="189">189</th><td><u>#define <dfn class="macro" id="_M/XO_" data-ref="_M/XO_">XO_</dfn>(o)		((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x0000fe + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="190">190</th><td><u>#define <dfn class="macro" id="_M/XO_FPU" data-ref="_M/XO_FPU">XO_FPU</dfn>(a,b)	((uint32_t)(0x00fd + (0x##a&lt;&lt;16)+(0x##b&lt;&lt;24)))</u></td></tr>
+<tr><th id="191">191</th><td><u>#define <dfn class="macro" id="_M/XO_0f" data-ref="_M/XO_0f">XO_0f</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x0f00fd + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="192">192</th><td><u>#define <dfn class="macro" id="_M/XO_66" data-ref="_M/XO_66">XO_66</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x6600fd + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="193">193</th><td><u>#define <dfn class="macro" id="_M/XO_660f" data-ref="_M/XO_660f">XO_660f</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x0f66fc + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="194">194</th><td><u>#define <dfn class="macro" id="_M/XO_f20f" data-ref="_M/XO_f20f">XO_f20f</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x0ff2fc + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/XO_f30f" data-ref="_M/XO_f30f">XO_f30f</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x0ff3fc + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="196">196</th><td></td></tr>
+<tr><th id="197">197</th><td><u>#define <dfn class="macro" id="_M/XV_660f38" data-ref="_M/XV_660f38">XV_660f38</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x79e2c4 + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="198">198</th><td><u>#define <dfn class="macro" id="_M/XV_f20f38" data-ref="_M/XV_f20f38">XV_f20f38</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x7be2c4 + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="199">199</th><td><u>#define <dfn class="macro" id="_M/XV_f20f3a" data-ref="_M/XV_f20f3a">XV_f20f3a</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x7be3c4 + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="200">200</th><td><u>#define <dfn class="macro" id="_M/XV_f30f38" data-ref="_M/XV_f30f38">XV_f30f38</dfn>(o)	((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)(0x7ae2c4 + (0x##o&lt;&lt;24)))</u></td></tr>
+<tr><th id="201">201</th><td></td></tr>
+<tr><th id="202">202</th><td><i>/* This list of x86 opcodes is not intended to be complete. Opcodes are only</i></td></tr>
+<tr><th id="203">203</th><td><i>** included when needed. Take a look at DynASM or jit.dis_x86 to see the</i></td></tr>
+<tr><th id="204">204</th><td><i>** whole mess.</i></td></tr>
+<tr><th id="205">205</th><td><i>*/</i></td></tr>
+<tr><th id="206">206</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="207">207</th><td>  <i>/* Fixed length opcodes. XI_* prefix. */</i></td></tr>
+<tr><th id="208">208</th><td>  <dfn class="enum" id="XI_O16" title='XI_O16' data-ref="XI_O16" data-ref-filename="XI_O16">XI_O16</dfn> =	<var>0x66</var>,</td></tr>
+<tr><th id="209">209</th><td>  <dfn class="enum" id="XI_NOP" title='XI_NOP' data-ref="XI_NOP" data-ref-filename="XI_NOP">XI_NOP</dfn> =	<var>0x90</var>,</td></tr>
+<tr><th id="210">210</th><td>  <dfn class="enum" id="XI_XCHGa" title='XI_XCHGa' data-ref="XI_XCHGa" data-ref-filename="XI_XCHGa">XI_XCHGa</dfn> =	<var>0x90</var>,</td></tr>
+<tr><th id="211">211</th><td>  <dfn class="enum" id="XI_CALL" title='XI_CALL' data-ref="XI_CALL" data-ref-filename="XI_CALL">XI_CALL</dfn> =	<var>0xe8</var>,</td></tr>
+<tr><th id="212">212</th><td>  <dfn class="enum" id="XI_JMP" title='XI_JMP' data-ref="XI_JMP" data-ref-filename="XI_JMP">XI_JMP</dfn> =	<var>0xe9</var>,</td></tr>
+<tr><th id="213">213</th><td>  <dfn class="enum" id="XI_JMPs" title='XI_JMPs' data-ref="XI_JMPs" data-ref-filename="XI_JMPs">XI_JMPs</dfn> =	<var>0xeb</var>,</td></tr>
+<tr><th id="214">214</th><td>  <dfn class="enum" id="XI_PUSH" title='XI_PUSH' data-ref="XI_PUSH" data-ref-filename="XI_PUSH">XI_PUSH</dfn> =	<var>0x50</var>, <i>/* Really 50+r. */</i></td></tr>
+<tr><th id="215">215</th><td>  <dfn class="enum" id="XI_JCCs" title='XI_JCCs' data-ref="XI_JCCs" data-ref-filename="XI_JCCs">XI_JCCs</dfn> =	<var>0x70</var>, <i>/* Really 7x. */</i></td></tr>
+<tr><th id="216">216</th><td>  <dfn class="enum" id="XI_JCCn" title='XI_JCCn' data-ref="XI_JCCn" data-ref-filename="XI_JCCn">XI_JCCn</dfn> =	<var>0x80</var>, <i>/* Really 0f8x. */</i></td></tr>
+<tr><th id="217">217</th><td>  <dfn class="enum" id="XI_LEA" title='XI_LEA' data-ref="XI_LEA" data-ref-filename="XI_LEA">XI_LEA</dfn> =	<var>0x8d</var>,</td></tr>
+<tr><th id="218">218</th><td>  <dfn class="enum" id="XI_MOVrib" title='XI_MOVrib' data-ref="XI_MOVrib" data-ref-filename="XI_MOVrib">XI_MOVrib</dfn> =	<var>0xb0</var>, <i>/* Really b0+r. */</i></td></tr>
+<tr><th id="219">219</th><td>  <dfn class="enum" id="XI_MOVri" title='XI_MOVri' data-ref="XI_MOVri" data-ref-filename="XI_MOVri">XI_MOVri</dfn> =	<var>0xb8</var>, <i>/* Really b8+r. */</i></td></tr>
+<tr><th id="220">220</th><td>  <dfn class="enum" id="XI_ARITHib" title='XI_ARITHib' data-ref="XI_ARITHib" data-ref-filename="XI_ARITHib">XI_ARITHib</dfn> =	<var>0x80</var>,</td></tr>
+<tr><th id="221">221</th><td>  <dfn class="enum" id="XI_ARITHi" title='XI_ARITHi' data-ref="XI_ARITHi" data-ref-filename="XI_ARITHi">XI_ARITHi</dfn> =	<var>0x81</var>,</td></tr>
+<tr><th id="222">222</th><td>  <dfn class="enum" id="XI_ARITHi8" title='XI_ARITHi8' data-ref="XI_ARITHi8" data-ref-filename="XI_ARITHi8">XI_ARITHi8</dfn> =	<var>0x83</var>,</td></tr>
+<tr><th id="223">223</th><td>  <dfn class="enum" id="XI_PUSHi8" title='XI_PUSHi8' data-ref="XI_PUSHi8" data-ref-filename="XI_PUSHi8">XI_PUSHi8</dfn> =	<var>0x6a</var>,</td></tr>
+<tr><th id="224">224</th><td>  <dfn class="enum" id="XI_TESTb" title='XI_TESTb' data-ref="XI_TESTb" data-ref-filename="XI_TESTb">XI_TESTb</dfn> =	<var>0x84</var>,</td></tr>
+<tr><th id="225">225</th><td>  <dfn class="enum" id="XI_TEST" title='XI_TEST' data-ref="XI_TEST" data-ref-filename="XI_TEST">XI_TEST</dfn> =	<var>0x85</var>,</td></tr>
+<tr><th id="226">226</th><td>  <dfn class="enum" id="XI_INT3" title='XI_INT3' data-ref="XI_INT3" data-ref-filename="XI_INT3">XI_INT3</dfn> =	<var>0xcc</var>,</td></tr>
+<tr><th id="227">227</th><td>  <dfn class="enum" id="XI_MOVmi" title='XI_MOVmi' data-ref="XI_MOVmi" data-ref-filename="XI_MOVmi">XI_MOVmi</dfn> =	<var>0xc7</var>,</td></tr>
+<tr><th id="228">228</th><td>  <dfn class="enum" id="XI_GROUP5" title='XI_GROUP5' data-ref="XI_GROUP5" data-ref-filename="XI_GROUP5">XI_GROUP5</dfn> =	<var>0xff</var>,</td></tr>
+<tr><th id="229">229</th><td></td></tr>
+<tr><th id="230">230</th><td>  <i>/* Note: little-endian byte-order! */</i></td></tr>
+<tr><th id="231">231</th><td>  <dfn class="enum" id="XI_FLDZ" title='XI_FLDZ' data-ref="XI_FLDZ" data-ref-filename="XI_FLDZ">XI_FLDZ</dfn> =	<var>0xeed9</var>,</td></tr>
+<tr><th id="232">232</th><td>  <dfn class="enum" id="XI_FLD1" title='XI_FLD1' data-ref="XI_FLD1" data-ref-filename="XI_FLD1">XI_FLD1</dfn> =	<var>0xe8d9</var>,</td></tr>
+<tr><th id="233">233</th><td>  <dfn class="enum" id="XI_FDUP" title='XI_FDUP' data-ref="XI_FDUP" data-ref-filename="XI_FDUP">XI_FDUP</dfn> =	<var>0xc0d9</var>,  <i>/* Really fld st0. */</i></td></tr>
+<tr><th id="234">234</th><td>  <dfn class="enum" id="XI_FPOP" title='XI_FPOP' data-ref="XI_FPOP" data-ref-filename="XI_FPOP">XI_FPOP</dfn> =	<var>0xd8dd</var>,  <i>/* Really fstp st0. */</i></td></tr>
+<tr><th id="235">235</th><td>  <dfn class="enum" id="XI_FPOP1" title='XI_FPOP1' data-ref="XI_FPOP1" data-ref-filename="XI_FPOP1">XI_FPOP1</dfn> =	<var>0xd9dd</var>,  <i>/* Really fstp st1. */</i></td></tr>
+<tr><th id="236">236</th><td>  <dfn class="enum" id="XI_FRNDINT" title='XI_FRNDINT' data-ref="XI_FRNDINT" data-ref-filename="XI_FRNDINT">XI_FRNDINT</dfn> =	<var>0xfcd9</var>,</td></tr>
+<tr><th id="237">237</th><td>  <dfn class="enum" id="XI_FSCALE" title='XI_FSCALE' data-ref="XI_FSCALE" data-ref-filename="XI_FSCALE">XI_FSCALE</dfn> =	<var>0xfdd9</var>,</td></tr>
+<tr><th id="238">238</th><td>  <dfn class="enum" id="XI_FYL2X" title='XI_FYL2X' data-ref="XI_FYL2X" data-ref-filename="XI_FYL2X">XI_FYL2X</dfn> =	<var>0xf1d9</var>,</td></tr>
+<tr><th id="239">239</th><td></td></tr>
+<tr><th id="240">240</th><td>  <i>/* VEX-encoded instructions. XV_* prefix. */</i></td></tr>
+<tr><th id="241">241</th><td>  <dfn class="enum" id="XV_RORX" title='XV_RORX' data-ref="XV_RORX" data-ref-filename="XV_RORX">XV_RORX</dfn> =	<a class="macro" href="#199" title="((uint32_t)(0x7be3c4 + (0xf0&lt;&lt;24)))" data-ref="_M/XV_f20f3a">XV_f20f3a</a>(f0),</td></tr>
+<tr><th id="242">242</th><td>  <dfn class="enum" id="XV_SARX" title='XV_SARX' data-ref="XV_SARX" data-ref-filename="XV_SARX">XV_SARX</dfn> =	<a class="macro" href="#200" title="((uint32_t)(0x7ae2c4 + (0xf7&lt;&lt;24)))" data-ref="_M/XV_f30f38">XV_f30f38</a>(f7),</td></tr>
+<tr><th id="243">243</th><td>  <dfn class="enum" id="XV_SHLX" title='XV_SHLX' data-ref="XV_SHLX" data-ref-filename="XV_SHLX">XV_SHLX</dfn> =	<a class="macro" href="#197" title="((uint32_t)(0x79e2c4 + (0xf7&lt;&lt;24)))" data-ref="_M/XV_660f38">XV_660f38</a>(f7),</td></tr>
+<tr><th id="244">244</th><td>  <dfn class="enum" id="XV_SHRX" title='XV_SHRX' data-ref="XV_SHRX" data-ref-filename="XV_SHRX">XV_SHRX</dfn> =	<a class="macro" href="#198" title="((uint32_t)(0x7be2c4 + (0xf7&lt;&lt;24)))" data-ref="_M/XV_f20f38">XV_f20f38</a>(f7),</td></tr>
+<tr><th id="245">245</th><td></td></tr>
+<tr><th id="246">246</th><td>  <i>/* Variable-length opcodes. XO_* prefix. */</i></td></tr>
+<tr><th id="247">247</th><td>  <dfn class="enum" id="XO_OR" title='XO_OR' data-ref="XO_OR" data-ref-filename="XO_OR">XO_OR</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x0b&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>0b</var>),</td></tr>
+<tr><th id="248">248</th><td>  <dfn class="enum" id="XO_MOV" title='XO_MOV' data-ref="XO_MOV" data-ref-filename="XO_MOV">XO_MOV</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x8b&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>8b</var>),</td></tr>
+<tr><th id="249">249</th><td>  <dfn class="enum" id="XO_MOVto" title='XO_MOVto' data-ref="XO_MOVto" data-ref-filename="XO_MOVto">XO_MOVto</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x89&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>89</var>),</td></tr>
+<tr><th id="250">250</th><td>  <dfn class="enum" id="XO_MOVtow" title='XO_MOVtow' data-ref="XO_MOVtow" data-ref-filename="XO_MOVtow">XO_MOVtow</dfn> =	<a class="macro" href="#192" title="((uint32_t)(0x6600fd + (0x89&lt;&lt;24)))" data-ref="_M/XO_66">XO_66</a>(<var>89</var>),</td></tr>
+<tr><th id="251">251</th><td>  <dfn class="enum" id="XO_MOVtob" title='XO_MOVtob' data-ref="XO_MOVtob" data-ref-filename="XO_MOVtob">XO_MOVtob</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x88&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>88</var>),</td></tr>
+<tr><th id="252">252</th><td>  <dfn class="enum" id="XO_MOVmi" title='XO_MOVmi' data-ref="XO_MOVmi" data-ref-filename="XO_MOVmi">XO_MOVmi</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xc7&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(c7),</td></tr>
+<tr><th id="253">253</th><td>  <dfn class="enum" id="XO_MOVmib" title='XO_MOVmib' data-ref="XO_MOVmib" data-ref-filename="XO_MOVmib">XO_MOVmib</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xc6&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(c6),</td></tr>
+<tr><th id="254">254</th><td>  <dfn class="enum" id="XO_LEA" title='XO_LEA' data-ref="XO_LEA" data-ref-filename="XO_LEA">XO_LEA</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x8d&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>8d</var>),</td></tr>
+<tr><th id="255">255</th><td>  <dfn class="enum" id="XO_ARITHib" title='XO_ARITHib' data-ref="XO_ARITHib" data-ref-filename="XO_ARITHib">XO_ARITHib</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x80&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>80</var>),</td></tr>
+<tr><th id="256">256</th><td>  <dfn class="enum" id="XO_ARITHi" title='XO_ARITHi' data-ref="XO_ARITHi" data-ref-filename="XO_ARITHi">XO_ARITHi</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x81&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>81</var>),</td></tr>
+<tr><th id="257">257</th><td>  <dfn class="enum" id="XO_ARITHi8" title='XO_ARITHi8' data-ref="XO_ARITHi8" data-ref-filename="XO_ARITHi8">XO_ARITHi8</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x83&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>83</var>),</td></tr>
+<tr><th id="258">258</th><td>  <dfn class="enum" id="XO_ARITHiw8" title='XO_ARITHiw8' data-ref="XO_ARITHiw8" data-ref-filename="XO_ARITHiw8">XO_ARITHiw8</dfn> =	<a class="macro" href="#192" title="((uint32_t)(0x6600fd + (0x83&lt;&lt;24)))" data-ref="_M/XO_66">XO_66</a>(<var>83</var>),</td></tr>
+<tr><th id="259">259</th><td>  <dfn class="enum" id="XO_SHIFTi" title='XO_SHIFTi' data-ref="XO_SHIFTi" data-ref-filename="XO_SHIFTi">XO_SHIFTi</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xc1&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(c1),</td></tr>
+<tr><th id="260">260</th><td>  <dfn class="enum" id="XO_SHIFT1" title='XO_SHIFT1' data-ref="XO_SHIFT1" data-ref-filename="XO_SHIFT1">XO_SHIFT1</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xd1&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(d1),</td></tr>
+<tr><th id="261">261</th><td>  <dfn class="enum" id="XO_SHIFTcl" title='XO_SHIFTcl' data-ref="XO_SHIFTcl" data-ref-filename="XO_SHIFTcl">XO_SHIFTcl</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xd3&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(d3),</td></tr>
+<tr><th id="262">262</th><td>  <dfn class="enum" id="XO_IMUL" title='XO_IMUL' data-ref="XO_IMUL" data-ref-filename="XO_IMUL">XO_IMUL</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0xaf&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(af),</td></tr>
+<tr><th id="263">263</th><td>  <dfn class="enum" id="XO_IMULi" title='XO_IMULi' data-ref="XO_IMULi" data-ref-filename="XO_IMULi">XO_IMULi</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x69&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>69</var>),</td></tr>
+<tr><th id="264">264</th><td>  <dfn class="enum" id="XO_IMULi8" title='XO_IMULi8' data-ref="XO_IMULi8" data-ref-filename="XO_IMULi8">XO_IMULi8</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x6b&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>6b</var>),</td></tr>
+<tr><th id="265">265</th><td>  <dfn class="enum" id="XO_CMP" title='XO_CMP' data-ref="XO_CMP" data-ref-filename="XO_CMP">XO_CMP</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x3b&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>3b</var>),</td></tr>
+<tr><th id="266">266</th><td>  <dfn class="enum" id="XO_TESTb" title='XO_TESTb' data-ref="XO_TESTb" data-ref-filename="XO_TESTb">XO_TESTb</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x84&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>84</var>),</td></tr>
+<tr><th id="267">267</th><td>  <dfn class="enum" id="XO_TEST" title='XO_TEST' data-ref="XO_TEST" data-ref-filename="XO_TEST">XO_TEST</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x85&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>85</var>),</td></tr>
+<tr><th id="268">268</th><td>  <dfn class="enum" id="XO_GROUP3b" title='XO_GROUP3b' data-ref="XO_GROUP3b" data-ref-filename="XO_GROUP3b">XO_GROUP3b</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xf6&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(f6),</td></tr>
+<tr><th id="269">269</th><td>  <dfn class="enum" id="XO_GROUP3" title='XO_GROUP3' data-ref="XO_GROUP3" data-ref-filename="XO_GROUP3">XO_GROUP3</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xf7&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(f7),</td></tr>
+<tr><th id="270">270</th><td>  <dfn class="enum" id="XO_GROUP5b" title='XO_GROUP5b' data-ref="XO_GROUP5b" data-ref-filename="XO_GROUP5b">XO_GROUP5b</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xfe&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(fe),</td></tr>
+<tr><th id="271">271</th><td>  <dfn class="enum" id="XO_GROUP5" title='XO_GROUP5' data-ref="XO_GROUP5" data-ref-filename="XO_GROUP5">XO_GROUP5</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xff&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(ff),</td></tr>
+<tr><th id="272">272</th><td>  <dfn class="enum" id="XO_MOVZXb" title='XO_MOVZXb' data-ref="XO_MOVZXb" data-ref-filename="XO_MOVZXb">XO_MOVZXb</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0xb6&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(b6),</td></tr>
+<tr><th id="273">273</th><td>  <dfn class="enum" id="XO_MOVZXw" title='XO_MOVZXw' data-ref="XO_MOVZXw" data-ref-filename="XO_MOVZXw">XO_MOVZXw</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0xb7&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(b7),</td></tr>
+<tr><th id="274">274</th><td>  <dfn class="enum" id="XO_MOVSXb" title='XO_MOVSXb' data-ref="XO_MOVSXb" data-ref-filename="XO_MOVSXb">XO_MOVSXb</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0xbe&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(be),</td></tr>
+<tr><th id="275">275</th><td>  <dfn class="enum" id="XO_MOVSXw" title='XO_MOVSXw' data-ref="XO_MOVSXw" data-ref-filename="XO_MOVSXw">XO_MOVSXw</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0xbf&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(bf),</td></tr>
+<tr><th id="276">276</th><td>  <dfn class="enum" id="XO_MOVSXd" title='XO_MOVSXd' data-ref="XO_MOVSXd" data-ref-filename="XO_MOVSXd">XO_MOVSXd</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0x63&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(<var>63</var>),</td></tr>
+<tr><th id="277">277</th><td>  <dfn class="enum" id="XO_BSWAP" title='XO_BSWAP' data-ref="XO_BSWAP" data-ref-filename="XO_BSWAP">XO_BSWAP</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0xc8&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(c8),</td></tr>
+<tr><th id="278">278</th><td>  <dfn class="enum" id="XO_CMOV" title='XO_CMOV' data-ref="XO_CMOV" data-ref-filename="XO_CMOV">XO_CMOV</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0x40&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(<var>40</var>),</td></tr>
+<tr><th id="279">279</th><td></td></tr>
+<tr><th id="280">280</th><td>  <dfn class="enum" id="XO_MOVSD" title='XO_MOVSD' data-ref="XO_MOVSD" data-ref-filename="XO_MOVSD">XO_MOVSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x10&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>10</var>),</td></tr>
+<tr><th id="281">281</th><td>  <dfn class="enum" id="XO_MOVSDto" title='XO_MOVSDto' data-ref="XO_MOVSDto" data-ref-filename="XO_MOVSDto">XO_MOVSDto</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x11&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>11</var>),</td></tr>
+<tr><th id="282">282</th><td>  <dfn class="enum" id="XO_MOVSS" title='XO_MOVSS' data-ref="XO_MOVSS" data-ref-filename="XO_MOVSS">XO_MOVSS</dfn> =	<a class="macro" href="#195" title="((uint32_t)(0x0ff3fc + (0x10&lt;&lt;24)))" data-ref="_M/XO_f30f">XO_f30f</a>(<var>10</var>),</td></tr>
+<tr><th id="283">283</th><td>  <dfn class="enum" id="XO_MOVSSto" title='XO_MOVSSto' data-ref="XO_MOVSSto" data-ref-filename="XO_MOVSSto">XO_MOVSSto</dfn> =	<a class="macro" href="#195" title="((uint32_t)(0x0ff3fc + (0x11&lt;&lt;24)))" data-ref="_M/XO_f30f">XO_f30f</a>(<var>11</var>),</td></tr>
+<tr><th id="284">284</th><td>  <dfn class="enum" id="XO_MOVLPD" title='XO_MOVLPD' data-ref="XO_MOVLPD" data-ref-filename="XO_MOVLPD">XO_MOVLPD</dfn> =	<a class="macro" href="#193" title="((uint32_t)(0x0f66fc + (0x12&lt;&lt;24)))" data-ref="_M/XO_660f">XO_660f</a>(<var>12</var>),</td></tr>
+<tr><th id="285">285</th><td>  <dfn class="enum" id="XO_MOVAPS" title='XO_MOVAPS' data-ref="XO_MOVAPS" data-ref-filename="XO_MOVAPS">XO_MOVAPS</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0x28&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(<var>28</var>),</td></tr>
+<tr><th id="286">286</th><td>  <dfn class="enum" id="XO_XORPS" title='XO_XORPS' data-ref="XO_XORPS" data-ref-filename="XO_XORPS">XO_XORPS</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0x57&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(<var>57</var>),</td></tr>
+<tr><th id="287">287</th><td>  <dfn class="enum" id="XO_ANDPS" title='XO_ANDPS' data-ref="XO_ANDPS" data-ref-filename="XO_ANDPS">XO_ANDPS</dfn> =	<a class="macro" href="#191" title="((uint32_t)(0x0f00fd + (0x54&lt;&lt;24)))" data-ref="_M/XO_0f">XO_0f</a>(<var>54</var>),</td></tr>
+<tr><th id="288">288</th><td>  <dfn class="enum" id="XO_ADDSD" title='XO_ADDSD' data-ref="XO_ADDSD" data-ref-filename="XO_ADDSD">XO_ADDSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x58&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>58</var>),</td></tr>
+<tr><th id="289">289</th><td>  <dfn class="enum" id="XO_SUBSD" title='XO_SUBSD' data-ref="XO_SUBSD" data-ref-filename="XO_SUBSD">XO_SUBSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x5c&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>5c</var>),</td></tr>
+<tr><th id="290">290</th><td>  <dfn class="enum" id="XO_MULSD" title='XO_MULSD' data-ref="XO_MULSD" data-ref-filename="XO_MULSD">XO_MULSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x59&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>59</var>),</td></tr>
+<tr><th id="291">291</th><td>  <dfn class="enum" id="XO_DIVSD" title='XO_DIVSD' data-ref="XO_DIVSD" data-ref-filename="XO_DIVSD">XO_DIVSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x5e&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>5e</var>),</td></tr>
+<tr><th id="292">292</th><td>  <dfn class="enum" id="XO_SQRTSD" title='XO_SQRTSD' data-ref="XO_SQRTSD" data-ref-filename="XO_SQRTSD">XO_SQRTSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x51&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>51</var>),</td></tr>
+<tr><th id="293">293</th><td>  <dfn class="enum" id="XO_MINSD" title='XO_MINSD' data-ref="XO_MINSD" data-ref-filename="XO_MINSD">XO_MINSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x5d&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>5d</var>),</td></tr>
+<tr><th id="294">294</th><td>  <dfn class="enum" id="XO_MAXSD" title='XO_MAXSD' data-ref="XO_MAXSD" data-ref-filename="XO_MAXSD">XO_MAXSD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x5f&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>5f</var>),</td></tr>
+<tr><th id="295">295</th><td>  <dfn class="enum" id="XO_ROUNDSD" title='XO_ROUNDSD' data-ref="XO_ROUNDSD" data-ref-filename="XO_ROUNDSD">XO_ROUNDSD</dfn> =	<var>0x0b3a0ffc</var>,  <i>/* Really 66 0f 3a 0b. See asm_fpmath. */</i></td></tr>
+<tr><th id="296">296</th><td>  <dfn class="enum" id="XO_UCOMISD" title='XO_UCOMISD' data-ref="XO_UCOMISD" data-ref-filename="XO_UCOMISD">XO_UCOMISD</dfn> =	<a class="macro" href="#193" title="((uint32_t)(0x0f66fc + (0x2e&lt;&lt;24)))" data-ref="_M/XO_660f">XO_660f</a>(<var>2e</var>),</td></tr>
+<tr><th id="297">297</th><td>  <dfn class="enum" id="XO_CVTSI2SD" title='XO_CVTSI2SD' data-ref="XO_CVTSI2SD" data-ref-filename="XO_CVTSI2SD">XO_CVTSI2SD</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x2a&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>2a</var>),</td></tr>
+<tr><th id="298">298</th><td>  <dfn class="enum" id="XO_CVTTSD2SI" title='XO_CVTTSD2SI' data-ref="XO_CVTTSD2SI" data-ref-filename="XO_CVTTSD2SI">XO_CVTTSD2SI</dfn>=	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x2c&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>2c</var>),</td></tr>
+<tr><th id="299">299</th><td>  <dfn class="enum" id="XO_CVTSI2SS" title='XO_CVTSI2SS' data-ref="XO_CVTSI2SS" data-ref-filename="XO_CVTSI2SS">XO_CVTSI2SS</dfn> =	<a class="macro" href="#195" title="((uint32_t)(0x0ff3fc + (0x2a&lt;&lt;24)))" data-ref="_M/XO_f30f">XO_f30f</a>(<var>2a</var>),</td></tr>
+<tr><th id="300">300</th><td>  <dfn class="enum" id="XO_CVTTSS2SI" title='XO_CVTTSS2SI' data-ref="XO_CVTTSS2SI" data-ref-filename="XO_CVTTSS2SI">XO_CVTTSS2SI</dfn>=	<a class="macro" href="#195" title="((uint32_t)(0x0ff3fc + (0x2c&lt;&lt;24)))" data-ref="_M/XO_f30f">XO_f30f</a>(<var>2c</var>),</td></tr>
+<tr><th id="301">301</th><td>  <dfn class="enum" id="XO_CVTSS2SD" title='XO_CVTSS2SD' data-ref="XO_CVTSS2SD" data-ref-filename="XO_CVTSS2SD">XO_CVTSS2SD</dfn> =	<a class="macro" href="#195" title="((uint32_t)(0x0ff3fc + (0x5a&lt;&lt;24)))" data-ref="_M/XO_f30f">XO_f30f</a>(<var>5a</var>),</td></tr>
+<tr><th id="302">302</th><td>  <dfn class="enum" id="XO_CVTSD2SS" title='XO_CVTSD2SS' data-ref="XO_CVTSD2SS" data-ref-filename="XO_CVTSD2SS">XO_CVTSD2SS</dfn> =	<a class="macro" href="#194" title="((uint32_t)(0x0ff2fc + (0x5a&lt;&lt;24)))" data-ref="_M/XO_f20f">XO_f20f</a>(<var>5a</var>),</td></tr>
+<tr><th id="303">303</th><td>  <dfn class="enum" id="XO_ADDSS" title='XO_ADDSS' data-ref="XO_ADDSS" data-ref-filename="XO_ADDSS">XO_ADDSS</dfn> =	<a class="macro" href="#195" title="((uint32_t)(0x0ff3fc + (0x58&lt;&lt;24)))" data-ref="_M/XO_f30f">XO_f30f</a>(<var>58</var>),</td></tr>
+<tr><th id="304">304</th><td>  <dfn class="enum" id="XO_MOVD" title='XO_MOVD' data-ref="XO_MOVD" data-ref-filename="XO_MOVD">XO_MOVD</dfn> =	<a class="macro" href="#193" title="((uint32_t)(0x0f66fc + (0x6e&lt;&lt;24)))" data-ref="_M/XO_660f">XO_660f</a>(<var>6e</var>),</td></tr>
+<tr><th id="305">305</th><td>  <dfn class="enum" id="XO_MOVDto" title='XO_MOVDto' data-ref="XO_MOVDto" data-ref-filename="XO_MOVDto">XO_MOVDto</dfn> =	<a class="macro" href="#193" title="((uint32_t)(0x0f66fc + (0x7e&lt;&lt;24)))" data-ref="_M/XO_660f">XO_660f</a>(<var>7e</var>),</td></tr>
+<tr><th id="306">306</th><td></td></tr>
+<tr><th id="307">307</th><td>  <dfn class="enum" id="XO_FLDd" title='XO_FLDd' data-ref="XO_FLDd" data-ref-filename="XO_FLDd">XO_FLDd</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xd9&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(d9), <dfn class="enum" id="XOg_FLDd" title='XOg_FLDd' data-ref="XOg_FLDd" data-ref-filename="XOg_FLDd">XOg_FLDd</dfn> = <var>0</var>,</td></tr>
+<tr><th id="308">308</th><td>  <dfn class="enum" id="XO_FLDq" title='XO_FLDq' data-ref="XO_FLDq" data-ref-filename="XO_FLDq">XO_FLDq</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdd&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(dd), <dfn class="enum" id="XOg_FLDq" title='XOg_FLDq' data-ref="XOg_FLDq" data-ref-filename="XOg_FLDq">XOg_FLDq</dfn> = <var>0</var>,</td></tr>
+<tr><th id="309">309</th><td>  <dfn class="enum" id="XO_FILDd" title='XO_FILDd' data-ref="XO_FILDd" data-ref-filename="XO_FILDd">XO_FILDd</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdb&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(db), <dfn class="enum" id="XOg_FILDd" title='XOg_FILDd' data-ref="XOg_FILDd" data-ref-filename="XOg_FILDd">XOg_FILDd</dfn> = <var>0</var>,</td></tr>
+<tr><th id="310">310</th><td>  <dfn class="enum" id="XO_FILDq" title='XO_FILDq' data-ref="XO_FILDq" data-ref-filename="XO_FILDq">XO_FILDq</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdf&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(df), <dfn class="enum" id="XOg_FILDq" title='XOg_FILDq' data-ref="XOg_FILDq" data-ref-filename="XOg_FILDq">XOg_FILDq</dfn> = <var>5</var>,</td></tr>
+<tr><th id="311">311</th><td>  <dfn class="enum" id="XO_FSTPd" title='XO_FSTPd' data-ref="XO_FSTPd" data-ref-filename="XO_FSTPd">XO_FSTPd</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xd9&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(d9), <dfn class="enum" id="XOg_FSTPd" title='XOg_FSTPd' data-ref="XOg_FSTPd" data-ref-filename="XOg_FSTPd">XOg_FSTPd</dfn> = <var>3</var>,</td></tr>
+<tr><th id="312">312</th><td>  <dfn class="enum" id="XO_FSTPq" title='XO_FSTPq' data-ref="XO_FSTPq" data-ref-filename="XO_FSTPq">XO_FSTPq</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdd&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(dd), <dfn class="enum" id="XOg_FSTPq" title='XOg_FSTPq' data-ref="XOg_FSTPq" data-ref-filename="XOg_FSTPq">XOg_FSTPq</dfn> = <var>3</var>,</td></tr>
+<tr><th id="313">313</th><td>  <dfn class="enum" id="XO_FISTPq" title='XO_FISTPq' data-ref="XO_FISTPq" data-ref-filename="XO_FISTPq">XO_FISTPq</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdf&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(df), <dfn class="enum" id="XOg_FISTPq" title='XOg_FISTPq' data-ref="XOg_FISTPq" data-ref-filename="XOg_FISTPq">XOg_FISTPq</dfn> = <var>7</var>,</td></tr>
+<tr><th id="314">314</th><td>  <dfn class="enum" id="XO_FISTTPq" title='XO_FISTTPq' data-ref="XO_FISTTPq" data-ref-filename="XO_FISTTPq">XO_FISTTPq</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdd&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(dd), <dfn class="enum" id="XOg_FISTTPq" title='XOg_FISTTPq' data-ref="XOg_FISTTPq" data-ref-filename="XOg_FISTTPq">XOg_FISTTPq</dfn> = <var>1</var>,</td></tr>
+<tr><th id="315">315</th><td>  <dfn class="enum" id="XO_FADDq" title='XO_FADDq' data-ref="XO_FADDq" data-ref-filename="XO_FADDq">XO_FADDq</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xdc&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(dc), <dfn class="enum" id="XOg_FADDq" title='XOg_FADDq' data-ref="XOg_FADDq" data-ref-filename="XOg_FADDq">XOg_FADDq</dfn> = <var>0</var>,</td></tr>
+<tr><th id="316">316</th><td>  <dfn class="enum" id="XO_FLDCW" title='XO_FLDCW' data-ref="XO_FLDCW" data-ref-filename="XO_FLDCW">XO_FLDCW</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xd9&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(d9), <dfn class="enum" id="XOg_FLDCW" title='XOg_FLDCW' data-ref="XOg_FLDCW" data-ref-filename="XOg_FLDCW">XOg_FLDCW</dfn> = <var>5</var>,</td></tr>
+<tr><th id="317">317</th><td>  <dfn class="enum" id="XO_FNSTCW" title='XO_FNSTCW' data-ref="XO_FNSTCW" data-ref-filename="XO_FNSTCW">XO_FNSTCW</dfn> =	<a class="macro" href="#189" title="((uint32_t)(0x0000fe + (0xd9&lt;&lt;24)))" data-ref="_M/XO_">XO_</a>(d9), <dfn class="enum" id="XOg_FNSTCW" title='XOg_FNSTCW' data-ref="XOg_FNSTCW" data-ref-filename="XOg_FNSTCW">XOg_FNSTCW</dfn> = <var>7</var></td></tr>
+<tr><th id="318">318</th><td>} <dfn class="typedef" id="x86Op" title='x86Op' data-type='enum x86Op' data-ref="x86Op" data-ref-filename="x86Op">x86Op</dfn>;</td></tr>
+<tr><th id="319">319</th><td></td></tr>
+<tr><th id="320">320</th><td><i>/* x86 opcode groups. */</i></td></tr>
+<tr><th id="321">321</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="x86Group" title='x86Group' data-type='uint32_t' data-ref="x86Group" data-ref-filename="x86Group">x86Group</dfn>;</td></tr>
+<tr><th id="322">322</th><td></td></tr>
+<tr><th id="323">323</th><td><u>#define <dfn class="macro" id="_M/XG_" data-ref="_M/XG_">XG_</dfn>(i8, i, g)	((x86Group)(((i8) &lt;&lt; 16) + ((i) &lt;&lt; 8) + (g)))</u></td></tr>
+<tr><th id="324">324</th><td><u>#define <dfn class="macro" id="_M/XG_ARITHi" data-ref="_M/XG_ARITHi">XG_ARITHi</dfn>(g)	XG_(XI_ARITHi8, XI_ARITHi, g)</u></td></tr>
+<tr><th id="325">325</th><td><u>#define <dfn class="macro" id="_M/XG_TOXOi" data-ref="_M/XG_TOXOi">XG_TOXOi</dfn>(xg)	((x86Op)(0x000000fe + (((xg)&lt;&lt;16) &amp; 0xff000000)))</u></td></tr>
+<tr><th id="326">326</th><td><u>#define <dfn class="macro" id="_M/XG_TOXOi8" data-ref="_M/XG_TOXOi8">XG_TOXOi8</dfn>(xg)	((x86Op)(0x000000fe + (((xg)&lt;&lt;8) &amp; 0xff000000)))</u></td></tr>
+<tr><th id="327">327</th><td></td></tr>
+<tr><th id="328">328</th><td><u>#define <dfn class="macro" id="_M/XO_ARITH" data-ref="_M/XO_ARITH">XO_ARITH</dfn>(a)	((x86Op)(0x030000fe + ((a)&lt;&lt;27)))</u></td></tr>
+<tr><th id="329">329</th><td><u>#define <dfn class="macro" id="_M/XO_ARITHw" data-ref="_M/XO_ARITHw">XO_ARITHw</dfn>(a)	((x86Op)(0x036600fd + ((a)&lt;&lt;27)))</u></td></tr>
+<tr><th id="330">330</th><td></td></tr>
+<tr><th id="331">331</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="332">332</th><td>  <dfn class="enum" id="XOg_ADD" title='XOg_ADD' data-ref="XOg_ADD" data-ref-filename="XOg_ADD">XOg_ADD</dfn>, <dfn class="enum" id="XOg_OR" title='XOg_OR' data-ref="XOg_OR" data-ref-filename="XOg_OR">XOg_OR</dfn>, <dfn class="enum" id="XOg_ADC" title='XOg_ADC' data-ref="XOg_ADC" data-ref-filename="XOg_ADC">XOg_ADC</dfn>, <dfn class="enum" id="XOg_SBB" title='XOg_SBB' data-ref="XOg_SBB" data-ref-filename="XOg_SBB">XOg_SBB</dfn>, <dfn class="enum" id="XOg_AND" title='XOg_AND' data-ref="XOg_AND" data-ref-filename="XOg_AND">XOg_AND</dfn>, <dfn class="enum" id="XOg_SUB" title='XOg_SUB' data-ref="XOg_SUB" data-ref-filename="XOg_SUB">XOg_SUB</dfn>, <dfn class="enum" id="XOg_XOR" title='XOg_XOR' data-ref="XOg_XOR" data-ref-filename="XOg_XOR">XOg_XOR</dfn>, <dfn class="enum" id="XOg_CMP" title='XOg_CMP' data-ref="XOg_CMP" data-ref-filename="XOg_CMP">XOg_CMP</dfn>,</td></tr>
+<tr><th id="333">333</th><td>  <dfn class="enum" id="XOg_X_IMUL" title='XOg_X_IMUL' data-ref="XOg_X_IMUL" data-ref-filename="XOg_X_IMUL">XOg_X_IMUL</dfn></td></tr>
+<tr><th id="334">334</th><td>} <dfn class="typedef" id="x86Arith" title='x86Arith' data-type='enum x86Arith' data-ref="x86Arith" data-ref-filename="x86Arith">x86Arith</dfn>;</td></tr>
+<tr><th id="335">335</th><td></td></tr>
+<tr><th id="336">336</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="337">337</th><td>  <dfn class="enum" id="XOg_ROL" title='XOg_ROL' data-ref="XOg_ROL" data-ref-filename="XOg_ROL">XOg_ROL</dfn>, <dfn class="enum" id="XOg_ROR" title='XOg_ROR' data-ref="XOg_ROR" data-ref-filename="XOg_ROR">XOg_ROR</dfn>, <dfn class="enum" id="XOg_RCL" title='XOg_RCL' data-ref="XOg_RCL" data-ref-filename="XOg_RCL">XOg_RCL</dfn>, <dfn class="enum" id="XOg_RCR" title='XOg_RCR' data-ref="XOg_RCR" data-ref-filename="XOg_RCR">XOg_RCR</dfn>, <dfn class="enum" id="XOg_SHL" title='XOg_SHL' data-ref="XOg_SHL" data-ref-filename="XOg_SHL">XOg_SHL</dfn>, <dfn class="enum" id="XOg_SHR" title='XOg_SHR' data-ref="XOg_SHR" data-ref-filename="XOg_SHR">XOg_SHR</dfn>, <dfn class="enum" id="XOg_SAL" title='XOg_SAL' data-ref="XOg_SAL" data-ref-filename="XOg_SAL">XOg_SAL</dfn>, <dfn class="enum" id="XOg_SAR" title='XOg_SAR' data-ref="XOg_SAR" data-ref-filename="XOg_SAR">XOg_SAR</dfn></td></tr>
+<tr><th id="338">338</th><td>} <dfn class="typedef" id="x86Shift" title='x86Shift' data-type='enum x86Shift' data-ref="x86Shift" data-ref-filename="x86Shift">x86Shift</dfn>;</td></tr>
+<tr><th id="339">339</th><td></td></tr>
+<tr><th id="340">340</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="341">341</th><td>  <dfn class="enum" id="XOg_TEST" title='XOg_TEST' data-ref="XOg_TEST" data-ref-filename="XOg_TEST">XOg_TEST</dfn>, <dfn class="enum" id="XOg_TEST_" title='XOg_TEST_' data-ref="XOg_TEST_" data-ref-filename="XOg_TEST_">XOg_TEST_</dfn>, <dfn class="enum" id="XOg_NOT" title='XOg_NOT' data-ref="XOg_NOT" data-ref-filename="XOg_NOT">XOg_NOT</dfn>, <dfn class="enum" id="XOg_NEG" title='XOg_NEG' data-ref="XOg_NEG" data-ref-filename="XOg_NEG">XOg_NEG</dfn>, <dfn class="enum" id="XOg_MUL" title='XOg_MUL' data-ref="XOg_MUL" data-ref-filename="XOg_MUL">XOg_MUL</dfn>, <dfn class="enum" id="XOg_IMUL" title='XOg_IMUL' data-ref="XOg_IMUL" data-ref-filename="XOg_IMUL">XOg_IMUL</dfn>, <dfn class="enum" id="XOg_DIV" title='XOg_DIV' data-ref="XOg_DIV" data-ref-filename="XOg_DIV">XOg_DIV</dfn>, <dfn class="enum" id="XOg_IDIV" title='XOg_IDIV' data-ref="XOg_IDIV" data-ref-filename="XOg_IDIV">XOg_IDIV</dfn></td></tr>
+<tr><th id="342">342</th><td>} <dfn class="typedef" id="x86Group3" title='x86Group3' data-type='enum x86Group3' data-ref="x86Group3" data-ref-filename="x86Group3">x86Group3</dfn>;</td></tr>
+<tr><th id="343">343</th><td></td></tr>
+<tr><th id="344">344</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="345">345</th><td>  <dfn class="enum" id="XOg_INC" title='XOg_INC' data-ref="XOg_INC" data-ref-filename="XOg_INC">XOg_INC</dfn>, <dfn class="enum" id="XOg_DEC" title='XOg_DEC' data-ref="XOg_DEC" data-ref-filename="XOg_DEC">XOg_DEC</dfn>, <dfn class="enum" id="XOg_CALL" title='XOg_CALL' data-ref="XOg_CALL" data-ref-filename="XOg_CALL">XOg_CALL</dfn>, <dfn class="enum" id="XOg_CALLfar" title='XOg_CALLfar' data-ref="XOg_CALLfar" data-ref-filename="XOg_CALLfar">XOg_CALLfar</dfn>, <dfn class="enum" id="XOg_JMP" title='XOg_JMP' data-ref="XOg_JMP" data-ref-filename="XOg_JMP">XOg_JMP</dfn>, <dfn class="enum" id="XOg_JMPfar" title='XOg_JMPfar' data-ref="XOg_JMPfar" data-ref-filename="XOg_JMPfar">XOg_JMPfar</dfn>, <dfn class="enum" id="XOg_PUSH" title='XOg_PUSH' data-ref="XOg_PUSH" data-ref-filename="XOg_PUSH">XOg_PUSH</dfn></td></tr>
+<tr><th id="346">346</th><td>} <dfn class="typedef" id="x86Group5" title='x86Group5' data-type='enum x86Group5' data-ref="x86Group5" data-ref-filename="x86Group5">x86Group5</dfn>;</td></tr>
+<tr><th id="347">347</th><td></td></tr>
+<tr><th id="348">348</th><td><i>/* x86 condition codes. */</i></td></tr>
+<tr><th id="349">349</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="350">350</th><td>  <dfn class="enum" id="CC_O" title='CC_O' data-ref="CC_O" data-ref-filename="CC_O">CC_O</dfn>, <dfn class="enum" id="CC_NO" title='CC_NO' data-ref="CC_NO" data-ref-filename="CC_NO">CC_NO</dfn>, <dfn class="enum" id="CC_B" title='CC_B' data-ref="CC_B" data-ref-filename="CC_B">CC_B</dfn>, <dfn class="enum" id="CC_NB" title='CC_NB' data-ref="CC_NB" data-ref-filename="CC_NB">CC_NB</dfn>, <dfn class="enum" id="CC_E" title='CC_E' data-ref="CC_E" data-ref-filename="CC_E">CC_E</dfn>, <dfn class="enum" id="CC_NE" title='CC_NE' data-ref="CC_NE" data-ref-filename="CC_NE">CC_NE</dfn>, <dfn class="enum" id="CC_BE" title='CC_BE' data-ref="CC_BE" data-ref-filename="CC_BE">CC_BE</dfn>, <dfn class="enum" id="CC_NBE" title='CC_NBE' data-ref="CC_NBE" data-ref-filename="CC_NBE">CC_NBE</dfn>,</td></tr>
+<tr><th id="351">351</th><td>  <dfn class="enum" id="CC_S" title='CC_S' data-ref="CC_S" data-ref-filename="CC_S">CC_S</dfn>, <dfn class="enum" id="CC_NS" title='CC_NS' data-ref="CC_NS" data-ref-filename="CC_NS">CC_NS</dfn>, <dfn class="enum" id="CC_P" title='CC_P' data-ref="CC_P" data-ref-filename="CC_P">CC_P</dfn>, <dfn class="enum" id="CC_NP" title='CC_NP' data-ref="CC_NP" data-ref-filename="CC_NP">CC_NP</dfn>, <dfn class="enum" id="CC_L" title='CC_L' data-ref="CC_L" data-ref-filename="CC_L">CC_L</dfn>, <dfn class="enum" id="CC_NL" title='CC_NL' data-ref="CC_NL" data-ref-filename="CC_NL">CC_NL</dfn>, <dfn class="enum" id="CC_LE" title='CC_LE' data-ref="CC_LE" data-ref-filename="CC_LE">CC_LE</dfn>, <dfn class="enum" id="CC_NLE" title='CC_NLE' data-ref="CC_NLE" data-ref-filename="CC_NLE">CC_NLE</dfn>,</td></tr>
+<tr><th id="352">352</th><td>  <dfn class="enum" id="CC_C" title='CC_C' data-ref="CC_C" data-ref-filename="CC_C">CC_C</dfn> = <a class="enum" href="#CC_B" title='CC_B' data-ref="CC_B" data-ref-filename="CC_B">CC_B</a>, <dfn class="enum" id="CC_NAE" title='CC_NAE' data-ref="CC_NAE" data-ref-filename="CC_NAE">CC_NAE</dfn> = <a class="enum" href="#CC_C" title='CC_C' data-ref="CC_C" data-ref-filename="CC_C">CC_C</a>, <dfn class="enum" id="CC_NC" title='CC_NC' data-ref="CC_NC" data-ref-filename="CC_NC">CC_NC</dfn> = <a class="enum" href="#CC_NB" title='CC_NB' data-ref="CC_NB" data-ref-filename="CC_NB">CC_NB</a>, <dfn class="enum" id="CC_AE" title='CC_AE' data-ref="CC_AE" data-ref-filename="CC_AE">CC_AE</dfn> = <a class="enum" href="#CC_NB" title='CC_NB' data-ref="CC_NB" data-ref-filename="CC_NB">CC_NB</a>,</td></tr>
+<tr><th id="353">353</th><td>  <dfn class="enum" id="CC_Z" title='CC_Z' data-ref="CC_Z" data-ref-filename="CC_Z">CC_Z</dfn> = <a class="enum" href="#CC_E" title='CC_E' data-ref="CC_E" data-ref-filename="CC_E">CC_E</a>, <dfn class="enum" id="CC_NZ" title='CC_NZ' data-ref="CC_NZ" data-ref-filename="CC_NZ">CC_NZ</dfn> = <a class="enum" href="#CC_NE" title='CC_NE' data-ref="CC_NE" data-ref-filename="CC_NE">CC_NE</a>, <dfn class="enum" id="CC_NA" title='CC_NA' data-ref="CC_NA" data-ref-filename="CC_NA">CC_NA</dfn> = <a class="enum" href="#CC_BE" title='CC_BE' data-ref="CC_BE" data-ref-filename="CC_BE">CC_BE</a>, <dfn class="enum" id="CC_A" title='CC_A' data-ref="CC_A" data-ref-filename="CC_A">CC_A</dfn> = <a class="enum" href="#CC_NBE" title='CC_NBE' data-ref="CC_NBE" data-ref-filename="CC_NBE">CC_NBE</a>,</td></tr>
+<tr><th id="354">354</th><td>  <dfn class="enum" id="CC_PE" title='CC_PE' data-ref="CC_PE" data-ref-filename="CC_PE">CC_PE</dfn> = <a class="enum" href="#CC_P" title='CC_P' data-ref="CC_P" data-ref-filename="CC_P">CC_P</a>, <dfn class="enum" id="CC_PO" title='CC_PO' data-ref="CC_PO" data-ref-filename="CC_PO">CC_PO</dfn> = <a class="enum" href="#CC_NP" title='CC_NP' data-ref="CC_NP" data-ref-filename="CC_NP">CC_NP</a>, <dfn class="enum" id="CC_NGE" title='CC_NGE' data-ref="CC_NGE" data-ref-filename="CC_NGE">CC_NGE</dfn> = <a class="enum" href="#CC_L" title='CC_L' data-ref="CC_L" data-ref-filename="CC_L">CC_L</a>, <dfn class="enum" id="CC_GE" title='CC_GE' data-ref="CC_GE" data-ref-filename="CC_GE">CC_GE</dfn> = <a class="enum" href="#CC_NL" title='CC_NL' data-ref="CC_NL" data-ref-filename="CC_NL">CC_NL</a>,</td></tr>
+<tr><th id="355">355</th><td>  <dfn class="enum" id="CC_NG" title='CC_NG' data-ref="CC_NG" data-ref-filename="CC_NG">CC_NG</dfn> = <a class="enum" href="#CC_LE" title='CC_LE' data-ref="CC_LE" data-ref-filename="CC_LE">CC_LE</a>, <dfn class="enum" id="CC_G" title='CC_G' data-ref="CC_G" data-ref-filename="CC_G">CC_G</dfn> = <a class="enum" href="#CC_NLE" title='CC_NLE' data-ref="CC_NLE" data-ref-filename="CC_NLE">CC_NLE</a></td></tr>
+<tr><th id="356">356</th><td>} <dfn class="typedef" id="x86CC" title='x86CC' data-type='enum x86CC' data-ref="x86CC" data-ref-filename="x86CC">x86CC</dfn>;</td></tr>
+<tr><th id="357">357</th><td></td></tr>
+<tr><th id="358">358</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="359">359</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_jit.c.html'>luajit/lib_jit.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

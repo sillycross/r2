@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ccall.h' l='189' type='CTypeID lj_ccall_ctid_vararg(CTState * cts, cTValue * o)'/>
+<def f='luajit/lj_ccall.c' l='895' ll='920' type='CTypeID lj_ccall_ctid_vararg(CTState * cts, cTValue * o)'/>
+<use f='luajit/lj_ccall.c' l='1002' u='c' c='ccall_set_args'/>
+<doc f='luajit/lj_ccall.c' l='894'>/* Infer the destination CTypeID for a vararg argument. */</doc>
+<use f='luajit/lj_crecord.c' l='1146' u='c' c='crec_call_args'/>

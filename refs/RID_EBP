@@ -1,0 +1,15 @@
+<dec f='luajit/lj_target_x86.h' l='30' macro='1' type='5'/>
+<use f='luajit/lj_emit_x86.h' l='112' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='127' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='145' u='r' c='emit_rmrxo'/>
+<use f='luajit/lj_emit_x86.h' l='200' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='207' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='216' u='r' c='emit_mrm'/>
+<use f='luajit/lj_emit_x86.h' l='375' u='r' c='emit_rma'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='461' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_ccallback.c' l='125' u='r' c='callback_mcode_init'/>
+<use f='luajit/lj_ccallback.c' l='128' u='r' c='callback_mcode_init'/>
+<use f='luajit/lj_ccallback.c' l='136' u='r' c='callback_mcode_init'/>

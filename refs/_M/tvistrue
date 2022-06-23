@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='782'/>
+<use f='luajit/lib_jit.c' l='52' u='c'/>
+<use f='luajit/lj_crecord.c' l='1240' u='c'/>
+<use f='luajit/lj_strfmt.c' l='517' u='c'/>

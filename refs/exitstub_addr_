@@ -1,0 +1,7 @@
+<def f='luajit/lj_target.h' l='153' ll='159' type='char * exitstub_addr_(char ** group, uint32_t exitno)'/>
+<use f='luajit/lib_jit.c' l='403' macro='1' u='c' c='lj_cf_jit_util_traceexitstub'/>
+<doc f='luajit/lj_target.h' l='152'>/* Return the address of an exit stub. */</doc>
+<use f='luajit/lj_asm_x86.h' l='59' macro='1' u='c' c='asm_guardcc'/>
+<use f='luajit/lj_asm_x86.h' l='2668' macro='1' u='c' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='3073' macro='1' u='c' c='lj_asm_patchexit'/>
+<use f='luajit/lj_trace.c' l='956' macro='1' u='c' c='lj_trace_unwind'/>

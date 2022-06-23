@@ -1,0 +1,14 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='67'/>
+<use f='luajit/lj_bc.h' l='216' u='r' c='lj_assert_37'/>
+<use f='luajit/lj_bc.h' l='217' u='r' c='lj_assert_39'/>
+<use f='luajit/host/buildvm_arch.h' l='3984' c='build_ins'/>
+<use f='luajit/lj_asm.c' l='2080' c='asm_tail_link'/>
+<use f='luajit/lj_dispatch.c' l='389' c='cur_topslot'/>
+<use f='luajit/lj_ffrecord.c' l='156' u='r' c='recff_nyi'/>
+<use f='luajit/lj_parse.c' l='1520' c='bcopisret'/>
+<use f='luajit/lj_parse.c' l='1547' c='fs_fixup_ret'/>
+<use f='luajit/lj_record.c' l='2386' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='280' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='286' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='946' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='917' c='lj_trace_exit'/>

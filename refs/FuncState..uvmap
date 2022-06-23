@@ -1,0 +1,7 @@
+<dec f='luajit/lj_parse.c' l='144' type='VarIndex [60]'/>
+<use f='luajit/lj_parse.c' l='1110' u='r' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1115' u='w' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1464' u='r' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='2524' u='r' c='predict_next'/>
+<offset>3936</offset>
+<doc f='luajit/lj_parse.c' l='144'>/* Map from upvalue to variable idx. */</doc>

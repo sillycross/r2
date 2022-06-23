@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lex.h' l='80' type='void lj_lex_cleanup(lua_State * L, LexState * ls)'/>
+<def f='luajit/lj_lex.c' l='446' ll='452' type='void lj_lex_cleanup(lua_State * L, LexState * ls)'/>
+<doc f='luajit/lj_lex.c' l='445'>/* Cleanup lexer state. */</doc>
+<use f='luajit/lj_load.c' l='59' u='c' c='lua_loadx'/>

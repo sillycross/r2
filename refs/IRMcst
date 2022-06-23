@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ir.h' l='265' type='2'/>
+<doc f='luajit/lj_ir.h' l='265'>/* Constant literal: i, gcr or ptr. */</doc>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='47' macro='1' u='r'/>

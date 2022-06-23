@@ -1,0 +1,1 @@
+<def f='luajit/lib_debug.c' l='385' macro='1' type='int lj_cf_debug_traceback(lua_State * L)'/>

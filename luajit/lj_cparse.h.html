@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_cparse.h source code [luajit/lj_cparse.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="CPState,CPValue "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_cparse.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_cparse.h.html'>lj_cparse.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** C declaration parser.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_CPARSE_H">_LJ_CPARSE_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_CPARSE_H" data-ref="_M/_LJ_CPARSE_H">_LJ_CPARSE_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_ctype.h.html">"lj_ctype.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/* C parser limits. */</i></td></tr>
+<tr><th id="15">15</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MAX_BUF" data-ref="_M/CPARSE_MAX_BUF">CPARSE_MAX_BUF</dfn>		32768	/* Max. token buffer size. */</u></td></tr>
+<tr><th id="16">16</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MAX_DECLSTACK" data-ref="_M/CPARSE_MAX_DECLSTACK">CPARSE_MAX_DECLSTACK</dfn>	100	/* Max. declaration stack depth. */</u></td></tr>
+<tr><th id="17">17</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MAX_DECLDEPTH" data-ref="_M/CPARSE_MAX_DECLDEPTH">CPARSE_MAX_DECLDEPTH</dfn>	20	/* Max. recursive declaration depth. */</u></td></tr>
+<tr><th id="18">18</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MAX_PACKSTACK" data-ref="_M/CPARSE_MAX_PACKSTACK">CPARSE_MAX_PACKSTACK</dfn>	7	/* Max. pack pragma stack depth. */</u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i>/* Flags for C parser mode. */</i></td></tr>
+<tr><th id="21">21</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MODE_MULTI" data-ref="_M/CPARSE_MODE_MULTI">CPARSE_MODE_MULTI</dfn>	1	/* Process multiple declarations. */</u></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MODE_ABSTRACT" data-ref="_M/CPARSE_MODE_ABSTRACT">CPARSE_MODE_ABSTRACT</dfn>	2	/* Accept abstract declarators. */</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MODE_DIRECT" data-ref="_M/CPARSE_MODE_DIRECT">CPARSE_MODE_DIRECT</dfn>	4	/* Accept direct declarators. */</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MODE_FIELD" data-ref="_M/CPARSE_MODE_FIELD">CPARSE_MODE_FIELD</dfn>	8	/* Accept field width in bits, too. */</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MODE_NOIMPLICIT" data-ref="_M/CPARSE_MODE_NOIMPLICIT">CPARSE_MODE_NOIMPLICIT</dfn>	16	/* Reject implicit declarations. */</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/CPARSE_MODE_SKIP" data-ref="_M/CPARSE_MODE_SKIP">CPARSE_MODE_SKIP</dfn>	32	/* Skip definitions, ignore errors. */</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><b>typedef</b> <em>int</em> <dfn class="typedef" id="CPChar" title='CPChar' data-type='int' data-ref="CPChar" data-ref-filename="CPChar">CPChar</dfn>;	<i>/* C parser character. Unsigned ext. from char. */</i></td></tr>
+<tr><th id="29">29</th><td><b>typedef</b> <em>int</em> <dfn class="typedef" id="CPToken" title='CPToken' data-type='int' data-ref="CPToken" data-ref-filename="CPToken">CPToken</dfn>;	<i>/* C parser token. */</i></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><i>/* C parser internal value representation. */</i></td></tr>
+<tr><th id="32">32</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="CPValue" title='CPValue' data-ref="CPValue" data-ref-filename="CPValue"><a class="type" href="#CPValue" title='CPValue' data-ref="CPValue" data-ref-filename="CPValue">CPValue</a></dfn> {</td></tr>
+<tr><th id="33">33</th><td>  <b>union</b> {</td></tr>
+<tr><th id="34">34</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="CPValue::(anonymous)::i32" title='CPValue::(anonymous union)::i32' data-ref="CPValue::(anonymous)::i32" data-ref-filename="CPValue..(anonymous)..i32">i32</dfn>;	<i>/* Value for CTID_INT32. */</i></td></tr>
+<tr><th id="35">35</th><td>    <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="CPValue::(anonymous)::u32" title='CPValue::(anonymous union)::u32' data-ref="CPValue::(anonymous)::u32" data-ref-filename="CPValue..(anonymous)..u32">u32</dfn>;	<i>/* Value for CTID_UINT32. */</i></td></tr>
+<tr><th id="36">36</th><td>  };</td></tr>
+<tr><th id="37">37</th><td>  <a class="typedef" href="lj_ctype.h.html#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl field" id="CPValue::id" title='CPValue::id' data-ref="CPValue::id" data-ref-filename="CPValue..id">id</dfn>;		<i>/* C Type ID of the value. */</i></td></tr>
+<tr><th id="38">38</th><td>} <dfn class="typedef" id="CPValue" title='CPValue' data-type='struct CPValue' data-ref="CPValue" data-ref-filename="CPValue">CPValue</dfn>;</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><i>/* C parser state. */</i></td></tr>
+<tr><th id="41">41</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="CPState" title='CPState' data-ref="CPState" data-ref-filename="CPState"><a class="type" href="#CPState" title='CPState' data-ref="CPState" data-ref-filename="CPState">CPState</a></dfn> {</td></tr>
+<tr><th id="42">42</th><td>  <a class="typedef" href="#CPChar" title='CPChar' data-type='int' data-ref="CPChar" data-ref-filename="CPChar">CPChar</a> <dfn class="decl field" id="CPState::c" title='CPState::c' data-ref="CPState::c" data-ref-filename="CPState..c">c</dfn>;		<i>/* Current character. */</i></td></tr>
+<tr><th id="43">43</th><td>  <a class="typedef" href="#CPToken" title='CPToken' data-type='int' data-ref="CPToken" data-ref-filename="CPToken">CPToken</a> <dfn class="decl field" id="CPState::tok" title='CPState::tok' data-ref="CPState::tok" data-ref-filename="CPState..tok">tok</dfn>;		<i>/* Current token. */</i></td></tr>
+<tr><th id="44">44</th><td>  <a class="typedef" href="#CPValue" title='CPValue' data-type='struct CPValue' data-ref="CPValue" data-ref-filename="CPValue">CPValue</a> <dfn class="decl field" id="CPState::val" title='CPState::val' data-ref="CPState::val" data-ref-filename="CPState..val">val</dfn>;		<i>/* Token value. */</i></td></tr>
+<tr><th id="45">45</th><td>  <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="decl field" id="CPState::str" title='CPState::str' data-ref="CPState::str" data-ref-filename="CPState..str">str</dfn>;		<i>/* Interned string of identifier/keyword. */</i></td></tr>
+<tr><th id="46">46</th><td>  <a class="typedef" href="lj_ctype.h.html#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl field" id="CPState::ct" title='CPState::ct' data-ref="CPState::ct" data-ref-filename="CPState..ct">ct</dfn>;		<i>/* C type table entry. */</i></td></tr>
+<tr><th id="47">47</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="CPState::p" title='CPState::p' data-ref="CPState::p" data-ref-filename="CPState..p">p</dfn>;	<i>/* Current position in input buffer. */</i></td></tr>
+<tr><th id="48">48</th><td>  <a class="typedef" href="lj_obj.h.html#SBuf" title='SBuf' data-type='struct SBuf' data-ref="SBuf" data-ref-filename="SBuf">SBuf</a> <dfn class="decl field" id="CPState::sb" title='CPState::sb' data-ref="CPState::sb" data-ref-filename="CPState..sb">sb</dfn>;		<i>/* String buffer for tokens. */</i></td></tr>
+<tr><th id="49">49</th><td>  <a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="decl field" id="CPState::L" title='CPState::L' data-ref="CPState::L" data-ref-filename="CPState..L">L</dfn>;		<i>/* Lua state. */</i></td></tr>
+<tr><th id="50">50</th><td>  <a class="typedef" href="lj_ctype.h.html#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="decl field" id="CPState::cts" title='CPState::cts' data-ref="CPState::cts" data-ref-filename="CPState..cts">cts</dfn>;		<i>/* C type state. */</i></td></tr>
+<tr><th id="51">51</th><td>  <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="decl field" id="CPState::param" title='CPState::param' data-ref="CPState::param" data-ref-filename="CPState..param">param</dfn>;	<i>/* C type parameters. */</i></td></tr>
+<tr><th id="52">52</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="CPState::srcname" title='CPState::srcname' data-ref="CPState::srcname" data-ref-filename="CPState..srcname">srcname</dfn>;	<i>/* Current source name. */</i></td></tr>
+<tr><th id="53">53</th><td>  <a class="typedef" href="lj_obj.h.html#BCLine" title='BCLine' data-type='int32_t' data-ref="BCLine" data-ref-filename="BCLine">BCLine</a> <dfn class="decl field" id="CPState::linenumber" title='CPState::linenumber' data-ref="CPState::linenumber" data-ref-filename="CPState..linenumber">linenumber</dfn>;	<i>/* Input line counter. */</i></td></tr>
+<tr><th id="54">54</th><td>  <em>int</em> <dfn class="decl field" id="CPState::depth" title='CPState::depth' data-ref="CPState::depth" data-ref-filename="CPState..depth">depth</dfn>;		<i>/* Recursive declaration depth. */</i></td></tr>
+<tr><th id="55">55</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="CPState::tmask" title='CPState::tmask' data-ref="CPState::tmask" data-ref-filename="CPState..tmask">tmask</dfn>;	<i>/* Type mask for next identifier. */</i></td></tr>
+<tr><th id="56">56</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="CPState::mode" title='CPState::mode' data-ref="CPState::mode" data-ref-filename="CPState..mode">mode</dfn>;	<i>/* C parser mode. */</i></td></tr>
+<tr><th id="57">57</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="CPState::packstack" title='CPState::packstack' data-ref="CPState::packstack" data-ref-filename="CPState..packstack">packstack</dfn>[<a class="macro" href="#18" title="7" data-ref="_M/CPARSE_MAX_PACKSTACK">CPARSE_MAX_PACKSTACK</a>];  <i>/* Stack for pack pragmas. */</i></td></tr>
+<tr><th id="58">58</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl field" id="CPState::curpack" title='CPState::curpack' data-ref="CPState::curpack" data-ref-filename="CPState..curpack">curpack</dfn>;	<i>/* Current position in pack pragma stack. */</i></td></tr>
+<tr><th id="59">59</th><td>} <dfn class="typedef" id="CPState" title='CPState' data-type='struct CPState' data-ref="CPState" data-ref-filename="CPState">CPState</dfn>;</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>int</em> <dfn class="decl fn" id="lj_cparse" title='lj_cparse' data-ref="lj_cparse" data-ref-filename="lj_cparse">lj_cparse</dfn>(<a class="typedef" href="#CPState" title='CPState' data-type='struct CPState' data-ref="CPState" data-ref-filename="CPState">CPState</a> *<dfn class="local col1 decl" id="1cp" title='cp' data-type='CPState *' data-ref="1cp" data-ref-filename="1cp">cp</dfn>);</td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>int</em> <dfn class="decl fn" id="lj_cparse_case" title='lj_cparse_case' data-ref="lj_cparse_case" data-ref-filename="lj_cparse_case">lj_cparse_case</dfn>(<a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col2 decl" id="2str" title='str' data-type='GCstr *' data-ref="2str" data-ref-filename="2str">str</dfn>, <em>const</em> <em>char</em> *<dfn class="local col3 decl" id="3match" title='match' data-type='const char *' data-ref="3match" data-ref-filename="3match">match</dfn>);</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="68">68</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_ffi.c.html'>luajit/lib_ffi.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,23 @@
+<def f='luajit/lj_gc.h' l='81' ll='91' type='void lj_gc_barrierback(global_State * g, GCtab * t)'/>
+<doc f='luajit/lj_gc.h' l='80'>/* Move the GC propagation frontier back for tables (make it gray again). */</doc>
+<use f='luajit/lib_base.c' l='137' macro='1' u='c' c='lj_ffh_setmetatable'/>
+<use f='luajit/lib_ffi.c' l='444' macro='1' u='c' c='ffi_callback_set'/>
+<use f='luajit/lib_ffi.c' l='520' macro='1' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='782' macro='1' u='c' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='844' macro='1' u='c' c='ffi_register_module'/>
+<use f='luajit/lib_jit.c' l='585' macro='1' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lib_jit.c' l='602' macro='1' u='c' c='lj_cf_jit_profile_stop'/>
+<use f='luajit/lib_table.c' l='103' macro='1' u='c' c='lj_cf_table_insert'/>
+<use f='luajit/lj_api.c' l='734' macro='1' u='c' c='luaL_newmetatable'/>
+<use f='luajit/lj_api.c' l='1007' macro='1' u='c' c='lua_rawset'/>
+<use f='luajit/lj_api.c' l='1019' macro='1' u='c' c='lua_rawseti'/>
+<use f='luajit/lj_api.c' l='1039' macro='1' u='c' c='lua_setmetatable'/>
+<use f='luajit/lj_ccallback.c' l='790' macro='1' u='c' c='lj_ccallback_new'/>
+<use f='luajit/lj_cdata.c' l='94' macro='1' u='c' c='lj_cdata_setfin'/>
+<use f='luajit/lj_clib.c' l='390' macro='1' u='c' c='lj_clib_index'/>
+<use f='luajit/lj_lib.c' l='85' macro='1' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='180' macro='1' u='c' c='lj_lib_postreg'/>
+<use f='luajit/lj_meta.c' l='172' macro='1' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='176' macro='1' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_parse.c' l='1765' macro='1' u='c' c='expr_table'/>
+<use f='luajit/lj_tab.c' l='512' macro='1' u='c' c='lj_tab_newkey'/>

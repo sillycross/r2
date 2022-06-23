@@ -1,0 +1,25 @@
+<def f='luajit/lj_obj.h' l='933' macro='1' type='void setfuncV(lua_State * L, TValue * o, const GCfunc * v)'/>
+<use f='luajit/lib_base.c' l='97' u='c' c='ffh_pairs'/>
+<use f='luajit/lib_base.c' l='180' u='c' c='lj_cf_setfenv'/>
+<use f='luajit/lib_base.c' l='598' u='c' c='lj_cf_coroutine_create'/>
+<use f='luajit/lib_debug.c' l='123' u='c' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lib_ffi.c' l='443' u='c' c='ffi_callback_set'/>
+<use f='luajit/lib_jit.c' l='559' u='c' c='jit_profile_callback'/>
+<use f='luajit/lib_jit.c' l='584' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lj_api.c' l='699' u='c' c='lua_pushcclosure'/>
+<use f='luajit/lj_api.c' l='1153' u='c' c='cpcall'/>
+<use f='luajit/lj_ccallback.c' l='789' u='c' c='lj_ccallback_new'/>
+<use f='luajit/lj_crecord.c' l='1710' u='c' c='recff_ffi_typeof'/>
+<use f='luajit/lj_debug.c' l='503' u='c' c='lj_debug_getinfo'/>
+<use f='luajit/lj_lib.c' l='70' u='c' c='lib_read_lfunc'/>
+<use f='luajit/lj_lib.c' l='113' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='138' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='179' u='c' c='lj_lib_postreg'/>
+<use f='luajit/lj_lib.c' l='181' u='c' c='lj_lib_postreg'/>
+<use f='luajit/lj_load.c' l='44' u='c' c='cpparser'/>
+<use f='luajit/lj_record.c' l='1427' u='c' c='lj_record_idx'/>
+<use f='luajit/lj_trace.c' l='458' u='c' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='538' u='c' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='610' u='c' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='664' u='c' c='trace_state'/>
+<use f='luajit/lj_vmevent.c' l='29' u='c' c='lj_vmevent_prepare'/>

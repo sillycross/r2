@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='155' type='const void * lua_topointer(lua_State * L, int idx)'/>
+<def f='luajit/lj_api.c' l='622' ll='625' macro='1' type='const void * lua_topointer(lua_State * L, int idx)'/>

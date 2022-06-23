@@ -1,0 +1,4 @@
+<def f='luajit/host/buildvm_peobj.c' l='56' ll='66'/>
+<use f='luajit/host/buildvm_peobj.c' l='56'/>
+<size>20</size>
+<doc f='luajit/host/buildvm_peobj.c' l='55'>/* PE symbol table entry. */</doc>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_debug.h' l='31' type='const char * lj_debug_uvname(GCproto * pt, uint32_t idx)'/>
+<use f='luajit/lib_jit.c' l='272' u='c' c='lj_cf_jit_util_funcuvname'/>
+<use f='luajit/lib_jit.c' l='272' u='c' c='lj_cf_jit_util_funcuvname'/>
+<def f='luajit/lj_debug.c' l='216' ll='223' type='const char * lj_debug_uvname(GCproto * pt, uint32_t idx)'/>
+<use f='luajit/lj_debug.c' l='236' u='c' c='lj_debug_uvnamev'/>
+<use f='luajit/lj_debug.c' l='282' u='c' c='lj_debug_slotname'/>
+<doc f='luajit/lj_debug.c' l='215'>/* Get name of upvalue. */</doc>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ircall.h' l='254' macro='1' type='25'/>
+<use f='luajit/lj_ffrecord.c' l='1081' u='r' c='recff_table_new'/>

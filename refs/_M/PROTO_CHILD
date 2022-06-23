@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='396'/>
+<doc f='luajit/lj_obj.h' l='395'>/* Flags for prototype. */</doc>
+<use f='luajit/lib_jit.c' l='208' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='248' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='264' u='c'/>
+<use f='luajit/lj_dispatch.c' l='227' u='c'/>
+<use f='luajit/lj_parse.c' l='1883' u='c'/>
+<use f='luajit/lj_parse.c' l='1886' u='c'/>
+<use f='luajit/lj_parse.c' l='2357' u='c'/>

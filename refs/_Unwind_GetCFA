@@ -1,0 +1,2 @@
+<dec f='luajit/lj_err.c' l='401' type='uintptr_t _Unwind_GetCFA(_Unwind_Context * )'/>
+<use f='luajit/lj_err.c' l='421' u='c' c='lj_err_unwind_dwarf'/>

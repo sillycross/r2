@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='5'/>
+<use f='luajit/lj_ffrecord.c' l='235' u='r' c='recff_setmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='1163' u='r' c='recff_debug_getmetatable'/>
+<use f='luajit/lj_opt_mem.c' l='567' u='r' c='aa_fref'/>
+<use f='luajit/lj_opt_mem.c' l='594' u='r' c='lj_opt_fwd_fload'/>
+<use f='luajit/lj_opt_sink.c' l='85' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_record.c' l='980' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1125' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1166' u='r' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1524' u='r' c='lj_record_idx'/>

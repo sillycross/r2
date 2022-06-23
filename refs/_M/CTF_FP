@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ctype.h' l='65'/>
+<use f='luajit/lj_carith.c' l='334' u='c'/>
+<use f='luajit/lj_ccall.c' l='1011' u='c'/>
+<use f='luajit/lj_cconv.c' l='97' u='c'/>
+<use f='luajit/lj_cparse.c' l='905' u='c'/>
+<use f='luajit/lj_cparse.c' l='1578' u='c'/>
+<use f='luajit/lj_crecord.c' l='102' u='c'/>
+<use f='luajit/lj_crecord.c' l='373' u='c'/>
+<use f='luajit/lj_crecord.c' l='484' u='c'/>
+<use f='luajit/lj_crecord.c' l='1336' u='c'/>
+<use f='luajit/lj_crecord.c' l='1773' u='c'/>
+<use f='luajit/lj_ctype.c' l='454' u='c'/>

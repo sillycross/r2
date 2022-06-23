@@ -1,0 +1,35 @@
+<def f='luajit/host/minilua.c' l='964' ll='981'/>
+<use f='luajit/host/minilua.c' l='967'/>
+<use f='luajit/host/minilua.c' l='964'/>
+<use f='luajit/host/minilua.c' l='2247'/>
+<use f='luajit/host/minilua.c' l='3923' c='luaY_parser'/>
+<size>600</size>
+<use f='luajit/lj_lex.h' l='53'/>
+<def f='luajit/lj_parse.c' l='123' ll='146'/>
+<use f='luajit/lj_parse.c' l='128'/>
+<use f='luajit/lj_parse.c' l='123'/>
+<size>736</size>
+<doc f='luajit/lj_parse.c' l='122'>/* Per-function state. */</doc>
+<mbr r='FuncState::kt' o='0' t='GCtab *'/>
+<mbr r='FuncState::ls' o='64' t='LexState *'/>
+<mbr r='FuncState::L' o='128' t='lua_State *'/>
+<mbr r='FuncState::bl' o='192' t='FuncScope *'/>
+<mbr r='FuncState::prev' o='256' t='struct FuncState *'/>
+<mbr r='FuncState::pc' o='320' t='BCPos'/>
+<mbr r='FuncState::lasttarget' o='352' t='BCPos'/>
+<mbr r='FuncState::jpc' o='384' t='BCPos'/>
+<mbr r='FuncState::freereg' o='416' t='BCReg'/>
+<mbr r='FuncState::nactvar' o='448' t='BCReg'/>
+<mbr r='FuncState::nkn' o='480' t='BCReg'/>
+<mbr r='FuncState::nkgc' o='512' t='BCReg'/>
+<mbr r='FuncState::linedefined' o='544' t='BCLine'/>
+<mbr r='FuncState::bcbase' o='576' t='BCInsLine *'/>
+<mbr r='FuncState::bclim' o='640' t='BCPos'/>
+<mbr r='FuncState::vbase' o='672' t='MSize'/>
+<mbr r='FuncState::flags' o='704' t='uint8_t'/>
+<mbr r='FuncState::numparams' o='712' t='uint8_t'/>
+<mbr r='FuncState::framesize' o='720' t='uint8_t'/>
+<mbr r='FuncState::nuv' o='728' t='uint8_t'/>
+<mbr r='FuncState::varmap' o='736' t='VarIndex [200]'/>
+<mbr r='FuncState::uvmap' o='3936' t='VarIndex [60]'/>
+<mbr r='FuncState::uvtmp' o='4896' t='VarIndex [60]'/>

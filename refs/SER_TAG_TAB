@@ -1,0 +1,9 @@
+<dec f='luajit/lj_serialize.c' l='33' type='8'/>
+<use f='luajit/lj_serialize.c' l='34' u='r'/>
+<use f='luajit/lj_serialize.c' l='54' u='r' c='lj_assert_12'/>
+<use f='luajit/lj_serialize.c' l='187' u='r' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='332' u='r' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='332' u='r' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='335' u='r' c='serialize_get'/>
+<use f='luajit/lj_serialize.c' l='344' u='r' c='serialize_get'/>
+<doc f='luajit/lj_serialize.c' l='33'>/* 0x08 */</doc>

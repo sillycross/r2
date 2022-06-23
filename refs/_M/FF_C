@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='472'/>
+<use f='luajit/host/buildvm_lib.c' l='359' u='c'/>
+<use f='luajit/lj_ff.h' l='12' u='c'/>
+<use f='luajit/lj_func.c' l='115' u='c'/>
+<use f='luajit/lj_state.c' l='225' u='c'/>
+<use f='luajit/lj_state.c' l='311' u='c'/>

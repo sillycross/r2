@@ -1,0 +1,6 @@
+<dec f='luajit/lj_frame.h' l='80'/>
+<use f='luajit/lj_debug.c' l='40' u='c'/>
+<use f='luajit/lj_debug.c' l='195' u='c'/>
+<use f='luajit/lj_debug.c' l='300' u='c'/>
+<use f='luajit/lj_record.c' l='774' u='c'/>
+<use f='luajit/lj_record.c' l='849' u='c'/>

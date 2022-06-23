@@ -1,0 +1,14 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='2'/>
+<use f='luajit/lib_ffi.c' l='515' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='515' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='515' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_crecord.c' l='1098' u='r' c='crec_alloc'/>
+<use f='luajit/lj_gc.c' l='146' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='146' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='146' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='563' u='r' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='563' u='r' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='563' u='r' c='gc_finalize'/>

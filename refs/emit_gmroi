@@ -1,0 +1,6 @@
+<def f='luajit/lj_emit_x86.h' l='175' ll='187' type='void emit_gmroi(ASMState * as, x86Group xg, Reg rb, int32_t ofs, int32_t i)'/>
+<use f='luajit/lj_asm_x86.h' l='1155' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1158' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1182' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1185' u='c' c='asm_href'/>
+<doc f='luajit/lj_emit_x86.h' l='174'>/* op [base+ofs], i */</doc>

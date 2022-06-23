@@ -1,0 +1,9 @@
+<dec f='luajit/lj_parse.c' l='41' type='4'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='bcemit_binop_left'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='73' u='r' c='expr_table'/>

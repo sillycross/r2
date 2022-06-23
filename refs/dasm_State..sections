@@ -1,0 +1,25 @@
+<dec f='luajit/dasm_x86.h' l='76' type='dasm_Section [1]'/>
+<use f='luajit/dasm_x86.h' l='100' u='m' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='101' u='m' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='101' u='m' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='102' u='m' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='103' u='m' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='113' u='m' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='114' u='m' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='144' u='a' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='148' u='m' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='149' u='m' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='48' u='m' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='264' u='a' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='48' u='m' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='304' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='48' u='m' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='326' u='m' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='398' u='r' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='48' u='m' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='48' u='m' c='dasm_encode'/>
+<use f='luajit/dasm_x86.h' l='48' u='m' c='dasm_getpclabel'/>
+<use f='luajit/dasm_x86.h' l='523' u='a' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='524' u='r' c='dasm_checkstep'/>
+<offset>640</offset>
+<doc f='luajit/dasm_x86.h' l='76'>/* All sections. Alloc-extended. */</doc>

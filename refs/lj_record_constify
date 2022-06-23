@@ -1,0 +1,6 @@
+<dec f='luajit/lj_record.h' l='32' type='TRef lj_record_constify(jit_State * J, cTValue * o)'/>
+<use f='luajit/lj_crecord.c' l='745' u='c' c='crec_index_meta'/>
+<def f='luajit/lj_record.c' l='248' ll='260' type='TRef lj_record_constify(jit_State * J, cTValue * o)'/>
+<use f='luajit/lj_record.c' l='1624' u='c' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='2042' u='c' c='lj_record_ins'/>
+<doc f='luajit/lj_record.c' l='247'>/* Constify a value. Returns 0 for non-representable object types. */</doc>

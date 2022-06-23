@@ -1,0 +1,6 @@
+<use f='luajit/lj_ffrecord.c' l='816' u='r' c='recff_string_range'/>
+<use f='luajit/lj_record.c' l='767' u='r' c='lj_record_call'/>
+<use f='luajit/lj_record.c' l='1720' u='r' c='rec_func_setup'/>
+<use f='luajit/lj_record.c' l='1735' u='r' c='rec_func_vararg'/>
+<use f='luajit/lj_record.c' l='1897' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2654' u='r' c='lj_record_setup'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_vm.h' l='35' type='int lj_vm_cpuid(uint32_t f, uint32_t * res)'/>
+<use f='luajit/lib_jit.c' l='659' u='c' c='jit_cpudetect'/>
+<use f='luajit/lib_jit.c' l='659' u='c' c='jit_cpudetect'/>
+<use f='luajit/lib_jit.c' l='664' u='c' c='jit_cpudetect'/>

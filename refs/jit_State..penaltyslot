@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='475' type='uint32_t'/>
+<offset>22784</offset>
+<doc f='luajit/lj_jit.h' l='475'>/* Round-robin index into penalty slots. */</doc>
+<use f='luajit/lj_trace.c' l='396' u='r' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='397' u='w' c='penalty_pc'/>
+<use f='luajit/lj_trace.c' l='397' u='r' c='penalty_pc'/>

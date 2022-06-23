@@ -1,0 +1,5 @@
+<dec f='include/stdio.h' l='94'/>
+<use f='luajit/host/minilua.c' l='5866' u='c'/>
+<use f='luajit/host/minilua.c' l='6121' u='c'/>
+<use f='luajit/host/minilua.c' l='6783' u='c'/>
+<use f='luajit/host/minilua.c' l='6802' u='c'/>

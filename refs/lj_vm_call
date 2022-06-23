@@ -1,0 +1,11 @@
+<dec f='luajit/lj_vm.h' l='12' type='void lj_vm_call(lua_State * L, TValue * base, int nres1)'/>
+<use f='luajit/lj_api.c' l='316' u='c' c='lua_equal'/>
+<use f='luajit/lj_api.c' l='339' u='c' c='lua_lessthan'/>
+<use f='luajit/lj_api.c' l='784' u='c' c='lua_concat'/>
+<use f='luajit/lj_api.c' l='803' u='c' c='lua_gettable'/>
+<use f='luajit/lj_api.c' l='818' u='c' c='lua_getfield'/>
+<use f='luajit/lj_api.c' l='974' u='c' c='lua_settable'/>
+<use f='luajit/lj_api.c' l='994' u='c' c='lua_setfield'/>
+<use f='luajit/lj_api.c' l='1125' u='c' c='lua_call'/>
+<use f='luajit/lj_api.c' l='1183' u='c' c='luaL_callmeta'/>
+<use f='luajit/lj_err.c' l='849' u='c' c='lj_err_run'/>

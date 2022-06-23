@@ -1,0 +1,17 @@
+<dec f='luajit/lauxlib.h' l='103'/>
+<use f='luajit/lib_debug.c' l='332' u='c'/>
+<use f='luajit/lib_os.c' l='66' u='c'/>
+<use f='luajit/lib_os.c' l='72' u='c'/>
+<use f='luajit/lib_os.c' l='73' u='c'/>
+<use f='luajit/lib_os.c' l='107' u='c'/>
+<use f='luajit/lib_package.c' l='274' u='c'/>
+<use f='luajit/lib_package.c' l='275' u='c'/>
+<use f='luajit/lib_package.c' l='340' u='c'/>
+<use f='luajit/lib_package.c' l='341' u='c'/>
+<use f='luajit/lib_package.c' l='373' u='c'/>
+<use f='luajit/lib_package.c' l='383' u='c'/>
+<use f='luajit/lib_package.c' l='394' u='c'/>
+<use f='luajit/lib_package.c' l='412' u='c'/>
+<use f='luajit/lib_package.c' l='432' u='c'/>
+<use f='luajit/lib_package.c' l='517' u='c'/>
+<use f='luajit/lib_string.c' l='604' u='c'/>

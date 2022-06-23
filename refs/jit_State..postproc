@@ -1,0 +1,24 @@
+<dec f='luajit/lj_jit.h' l='456' type='PostProc'/>
+<offset>2976</offset>
+<doc f='luajit/lj_jit.h' l='456'>/* Required post-processing after execution. */</doc>
+<use f='luajit/lj_crecord.c' l='567' u='w' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='770' u='w' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='1269' u='w' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1367' u='w' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1400' u='w' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1466' u='w' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1567' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1572' u='w' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1720' u='w' c='recff_ffi_istype'/>
+<use f='luajit/lj_crecord.c' l='1732' u='w' c='recff_ffi_abi'/>
+<use f='luajit/lj_crecord.c' l='1753' u='w' c='recff_ffi_xof'/>
+<use f='luajit/lj_ffrecord.c' l='1199' u='r' c='lj_ffrecord_func'/>
+<use f='luajit/lj_ffrecord.c' l='1199' u='w' c='lj_ffrecord_func'/>
+<use f='luajit/lj_record.c' l='923' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='2008' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2009' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2018' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2051' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='448' u='w' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='531' u='w' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='564' u='w' c='trace_abort'/>

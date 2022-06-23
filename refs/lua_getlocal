@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='337' type='const char * lua_getlocal(lua_State * L, const lua_Debug * ar, int n)'/>
+<use f='luajit/lib_debug.c' l='170' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='175' u='c' c='lj_cf_debug_getlocal'/>
+<def f='luajit/lj_debug.c' l='404' ll='417' macro='1' type='const char * lua_getlocal(lua_State * L, const lua_Debug * ar, int n)'/>

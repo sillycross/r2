@@ -1,0 +1,9 @@
+<dec f='luajit/lj_obj.h' l='641' type='TValue'/>
+<offset>1856</offset>
+<use f='luajit/lj_api.c' l='44' u='a' c='index2adr'/>
+<use f='luajit/lj_api.c' l='54' u='a' c='index2adr'/>
+<use f='luajit/lj_asm_x86.h' l='1092' u='a' c='asm_tvptr'/>
+<use f='luajit/lj_crecord.c' l='1571' u='m' c='recff_cdata_arith'/>
+<use f='luajit/lj_record.c' l='2011' u='m' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='661' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='668' u='w' c='trace_state'/>

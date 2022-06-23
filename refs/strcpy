@@ -1,0 +1,15 @@
+<dec f='include/string.h' l='121' type='char * strcpy(char *restrict __dest, const char *restrict __src)'/>
+<use f='luajit/host/buildvm.c' l='123' u='c' c='sym_decorate'/>
+<doc f='include/string.h' l='120'>/* Copy SRC to DEST.  */</doc>
+<use f='luajit/host/buildvm_lib.c' l='94' u='c' c='libdef_module'/>
+<use f='luajit/host/buildvm_lib.c' l='142' u='c' c='libdef_func'/>
+<use f='luajit/host/buildvm_lib.c' l='225' u='c' c='find_rec'/>
+<use f='luajit/host/minilua.c' l='742' u='c' c='luaO_chunkid'/>
+<use f='luajit/host/minilua.c' l='753' u='c' c='luaO_chunkid'/>
+<use f='luajit/host/minilua.c' l='7576' u='c' c='addintlen'/>
+<use f='luajit/lib_os.c' l='86' u='c' c='lj_cf_os_tmpname'/>
+<use f='luajit/lj_debug.c' l='337' u='c' c='lj_debug_shortname'/>
+<use f='luajit/lj_debug.c' l='342' u='c' c='lj_debug_shortname'/>
+<use f='luajit/lj_debug.c' l='346' u='c' c='lj_debug_shortname'/>
+<use f='luajit/lj_debug.c' l='348' u='c' c='lj_debug_shortname'/>
+<use f='luajit/lj_debug.c' l='350' u='c' c='lj_debug_shortname'/>

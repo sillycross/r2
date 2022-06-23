@@ -1,0 +1,1 @@
+<use f='luajit/lib_buffer.c' l='351' macro='1' u='r' c='luaopen_string_buffer'/>

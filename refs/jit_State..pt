@@ -1,0 +1,30 @@
+<dec f='luajit/lj_jit.h' l='417' type='GCproto *'/>
+<offset>1216</offset>
+<doc f='luajit/lj_jit.h' l='417'>/* Current prototype. */</doc>
+<use f='luajit/lj_record.c' l='319' u='r' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='340' u='r' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='671' u='r' c='rec_profile_ins'/>
+<use f='luajit/lj_record.c' l='838' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='866' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1613' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1685' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1715' u='r' c='rec_func_setup'/>
+<use f='luajit/lj_record.c' l='1731' u='r' c='rec_func_vararg'/>
+<use f='luajit/lj_record.c' l='1800' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2057' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2110' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2113' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2311' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2355' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2559' u='r' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2625' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2653' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='315' u='r' c='lj_snap_purge'/>
+<use f='luajit/lj_snap.c' l='316' u='r' c='lj_snap_purge'/>
+<use f='luajit/lj_trace.c' l='413' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='420' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='452' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='459' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='665' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='665' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='729' u='w' c='lj_trace_ins'/>

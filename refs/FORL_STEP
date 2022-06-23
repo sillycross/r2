@@ -1,0 +1,12 @@
+<dec f='luajit/lj_bc.h' l='235' type='2'/>
+<use f='luajit/lj_opt_narrow.c' l='637' u='a' c='lj_opt_narrow_forl'/>
+<use f='luajit/lj_opt_narrow.c' l='639' u='a' c='lj_opt_narrow_forl'/>
+<use f='luajit/lj_parse.c' l='2482' u='r' c='parse_for_num'/>
+<use f='luajit/lj_record.c' l='394' u='a' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='397' u='a' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='458' u='r' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='459' u='a' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='474' u='r' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='515' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='530' u='a' c='rec_for'/>
+<use f='luajit/lj_record.c' l='531' u='r' c='rec_for'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lex.h' l='15'/>
+<use f='luajit/lj_lex.h' l='27' u='c'/>
+<doc f='luajit/lj_lex.h' l='14'>/* Lua lexer tokens. */</doc>
+<use f='luajit/lj_lex.c' l='34' u='c'/>

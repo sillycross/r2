@@ -1,0 +1,8 @@
+<dec f='luajit/lj_parse.c' l='141' type='uint8_t'/>
+<use f='luajit/lj_parse.c' l='382' u='r' c='bcreg_bump'/>
+<use f='luajit/lj_parse.c' l='385' u='w' c='bcreg_bump'/>
+<use f='luajit/lj_parse.c' l='1331' u='r' c='fs_fixup_bc'/>
+<use f='luajit/lj_parse.c' l='1593' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1633' u='w' c='fs_init'/>
+<offset>720</offset>
+<doc f='luajit/lj_parse.c' l='141'>/* Fixed frame size. */</doc>

@@ -1,0 +1,2 @@
+<def f='luajit/lj_asm_x86.h' l='1053' ll='1094' type='void asm_tvptr(ASMState * as, Reg dest, IRRef ref)'/>
+<doc f='luajit/lj_asm_x86.h' l='1052'>/* Get pointer to TValue. */</doc>

@@ -1,0 +1,19 @@
+<dec f='luajit/lj_record.h' l='17' type='TValue'/>
+<offset>128</offset>
+<doc f='luajit/lj_record.h' l='17'>/* Runtime value of stored value. */</doc>
+<use f='luajit/lj_ffrecord.c' l='265' u='a' c='recff_rawset'/>
+<use f='luajit/lj_record.c' l='1107' u='a' c='rec_mm_callcomp'/>
+<use f='luajit/lj_record.c' l='1116' u='a' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1145' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1187' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1188' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1200' u='a' c='rec_mm_comp_cdata'/>
+<use f='luajit/lj_record.c' l='1432' u='a' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1569' u='a' c='rec_tsetm'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2084' u='a' c='lj_record_ins'/>

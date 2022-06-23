@@ -1,0 +1,17 @@
+<def f='luajit/lj_obj.h' l='320' ll='328'/>
+<use f='luajit/lj_obj.h' l='320'/>
+<size>48</size>
+<doc f='luajit/lj_obj.h' l='319'>/* Userdata object. Payload follows. */</doc>
+<mbr r='GCudata::nextgc' o='0' t='GCRef'/>
+<mbr r='GCudata::marked' o='64' t='uint8_t'/>
+<mbr r='GCudata::gct' o='72' t='uint8_t'/>
+<mbr r='GCudata::udtype' o='80' t='uint8_t'/>
+<mbr r='GCudata::unused2' o='88' t='uint8_t'/>
+<mbr r='GCudata::env' o='128' t='GCRef'/>
+<mbr r='GCudata::len' o='192' t='MSize'/>
+<mbr r='GCudata::metatable' o='256' t='GCRef'/>
+<mbr r='GCudata::align1' o='320' t='uint32_t'/>
+<use f='luajit/lj_gc.c' l='150' macro='1' c='lj_gc_separateudata'/>
+<size>48</size>
+<use f='luajit/lj_udata.c' l='33' macro='1' c='lj_udata_free'/>
+<size>48</size>

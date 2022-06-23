@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='402'/>
+<doc f='luajit/lj_obj.h' l='401'>/* Only used during parsing. */</doc>
+<use f='luajit/lj_parse.c' l='1591' u='c'/>
+<use f='luajit/lj_parse.c' l='1884' u='c'/>
+<use f='luajit/lj_parse.c' l='2330' u='c'/>

@@ -1,0 +1,383 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_ircall.h source code [luajit/lj_ircall.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="CCallInfo "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_ircall.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_ircall.h.html'>lj_ircall.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** IR CALL* instruction definitions.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_IRCALL_H">_LJ_IRCALL_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_IRCALL_H" data-ref="_M/_LJ_IRCALL_H">_LJ_IRCALL_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_ir.h.html">"lj_ir.h"</a></u></td></tr>
+<tr><th id="11">11</th><td><u>#include <a href="lj_jit.h.html">"lj_jit.h"</a></u></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><i>/* C call info for CALL* instructions. */</i></td></tr>
+<tr><th id="14">14</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="CCallInfo" title='CCallInfo' data-ref="CCallInfo" data-ref-filename="CCallInfo"><a class="type" href="#CCallInfo" title='CCallInfo' data-ref="CCallInfo" data-ref-filename="CCallInfo">CCallInfo</a></dfn> {</td></tr>
+<tr><th id="15">15</th><td>  <a class="typedef" href="lj_obj.h.html#ASMFunction" title='ASMFunction' data-type='void (*)(void)' data-ref="ASMFunction" data-ref-filename="ASMFunction">ASMFunction</a> <dfn class="decl field" id="CCallInfo::func" title='CCallInfo::func' data-ref="CCallInfo::func" data-ref-filename="CCallInfo..func">func</dfn>;		<i>/* Function pointer. */</i></td></tr>
+<tr><th id="16">16</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="CCallInfo::flags" title='CCallInfo::flags' data-ref="CCallInfo::flags" data-ref-filename="CCallInfo..flags">flags</dfn>;		<i>/* Number of arguments and flags. */</i></td></tr>
+<tr><th id="17">17</th><td>} <dfn class="typedef" id="CCallInfo" title='CCallInfo' data-type='struct CCallInfo' data-ref="CCallInfo" data-ref-filename="CCallInfo">CCallInfo</dfn>;</td></tr>
+<tr><th id="18">18</th><td></td></tr>
+<tr><th id="19">19</th><td><u>#define <dfn class="macro" id="_M/CCI_NARGS" data-ref="_M/CCI_NARGS">CCI_NARGS</dfn>(ci)		((ci)-&gt;flags &amp; 0xff)	/* # of args. */</u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/CCI_NARGS_MAX" data-ref="_M/CCI_NARGS_MAX">CCI_NARGS_MAX</dfn>		32			/* Max. # of args. */</u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#define <dfn class="macro" id="_M/CCI_OTSHIFT" data-ref="_M/CCI_OTSHIFT">CCI_OTSHIFT</dfn>		16</u></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/CCI_OPTYPE" data-ref="_M/CCI_OPTYPE">CCI_OPTYPE</dfn>(ci)		((ci)-&gt;flags &gt;&gt; CCI_OTSHIFT)  /* Get op/type. */</u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/CCI_TYPE" data-ref="_M/CCI_TYPE">CCI_TYPE</dfn>(ci)		(((ci)-&gt;flags&gt;&gt;CCI_OTSHIFT) &amp; IRT_TYPE)</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/CCI_OPSHIFT" data-ref="_M/CCI_OPSHIFT">CCI_OPSHIFT</dfn>		24</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/CCI_OP" data-ref="_M/CCI_OP">CCI_OP</dfn>(ci)		((ci)-&gt;flags &gt;&gt; CCI_OPSHIFT)  /* Get op. */</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_N" data-ref="_M/CCI_CALL_N">CCI_CALL_N</dfn>		(IR_CALLN &lt;&lt; CCI_OPSHIFT)</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_A" data-ref="_M/CCI_CALL_A">CCI_CALL_A</dfn>		(IR_CALLA &lt;&lt; CCI_OPSHIFT)</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_L" data-ref="_M/CCI_CALL_L">CCI_CALL_L</dfn>		(IR_CALLL &lt;&lt; CCI_OPSHIFT)</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_S" data-ref="_M/CCI_CALL_S">CCI_CALL_S</dfn>		(IR_CALLS &lt;&lt; CCI_OPSHIFT)</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_FN" data-ref="_M/CCI_CALL_FN">CCI_CALL_FN</dfn>		(CCI_CALL_N|CCI_CC_FASTCALL)</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_FA" data-ref="_M/CCI_CALL_FA">CCI_CALL_FA</dfn>		(CCI_CALL_A|CCI_CC_FASTCALL)</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_FL" data-ref="_M/CCI_CALL_FL">CCI_CALL_FL</dfn>		(CCI_CALL_L|CCI_CC_FASTCALL)</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/CCI_CALL_FS" data-ref="_M/CCI_CALL_FS">CCI_CALL_FS</dfn>		(CCI_CALL_S|CCI_CC_FASTCALL)</u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i>/* C call info flags. */</i></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/CCI_T" data-ref="_M/CCI_T">CCI_T</dfn>			(IRT_GUARD &lt;&lt; CCI_OTSHIFT)  /* May throw. */</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/CCI_L" data-ref="_M/CCI_L">CCI_L</dfn>			0x0100	/* Implicit L arg. */</u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/CCI_CASTU64" data-ref="_M/CCI_CASTU64">CCI_CASTU64</dfn>		0x0200	/* Cast u64 result to number. */</u></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/CCI_NOFPRCLOBBER" data-ref="_M/CCI_NOFPRCLOBBER">CCI_NOFPRCLOBBER</dfn>	0x0400	/* Does not clobber any FPRs. */</u></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/CCI_VARARG" data-ref="_M/CCI_VARARG">CCI_VARARG</dfn>		0x0800	/* Vararg function. */</u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/CCI_CC_MASK" data-ref="_M/CCI_CC_MASK">CCI_CC_MASK</dfn>		0x3000	/* Calling convention mask. */</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/CCI_CC_SHIFT" data-ref="_M/CCI_CC_SHIFT">CCI_CC_SHIFT</dfn>		12</u></td></tr>
+<tr><th id="46">46</th><td><i>/* ORDER CC */</i></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/CCI_CC_CDECL" data-ref="_M/CCI_CC_CDECL">CCI_CC_CDECL</dfn>		0x0000	/* Default cdecl calling convention. */</u></td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/CCI_CC_THISCALL" data-ref="_M/CCI_CC_THISCALL">CCI_CC_THISCALL</dfn>		0x1000	/* Thiscall calling convention. */</u></td></tr>
+<tr><th id="49">49</th><td><u>#define <dfn class="macro" id="_M/CCI_CC_FASTCALL" data-ref="_M/CCI_CC_FASTCALL">CCI_CC_FASTCALL</dfn>		0x2000	/* Fastcall calling convention. */</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/CCI_CC_STDCALL" data-ref="_M/CCI_CC_STDCALL">CCI_CC_STDCALL</dfn>		0x3000	/* Stdcall calling convention. */</u></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><i>/* Extra args for SOFTFP, SPLIT 64 bit. */</i></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/CCI_XARGS_SHIFT" data-ref="_M/CCI_XARGS_SHIFT">CCI_XARGS_SHIFT</dfn>		14</u></td></tr>
+<tr><th id="54">54</th><td><u>#define <dfn class="macro" id="_M/CCI_XARGS" data-ref="_M/CCI_XARGS">CCI_XARGS</dfn>(ci)		(((ci)-&gt;flags &gt;&gt; CCI_XARGS_SHIFT) &amp; 3)</u></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/CCI_XA" data-ref="_M/CCI_XA">CCI_XA</dfn>			(1u &lt;&lt; CCI_XARGS_SHIFT)</u></td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><u>#<span data-ppcond="57">if</span> <a class="macro" href="lj_arch.h.html#581" title="((!1) &amp;&amp; 0)" data-ref="_M/LJ_SOFTFP32">LJ_SOFTFP32</a> || (<a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a> &amp;&amp; <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a>)</u></td></tr>
+<tr><th id="58">58</th><td><u>#define CCI_XNARGS(ci)		(CCI_NARGS((ci)) + CCI_XARGS((ci)))</u></td></tr>
+<tr><th id="59">59</th><td><u>#<span data-ppcond="57">else</span></u></td></tr>
+<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/CCI_XNARGS" data-ref="_M/CCI_XNARGS">CCI_XNARGS</dfn>(ci)		CCI_NARGS((ci))</u></td></tr>
+<tr><th id="61">61</th><td><u>#<span data-ppcond="57">endif</span></u></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><i>/* Helpers for conditional function definitions. */</i></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_ANY" data-ref="_M/IRCALLCOND_ANY">IRCALLCOND_ANY</dfn>(x)		x</u></td></tr>
+<tr><th id="65">65</th><td></td></tr>
+<tr><th id="66">66</th><td><u>#<span data-ppcond="66">if</span> <a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="67">67</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_FPMATH" data-ref="_M/IRCALLCOND_FPMATH">IRCALLCOND_FPMATH</dfn>(x)		NULL</u></td></tr>
+<tr><th id="68">68</th><td><u>#<span data-ppcond="66">else</span></u></td></tr>
+<tr><th id="69">69</th><td><u>#define IRCALLCOND_FPMATH(x)		x</u></td></tr>
+<tr><th id="70">70</th><td><u>#<span data-ppcond="66">endif</span></u></td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="72">if</span> <a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a></u></td></tr>
+<tr><th id="73">73</th><td><u>#define IRCALLCOND_SOFTFP(x)		x</u></td></tr>
+<tr><th id="74">74</th><td><u>#if LJ_HASFFI</u></td></tr>
+<tr><th id="75">75</th><td><u>#define IRCALLCOND_SOFTFP_FFI(x)	x</u></td></tr>
+<tr><th id="76">76</th><td><u>#else</u></td></tr>
+<tr><th id="77">77</th><td><u>#define IRCALLCOND_SOFTFP_FFI(x)	NULL</u></td></tr>
+<tr><th id="78">78</th><td><u>#endif</u></td></tr>
+<tr><th id="79">79</th><td><u>#<span data-ppcond="72">else</span></u></td></tr>
+<tr><th id="80">80</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_SOFTFP" data-ref="_M/IRCALLCOND_SOFTFP">IRCALLCOND_SOFTFP</dfn>(x)		NULL</u></td></tr>
+<tr><th id="81">81</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_SOFTFP_FFI" data-ref="_M/IRCALLCOND_SOFTFP_FFI">IRCALLCOND_SOFTFP_FFI</dfn>(x)	NULL</u></td></tr>
+<tr><th id="82">82</th><td><u>#<span data-ppcond="72">endif</span></u></td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><u>#<span data-ppcond="84">if</span> <a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a> &amp;&amp; LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="85">85</th><td><u>#define IRCALLCOND_SOFTFP_MIPS(x)	x</u></td></tr>
+<tr><th id="86">86</th><td><u>#<span data-ppcond="84">else</span></u></td></tr>
+<tr><th id="87">87</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_SOFTFP_MIPS" data-ref="_M/IRCALLCOND_SOFTFP_MIPS">IRCALLCOND_SOFTFP_MIPS</dfn>(x)	NULL</u></td></tr>
+<tr><th id="88">88</th><td><u>#<span data-ppcond="84">endif</span></u></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><u>#<span data-ppcond="90">if</span> <a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a> &amp;&amp; LJ_TARGET_MIPS64</u></td></tr>
+<tr><th id="91">91</th><td><u>#define IRCALLCOND_SOFTFP_MIPS64(x)	x</u></td></tr>
+<tr><th id="92">92</th><td><u>#<span data-ppcond="90">else</span></u></td></tr>
+<tr><th id="93">93</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_SOFTFP_MIPS64" data-ref="_M/IRCALLCOND_SOFTFP_MIPS64">IRCALLCOND_SOFTFP_MIPS64</dfn>(x)	NULL</u></td></tr>
+<tr><th id="94">94</th><td><u>#<span data-ppcond="90">endif</span></u></td></tr>
+<tr><th id="95">95</th><td></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/LJ_NEED_FP64" data-ref="_M/LJ_NEED_FP64">LJ_NEED_FP64</dfn>	(LJ_TARGET_ARM || LJ_TARGET_PPC || LJ_TARGET_MIPS)</u></td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><u>#<span data-ppcond="98">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a> &amp;&amp; (<a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a> || <a class="macro" href="#96" title="(LJ_TARGET_ARM || LJ_TARGET_PPC || LJ_TARGET_MIPS)" data-ref="_M/LJ_NEED_FP64">LJ_NEED_FP64</a>)</u></td></tr>
+<tr><th id="99">99</th><td><u>#define IRCALLCOND_FP64_FFI(x)		x</u></td></tr>
+<tr><th id="100">100</th><td><u>#<span data-ppcond="98">else</span></u></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_FP64_FFI" data-ref="_M/IRCALLCOND_FP64_FFI">IRCALLCOND_FP64_FFI</dfn>(x)		NULL</u></td></tr>
+<tr><th id="102">102</th><td><u>#<span data-ppcond="98">endif</span></u></td></tr>
+<tr><th id="103">103</th><td></td></tr>
+<tr><th id="104">104</th><td><u>#<span data-ppcond="104">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="105">105</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_FFI" data-ref="_M/IRCALLCOND_FFI">IRCALLCOND_FFI</dfn>(x)		x</u></td></tr>
+<tr><th id="106">106</th><td><u>#<span data-ppcond="106">if</span> <a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a></u></td></tr>
+<tr><th id="107">107</th><td><u>#define IRCALLCOND_FFI32(x)		x</u></td></tr>
+<tr><th id="108">108</th><td><u>#<span data-ppcond="106">else</span></u></td></tr>
+<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/IRCALLCOND_FFI32" data-ref="_M/IRCALLCOND_FFI32">IRCALLCOND_FFI32</dfn>(x)		NULL</u></td></tr>
+<tr><th id="110">110</th><td><u>#<span data-ppcond="106">endif</span></u></td></tr>
+<tr><th id="111">111</th><td><u>#<span data-ppcond="104">else</span></u></td></tr>
+<tr><th id="112">112</th><td><u>#define IRCALLCOND_FFI(x)		NULL</u></td></tr>
+<tr><th id="113">113</th><td><u>#define IRCALLCOND_FFI32(x)		NULL</u></td></tr>
+<tr><th id="114">114</th><td><u>#<span data-ppcond="104">endif</span></u></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><u>#<span data-ppcond="116">if</span> <a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a></u></td></tr>
+<tr><th id="117">117</th><td><u>#define XA_FP		CCI_XA</u></td></tr>
+<tr><th id="118">118</th><td><u>#define XA2_FP		(CCI_XA+CCI_XA)</u></td></tr>
+<tr><th id="119">119</th><td><u>#<span data-ppcond="116">else</span></u></td></tr>
+<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/XA_FP" data-ref="_M/XA_FP">XA_FP</dfn>		0</u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/XA2_FP" data-ref="_M/XA2_FP">XA2_FP</dfn>		0</u></td></tr>
+<tr><th id="122">122</th><td><u>#<span data-ppcond="116">endif</span></u></td></tr>
+<tr><th id="123">123</th><td></td></tr>
+<tr><th id="124">124</th><td><u>#<span data-ppcond="124">if</span> <a class="macro" href="lj_arch.h.html#581" title="((!1) &amp;&amp; 0)" data-ref="_M/LJ_SOFTFP32">LJ_SOFTFP32</a></u></td></tr>
+<tr><th id="125">125</th><td><u>#define XA_FP32		CCI_XA</u></td></tr>
+<tr><th id="126">126</th><td><u>#define XA2_FP32	(CCI_XA+CCI_XA)</u></td></tr>
+<tr><th id="127">127</th><td><u>#<span data-ppcond="124">else</span></u></td></tr>
+<tr><th id="128">128</th><td><u>#define <dfn class="macro" id="_M/XA_FP32" data-ref="_M/XA_FP32">XA_FP32</dfn>		0</u></td></tr>
+<tr><th id="129">129</th><td><u>#define <dfn class="macro" id="_M/XA2_FP32" data-ref="_M/XA2_FP32">XA2_FP32</dfn>	0</u></td></tr>
+<tr><th id="130">130</th><td><u>#<span data-ppcond="124">endif</span></u></td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td><u>#<span data-ppcond="132">if</span> <a class="macro" href="lj_arch.h.html#599" title="0" data-ref="_M/LJ_32">LJ_32</a></u></td></tr>
+<tr><th id="133">133</th><td><u>#define XA_64		CCI_XA</u></td></tr>
+<tr><th id="134">134</th><td><u>#define XA2_64		(CCI_XA+CCI_XA)</u></td></tr>
+<tr><th id="135">135</th><td><u>#<span data-ppcond="132">else</span></u></td></tr>
+<tr><th id="136">136</th><td><u>#define <dfn class="macro" id="_M/XA_64" data-ref="_M/XA_64">XA_64</dfn>		0</u></td></tr>
+<tr><th id="137">137</th><td><u>#define <dfn class="macro" id="_M/XA2_64" data-ref="_M/XA2_64">XA2_64</dfn>		0</u></td></tr>
+<tr><th id="138">138</th><td><u>#<span data-ppcond="132">endif</span></u></td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td><i>/* Function definitions for CALL* instructions. */</i></td></tr>
+<tr><th id="141">141</th><td><u>#define <dfn class="macro" id="_M/IRCALLDEF" data-ref="_M/IRCALLDEF">IRCALLDEF</dfn>(_) \</u></td></tr>
+<tr><th id="142">142</th><td><u>  _(ANY,	lj_str_cmp,		2,  FN, INT, CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="143">143</th><td><u>  _(ANY,	lj_str_find,		4,   N, PGC, 0) \</u></td></tr>
+<tr><th id="144">144</th><td><u>  _(ANY,	lj_str_new,		3,   S, STR, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="145">145</th><td><u>  _(ANY,	lj_strscan_num,		2,  FN, INT, 0) \</u></td></tr>
+<tr><th id="146">146</th><td><u>  _(ANY,	lj_strfmt_int,		2,  FN, STR, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="147">147</th><td><u>  _(ANY,	lj_strfmt_num,		2,  FN, STR, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="148">148</th><td><u>  _(ANY,	lj_strfmt_char,		2,  FN, STR, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="149">149</th><td><u>  _(ANY,	lj_strfmt_putint,	2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="150">150</th><td><u>  _(ANY,	lj_strfmt_putnum,	2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="151">151</th><td><u>  _(ANY,	lj_strfmt_putquoted,	2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="152">152</th><td><u>  _(ANY,	lj_strfmt_putfxint,	3,   L, PGC, XA_64|CCI_T) \</u></td></tr>
+<tr><th id="153">153</th><td><u>  _(ANY,	lj_strfmt_putfnum_int,	3,   L, PGC, XA_FP|CCI_T) \</u></td></tr>
+<tr><th id="154">154</th><td><u>  _(ANY,	lj_strfmt_putfnum_uint,	3,   L, PGC, XA_FP|CCI_T) \</u></td></tr>
+<tr><th id="155">155</th><td><u>  _(ANY,	lj_strfmt_putfnum,	3,   L, PGC, XA_FP|CCI_T) \</u></td></tr>
+<tr><th id="156">156</th><td><u>  _(ANY,	lj_strfmt_putfstr,	3,   L, PGC, CCI_T) \</u></td></tr>
+<tr><th id="157">157</th><td><u>  _(ANY,	lj_strfmt_putfchar,	3,   L, PGC, CCI_T) \</u></td></tr>
+<tr><th id="158">158</th><td><u>  _(ANY,	lj_buf_putmem,		3,   S, PGC, CCI_T) \</u></td></tr>
+<tr><th id="159">159</th><td><u>  _(ANY,	lj_buf_putstr,		2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="160">160</th><td><u>  _(ANY,	lj_buf_putchar,		2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="161">161</th><td><u>  _(ANY,	lj_buf_putstr_reverse,	2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="162">162</th><td><u>  _(ANY,	lj_buf_putstr_lower,	2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="163">163</th><td><u>  _(ANY,	lj_buf_putstr_upper,	2,  FL, PGC, CCI_T) \</u></td></tr>
+<tr><th id="164">164</th><td><u>  _(ANY,	lj_buf_putstr_rep,	3,   L, PGC, CCI_T) \</u></td></tr>
+<tr><th id="165">165</th><td><u>  _(ANY,	lj_buf_puttab,		5,   L, PGC, CCI_T) \</u></td></tr>
+<tr><th id="166">166</th><td><u>  _(ANY,	lj_buf_tostr,		1,  FL, STR, CCI_T) \</u></td></tr>
+<tr><th id="167">167</th><td><u>  _(ANY,	lj_tab_new_ah,		3,   A, TAB, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="168">168</th><td><u>  _(ANY,	lj_tab_new1,		2,  FA, TAB, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="169">169</th><td><u>  _(ANY,	lj_tab_dup,		2,  FA, TAB, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="170">170</th><td><u>  _(ANY,	lj_tab_clear,		1,  FS, NIL, 0) \</u></td></tr>
+<tr><th id="171">171</th><td><u>  _(ANY,	lj_tab_newkey,		3,   S, PGC, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="172">172</th><td><u>  _(ANY,	lj_tab_len,		1,  FL, INT, 0) \</u></td></tr>
+<tr><th id="173">173</th><td><u>  _(ANY,	lj_tab_len_hint,	2,  FL, INT, 0) \</u></td></tr>
+<tr><th id="174">174</th><td><u>  _(ANY,	lj_gc_step_jit,		2,  FS, NIL, CCI_L) \</u></td></tr>
+<tr><th id="175">175</th><td><u>  _(ANY,	lj_gc_barrieruv,	2,  FS, NIL, 0) \</u></td></tr>
+<tr><th id="176">176</th><td><u>  _(ANY,	lj_mem_newgco,		2,  FA, PGC, CCI_L|CCI_T) \</u></td></tr>
+<tr><th id="177">177</th><td><u>  _(ANY,	lj_prng_u64d,		1,  FS, NUM, CCI_CASTU64) \</u></td></tr>
+<tr><th id="178">178</th><td><u>  _(ANY,	lj_vm_modi,		2,  FN, INT, 0) \</u></td></tr>
+<tr><th id="179">179</th><td><u>  _(ANY,	log10,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="180">180</th><td><u>  _(ANY,	exp,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="181">181</th><td><u>  _(ANY,	sin,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="182">182</th><td><u>  _(ANY,	cos,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="183">183</th><td><u>  _(ANY,	tan,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="184">184</th><td><u>  _(ANY,	asin,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="185">185</th><td><u>  _(ANY,	acos,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="186">186</th><td><u>  _(ANY,	atan,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="187">187</th><td><u>  _(ANY,	sinh,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="188">188</th><td><u>  _(ANY,	cosh,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="189">189</th><td><u>  _(ANY,	tanh,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="190">190</th><td><u>  _(ANY,	fputc,			2,   S, INT, 0) \</u></td></tr>
+<tr><th id="191">191</th><td><u>  _(ANY,	fwrite,			4,   S, INT, 0) \</u></td></tr>
+<tr><th id="192">192</th><td><u>  _(ANY,	fflush,			1,   S, INT, 0) \</u></td></tr>
+<tr><th id="193">193</th><td><u>  /* ORDER FPM */ \</u></td></tr>
+<tr><th id="194">194</th><td><u>  _(FPMATH,	lj_vm_floor,		1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="195">195</th><td><u>  _(FPMATH,	lj_vm_ceil,		1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="196">196</th><td><u>  _(FPMATH,	lj_vm_trunc,		1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="197">197</th><td><u>  _(FPMATH,	sqrt,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="198">198</th><td><u>  _(ANY,	log,			1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="199">199</th><td><u>  _(ANY,	lj_vm_log2,		1,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="200">200</th><td><u>  _(ANY,	lj_vm_powi,		2,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="201">201</th><td><u>  _(ANY,	pow,			2,   N, NUM, XA2_FP) \</u></td></tr>
+<tr><th id="202">202</th><td><u>  _(ANY,	atan2,			2,   N, NUM, XA2_FP) \</u></td></tr>
+<tr><th id="203">203</th><td><u>  _(ANY,	ldexp,			2,   N, NUM, XA_FP) \</u></td></tr>
+<tr><th id="204">204</th><td><u>  _(SOFTFP,	lj_vm_tobit,		1,   N, INT, XA_FP32) \</u></td></tr>
+<tr><th id="205">205</th><td><u>  _(SOFTFP,	softfp_add,		2,   N, NUM, XA2_FP32) \</u></td></tr>
+<tr><th id="206">206</th><td><u>  _(SOFTFP,	softfp_sub,		2,   N, NUM, XA2_FP32) \</u></td></tr>
+<tr><th id="207">207</th><td><u>  _(SOFTFP,	softfp_mul,		2,   N, NUM, XA2_FP32) \</u></td></tr>
+<tr><th id="208">208</th><td><u>  _(SOFTFP,	softfp_div,		2,   N, NUM, XA2_FP32) \</u></td></tr>
+<tr><th id="209">209</th><td><u>  _(SOFTFP,	softfp_cmp,		2,   N, NIL, XA2_FP32) \</u></td></tr>
+<tr><th id="210">210</th><td><u>  _(SOFTFP,	softfp_i2d,		1,   N, NUM, 0) \</u></td></tr>
+<tr><th id="211">211</th><td><u>  _(SOFTFP,	softfp_d2i,		1,   N, INT, XA_FP32) \</u></td></tr>
+<tr><th id="212">212</th><td><u>  _(SOFTFP_MIPS, lj_vm_sfmin,		2,   N, NUM, XA2_FP32) \</u></td></tr>
+<tr><th id="213">213</th><td><u>  _(SOFTFP_MIPS, lj_vm_sfmax,		2,   N, NUM, XA2_FP32) \</u></td></tr>
+<tr><th id="214">214</th><td><u>  _(SOFTFP_MIPS64, lj_vm_tointg,	1,   N, INT, 0) \</u></td></tr>
+<tr><th id="215">215</th><td><u>  _(SOFTFP_FFI,	softfp_ui2d,		1,   N, NUM, 0) \</u></td></tr>
+<tr><th id="216">216</th><td><u>  _(SOFTFP_FFI,	softfp_f2d,		1,   N, NUM, 0) \</u></td></tr>
+<tr><th id="217">217</th><td><u>  _(SOFTFP_FFI,	softfp_d2ui,		1,   N, INT, XA_FP32) \</u></td></tr>
+<tr><th id="218">218</th><td><u>  _(SOFTFP_FFI,	softfp_d2f,		1,   N, FLOAT, XA_FP32) \</u></td></tr>
+<tr><th id="219">219</th><td><u>  _(SOFTFP_FFI,	softfp_i2f,		1,   N, FLOAT, 0) \</u></td></tr>
+<tr><th id="220">220</th><td><u>  _(SOFTFP_FFI,	softfp_ui2f,		1,   N, FLOAT, 0) \</u></td></tr>
+<tr><th id="221">221</th><td><u>  _(SOFTFP_FFI,	softfp_f2i,		1,   N, INT, 0) \</u></td></tr>
+<tr><th id="222">222</th><td><u>  _(SOFTFP_FFI,	softfp_f2ui,		1,   N, INT, 0) \</u></td></tr>
+<tr><th id="223">223</th><td><u>  _(FP64_FFI,	fp64_l2d,		1,   N, NUM, XA_64) \</u></td></tr>
+<tr><th id="224">224</th><td><u>  _(FP64_FFI,	fp64_ul2d,		1,   N, NUM, XA_64) \</u></td></tr>
+<tr><th id="225">225</th><td><u>  _(FP64_FFI,	fp64_l2f,		1,   N, FLOAT, XA_64) \</u></td></tr>
+<tr><th id="226">226</th><td><u>  _(FP64_FFI,	fp64_ul2f,		1,   N, FLOAT, XA_64) \</u></td></tr>
+<tr><th id="227">227</th><td><u>  _(FP64_FFI,	fp64_d2l,		1,   N, I64, XA_FP) \</u></td></tr>
+<tr><th id="228">228</th><td><u>  _(FP64_FFI,	fp64_d2ul,		1,   N, U64, XA_FP) \</u></td></tr>
+<tr><th id="229">229</th><td><u>  _(FP64_FFI,	fp64_f2l,		1,   N, I64, 0) \</u></td></tr>
+<tr><th id="230">230</th><td><u>  _(FP64_FFI,	fp64_f2ul,		1,   N, U64, 0) \</u></td></tr>
+<tr><th id="231">231</th><td><u>  _(FFI,	lj_carith_divi64,	2,   N, I64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="232">232</th><td><u>  _(FFI,	lj_carith_divu64,	2,   N, U64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="233">233</th><td><u>  _(FFI,	lj_carith_modi64,	2,   N, I64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="234">234</th><td><u>  _(FFI,	lj_carith_modu64,	2,   N, U64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="235">235</th><td><u>  _(FFI,	lj_carith_powi64,	2,   N, I64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="236">236</th><td><u>  _(FFI,	lj_carith_powu64,	2,   N, U64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="237">237</th><td><u>  _(FFI,	lj_cdata_newv,		4,   S, CDATA, CCI_L) \</u></td></tr>
+<tr><th id="238">238</th><td><u>  _(FFI,	lj_cdata_setfin,	4,   S, NIL, CCI_L) \</u></td></tr>
+<tr><th id="239">239</th><td><u>  _(FFI,	strlen,			1,   L, INTP, 0) \</u></td></tr>
+<tr><th id="240">240</th><td><u>  _(FFI,	memcpy,			3,   S, PTR, 0) \</u></td></tr>
+<tr><th id="241">241</th><td><u>  _(FFI,	memset,			3,   S, PTR, 0) \</u></td></tr>
+<tr><th id="242">242</th><td><u>  _(FFI,	lj_vm_errno,		0,   S, INT, CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="243">243</th><td><u>  _(FFI32,	lj_carith_mul64,	2,   N, I64, XA2_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="244">244</th><td><u>  _(FFI32,	lj_carith_shl64,	2,   N, U64, XA_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="245">245</th><td><u>  _(FFI32,	lj_carith_shr64,	2,   N, U64, XA_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="246">246</th><td><u>  _(FFI32,	lj_carith_sar64,	2,   N, U64, XA_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="247">247</th><td><u>  _(FFI32,	lj_carith_rol64,	2,   N, U64, XA_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="248">248</th><td><u>  _(FFI32,	lj_carith_ror64,	2,   N, U64, XA_64|CCI_NOFPRCLOBBER) \</u></td></tr>
+<tr><th id="249">249</th><td><u>  \</u></td></tr>
+<tr><th id="250">250</th><td><u>  /* End of list. */</u></td></tr>
+<tr><th id="251">251</th><td></td></tr>
+<tr><th id="252">252</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="253">253</th><td><u>#define <dfn class="macro" id="_M/IRCALLENUM" data-ref="_M/IRCALLENUM">IRCALLENUM</dfn>(cond, name, nargs, kind, type, flags)	IRCALL_##name,</u></td></tr>
+<tr><th id="254">254</th><td><a class="macro" href="#141" title="IRCALL_lj_str_cmp, IRCALL_lj_str_find, IRCALL_lj_str_new, IRCALL_lj_strscan_num, IRCALL_lj_strfmt_int, IRCALL_lj_strfmt_num, IRCALL_lj_strfmt_char, IRCALL_lj_strfmt_putint, IRCALL_lj_strfmt_putnum, IRCALL_lj_strfmt_putquoted, IRCALL_lj_strfmt_putfxint, IRCALL_lj_strfmt_putfnum_int, IRCALL_lj_strfmt_putfnum_uint, IRCALL_lj_strfmt_putfnum, IRCALL_lj_strfmt_putfstr, IRCALL_lj_strfmt_putfchar, IRCALL_lj_buf_putmem, IRCALL_lj_buf_putstr, IRCALL_lj_buf_putchar, IRCALL_lj_buf_putstr_reverse, IRCALL_lj_buf_putstr_lower, IRCALL_lj_buf_putstr_upper, IRCALL_lj_buf_putstr_rep, IRCALL_lj_buf_puttab, IRCALL_lj_buf_tostr, IRCALL_lj_tab_new_ah, IRCALL_lj_tab_new1, IRCALL_lj_tab_dup, IRCALL_lj_tab_clear, IRCALL_lj_tab_newkey, IRCALL_lj_tab_len, IRCALL_lj_tab_len_hint, IRCALL_lj_gc_step_jit, IRCALL_lj_gc_barrieruv, IRCALL_lj_mem_newgco, IRCALL_lj_prng_u64d, IRCALL_lj_vm_modi, IRCALL_log10, IRCALL_exp, IRCALL_sin, IRCALL_cos, IRCALL_tan, IRCALL_asin, IRCALL_acos, IRCALL_atan, IRCALL_sinh, IRCALL_cosh, IRCALL_tanh, IRCALL_fputc, IRCALL_fwrite, IRCALL_fflush, IRCALL_lj_vm_floor, IRCALL_lj_vm_ceil, IRCALL_lj_vm_trunc, IRCALL_sqrt, IRCALL_log, IRCALL_lj_vm_log2, IRCALL_lj_vm_powi, IRCALL_pow, IRCALL_atan2, IRCALL_ldexp, IRCALL_lj_vm_tobit, IRCALL_softfp_add, IRCALL_softfp_sub, IRCALL_softfp_mul, IRCALL_softfp_div, IRCALL_softfp_cmp, IRCALL_softfp_i2d, IRCALL_softfp_d2i, IRCALL_lj_vm_sfmin, IRCALL_lj_vm_sfmax, IRCALL_lj_vm_tointg, IRCALL_softfp_ui2d, IRCALL_softfp_f2d, IRCALL_softfp_d2ui, IRCALL_softfp_d2f, IRCALL_softfp_i2f, IRCALL_softfp_ui2f, IRCALL_softfp_f2i, IRCALL_softfp_f2ui, IRCALL_fp64_l2d, IRCALL_fp64_ul2d, IRCALL_fp64_l2f, IRCALL_fp64_ul2f, IRCALL_fp64_d2l, IRCALL_fp64_d2ul, IRCALL_fp64_f2l, IRCALL_fp64_f2ul, IRCALL_lj_carith_divi64, IRCALL_lj_carith_divu64, IRCALL_lj_carith_modi64, IRCALL_lj_carith_modu64, IRCALL_lj_carith_powi64, IRCALL_lj_carith_powu64, IRCALL_lj_cdata_newv, IRCALL_lj_cdata_setfin, IRCALL_strlen, IRCALL_memcpy, IRCALL_memset, IRCALL_lj_vm_errno, IRCALL_lj_carith_mul64, IRCALL_lj_carith_shl64, IRCALL_lj_carith_shr64, IRCALL_lj_carith_sar64, IRCALL_lj_carith_rol64, IRCALL_lj_carith_ror64," data-ref="_M/IRCALLDEF">IRCALLDEF</a>(IRCALLENUM)</td></tr>
+<tr><th id="255">255</th><td><u>#undef <a class="macro" href="#253" data-ref="_M/IRCALLENUM">IRCALLENUM</a></u></td></tr>
+<tr><th id="256">256</th><td>  <dfn class="enum" id="IRCALL__MAX" title='IRCALL__MAX' data-ref="IRCALL__MAX" data-ref-filename="IRCALL__MAX">IRCALL__MAX</dfn></td></tr>
+<tr><th id="257">257</th><td>} <dfn class="typedef" id="IRCallID" title='IRCallID' data-type='enum IRCallID' data-ref="IRCallID" data-ref-filename="IRCallID">IRCallID</dfn>;</td></tr>
+<tr><th id="258">258</th><td></td></tr>
+<tr><th id="259">259</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_ir.h.html#TRef" title='TRef' data-type='uint32_t' data-ref="TRef" data-ref-filename="TRef">TRef</a> <dfn class="decl fn" id="lj_ir_call" title='lj_ir_call' data-ref="lj_ir_call" data-ref-filename="lj_ir_call">lj_ir_call</dfn>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col7 decl" id="867J" title='J' data-type='jit_State *' data-ref="867J" data-ref-filename="867J">J</dfn>, <a class="typedef" href="#IRCallID" title='IRCallID' data-type='enum IRCallID' data-ref="IRCallID" data-ref-filename="IRCallID">IRCallID</a> <dfn class="local col8 decl" id="868id" title='id' data-type='IRCallID' data-ref="868id" data-ref-filename="868id">id</dfn>, ...);</td></tr>
+<tr><th id="260">260</th><td></td></tr>
+<tr><th id="261">261</th><td><a class="macro" href="lj_def.h.html#328" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_DATA">LJ_DATA</a> <em>const</em> <a class="typedef" href="#CCallInfo" title='CCallInfo' data-type='struct CCallInfo' data-ref="CCallInfo" data-ref-filename="CCallInfo">CCallInfo</a> <dfn class="decl" id="lj_ir_callinfo" title='lj_ir_callinfo' data-ref="lj_ir_callinfo" data-ref-filename="lj_ir_callinfo">lj_ir_callinfo</dfn>[<a class="enum" href="#IRCALL__MAX" title='IRCALL__MAX' data-ref="IRCALL__MAX" data-ref-filename="IRCALL__MAX">IRCALL__MAX</a>+<var>1</var>];</td></tr>
+<tr><th id="262">262</th><td></td></tr>
+<tr><th id="263">263</th><td><i>/* Soft-float declarations. */</i></td></tr>
+<tr><th id="264">264</th><td><u>#<span data-ppcond="264">if</span> <a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a></u></td></tr>
+<tr><th id="265">265</th><td><u>#if LJ_TARGET_ARM</u></td></tr>
+<tr><th id="266">266</th><td><u>#define softfp_add __aeabi_dadd</u></td></tr>
+<tr><th id="267">267</th><td><u>#define softfp_sub __aeabi_dsub</u></td></tr>
+<tr><th id="268">268</th><td><u>#define softfp_mul __aeabi_dmul</u></td></tr>
+<tr><th id="269">269</th><td><u>#define softfp_div __aeabi_ddiv</u></td></tr>
+<tr><th id="270">270</th><td><u>#define softfp_cmp __aeabi_cdcmple</u></td></tr>
+<tr><th id="271">271</th><td><u>#define softfp_i2d __aeabi_i2d</u></td></tr>
+<tr><th id="272">272</th><td><u>#define softfp_d2i __aeabi_d2iz</u></td></tr>
+<tr><th id="273">273</th><td><u>#define softfp_ui2d __aeabi_ui2d</u></td></tr>
+<tr><th id="274">274</th><td><u>#define softfp_f2d __aeabi_f2d</u></td></tr>
+<tr><th id="275">275</th><td><u>#define softfp_d2ui __aeabi_d2uiz</u></td></tr>
+<tr><th id="276">276</th><td><u>#define softfp_d2f __aeabi_d2f</u></td></tr>
+<tr><th id="277">277</th><td><u>#define softfp_i2f __aeabi_i2f</u></td></tr>
+<tr><th id="278">278</th><td><u>#define softfp_ui2f __aeabi_ui2f</u></td></tr>
+<tr><th id="279">279</th><td><u>#define softfp_f2i __aeabi_f2iz</u></td></tr>
+<tr><th id="280">280</th><td><u>#define softfp_f2ui __aeabi_f2uiz</u></td></tr>
+<tr><th id="281">281</th><td><u>#define fp64_l2d __aeabi_l2d</u></td></tr>
+<tr><th id="282">282</th><td><u>#define fp64_ul2d __aeabi_ul2d</u></td></tr>
+<tr><th id="283">283</th><td><u>#define fp64_l2f __aeabi_l2f</u></td></tr>
+<tr><th id="284">284</th><td><u>#define fp64_ul2f __aeabi_ul2f</u></td></tr>
+<tr><th id="285">285</th><td><u>#if LJ_TARGET_IOS</u></td></tr>
+<tr><th id="286">286</th><td><u>#define fp64_d2l __fixdfdi</u></td></tr>
+<tr><th id="287">287</th><td><u>#define fp64_d2ul __fixunsdfdi</u></td></tr>
+<tr><th id="288">288</th><td><u>#define fp64_f2l __fixsfdi</u></td></tr>
+<tr><th id="289">289</th><td><u>#define fp64_f2ul __fixunssfdi</u></td></tr>
+<tr><th id="290">290</th><td><u>#else</u></td></tr>
+<tr><th id="291">291</th><td><u>#define fp64_d2l __aeabi_d2lz</u></td></tr>
+<tr><th id="292">292</th><td><u>#define fp64_d2ul __aeabi_d2ulz</u></td></tr>
+<tr><th id="293">293</th><td><u>#define fp64_f2l __aeabi_f2lz</u></td></tr>
+<tr><th id="294">294</th><td><u>#define fp64_f2ul __aeabi_f2ulz</u></td></tr>
+<tr><th id="295">295</th><td><u>#endif</u></td></tr>
+<tr><th id="296">296</th><td><u>#elif LJ_TARGET_MIPS || LJ_TARGET_PPC</u></td></tr>
+<tr><th id="297">297</th><td><u>#define softfp_add __adddf3</u></td></tr>
+<tr><th id="298">298</th><td><u>#define softfp_sub __subdf3</u></td></tr>
+<tr><th id="299">299</th><td><u>#define softfp_mul __muldf3</u></td></tr>
+<tr><th id="300">300</th><td><u>#define softfp_div __divdf3</u></td></tr>
+<tr><th id="301">301</th><td><u>#define softfp_cmp __ledf2</u></td></tr>
+<tr><th id="302">302</th><td><u>#define softfp_i2d __floatsidf</u></td></tr>
+<tr><th id="303">303</th><td><u>#define softfp_d2i __fixdfsi</u></td></tr>
+<tr><th id="304">304</th><td><u>#define softfp_ui2d __floatunsidf</u></td></tr>
+<tr><th id="305">305</th><td><u>#define softfp_f2d __extendsfdf2</u></td></tr>
+<tr><th id="306">306</th><td><u>#define softfp_d2ui __fixunsdfsi</u></td></tr>
+<tr><th id="307">307</th><td><u>#define softfp_d2f __truncdfsf2</u></td></tr>
+<tr><th id="308">308</th><td><u>#define softfp_i2f __floatsisf</u></td></tr>
+<tr><th id="309">309</th><td><u>#define softfp_ui2f __floatunsisf</u></td></tr>
+<tr><th id="310">310</th><td><u>#define softfp_f2i __fixsfsi</u></td></tr>
+<tr><th id="311">311</th><td><u>#define softfp_f2ui __fixunssfsi</u></td></tr>
+<tr><th id="312">312</th><td><u>#else</u></td></tr>
+<tr><th id="313">313</th><td><u>#error "Missing soft-float definitions for target architecture"</u></td></tr>
+<tr><th id="314">314</th><td><u>#endif</u></td></tr>
+<tr><th id="315">315</th><td><b>extern</b> <em>double</em> softfp_add(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="316">316</th><td><b>extern</b> <em>double</em> softfp_sub(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="317">317</th><td><b>extern</b> <em>double</em> softfp_mul(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="318">318</th><td><b>extern</b> <em>double</em> softfp_div(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="319">319</th><td><b>extern</b> <em>void</em> softfp_cmp(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="320">320</th><td><b>extern</b> <em>double</em> softfp_i2d(int32_t a);</td></tr>
+<tr><th id="321">321</th><td><b>extern</b> int32_t softfp_d2i(<em>double</em> a);</td></tr>
+<tr><th id="322">322</th><td><u>#if LJ_HASFFI</u></td></tr>
+<tr><th id="323">323</th><td><b>extern</b> <em>double</em> softfp_ui2d(uint32_t a);</td></tr>
+<tr><th id="324">324</th><td><b>extern</b> <em>double</em> softfp_f2d(<em>float</em> a);</td></tr>
+<tr><th id="325">325</th><td><b>extern</b> uint32_t softfp_d2ui(<em>double</em> a);</td></tr>
+<tr><th id="326">326</th><td><b>extern</b> <em>float</em> softfp_d2f(<em>double</em> a);</td></tr>
+<tr><th id="327">327</th><td><b>extern</b> <em>float</em> softfp_i2f(int32_t a);</td></tr>
+<tr><th id="328">328</th><td><b>extern</b> <em>float</em> softfp_ui2f(uint32_t a);</td></tr>
+<tr><th id="329">329</th><td><b>extern</b> int32_t softfp_f2i(<em>float</em> a);</td></tr>
+<tr><th id="330">330</th><td><b>extern</b> uint32_t softfp_f2ui(<em>float</em> a);</td></tr>
+<tr><th id="331">331</th><td><u>#endif</u></td></tr>
+<tr><th id="332">332</th><td><u>#if LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="333">333</th><td><b>extern</b> <em>double</em> lj_vm_sfmin(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="334">334</th><td><b>extern</b> <em>double</em> lj_vm_sfmax(<em>double</em> a, <em>double</em> b);</td></tr>
+<tr><th id="335">335</th><td><u>#endif</u></td></tr>
+<tr><th id="336">336</th><td><u>#<span data-ppcond="264">endif</span></u></td></tr>
+<tr><th id="337">337</th><td></td></tr>
+<tr><th id="338">338</th><td><u>#<span data-ppcond="338">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a> &amp;&amp; <a class="macro" href="#96" title="(LJ_TARGET_ARM || LJ_TARGET_PPC || LJ_TARGET_MIPS)" data-ref="_M/LJ_NEED_FP64">LJ_NEED_FP64</a> &amp;&amp; !(LJ_TARGET_ARM &amp;&amp; <a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a>)</u></td></tr>
+<tr><th id="339">339</th><td><u>#if defined(__GNUC__) || defined(__clang__)</u></td></tr>
+<tr><th id="340">340</th><td><u>#define fp64_l2d __floatdidf</u></td></tr>
+<tr><th id="341">341</th><td><u>#define fp64_ul2d __floatundidf</u></td></tr>
+<tr><th id="342">342</th><td><u>#define fp64_l2f __floatdisf</u></td></tr>
+<tr><th id="343">343</th><td><u>#define fp64_ul2f __floatundisf</u></td></tr>
+<tr><th id="344">344</th><td><u>#define fp64_d2l __fixdfdi</u></td></tr>
+<tr><th id="345">345</th><td><u>#define fp64_d2ul __fixunsdfdi</u></td></tr>
+<tr><th id="346">346</th><td><u>#define fp64_f2l __fixsfdi</u></td></tr>
+<tr><th id="347">347</th><td><u>#define fp64_f2ul __fixunssfdi</u></td></tr>
+<tr><th id="348">348</th><td><u>#else</u></td></tr>
+<tr><th id="349">349</th><td><u>#error "Missing fp64 helper definitions for this compiler"</u></td></tr>
+<tr><th id="350">350</th><td><u>#endif</u></td></tr>
+<tr><th id="351">351</th><td><u>#<span data-ppcond="338">endif</span></u></td></tr>
+<tr><th id="352">352</th><td></td></tr>
+<tr><th id="353">353</th><td><u>#<span data-ppcond="353">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a> &amp;&amp; (<a class="macro" href="lj_arch.h.html#580" title="(!1)" data-ref="_M/LJ_SOFTFP">LJ_SOFTFP</a> || <a class="macro" href="#96" title="(LJ_TARGET_ARM || LJ_TARGET_PPC || LJ_TARGET_MIPS)" data-ref="_M/LJ_NEED_FP64">LJ_NEED_FP64</a>)</u></td></tr>
+<tr><th id="354">354</th><td><b>extern</b> <em>double</em> fp64_l2d(int64_t a);</td></tr>
+<tr><th id="355">355</th><td><b>extern</b> <em>double</em> fp64_ul2d(uint64_t a);</td></tr>
+<tr><th id="356">356</th><td><b>extern</b> <em>float</em> fp64_l2f(int64_t a);</td></tr>
+<tr><th id="357">357</th><td><b>extern</b> <em>float</em> fp64_ul2f(uint64_t a);</td></tr>
+<tr><th id="358">358</th><td><b>extern</b> int64_t fp64_d2l(<em>double</em> a);</td></tr>
+<tr><th id="359">359</th><td><b>extern</b> uint64_t fp64_d2ul(<em>double</em> a);</td></tr>
+<tr><th id="360">360</th><td><b>extern</b> int64_t fp64_f2l(<em>float</em> a);</td></tr>
+<tr><th id="361">361</th><td><b>extern</b> uint64_t fp64_f2ul(<em>float</em> a);</td></tr>
+<tr><th id="362">362</th><td><u>#<span data-ppcond="353">endif</span></u></td></tr>
+<tr><th id="363">363</th><td></td></tr>
+<tr><th id="364">364</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="365">365</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

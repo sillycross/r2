@@ -1,0 +1,5 @@
+<dec f='luajit/host/minilua.c' l='43' type='0'/>
+<use f='luajit/host/minilua.c' l='4740' u='r' c='luaV_gettable'/>
+<use f='luajit/host/minilua.c' l='4740' u='r' c='luaV_gettable'/>
+<use f='luajit/host/minilua.c' l='4740' u='r' c='luaV_gettable'/>
+<use f='luajit/host/minilua.c' l='4745' u='r' c='luaV_gettable'/>

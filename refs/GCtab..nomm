@@ -1,0 +1,32 @@
+<dec f='luajit/lj_obj.h' l='497' type='uint8_t'/>
+<use f='luajit/host/buildvm_arch.h' l='2978' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3668' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3706' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3730' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3799' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3822' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3844' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3866' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3896' u='a' c='build_ins'/>
+<offset>80</offset>
+<doc f='luajit/lj_obj.h' l='497'>/* Negative cache for fast metamethods. */</doc>
+<use f='luajit/lib_base.c' l='681' u='w' c='newproxy_weaktable'/>
+<use f='luajit/lib_ffi.c' l='515' macro='1' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='833' u='w' c='ffi_finalizer'/>
+<use f='luajit/lib_string.c' l='670' u='w' c='luaopen_string'/>
+<use f='luajit/lj_gc.c' l='146' macro='1' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='177' macro='1' u='r' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='563' macro='1' u='r' c='gc_finalize'/>
+<use f='luajit/lj_lib.c' l='86' u='w' c='lj_lib_register'/>
+<use f='luajit/lj_meta.c' l='52' u='w' c='lj_meta_cache'/>
+<use f='luajit/lj_meta.c' l='144' macro='1' u='r' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='171' u='w' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='174' macro='1' u='r' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='175' u='w' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='320' u='w' c='lj_meta_len'/>
+<use f='luajit/lj_meta.c' l='332' macro='1' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' macro='1' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_tab.c' l='90' u='w' c='newtab'/>
+<use f='luajit/lj_tab.c' l='105' u='w' c='newtab'/>
+<use f='luajit/lj_tab.c' l='171' u='w' c='lj_tab_dup'/>
+<use f='luajit/lj_tab.c' l='545' u='w' c='lj_tab_set'/>

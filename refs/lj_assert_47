@@ -1,0 +1,3 @@
+<dec f='luajit/lj_bc.h' l='221' macro='1' type='void lj_assert_47(int * STATIC_ASSERTION_FAILED)'/>
+<dec f='luajit/lib_base.c' l='77' macro='1' type='void lj_assert_47(int * STATIC_ASSERTION_FAILED)'/>
+<dec f='luajit/lj_dispatch.c' l='37' macro='1' type='void lj_assert_47(int * STATIC_ASSERTION_FAILED)'/>

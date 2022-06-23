@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='82' type='void lj_vm_floor_sse()'/>
+<use f='luajit/lj_asm_x86.h' l='1969' u='r' c='asm_fpmath'/>

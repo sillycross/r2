@@ -1,0 +1,12 @@
+<dec f='luajit/lj_arch.h' l='591'/>
+<use f='luajit/host/buildvm_lib.c' l='182' u='c'/>
+<use f='luajit/host/buildvm_lib.c' l='183' u='c'/>
+<use f='luajit/host/buildvm_lib.c' l='184' u='c'/>
+<use f='luajit/host/buildvm_lib.c' l='185' u='c'/>
+<use f='luajit/host/buildvm_lib.c' l='253' u='c'/>
+<use f='luajit/host/buildvm_peobj.c' l='247' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='227' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='230' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='232' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='232' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2106' u='c'/>

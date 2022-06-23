@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ctype.h' l='313' type='65536'/>
+<doc f='luajit/lj_ctype.h' l='312'>/* Predefined typedefs and keywords follow. */</doc>
+<use f='luajit/lj_ctype.c' l='158' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='167' u='r' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='194' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='195' u='r' c='lj_ctype_intern'/>

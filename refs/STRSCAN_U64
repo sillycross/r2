@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strscan.h' l='22' type='6'/>
+<use f='luajit/lj_strscan.c' l='135' c='strscan_hex'/>
+<use f='luajit/lj_strscan.c' l='173' c='strscan_oct'/>
+<use f='luajit/lj_strscan.c' l='240' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='359' c='strscan_bin'/>

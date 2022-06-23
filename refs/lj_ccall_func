@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ccall.h' l='190' type='int lj_ccall_func(lua_State * L, GCcdata * cd)'/>
+<use f='luajit/lib_ffi.c' l='230' u='c' c='lj_cf_ffi_meta___call'/>
+<def f='luajit/lj_ccall.c' l='1151' ll='1187' type='int lj_ccall_func(lua_State * L, GCcdata * cd)'/>
+<doc f='luajit/lj_ccall.c' l='1150'>/* Call C function. */</doc>

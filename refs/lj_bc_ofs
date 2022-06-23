@@ -1,0 +1,14 @@
+<dec f='luajit/lj_bc.h' l='263' type='const uint16_t []'/>
+<def f='luajit/lj_bcdef.h' l='3' ll='158' type='const uint16_t [154]'/>
+<doc f='luajit/lj_bcdef.h' l='1'>/* This is a generated file. DO NOT EDIT! */</doc>
+<use f='luajit/lj_dispatch.c' l='65' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='67' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='126' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='127' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='128' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='129' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='130' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='135' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='136' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='188' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='513' u='r' c='lj_dispatch_call'/>

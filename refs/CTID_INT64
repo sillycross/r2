@@ -1,0 +1,32 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='11'/>
+<use f='luajit/lj_bcread.c' l='240' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='139' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_carith.c' l='132' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='139' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='164' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='177' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='181' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='193' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='199' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='205' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='338' u='r' c='lj_carith_check64'/>
+<use f='luajit/lj_cdata.c' l='161' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1334' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1776' u='r' c='crec_bit64_type'/>
+<use f='luajit/lj_crecord.c' l='1784' u='r' c='recff_bit64_tobit'/>
+<use f='luajit/lj_crecord.c' l='1797' u='r' c='recff_bit64_unary'/>
+<use f='luajit/lj_crecord.c' l='1815' u='r' c='recff_bit64_nary'/>
+<use f='luajit/lj_crecord.c' l='1833' u='r' c='recff_bit64_shift'/>
+<use f='luajit/lj_crecord.c' l='1853' u='r' c='recff_bit64_shift'/>
+<use f='luajit/lj_crecord.c' l='1919' u='r' c='lj_crecord_loadiu64'/>
+<use f='luajit/lj_crecord.c' l='1921' u='r' c='lj_crecord_loadiu64'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ir.c' l='399' u='r' c='lj_ir_kvalue'/>
+<use f='luajit/lj_lex.c' l='127' u='r' c='lex_number'/>
+<use f='luajit/lj_lib.c' l='339' u='r' c='lj_lib_checkintrange'/>
+<use f='luajit/lj_serialize.c' l='364' u='r' c='serialize_get'/>
+<use f='luajit/lj_strfmt.c' l='403' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='419' u='r' c='lj_strfmt_putarg'/>

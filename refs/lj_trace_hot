@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='37' type='void lj_trace_hot(jit_State * J, const BCIns * pc)'/>
+<use f='luajit/lj_dispatch.c' l='478' u='c' c='lj_dispatch_call'/>
+<def f='luajit/lj_trace.c' l='735' ll='750' type='void lj_trace_hot(jit_State * J, const BCIns * pc)'/>
+<doc f='luajit/lj_trace.c' l='734'>/* A hotcount triggered. Start recording a root trace. */</doc>

@@ -1,0 +1,16 @@
+<dec f='luajit/lj_jit.h' l='426' type='IRType1'/>
+<offset>1456</offset>
+<doc f='luajit/lj_jit.h' l='426'>/* Accumulated IRT_GUARD for emitted instructions. */</doc>
+<use f='luajit/lj_crecord.c' l='1568' u='m' c='recff_cdata_arith'/>
+<use f='luajit/lj_ir.c' l='126' u='m' c='lj_ir_emit'/>
+<use f='luajit/lj_opt_fold.c' l='2555' u='m' c='lj_opt_cse'/>
+<use f='luajit/lj_opt_loop.c' l='217' u='m' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='224' u='m' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='375' u='m' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='392' u='m' c='loop_undo'/>
+<use f='luajit/lj_record.c' l='1378' u='r' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1476' u='w' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1487' u='w' c='lj_record_idx'/>
+<use f='luajit/lj_snap.c' l='187' u='m' c='lj_snap_add'/>
+<use f='luajit/lj_snap.c' l='199' u='m' c='lj_snap_add'/>
+<use f='luajit/lj_trace.c' l='447' u='m' c='trace_start'/>

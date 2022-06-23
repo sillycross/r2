@@ -1,0 +1,7 @@
+<dec f='include/unistd.h' l='356' type='int close(int __fd)'/>
+<use f='luajit/lib_os.c' l='89' u='c' c='lj_cf_os_tmpname'/>
+<doc f='include/unistd.h' l='352'>/* Close the file descriptor FD.
+
+   This function is a cancellation point and therefore not marked with
+   __THROW.  */</doc>
+<use f='luajit/lj_prng.c' l='224' u='c' c='lj_prng_seed_secure'/>

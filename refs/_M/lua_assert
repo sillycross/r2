@@ -1,0 +1,5 @@
+<dec f='luajit/lualib.h' l='41'/>
+<use f='luajit/luajit.c' l='453' u='c'/>
+<use f='luajit/luajit.c' l='458' u='c'/>
+<use f='luajit/luajit.c' l='466' u='c'/>
+<use f='luajit/luajit.c' l='474' u='c'/>

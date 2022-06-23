@@ -1,0 +1,23 @@
+<dec f='luajit/lj_jit.h' l='484' type='ScEvEntry'/>
+<offset>23872</offset>
+<doc f='luajit/lj_jit.h' l='484'>/* Scalar evolution analysis cache slots. */</doc>
+<use f='luajit/lj_opt_fold.c' l='1267' u='m' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_opt_fold.c' l='1268' u='m' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_opt_fold.c' l='1268' u='m' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_opt_fold.c' l='1268' u='m' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_record.c' l='478' u='m' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='499' u='m' c='rec_for'/>
+<use f='luajit/lj_record.c' l='499' u='m' c='rec_for'/>
+<use f='luajit/lj_record.c' l='500' u='m' c='rec_for'/>
+<use f='luajit/lj_record.c' l='501' u='m' c='rec_for'/>
+<use f='luajit/lj_record.c' l='502' u='m' c='rec_for'/>
+<use f='luajit/lj_record.c' l='1297' u='m' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1305' u='m' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1306' u='m' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1308' u='m' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1308' u='m' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1309' u='m' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='2587' u='m' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2588' u='m' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2628' u='a' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2650' u='a' c='lj_record_setup'/>

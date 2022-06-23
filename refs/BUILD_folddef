@@ -1,0 +1,2 @@
+<dec f='luajit/host/buildvm.h' l='48' macro='1' type='10'/>
+<use f='luajit/host/buildvm.c' l='501' c='main'/>

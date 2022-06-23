@@ -1,0 +1,5 @@
+<use f='luajit/lib_io.c' l='87' u='c' c='io_file_open'/>
+<use f='luajit/lib_io.c' l='407' u='c' c='lj_cf_io_open'/>
+<use f='luajit/lib_package.c' l='299' u='c' c='readable'/>
+<use f='luajit/lj_clib.c' l='97' u='c' c='clib_resolve_lds'/>
+<use f='luajit/lj_load.c' l='91' u='c' c='luaL_loadfilex'/>

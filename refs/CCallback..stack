@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ctype.h' l='165' type='intptr_t *'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='a' c='build_subroutines'/>
+<offset>1024</offset>
+<doc f='luajit/lj_ctype.h' l='165'>/* Pointer to arguments on stack. */</doc>
+<use f='luajit/lj_ccallback.c' l='527' u='r' c='callback_conv_args'/>

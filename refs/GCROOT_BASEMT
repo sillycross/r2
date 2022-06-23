@@ -1,0 +1,15 @@
+<dec f='luajit/lj_obj.h' l='575' type='22'/>
+<use f='luajit/lj_obj.h' l='576' u='r'/>
+<use f='luajit/host/buildvm_arch.h' l='1266' u='r' c='build_subroutines'/>
+<doc f='luajit/lj_obj.h' l='575'>/* Metatables for base types. */</doc>
+<use f='luajit/lib_base.c' l='521' macro='1' u='r' c='lj_cf_print'/>
+<use f='luajit/lib_ffi.c' l='855' macro='1' u='r' c='luaopen_ffi'/>
+<use f='luajit/lib_string.c' l='668' macro='1' u='r' c='luaopen_string'/>
+<use f='luajit/lj_api.c' l='855' macro='1' u='r' c='lua_getmetatable'/>
+<use f='luajit/lj_api.c' l='1050' macro='1' u='r' c='lua_setmetatable'/>
+<use f='luajit/lj_api.c' l='1051' macro='1' u='r' c='lua_setmetatable'/>
+<use f='luajit/lj_api.c' l='1054' macro='1' u='r' c='lua_setmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='1168' macro='1' u='r' c='recff_debug_getmetatable'/>
+<use f='luajit/lj_meta.c' l='67' macro='1' u='r' c='lj_meta_lookup'/>
+<use f='luajit/lj_record.c' l='1011' macro='1' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1019' u='r' c='lj_record_mm_lookup'/>

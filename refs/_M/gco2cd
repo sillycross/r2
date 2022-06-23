@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='764'/>
+<use f='luajit/lj_bcwrite.c' l='137' u='c'/>
+<use f='luajit/lj_bcwrite.c' l='166' u='c'/>
+<use f='luajit/lj_gc.c' l='547' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='754' u='c'/>

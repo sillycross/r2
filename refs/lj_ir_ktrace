@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='51' type='TRef lj_ir_ktrace(jit_State * J)'/>
+<use f='luajit/lj_ffrecord.c' l='132' u='c' c='recff_stitch'/>
+<def f='luajit/lj_ir.c' l='300' ll='310' type='TRef lj_ir_ktrace(jit_State * J)'/>
+<doc f='luajit/lj_ir.c' l='299'>/* Allocate GCtrace constant placeholder (no interning). */</doc>

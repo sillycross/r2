@@ -1,0 +1,9 @@
+<dec f='luajit/host/minilua.c' l='132' type='285'/>
+<use f='luajit/host/minilua.c' l='2701' c='txtToken'/>
+<use f='luajit/host/minilua.c' l='2972' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='3668' u='r' c='anchor_token'/>
+<use f='luajit/host/minilua.c' l='3713' u='r' c='str_checkname'/>
+<use f='luajit/host/minilua.c' l='3960' u='r' c='recfield'/>
+<use f='luajit/host/minilua.c' l='4016' c='constructor'/>
+<use f='luajit/host/minilua.c' l='4047' c='parlist'/>
+<use f='luajit/host/minilua.c' l='4146' c='prefixexp'/>

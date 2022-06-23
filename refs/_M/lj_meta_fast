@@ -1,0 +1,6 @@
+<dec f='luajit/lj_meta.h' l='22'/>
+<use f='luajit/lib_ffi.c' l='515' u='c'/>
+<use f='luajit/lj_meta.c' l='144' u='c'/>
+<use f='luajit/lj_meta.c' l='174' u='c'/>
+<use f='luajit/lj_meta.c' l='332' u='c'/>
+<use f='luajit/lj_meta.c' l='337' u='c'/>

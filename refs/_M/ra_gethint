@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target.h' l='32'/>
+<use f='luajit/lj_asm.c' l='630' u='c'/>
+<use f='luajit/lj_asm.c' l='723' u='c'/>
+<use f='luajit/lj_asm.c' l='724' u='c'/>

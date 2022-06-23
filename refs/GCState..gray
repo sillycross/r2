@@ -1,0 +1,15 @@
+<dec f='luajit/lj_obj.h' l='601' type='GCRef'/>
+<offset>320</offset>
+<doc f='luajit/lj_obj.h' l='601'>/* List of gray objects. */</doc>
+<use f='luajit/lj_gc.c' l='84' u='m' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='85' u='m' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='101' u='m' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='247' u='m' c='gc_marktrace'/>
+<use f='luajit/lj_gc.c' l='248' u='m' c='gc_marktrace'/>
+<use f='luajit/lj_gc.c' l='323' u='m' c='propagatemark'/>
+<use f='luajit/lj_gc.c' l='327' u='m' c='propagatemark'/>
+<use f='luajit/lj_gc.c' l='367' u='m' c='gc_propagate_gray'/>
+<use f='luajit/lj_gc.c' l='622' u='m' c='atomic'/>
+<use f='luajit/lj_gc.c' l='630' u='m' c='atomic'/>
+<use f='luajit/lj_gc.c' l='659' u='m' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='781' u='m' c='lj_gc_fullgc'/>

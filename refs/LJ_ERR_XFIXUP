@@ -1,0 +1,3 @@
+<dec f='luajit/lj_errmsg.h' l='131' macro='1' type='2595'/>
+<use f='luajit/lj_errmsg.h' l='131' macro='1' u='r'/>
+<use f='luajit/lj_parse.c' l='1553' u='r' c='fs_fixup_ret'/>

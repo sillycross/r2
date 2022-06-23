@@ -1,0 +1,19 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='16'/>
+<use f='luajit/lj_emit_x86.h' l='278' u='r' c='emit_loadi'/>
+<use f='luajit/lj_emit_x86.h' l='280' u='r' c='emit_loadi'/>
+<use f='luajit/lj_asm.c' l='915' u='r' c='asm_snap_alloc1'/>
+<use f='luajit/lj_asm.c' l='930' u='r' c='asm_snap_alloc1'/>
+<use f='luajit/lj_asm_x86.h' l='654' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='1450' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm.c' l='1726' c='asm_ir'/>
+<use f='luajit/lj_opt_sink.c' l='99' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_snap.c' l='393' u='r' c='lj_snap_regspmap'/>
+<use f='luajit/lj_snap.c' l='532' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='541' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='567' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='569' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='603' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='613' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='792' u='r' c='snap_unsink'/>
+<use f='luajit/lj_snap.c' l='822' u='r' c='snap_unsink'/>
+<use f='luajit/lj_snap.c' l='859' u='r' c='snap_unsink'/>

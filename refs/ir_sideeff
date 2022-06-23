@@ -1,0 +1,4 @@
+<def f='luajit/lj_ir.h' l='584' ll='587' type='int ir_sideeff(IRIns * ir)'/>
+<doc f='luajit/lj_ir.h' l='583'>/* A store or any other op with a non-weak guard has a side-effect. */</doc>
+<use f='luajit/lj_asm.c' l='2464' u='c' c='lj_asm_trace'/>
+<use f='luajit/lj_opt_dce.c' l='48' u='c' c='dce_propagate'/>

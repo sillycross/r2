@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='14'/>
+<use f='luajit/lib_base.c' l='284' u='r' c='lj_ffh_tonumber'/>
+<use f='luajit/lj_carith.c' l='58' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_ccall.c' l='898' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_ccall.c' l='909' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_cconv.c' l='396' u='r' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='559' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='610' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='1484' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1907' u='r' c='lj_crecord_tonumber'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>

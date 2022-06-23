@@ -1,0 +1,10 @@
+<def f='luajit/lj_dispatch.h' l='89' ll='109'/>
+<use f='luajit/lj_dispatch.h' l='89'/>
+<size>6240</size>
+<doc f='luajit/lj_dispatch.h' l='88'>/* Global state, main thread and extra fields are allocated together. */</doc>
+<mbr r='GG_State::L' o='0' t='lua_State'/>
+<mbr r='GG_State::g' o='768' t='global_State'/>
+<mbr r='GG_State::J' o='6592' t='jit_State'/>
+<mbr r='GG_State::hotcount' o='31488' t='HotCount [64]'/>
+<mbr r='GG_State::dispatch' o='32512' t='ASMFunction [243]'/>
+<mbr r='GG_State::bcff' o='48064' t='BCIns [57]'/>

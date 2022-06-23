@@ -1,0 +1,4 @@
+<dec f='luajit/lj_mcode.h' l='24' type='void lj_mcode_limiterr(jit_State * J, size_t need)'/>
+<use f='luajit/lj_asm.c' l='132' u='c' c='asm_mclimit'/>
+<def f='luajit/lj_mcode.c' l='358' ll='371' type='void lj_mcode_limiterr(jit_State * J, size_t need)'/>
+<doc f='luajit/lj_mcode.c' l='357'>/* Limit of MCode reservation reached. */</doc>

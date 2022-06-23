@@ -1,0 +1,5 @@
+<dec f='luajit/luajit.h' l='72' type='void luaJIT_profile_stop(lua_State * L)'/>
+<use f='luajit/lib_jit.c' l='596' u='c' c='lj_cf_jit_profile_stop'/>
+<use f='luajit/lj_profile.c' l='323' u='c' c='luaJIT_profile_start'/>
+<def f='luajit/lj_profile.c' l='336' ll='352' macro='1' type='void luaJIT_profile_stop(lua_State * L)'/>
+<use f='luajit/lj_state.c' l='282' u='c' c='lua_close'/>

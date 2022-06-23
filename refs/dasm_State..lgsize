@@ -1,0 +1,9 @@
+<dec f='luajit/dasm_x86.h' l='68' type='size_t'/>
+<use f='luajit/dasm_x86.h' l='94' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='125' u='r' c='dasm_setupglobal'/>
+<use f='luajit/dasm_x86.h' l='125' u='w' c='dasm_setupglobal'/>
+<use f='luajit/dasm_x86.h' l='145' u='r' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='225' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='248' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='295' u='r' c='dasm_link'/>
+<offset>192</offset>

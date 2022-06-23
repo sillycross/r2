@@ -1,0 +1,5 @@
+<dec f='luajit/host/minilua.c' l='68' type='4'/>
+<use f='luajit/host/minilua.c' l='3208' u='r' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3870' u='r' c='pushclosure'/>
+<use f='luajit/host/minilua.c' l='4979' c='luaV_execute'/>
+<use f='luajit/host/minilua.c' l='5276' u='r' c='luaV_execute'/>

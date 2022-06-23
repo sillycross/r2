@@ -1,0 +1,1 @@
+<def f='luajit/lib_table.c' l='57' macro='1' type='int lj_cf_table_maxn(lua_State * L)'/>

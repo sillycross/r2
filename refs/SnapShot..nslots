@@ -1,0 +1,12 @@
+<dec f='luajit/lj_jit.h' l='188' type='uint8_t'/>
+<offset>64</offset>
+<doc f='luajit/lj_jit.h' l='188'>/* Number of valid slots. */</doc>
+<use f='luajit/lib_jit.c' l='374' u='r' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lj_asm.c' l='2078' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_opt_loop.c' l='215' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='229' u='w' c='loop_subst_snap'/>
+<use f='luajit/lj_snap.c' l='175' u='w' c='snapshot_stack'/>
+<use f='luajit/lj_snap.c' l='335' u='w' c='lj_snap_shrink'/>
+<use f='luajit/lj_snap.c' l='628' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='947' u='r' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='502' u='r' c='trace_stop'/>

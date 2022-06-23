@@ -1,0 +1,38 @@
+<dec f='luajit/lj_parse.c' l='129' type='BCPos'/>
+<use f='luajit/lj_parse.c' l='361' u='r' c='jmp_tohere'/>
+<use f='luajit/lj_parse.c' l='368' u='r' c='jmp_patch'/>
+<use f='luajit/lj_parse.c' l='417' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='430' u='w' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='478' u='r' c='bcemit_nil'/>
+<use f='luajit/lj_parse.c' l='479' u='r' c='bcemit_nil'/>
+<use f='luajit/lj_parse.c' l='578' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='695' u='r' c='bcemit_jmp'/>
+<use f='luajit/lj_parse.c' l='1079' u='r' c='var_add'/>
+<use f='luajit/lj_parse.c' l='1091' u='r' c='var_remove'/>
+<use f='luajit/lj_parse.c' l='1299' u='r' c='fscope_end'/>
+<use f='luajit/lj_parse.c' l='1418' u='r' c='fs_prep_line'/>
+<use f='luajit/lj_parse.c' l='1427' u='r' c='fs_fixup_line'/>
+<use f='luajit/lj_parse.c' l='1531' u='r' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='1579' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1598' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1623' u='w' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='1784' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1792' u='w' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1796' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1869' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1870' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1947' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='2272' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='2308' u='r' c='parse_func'/>
+<use f='luajit/lj_parse.c' l='2341' u='w' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2387' u='r' c='parse_label'/>
+<use f='luajit/lj_parse.c' l='2393' u='r' c='parse_label'/>
+<use f='luajit/lj_parse.c' l='2432' u='r' c='parse_while'/>
+<use f='luajit/lj_parse.c' l='2442' u='r' c='parse_while'/>
+<use f='luajit/lj_parse.c' l='2449' u='r' c='parse_repeat'/>
+<use f='luajit/lj_parse.c' l='2468' u='r' c='parse_repeat'/>
+<use f='luajit/lj_parse.c' l='2507' u='r' c='parse_for_num'/>
+<use f='luajit/lj_parse.c' l='2550' u='r' c='parse_for_iter'/>
+<use f='luajit/lj_parse.c' l='2576' u='r' c='parse_for_iter'/>
+<offset>320</offset>
+<doc f='luajit/lj_parse.c' l='129'>/* Next bytecode position. */</doc>

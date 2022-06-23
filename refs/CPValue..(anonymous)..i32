@@ -1,0 +1,44 @@
+<dec f='luajit/lj_cparse.h' l='34' type='int32_t'/>
+<offset>0</offset>
+<doc f='luajit/lj_cparse.h' l='34'>/* Value for CTID_INT32. */</doc>
+<use f='luajit/lj_cparse.c' l='215' u='w' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='282' u='w' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='491' u='w' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='491' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='493' u='w' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='493' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='495' u='w' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='495' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='607' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='613' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='634' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='637' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='645' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='645' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='645' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='647' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='653' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='653' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='653' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='655' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='661' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='661' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='661' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='663' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='669' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='669' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='669' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='671' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='683' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='683' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='683' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='706' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='709' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='709' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='709' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='717' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='720' u='w' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='720' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='720' u='r' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='1462' u='r' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1469' u='r' c='cp_decl_enum'/>

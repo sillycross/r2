@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='32'/>
+<use f='luajit/lj_asm.c' l='1742' c='asm_ir'/>
+<use f='luajit/lj_recdef.h' l='70' u='r'/>

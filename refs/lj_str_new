@@ -1,0 +1,80 @@
+<dec f='luajit/lj_str.h' l='21' type='GCstr * lj_str_new(lua_State * L, const char * str, size_t len)'/>
+<use f='luajit/lj_buf.h' l='184' u='c' c='lj_buf_str'/>
+<use f='luajit/lib_base.c' l='679' macro='1' u='c' c='newproxy_weaktable'/>
+<use f='luajit/lib_base.c' l='680' macro='1' u='c' c='newproxy_weaktable'/>
+<use f='luajit/lib_base.c' l='688' macro='1' u='c' c='luaopen_base'/>
+<use f='luajit/lib_buffer.c' l='172' u='c' c='lj_cf_buffer_method_get'/>
+<use f='luajit/lib_buffer.c' l='265' u='c' c='lj_cf_buffer_method___tostring'/>
+<use f='luajit/lib_buffer.c' l='300' macro='1' u='c' c='lj_cf_buffer_new'/>
+<use f='luajit/lib_ffi.c' l='569' macro='1' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='571' macro='1' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='573' macro='1' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='576' macro='1' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_ffi.c' l='694' u='c' c='lj_cf_ffi_string'/>
+<use f='luajit/lib_ffi.c' l='831' macro='1' u='c' c='ffi_finalizer'/>
+<use f='luajit/lib_ffi.c' l='832' macro='1' u='c' c='ffi_finalizer'/>
+<use f='luajit/lib_ffi.c' l='840' macro='1' u='c' c='ffi_register_module'/>
+<use f='luajit/lib_ffi.c' l='843' macro='1' u='c' c='ffi_register_module'/>
+<use f='luajit/lib_io.c' l='155' u='c' c='io_file_readline'/>
+<use f='luajit/lib_io.c' l='167' u='c' c='io_file_readall'/>
+<use f='luajit/lib_io.c' l='179' u='c' c='io_file_readlen'/>
+<use f='luajit/lib_jit.c' l='97' u='c' c='flagbits_to_strings'/>
+<use f='luajit/lib_jit.c' l='184' macro='1' u='c' c='setintfield'/>
+<use f='luajit/lib_jit.c' l='214' macro='1' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='222' macro='1' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='272' macro='1' u='c' c='lj_cf_jit_util_funcuvname'/>
+<use f='luajit/lib_jit.c' l='310' macro='1' u='c' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lib_jit.c' l='388' u='c' c='lj_cf_jit_util_tracemc'/>
+<use f='luajit/lib_jit.c' l='562' u='c' c='jit_profile_callback'/>
+<use f='luajit/lib_os.c' l='217' u='c' c='lj_cf_os_date'/>
+<use f='luajit/lib_string.c' l='75' u='c' c='lj_ffh_string_char'/>
+<use f='luajit/lj_api.c' l='653' u='c' c='lua_pushlstring'/>
+<use f='luajit/lj_api.c' l='665' macro='1' u='c' c='lua_pushstring'/>
+<use f='luajit/lj_api.c' l='729' macro='1' u='c' c='luaL_newmetatable'/>
+<use f='luajit/lj_api.c' l='814' macro='1' u='c' c='lua_getfield'/>
+<use f='luajit/lj_api.c' l='866' macro='1' u='c' c='luaL_getmetafield'/>
+<use f='luajit/lj_api.c' l='944' macro='1' u='c' c='luaL_testudata'/>
+<use f='luajit/lj_api.c' l='985' macro='1' u='c' c='lua_setfield'/>
+<use f='luajit/lj_bcread.c' l='188' u='c' c='bcread_ktabk'/>
+<use f='luajit/lj_bcread.c' l='234' u='c' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='408' macro='1' u='c' c='bcread_header'/>
+<use f='luajit/lj_bcread.c' l='412' u='c' c='bcread_header'/>
+<use f='luajit/lj_buf.c' l='247' u='c' c='lj_buf_tostr'/>
+<use f='luajit/lj_buf.c' l='257' u='c' c='lj_buf_cat2str'/>
+<use f='luajit/lj_clib.c' l='89' u='c' c='clib_check_lds'/>
+<use f='luajit/lj_clib.c' l='123' u='c' c='clib_loadlib'/>
+<use f='luajit/lj_ctype.c' l='551' macro='1' u='c' c='lj_ctype_repr'/>
+<use f='luajit/lj_ctype.c' l='552' u='c' c='lj_ctype_repr'/>
+<use f='luajit/lj_ctype.c' l='570' u='c' c='lj_ctype_repr_int64'/>
+<use f='luajit/lj_ctype.c' l='612' u='c' c='lj_ctype_init'/>
+<use f='luajit/lj_err.c' l='769' macro='1' u='c' c='lj_err_str'/>
+<use f='luajit/lj_ffrecord.c' l='963' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_lex.c' l='509' macro='1' u='c' c='lj_lex_init'/>
+<use f='luajit/lj_lib.c' l='55' u='c' c='lib_read_lfunc'/>
+<use f='luajit/lj_lib.c' l='113' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='146' u='c' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='179' macro='1' u='c' c='lj_lib_postreg'/>
+<use f='luajit/lj_meta.c' l='40' u='c' c='lj_meta_init'/>
+<use f='luajit/lj_opt_fold.c' l='512' u='c' c='fold_kfold_snew_kptr'/>
+<use f='luajit/lj_parse.c' l='243' u='c' c='lj_parse_keepstr'/>
+<use f='luajit/lj_parse.c' l='2528' macro='1' u='c' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='2531' macro='1' u='c' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='2724' macro='1' u='c' c='lj_parse'/>
+<use f='luajit/lj_serialize.c' l='307' u='c' c='serialize_get'/>
+<use f='luajit/lj_str.c' l='261' u='c' c='lj_str_rehash_chain'/>
+<def f='luajit/lj_str.c' l='314' ll='356' type='GCstr * lj_str_new(lua_State * L, const char * str, size_t lenx)'/>
+<doc f='luajit/lj_str.c' l='313'>/* Intern a string and return string object. */</doc>
+<use f='luajit/lj_strfmt.c' l='385' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='487' u='c' c='lj_strfmt_int'/>
+<use f='luajit/lj_strfmt.c' l='502' u='c' c='lj_strfmt_char'/>
+<use f='luajit/lj_strfmt.c' l='514' macro='1' u='c' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt.c' l='516' macro='1' u='c' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt.c' l='518' macro='1' u='c' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt.c' l='529' u='c' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt_num.c' l='590' u='c' c='lj_strfmt_num'/>
+<use f='luajit/lj_trace.c' l='303' macro='1' u='c' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='455' macro='1' u='c' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='535' macro='1' u='c' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='c' c='trace_abort'/>
+<use f='luajit/lj_vmevent.c' l='22' macro='1' u='c' c='lj_vmevent_prepare'/>

@@ -1,0 +1,149 @@
+<dec f='luajit/lj_obj.h' l='176' type='lua_Number'/>
+<use f='luajit/lj_obj.h' l='948' u='w' c='setintV'/>
+<use f='luajit/lj_obj.h' l='938' u='w' c='setint64V'/>
+<use f='luajit/lj_obj.h' l='988' u='w' c='lj_num2bit'/>
+<use f='luajit/lj_obj.h' l='859' u='r' c='numberVint'/>
+<use f='luajit/lj_obj.h' l='859' u='r' c='numberVnum'/>
+<offset>0</offset>
+<doc f='luajit/lj_obj.h' l='176'>/* Number object overlaps split tag/value object. */</doc>
+<use f='luajit/lib_base.c' l='285' u='a' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_base.c' l='310' macro='1' u='w' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_base.c' l='466' macro='1' u='w' c='lj_cf_collectgarbage'/>
+<use f='luajit/lib_buffer.c' l='126' macro='1' u='r' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_io.c' l='135' macro='1' u='w' c='io_file_readnum'/>
+<use f='luajit/lib_io.c' l='328' macro='1' u='r' c='lj_cf_io_method_seek'/>
+<use f='luajit/lj_iropt.h' l='62' u='w' c='lj_ir_knum'/>
+<use f='luajit/lib_math.c' l='61' macro='1' u='w' c='lj_ffh_math_log'/>
+<use f='luajit/lib_math.c' l='177' macro='1' u='w' c='lj_cf_math_random'/>
+<use f='luajit/lib_os.c' l='127' macro='1' u='w' c='lj_cf_os_clock'/>
+<use f='luajit/lib_table.c' l='75' macro='1' u='w' c='lj_cf_table_maxn'/>
+<use f='luajit/lj_api.c' l='353' macro='1' u='r' c='lua_tonumber'/>
+<use f='luajit/lj_api.c' l='367' macro='1' u='r' c='lua_tonumberx'/>
+<use f='luajit/lj_api.c' l='382' macro='1' u='r' c='luaL_checknumber'/>
+<use f='luajit/lj_api.c' l='395' macro='1' u='r' c='luaL_optnumber'/>
+<use f='luajit/lj_api.c' l='406' macro='1' u='r' c='lua_tointeger'/>
+<use f='luajit/lj_api.c' l='412' macro='1' u='r' c='lua_tointeger'/>
+<use f='luajit/lj_api.c' l='430' macro='1' u='r' c='lua_tointegerx'/>
+<use f='luajit/lj_api.c' l='440' macro='1' u='r' c='lua_tointegerx'/>
+<use f='luajit/lj_api.c' l='458' macro='1' u='r' c='luaL_checkinteger'/>
+<use f='luajit/lj_api.c' l='464' macro='1' u='r' c='luaL_checkinteger'/>
+<use f='luajit/lj_api.c' l='481' macro='1' u='r' c='luaL_optinteger'/>
+<use f='luajit/lj_api.c' l='489' macro='1' u='r' c='luaL_optinteger'/>
+<use f='luajit/lj_api.c' l='637' macro='1' u='w' c='lua_pushnumber'/>
+<use f='luajit/lj_api.c' l='638' macro='1' u='r' c='lua_pushnumber'/>
+<use f='luajit/lj_api.c' l='638' macro='1' u='r' c='lua_pushnumber'/>
+<use f='luajit/lj_bcwrite.c' l='60' macro='1' u='r' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='193' macro='1' u='r' c='bcwrite_knum'/>
+<use f='luajit/lj_buf.c' l='228' macro='1' u='r' c='lj_buf_puttab'/>
+<use f='luajit/lj_carith.c' l='59' u='a' c='carith_checkarg'/>
+<use f='luajit/lj_carith.c' l='348' macro='1' u='r' c='lj_carith_check64'/>
+<use f='luajit/lj_cconv.c' l='392' macro='1' u='w' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='397' u='a' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='456' macro='1' u='w' c='lj_cconv_tv_bf'/>
+<use f='luajit/lj_cconv.c' l='558' u='a' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cdata.c' l='140' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='220' macro='1' u='w' c='cdata_getconst'/>
+<use f='luajit/lj_clib.c' l='356' macro='1' u='w' c='lj_clib_index'/>
+<use f='luajit/lj_ctype.c' l='579' u='w' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='579' u='w' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='581' u='w' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='581' u='w' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='583' u='r' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='584' u='r' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='584' u='r' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ctype.c' l='585' u='r' c='lj_ctype_repr_complex'/>
+<use f='luajit/lj_ffrecord.c' l='71' macro='1' u='r' c='argv2int'/>
+<use f='luajit/lj_ir.c' l='258' macro='1' u='w' c='numistrueint'/>
+<use f='luajit/lj_ir.c' l='393' macro='1' u='w' c='lj_ir_kvalue'/>
+<use f='luajit/lj_ir.c' l='396' macro='1' u='w' c='lj_ir_kvalue'/>
+<use f='luajit/lj_ir.c' l='396' u='r' c='lj_ir_kvalue'/>
+<use f='luajit/lj_lex.c' l='125' macro='1' u='r' c='lex_number'/>
+<use f='luajit/lj_lib.c' l='129' u='a' c='lj_lib_register'/>
+<use f='luajit/lj_lib.c' l='234' macro='1' u='w' c='lj_lib_checknum'/>
+<use f='luajit/lj_lib.c' l='237' macro='1' u='r' c='lj_lib_checknum'/>
+<use f='luajit/lj_lib.c' l='249' macro='1' u='r' c='lj_lib_checkint'/>
+<use f='luajit/lj_lib.c' l='334' macro='1' u='r' c='lj_lib_checkintrange'/>
+<use f='luajit/lj_meta.c' l='180' macro='1' u='w' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='181' macro='1' u='r' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='181' macro='1' u='r' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='205' macro='1' u='w' c='str2num'/>
+<use f='luajit/lj_meta.c' l='221' macro='1' u='w' c='lj_meta_arith'/>
+<use f='luajit/lj_meta.c' l='221' macro='1' u='r' c='lj_meta_arith'/>
+<use f='luajit/lj_meta.c' l='221' macro='1' u='r' c='lj_meta_arith'/>
+<use f='luajit/lj_meta.c' l='301' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='468' macro='1' u='r' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='468' macro='1' u='r' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='476' macro='1' u='w' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='477' macro='1' u='w' c='lj_meta_for'/>
+<use f='luajit/lj_meta.c' l='478' macro='1' u='w' c='lj_meta_for'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_numarith'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_kfold_numarith'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_numabsneg'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_fpmath'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_fpcall1'/>
+<use f='luajit/lj_opt_fold.c' l='231' u='r' c='fold_kfold_fpcall2'/>
+<use f='luajit/lj_opt_fold.c' l='232' u='r' c='fold_kfold_fpcall2'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_numpow'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_kfold_numpow'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_numcomp'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_kfold_numcomp'/>
+<use f='luajit/lj_opt_fold.c' l='728' u='r' c='fold_bufput_kfold_fmt'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_tobit'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_conv_knum_int_num'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_conv_knum_u32_num'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_conv_knum_i64_num'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_kfold_conv_knum_u64_num'/>
+<use f='luajit/lj_opt_fold.c' l='917' macro='1' u='r' c='fold_kfold_strto'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_simplify_numsub_k'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_simplify_numsub_negk'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_simplify_nummuldiv_k'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_simplify_nummuldiv_negk'/>
+<use f='luajit/lj_opt_fold.c' l='142' u='r' c='fold_simplify_numpow_xknum'/>
+<use f='luajit/lj_opt_fold.c' l='141' u='r' c='fold_simplify_numpow_kx'/>
+<use f='luajit/lj_opt_narrow.c' l='283' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='594' macro='1' u='r' c='lj_opt_narrow_pow'/>
+<use f='luajit/lj_opt_narrow.c' l='623' macro='1' u='r' c='narrow_forl'/>
+<use f='luajit/lj_parse.c' l='781' macro='1' u='w' c='foldarith'/>
+<use f='luajit/lj_parse.c' l='782' macro='1' u='r' c='foldarith'/>
+<use f='luajit/lj_parse.c' l='782' macro='1' u='r' c='foldarith'/>
+<use f='luajit/lj_parse.c' l='790' macro='1' u='w' c='foldarith'/>
+<use f='luajit/lj_parse.c' l='980' macro='1' u='w' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='1373' macro='1' u='w' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='1385' macro='1' u='r' c='fs_fixup_k'/>
+<use f='luajit/lj_record.c' l='255' macro='1' u='r' c='lj_record_constify'/>
+<use f='luajit/lj_record.c' l='343' macro='1' u='r' c='find_kinit'/>
+<use f='luajit/lj_record.c' l='1332' macro='1' u='r' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1448' macro='1' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1448' macro='1' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='2112' macro='1' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='684' macro='1' u='w' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='690' macro='1' u='w' c='snap_restoreval'/>
+<use f='luajit/lj_strfmt.c' l='177' u='r' c='lj_strfmt_wstrnum'/>
+<use f='luajit/lj_strfmt.c' l='198' u='r' c='lj_strfmt_putnum'/>
+<use f='luajit/lj_strfmt_num.c' l='273' u='w' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='366' u='w' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='367' u='w' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='372' u='w' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='589' u='r' c='lj_strfmt_num'/>
+<use f='luajit/lj_strscan.c' l='100' u='w' c='strscan_double'/>
+<use f='luajit/lj_strscan.c' l='248' u='w' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='269' u='w' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='500' u='w' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='520' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_tab.c' l='297' macro='1' u='r' c='countint'/>
+<use f='luajit/lj_tab.c' l='388' u='w' c='lj_tab_getinth'/>
+<use f='luajit/lj_tab.c' l='391' u='r' c='lj_tab_getinth'/>
+<use f='luajit/lj_tab.c' l='391' u='r' c='lj_tab_getinth'/>
+<use f='luajit/lj_tab.c' l='418' macro='1' u='r' c='lj_tab_get'/>
+<use f='luajit/lj_tab.c' l='521' u='w' c='lj_tab_setinth'/>
+<use f='luajit/lj_tab.c' l='524' u='r' c='lj_tab_setinth'/>
+<use f='luajit/lj_tab.c' l='524' u='r' c='lj_tab_setinth'/>
+<use f='luajit/lj_tab.c' l='551' macro='1' u='r' c='lj_tab_set'/>
+<use f='luajit/lj_tab.c' l='555' macro='1' u='r' c='lj_tab_set'/>
+<use f='luajit/lj_tab.c' l='555' macro='1' u='r' c='lj_tab_set'/>
+<use f='luajit/lj_tab.c' l='579' macro='1' u='w' c='keyindex'/>
+<use f='luajit/lj_tab.c' l='582' macro='1' u='r' c='keyindex'/>
+<use f='luajit/lj_trace.c' l='811' macro='1' u='w' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='815' macro='1' u='w' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='816' macro='1' u='r' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='816' macro='1' u='r' c='trace_exit_regs'/>

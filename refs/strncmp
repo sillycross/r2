@@ -1,0 +1,18 @@
+<dec f='include/string.h' l='139' type='int strncmp(const char * __s1, const char * __s2, size_t __n)'/>
+<doc f='include/string.h' l='138'>/* Compare N characters of S1 and S2.  */</doc>
+<use f='luajit/host/buildvm_asm.c' l='74' u='c' c='emit_asm_reloc_text'/>
+<use f='luajit/host/buildvm_fold.c' l='101' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='105' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='109' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='113' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='116' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='199' u='c' c='emit_fold'/>
+<use f='luajit/host/buildvm_lib.c' l='32' u='c' c='libdef_name'/>
+<use f='luajit/host/buildvm_lib.c' l='293' u='c' c='libdef_push'/>
+<use f='luajit/host/buildvm_lib.c' l='405' u='c' c='emit_lib'/>
+<use f='luajit/lib_jit.c' l='481' u='c' c='jitopt_flag'/>
+<use f='luajit/lib_jit.c' l='498' u='c' c='jitopt_param'/>
+<use f='luajit/lj_clib.c' l='85' u='c' c='clib_check_lds'/>
+<use f='luajit/lj_clib.c' l='85' u='c' c='clib_check_lds'/>
+<use f='luajit/lj_clib.c' l='102' u='c' c='clib_resolve_lds'/>
+<use f='luajit/luajit.c' l='306' u='c' c='loadjitmodule'/>

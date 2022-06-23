@@ -1,0 +1,14 @@
+<dec f='luajit/lj_obj.h' l='616' type='GCRef *'/>
+<offset>0</offset>
+<doc f='luajit/lj_obj.h' l='616'>/* String hash table anchors. */</doc>
+<use f='luajit/lj_gc.c' l='609' u='r' c='lj_gc_freeall'/>
+<use f='luajit/lj_gc.c' l='672' u='r' c='gc_onestep'/>
+<use f='luajit/lj_state.c' l='175' macro='1' u='r' c='close_state'/>
+<use f='luajit/lj_str.c' l='132' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='212' macro='1' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='213' u='w' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='224' u='r' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='304' u='r' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='307' u='r' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='323' u='r' c='lj_str_new'/>
+<use f='luajit/lj_str.c' l='328' u='r' c='lj_str_new'/>

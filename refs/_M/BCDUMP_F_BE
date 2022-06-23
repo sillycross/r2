@@ -1,0 +1,4 @@
+<dec f='luajit/lj_bcdump.h' l='42'/>
+<doc f='luajit/lj_bcdump.h' l='41'>/* Compatibility flags. */</doc>
+<use f='luajit/lj_bcwrite.c' l='320' u='c'/>
+<use f='luajit/lj_lib.c' l='64' u='c'/>

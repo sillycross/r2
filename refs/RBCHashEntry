@@ -1,0 +1,7 @@
+<def f='luajit/lj_jit.h' l='334' ll='338'/>
+<use f='luajit/lj_jit.h' l='334'/>
+<size>24</size>
+<doc f='luajit/lj_jit.h' l='333'>/* Reverse bytecode map (IRRef -&gt; PC). Only for selected instructions. */</doc>
+<mbr r='RBCHashEntry::pc' o='0' t='MRef'/>
+<mbr r='RBCHashEntry::pt' o='64' t='GCRef'/>
+<mbr r='RBCHashEntry::ref' o='128' t='IRRef'/>

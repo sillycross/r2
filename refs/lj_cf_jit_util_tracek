@@ -1,0 +1,1 @@
+<def f='luajit/lib_jit.c' l='337' macro='1' type='int lj_cf_jit_util_tracek(lua_State * L)'/>

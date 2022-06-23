@@ -1,0 +1,50 @@
+<dec f='luajit/lj_obj.h' l='209' type='uint32_t'/>
+<use f='luajit/lj_obj.h' l='989' u='r' c='lj_num2bit'/>
+<offset>0</offset>
+<doc f='luajit/lj_obj.h' l='209'>/* Lower 32 bits of number. */</doc>
+<use f='luajit/lib_string.c' l='519' u='r' c='lj_cf_string_gmatch_aux'/>
+<use f='luajit/lib_string.c' l='530' u='w' c='lj_cf_string_gmatch_aux'/>
+<use f='luajit/lj_asm.c' l='1069' u='r' c='ir_khash'/>
+<use f='luajit/lj_asm_x86.h' l='626' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1069' u='r' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1156' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1183' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1621' u='r' c='asm_ahustore'/>
+<use f='luajit/lj_asm_x86.h' l='2737' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_bcread.c' l='192' u='w' c='bcread_ktabk'/>
+<use f='luajit/lj_bcread.c' l='245' u='w' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='248' u='w' c='bcread_kgc'/>
+<use f='luajit/lj_bcread.c' l='272' u='w' c='bcread_knum'/>
+<use f='luajit/lj_bcwrite.c' l='70' u='r' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='167' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='170' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='203' u='r' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='203' u='r' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='204' u='r' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='205' u='r' c='bcwrite_knum'/>
+<use f='luajit/lj_ccallback.c' l='558' u='w' c='callback_conv_args'/>
+<use f='luajit/lj_meta.c' l='87' u='w' c='lj_meta_tailcall'/>
+<use f='luajit/lj_parse.c' l='202' u='r' c='const_num'/>
+<use f='luajit/lj_parse.c' l='202' u='r' c='const_gc'/>
+<use f='luajit/lj_parse.c' l='202' u='r' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='202' u='r' c='fs_fixup_k'/>
+<use f='luajit/lj_parse.c' l='1790' u='w' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='202' u='r' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='202' u='r' c='predict_next'/>
+<use f='luajit/lj_record.c' l='2347' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_serialize.c' l='207' u='r' c='serialize_put'/>
+<use f='luajit/lj_snap.c' l='861' u='r' c='snap_unsink'/>
+<use f='luajit/lj_snap.c' l='923' u='r' c='lj_snap_restore'/>
+<use f='luajit/lj_strfmt_num.c' l='277' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='304' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='306' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='314' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='314' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='380' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='383' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='384' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_strfmt_num.c' l='422' u='r' c='lj_strfmt_wfnum'/>
+<use f='luajit/lj_tab.c' l='26' macro='1' u='r' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='389' macro='1' u='r' c='lj_tab_getinth'/>
+<use f='luajit/lj_tab.c' l='522' macro='1' u='r' c='lj_tab_setinth'/>
+<use f='luajit/lj_tab.c' l='595' u='r' c='keyindex'/>

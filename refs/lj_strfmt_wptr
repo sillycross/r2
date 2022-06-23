@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strfmt.h' l='88' type='char * lj_strfmt_wptr(char * p, const void * v)'/>
+<def f='luajit/lj_strfmt.c' l='135' ll='152' type='char * lj_strfmt_wptr(char * p, const void * v)'/>
+<use f='luajit/lj_strfmt.c' l='204' u='c' c='lj_strfmt_putptr'/>
+<use f='luajit/lj_strfmt.c' l='527' u='c' c='lj_strfmt_obj'/>
+<doc f='luajit/lj_strfmt.c' l='134'>/* Write pointer to buffer. */</doc>

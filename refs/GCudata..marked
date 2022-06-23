@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>64</offset>
+<use f='luajit/lj_gc.c' l='39' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='39' u='r' c='gc_mayclear'/>

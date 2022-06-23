@@ -1,0 +1,5 @@
+<dec f='luajit/host/minilua.c' l='91' type='27'/>
+<use f='luajit/host/minilua.c' l='3065' u='r' c='need_value'/>
+<use f='luajit/host/minilua.c' l='3071' u='r' c='patchtestreg'/>
+<use f='luajit/host/minilua.c' l='3402' u='r' c='jumponcond'/>
+<use f='luajit/host/minilua.c' l='5127' c='luaV_execute'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_err.h' l='28' type='void lj_err_trace(lua_State * L, int errcode)'/>
+<def f='luajit/lj_err.c' l='855' ll='861' macro='1' type='void lj_err_trace(lua_State * L, int errcode)'/>

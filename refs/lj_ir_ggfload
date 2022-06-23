@@ -1,0 +1,8 @@
+<dec f='luajit/lj_iropt.h' l='39' type='TRef lj_ir_ggfload(jit_State * J, IRType t, uintptr_t ofs)'/>
+<use f='luajit/lj_ffrecord.c' l='519' macro='1' u='c' c='recff_math_abs'/>
+<use f='luajit/lj_ffrecord.c' l='1104' u='c' c='recff_io_fp'/>
+<def f='luajit/lj_ir.c' l='150' ll='158' type='TRef lj_ir_ggfload(jit_State * J, IRType t, uintptr_t ofs)'/>
+<doc f='luajit/lj_ir.c' l='149'>/* Load field of type t from GG_State + offset. Must be 32 bit aligned. */</doc>
+<use f='luajit/lj_opt_fold.c' l='1045' macro='1' u='c' c='fold_simplify_nummuldiv_k'/>
+<use f='luajit/lj_opt_narrow.c' l='563' macro='1' u='c' c='lj_opt_narrow_unm'/>
+<use f='luajit/lj_record.c' l='1018' u='c' c='lj_record_mm_lookup'/>

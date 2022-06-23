@@ -1,0 +1,6 @@
+<def f='luajit/lj_clib.h' l='17' ll='20'/>
+<use f='luajit/lj_clib.h' l='17'/>
+<size>16</size>
+<doc f='luajit/lj_clib.h' l='16'>/* C library namespace. */</doc>
+<mbr r='CLibrary::handle' o='0' t='void *'/>
+<mbr r='CLibrary::cache' o='64' t='GCtab *'/>

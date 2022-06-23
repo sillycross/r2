@@ -1,0 +1,4 @@
+<def f='luajit/host/buildvm_arch.h' l='9' ll='785' type='const unsigned char [16150]'/>
+<use f='luajit/host/buildvm.c' l='192' u='r' c='build_code'/>
+<doc f='luajit/host/buildvm_arch.h' l='7'>//|
+//|.actionlist build_actionlist</doc>

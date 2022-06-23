@@ -1,0 +1,3 @@
+<dec f='luajit/lj_vm.h' l='99' type='int lj_vm_errno()'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_vmmath.c' l='133' ll='136' type='int lj_vm_errno()'/>

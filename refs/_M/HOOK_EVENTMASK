@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='666'/>
+<doc f='luajit/lj_obj.h' l='665'>/* Hook management. Hook event masks are defined in lua.h. */</doc>
+<use f='luajit/lj_dispatch.c' l='326' u='c'/>
+<use f='luajit/lj_dispatch.c' l='330' u='c'/>
+<use f='luajit/lj_dispatch.c' l='343' u='c'/>

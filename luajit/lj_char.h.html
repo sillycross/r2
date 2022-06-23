@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_char.h source code [luajit/lj_char.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_char.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_char.h.html'>lj_char.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Character types.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Donated to the public domain.</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_CHAR_H">_LJ_CHAR_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_CHAR_H" data-ref="_M/_LJ_CHAR_H">_LJ_CHAR_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_def.h.html">"lj_def.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_CNTRL" data-ref="_M/LJ_CHAR_CNTRL">LJ_CHAR_CNTRL</dfn>	0x01</u></td></tr>
+<tr><th id="12">12</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_SPACE" data-ref="_M/LJ_CHAR_SPACE">LJ_CHAR_SPACE</dfn>	0x02</u></td></tr>
+<tr><th id="13">13</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_PUNCT" data-ref="_M/LJ_CHAR_PUNCT">LJ_CHAR_PUNCT</dfn>	0x04</u></td></tr>
+<tr><th id="14">14</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_DIGIT" data-ref="_M/LJ_CHAR_DIGIT">LJ_CHAR_DIGIT</dfn>	0x08</u></td></tr>
+<tr><th id="15">15</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_XDIGIT" data-ref="_M/LJ_CHAR_XDIGIT">LJ_CHAR_XDIGIT</dfn>	0x10</u></td></tr>
+<tr><th id="16">16</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_UPPER" data-ref="_M/LJ_CHAR_UPPER">LJ_CHAR_UPPER</dfn>	0x20</u></td></tr>
+<tr><th id="17">17</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_LOWER" data-ref="_M/LJ_CHAR_LOWER">LJ_CHAR_LOWER</dfn>	0x40</u></td></tr>
+<tr><th id="18">18</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_IDENT" data-ref="_M/LJ_CHAR_IDENT">LJ_CHAR_IDENT</dfn>	0x80</u></td></tr>
+<tr><th id="19">19</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_ALPHA" data-ref="_M/LJ_CHAR_ALPHA">LJ_CHAR_ALPHA</dfn>	(LJ_CHAR_LOWER|LJ_CHAR_UPPER)</u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_ALNUM" data-ref="_M/LJ_CHAR_ALNUM">LJ_CHAR_ALNUM</dfn>	(LJ_CHAR_ALPHA|LJ_CHAR_DIGIT)</u></td></tr>
+<tr><th id="21">21</th><td><u>#define <dfn class="macro" id="_M/LJ_CHAR_GRAPH" data-ref="_M/LJ_CHAR_GRAPH">LJ_CHAR_GRAPH</dfn>	(LJ_CHAR_ALNUM|LJ_CHAR_PUNCT)</u></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><i>/* Only pass -1 or 0..255 to these macros. Never pass a signed char! */</i></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/lj_char_isa" data-ref="_M/lj_char_isa">lj_char_isa</dfn>(c, t)	((lj_char_bits+1)[(c)] &amp; t)</u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/lj_char_iscntrl" data-ref="_M/lj_char_iscntrl">lj_char_iscntrl</dfn>(c)	lj_char_isa((c), LJ_CHAR_CNTRL)</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/lj_char_isspace" data-ref="_M/lj_char_isspace">lj_char_isspace</dfn>(c)	lj_char_isa((c), LJ_CHAR_SPACE)</u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/lj_char_ispunct" data-ref="_M/lj_char_ispunct">lj_char_ispunct</dfn>(c)	lj_char_isa((c), LJ_CHAR_PUNCT)</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/lj_char_isdigit" data-ref="_M/lj_char_isdigit">lj_char_isdigit</dfn>(c)	lj_char_isa((c), LJ_CHAR_DIGIT)</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/lj_char_isxdigit" data-ref="_M/lj_char_isxdigit">lj_char_isxdigit</dfn>(c)	lj_char_isa((c), LJ_CHAR_XDIGIT)</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/lj_char_isupper" data-ref="_M/lj_char_isupper">lj_char_isupper</dfn>(c)	lj_char_isa((c), LJ_CHAR_UPPER)</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/lj_char_islower" data-ref="_M/lj_char_islower">lj_char_islower</dfn>(c)	lj_char_isa((c), LJ_CHAR_LOWER)</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/lj_char_isident" data-ref="_M/lj_char_isident">lj_char_isident</dfn>(c)	lj_char_isa((c), LJ_CHAR_IDENT)</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/lj_char_isalpha" data-ref="_M/lj_char_isalpha">lj_char_isalpha</dfn>(c)	lj_char_isa((c), LJ_CHAR_ALPHA)</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/lj_char_isalnum" data-ref="_M/lj_char_isalnum">lj_char_isalnum</dfn>(c)	lj_char_isa((c), LJ_CHAR_ALNUM)</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/lj_char_isgraph" data-ref="_M/lj_char_isgraph">lj_char_isgraph</dfn>(c)	lj_char_isa((c), LJ_CHAR_GRAPH)</u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/lj_char_toupper" data-ref="_M/lj_char_toupper">lj_char_toupper</dfn>(c)	((c) - (lj_char_islower(c) &gt;&gt; 1))</u></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/lj_char_tolower" data-ref="_M/lj_char_tolower">lj_char_tolower</dfn>(c)	((c) + lj_char_isupper(c))</u></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><a class="macro" href="lj_def.h.html#328" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_DATA">LJ_DATA</a> <em>const</em> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> <dfn class="decl" id="lj_char_bits" title='lj_char_bits' data-ref="lj_char_bits" data-ref-filename="lj_char_bits">lj_char_bits</dfn>[<var>257</var>];</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_base.c.html'>luajit/lib_base.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

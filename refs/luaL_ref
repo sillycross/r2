@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='62' type='int luaL_ref(lua_State * L, int t)'/>
+<def f='luajit/lib_aux.c' l='276' ll='296' macro='1' type='int luaL_ref(lua_State * L, int t)'/>

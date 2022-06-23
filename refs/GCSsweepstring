@@ -1,0 +1,7 @@
+<dec f='luajit/lj_gc.h' l='13' type='3'/>
+<use f='luajit/lj_gc.c' l='667' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='670' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='784' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='787' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_str.c' l='136' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='223' u='r' c='lj_str_rehash_chain'/>

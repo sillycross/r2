@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='1394' ll='1420' type='void asm_fxload(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='1795' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1796' macro='1' u='c' c='asm_ir'/>
+<doc f='luajit/lj_asm_x86.h' l='1392'>/* -- Loads and stores ---------------------------------------------------- */</doc>

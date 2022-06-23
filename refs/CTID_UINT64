@@ -1,0 +1,16 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='12'/>
+<use f='luajit/lj_bcread.c' l='240' u='r' c='bcread_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='141' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_carith.c' l='164' u='r' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='336' u='r' c='lj_carith_check64'/>
+<use f='luajit/lj_crecord.c' l='1332' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1775' u='r' c='crec_bit64_type'/>
+<use f='luajit/lj_crecord.c' l='1919' u='r' c='lj_crecord_loadiu64'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='120' macro='1' u='r'/>
+<use f='luajit/lj_lex.c' l='127' u='r' c='lex_number'/>
+<use f='luajit/lj_lib.c' l='342' u='r' c='lj_lib_checkintrange'/>
+<use f='luajit/lj_serialize.c' l='365' u='r' c='serialize_get'/>
+<use f='luajit/lj_strfmt.c' l='403' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='419' u='r' c='lj_strfmt_putarg'/>

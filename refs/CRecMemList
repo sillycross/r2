@@ -1,0 +1,4 @@
+<def f='luajit/lj_crecord.c' l='141' ll='146'/>
+<use f='luajit/lj_crecord.c' l='141'/>
+<size>16</size>
+<doc f='luajit/lj_crecord.c' l='140'>/* List of memory offsets for copy/fill. */</doc>

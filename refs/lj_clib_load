@@ -1,0 +1,4 @@
+<dec f='luajit/lj_clib.h' l='23' type='void lj_clib_load(lua_State * L, GCtab * mt, GCstr * name, int global)'/>
+<use f='luajit/lib_ffi.c' l='812' u='c' c='lj_cf_ffi_load'/>
+<def f='luajit/lj_clib.c' l='413' ll='418' type='void lj_clib_load(lua_State * L, GCtab * mt, GCstr * name, int global)'/>
+<doc f='luajit/lj_clib.c' l='412'>/* Load a C library. */</doc>

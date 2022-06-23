@@ -1,0 +1,12 @@
+<dec f='luajit/lj_cparse.h' l='53' type='BCLine'/>
+<offset>832</offset>
+<doc f='luajit/lj_cparse.h' l='53'>/* Input line counter. */</doc>
+<use f='luajit/lj_cparse.c' l='109' u='w' c='cp_get_bs'/>
+<use f='luajit/lj_cparse.c' l='124' u='w' c='cp_newline'/>
+<use f='luajit/lj_cparse.c' l='148' u='r' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='149' u='r' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='396' u='w' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='1790' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1800' u='r' c='cp_line'/>
+<use f='luajit/lj_cparse.c' l='1802' u='w' c='cp_line'/>
+<use f='luajit/lj_cparse.c' l='1817' u='r' c='cp_decl_multi'/>

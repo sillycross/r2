@@ -1,0 +1,17 @@
+<dec f='luajit/lj_ctype.h' l='467' type='CType * lj_ctype_rawref(CTState * cts, CTypeID id)'/>
+<use f='luajit/lib_base.c' l='274' u='c' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_ffi.c' l='594' u='c' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='595' u='c' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='622' u='c' c='lj_cf_ffi_sizeof'/>
+<use f='luajit/lib_ffi.c' l='651' u='c' c='lj_cf_ffi_offsetof'/>
+<use f='luajit/lj_cconv.c' l='749' u='c' c='lj_cconv_multi_init'/>
+<use f='luajit/lj_cparse.c' l='509' u='c' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='552' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='554' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='563' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='567' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_crecord.c' l='1744' u='c' c='recff_ffi_xof'/>
+<use f='luajit/lj_crecord.c' l='1771' u='c' c='crec_bit64_type'/>
+<use f='luajit/lj_crecord.c' l='1900' u='c' c='lj_crecord_tonumber'/>
+<def f='luajit/lj_ctype.c' l='271' ll='277' type='CType * lj_ctype_rawref(CTState * cts, CTypeID id)'/>
+<doc f='luajit/lj_ctype.c' l='270'>/* Follow references and get raw type for a C type ID. */</doc>

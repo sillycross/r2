@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ir.h' l='367'/>
+<use f='luajit/lj_asm_x86.h' l='1435' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2454' u='c'/>
+<use f='luajit/lj_snap.c' l='813' u='c'/>

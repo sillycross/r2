@@ -1,0 +1,15 @@
+<dec f='luajit/lj_ctype.h' l='64'/>
+<doc f='luajit/lj_ctype.h' l='63'>/* C type info flags.     TFFArrrr  */</doc>
+<use f='luajit/lj_carith.c' l='334' u='c'/>
+<use f='luajit/lj_cconv.c' l='97' u='c'/>
+<use f='luajit/lj_cconv.c' l='449' u='c'/>
+<use f='luajit/lj_cconv.c' l='653' u='c'/>
+<use f='luajit/lj_cparse.c' l='902' u='c'/>
+<use f='luajit/lj_cparse.c' l='1331' u='c'/>
+<use f='luajit/lj_cparse.c' l='1413' u='c'/>
+<use f='luajit/lj_cparse.c' l='1572' u='c'/>
+<use f='luajit/lj_crecord.c' l='564' u='c'/>
+<use f='luajit/lj_crecord.c' l='766' u='c'/>
+<use f='luajit/lj_crecord.c' l='785' u='c'/>
+<use f='luajit/lj_crecord.c' l='1773' u='c'/>
+<use f='luajit/lj_ctype.c' l='452' u='c'/>

@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='2'/>
+<use f='luajit/lj_ir.h' l='164' u='r' c='lj_assert_67'/>
+<use f='luajit/lj_asm.c' l='1731' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='1362' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_ffrecord.c' l='824' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='858' u='r' c='recff_string_rep'/>
+<use f='luajit/lj_ir.c' l='459' c='lj_ir_numcmp'/>
+<use f='luajit/lj_ir.c' l='476' c='lj_ir_strcmp'/>
+<use f='luajit/lj_opt_fold.c' l='350' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='482' c='fold_kfold_int64comp'/>
+<use f='luajit/lj_record.c' l='399' u='r' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='427' u='r' c='rec_for_check'/>
+<use f='luajit/lj_record.c' l='442' u='r' c='rec_for_check'/>
+<use f='luajit/lj_record.c' l='1840' u='r' c='rec_varg'/>

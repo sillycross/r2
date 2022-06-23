@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='239' type='int lua_error(lua_State * L)'/>
+<use f='luajit/lib_base.c' l='346' u='c' c='lj_cf_error'/>
+<use f='luajit/lib_base.c' l='447' u='c' c='lj_cf_dofile'/>
+<def f='luajit/lj_err.c' l='1057' ll='1061' macro='1' type='int lua_error(lua_State * L)'/>
+<use f='luajit/luajit.c' l='51' u='c' c='lstop'/>

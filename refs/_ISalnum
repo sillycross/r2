@@ -1,0 +1,5 @@
+<dec f='include/ctype.h' l='59' type='8'/>
+<use f='luajit/host/minilua.c' l='2769' macro='1' u='r' c='read_numeral'/>
+<use f='luajit/host/minilua.c' l='2965' macro='1' u='r' c='llex'/>
+<use f='luajit/host/minilua.c' l='7131' macro='1' u='r' c='match_class'/>
+<doc f='include/ctype.h' l='59'>/* Alphanumeric.  */</doc>

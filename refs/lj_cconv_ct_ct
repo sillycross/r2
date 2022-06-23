@@ -1,0 +1,19 @@
+<dec f='luajit/lj_cconv.h' l='57' type='void lj_cconv_ct_ct(CTState * cts, CType * d, CType * s, uint8_t * dp, uint8_t * sp, CTInfo flags)'/>
+<use f='luajit/lj_carith.c' l='132' u='c' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='139' u='c' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='168' u='c' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='170' u='c' c='carith_int64'/>
+<use f='luajit/lj_carith.c' l='339' u='c' c='lj_carith_check64'/>
+<def f='luajit/lj_cconv.c' l='119' ll='375' type='void lj_cconv_ct_ct(CTState * cts, CType * d, CType * s, uint8_t * dp, uint8_t * sp, CTInfo flags)'/>
+<use f='luajit/lj_cconv.c' l='305' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='306' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='318' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='389' u='c' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='396' u='c' c='lj_cconv_tv_ct'/>
+<use f='luajit/lj_cconv.c' l='643' u='c' c='lj_cconv_ct_tv'/>
+<doc f='luajit/lj_cconv.c' l='114'>/* Convert C type to C type. Caveat: expects to get the raw CType!
+**
+** Note: This is only used by the interpreter and not optimized at all.
+** The JIT compiler will do a much better job specializing for each case.
+*/</doc>
+<use f='luajit/lj_cdata.c' l='161' u='c' c='lj_cdata_index'/>

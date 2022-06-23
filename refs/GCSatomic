@@ -1,0 +1,11 @@
+<dec f='luajit/lj_gc.h' l='13' type='2'/>
+<use f='luajit/lj_gc.c' l='311' u='r' c='gc_traverse_thread'/>
+<use f='luajit/lj_gc.c' l='661' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='663' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='769' u='r' c='lj_gc_step_jit'/>
+<use f='luajit/lj_gc.c' l='779' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_gc.c' l='809' u='r' c='lj_gc_barrierf'/>
+<use f='luajit/lj_gc.c' l='820' u='r' c='lj_gc_barrieruv'/>
+<use f='luajit/lj_gc.c' l='838' u='r' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='854' u='r' c='lj_gc_barriertrace'/>
+<use f='luajit/lj_trace.c' l='894' u='r' c='lj_trace_exit'/>

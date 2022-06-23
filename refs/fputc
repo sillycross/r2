@@ -1,0 +1,15 @@
+<dec f='include/stdio.h' l='517' type='int fputc(int __c, FILE * __stream)'/>
+<doc f='include/stdio.h' l='510'>/* Write a character to STREAM.
+
+   These functions are possible cancellation points and therefore not
+   marked with __THROW.
+
+   These functions is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='luajit/lib_aux.c' l='316' u='c' c='panic'/>
+<use f='luajit/lib_aux.c' l='316' u='c' c='panic'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_vmevent.c' l='52' u='c' c='lj_vmevent_call'/>
+<use f='luajit/luajit.c' l='83' u='c' c='l_message'/>
+<use f='luajit/luajit.c' l='83' u='c' c='l_message'/>
+<use f='luajit/luajit.c' l='84' u='c' c='l_message'/>

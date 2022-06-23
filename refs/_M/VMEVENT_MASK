@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vmevent.h' l='15'/>
+<use f='luajit/lj_vmevent.c' l='34' u='c'/>

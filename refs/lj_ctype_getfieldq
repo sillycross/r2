@@ -1,0 +1,13 @@
+<dec f='luajit/lj_ctype.h' l='463' type='CType * lj_ctype_getfieldq(CTState * cts, CType * ct, GCstr * name, CTSize * ofs, CTInfo * qual)'/>
+<use f='luajit/lib_ffi.c' l='654' macro='1' u='c' c='lj_cf_ffi_offsetof'/>
+<use f='luajit/lj_carith.c' l='71' macro='1' u='c' c='carith_checkarg'/>
+<use f='luajit/lj_cconv.c' l='583' macro='1' u='c' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cdata.c' l='169' u='c' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='192' macro='1' u='c' c='lj_cdata_index'/>
+<use f='luajit/lj_cparse.c' l='572' macro='1' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_crecord.c' l='632' macro='1' u='c' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='872' macro='1' u='c' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1535' macro='1' u='c' c='recff_cdata_arith'/>
+<def f='luajit/lj_ctype.c' l='241' ll='266' type='CType * lj_ctype_getfieldq(CTState * cts, CType * ct, GCstr * name, CTSize * ofs, CTInfo * qual)'/>
+<use f='luajit/lj_ctype.c' l='257' u='c' c='lj_ctype_getfieldq'/>
+<doc f='luajit/lj_ctype.c' l='240'>/* Get a struct/union/enum/function field by name. */</doc>

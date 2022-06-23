@@ -1,0 +1,18 @@
+<dec f='include/string.h' l='396' type='char * strerror(int __errnum)'/>
+<use f='luajit/host/buildvm.c' l='81' u='c' c='owrite'/>
+<use f='luajit/host/buildvm.c' l='470' u='c' c='main'/>
+<use f='luajit/host/buildvm.c' l='511' u='c' c='main'/>
+<doc f='include/string.h' l='395'>/* Return a string describing the meaning of the `errno&apos; code in ERRNUM.  */</doc>
+<use f='luajit/host/buildvm_fold.c' l='185' u='c' c='emit_fold'/>
+<use f='luajit/host/buildvm_lib.c' l='371' u='c' c='emit_lib'/>
+<use f='luajit/host/minilua.c' l='6136' u='c' c='errfile'/>
+<use f='luajit/host/minilua.c' l='6623' u='c' c='pushresult'/>
+<use f='luajit/host/minilua.c' l='6625' u='c' c='pushresult'/>
+<use f='luajit/host/minilua.c' l='6631' u='c' c='fileerror'/>
+<use f='luajit/host/minilua.c' l='6871' u='c' c='io_readline'/>
+<use f='luajit/host/minilua.c' l='6976' u='c' c='os_pushresult'/>
+<use f='luajit/lib_aux.c' l='40' u='c' c='luaL_fileresult'/>
+<use f='luajit/lib_aux.c' l='42' u='c' c='luaL_fileresult'/>
+<use f='luajit/lib_io.c' l='89' u='c' c='io_file_open'/>
+<use f='luajit/lj_load.c' l='93' u='c' c='luaL_loadfilex'/>
+<use f='luajit/lj_load.c' l='104' u='c' c='luaL_loadfilex'/>

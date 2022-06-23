@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='640' type='SBuf'/>
+<offset>1600</offset>
+<doc f='luajit/lj_obj.h' l='640'>/* Temporary string buffer. */</doc>
+<use f='luajit/lj_buf.h' l='85' u='a' c='lj_buf_tmp_'/>
+<use f='luajit/lib_buffer.c' l='324' u='a' c='lj_cf_buffer_encode'/>
+<use f='luajit/lib_os.c' l='207' u='a' c='lj_cf_os_date'/>
+<use f='luajit/lj_buf.c' l='106' u='a' c='lj_buf_tmp'/>
+<use f='luajit/lj_ffrecord.c' l='186' u='a' c='recff_bufhdr'/>
+<use f='luajit/lj_gc.c' l='641' u='a' c='atomic'/>
+<use f='luajit/lj_record.c' l='1940' u='a' c='rec_cat'/>
+<use f='luajit/lj_state.c' l='176' u='a' c='close_state'/>
+<use f='luajit/lj_state.c' l='248' u='a' c='lua_newstate'/>

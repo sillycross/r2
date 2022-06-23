@@ -1,0 +1,8 @@
+<def f='luajit/lj_emit_x86.h' l='552' ll='558' type='void emit_storeofs(ASMState * as, IRIns * ir, Reg r, Reg base, int32_t ofs)'/>
+<use f='luajit/lj_asm.c' l='196' u='c' c='ra_save'/>
+<use f='luajit/lj_asm.c' l='1168' u='c' c='asm_bufhdr'/>
+<use f='luajit/lj_asm.c' l='196' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='c' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='c' c='asm_phi_copyspill'/>
+<doc f='luajit/lj_emit_x86.h' l='551'>/* Generic store of register with base and (small) offset address. */</doc>

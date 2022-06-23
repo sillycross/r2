@@ -1,0 +1,4 @@
+<dec f='luajit/lj_record.h' l='42' type='void lj_record_setup(jit_State * J)'/>
+<def f='luajit/lj_record.c' l='2576' ll='2681' type='void lj_record_setup(jit_State * J)'/>
+<doc f='luajit/lj_record.c' l='2575'>/* Setup for recording a new trace. */</doc>
+<use f='luajit/lj_trace.c' l='471' u='c' c='trace_start'/>

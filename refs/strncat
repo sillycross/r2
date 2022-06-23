@@ -1,0 +1,3 @@
+<dec f='include/string.h' l='132' type='char * strncat(char *restrict __dest, const char *restrict __src, size_t __n)'/>
+<doc f='include/string.h' l='131'>/* Append no more than N characters from SRC onto DEST.  */</doc>
+<use f='luajit/host/minilua.c' l='755' u='c' c='luaO_chunkid'/>

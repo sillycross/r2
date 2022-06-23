@@ -1,0 +1,1 @@
+<def f='luajit/lib_table.c' l='259' macro='1' type='int lj_cf_table_sort(lua_State * L)'/>

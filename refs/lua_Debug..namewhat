@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='363' type='const char *'/>
+<offset>128</offset>
+<doc f='luajit/lua.h' l='363'>/* (n) `global&apos;, `local&apos;, `field&apos;, `method&apos; */</doc>
+<use f='luajit/lj_debug.c' l='682' u='r' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='688' u='r' c='luaL_traceback'/>

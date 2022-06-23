@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ctype.h' l='168' type='MSize'/>
+<offset>1216</offset>
+<doc f='luajit/lj_ctype.h' l='168'>/* Size of callback type table. */</doc>
+<use f='luajit/lib_ffi.c' l='439' u='r' c='ffi_callback_set'/>
+<use f='luajit/lj_ccallback.c' l='542' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='731' u='r' c='callback_slot_new'/>
+<use f='luajit/lj_ccallback.c' l='740' u='a' c='callback_slot_new'/>
+<use f='luajit/lj_ccallback.c' l='742' u='r' c='callback_slot_new'/>
+<use f='luajit/lj_ctype.c' l='633' u='r' c='lj_ctype_freestate'/>

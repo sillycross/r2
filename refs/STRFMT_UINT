@@ -1,0 +1,10 @@
+<dec f='luajit/lj_strfmt.h' l='24' type='4'/>
+<use f='luajit/lib_bit.c' l='157' u='r' c='lj_cf_bit_tohex'/>
+<use f='luajit/lj_crecord.c' l='1865' u='r' c='recff_bit64_tohex'/>
+<use f='luajit/lj_ffrecord.c' l='994' c='recff_string_format'/>
+<use f='luajit/lj_strfmt.c' l='28' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='31' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='31' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='31' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='411' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='562' c='lj_strfmt_pushvf'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_tab.c' l='89' u='w' c='newtab'/>
+<use f='luajit/lj_tab.c' l='104' u='w' c='newtab'/>

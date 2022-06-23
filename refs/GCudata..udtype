@@ -1,0 +1,32 @@
+<dec f='luajit/lj_obj.h' l='322' type='uint8_t'/>
+<offset>80</offset>
+<doc f='luajit/lj_obj.h' l='322'>/* Userdata type. */</doc>
+<use f='luajit/lib_base.c' l='411' macro='1' u='r' c='lj_cf_load'/>
+<use f='luajit/lib_base.c' l='414' macro='1' u='r' c='lj_cf_load'/>
+<use f='luajit/lib_buffer.c' l='37' macro='1' u='r' c='buffer_tobuf'/>
+<use f='luajit/lib_buffer.c' l='127' macro='1' u='r' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_buffer.c' l='308' u='w' c='lj_cf_buffer_new'/>
+<use f='luajit/lib_ffi.c' l='365' u='r' c='ffi_clib_index'/>
+<use f='luajit/lib_ffi.c' l='421' u='r' c='lj_cf_ffi_clib___gc'/>
+<use f='luajit/lib_io.c' l='50' u='r' c='io_tofilep'/>
+<use f='luajit/lib_io.c' l='75' u='w' c='io_file_new'/>
+<use f='luajit/lib_io.c' l='506' u='r' c='lj_cf_io_type'/>
+<use f='luajit/lib_io.c' l='523' u='w' c='io_std_new'/>
+<use f='luajit/lj_cconv.c' l='623' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cconv.c' l='625' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_clib.c' l='405' u='w' c='clib_new'/>
+<use f='luajit/lj_crecord.c' l='619' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='619' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='621' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='623' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='1584' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_gc.c' l='68' u='r' c='gc_mark'/>
+<use f='luajit/lj_meta.c' l='243' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='244' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='281' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='285' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_meta.c' l='295' macro='1' u='r' c='lj_meta_cat'/>
+<use f='luajit/lj_record.c' l='982' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_strfmt.c' l='170' macro='1' u='r' c='lj_strfmt_wstrnum'/>
+<use f='luajit/lj_strfmt.c' l='450' macro='1' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_udata.c' l='20' u='w' c='lj_udata_new'/>

@@ -1,0 +1,4 @@
+<dec f='include/time.h' l='75' type='time_t time(time_t * __timer)'/>
+<doc f='include/time.h' l='74'>/* Return the current time and put it in *TIMER if TIMER is not NULL.  */</doc>
+<use f='luajit/lib_os.c' l='174' u='c' c='lj_cf_os_date'/>
+<use f='luajit/lib_os.c' l='233' u='c' c='lj_cf_os_time'/>

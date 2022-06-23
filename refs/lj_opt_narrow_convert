@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='136' type='TRef lj_opt_narrow_convert(jit_State * J)'/>
+<use f='luajit/lj_opt_fold.c' l='1347' u='c' c='fold_narrow_convert'/>
+<def f='luajit/lj_opt_narrow.c' l='406' ll='423' type='TRef lj_opt_narrow_convert(jit_State * J)'/>
+<doc f='luajit/lj_opt_narrow.c' l='405'>/* Narrow a type conversion of an arithmetic operation. */</doc>

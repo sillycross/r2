@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='82'/>
+<use f='luajit/lj_opt_fold.c' l='588' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2468' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2469' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='234' u='c'/>

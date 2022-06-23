@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='28' type='void lj_trace_reenableproto(GCproto * pt)'/>
+<use f='luajit/lj_dispatch.c' l='215' u='c' c='setptmode'/>
+<def f='luajit/lj_trace.c' l='184' ll='198' type='void lj_trace_reenableproto(GCproto * pt)'/>
+<doc f='luajit/lj_trace.c' l='183'>/* Re-enable compiling a prototype by unpatching any modified bytecode. */</doc>

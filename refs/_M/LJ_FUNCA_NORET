@@ -1,0 +1,4 @@
+<dec f='luajit/lj_def.h' l='338'/>
+<use f='luajit/lj_err.h' l='24' u='c'/>
+<use f='luajit/lj_err.h' l='28' u='c'/>
+<use f='luajit/lib_base.c' l='637' u='c'/>

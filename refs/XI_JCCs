@@ -1,0 +1,5 @@
+<dec f='luajit/lj_target_x86.h' l='215' type='112'/>
+<doc f='luajit/lj_target_x86.h' l='215'>/* Really 7x. */</doc>
+<use f='luajit/lj_emit_x86.h' l='282' u='r' c='emit_loadi'/>
+<use f='luajit/lj_emit_x86.h' l='451' u='r' c='emit_sjcc'/>
+<use f='luajit/lj_emit_x86.h' l='460' u='r' c='emit_sjcc_label'/>

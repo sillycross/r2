@@ -1,0 +1,6 @@
+<dec f='luajit/lj_dispatch.h' l='108' type='BCIns [57]'/>
+<offset>48064</offset>
+<doc f='luajit/lj_dispatch.h' l='108'>/* Bytecode for ASM fast functions. */</doc>
+<use f='luajit/lib_base.c' l='668' u='a' c='setpc_wrap_aux'/>
+<use f='luajit/lj_dispatch.c' l='76' u='w' c='lj_dispatch_init'/>
+<use f='luajit/lj_lib.c' l='80' u='a' c='lj_lib_register'/>

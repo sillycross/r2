@@ -1,0 +1,11 @@
+<dec f='luajit/lj_tab.h' l='83'/>
+<use f='luajit/lj_gc.c' l='204' u='c'/>
+<use f='luajit/lj_gc.c' l='480' u='c'/>
+<use f='luajit/lj_serialize.c' l='131' u='c'/>
+<use f='luajit/lj_serialize.c' l='328' u='c'/>
+<use f='luajit/lj_serialize.c' l='329' u='c'/>
+<use f='luajit/lj_tab.c' l='607' u='c'/>
+<use f='luajit/lj_tab.c' l='609' u='c'/>
+<use f='luajit/lj_tab.c' l='656' u='c'/>
+<use f='luajit/lj_tab.c' l='661' u='c'/>
+<use f='luajit/lj_tab.c' l='674' u='c'/>

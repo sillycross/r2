@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_api.c' l='92' u='r' c='getcurrenv'/>
+<use f='luajit/lj_api.c' l='184' u='r' c='copy_slot'/>
+<use f='luajit/lj_func.c' l='114' u='w' c='lj_func_newC'/>

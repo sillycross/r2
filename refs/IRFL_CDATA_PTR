@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='16'/>
+<use f='luajit/lj_crecord.c' l='666' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='813' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1233' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1493' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1507' u='r' c='recff_cdata_arith'/>

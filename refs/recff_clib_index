@@ -1,0 +1,4 @@
+<dec f='luajit/lj_crecord.h' l='17' type='void recff_clib_index(jit_State * J, RecordFFData * rd)'/>
+<def f='luajit/lj_crecord.c' l='1580' ll='1622' type='void recff_clib_index(jit_State * J, RecordFFData * rd)'/>
+<doc f='luajit/lj_crecord.c' l='1578'>/* -- C library namespace metamethods ------------------------------------- */</doc>
+<use f='luajit/lj_recdef.h' l='258'/>

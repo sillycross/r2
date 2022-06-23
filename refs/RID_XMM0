@@ -1,0 +1,20 @@
+<dec f='luajit/lj_target_x86.h' l='31' macro='1' type='16'/>
+<use f='luajit/lj_target_x86.h' l='40'/>
+<use f='luajit/lj_target_x86.h' l='58'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm.c' l='463' macro='1' u='r' c='ra_evict'/>
+<use f='luajit/lj_asm_x86.h' l='550' macro='1' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='646' macro='1' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1964' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='1964' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='1968' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='1971' u='r' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='1997' u='r' c='asm_fppowi'/>
+<use f='luajit/lj_asm_x86.h' l='1997' u='r' c='asm_fppowi'/>
+<use f='luajit/lj_asm_x86.h' l='2001' u='r' c='asm_fppowi'/>
+<use f='luajit/lj_asm_x86.h' l='2003' u='r' c='asm_fppowi'/>
+<use f='luajit/lj_asm.c' l='2308' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2310' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2310' u='r' c='asm_setup_regsp'/>

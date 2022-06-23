@@ -1,0 +1,6 @@
+<def f='luajit/lj_buf.h' l='72' ll='76' type='void lj_buf_init(lua_State * L, SBuf * sb)'/>
+<use f='luajit/lj_bcwrite.c' l='366' u='c' c='lj_bcwrite'/>
+<use f='luajit/lj_cparse.c' l='400' u='c' c='cp_init'/>
+<use f='luajit/lj_load.c' l='57' u='c' c='lua_loadx'/>
+<use f='luajit/lj_profile.c' l='331' u='c' c='luaJIT_profile_start'/>
+<use f='luajit/lj_state.c' l='248' u='c' c='lua_newstate'/>

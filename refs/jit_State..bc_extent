@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='432' type='MSize'/>
+<offset>1856</offset>
+<doc f='luajit/lj_jit.h' l='432'>/* Extent of the range. */</doc>
+<use f='luajit/lj_record.c' l='2071' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2528' u='w' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2535' u='w' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2546' u='w' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2602' u='w' c='lj_record_setup'/>

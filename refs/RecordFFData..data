@@ -1,0 +1,35 @@
+<dec f='luajit/lj_ffrecord.h' l='17' type='uint32_t'/>
+<use f='luajit/lj_crecord.c' l='737' u='r' c='crec_index_meta'/>
+<use f='luajit/lj_crecord.c' l='742' u='r' c='crec_index_meta'/>
+<use f='luajit/lj_crecord.c' l='765' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='933' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1448' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1454' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1462' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1559' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1590' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_crecord.c' l='1609' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_crecord.c' l='1743' u='r' c='recff_ffi_xof'/>
+<use f='luajit/lj_crecord.c' l='1747' u='r' c='recff_ffi_xof'/>
+<use f='luajit/lj_crecord.c' l='1797' u='r' c='recff_bit64_unary'/>
+<use f='luajit/lj_crecord.c' l='1815' u='r' c='recff_bit64_nary'/>
+<use f='luajit/lj_crecord.c' l='1842' u='r' c='recff_bit64_shift'/>
+<offset>128</offset>
+<doc f='luajit/lj_ffrecord.h' l='17'>/* Per-ffid auxiliary data (opcode, literal etc.). */</doc>
+<use f='luajit/lj_ffrecord.c' l='443' u='r' c='recff_xpairs'/>
+<use f='luajit/lj_ffrecord.c' l='447' u='r' c='recff_xpairs'/>
+<use f='luajit/lj_ffrecord.c' l='528' u='r' c='recff_math_round'/>
+<use f='luajit/lj_ffrecord.c' l='531' u='r' c='recff_math_round'/>
+<use f='luajit/lj_ffrecord.c' l='542' u='r' c='recff_math_unary'/>
+<use f='luajit/lj_ffrecord.c' l='592' u='r' c='recff_math_call'/>
+<use f='luajit/lj_ffrecord.c' l='605' u='r' c='recff_math_minmax'/>
+<use f='luajit/lj_ffrecord.c' l='667' u='r' c='recff_bit_unary'/>
+<use f='luajit/lj_ffrecord.c' l='679' u='r' c='recff_bit_nary'/>
+<use f='luajit/lj_ffrecord.c' l='697' u='r' c='recff_bit_shift'/>
+<use f='luajit/lj_ffrecord.c' l='759' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='799' u='r' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='880' u='r' c='recff_string_op'/>
+<use f='luajit/lj_ffrecord.c' l='1120' u='r' c='recff_io_write'/>
+<use f='luajit/lj_ffrecord.c' l='1123' u='r' c='recff_io_write'/>
+<use f='luajit/lj_ffrecord.c' l='1147' u='r' c='recff_io_flush'/>
+<use f='luajit/lj_ffrecord.c' l='1193' u='w' c='lj_ffrecord_func'/>

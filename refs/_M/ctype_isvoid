@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ctype.h' l='203'/>
+<use f='luajit/lib_ffi.c' l='602' u='c'/>
+<use f='luajit/lj_ccall.c' l='1115' u='c'/>
+<use f='luajit/lj_ccallback.c' l='642' u='c'/>
+<use f='luajit/lj_ccallback.c' l='759' u='c'/>
+<use f='luajit/lj_cconv.c' l='90' u='c'/>
+<use f='luajit/lj_cconv.c' l='90' u='c'/>
+<use f='luajit/lj_cparse.c' l='1643' u='c'/>
+<use f='luajit/lj_crecord.c' l='1242' u='c'/>

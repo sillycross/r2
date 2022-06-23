@@ -1,0 +1,29 @@
+<dec f='luajit/lj_cparse.h' l='44' type='CPValue'/>
+<use f='luajit/lib_ffi.c' l='58' u='m' c='ffi_checkctype'/>
+<offset>64</offset>
+<doc f='luajit/lj_cparse.h' l='44'>/* Token value. */</doc>
+<use f='luajit/lj_cparse.c' l='180' u='m' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='181' u='m' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='184' u='m' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='193' u='m' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='211' u='m' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='215' u='m' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='216' u='m' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='224' u='m' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='226' u='m' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='282' u='m' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='283' u='m' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='487' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='525' u='m' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='527' u='m' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='527' u='m' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='1230' u='m' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1231' u='m' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1453' u='m' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1548' u='m' c='cp_decl_spec'/>
+<use f='luajit/lj_cparse.c' l='1723' u='m' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1782' u='m' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1782' u='m' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1798' u='m' c='cp_line'/>
+<use f='luajit/lj_cparse.c' l='1893' u='m' c='cp_decl_single'/>
+<use f='luajit/lj_crecord.c' l='89' u='m' c='argv2ctype'/>

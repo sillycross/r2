@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='277' type='uint8_t'/>
+<offset>912</offset>
+<doc f='luajit/lj_jit.h' l='277'>/* Trace has SINK tags. */</doc>
+<use f='luajit/lj_asm.c' l='2112' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_opt_sink.c' l='195' u='w' c='sink_sweep_ins'/>

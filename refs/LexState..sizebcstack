@@ -1,0 +1,9 @@
+<dec f='luajit/lj_lex.h' l='74' type='MSize'/>
+<offset>1344</offset>
+<doc f='luajit/lj_lex.h' l='74'>/* Size of bytecode stack. */</doc>
+<use f='luajit/lj_lex.c' l='408' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='449' u='r' c='lj_lex_cleanup'/>
+<use f='luajit/lj_parse.c' l='423' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='424' u='a' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='425' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='1876' u='r' c='parse_body'/>

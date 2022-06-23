@@ -1,0 +1,4 @@
+<dec f='luajit/host/minilua.c' l='79' type='15'/>
+<use f='luajit/host/minilua.c' l='3491' c='constfolding'/>
+<use f='luajit/host/minilua.c' l='3612' u='r' c='luaK_posfix'/>
+<use f='luajit/host/minilua.c' l='5036' c='luaV_execute'/>

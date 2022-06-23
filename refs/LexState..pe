@@ -1,0 +1,17 @@
+<dec f='luajit/lj_lex.h' l='58' type='const char *'/>
+<offset>320</offset>
+<doc f='luajit/lj_lex.h' l='58'>/* End of input buffer. */</doc>
+<use f='luajit/lj_bcread.c' l='57' u='r' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='67' u='w' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='83' u='w' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='86' u='w' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='88' u='r' c='bcread_fill'/>
+<use f='luajit/lj_bcread.c' l='94' u='r' c='bcread_need'/>
+<use f='luajit/lj_bcread.c' l='101' u='r' c='bcread_want'/>
+<use f='luajit/lj_bcread.c' l='432' u='r' c='lj_bcread'/>
+<use f='luajit/lj_bcread.c' l='447' u='r' c='lj_bcread'/>
+<use f='luajit/lj_lex.c' l='57' u='w' c='lex_more'/>
+<use f='luajit/lj_lex.c' l='65' u='r' c='lex_next'/>
+<use f='luajit/lj_lex.c' l='403' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='415' u='r' c='lj_lex_setup'/>
+<use f='luajit/lj_lib.c' l='62' u='w' c='lib_read_lfunc'/>

@@ -1,0 +1,2 @@
+<def f='luajit/host/buildvm_libbc.h' l='5' ll='43' type='const uint8_t [503]'/>
+<use f='luajit/host/buildvm_lib.c' l='201' u='r' c='libdef_lua'/>

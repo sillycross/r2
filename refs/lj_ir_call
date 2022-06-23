@@ -1,0 +1,27 @@
+<dec f='luajit/lj_ircall.h' l='259' type='TRef lj_ir_call(jit_State * J, IRCallID id)'/>
+<use f='luajit/lj_crecord.c' l='273' u='c' c='crec_copy'/>
+<use f='luajit/lj_crecord.c' l='343' u='c' c='crec_fill'/>
+<use f='luajit/lj_crecord.c' l='952' u='c' c='crec_finalizer'/>
+<use f='luajit/lj_crecord.c' l='1641' u='c' c='recff_ffi_errno'/>
+<use f='luajit/lj_crecord.c' l='1655' u='c' c='recff_ffi_string'/>
+<use f='luajit/lj_crecord.c' l='1892' u='c' c='recff_bit64_tohex'/>
+<use f='luajit/lj_ffrecord.c' l='572' u='c' c='recff_math_atan2'/>
+<use f='luajit/lj_ffrecord.c' l='625' u='c' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='872' u='c' c='recff_string_rep'/>
+<use f='luajit/lj_ffrecord.c' l='880' u='c' c='recff_string_op'/>
+<use f='luajit/lj_ffrecord.c' l='923' u='c' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='972' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='986' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1001' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1012' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1014' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1022' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1070' u='c' c='recff_table_concat'/>
+<use f='luajit/lj_ffrecord.c' l='1081' u='c' c='recff_table_new'/>
+<use f='luajit/lj_ffrecord.c' l='1090' u='c' c='recff_table_clear'/>
+<use f='luajit/lj_ffrecord.c' l='1133' u='c' c='recff_io_write'/>
+<use f='luajit/lj_ffrecord.c' l='1137' u='c' c='recff_io_write'/>
+<use f='luajit/lj_ffrecord.c' l='1148' u='c' c='recff_io_flush'/>
+<def f='luajit/lj_ir.c' l='131' ll='147' type='TRef lj_ir_call(jit_State * J, IRCallID id)'/>
+<doc f='luajit/lj_ir.c' l='130'>/* Emit call to a C function. */</doc>
+<use f='luajit/lj_record.c' l='2159' u='c' c='lj_record_ins'/>

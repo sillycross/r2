@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='56' type='void lj_gc_freeall(global_State * g)'/>
+<def f='luajit/lj_gc.c' l='601' ll='610' type='void lj_gc_freeall(global_State * g)'/>
+<doc f='luajit/lj_gc.c' l='600'>/* Free all remaining GC objects. */</doc>
+<use f='luajit/lj_state.c' l='167' u='c' c='close_state'/>

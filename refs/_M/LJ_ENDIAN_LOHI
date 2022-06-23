@@ -1,0 +1,6 @@
+<dec f='luajit/lj_arch.h' l='592'/>
+<use f='luajit/lj_obj.h' l='181' u='c'/>
+<use f='luajit/lj_obj.h' l='208' u='c'/>
+<use f='luajit/lj_ir.h' l='542' u='c'/>
+<use f='luajit/lj_ir.h' l='551' u='c'/>
+<use f='luajit/lj_ir.h' l='555' u='c'/>

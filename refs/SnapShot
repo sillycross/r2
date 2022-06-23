@@ -1,0 +1,11 @@
+<def f='luajit/lj_jit.h' l='184' ll='192'/>
+<use f='luajit/lj_jit.h' l='184'/>
+<size>12</size>
+<doc f='luajit/lj_jit.h' l='183'>/* Stack snapshot header. */</doc>
+<mbr r='SnapShot::mapofs' o='0' t='uint32_t'/>
+<mbr r='SnapShot::ref' o='32' t='IRRef1'/>
+<mbr r='SnapShot::mcofs' o='48' t='uint16_t'/>
+<mbr r='SnapShot::nslots' o='64' t='uint8_t'/>
+<mbr r='SnapShot::topslot' o='72' t='uint8_t'/>
+<mbr r='SnapShot::nent' o='80' t='uint8_t'/>
+<mbr r='SnapShot::count' o='88' t='uint8_t'/>

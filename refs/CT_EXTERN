@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ctype.h' l='34' type='12'/>
+<doc f='luajit/lj_ctype.h' l='34'>/* External reference. */</doc>
+<use f='luajit/lib_ffi.c' l='380' macro='1' u='r' c='lj_cf_ffi_clib___index'/>
+<use f='luajit/lib_ffi.c' l='401' macro='1' u='r' c='lj_cf_ffi_clib___newindex'/>
+<use f='luajit/lj_clib.c' l='348' macro='1' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='524' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='364' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1862' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_crecord.c' l='1588' macro='1' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_crecord.c' l='1600' macro='1' u='r' c='recff_clib_index'/>

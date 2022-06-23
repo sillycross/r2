@@ -1,0 +1,7 @@
+<def f='luajit/lj_asm_x86.h' l='84' ll='107' type='int asm_isk32(ASMState * as, IRRef ref, int32_t * k)'/>
+<use f='luajit/lj_asm_x86.h' l='333' u='c' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='1436' u='c' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='2079' u='c' c='asm_intarith'/>
+<use f='luajit/lj_asm_x86.h' l='2410' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2418' u='c' c='asm_comp'/>
+<doc f='luajit/lj_asm_x86.h' l='83'>/* Check if a reference is a signed 32 bit constant. */</doc>

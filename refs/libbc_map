@@ -1,0 +1,5 @@
+<def f='luajit/host/buildvm_libbc.h' l='45' ll='55' type='const struct (unnamed struct at /home/u/LuaJIT/src/host/buildvm_libbc.h:45:14) [9]'/>
+<use f='luajit/host/buildvm_lib.c' l='194' u='m' c='libdef_lua'/>
+<use f='luajit/host/buildvm_lib.c' l='195' u='m' c='libdef_lua'/>
+<use f='luajit/host/buildvm_lib.c' l='196' u='m' c='libdef_lua'/>
+<use f='luajit/host/buildvm_lib.c' l='197' u='m' c='libdef_lua'/>

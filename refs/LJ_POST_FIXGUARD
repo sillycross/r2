@@ -1,0 +1,9 @@
+<dec f='luajit/lj_jit.h' l='163' type='2'/>
+<doc f='luajit/lj_jit.h' l='163'>/* Fixup and emit pending guard. */</doc>
+<use f='luajit/lj_crecord.c' l='567' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='770' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='1367' u='r' c='crec_arith_int64'/>
+<use f='luajit/lj_crecord.c' l='1400' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1466' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1567' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_record.c' l='2014' c='lj_record_ins'/>

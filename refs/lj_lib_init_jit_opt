@@ -1,0 +1,1 @@
+<use f='luajit/lib_jit.c' l='756' macro='1' u='r' c='luaopen_jit'/>

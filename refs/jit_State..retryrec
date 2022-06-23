@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='460' type='uint8_t'/>
+<offset>3008</offset>
+<doc f='luajit/lj_jit.h' l='460'>/* Retry recording. */</doc>
+<use f='luajit/lj_trace.c' l='450' u='w' c='trace_start'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/lj_meta.h' l='16' type='int lj_meta_tailcall(lua_State * L, cTValue * tv)'/>
+<use f='luajit/lib_ffi.c' l='143' u='c' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='239' u='c' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='318' u='c' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='339' u='c' c='ffi_pairs'/>
+<use f='luajit/lj_carith.c' l='262' u='c' c='lj_carith_meta'/>
+<def f='luajit/lj_meta.c' l='78' ll='102' type='int lj_meta_tailcall(lua_State * L, cTValue * tv)'/>
+<doc f='luajit/lj_meta.c' l='77'>/* Tailcall from C function. */</doc>

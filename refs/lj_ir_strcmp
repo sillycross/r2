@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='91' type='int lj_ir_strcmp(GCstr * a, GCstr * b, IROp op)'/>
+<def f='luajit/lj_ir.c' l='470' ll='480' type='int lj_ir_strcmp(GCstr * a, GCstr * b, IROp op)'/>
+<doc f='luajit/lj_ir.c' l='469'>/* Evaluate string comparison. */</doc>
+<use f='luajit/lj_record.c' l='2158' u='c' c='lj_record_ins'/>

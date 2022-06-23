@@ -1,0 +1,4 @@
+<dec f='luajit/lj_carith.h' l='13' type='int lj_carith_op(lua_State * L, MMS mm)'/>
+<use f='luajit/lib_ffi.c' l='186' u='c' c='ffi_arith'/>
+<def f='luajit/lj_carith.c' l='266' ll='277' type='int lj_carith_op(lua_State * L, MMS mm)'/>
+<doc f='luajit/lj_carith.c' l='265'>/* Arithmetic operators for cdata. */</doc>

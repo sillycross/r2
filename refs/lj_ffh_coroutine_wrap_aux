@@ -1,0 +1,2 @@
+<def f='luajit/lib_base.c' l='629' macro='1' type='int lj_ffh_coroutine_wrap_aux(lua_State * L)'/>
+<use f='luajit/lib_base.c' l='658' u='r' c='lj_cf_coroutine_wrap'/>

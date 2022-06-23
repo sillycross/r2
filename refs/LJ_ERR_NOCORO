@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='45' macro='1' type='566'/>
+<use f='luajit/lj_errmsg.h' l='45' macro='1' u='r'/>
+<use f='luajit/lib_base.c' l='561' u='r' c='lj_cf_coroutine_status'/>
+<use f='luajit/lib_base.c' l='625' u='r' c='lj_ffh_coroutine_resume'/>

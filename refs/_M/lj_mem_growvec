@@ -1,0 +1,9 @@
+<dec f='luajit/lj_gc.h' l='128'/>
+<use f='luajit/lj_ccallback.c' l='740' u='c'/>
+<use f='luajit/lj_ctype.c' l='167' u='c'/>
+<use f='luajit/lj_ctype.c' l='195' u='c'/>
+<use f='luajit/lj_parse.c' l='424' u='c'/>
+<use f='luajit/lj_parse.c' l='1055' u='c'/>
+<use f='luajit/lj_parse.c' l='1163' u='c'/>
+<use f='luajit/lj_snap.c' l='43' u='c'/>
+<use f='luajit/lj_trace.c' l='75' u='c'/>

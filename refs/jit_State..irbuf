@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='446' type='IRIns *'/>
+<offset>2624</offset>
+<doc f='luajit/lj_jit.h' l='446'>/* Temp. IR instruction buffer. Biased with REF_BIAS. */</doc>
+<use f='luajit/lj_ir.c' l='74' u='r' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='85' u='w' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='91' u='r' c='lj_ir_growbot'/>
+<use f='luajit/lj_ir.c' l='102' u='w' c='lj_ir_growbot'/>
+<use f='luajit/lj_ir.c' l='111' u='w' c='lj_ir_growbot'/>
+<use f='luajit/lj_trace.c' l='367' u='r' c='lj_trace_freestate'/>
+<use f='luajit/lj_trace.c' l='441' u='r' c='trace_start'/>

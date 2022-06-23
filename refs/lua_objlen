@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='151' type='size_t lua_objlen(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='199' macro='1' u='c' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='201' macro='1' u='c' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='291' u='c' c='luaL_ref'/>
+<def f='luajit/lj_api.c' l='576' ll='592' macro='1' type='size_t lua_objlen(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='235' macro='1' u='c' c='loadline'/>

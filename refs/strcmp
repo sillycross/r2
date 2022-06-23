@@ -1,0 +1,25 @@
+<dec f='include/string.h' l='136' type='int strcmp(const char * __s1, const char * __s2)'/>
+<use f='luajit/host/buildvm_arch.h' l='4843' u='c' c='emit_asm_debug'/>
+<use f='luajit/host/buildvm.c' l='389' u='c' c='parsemode'/>
+<doc f='include/string.h' l='135'>/* Compare S1 and S2.  */</doc>
+<use f='luajit/host/buildvm_fold.c' l='103' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='107' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='111' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='119' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='128' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='132' u='c' c='nexttoken'/>
+<use f='luajit/host/buildvm_lib.c' l='102' u='c' c='find_ffofs'/>
+<use f='luajit/host/buildvm_lib.c' l='195' u='c' c='libdef_lua'/>
+<use f='luajit/host/buildvm_lib.c' l='217' u='c' c='find_rec'/>
+<use f='luajit/host/buildvm_lib.c' l='286' u='c' c='libdef_push'/>
+<use f='luajit/host/buildvm_lib.c' l='382' u='c' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='384' u='c' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='386' u='c' c='emit_lib'/>
+<use f='luajit/host/minilua.c' l='5876' u='c' c='luaL_argerror'/>
+<use f='luajit/lib_debug.c' l='368' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_os.c' l='195' u='c' c='lj_cf_os_date'/>
+<use f='luajit/lj_api.c' l='571' u='c' c='luaL_checkoption'/>
+<use f='luajit/lj_parse.c' l='2538' u='c' c='predict_next'/>
+<use f='luajit/lj_parse.c' l='2539' u='c' c='predict_next'/>
+<use f='luajit/luajit.c' l='274' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='274' u='c' c='handle_script'/>

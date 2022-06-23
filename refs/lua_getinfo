@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='336' type='int lua_getinfo(lua_State * L, const char * what, lua_Debug * ar)'/>
+<use f='luajit/lib_package.c' l='483' u='c' c='setfenv'/>
+<def f='luajit/lj_debug.c' l='532' ll='535' macro='1' type='int lua_getinfo(lua_State * L, const char * what, lua_Debug * ar)'/>
+<use f='luajit/lj_debug.c' l='680' u='c' c='luaL_traceback'/>

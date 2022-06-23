@@ -1,0 +1,8 @@
+<dec f='luajit/lj_clib.h' l='19' type='GCtab *'/>
+<offset>64</offset>
+<doc f='luajit/lj_clib.h' l='19'>/* Cache for resolved symbols. Anchored in ud-&gt;env. */</doc>
+<use f='luajit/lj_clib.c' l='344' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_clib.c' l='390' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_clib.c' l='390' u='r' c='lj_clib_index'/>
+<use f='luajit/lj_clib.c' l='404' u='w' c='clib_new'/>
+<use f='luajit/lj_crecord.c' l='1589' u='r' c='recff_clib_index'/>

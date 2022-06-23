@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lex.h' l='85' type='void lj_lex_init(lua_State * L)'/>
+<def f='luajit/lj_lex.c' l='505' ll='513' type='void lj_lex_init(lua_State * L)'/>
+<doc f='luajit/lj_lex.c' l='504'>/* Initialize strings for reserved words. */</doc>
+<use f='luajit/lj_state.c' l='155' u='c' c='cpluaopen'/>

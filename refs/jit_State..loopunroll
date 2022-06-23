@@ -1,0 +1,7 @@
+<dec f='luajit/lj_jit.h' l='437' type='int32_t'/>
+<offset>1952</offset>
+<doc f='luajit/lj_jit.h' l='437'>/* Unroll counter for loop ops in side traces. */</doc>
+<use f='luajit/lj_record.c' l='615' u='w' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='621' u='w' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='788' u='r' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='2597' u='w' c='lj_record_setup'/>

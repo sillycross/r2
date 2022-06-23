@@ -1,0 +1,3 @@
+<dec f='luajit/lj_dispatch.h' l='141' type='void lj_dispatch_stitch(jit_State * J, const BCIns * pc)'/>
+<def f='luajit/lj_dispatch.c' l='518' ll='530' type='void lj_dispatch_stitch(jit_State * J, const BCIns * pc)'/>
+<doc f='luajit/lj_dispatch.c' l='517'>/* Stitch a new trace. */</doc>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='528' type='2'/>
+<doc f='luajit/lj_obj.h' l='528'>/* Garbage collector. */</doc>
+<use f='luajit/lj_gc.c' l='726' macro='1' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_gc.c' l='778' macro='1' u='r' c='lj_gc_fullgc'/>
+<use f='luajit/lj_profile.c' l='161' u='r' c='profile_trigger'/>

@@ -1,0 +1,27 @@
+<dec f='luajit/lj_ir.h' l='450' type='32765'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_tnew'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_tnew'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_bufput'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_bufput'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_bufput'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_bufput'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_tostr'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_tostr'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_newref'/>
+<use f='luajit/lj_asm.c' l='111' u='r' c='asm_newref'/>
+<use f='luajit/lj_asm_x86.h' l='604' macro='1' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='635' macro='1' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1043' macro='1' u='r' c='asm_strto'/>
+<use f='luajit/lj_asm_x86.h' l='1046' macro='1' u='r' c='asm_strto'/>
+<use f='luajit/lj_asm_x86.h' l='1850' macro='1' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1852' macro='1' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1864' macro='1' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1866' macro='1' u='r' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1897' macro='1' u='r' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1900' macro='1' u='r' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='2775' macro='1' u='r' c='asm_gc_check'/>
+<use f='luajit/lj_asm_x86.h' l='2778' macro='1' u='r' c='asm_gc_check'/>
+<use f='luajit/lj_gc.c' l='257' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_opt_fold.c' l='2487' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_opt_fold.c' l='2493' u='r' c='lj_opt_fold'/>
+<use f='luajit/lj_record.c' l='2613' u='r' c='lj_record_setup'/>

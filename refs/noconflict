@@ -1,0 +1,9 @@
+<def f='luajit/lj_asm_x86.h' l='112' ll='125' type='int noconflict(ASMState * as, IRRef ref, IROp conflict, int noload)'/>
+<use f='luajit/lj_asm_x86.h' l='137' u='c' c='asm_fuseabase'/>
+<use f='luajit/lj_asm_x86.h' l='451' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='462' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='467' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='477' u='c' c='asm_fuseload'/>
+<doc f='luajit/lj_asm_x86.h' l='109'>/* Check if there&apos;s no conflicting instruction between curins and ref.
+** Also avoid fusing loads if there are multiple references.
+*/</doc>

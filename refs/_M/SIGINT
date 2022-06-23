@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/bits/signum-generic.h' l='48'/>
+<doc f='include/x86_64-linux-gnu/bits/signum-generic.h' l='47'>/* ISO C99 signals.  */</doc>
+<use f='luajit/luajit.c' l='119' u='c'/>
+<use f='luajit/luajit.c' l='123' u='c'/>

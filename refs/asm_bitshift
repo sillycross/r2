@@ -1,0 +1,6 @@
+<def f='luajit/lj_asm_x86.h' l='2268' ll='2321' type='void asm_bitshift(ASMState * as, IRIns * ir, x86Shift xs, x86Op xv)'/>
+<use f='luajit/lj_asm.c' l='1746' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1747' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1748' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1749' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1750' macro='1' u='c' c='asm_ir'/>

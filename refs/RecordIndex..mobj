@@ -1,0 +1,20 @@
+<dec f='luajit/lj_record.h' l='25' type='TRef'/>
+<offset>512</offset>
+<doc f='luajit/lj_record.h' l='25'>/* Metamethod object reference. */</doc>
+<use f='luajit/lj_ffrecord.c' l='219' u='r' c='recff_getmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='387' u='r' c='recff_metacall'/>
+<use f='luajit/lj_record.c' l='738' u='r' c='rec_call_setup'/>
+<use f='luajit/lj_record.c' l='745' u='r' c='rec_call_setup'/>
+<use f='luajit/lj_record.c' l='1003' u='w' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1036' u='w' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1037' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1062' u='r' c='rec_mm_arith'/>
+<use f='luajit/lj_record.c' l='1081' u='r' c='rec_mm_len'/>
+<use f='luajit/lj_record.c' l='1105' u='r' c='rec_mm_callcomp'/>
+<use f='luajit/lj_record.c' l='1119' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1134' u='r' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1160' u='r' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1175' u='r' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1422' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1426' u='r' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1441' u='r' c='lj_record_idx'/>

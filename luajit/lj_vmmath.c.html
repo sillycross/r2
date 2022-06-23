@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_vmmath.c source code [luajit/lj_vmmath.c] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_vmmath.c'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_vmmath.c.html'>lj_vmmath.c</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Math helper functions for assembler VM.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#define <dfn class="macro" id="_M/lj_vmmath_c" data-ref="_M/lj_vmmath_c">lj_vmmath_c</dfn></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/LUA_CORE" data-ref="_M/LUA_CORE">LUA_CORE</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../include/errno.h.html">&lt;errno.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="../include/math.h.html">&lt;math.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="lj_ir.h.html">"lj_ir.h"</a></u></td></tr>
+<tr><th id="14">14</th><td><u>#include <a href="lj_vm.h.html">"lj_vm.h"</a></u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><i>/* -- Wrapper functions --------------------------------------------------- */</i></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="18">if</span> LJ_TARGET_X86 &amp;&amp; <span class="macro" title="1" data-ref="_M/__ELF__">__ELF__</span> &amp;&amp; <span class="macro" title="2" data-ref="_M/__PIC__">__PIC__</span></u></td></tr>
+<tr><th id="19">19</th><td><i>/* Wrapper functions to deal with the ELF/x86 PIC disaster. */</i></td></tr>
+<tr><th id="20">20</th><td>LJ_FUNCA <em>double</em> lj_wrap_log(<em>double</em> x) { <b>return</b> log(x); }</td></tr>
+<tr><th id="21">21</th><td>LJ_FUNCA <em>double</em> lj_wrap_log10(<em>double</em> x) { <b>return</b> log10(x); }</td></tr>
+<tr><th id="22">22</th><td>LJ_FUNCA <em>double</em> lj_wrap_exp(<em>double</em> x) { <b>return</b> exp(x); }</td></tr>
+<tr><th id="23">23</th><td>LJ_FUNCA <em>double</em> lj_wrap_sin(<em>double</em> x) { <b>return</b> sin(x); }</td></tr>
+<tr><th id="24">24</th><td>LJ_FUNCA <em>double</em> lj_wrap_cos(<em>double</em> x) { <b>return</b> cos(x); }</td></tr>
+<tr><th id="25">25</th><td>LJ_FUNCA <em>double</em> lj_wrap_tan(<em>double</em> x) { <b>return</b> tan(x); }</td></tr>
+<tr><th id="26">26</th><td>LJ_FUNCA <em>double</em> lj_wrap_asin(<em>double</em> x) { <b>return</b> asin(x); }</td></tr>
+<tr><th id="27">27</th><td>LJ_FUNCA <em>double</em> lj_wrap_acos(<em>double</em> x) { <b>return</b> acos(x); }</td></tr>
+<tr><th id="28">28</th><td>LJ_FUNCA <em>double</em> lj_wrap_atan(<em>double</em> x) { <b>return</b> atan(x); }</td></tr>
+<tr><th id="29">29</th><td>LJ_FUNCA <em>double</em> lj_wrap_sinh(<em>double</em> x) { <b>return</b> sinh(x); }</td></tr>
+<tr><th id="30">30</th><td>LJ_FUNCA <em>double</em> lj_wrap_cosh(<em>double</em> x) { <b>return</b> cosh(x); }</td></tr>
+<tr><th id="31">31</th><td>LJ_FUNCA <em>double</em> lj_wrap_tanh(<em>double</em> x) { <b>return</b> tanh(x); }</td></tr>
+<tr><th id="32">32</th><td>LJ_FUNCA <em>double</em> lj_wrap_atan2(<em>double</em> x, <em>double</em> y) { <b>return</b> atan2(x, y); }</td></tr>
+<tr><th id="33">33</th><td>LJ_FUNCA <em>double</em> lj_wrap_pow(<em>double</em> x, <em>double</em> y) { <b>return</b> pow(x, y); }</td></tr>
+<tr><th id="34">34</th><td>LJ_FUNCA <em>double</em> lj_wrap_fmod(<em>double</em> x, <em>double</em> y) { <b>return</b> fmod(x, y); }</td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="18">endif</span></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i>/* -- Helper functions for generated machine code ------------------------- */</i></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><em>double</em> <dfn class="decl def fn" id="lj_vm_foldarith" title='lj_vm_foldarith' data-ref="lj_vm_foldarith" data-ref-filename="lj_vm_foldarith">lj_vm_foldarith</dfn>(<em>double</em> <dfn class="local col1 decl" id="1x" title='x' data-type='double' data-ref="1x" data-ref-filename="1x">x</dfn>, <em>double</em> <dfn class="local col2 decl" id="2y" title='y' data-type='double' data-ref="2y" data-ref-filename="2y">y</dfn>, <em>int</em> <dfn class="local col3 decl" id="3op" title='op' data-type='int' data-ref="3op" data-ref-filename="3op">op</dfn>)</td></tr>
+<tr><th id="40">40</th><td>{</td></tr>
+<tr><th id="41">41</th><td>  <b>switch</b> (<a class="local col3 ref" href="#3op" title='op' data-ref="3op" data-ref-filename="3op">op</a>) {</td></tr>
+<tr><th id="42">42</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>+<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="43">43</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_SUB' data-ref="IR_SUB" data-ref-filename="IR_SUB">IR_SUB</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>-<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="44">44</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_MUL' data-ref="IR_MUL" data-ref-filename="IR_MUL">IR_MUL</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>*<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="45">45</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_DIV' data-ref="IR_DIV" data-ref-filename="IR_DIV">IR_DIV</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>/<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="46">46</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_MOD' data-ref="IR_MOD" data-ref-filename="IR_MOD">IR_MOD</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>-<a class="ref fn" href="lj_vm.h.html#lj_vm_floor" title='lj_vm_floor' data-ref="lj_vm_floor" data-ref-filename="lj_vm_floor">lj_vm_floor</a>(<a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>/<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>)*<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="47">47</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_POW' data-ref="IR_POW" data-ref-filename="IR_POW">IR_POW</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="ref fn" href="../include/x86_64-linux-gnu/bits/mathcalls.h.html#140" title='pow' data-ref="pow" data-ref-filename="pow">pow</a>(<a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>, <a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>); <b>break</b>;</td></tr>
+<tr><th id="48">48</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_NEG' data-ref="IR_NEG" data-ref-filename="IR_NEG">IR_NEG</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> -<a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>; <b>break</b>;</td></tr>
+<tr><th id="49">49</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_ABS' data-ref="IR_ABS" data-ref-filename="IR_ABS">IR_ABS</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="ref fn" href="../include/x86_64-linux-gnu/bits/mathcalls.h.html#162" title='fabs' data-ref="fabs" data-ref-filename="fabs">fabs</a>(<a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>); <b>break</b>;</td></tr>
+<tr><th id="50">50</th><td><u>#<span data-ppcond="50">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="51">51</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_LDEXP' data-ref="IR_LDEXP" data-ref-filename="IR_LDEXP">IR_LDEXP</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="ref fn" href="../include/x86_64-linux-gnu/bits/mathcalls.h.html#101" title='ldexp' data-ref="ldexp" data-ref-filename="ldexp">ldexp</a>(<a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>, (<em>int</em>)<a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>); <b>break</b>;</td></tr>
+<tr><th id="52">52</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_MIN' data-ref="IR_MIN" data-ref-filename="IR_MIN">IR_MIN</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a> &lt; <a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a> ? <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a> : <a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="53">53</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#154" title='IR_MAX' data-ref="IR_MAX" data-ref-filename="IR_MAX">IR_MAX</a> - <a class="enum" href="lj_ir.h.html#154" title='IR_ADD' data-ref="IR_ADD" data-ref-filename="IR_ADD">IR_ADD</a>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a> &gt; <a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a> ? <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a> : <a class="local col2 ref" href="#2y" title='y' data-ref="2y" data-ref-filename="2y">y</a>; <b>break</b>;</td></tr>
+<tr><th id="54">54</th><td><u>#<span data-ppcond="50">endif</span></u></td></tr>
+<tr><th id="55">55</th><td>  <b>default</b>: <b>return</b> <a class="local col1 ref" href="#1x" title='x' data-ref="1x" data-ref-filename="1x">x</a>;</td></tr>
+<tr><th id="56">56</th><td>  }</td></tr>
+<tr><th id="57">57</th><td>}</td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><u>#<span data-ppcond="59">if</span> (<a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a> &amp;&amp; !(LJ_TARGET_ARM || LJ_TARGET_ARM64 || LJ_TARGET_PPC)) || LJ_TARGET_MIPS</u></td></tr>
+<tr><th id="60">60</th><td><a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl def fn" id="lj_vm_modi" title='lj_vm_modi' data-ref="lj_vm_modi" data-ref-filename="lj_vm_modi">lj_vm_modi</dfn>(<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="local col4 decl" id="4a" title='a' data-type='int32_t' data-ref="4a" data-ref-filename="4a">a</dfn>, <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="local col5 decl" id="5b" title='b' data-type='int32_t' data-ref="5b" data-ref-filename="5b">b</dfn>)</td></tr>
+<tr><th id="61">61</th><td>{</td></tr>
+<tr><th id="62">62</th><td>  <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col6 decl" id="6y" title='y' data-type='uint32_t' data-ref="6y" data-ref-filename="6y">y</dfn>, <dfn class="local col7 decl" id="7ua" title='ua' data-type='uint32_t' data-ref="7ua" data-ref-filename="7ua">ua</dfn>, <dfn class="local col8 decl" id="8ub" title='ub' data-type='uint32_t' data-ref="8ub" data-ref-filename="8ub">ub</dfn>;</td></tr>
+<tr><th id="63">63</th><td>  <i>/* This must be checked before using this function. */</i></td></tr>
+<tr><th id="64">64</th><td>  <a class="macro" href="lj_def.h.html#361" title="((void)0)" data-ref="_M/lj_assertX">lj_assertX</a>(b != <var>0</var>, <q>"modulo with zero divisor"</q>);</td></tr>
+<tr><th id="65">65</th><td>  <a class="local col7 ref" href="#7ua" title='ua' data-ref="7ua" data-ref-filename="7ua">ua</a> = <a class="local col4 ref" href="#4a" title='a' data-ref="4a" data-ref-filename="4a">a</a> &lt; <var>0</var> ? (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)-<a class="local col4 ref" href="#4a" title='a' data-ref="4a" data-ref-filename="4a">a</a> : (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)<a class="local col4 ref" href="#4a" title='a' data-ref="4a" data-ref-filename="4a">a</a>;</td></tr>
+<tr><th id="66">66</th><td>  <a class="local col8 ref" href="#8ub" title='ub' data-ref="8ub" data-ref-filename="8ub">ub</a> = <a class="local col5 ref" href="#5b" title='b' data-ref="5b" data-ref-filename="5b">b</a> &lt; <var>0</var> ? (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)-<a class="local col5 ref" href="#5b" title='b' data-ref="5b" data-ref-filename="5b">b</a> : (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)<a class="local col5 ref" href="#5b" title='b' data-ref="5b" data-ref-filename="5b">b</a>;</td></tr>
+<tr><th id="67">67</th><td>  <a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a> = <a class="local col7 ref" href="#7ua" title='ua' data-ref="7ua" data-ref-filename="7ua">ua</a> % <a class="local col8 ref" href="#8ub" title='ub' data-ref="8ub" data-ref-filename="8ub">ub</a>;</td></tr>
+<tr><th id="68">68</th><td>  <b>if</b> (<a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a> != <var>0</var> &amp;&amp; (<a class="local col4 ref" href="#4a" title='a' data-ref="4a" data-ref-filename="4a">a</a>^<a class="local col5 ref" href="#5b" title='b' data-ref="5b" data-ref-filename="5b">b</a>) &lt; <var>0</var>) <a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a> = <a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a> - <a class="local col8 ref" href="#8ub" title='ub' data-ref="8ub" data-ref-filename="8ub">ub</a>;</td></tr>
+<tr><th id="69">69</th><td>  <b>if</b> (((<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>)<a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a>^<a class="local col5 ref" href="#5b" title='b' data-ref="5b" data-ref-filename="5b">b</a>) &lt; <var>0</var>) <a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a> = (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a>)-(<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>)<a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a>;</td></tr>
+<tr><th id="70">70</th><td>  <b>return</b> (<a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>)<a class="local col6 ref" href="#6y" title='y' data-ref="6y" data-ref-filename="6y">y</a>;</td></tr>
+<tr><th id="71">71</th><td>}</td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="59">endif</span></u></td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><u>#<span data-ppcond="74">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td><u>#<span data-ppcond="76">ifdef</span> <span class="macro" data-ref="_M/LUAJIT_NO_LOG2">LUAJIT_NO_LOG2</span></u></td></tr>
+<tr><th id="77">77</th><td><em>double</em> lj_vm_log2(<em>double</em> a)</td></tr>
+<tr><th id="78">78</th><td>{</td></tr>
+<tr><th id="79">79</th><td>  <b>return</b> log(a) * <var>1.4426950408889634074</var>;</td></tr>
+<tr><th id="80">80</th><td>}</td></tr>
+<tr><th id="81">81</th><td><u>#<span data-ppcond="76">endif</span></u></td></tr>
+<tr><th id="82">82</th><td></td></tr>
+<tr><th id="83">83</th><td><u>#<span data-ppcond="83">if</span> !<a class="macro" href="lj_arch.h.html#188" title="1" data-ref="_M/LJ_TARGET_X86ORX64">LJ_TARGET_X86ORX64</a></u></td></tr>
+<tr><th id="84">84</th><td><i>/* Unsigned x^k. */</i></td></tr>
+<tr><th id="85">85</th><td><em>static</em> <em>double</em> lj_vm_powui(<em>double</em> x, uint32_t k)</td></tr>
+<tr><th id="86">86</th><td>{</td></tr>
+<tr><th id="87">87</th><td>  <em>double</em> y;</td></tr>
+<tr><th id="88">88</th><td>  lj_assertX(k != <var>0</var>, <q>"pow with zero exponent"</q>);</td></tr>
+<tr><th id="89">89</th><td>  <b>for</b> (; (k &amp; <var>1</var>) == <var>0</var>; k &gt;&gt;= <var>1</var>) x *= x;</td></tr>
+<tr><th id="90">90</th><td>  y = x;</td></tr>
+<tr><th id="91">91</th><td>  <b>if</b> ((k &gt;&gt;= <var>1</var>) != <var>0</var>) {</td></tr>
+<tr><th id="92">92</th><td>    <b>for</b> (;;) {</td></tr>
+<tr><th id="93">93</th><td>      x *= x;</td></tr>
+<tr><th id="94">94</th><td>      <b>if</b> (k == <var>1</var>) <b>break</b>;</td></tr>
+<tr><th id="95">95</th><td>      <b>if</b> (k &amp; <var>1</var>) y *= x;</td></tr>
+<tr><th id="96">96</th><td>      k &gt;&gt;= <var>1</var>;</td></tr>
+<tr><th id="97">97</th><td>    }</td></tr>
+<tr><th id="98">98</th><td>    y *= x;</td></tr>
+<tr><th id="99">99</th><td>  }</td></tr>
+<tr><th id="100">100</th><td>  <b>return</b> y;</td></tr>
+<tr><th id="101">101</th><td>}</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><i>/* Signed x^k. */</i></td></tr>
+<tr><th id="104">104</th><td><em>double</em> lj_vm_powi(<em>double</em> x, int32_t k)</td></tr>
+<tr><th id="105">105</th><td>{</td></tr>
+<tr><th id="106">106</th><td>  <b>if</b> (k &gt; <var>1</var>)</td></tr>
+<tr><th id="107">107</th><td>    <b>return</b> lj_vm_powui(x, (uint32_t)k);</td></tr>
+<tr><th id="108">108</th><td>  <b>else</b> <b>if</b> (k == <var>1</var>)</td></tr>
+<tr><th id="109">109</th><td>    <b>return</b> x;</td></tr>
+<tr><th id="110">110</th><td>  <b>else</b> <b>if</b> (k == <var>0</var>)</td></tr>
+<tr><th id="111">111</th><td>    <b>return</b> <var>1.0</var>;</td></tr>
+<tr><th id="112">112</th><td>  <b>else</b></td></tr>
+<tr><th id="113">113</th><td>    <b>return</b> <var>1.0</var> / lj_vm_powui(x, (uint32_t)-k);</td></tr>
+<tr><th id="114">114</th><td>}</td></tr>
+<tr><th id="115">115</th><td><u>#<span data-ppcond="83">endif</span></u></td></tr>
+<tr><th id="116">116</th><td></td></tr>
+<tr><th id="117">117</th><td><i>/* Computes fpm(x) for extended math functions. */</i></td></tr>
+<tr><th id="118">118</th><td><em>double</em> <dfn class="decl def fn" id="lj_vm_foldfpm" title='lj_vm_foldfpm' data-ref="lj_vm_foldfpm" data-ref-filename="lj_vm_foldfpm">lj_vm_foldfpm</dfn>(<em>double</em> <dfn class="local col9 decl" id="9x" title='x' data-type='double' data-ref="9x" data-ref-filename="9x">x</dfn>, <em>int</em> <dfn class="local col0 decl" id="10fpm" title='fpm' data-type='int' data-ref="10fpm" data-ref-filename="10fpm">fpm</dfn>)</td></tr>
+<tr><th id="119">119</th><td>{</td></tr>
+<tr><th id="120">120</th><td>  <b>switch</b> (<a class="local col0 ref" href="#10fpm" title='fpm' data-ref="10fpm" data-ref-filename="10fpm">fpm</a>) {</td></tr>
+<tr><th id="121">121</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#186" title='IRFPM_FLOOR' data-ref="IRFPM_FLOOR" data-ref-filename="IRFPM_FLOOR">IRFPM_FLOOR</a>: <b>return</b> <a class="ref fn" href="lj_vm.h.html#lj_vm_floor" title='lj_vm_floor' data-ref="lj_vm_floor" data-ref-filename="lj_vm_floor">lj_vm_floor</a>(<a class="local col9 ref" href="#9x" title='x' data-ref="9x" data-ref-filename="9x">x</a>);</td></tr>
+<tr><th id="122">122</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#186" title='IRFPM_CEIL' data-ref="IRFPM_CEIL" data-ref-filename="IRFPM_CEIL">IRFPM_CEIL</a>: <b>return</b> <a class="ref fn" href="lj_vm.h.html#lj_vm_ceil" title='lj_vm_ceil' data-ref="lj_vm_ceil" data-ref-filename="lj_vm_ceil">lj_vm_ceil</a>(<a class="local col9 ref" href="#9x" title='x' data-ref="9x" data-ref-filename="9x">x</a>);</td></tr>
+<tr><th id="123">123</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#186" title='IRFPM_TRUNC' data-ref="IRFPM_TRUNC" data-ref-filename="IRFPM_TRUNC">IRFPM_TRUNC</a>: <b>return</b> <a class="ref fn" href="lj_vm.h.html#lj_vm_trunc" title='lj_vm_trunc' data-ref="lj_vm_trunc" data-ref-filename="lj_vm_trunc">lj_vm_trunc</a>(<a class="local col9 ref" href="#9x" title='x' data-ref="9x" data-ref-filename="9x">x</a>);</td></tr>
+<tr><th id="124">124</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#186" title='IRFPM_SQRT' data-ref="IRFPM_SQRT" data-ref-filename="IRFPM_SQRT">IRFPM_SQRT</a>: <b>return</b> <a class="ref fn" href="../include/x86_64-linux-gnu/bits/mathcalls.h.html#143" title='sqrt' data-ref="sqrt" data-ref-filename="sqrt">sqrt</a>(<a class="local col9 ref" href="#9x" title='x' data-ref="9x" data-ref-filename="9x">x</a>);</td></tr>
+<tr><th id="125">125</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#186" title='IRFPM_LOG' data-ref="IRFPM_LOG" data-ref-filename="IRFPM_LOG">IRFPM_LOG</a>: <b>return</b> <a class="ref fn" href="../include/x86_64-linux-gnu/bits/mathcalls.h.html#104" title='log' data-ref="log" data-ref-filename="log">log</a>(<a class="local col9 ref" href="#9x" title='x' data-ref="9x" data-ref-filename="9x">x</a>);</td></tr>
+<tr><th id="126">126</th><td>  <b>case</b> <a class="enum" href="lj_ir.h.html#186" title='IRFPM_LOG2' data-ref="IRFPM_LOG2" data-ref-filename="IRFPM_LOG2">IRFPM_LOG2</a>: <b>return</b> <a class="macro" href="lj_vm.h.html#74" title="log2" data-ref="_M/lj_vm_log2">lj_vm_log2</a>(<a class="local col9 ref" href="#9x" title='x' data-ref="9x" data-ref-filename="9x">x</a>);</td></tr>
+<tr><th id="127">127</th><td>  <b>default</b>: <a class="macro" href="lj_def.h.html#361" title="((void)0)" data-ref="_M/lj_assertX">lj_assertX</a>(<var>0</var>, <q>"bad fpm %d"</q>, fpm);</td></tr>
+<tr><th id="128">128</th><td>  }</td></tr>
+<tr><th id="129">129</th><td>  <b>return</b> <var>0</var>;</td></tr>
+<tr><th id="130">130</th><td>}</td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td><u>#<span data-ppcond="132">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="133">133</th><td><em>int</em> <dfn class="decl def fn" id="lj_vm_errno" title='lj_vm_errno' data-ref="lj_vm_errno" data-ref-filename="lj_vm_errno">lj_vm_errno</dfn>(<em>void</em>)</td></tr>
+<tr><th id="134">134</th><td>{</td></tr>
+<tr><th id="135">135</th><td>  <b>return</b> <a class="macro" href="../include/errno.h.html#38" title="(*__errno_location ())" data-ref="_M/errno">errno</a>;</td></tr>
+<tr><th id="136">136</th><td>}</td></tr>
+<tr><th id="137">137</th><td><u>#<span data-ppcond="132">endif</span></u></td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="74">endif</span></u></td></tr>
+<tr><th id="140">140</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

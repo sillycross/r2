@@ -1,0 +1,12 @@
+<dec f='luajit/lj_vm.h' l='15' type='int lj_vm_cpcall(lua_State * L, lua_CFunction func, void * ud, lua_CPFunction cp)'/>
+<use f='luajit/lj_api.c' l='1171' u='c' c='lua_cpcall'/>
+<use f='luajit/lj_bcwrite.c' l='367' u='c' c='lj_bcwrite'/>
+<use f='luajit/lj_cparse.c' l='1920' u='c' c='lj_cparse'/>
+<use f='luajit/lj_ffrecord.c' l='392' u='c' c='recff_metacall'/>
+<use f='luajit/lj_ffrecord.c' l='491' u='c' c='recff_xpcall'/>
+<use f='luajit/lj_load.c' l='58' u='c' c='lua_loadx'/>
+<use f='luajit/lj_opt_loop.c' l='425' u='c' c='lj_opt_loop'/>
+<use f='luajit/lj_state.c' l='257' u='c' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='297' u='c' c='lua_close'/>
+<use f='luajit/lj_trace.c' l='730' u='c' c='lj_trace_ins'/>
+<use f='luajit/lj_trace.c' l='873' u='c' c='lj_trace_exit'/>

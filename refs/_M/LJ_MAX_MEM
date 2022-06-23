@@ -1,0 +1,8 @@
+<dec f='luajit/lj_def.h' l='52'/>
+<doc f='luajit/lj_def.h' l='51'>/* Max. total memory allocation. */</doc>
+<use f='luajit/lj_api.c' l='1257' u='c'/>
+<use f='luajit/lj_api.c' l='1290' u='c'/>
+<use f='luajit/lj_gc.c' l='512' u='c'/>
+<use f='luajit/lj_gc.c' l='665' u='c'/>
+<use f='luajit/lj_gc.c' l='702' u='c'/>
+<use f='luajit/lj_gc.c' l='729' u='c'/>

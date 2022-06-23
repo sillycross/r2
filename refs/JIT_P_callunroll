@@ -1,0 +1,2 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='11'/>
+<use f='luajit/lj_record.c' l='1701' u='r' c='check_call_unroll'/>

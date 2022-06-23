@@ -1,0 +1,3 @@
+<dec f='luajit/luajit.h' l='35' type='void luaJIT_version_2_1_0_beta3()'/>
+<def f='luajit/lj_dispatch.c' l='316' macro='1' type='void luaJIT_version_2_1_0_beta3()'/>
+<use f='luajit/luajit.c' l='521' macro='1' u='c' c='pmain'/>

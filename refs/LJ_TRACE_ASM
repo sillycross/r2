@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='155' type='20'/>
+<doc f='luajit/lj_jit.h' l='155'>/* Assemble trace. */</doc>
+<use f='luajit/lj_trace.c' l='574' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='693' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='696' c='trace_state'/>

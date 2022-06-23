@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vmevent.h' l='17'/>
+<use f='luajit/lib_jit.c' l='136' u='c'/>

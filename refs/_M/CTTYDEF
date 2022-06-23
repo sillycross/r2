@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='280'/>
+<use f='luajit/lj_ctype.h' l='310' u='c'/>
+<doc f='luajit/lj_ctype.h' l='279'>/* Common types. */</doc>
+<use f='luajit/lj_ctype.c' l='119' u='c'/>

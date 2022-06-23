@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ir.h' l='399' type='const uint8_t []'/>
+<use f='luajit/lj_crecord.c' l='247' u='r' c='crec_copy'/>
+<def f='luajit/lj_ir.c' l='52' ll='57' type='const uint8_t [25]'/>
+<doc f='luajit/lj_ir.c' l='51'>/* IR type sizes. */</doc>
+<use f='luajit/lj_opt_mem.c' l='705' macro='1' u='r' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='705' macro='1' u='r' c='aa_xref'/>

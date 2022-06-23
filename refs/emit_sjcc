@@ -1,0 +1,16 @@
+<def f='luajit/lj_emit_x86.h' l='445' ll='453' type='void emit_sjcc(ASMState * as, int cc, MCLabel target)'/>
+<use f='luajit/lj_asm_x86.h' l='69' u='c' c='asm_guardcc'/>
+<use f='luajit/lj_asm_x86.h' l='847' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='876' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1151' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1157' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1161' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1163' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1184' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1882' u='c' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1902' u='c' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1911' u='c' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='2384' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2389' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2786' u='c' c='asm_gc_check'/>
+<doc f='luajit/lj_emit_x86.h' l='444'>/* jcc short target */</doc>

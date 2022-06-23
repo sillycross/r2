@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/libio.h' l='66'/>
+<use f='include/stdio.h' l='100' u='a'/>
+<use f='luajit/host/minilua.c' l='6160' u='c'/>
+<use f='luajit/host/minilua.c' l='6166' u='c'/>
+<use f='luajit/host/minilua.c' l='6775' u='c'/>
+<use f='luajit/lib_io.c' l='186' u='c'/>

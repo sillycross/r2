@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='126' type='void lua_replace(lua_State * L, int idx)'/>
+<def f='luajit/lj_api.c' l='197' ll='202' macro='1' type='void lua_replace(lua_State * L, int idx)'/>

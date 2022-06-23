@@ -1,0 +1,37 @@
+<dec f='luajit/lua.h' l='164' type='void lua_pushlstring(lua_State * L, const char * s, size_t l)'/>
+<use f='luajit/lib_aux.c' l='56' macro='1' u='c' c='luaL_execresult'/>
+<use f='luajit/lib_aux.c' l='64' macro='1' u='c' c='luaL_execresult'/>
+<use f='luajit/lib_aux.c' l='89' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='94' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='188' u='c' c='emptybuffer'/>
+<use f='luajit/lib_aux.c' l='226' u='c' c='luaL_addlstring'/>
+<use f='luajit/lib_base.c' l='689' macro='1' u='c' c='luaopen_base'/>
+<use f='luajit/lib_debug.c' l='350' macro='1' u='c' c='lj_cf_debug_gethook'/>
+<use f='luajit/lib_ffi.c' l='862' macro='1' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_ffi.c' l='863' macro='1' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_io.c' l='115' macro='1' u='c' c='io_file_close'/>
+<use f='luajit/lib_io.c' l='387' macro='1' u='c' c='lj_cf_io_method___tostring'/>
+<use f='luajit/lib_io.c' l='509' macro='1' u='c' c='lj_cf_io_type'/>
+<use f='luajit/lib_io.c' l='511' macro='1' u='c' c='lj_cf_io_type'/>
+<use f='luajit/lib_jit.c' l='622' u='c' c='lj_cf_jit_profile_dumpstack'/>
+<use f='luajit/lib_jit.c' l='743' macro='1' u='c' c='luaopen_jit'/>
+<use f='luajit/lib_jit.c' l='744' macro='1' u='c' c='luaopen_jit'/>
+<use f='luajit/lib_jit.c' l='746' macro='1' u='c' c='luaopen_jit'/>
+<use f='luajit/lib_package.c' l='242' macro='1' u='c' c='ll_loadfunc'/>
+<use f='luajit/lib_package.c' l='312' u='c' c='pushnexttemplate'/>
+<use f='luajit/lib_package.c' l='398' u='c' c='lj_cf_package_loader_croot'/>
+<use f='luajit/lib_package.c' l='446' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='511' u='c' c='modinit'/>
+<use f='luajit/lib_package.c' l='617' macro='1' u='c' c='luaopen_package'/>
+<use f='luajit/lib_string.c' l='427' u='c' c='push_onecapture'/>
+<use f='luajit/lib_string.c' l='436' u='c' c='push_onecapture'/>
+<use f='luajit/lib_string.c' l='593' u='c' c='add_value'/>
+<def f='luajit/lj_api.c' l='649' ll='656' macro='1' type='void lua_pushlstring(lua_State * L, const char * str, size_t len)'/>
+<use f='luajit/lj_debug.c' l='666' macro='1' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='673' macro='1' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='692' macro='1' u='c' c='luaL_traceback'/>
+<use f='luajit/luajit.c' l='239' macro='1' u='c' c='loadline'/>
+<use f='luajit/luajit.c' l='301' macro='1' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='333' u='c' c='runcmdopt'/>
+<use f='luajit/luajit.c' l='348' u='c' c='dojitcmd'/>
+<use f='luajit/luajit.c' l='380' macro='1' u='c' c='dobytecode'/>

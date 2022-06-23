@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='40' type='16'/>
+<use f='luajit/lj_asm.c' l='1530' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm_x86.h' l='675' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='2952' u='r' c='asm_setup_call_slots'/>
+<use f='luajit/lj_asm.c' l='2291' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2321' u='r' c='asm_setup_regsp'/>

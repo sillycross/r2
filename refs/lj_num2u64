@@ -1,0 +1,10 @@
+<def f='luajit/lj_obj.h' l='1002' ll='1011' type='uint64_t lj_num2u64(lua_Number n)'/>
+<doc f='luajit/lj_obj.h' l='995'>/*
+** This must match the JIT backend behavior. In particular for archs
+** that don&apos;t have a common hardware instruction for this conversion.
+** Note that signed FP to unsigned int conversions have an undefined
+** result and should never be relied upon in portable FFI code.
+** See also: C99 or C11 standard, 6.3.1.4, footnote of (1).
+*/</doc>
+<use f='luajit/lj_cconv.c' l='211' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_opt_fold.c' l='895' u='c' c='fold_kfold_conv_knum_u64_num'/>

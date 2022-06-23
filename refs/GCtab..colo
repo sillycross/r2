@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='498' type='int8_t'/>
+<offset>88</offset>
+<doc f='luajit/lj_obj.h' l='498'>/* Array colocation. */</doc>
+<use f='luajit/lj_tab.c' l='91' u='w' c='newtab'/>
+<use f='luajit/lj_tab.c' l='106' u='w' c='newtab'/>
+<use f='luajit/lj_tab.c' l='219' u='r' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='221' u='r' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='222' u='r' c='lj_tab_free'/>
+<use f='luajit/lj_tab.c' l='240' u='r' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='244' u='w' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='244' u='r' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='276' u='r' c='lj_tab_resize'/>

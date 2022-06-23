@@ -1,0 +1,16 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='82'/>
+<use f='luajit/lj_asm.c' l='1137' u='r' c='asm_gcstep'/>
+<use f='luajit/lj_asm.c' l='1808' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2261' c='asm_setup_regsp'/>
+<use f='luajit/lj_crecord.c' l='580' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='990' u='r' c='crec_alloc'/>
+<use f='luajit/lj_opt_fold.c' l='167' u='r' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='167' u='r' c='fold_barrier_tab'/>
+<use f='luajit/lj_opt_mem.c' l='658' u='r' c='aa_findcnew'/>
+<use f='luajit/lj_opt_sink.c' l='33' u='r' c='sink_checkalloc'/>
+<use f='luajit/lj_opt_sink.c' l='118' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='189' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='205' u='r' c='sink_sweep_ins'/>
+<use f='luajit/lj_opt_sink.c' l='238' u='r' c='lj_opt_sink'/>
+<use f='luajit/lj_snap.c' l='620' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='782' u='r' c='snap_unsink'/>

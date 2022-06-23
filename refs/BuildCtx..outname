@@ -1,0 +1,8 @@
+<dec f='luajit/host/buildvm.h' l='72' type='const char *'/>
+<use f='luajit/host/buildvm.c' l='401' u='w' c='parseargs'/>
+<use f='luajit/host/buildvm.c' l='420' u='w' c='parseargs'/>
+<use f='luajit/host/buildvm.c' l='462' u='r' c='main'/>
+<use f='luajit/host/buildvm.c' l='462' u='r' c='main'/>
+<use f='luajit/host/buildvm.c' l='468' u='r' c='main'/>
+<use f='luajit/host/buildvm.c' l='470' u='r' c='main'/>
+<offset>192</offset>

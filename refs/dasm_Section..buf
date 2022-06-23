@@ -1,0 +1,12 @@
+<dec f='luajit/dasm_x86.h' l='56' type='int *'/>
+<use f='luajit/dasm_x86.h' l='100' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='101' u='r' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='113' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='114' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='177' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='177' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='177' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='179' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='399' u='r' c='dasm_encode'/>
+<offset>64</offset>
+<doc f='luajit/dasm_x86.h' l='56'>/* True buffer pointer. */</doc>

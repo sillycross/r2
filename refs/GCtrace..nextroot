@@ -1,0 +1,12 @@
+<dec f='luajit/lj_jit.h' l='275' type='TraceNo1'/>
+<offset>880</offset>
+<doc f='luajit/lj_jit.h' l='275'>/* Next root trace for same prototype. */</doc>
+<use f='luajit/lj_gc.c' l='265' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_gc.c' l='265' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_trace.c' l='249' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='253' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='253' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='254' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='255' u='w' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='255' u='r' c='trace_flushroot'/>
+<use f='luajit/lj_trace.c' l='496' u='w' c='trace_stop'/>

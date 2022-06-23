@@ -1,0 +1,10 @@
+<dec f='luajit/lj_target.h' l='46'/>
+<use f='luajit/lj_asm.c' l='2127' u='c'/>
+<use f='luajit/lj_asm.c' l='2166' u='c'/>
+<use f='luajit/lj_asm.c' l='2359' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='176' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='185' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='198' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='208' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='214' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='220' u='c'/>

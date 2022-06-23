@@ -1,0 +1,15 @@
+<dec f='luajit/lj_ctype.h' l='361' macro='1' type='259'/>
+<use f='luajit/lj_cparse.c' l='238' u='r' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='242' u='r' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='349' u='r' c='cp_next_'/>
+<use f='luajit/lj_cparse.c' l='1158' u='r' c='cp_decl_gccattribute'/>
+<use f='luajit/lj_cparse.c' l='1182' u='r' c='cp_decl_msvcattribute'/>
+<use f='luajit/lj_cparse.c' l='1670' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1721' u='r' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1790' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1800' u='r' c='cp_line'/>
+<use f='luajit/lj_cparse.c' l='1809' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1834' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1881' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1894' u='r' c='cp_decl_single'/>
+<use f='luajit/lj_cparse.c' l='1894' u='r' c='cp_decl_single'/>

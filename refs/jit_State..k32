@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='442' type='uint32_t [1]'/>
+<offset>2080</offset>
+<doc f='luajit/lj_jit.h' l='442'>/* Common 4 byte constants used by backends. */</doc>
+<use f='luajit/lj_asm_x86.h' l='875' u='a' c='asm_conv'/>
+<use f='luajit/lj_trace.c' l='330' u='w' c='lj_trace_initstate'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_meta.h' l='34' type='void lj_meta_istype(lua_State * L, BCReg ra, BCReg tp)'/>
+<def f='luajit/lj_meta.c' l='430' ll='439' type='void lj_meta_istype(lua_State * L, BCReg ra, BCReg tp)'/>
+<doc f='luajit/lj_meta.c' l='429'>/* Helper for ISTYPE and ISNUM. Implicit coercion or error. */</doc>

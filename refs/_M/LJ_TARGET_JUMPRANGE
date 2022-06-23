@@ -1,0 +1,5 @@
+<dec f='luajit/lj_arch.h' l='191'/>
+<use f='luajit/lj_mcode.c' l='201' u='a'/>
+<use f='luajit/lj_mcode.c' l='217' u='c'/>
+<use f='luajit/lj_mcode.c' l='222' u='c'/>
+<use f='luajit/lj_mcode.c' l='233' u='c'/>

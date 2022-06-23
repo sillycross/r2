@@ -1,0 +1,6 @@
+<dec f='luajit/host/buildvm.h' l='57' type='int'/>
+<use f='luajit/host/buildvm.c' l='145' u='w' c='collect_reloc'/>
+<offset>64</offset>
+<use f='luajit/host/buildvm_asm.c' l='294' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_asm.c' l='299' u='r' c='emit_asm'/>
+<use f='luajit/host/buildvm_peobj.c' l='256' u='r' c='emit_peobj'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/host/buildvm_peobj.c' l='102' type='0'/>
+<use f='luajit/host/buildvm_peobj.c' l='183' u='m' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='184' u='m' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='185' u='m' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='186' u='m' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='187' u='m' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='189' u='m' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='337' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='352' u='r' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='355' u='r' c='emit_peobj'/>

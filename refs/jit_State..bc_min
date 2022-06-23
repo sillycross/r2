@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='431' type='const BCIns *'/>
+<offset>1792</offset>
+<doc f='luajit/lj_jit.h' l='431'>/* Start of allowed bytecode range for root trace. */</doc>
+<use f='luajit/lj_record.c' l='2071' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2530' u='w' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2538' u='w' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2545' u='w' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2601' u='w' c='lj_record_setup'/>

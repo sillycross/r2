@@ -1,0 +1,19 @@
+<dec f='luajit/lj_target_x86.h' l='98'/>
+<doc f='luajit/lj_target_x86.h' l='97'>/* The rest of the civilized x64 world has a common ABI. */</doc>
+<use f='luajit/lj_asm.c' l='647' u='c'/>
+<use f='luajit/lj_asm.c' l='648' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='653' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='749' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1036' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1807' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1895' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1908' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2770' u='c'/>
+<use f='luajit/lj_asm.c' l='2201' u='c'/>
+<use f='luajit/lj_asm.c' l='2209' u='c'/>
+<use f='luajit/lj_asm.c' l='2209' u='c'/>
+<use f='luajit/lj_asm.c' l='2268' u='c'/>
+<use f='luajit/lj_asm.c' l='2272' u='c'/>
+<use f='luajit/lj_asm.c' l='2283' u='c'/>
+<use f='luajit/lj_asm.c' l='2300' u='c'/>
+<use f='luajit/lj_asm.c' l='2317' u='c'/>

@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='671'/>
+<use f='luajit/lj_asm_x86.h' l='2655' u='c'/>
+<use f='luajit/lj_dispatch.c' l='114' u='c'/>
+<use f='luajit/lj_gc.c' l='511' u='c'/>
+<use f='luajit/lj_gc.c' l='520' u='c'/>
+<use f='luajit/lj_profile.c' l='132' u='c'/>
+<use f='luajit/lj_profile.c' l='141' u='c'/>
+<use f='luajit/lj_profile.c' l='156' u='c'/>
+<use f='luajit/lj_profile.c' l='162' u='c'/>
+<use f='luajit/lj_profile.c' l='342' u='c'/>
+<use f='luajit/lj_trace.c' l='879' u='c'/>
+<use f='luajit/lj_trace.c' l='892' u='c'/>

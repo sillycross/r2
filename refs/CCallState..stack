@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ccall.h' l='181' type='GPRArg [32]'/>
+<offset>1536</offset>
+<doc f='luajit/lj_ccall.h' l='181'>/* Stack slots. */</doc>
+<use f='luajit/lj_ccall.c' l='704' u='a' c='ccall_struct_arg'/>
+<use f='luajit/lj_ccall.c' l='1039' u='a' c='ccall_set_args'/>

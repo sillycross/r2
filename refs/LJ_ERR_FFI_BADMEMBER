@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='167' macro='1' type='3460'/>
+<use f='luajit/lj_errmsg.h' l='167' macro='1' u='r'/>
+<use f='luajit/lib_ffi.c' l='117' u='r' c='ffi_index_meta'/>
+<use f='luajit/lj_cparse.c' l='575' u='r' c='cp_expr_postfix'/>

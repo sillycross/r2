@@ -1,0 +1,7 @@
+<def f='luajit/lj_obj.h' l='910' ll='917' type='void setgcVraw(TValue * o, GCobj * v, uint32_t itype)'/>
+<use f='luajit/lj_obj.h' l='921' u='c' c='setgcV'/>
+<use f='luajit/lj_api.c' l='1220' macro='1' u='c' c='lua_yield'/>
+<use f='luajit/lj_ccallback.c' l='562' macro='1' u='c' c='callback_conv_args'/>
+<use f='luajit/lj_err.c' l='932' macro='1' u='c' c='lj_err_optype_call'/>
+<use f='luajit/lj_meta.c' l='89' macro='1' u='c' c='lj_meta_tailcall'/>
+<use f='luajit/lj_parse.c' l='1711' u='c' c='expr_kvalue'/>

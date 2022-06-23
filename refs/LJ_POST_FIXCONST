@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='166' type='5'/>
+<doc f='luajit/lj_jit.h' l='166'>/* Fixup constant results. */</doc>
+<use f='luajit/lj_crecord.c' l='1753' u='r' c='recff_ffi_xof'/>
+<use f='luajit/lj_record.c' l='2036' c='lj_record_ins'/>

@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ir.h' l='318' macro='1' type='17'/>
+<use f='luajit/lj_asm_x86.h' l='898' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1406' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1435' macro='1' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1456' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='2454' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_crecord.c' l='1158' u='r' c='crec_call_args'/>
+<use f='luajit/lj_crecord.c' l='1279' u='r' c='crec_call'/>
+<use f='luajit/lj_opt_fold.c' l='820' u='r' c='fold_kfold_conv_kint_ext'/>
+<use f='luajit/lj_opt_fold.c' l='2051' c='kfold_xload'/>
+<use f='luajit/lj_opt_mem.c' l='811' u='r' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_snap.c' l='813' macro='1' u='r' c='snap_unsink'/>

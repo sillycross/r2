@@ -1,0 +1,12 @@
+<dec f='luajit/lj_ctype.h' l='126' type='1'/>
+<doc f='luajit/lj_ctype.h' l='126'>/* Unmerged qualifiers. */</doc>
+<use f='luajit/lib_ffi.c' l='406' u='r' c='lj_cf_ffi_clib___newindex'/>
+<use f='luajit/lj_cconv.c' l='64' u='r' c='cconv_childqual'/>
+<use f='luajit/lj_cdata.c' l='126' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='286' u='r' c='lj_cdata_set'/>
+<use f='luajit/lj_cparse.c' l='815' u='r' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='821' u='r' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='893' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_ctype.c' l='254' u='r' c='lj_ctype_getfieldq'/>
+<use f='luajit/lj_ctype.c' l='319' u='r' c='lj_ctype_info'/>
+<use f='luajit/lj_ctype.c' l='489' u='r' c='ctype_repr'/>

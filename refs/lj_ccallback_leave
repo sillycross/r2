@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ccallback.h' l='19' type='void lj_ccallback_leave(CTState * cts, TValue * o)'/>
+<def f='luajit/lj_ccallback.c' l='701' ll='721' type='void lj_ccallback_leave(CTState * cts, TValue * o)'/>
+<doc f='luajit/lj_ccallback.c' l='700'>/* Leave callback. */</doc>

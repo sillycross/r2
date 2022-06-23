@@ -1,0 +1,10 @@
+<def f='luajit/lj_asm_x86.h' l='498' ll='503' type='Reg asm_fuseloadm(ASMState * as, IRRef ref, RegSet allow, int is64)'/>
+<use f='luajit/lj_asm_x86.h' l='842' u='c' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='2083' u='c' c='asm_intarith'/>
+<use f='luajit/lj_asm_x86.h' l='2096' u='c' c='asm_intarith'/>
+<use f='luajit/lj_asm_x86.h' l='2278' u='c' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2294' u='c' c='asm_bitshift'/>
+<use f='luajit/lj_asm_x86.h' l='2440' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2477' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2506' u='c' c='asm_comp'/>
+<doc f='luajit/lj_asm_x86.h' l='497'>/* Don&apos;t fuse a 32 bit load into a 64 bit operation. */</doc>

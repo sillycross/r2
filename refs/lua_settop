@@ -1,0 +1,49 @@
+<dec f='luajit/lua.h' l='122' type='void lua_settop(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='92' macro='1' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='98' macro='1' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='119' macro='1' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_aux.c' l='139' macro='1' u='c' c='luaL_openlib'/>
+<use f='luajit/lib_aux.c' l='158' macro='1' u='c' c='luaL_setfuncs'/>
+<use f='luajit/lib_aux.c' l='252' macro='1' u='c' c='luaL_addvalue'/>
+<use f='luajit/lib_aux.c' l='281' macro='1' u='c' c='luaL_ref'/>
+<use f='luajit/lib_aux.c' l='286' macro='1' u='c' c='luaL_ref'/>
+<use f='luajit/lib_base.c' l='340' u='c' c='lj_cf_error'/>
+<use f='luajit/lib_base.c' l='380' u='c' c='lj_cf_loadfile'/>
+<use f='luajit/lib_base.c' l='424' u='c' c='lj_cf_load'/>
+<use f='luajit/lib_base.c' l='429' u='c' c='lj_cf_load'/>
+<use f='luajit/lib_base.c' l='483' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_base.c' l='497' macro='1' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='329' u='c' c='lj_cf_debug_sethook'/>
+<use f='luajit/lib_debug.c' l='376' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_init.c' l='53' macro='1' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_os.c' l='152' macro='1' u='c' c='getboolfield'/>
+<use f='luajit/lib_os.c' l='167' macro='1' u='c' c='getfield'/>
+<use f='luajit/lib_os.c' l='237' u='c' c='lj_cf_os_time'/>
+<use f='luajit/lib_package.c' l='215' macro='1' u='c' c='ll_register'/>
+<use f='luajit/lib_package.c' l='261' macro='1' u='c' c='ll_loadfunc'/>
+<use f='luajit/lib_package.c' l='434' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='459' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='488' macro='1' u='c' c='setfenv'/>
+<use f='luajit/lib_package.c' l='522' macro='1' u='c' c='lj_cf_package_module'/>
+<use f='luajit/lib_package.c' l='524' macro='1' u='c' c='lj_cf_package_module'/>
+<use f='luajit/lib_package.c' l='614' macro='1' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='625' macro='1' u='c' c='luaopen_package'/>
+<use f='luajit/lib_string.c' l='592' macro='1' u='c' c='add_value'/>
+<use f='luajit/lib_table.c' l='189' macro='1' u='c' c='sort_comp'/>
+<use f='luajit/lib_table.c' l='206' macro='1' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='214' macro='1' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='219' macro='1' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='232' macro='1' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='237' macro='1' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='240' macro='1' u='c' c='auxsort'/>
+<use f='luajit/lib_table.c' l='263' u='c' c='lj_cf_table_sort'/>
+<def f='luajit/lj_api.c' l='145' ll='160' macro='1' type='void lua_settop(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='94' macro='1' u='c' c='report'/>
+<use f='luajit/luajit.c' l='153' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='194' macro='1' u='c' c='write_prompt'/>
+<use f='luajit/luajit.c' l='204' macro='1' u='c' c='incomplete'/>
+<use f='luajit/luajit.c' l='231' u='c' c='loadline'/>
+<use f='luajit/luajit.c' l='264' u='c' c='dotty'/>
+<use f='luajit/luajit.c' l='286' macro='1' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='290' macro='1' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='355' macro='1' u='c' c='dojitcmd'/>

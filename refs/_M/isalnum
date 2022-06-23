@@ -1,0 +1,4 @@
+<dec f='include/ctype.h' l='189'/>
+<use f='luajit/host/minilua.c' l='2769' u='c'/>
+<use f='luajit/host/minilua.c' l='2965' u='c'/>
+<use f='luajit/host/minilua.c' l='7131' u='c'/>

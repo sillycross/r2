@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>buildvm.h source code [luajit/host/buildvm.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="BuildCtx,BuildReloc,BuildSym "/>
+<link rel="stylesheet" href="../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/host/buildvm.h'; var root_path = '../..'; var data_path = '../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>luajit</a>/<a href='./'>host</a>/<a href='buildvm.h.html'>buildvm.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** LuaJIT VM builder.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_BUILDVM_H">_BUILDVM_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_BUILDVM_H" data-ref="_M/_BUILDVM_H">_BUILDVM_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="../../include/x86_64-linux-gnu/sys/types.h.html">&lt;sys/types.h&gt;</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="../../include/stdio.h.html">&lt;stdio.h&gt;</a></u></td></tr>
+<tr><th id="11">11</th><td><u>#include <a href="../../include/stdlib.h.html">&lt;stdlib.h&gt;</a></u></td></tr>
+<tr><th id="12">12</th><td><u>#include <a href="../../include/string.h.html">&lt;string.h&gt;</a></u></td></tr>
+<tr><th id="13">13</th><td><u>#include <a href="../../include/errno.h.html">&lt;errno.h&gt;</a></u></td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><u>#include <a href="../lj_def.h.html">"lj_def.h"</a></u></td></tr>
+<tr><th id="16">16</th><td><u>#include <a href="../lj_arch.h.html">"lj_arch.h"</a></u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><i>/* Hardcoded limits. Increase as needed. */</i></td></tr>
+<tr><th id="19">19</th><td><u>#define <dfn class="macro" id="_M/BUILD_MAX_RELOC" data-ref="_M/BUILD_MAX_RELOC">BUILD_MAX_RELOC</dfn>		200	/* Max. number of relocations. */</u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/BUILD_MAX_FOLD" data-ref="_M/BUILD_MAX_FOLD">BUILD_MAX_FOLD</dfn>		4096	/* Max. number of fold rules. */</u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><i>/* Prefix for scanned library definitions. */</i></td></tr>
+<tr><th id="23">23</th><td><u>#define <dfn class="macro" id="_M/LIBDEF_PREFIX" data-ref="_M/LIBDEF_PREFIX">LIBDEF_PREFIX</dfn>		"LJLIB_"</u></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><i>/* Prefix for scanned fold definitions. */</i></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/FOLDDEF_PREFIX" data-ref="_M/FOLDDEF_PREFIX">FOLDDEF_PREFIX</dfn>		"LJFOLD"</u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><i>/* Prefixes for generated labels. */</i></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX" data-ref="_M/LABEL_PREFIX">LABEL_PREFIX</dfn>		"lj_"</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX_BC" data-ref="_M/LABEL_PREFIX_BC">LABEL_PREFIX_BC</dfn>		LABEL_PREFIX "BC_"</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX_FF" data-ref="_M/LABEL_PREFIX_FF">LABEL_PREFIX_FF</dfn>		LABEL_PREFIX "ff_"</u></td></tr>
+<tr><th id="32">32</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX_CF" data-ref="_M/LABEL_PREFIX_CF">LABEL_PREFIX_CF</dfn>		LABEL_PREFIX "cf_"</u></td></tr>
+<tr><th id="33">33</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX_FFH" data-ref="_M/LABEL_PREFIX_FFH">LABEL_PREFIX_FFH</dfn>	LABEL_PREFIX "ffh_"</u></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX_LIBCF" data-ref="_M/LABEL_PREFIX_LIBCF">LABEL_PREFIX_LIBCF</dfn>	LABEL_PREFIX "lib_cf_"</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/LABEL_PREFIX_LIBINIT" data-ref="_M/LABEL_PREFIX_LIBINIT">LABEL_PREFIX_LIBINIT</dfn>	LABEL_PREFIX "lib_init_"</u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i>/* Forward declaration. */</i></td></tr>
+<tr><th id="38">38</th><td><b>struct</b> <a class="type" href="../dasm_x86.h.html#dasm_State" title='dasm_State' data-ref="dasm_State" data-ref-filename="dasm_State" id="dasm_State">dasm_State</a>;</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><i>/* Build modes. */</i></td></tr>
+<tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/BUILDDEF" data-ref="_M/BUILDDEF">BUILDDEF</dfn>(_) \</u></td></tr>
+<tr><th id="42">42</th><td><u>  _(elfasm) _(coffasm) _(machasm) _(peobj) _(raw) \</u></td></tr>
+<tr><th id="43">43</th><td><u>  _(bcdef) _(ffdef) _(libdef) _(recdef) _(vmdef) \</u></td></tr>
+<tr><th id="44">44</th><td><u>  _(folddef)</u></td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/BUILDENUM" data-ref="_M/BUILDENUM">BUILDENUM</dfn>(name)		BUILD_##name,</u></td></tr>
+<tr><th id="48">48</th><td><a class="macro" href="#41" title="BUILD_elfasm, BUILD_coffasm, BUILD_machasm, BUILD_peobj, BUILD_raw, BUILD_bcdef, BUILD_ffdef, BUILD_libdef, BUILD_recdef, BUILD_vmdef, BUILD_folddef," data-ref="_M/BUILDDEF">BUILDDEF</a>(BUILDENUM)</td></tr>
+<tr><th id="49">49</th><td><u>#undef <a class="macro" href="#47" data-ref="_M/BUILDENUM">BUILDENUM</a></u></td></tr>
+<tr><th id="50">50</th><td>  <dfn class="enum" id="BUILD__MAX" title='BUILD__MAX' data-ref="BUILD__MAX" data-ref-filename="BUILD__MAX">BUILD__MAX</dfn></td></tr>
+<tr><th id="51">51</th><td>} <dfn class="typedef" id="BuildMode" title='BuildMode' data-type='enum BuildMode' data-ref="BuildMode" data-ref-filename="BuildMode">BuildMode</dfn>;</td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><i>/* Code relocation. */</i></td></tr>
+<tr><th id="54">54</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="BuildReloc" title='BuildReloc' data-ref="BuildReloc" data-ref-filename="BuildReloc"><a class="type" href="#BuildReloc" title='BuildReloc' data-ref="BuildReloc" data-ref-filename="BuildReloc">BuildReloc</a></dfn> {</td></tr>
+<tr><th id="55">55</th><td>  <a class="typedef" href="../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="BuildReloc::ofs" title='BuildReloc::ofs' data-ref="BuildReloc::ofs" data-ref-filename="BuildReloc..ofs">ofs</dfn>;</td></tr>
+<tr><th id="56">56</th><td>  <em>int</em> <dfn class="decl field" id="BuildReloc::sym" title='BuildReloc::sym' data-ref="BuildReloc::sym" data-ref-filename="BuildReloc..sym">sym</dfn>;</td></tr>
+<tr><th id="57">57</th><td>  <em>int</em> <dfn class="decl field" id="BuildReloc::type" title='BuildReloc::type' data-ref="BuildReloc::type" data-ref-filename="BuildReloc..type">type</dfn>;</td></tr>
+<tr><th id="58">58</th><td>} <dfn class="typedef" id="BuildReloc" title='BuildReloc' data-type='struct BuildReloc' data-ref="BuildReloc" data-ref-filename="BuildReloc">BuildReloc</dfn>;</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="BuildSym" title='BuildSym' data-ref="BuildSym" data-ref-filename="BuildSym"><a class="type" href="#BuildSym" title='BuildSym' data-ref="BuildSym" data-ref-filename="BuildSym">BuildSym</a></dfn> {</td></tr>
+<tr><th id="61">61</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="BuildSym::name" title='BuildSym::name' data-ref="BuildSym::name" data-ref-filename="BuildSym..name">name</dfn>;</td></tr>
+<tr><th id="62">62</th><td>  <a class="typedef" href="../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="BuildSym::ofs" title='BuildSym::ofs' data-ref="BuildSym::ofs" data-ref-filename="BuildSym..ofs">ofs</dfn>;</td></tr>
+<tr><th id="63">63</th><td>} <dfn class="typedef" id="BuildSym" title='BuildSym' data-type='struct BuildSym' data-ref="BuildSym" data-ref-filename="BuildSym">BuildSym</dfn>;</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><i>/* Build context structure. */</i></td></tr>
+<tr><th id="66">66</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="BuildCtx" title='BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx"><a class="type" href="#BuildCtx" title='BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</a></dfn> {</td></tr>
+<tr><th id="67">67</th><td>  <i>/* DynASM state pointer. Should be first member. */</i></td></tr>
+<tr><th id="68">68</th><td>  <b>struct</b> <a class="type" href="../dasm_x86.h.html#dasm_State" title='dasm_State' data-ref="dasm_State" data-ref-filename="dasm_State">dasm_State</a> *<dfn class="decl field" id="BuildCtx::D" title='BuildCtx::D' data-ref="BuildCtx::D" data-ref-filename="BuildCtx..D">D</dfn>;</td></tr>
+<tr><th id="69">69</th><td>  <i>/* Parsed command line. */</i></td></tr>
+<tr><th id="70">70</th><td>  <a class="typedef" href="#BuildMode" title='BuildMode' data-type='enum BuildMode' data-ref="BuildMode" data-ref-filename="BuildMode">BuildMode</a> <dfn class="decl field" id="BuildCtx::mode" title='BuildCtx::mode' data-ref="BuildCtx::mode" data-ref-filename="BuildCtx..mode">mode</dfn>;</td></tr>
+<tr><th id="71">71</th><td>  <a class="typedef" href="../../include/x86_64-linux-gnu/bits/types/FILE.h.html#FILE" title='FILE' data-type='struct _IO_FILE' data-ref="FILE" data-ref-filename="FILE">FILE</a> *<dfn class="decl field" id="BuildCtx::fp" title='BuildCtx::fp' data-ref="BuildCtx::fp" data-ref-filename="BuildCtx..fp">fp</dfn>;</td></tr>
+<tr><th id="72">72</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="BuildCtx::outname" title='BuildCtx::outname' data-ref="BuildCtx::outname" data-ref-filename="BuildCtx..outname">outname</dfn>;</td></tr>
+<tr><th id="73">73</th><td>  <em>char</em> **<dfn class="decl field" id="BuildCtx::args" title='BuildCtx::args' data-ref="BuildCtx::args" data-ref-filename="BuildCtx..args">args</dfn>;</td></tr>
+<tr><th id="74">74</th><td>  <i>/* Code and symbols generated by DynASM. */</i></td></tr>
+<tr><th id="75">75</th><td>  <a class="typedef" href="../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint8_t" title='uint8_t' data-type='__uint8_t' data-ref="uint8_t" data-ref-filename="uint8_t">uint8_t</a> *<dfn class="decl field" id="BuildCtx::code" title='BuildCtx::code' data-ref="BuildCtx::code" data-ref-filename="BuildCtx..code">code</dfn>;</td></tr>
+<tr><th id="76">76</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl field" id="BuildCtx::codesz" title='BuildCtx::codesz' data-ref="BuildCtx::codesz" data-ref-filename="BuildCtx..codesz">codesz</dfn>;</td></tr>
+<tr><th id="77">77</th><td>  <em>int</em> <dfn class="decl field" id="BuildCtx::npc" title='BuildCtx::npc' data-ref="BuildCtx::npc" data-ref-filename="BuildCtx..npc">npc</dfn>, <dfn class="decl field" id="BuildCtx::nglob" title='BuildCtx::nglob' data-ref="BuildCtx::nglob" data-ref-filename="BuildCtx..nglob">nglob</dfn>, <dfn class="decl field" id="BuildCtx::nsym" title='BuildCtx::nsym' data-ref="BuildCtx::nsym" data-ref-filename="BuildCtx..nsym">nsym</dfn>, <dfn class="decl field" id="BuildCtx::nreloc" title='BuildCtx::nreloc' data-ref="BuildCtx::nreloc" data-ref-filename="BuildCtx..nreloc">nreloc</dfn>, <dfn class="decl field" id="BuildCtx::nrelocsym" title='BuildCtx::nrelocsym' data-ref="BuildCtx::nrelocsym" data-ref-filename="BuildCtx..nrelocsym">nrelocsym</dfn>;</td></tr>
+<tr><th id="78">78</th><td>  <em>void</em> **<dfn class="decl field" id="BuildCtx::glob" title='BuildCtx::glob' data-ref="BuildCtx::glob" data-ref-filename="BuildCtx..glob">glob</dfn>;</td></tr>
+<tr><th id="79">79</th><td>  <a class="typedef" href="#BuildSym" title='BuildSym' data-type='struct BuildSym' data-ref="BuildSym" data-ref-filename="BuildSym">BuildSym</a> *<dfn class="decl field" id="BuildCtx::sym" title='BuildCtx::sym' data-ref="BuildCtx::sym" data-ref-filename="BuildCtx..sym">sym</dfn>;</td></tr>
+<tr><th id="80">80</th><td>  <em>const</em> <em>char</em> **<dfn class="decl field" id="BuildCtx::relocsym" title='BuildCtx::relocsym' data-ref="BuildCtx::relocsym" data-ref-filename="BuildCtx..relocsym">relocsym</dfn>;</td></tr>
+<tr><th id="81">81</th><td>  <a class="typedef" href="../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> *<dfn class="decl field" id="BuildCtx::bc_ofs" title='BuildCtx::bc_ofs' data-ref="BuildCtx::bc_ofs" data-ref-filename="BuildCtx..bc_ofs">bc_ofs</dfn>;</td></tr>
+<tr><th id="82">82</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="BuildCtx::beginsym" title='BuildCtx::beginsym' data-ref="BuildCtx::beginsym" data-ref-filename="BuildCtx..beginsym">beginsym</dfn>;</td></tr>
+<tr><th id="83">83</th><td>  <i>/* Strings generated by DynASM. */</i></td></tr>
+<tr><th id="84">84</th><td>  <em>const</em> <em>char</em> *<em>const</em> *<dfn class="decl field" id="BuildCtx::globnames" title='BuildCtx::globnames' data-ref="BuildCtx::globnames" data-ref-filename="BuildCtx..globnames">globnames</dfn>;</td></tr>
+<tr><th id="85">85</th><td>  <em>const</em> <em>char</em> *<em>const</em> *<dfn class="decl field" id="BuildCtx::extnames" title='BuildCtx::extnames' data-ref="BuildCtx::extnames" data-ref-filename="BuildCtx..extnames">extnames</dfn>;</td></tr>
+<tr><th id="86">86</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="BuildCtx::dasm_ident" title='BuildCtx::dasm_ident' data-ref="BuildCtx::dasm_ident" data-ref-filename="BuildCtx..dasm_ident">dasm_ident</dfn>;</td></tr>
+<tr><th id="87">87</th><td>  <em>const</em> <em>char</em> *<dfn class="decl field" id="BuildCtx::dasm_arch" title='BuildCtx::dasm_arch' data-ref="BuildCtx::dasm_arch" data-ref-filename="BuildCtx..dasm_arch">dasm_arch</dfn>;</td></tr>
+<tr><th id="88">88</th><td>  <i>/* Relocations. */</i></td></tr>
+<tr><th id="89">89</th><td>  <a class="typedef" href="#BuildReloc" title='BuildReloc' data-type='struct BuildReloc' data-ref="BuildReloc" data-ref-filename="BuildReloc">BuildReloc</a> <dfn class="decl field" id="BuildCtx::reloc" title='BuildCtx::reloc' data-ref="BuildCtx::reloc" data-ref-filename="BuildCtx..reloc">reloc</dfn>[<a class="macro" href="#19" title="200" data-ref="_M/BUILD_MAX_RELOC">BUILD_MAX_RELOC</a>];</td></tr>
+<tr><th id="90">90</th><td>} <dfn class="typedef" id="BuildCtx" title='BuildCtx' data-type='struct BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</dfn>;</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td><b>extern</b> <em>void</em> <a class="decl fn" href="buildvm.c.html#owrite" title='owrite' data-ref="owrite" data-ref-filename="owrite" id="owrite">owrite</a>(<a class="typedef" href="#BuildCtx" title='BuildCtx' data-type='struct BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</a> *<dfn class="local col0 decl" id="760ctx" title='ctx' data-type='BuildCtx *' data-ref="760ctx" data-ref-filename="760ctx">ctx</dfn>, <em>const</em> <em>void</em> *<dfn class="local col1 decl" id="761ptr" title='ptr' data-type='const void *' data-ref="761ptr" data-ref-filename="761ptr">ptr</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col2 decl" id="762sz" title='sz' data-type='size_t' data-ref="762sz" data-ref-filename="762sz">sz</dfn>);</td></tr>
+<tr><th id="93">93</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="emit_asm" title='emit_asm' data-ref="emit_asm" data-ref-filename="emit_asm">emit_asm</dfn>(<a class="typedef" href="#BuildCtx" title='BuildCtx' data-type='struct BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</a> *<dfn class="local col3 decl" id="763ctx" title='ctx' data-type='BuildCtx *' data-ref="763ctx" data-ref-filename="763ctx">ctx</dfn>);</td></tr>
+<tr><th id="94">94</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="emit_peobj" title='emit_peobj' data-ref="emit_peobj" data-ref-filename="emit_peobj">emit_peobj</dfn>(<a class="typedef" href="#BuildCtx" title='BuildCtx' data-type='struct BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</a> *<dfn class="local col4 decl" id="764ctx" title='ctx' data-type='BuildCtx *' data-ref="764ctx" data-ref-filename="764ctx">ctx</dfn>);</td></tr>
+<tr><th id="95">95</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="emit_lib" title='emit_lib' data-ref="emit_lib" data-ref-filename="emit_lib">emit_lib</dfn>(<a class="typedef" href="#BuildCtx" title='BuildCtx' data-type='struct BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</a> *<dfn class="local col5 decl" id="765ctx" title='ctx' data-type='BuildCtx *' data-ref="765ctx" data-ref-filename="765ctx">ctx</dfn>);</td></tr>
+<tr><th id="96">96</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="emit_fold" title='emit_fold' data-ref="emit_fold" data-ref-filename="emit_fold">emit_fold</dfn>(<a class="typedef" href="#BuildCtx" title='BuildCtx' data-type='struct BuildCtx' data-ref="BuildCtx" data-ref-filename="BuildCtx">BuildCtx</a> *<dfn class="local col6 decl" id="766ctx" title='ctx' data-type='BuildCtx *' data-ref="766ctx" data-ref-filename="766ctx">ctx</dfn>);</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><b>extern</b> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl" id="bc_names" title='bc_names' data-ref="bc_names" data-ref-filename="bc_names">bc_names</dfn>[];</td></tr>
+<tr><th id="99">99</th><td><b>extern</b> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl" id="ir_names" title='ir_names' data-ref="ir_names" data-ref-filename="ir_names">ir_names</dfn>[];</td></tr>
+<tr><th id="100">100</th><td><b>extern</b> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl" id="irt_names" title='irt_names' data-ref="irt_names" data-ref-filename="irt_names">irt_names</dfn>[];</td></tr>
+<tr><th id="101">101</th><td><b>extern</b> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl" id="irfpm_names" title='irfpm_names' data-ref="irfpm_names" data-ref-filename="irfpm_names">irfpm_names</dfn>[];</td></tr>
+<tr><th id="102">102</th><td><b>extern</b> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl" id="irfield_names" title='irfield_names' data-ref="irfield_names" data-ref-filename="irfield_names">irfield_names</dfn>[];</td></tr>
+<tr><th id="103">103</th><td><b>extern</b> <em>const</em> <em>char</em> *<em>const</em> <dfn class="decl" id="ircall_names" title='ircall_names' data-ref="ircall_names" data-ref-filename="ircall_names">ircall_names</dfn>[];</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

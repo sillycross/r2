@@ -1,0 +1,3 @@
+<dec f='luajit/host/minilua.c' l='130' type='276'/>
+<use f='luajit/host/minilua.c' l='4304' c='block_follow'/>
+<use f='luajit/host/minilua.c' l='4419' u='r' c='repeatstat'/>

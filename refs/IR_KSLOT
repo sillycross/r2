@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='30'/>
+<use f='luajit/lib_jit.c' l='344' u='r' c='lj_cf_jit_util_tracek'/>
+<use f='luajit/lj_ir.c' l='367' u='r' c='lj_ir_kslot'/>
+<use f='luajit/lj_ir.c' l='374' u='r' c='lj_ir_kslot'/>
+<use f='luajit/lj_ir.c' l='375' u='r' c='lj_ir_kslot'/>
+<use f='luajit/lj_ir.c' l='376' u='w' c='lj_ir_kslot'/>
+<use f='luajit/lj_opt_mem.c' l='85' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='87' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='194' u='r' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='397' u='r' c='lj_opt_fwd_alen'/>
+<use f='luajit/lj_snap.c' l='854' u='r' c='snap_unsink'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/lj_emit_x86.h' l='74'/>
+<use f='luajit/lj_emit_x86.h' l='88' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='136' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='171' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='235' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='319' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='376' u='c'/>
+<doc f='luajit/lj_emit_x86.h' l='73'>/* op + modrm */</doc>

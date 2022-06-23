@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='621' type='uint8_t'/>
+<offset>168</offset>
+<doc f='luajit/lj_obj.h' l='621'>/* String interning table uses secondary hashing. */</doc>
+<use f='luajit/lj_str.c' l='144' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='164' u='w' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='228' u='w' c='lj_str_rehash_chain'/>

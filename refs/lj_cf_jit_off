@@ -1,0 +1,1 @@
+<def f='luajit/lib_jit.c' l='73' macro='1' type='int lj_cf_jit_off(lua_State * L)'/>

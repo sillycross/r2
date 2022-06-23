@@ -1,0 +1,16 @@
+<dec f='luajit/lj_lib.h' l='30'/>
+<use f='luajit/lib_base.c' l='99' u='c'/>
+<use f='luajit/lib_base.c' l='139' u='c'/>
+<use f='luajit/lib_base.c' l='269' u='c'/>
+<use f='luajit/lib_base.c' l='282' u='c'/>
+<use f='luajit/lib_base.c' l='286' u='c'/>
+<use f='luajit/lib_base.c' l='312' u='c'/>
+<use f='luajit/lib_base.c' l='318' u='c'/>
+<use f='luajit/lib_base.c' l='332' u='c'/>
+<use f='luajit/lib_base.c' l='616' u='c'/>
+<use f='luajit/lib_bit.c' l='37' u='c'/>
+<use f='luajit/lib_bit.c' l='60' u='c'/>
+<use f='luajit/lib_math.c' l='62' u='c'/>
+<use f='luajit/lib_string.c' l='53' u='c'/>
+<use f='luajit/lib_string.c' l='62' u='c'/>
+<use f='luajit/lib_string.c' l='76' u='c'/>

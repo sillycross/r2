@@ -1,0 +1,6 @@
+<dec f='luajit/lj_cparse.h' l='52' type='const char *'/>
+<use f='luajit/lib_ffi.c' l='52' u='w' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='483' u='w' c='lj_cf_ffi_cdef'/>
+<offset>768</offset>
+<doc f='luajit/lj_cparse.h' l='52'>/* Current source name. */</doc>
+<use f='luajit/lj_crecord.c' l='83' u='w' c='argv2ctype'/>

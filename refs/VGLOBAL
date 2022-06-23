@@ -1,0 +1,13 @@
+<dec f='luajit/host/minilua.c' l='118' type='8'/>
+<use f='luajit/host/minilua.c' l='3212' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3361' c='luaK_storevar'/>
+<use f='luajit/host/minilua.c' l='3792' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3793' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3804' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3805' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3815' u='r' c='singlevar'/>
+<dec f='luajit/lj_parse.c' l='46' type='8'/>
+<use f='luajit/lj_parse.c' l='448' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='641' u='r' c='bcemit_store'/>
+<use f='luajit/lj_parse.c' l='1143' u='r' c='var_lookup_'/>
+<doc f='luajit/lj_parse.c' l='46'>/* sval = string value */</doc>

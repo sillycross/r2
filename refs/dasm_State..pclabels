@@ -1,0 +1,18 @@
+<dec f='luajit/dasm_x86.h' l='69' type='int *'/>
+<use f='luajit/dasm_x86.h' l='95' u='w' c='dasm_init'/>
+<use f='luajit/dasm_x86.h' l='115' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='115' u='r' c='dasm_free'/>
+<use f='luajit/dasm_x86.h' l='133' u='w' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='133' u='r' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='133' u='r' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='134' u='r' c='dasm_growpc'/>
+<use f='luajit/dasm_x86.h' l='146' u='r' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='146' u='r' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='230' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='230' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='249' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='249' macro='1' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='289' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='503' u='r' c='dasm_getpclabel'/>
+<offset>256</offset>
+<doc f='luajit/dasm_x86.h' l='69'>/* PC label chains/pos ptrs. */</doc>

@@ -1,0 +1,11 @@
+<dec f='luajit/lua.h' l='194' type='void lua_rawseti(lua_State * L, int idx, int n)'/>
+<use f='luajit/lib_aux.c' l='289' u='c' c='luaL_ref'/>
+<use f='luajit/lib_aux.c' l='294' u='c' c='luaL_ref'/>
+<use f='luajit/lib_aux.c' l='303' u='c' c='luaL_unref'/>
+<use f='luajit/lib_aux.c' l='305' u='c' c='luaL_unref'/>
+<use f='luajit/lib_jit.c' l='136' u='c' c='lj_cf_jit_attach'/>
+<use f='luajit/lib_package.c' l='605' u='c' c='luaopen_package'/>
+<use f='luajit/lib_table.c' l='176' u='c' c='set2'/>
+<use f='luajit/lib_table.c' l='177' u='c' c='set2'/>
+<def f='luajit/lj_api.c' l='1011' ll='1021' macro='1' type='void lua_rawseti(lua_State * L, int idx, int n)'/>
+<use f='luajit/luajit.c' l='162' u='c' c='createargtable'/>

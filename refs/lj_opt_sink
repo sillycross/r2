@@ -1,0 +1,8 @@
+<dec f='luajit/lj_iropt.h' l='158' type='void lj_opt_sink(jit_State * J)'/>
+<def f='luajit/lj_opt_sink.c' l='232' ll='246' type='void lj_opt_sink(jit_State * J)'/>
+<doc f='luajit/lj_opt_sink.c' l='227'>/* Allocation sinking and store sinking.
+**
+** 1. Mark all non-sinkable allocations.
+** 2. Then sink all remaining allocations and the related stores.
+*/</doc>
+<use f='luajit/lj_trace.c' l='691' u='c' c='trace_state'/>

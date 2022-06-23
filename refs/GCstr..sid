@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='307' type='StrID'/>
+<use f='luajit/host/buildvm_arch.h' l='1237' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='3690' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3822' u='a' c='build_ins'/>
+<offset>96</offset>
+<doc f='luajit/lj_obj.h' l='307'>/* Interned string ID. */</doc>
+<use f='luajit/lj_asm.c' l='1067' u='r' c='ir_khash'/>
+<use f='luajit/lj_serialize.c' l='204' macro='1' u='r' c='serialize_put'/>
+<use f='luajit/lj_str.c' l='293' u='w' c='lj_str_alloc'/>
+<use f='luajit/lj_tab.c' l='24' macro='1' u='r' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='399' macro='1' u='r' c='lj_tab_getstr'/>
+<use f='luajit/lj_tab.c' l='533' macro='1' u='r' c='lj_tab_setstr'/>

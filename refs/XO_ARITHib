@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='255' type='2147483902'/>
+<use f='luajit/lj_asm_x86.h' l='1363' u='r' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1881' u='r' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='2473' u='r' c='asm_comp'/>

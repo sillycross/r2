@@ -1,0 +1,11 @@
+<def f='luajit/lj_buf.h' l='78' ll='81' type='void lj_buf_reset(SBuf * sb)'/>
+<use f='luajit/lj_buf.h' l='87' u='c' c='lj_buf_tmp_'/>
+<use f='luajit/lib_string.c' l='95' u='c' c='lj_cf_string_rep'/>
+<use f='luajit/lj_bcread.c' l='423' u='c' c='lj_bcread'/>
+<use f='luajit/lj_cparse.c' l='311' u='c' c='cp_next_'/>
+<use f='luajit/lj_lex.c' l='171' u='c' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='293' u='c' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='328' u='c' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='331' u='c' c='lex_scan'/>
+<use f='luajit/lj_parse.c' l='1461' u='c' c='fs_prep_var'/>
+<use f='luajit/lj_profile.c' l='361' u='c' c='luaJIT_profile_dumpstack'/>

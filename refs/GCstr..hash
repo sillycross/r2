@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='308' type='StrHash'/>
+<offset>128</offset>
+<doc f='luajit/lj_obj.h' l='308'>/* Hash of string. */</doc>
+<use f='luajit/lj_str.c' l='152' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='174' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='181' u='w' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='181' u='r' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='193' u='w' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='247' u='r' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='250' u='w' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='284' u='w' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='333' u='r' c='lj_str_new'/>

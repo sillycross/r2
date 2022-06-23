@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ctype.h' l='89'/>
+<doc f='luajit/lj_ctype.h' l='88'>/* C type info bitfields. */</doc>
+<use f='luajit/lj_cparse.c' l='824' u='c'/>
+<use f='luajit/lj_cparse.c' l='832' u='c'/>
+<use f='luajit/lj_cparse.c' l='1676' u='c'/>
+<use f='luajit/lj_ctype.c' l='325' u='c'/>

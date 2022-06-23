@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ffrecord.h' l='20' type='int32_t lj_ffrecord_select_mode(jit_State * J, TRef tr, TValue * tv)'/>
+<def f='luajit/lj_ffrecord.c' l='295' ll='311' type='int32_t lj_ffrecord_select_mode(jit_State * J, TRef tr, TValue * tv)'/>
+<use f='luajit/lj_ffrecord.c' l='317' u='c' c='recff_select'/>
+<doc f='luajit/lj_ffrecord.c' l='294'>/* Determine mode of select() call. */</doc>
+<use f='luajit/lj_record.c' l='1850' u='c' c='rec_varg'/>

@@ -1,0 +1,5 @@
+<def f='luajit/host/buildvm_arch.h' l='11' ll='170' type='const char *const [158]'/>
+<use f='luajit/host/buildvm.c' l='181' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='223' u='r' c='build_code'/>
+<use f='luajit/host/buildvm.c' l='232' u='r' c='build_code'/>
+<doc f='luajit/host/buildvm_arch.h' l='10'>//|.globalnames globnames</doc>

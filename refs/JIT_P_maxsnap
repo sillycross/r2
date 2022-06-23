@@ -1,0 +1,3 @@
+<dec f='luajit/lj_jit.h' l='138' macro='1' type='4'/>
+<use f='luajit/lj_ffrecord.c' l='111' u='r' c='recff_stitch'/>
+<use f='luajit/lj_snap.c' l='40' u='r' c='lj_snap_grow_buf_'/>

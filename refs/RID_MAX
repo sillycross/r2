@@ -1,0 +1,8 @@
+<dec f='luajit/lj_target_x86.h' l='32' type='32'/>
+<use f='luajit/lj_target_x86.h' l='33'/>
+<use f='luajit/lj_target_x86.h' l='34' u='r'/>
+<use f='luajit/lj_target_x86.h' l='60'/>
+<use f='luajit/lj_asm.c' l='41'/>
+<use f='luajit/lj_asm.c' l='99'/>
+<use f='luajit/lj_asm.c' l='321' u='r' c='ra_setup'/>
+<use f='luajit/lj_asm.c' l='1871' c='asm_head_side'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_errmsg.h' l='100' macro='1' type='1908'/>
+<use f='luajit/lj_errmsg.h' l='100' macro='1' u='r'/>
+<use f='luajit/lj_strfmt.c' l='384' u='r' c='lj_strfmt_putarg'/>

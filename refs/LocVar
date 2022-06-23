@@ -1,0 +1,7 @@
+<use f='luajit/host/minilua.c' l='297'/>
+<def f='luajit/host/minilua.c' l='314' ll='318'/>
+<use f='luajit/host/minilua.c' l='314'/>
+<use f='luajit/host/minilua.c' l='918' c='luaF_freeproto'/>
+<use f='luajit/host/minilua.c' l='918' c='luaF_freeproto'/>
+<use f='luajit/host/minilua.c' l='918' c='luaF_freeproto'/>
+<size>16</size>

@@ -1,0 +1,3 @@
+<dec f='include/fcntl.h' l='160' type='int open(const char * __file, int __oflag)'/>
+<dec f='include/fcntl.h' l='167' type='int open64(const char * __file, int __oflag)'/>
+<use f='luajit/lj_prng.c' l='221' u='c' c='lj_prng_seed_secure'/>

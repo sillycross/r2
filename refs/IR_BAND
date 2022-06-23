@@ -1,0 +1,20 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='33'/>
+<use f='luajit/lj_asm_x86.h' l='2414' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm.c' l='1743' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='767' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='778' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='791' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='792' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='826' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1846' u='r' c='recff_bit64_shift'/>
+<use f='luajit/lj_crecord.c' l='1883' u='r' c='recff_bit64_tohex'/>
+<use f='luajit/lj_crecord.c' l='1888' u='r' c='recff_bit64_tohex'/>
+<use f='luajit/lj_ffrecord.c' l='700' u='r' c='recff_bit_shift'/>
+<use f='luajit/lj_recdef.h' l='76' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='275' c='kfold_intop'/>
+<use f='luajit/lj_opt_fold.c' l='380' c='kfold_int64arith'/>
+<use f='luajit/lj_opt_fold.c' l='1462' u='r' c='fold_simplify_intmod_k'/>
+<use f='luajit/lj_opt_fold.c' l='1707' u='r' c='fold_simplify_shiftk_andk'/>
+<use f='luajit/lj_opt_fold.c' l='1743' u='r' c='fold_simplify_andor_k'/>
+<use f='luajit/lj_opt_fold.c' l='1763' u='r' c='fold_simplify_andor_k64'/>
+<use f='luajit/lj_opt_fold.c' l='2105' u='r' c='fold_merge_eqne_snew_kgc'/>

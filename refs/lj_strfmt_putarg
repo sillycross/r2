@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strfmt.h' l='111' type='int lj_strfmt_putarg(lua_State * L, SBuf * sb, int arg, int retry)'/>
+<use f='luajit/lib_buffer.c' l='152' u='c' c='lj_cf_buffer_method_putf'/>
+<use f='luajit/lib_string.c' l='649' u='c' c='lj_cf_string_format'/>
+<def f='luajit/lj_strfmt.c' l='373' ll='478' type='int lj_strfmt_putarg(lua_State * L, SBuf * sb, int arg, int retry)'/>
+<doc f='luajit/lj_strfmt.c' l='372'>/* Format stack arguments to buffer. */</doc>

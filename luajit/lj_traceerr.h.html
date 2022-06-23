@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_traceerr.h source code [luajit/lj_traceerr.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_traceerr.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_traceerr.h.html'>lj_traceerr.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Trace compiler error messages.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><i>/* This file may be included multiple times with different TREDEF macros. */</i></td></tr>
+<tr><th id="7">7</th><td></td></tr>
+<tr><th id="8">8</th><td><i>/* Recording. */</i></td></tr>
+<tr><th id="9">9</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;error thrown or hook called during recording&quot;," data-ref="_M/TREDEF">TREDEF</a>(RECERR,	<q>"error thrown or hook called during recording"</q>)</td></tr>
+<tr><th id="10">10</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;trace too short&quot;," data-ref="_M/TREDEF">TREDEF</a>(TRACEUV,	<q>"trace too short"</q>)</td></tr>
+<tr><th id="11">11</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;trace too long&quot;," data-ref="_M/TREDEF">TREDEF</a>(TRACEOV,	<q>"trace too long"</q>)</td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;trace too deep&quot;," data-ref="_M/TREDEF">TREDEF</a>(STACKOV,	<q>"trace too deep"</q>)</td></tr>
+<tr><th id="13">13</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;too many snapshots&quot;," data-ref="_M/TREDEF">TREDEF</a>(SNAPOV,	<q>"too many snapshots"</q>)</td></tr>
+<tr><th id="14">14</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;blacklisted&quot;," data-ref="_M/TREDEF">TREDEF</a>(BLACKL,	<q>"blacklisted"</q>)</td></tr>
+<tr><th id="15">15</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;retry recording&quot;," data-ref="_M/TREDEF">TREDEF</a>(RETRY,	<q>"retry recording"</q>)</td></tr>
+<tr><th id="16">16</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: bytecode %d&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYIBC,	<q>"NYI: bytecode %d"</q>)</td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><i>/* Recording loop ops. */</i></td></tr>
+<tr><th id="19">19</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;leaving loop in root trace&quot;," data-ref="_M/TREDEF">TREDEF</a>(LLEAVE,	<q>"leaving loop in root trace"</q>)</td></tr>
+<tr><th id="20">20</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;inner loop in root trace&quot;," data-ref="_M/TREDEF">TREDEF</a>(LINNER,	<q>"inner loop in root trace"</q>)</td></tr>
+<tr><th id="21">21</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;loop unroll limit reached&quot;," data-ref="_M/TREDEF">TREDEF</a>(LUNROLL,	<q>"loop unroll limit reached"</q>)</td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><i>/* Recording calls/returns. */</i></td></tr>
+<tr><th id="24">24</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;bad argument type&quot;," data-ref="_M/TREDEF">TREDEF</a>(BADTYPE,	<q>"bad argument type"</q>)</td></tr>
+<tr><th id="25">25</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;JIT compilation disabled for function&quot;," data-ref="_M/TREDEF">TREDEF</a>(CJITOFF,	<q>"JIT compilation disabled for function"</q>)</td></tr>
+<tr><th id="26">26</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;call unroll limit reached&quot;," data-ref="_M/TREDEF">TREDEF</a>(CUNROLL,	<q>"call unroll limit reached"</q>)</td></tr>
+<tr><th id="27">27</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;down-recursion, restarting&quot;," data-ref="_M/TREDEF">TREDEF</a>(DOWNREC,	<q>"down-recursion, restarting"</q>)</td></tr>
+<tr><th id="28">28</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: unsupported variant of FastFunc %s&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYIFFU,	<q>"NYI: unsupported variant of FastFunc %s"</q>)</td></tr>
+<tr><th id="29">29</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: return to lower frame&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYIRETL,	<q>"NYI: return to lower frame"</q>)</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><i>/* Recording indexed load/store. */</i></td></tr>
+<tr><th id="32">32</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;store with nil or NaN key&quot;," data-ref="_M/TREDEF">TREDEF</a>(STORENN,	<q>"store with nil or NaN key"</q>)</td></tr>
+<tr><th id="33">33</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;missing metamethod&quot;," data-ref="_M/TREDEF">TREDEF</a>(NOMM,	<q>"missing metamethod"</q>)</td></tr>
+<tr><th id="34">34</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;looping index lookup&quot;," data-ref="_M/TREDEF">TREDEF</a>(IDXLOOP,	<q>"looping index lookup"</q>)</td></tr>
+<tr><th id="35">35</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: mixed sparse/dense table&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYITMIX,	<q>"NYI: mixed sparse/dense table"</q>)</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i>/* Recording C data operations. */</i></td></tr>
+<tr><th id="38">38</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;symbol not in cache&quot;," data-ref="_M/TREDEF">TREDEF</a>(NOCACHE,	<q>"symbol not in cache"</q>)</td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: unsupported C type conversion&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYICONV,	<q>"NYI: unsupported C type conversion"</q>)</td></tr>
+<tr><th id="40">40</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: unsupported C function type&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYICALL,	<q>"NYI: unsupported C function type"</q>)</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><i>/* Optimizations. */</i></td></tr>
+<tr><th id="43">43</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;guard would always fail&quot;," data-ref="_M/TREDEF">TREDEF</a>(GFAIL,	<q>"guard would always fail"</q>)</td></tr>
+<tr><th id="44">44</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;too many PHIs&quot;," data-ref="_M/TREDEF">TREDEF</a>(PHIOV,	<q>"too many PHIs"</q>)</td></tr>
+<tr><th id="45">45</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;persistent type instability&quot;," data-ref="_M/TREDEF">TREDEF</a>(TYPEINS,	<q>"persistent type instability"</q>)</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><i>/* Assembler. */</i></td></tr>
+<tr><th id="48">48</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;failed to allocate mcode memory&quot;," data-ref="_M/TREDEF">TREDEF</a>(MCODEAL,	<q>"failed to allocate mcode memory"</q>)</td></tr>
+<tr><th id="49">49</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;machine code too long&quot;," data-ref="_M/TREDEF">TREDEF</a>(MCODEOV,	<q>"machine code too long"</q>)</td></tr>
+<tr><th id="50">50</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;hit mcode limit (retrying)&quot;," data-ref="_M/TREDEF">TREDEF</a>(MCODELM,	<q>"hit mcode limit (retrying)"</q>)</td></tr>
+<tr><th id="51">51</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;too many spill slots&quot;," data-ref="_M/TREDEF">TREDEF</a>(SPILLOV,	<q>"too many spill slots"</q>)</td></tr>
+<tr><th id="52">52</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;inconsistent register allocation&quot;," data-ref="_M/TREDEF">TREDEF</a>(BADRA,	<q>"inconsistent register allocation"</q>)</td></tr>
+<tr><th id="53">53</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: cannot assemble IR instruction %d&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYIIR,	<q>"NYI: cannot assemble IR instruction %d"</q>)</td></tr>
+<tr><th id="54">54</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: PHI shuffling too complex&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYIPHI,	<q>"NYI: PHI shuffling too complex"</q>)</td></tr>
+<tr><th id="55">55</th><td><a class="macro" href="host/buildvm.c.html#289" title="&quot;NYI: register coalescing too complex&quot;," data-ref="_M/TREDEF">TREDEF</a>(NYICOAL,	<q>"NYI: register coalescing too complex"</q>)</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><u>#undef <a class="macro" href="host/buildvm.c.html#289" data-ref="_M/TREDEF">TREDEF</a></u></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><i>/* Detecting unused error messages:</i></td></tr>
+<tr><th id="60">60</th><td><i>   awk -F, '/^TREDEF/ { gsub(/TREDEF./, ""); printf "grep -q LJ_TRERR_%s *.[ch] || echo %s\n", $1, $1}' lj_traceerr.h | sh</i></td></tr>
+<tr><th id="61">61</th><td><i>*/</i></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

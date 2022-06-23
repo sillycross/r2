@@ -1,0 +1,2 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='276'/>
+<use f='luajit/lj_parse.c' l='2006' c='expr_simple'/>

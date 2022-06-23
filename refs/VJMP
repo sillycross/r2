@@ -1,0 +1,15 @@
+<dec f='luajit/host/minilua.c' l='120' type='10'/>
+<use f='luajit/host/minilua.c' l='3280' u='r' c='exp2reg'/>
+<use f='luajit/host/minilua.c' l='3287' u='r' c='exp2reg'/>
+<use f='luajit/host/minilua.c' l='3412' c='luaK_goiftrue'/>
+<use f='luajit/host/minilua.c' l='3434' c='luaK_goiffalse'/>
+<use f='luajit/host/minilua.c' l='3458' c='codenot'/>
+<use f='luajit/host/minilua.c' l='3536' u='r' c='codecomp'/>
+<dec f='luajit/lj_parse.c' l='48' type='10'/>
+<use f='luajit/lj_parse.c' l='567' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='572' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='743' u='r' c='bcemit_branch_t'/>
+<use f='luajit/lj_parse.c' l='761' u='r' c='bcemit_branch_f'/>
+<use f='luajit/lj_parse.c' l='878' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='950' u='r' c='bcemit_unop'/>
+<doc f='luajit/lj_parse.c' l='48'>/* info = instruction PC */</doc>

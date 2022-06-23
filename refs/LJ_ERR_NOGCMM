@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='59' macro='1' type='897'/>
+<use f='luajit/lj_errmsg.h' l='59' macro='1' u='r'/>
+<use f='luajit/lj_api.c' l='1047' u='r' c='lua_setmetatable'/>
+<use f='luajit/lj_dispatch.c' l='246' u='r' c='luaJIT_setmode'/>

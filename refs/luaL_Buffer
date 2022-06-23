@@ -1,0 +1,15 @@
+<def f='luajit/host/minilua.c' l='5862' ll='5867'/>
+<use f='luajit/host/minilua.c' l='5862'/>
+<size>8216</size>
+<def f='luajit/lauxlib.h' l='135' ll='140'/>
+<use f='luajit/lauxlib.h' l='135'/>
+<size>8216</size>
+<doc f='luajit/lauxlib.h' l='127'>/*
+** {======================================================
+** Generic Buffer manipulation
+** =======================================================
+*/</doc>
+<mbr r='luaL_Buffer::p' o='0' t='char *'/>
+<mbr r='luaL_Buffer::lvl' o='64' t='int'/>
+<mbr r='luaL_Buffer::L' o='128' t='lua_State *'/>
+<mbr r='luaL_Buffer::buffer' o='192' t='char [8192]'/>

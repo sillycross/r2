@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm.h' l='41'/>
+<use f='luajit/host/buildvm.h' l='48' u='c'/>
+<use f='luajit/host/buildvm.c' l='365' u='c'/>
+<doc f='luajit/host/buildvm.h' l='40'>/* Build modes. */</doc>

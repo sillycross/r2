@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ircall.h' l='254' macro='1' type='10'/>
+<use f='luajit/lj_crecord.c' l='1892' u='r' c='recff_bit64_tohex'/>
+<use f='luajit/lj_ffrecord.c' l='972' u='r' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='986' u='r' c='recff_string_format'/>
+<use f='luajit/lj_opt_fold.c' l='713' c='fold_bufput_kfold_fmt'/>

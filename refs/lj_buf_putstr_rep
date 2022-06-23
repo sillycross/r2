@@ -1,0 +1,5 @@
+<dec f='luajit/lj_buf.h' l='173' type='SBuf * lj_buf_putstr_rep(SBuf * sb, GCstr * s, int32_t rep)'/>
+<use f='luajit/lib_string.c' l='100' u='c' c='lj_cf_string_rep'/>
+<def f='luajit/lj_buf.c' l='187' ll='209' type='SBuf * lj_buf_putstr_rep(SBuf * sb, GCstr * s, int32_t rep)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_opt_fold.c' l='688' u='c' c='fold_bufput_kfold_rep'/>

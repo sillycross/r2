@@ -1,0 +1,14 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='79'/>
+<use f='luajit/lj_bc.h' l='219' u='r' c='lj_assert_43'/>
+<use f='luajit/lj_bc.h' l='220' u='r' c='lj_assert_45'/>
+<use f='luajit/host/buildvm_arch.h' l='4292' c='build_ins'/>
+<use f='luajit/lj_bcwrite.c' l='230' u='r' c='bcwrite_bytecode'/>
+<use f='luajit/lj_dispatch.c' l='69' u='w' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='126' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='139' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='166' u='w' c='lj_dispatch_update'/>
+<use f='luajit/lj_parse.c' l='2504' u='r' c='parse_for_num'/>
+<use f='luajit/lj_record.c' l='2424' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2527' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2649' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='485' c='trace_stop'/>

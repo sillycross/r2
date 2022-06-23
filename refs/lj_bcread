@@ -1,0 +1,4 @@
+<dec f='luajit/lj_bcdump.h' l='66' type='GCproto * lj_bcread(LexState * ls)'/>
+<def f='luajit/lj_bcread.c' l='418' ll='452' type='GCproto * lj_bcread(LexState * ls)'/>
+<doc f='luajit/lj_bcread.c' l='417'>/* Read a bytecode dump. */</doc>
+<use f='luajit/lj_load.c' l='41' u='c' c='cpparser'/>

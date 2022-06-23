@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='652' type='GCRef'/>
+<offset>2944</offset>
+<doc f='luajit/lj_obj.h' l='652'>/* Currently executing lua_State. */</doc>
+<use f='luajit/lj_asm.c' l='362' u='a' c='ra_rematk'/>
+<use f='luajit/lj_asm_x86.h' l='2685' u='a' c='asm_stack_check'/>
+<use f='luajit/lj_dispatch.c' l='371' u='m' c='callhook'/>
+<use f='luajit/lj_dispatch.c' l='548' u='m' c='lj_dispatch_profile'/>
+<use f='luajit/lj_gc.c' l='763' u='m' c='lj_gc_step_jit'/>
+<use f='luajit/lj_state.c' l='98' u='m' c='lj_state_shrinkstack'/>
+<use f='luajit/lj_state.c' l='284' u='m' c='lua_close'/>
+<use f='luajit/lj_state.c' l='328' u='m' c='lj_state_free'/>
+<use f='luajit/lj_state.c' l='329' u='m' c='lj_state_free'/>

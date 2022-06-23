@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_state.c' l='223' u='w' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='310' u='w' c='lj_state_new'/>

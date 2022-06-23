@@ -1,0 +1,9 @@
+<def f='luajit/lj_cdata.h' l='16' ll='24' type='void * cdata_getptr(void * p, CTSize sz)'/>
+<doc f='luajit/lj_cdata.h' l='15'>/* Get C data pointer. */</doc>
+<use f='luajit/lib_ffi.c' l='311' u='c' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lj_carith.c' l='44' u='c' c='carith_checkarg'/>
+<use f='luajit/lj_ccall.c' l='1163' u='c' c='lj_ccall_func'/>
+<use f='luajit/lj_cconv.c' l='346' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cdata.c' l='148' u='c' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='201' u='c' c='lj_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1239' u='c' c='crec_call'/>

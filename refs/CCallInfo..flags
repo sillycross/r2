@@ -1,0 +1,19 @@
+<dec f='luajit/lj_ircall.h' l='16' type='uint32_t'/>
+<offset>64</offset>
+<doc f='luajit/lj_ircall.h' l='16'>/* Number of arguments and flags. */</doc>
+<use f='luajit/lj_asm.c' l='1325' macro='1' u='r' c='asm_collectargs'/>
+<use f='luajit/lj_asm.c' l='1328' u='r' c='asm_collectargs'/>
+<use f='luajit/lj_asm_x86.h' l='513' macro='1' u='r' c='asm_count_call_slots'/>
+<use f='luajit/lj_asm_x86.h' l='546' macro='1' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='566' u='r' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='655' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='666' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='702' u='r' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='736' u='w' c='asm_callx'/>
+<use f='luajit/lj_asm.c' l='2198' u='w' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2208' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_ir.c' l='134' macro='1' u='r' c='lj_ir_call'/>
+<use f='luajit/lj_ir.c' l='138' u='r' c='lj_ir_call'/>
+<use f='luajit/lj_ir.c' l='144' macro='1' u='r' c='lj_ir_call'/>
+<use f='luajit/lj_ir.c' l='146' macro='1' u='r' c='lj_ir_call'/>
+<use f='luajit/lj_opt_fold.c' l='219' macro='1' u='r' c='fold_kfold_fpcall1'/>

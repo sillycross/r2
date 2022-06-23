@@ -1,0 +1,12 @@
+<def f='luajit/lj_ctype.h' l='162' ll='171'/>
+<use f='luajit/lj_ctype.h' l='162'/>
+<size>168</size>
+<doc f='luajit/lj_ctype.h' l='160'>/* C callback state. Defined here, to avoid dragging in lj_ccall.h. */</doc>
+<mbr r='CCallback::fpr' o='0' t='FPRCBArg [8]'/>
+<mbr r='CCallback::gpr' o='512' t='intptr_t [8]'/>
+<mbr r='CCallback::stack' o='1024' t='intptr_t *'/>
+<mbr r='CCallback::mcode' o='1088' t='void *'/>
+<mbr r='CCallback::cbid' o='1152' t='CTypeID1 *'/>
+<mbr r='CCallback::sizeid' o='1216' t='MSize'/>
+<mbr r='CCallback::topid' o='1248' t='MSize'/>
+<mbr r='CCallback::slot' o='1280' t='MSize'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='603' type='GCRef'/>
+<offset>448</offset>
+<doc f='luajit/lj_obj.h' l='603'>/* List of weak tables (to be cleared). */</doc>
+<use f='luajit/lj_gc.c' l='103' u='m' c='gc_mark_start'/>
+<use f='luajit/lj_gc.c' l='194' u='m' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='195' u='m' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='622' u='m' c='atomic'/>
+<use f='luajit/lj_gc.c' l='623' u='m' c='atomic'/>
+<use f='luajit/lj_gc.c' l='639' u='m' c='atomic'/>
+<use f='luajit/lj_gc.c' l='783' u='m' c='lj_gc_fullgc'/>

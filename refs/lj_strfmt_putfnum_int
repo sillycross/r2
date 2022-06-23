@@ -1,0 +1,5 @@
+<dec f='luajit/lj_strfmt.h' l='104' type='SBuf * lj_strfmt_putfnum_int(SBuf * sb, SFormat sf, lua_Number n)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_strfmt.c' l='352' ll='359' type='SBuf * lj_strfmt_putfnum_int(SBuf * sb, SFormat sf, lua_Number n)'/>
+<use f='luajit/lj_strfmt.c' l='409' u='c' c='lj_strfmt_putarg'/>
+<doc f='luajit/lj_strfmt.c' l='351'>/* Add number formatted as signed integer to buffer. */</doc>

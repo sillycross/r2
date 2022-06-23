@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='14'/>
+<use f='luajit/lj_crecord.c' l='624' u='r' c='crec_ct_tv'/>

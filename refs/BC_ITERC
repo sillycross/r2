@@ -1,0 +1,11 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='69'/>
+<use f='luajit/host/buildvm_arch.h' l='4045' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4137' c='build_ins'/>
+<use f='luajit/lj_debug.c' l='311' u='r' c='lj_debug_funcname'/>
+<use f='luajit/lj_parse.c' l='2577' u='r' c='parse_for_iter'/>
+<use f='luajit/lj_record.c' l='2365' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2564' c='rec_setup_root'/>
+<use f='luajit/lj_record.c' l='2651' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='283' u='r' c='snap_usedef'/>
+<use f='luajit/lj_trace.c' l='465' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='520' c='trace_stop'/>

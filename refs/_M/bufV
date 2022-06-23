@@ -1,0 +1,9 @@
+<dec f='luajit/lj_buf.h' l='64'/>
+<use f='luajit/lib_base.c' l='415' u='c'/>
+<use f='luajit/lib_buffer.c' l='39' u='c'/>
+<use f='luajit/lib_buffer.c' l='128' u='c'/>
+<use f='luajit/lj_meta.c' l='281' u='c'/>
+<use f='luajit/lj_meta.c' l='285' u='c'/>
+<use f='luajit/lj_meta.c' l='296' u='c'/>
+<use f='luajit/lj_strfmt.c' l='171' u='c'/>
+<use f='luajit/lj_strfmt.c' l='451' u='c'/>

@@ -1,0 +1,25 @@
+<dec f='luajit/lj_jit.h' l='266' type='BCIns'/>
+<offset>640</offset>
+<doc f='luajit/lj_jit.h' l='266'>/* Original bytecode of starting instruction. */</doc>
+<use f='luajit/lj_asm.c' l='2068' u='a' c='asm_tail_link'/>
+<use f='luajit/lj_bcwrite.c' l='233' u='a' c='bcwrite_bytecode'/>
+<use f='luajit/lj_record.c' l='841' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='884' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1770' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2435' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2438' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2442' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2621' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2643' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2649' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2651' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='203' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='211' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='212' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='220' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='227' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='232' u='r' c='trace_unpatch'/>
+<use f='luajit/lj_trace.c' l='478' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='486' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='578' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='901' u='a' c='lj_trace_exit'/>

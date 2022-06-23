@@ -1,0 +1,9 @@
+<dec f='luajit/lj_gc.h' l='27'/>
+<use f='luajit/host/buildvm_arch.h' l='3456' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3492' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1860' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1903' u='c'/>
+<use f='luajit/lj_gc.c' l='410' u='c'/>
+<use f='luajit/lj_gc.c' l='438' u='c'/>
+<use f='luajit/lj_gc.c' l='605' u='c'/>
+<use f='luajit/lj_str.c' l='235' u='c'/>

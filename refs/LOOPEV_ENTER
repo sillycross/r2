@@ -1,0 +1,6 @@
+<dec f='luajit/lj_record.c' l='268' type='2'/>
+<use f='luajit/lj_record.c' l='400' u='r' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='406' u='r' c='rec_for_iter'/>
+<use f='luajit/lj_record.c' l='565' u='r' c='rec_iterl'/>
+<use f='luajit/lj_record.c' l='578' u='r' c='rec_loop'/>
+<doc f='luajit/lj_record.c' l='268'>/* Loop is entered. */</doc>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ctype.h' l='127' type='2'/>
+<doc f='luajit/lj_ctype.h' l='127'>/* Alignment override. */</doc>
+<use f='luajit/lj_cparse.c' l='800' u='r' c='cp_push_attributes'/>
+<use f='luajit/lj_cparse.c' l='895' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_ctype.c' l='321' u='r' c='lj_ctype_info'/>

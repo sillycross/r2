@@ -1,0 +1,5 @@
+<dec f='luajit/lj_alloc.h' l='15' type='void * lj_alloc_f(void * msp, void * ptr, size_t osize, size_t nsize)'/>
+<def f='luajit/lj_alloc.c' l='1473' ll='1483' type='void * lj_alloc_f(void * msp, void * ptr, size_t osize, size_t nsize)'/>
+<use f='luajit/lj_state.c' l='188' u='r' c='close_state'/>
+<use f='luajit/lj_state.c' l='215' u='r' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='234' u='r' c='lua_newstate'/>

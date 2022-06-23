@@ -1,0 +1,4 @@
+<dec f='luajit/lj_snap.h' l='19' type='const BCIns * lj_snap_restore(jit_State * J, void * exptr)'/>
+<def f='luajit/lj_snap.c' l='869' ll='951' type='const BCIns * lj_snap_restore(jit_State * J, void * exptr)'/>
+<doc f='luajit/lj_snap.c' l='868'>/* Restore interpreter state from exit state with the help of a snapshot. */</doc>
+<use f='luajit/lj_trace.c' l='795' u='c' c='trace_exit_cp'/>

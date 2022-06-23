@@ -1,0 +1,2 @@
+<dec f='include/x86_64-linux-gnu/bits/sigaction.h' l='36'/>
+<use f='luajit/lj_profile.c' l='189' u='c'/>

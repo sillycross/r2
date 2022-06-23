@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ctype.h' l='170' type='MSize'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<offset>1280</offset>
+<doc f='luajit/lj_ctype.h' l='170'>/* Current callback slot. */</doc>
+<use f='luajit/lj_ccall.c' l='1166' u='w' c='lj_ccall_func'/>
+<use f='luajit/lj_ccall.c' l='1168' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccallback.c' l='528' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='720' u='w' c='lj_ccallback_leave'/>

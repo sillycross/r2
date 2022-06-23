@@ -1,0 +1,22 @@
+<dec f='luajit/lj_lib.h' l='93' type='void lj_lib_register(lua_State * L, const char * libname, const uint8_t * init, const lua_CFunction * cf)'/>
+<use f='luajit/lib_base.c' l='691' macro='1' u='c' c='luaopen_base'/>
+<use f='luajit/lib_base.c' l='692' macro='1' u='c' c='luaopen_base'/>
+<use f='luajit/lib_bit.c' l='177' macro='1' u='c' c='luaopen_bit'/>
+<use f='luajit/lib_buffer.c' l='351' macro='1' u='c' c='luaopen_string_buffer'/>
+<use f='luajit/lib_buffer.c' l='354' macro='1' u='c' c='luaopen_string_buffer'/>
+<use f='luajit/lib_debug.c' l='403' macro='1' u='c' c='luaopen_debug'/>
+<use f='luajit/lib_ffi.c' l='853' macro='1' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_ffi.c' l='856' macro='1' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_ffi.c' l='857' macro='1' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_ffi.c' l='864' macro='1' u='c' c='luaopen_ffi'/>
+<use f='luajit/lib_io.c' l='534' macro='1' u='c' c='luaopen_io'/>
+<use f='luajit/lib_io.c' l='537' macro='1' u='c' c='luaopen_io'/>
+<use f='luajit/lib_jit.c' l='437' macro='1' u='c' c='luaopen_jit_util'/>
+<use f='luajit/lib_jit.c' l='630' macro='1' u='c' c='luaopen_jit_profile'/>
+<use f='luajit/lib_jit.c' l='747' macro='1' u='c' c='luaopen_jit'/>
+<use f='luajit/lib_jit.c' l='756' macro='1' u='c' c='luaopen_jit'/>
+<use f='luajit/lib_math.c' l='198' macro='1' u='c' c='luaopen_math'/>
+<use f='luajit/lib_os.c' l='289' macro='1' u='c' c='luaopen_os'/>
+<use f='luajit/lib_string.c' l='664' macro='1' u='c' c='luaopen_string'/>
+<use f='luajit/lib_table.c' l='318' macro='1' u='c' c='luaopen_table'/>
+<def f='luajit/lj_lib.c' l='74' ll='152' type='void lj_lib_register(lua_State * L, const char * libname, const uint8_t * p, const lua_CFunction * cf)'/>

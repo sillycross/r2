@@ -1,0 +1,7 @@
+<dec f='luajit/lj_errmsg.h' l='44' macro='1' type='551'/>
+<use f='luajit/lj_errmsg.h' l='44' macro='1' u='r'/>
+<use f='luajit/lib_ffi.c' l='84' u='r' c='ffi_checkptr'/>
+<use f='luajit/lib_ffi.c' l='96' u='r' c='ffi_checkint'/>
+<use f='luajit/lj_api.c' l='249' u='r' c='luaL_checkany'/>
+<use f='luajit/lj_lib.c' l='191' u='r' c='lj_lib_checkany'/>
+<use f='luajit/lj_strfmt.c' l='389' u='r' c='lj_strfmt_putarg'/>

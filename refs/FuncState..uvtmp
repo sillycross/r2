@@ -1,0 +1,5 @@
+<dec f='luajit/lj_parse.c' l='145' type='VarIndex [60]'/>
+<use f='luajit/lj_parse.c' l='1116' u='w' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1411' u='r' c='fs_fixup_uv1'/>
+<offset>4896</offset>
+<doc f='luajit/lj_parse.c' l='145'>/* Temporary upvalue map. */</doc>

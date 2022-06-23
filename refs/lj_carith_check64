@@ -1,0 +1,12 @@
+<dec f='luajit/lj_carith.h' l='23' type='uint64_t lj_carith_check64(lua_State * L, int narg, CTypeID * id)'/>
+<use f='luajit/lib_bit.c' l='59' u='c' c='lj_ffh_bit_tobit'/>
+<use f='luajit/lib_bit.c' l='71' u='c' c='lj_ffh_bit_bnot'/>
+<use f='luajit/lib_bit.c' l='83' u='c' c='lj_ffh_bit_bswap'/>
+<use f='luajit/lib_bit.c' l='95' u='c' c='lj_ffh_bit_lshift'/>
+<use f='luajit/lib_bit.c' l='96' u='c' c='lj_ffh_bit_lshift'/>
+<use f='luajit/lib_bit.c' l='120' u='c' c='lj_ffh_bit_band'/>
+<use f='luajit/lib_bit.c' l='149' u='c' c='lj_cf_bit_tohex'/>
+<use f='luajit/lib_bit.c' l='151' u='c' c='lj_cf_bit_tohex'/>
+<def f='luajit/lj_carith.c' l='314' ll='352' type='uint64_t lj_carith_check64(lua_State * L, int narg, CTypeID * id)'/>
+<doc f='luajit/lj_carith.c' l='313'>/* Equivalent to lj_lib_checkbit(), but handles cdata. */</doc>
+<use f='luajit/lj_crecord.c' l='1869' u='c' c='recff_bit64_tohex'/>

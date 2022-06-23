@@ -1,0 +1,12 @@
+<dec f='luajit/lj_strfmt.h' l='123' type='const char * lj_strfmt_pushvf(lua_State * L, const char * fmt, struct __va_list_tag * argp)'/>
+<use f='luajit/lj_api.c' l='675' u='c' c='lua_pushvfstring'/>
+<use f='luajit/lj_api.c' l='684' u='c' c='lua_pushfstring'/>
+<use f='luajit/lj_cparse.c' l='144' u='c' c='cp_errmsg'/>
+<use f='luajit/lj_err.c' l='871' u='c' c='err_msgv'/>
+<use f='luajit/lj_err.c' l='890' u='c' c='lj_err_lex'/>
+<use f='luajit/lj_err.c' l='975' u='c' c='lj_err_callerv'/>
+<use f='luajit/lj_err.c' l='1007' u='c' c='lj_err_argv'/>
+<use f='luajit/lj_err.c' l='1087' u='c' c='luaL_error'/>
+<def f='luajit/lj_strfmt.c' l='547' ll='591' type='const char * lj_strfmt_pushvf(lua_State * L, const char * fmt, struct __va_list_tag * argp)'/>
+<use f='luajit/lj_strfmt.c' l='599' u='c' c='lj_strfmt_pushf'/>
+<doc f='luajit/lj_strfmt.c' l='546'>/* Push formatted message as a string object to Lua stack. va_list variant. */</doc>

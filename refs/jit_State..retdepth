@@ -1,0 +1,11 @@
+<dec f='luajit/lj_jit.h' l='440' type='int32_t'/>
+<offset>2048</offset>
+<doc f='luajit/lj_jit.h' l='440'>/* Return frame depth (count of RETF). */</doc>
+<use f='luajit/lj_record.c' l='297' u='r' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='600' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='634' u='r' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='893' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1695' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1774' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2594' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='678' u='r' c='trace_state'/>

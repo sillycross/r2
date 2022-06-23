@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='65' type='double lj_vm_ceil(double )'/>
+<use f='luajit/lj_vmmath.c' l='122' u='c' c='lj_vm_foldfpm'/>

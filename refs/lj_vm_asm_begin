@@ -1,0 +1,12 @@
+<dec f='luajit/lj_vm.h' l='113' type='char []'/>
+<use f='luajit/lj_dispatch.c' l='65' macro='1' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='67' macro='1' u='r' c='lj_dispatch_init'/>
+<use f='luajit/lj_dispatch.c' l='126' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='127' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='128' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='129' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='130' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='135' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='136' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='188' macro='1' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='513' macro='1' u='r' c='lj_dispatch_call'/>

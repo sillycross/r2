@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='566' type='22'/>
+<use f='luajit/lj_obj.h' l='567'/>
+<use f='luajit/lj_obj.h' l='574' u='r'/>
+<use f='luajit/lj_debug.c' l='313' u='r' c='lj_debug_funcname'/>

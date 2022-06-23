@@ -1,0 +1,25 @@
+<def f='luajit/lj_obj.h' l='369' ll='393'/>
+<use f='luajit/lj_obj.h' l='369'/>
+<size>104</size>
+<mbr r='GCproto::nextgc' o='0' t='GCRef'/>
+<mbr r='GCproto::marked' o='64' t='uint8_t'/>
+<mbr r='GCproto::gct' o='72' t='uint8_t'/>
+<mbr r='GCproto::numparams' o='80' t='uint8_t'/>
+<mbr r='GCproto::framesize' o='88' t='uint8_t'/>
+<mbr r='GCproto::sizebc' o='96' t='MSize'/>
+<mbr r='GCproto::unused_gc64' o='128' t='uint32_t'/>
+<mbr r='GCproto::gclist' o='192' t='GCRef'/>
+<mbr r='GCproto::k' o='256' t='MRef'/>
+<mbr r='GCproto::uv' o='320' t='MRef'/>
+<mbr r='GCproto::sizekgc' o='384' t='MSize'/>
+<mbr r='GCproto::sizekn' o='416' t='MSize'/>
+<mbr r='GCproto::sizept' o='448' t='MSize'/>
+<mbr r='GCproto::sizeuv' o='480' t='uint8_t'/>
+<mbr r='GCproto::flags' o='488' t='uint8_t'/>
+<mbr r='GCproto::trace' o='496' t='uint16_t'/>
+<mbr r='GCproto::chunkname' o='512' t='GCRef'/>
+<mbr r='GCproto::firstline' o='576' t='BCLine'/>
+<mbr r='GCproto::numline' o='608' t='BCLine'/>
+<mbr r='GCproto::lineinfo' o='640' t='MRef'/>
+<mbr r='GCproto::uvinfo' o='704' t='MRef'/>
+<mbr r='GCproto::varinfo' o='768' t='MRef'/>

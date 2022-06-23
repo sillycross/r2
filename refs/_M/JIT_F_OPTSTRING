@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='91'/>
+<doc f='luajit/lj_jit.h' l='90'>/* Optimizations names for -O. Must match the order above. */</doc>
+<use f='luajit/lib_jit.c' l='108' u='c'/>
+<use f='luajit/lib_jit.c' l='465' u='c'/>

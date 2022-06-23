@@ -1,0 +1,10 @@
+<dec f='luajit/lj_clib.h' l='18' type='void *'/>
+<offset>0</offset>
+<doc f='luajit/lj_clib.h' l='18'>/* Opaque handle for dynamic library loader. */</doc>
+<use f='luajit/lj_clib.c' l='136' u='r' c='clib_unloadlib'/>
+<use f='luajit/lj_clib.c' l='136' u='r' c='clib_unloadlib'/>
+<use f='luajit/lj_clib.c' l='137' u='r' c='clib_unloadlib'/>
+<use f='luajit/lj_clib.c' l='142' u='r' c='clib_getsym'/>
+<use f='luajit/lj_clib.c' l='417' u='w' c='lj_clib_load'/>
+<use f='luajit/lj_clib.c' l='424' u='w' c='lj_clib_unload'/>
+<use f='luajit/lj_clib.c' l='431' u='w' c='lj_clib_default'/>

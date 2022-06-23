@@ -1,0 +1,9 @@
+<def f='luajit/lj_lex.h' l='43' ll='49'/>
+<use f='luajit/lj_lex.h' l='43'/>
+<size>24</size>
+<doc f='luajit/lj_lex.h' l='42'>/* Info for local variables. Only used during bytecode generation. */</doc>
+<mbr r='VarInfo::name' o='0' t='GCRef'/>
+<mbr r='VarInfo::startpc' o='64' t='BCPos'/>
+<mbr r='VarInfo::endpc' o='96' t='BCPos'/>
+<mbr r='VarInfo::slot' o='128' t='uint8_t'/>
+<mbr r='VarInfo::info' o='136' t='uint8_t'/>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_ctype.h' l='469' type='CTSize lj_ctype_vlsize(CTState * cts, CType * ct, CTSize nelem)'/>
+<use f='luajit/lib_ffi.c' l='504' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='624' u='c' c='lj_cf_ffi_sizeof'/>
+<use f='luajit/lj_crecord.c' l='982' u='c' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='983' u='c' c='crec_alloc'/>
+<def f='luajit/lj_ctype.c' l='287' ll='307' type='CTSize lj_ctype_vlsize(CTState * cts, CType * ct, CTSize nelem)'/>
+<doc f='luajit/lj_ctype.c' l='286'>/* Get size for a variable-length C type. Does NOT support other C types. */</doc>

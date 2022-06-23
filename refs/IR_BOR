@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='34'/>
+<use f='luajit/lj_asm.c' l='1744' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='793' u='r' c='crec_index_bf'/>
+<use f='luajit/lj_recdef.h' l='77' u='r'/>
+<use f='luajit/lj_opt_fold.c' l='276' c='kfold_intop'/>
+<use f='luajit/lj_opt_fold.c' l='381' c='kfold_int64arith'/>

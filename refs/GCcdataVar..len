@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='354' type='MSize'/>
+<offset>32</offset>
+<doc f='luajit/lj_obj.h' l='354'>/* Size of payload. */</doc>
+<use f='luajit/lib_ffi.c' l='620' macro='1' u='r' c='lj_cf_ffi_sizeof'/>
+<use f='luajit/lj_cdata.c' l='41' u='w' c='lj_cdata_newv'/>
+<use f='luajit/lj_cdata.c' l='83' macro='1' u='r' c='lj_cdata_free'/>

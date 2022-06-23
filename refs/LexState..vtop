@@ -1,0 +1,15 @@
+<dec f='luajit/lj_lex.h' l='72' type='MSize'/>
+<offset>1248</offset>
+<doc f='luajit/lj_lex.h' l='72'>/* Top of variable stack. */</doc>
+<use f='luajit/lj_lex.c' l='406' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_parse.c' l='1050' u='r' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1063' u='w' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1159' u='r' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1172' u='w' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1231' u='r' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1266' u='r' c='gola_findlabel'/>
+<use f='luajit/lj_parse.c' l='1280' u='r' c='fscope_begin'/>
+<use f='luajit/lj_parse.c' l='1300' u='w' c='fscope_end'/>
+<use f='luajit/lj_parse.c' l='1473' u='r' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1609' u='w' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1621' u='r' c='fs_init'/>

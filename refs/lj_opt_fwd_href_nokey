@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='125' type='int lj_opt_fwd_href_nokey(jit_State * J)'/>
+<use f='luajit/lj_opt_fold.c' l='2183' u='c' c='fold_fwd_href_tnew'/>
+<use f='luajit/lj_opt_fold.c' l='2196' u='c' c='fold_fwd_href_tdup'/>
+<def f='luajit/lj_opt_mem.c' l='289' ll='314' type='int lj_opt_fwd_href_nokey(jit_State * J)'/>
+<doc f='luajit/lj_opt_mem.c' l='288'>/* Check whether HREF of TNEW/TDUP can be folded to niltv. */</doc>

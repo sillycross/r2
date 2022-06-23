@@ -1,0 +1,5 @@
+<dec f='luajit/lj_target_x86.h' l='150'/>
+<use f='luajit/lj_asm.c' l='1508' u='c'/>
+<use f='luajit/lj_asm.c' l='1522' u='c'/>
+<use f='luajit/lj_asm.c' l='1535' u='c'/>
+<use f='luajit/lj_asm.c' l='1547' u='c'/>

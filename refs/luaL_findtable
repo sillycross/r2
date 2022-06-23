@@ -1,0 +1,11 @@
+<dec f='luajit/lauxlib.h' l='76' type='const char * luaL_findtable(lua_State * L, int idx, const char * fname, int szhint)'/>
+<def f='luajit/lib_aux.c' l='81' ll='105' macro='1' type='const char * luaL_findtable(lua_State * L, int idx, const char * fname, int szhint)'/>
+<use f='luajit/lib_aux.c' l='116' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_aux.c' l='120' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_init.c' l='47' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_jit.c' l='130' u='c' c='lj_cf_jit_attach'/>
+<use f='luajit/lib_package.c' l='619' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='621' u='c' c='luaopen_package'/>
+<use f='luajit/lj_lib.c' l='34' u='c' c='lib_create_table'/>
+<use f='luajit/lj_lib.c' l='38' u='c' c='lib_create_table'/>
+<use f='luajit/lj_lib.c' l='167' u='c' c='lj_lib_prereg'/>

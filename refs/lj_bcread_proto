@@ -1,0 +1,5 @@
+<dec f='luajit/lj_bcdump.h' l='65' type='GCproto * lj_bcread_proto(LexState * ls)'/>
+<def f='luajit/lj_bcread.c' l='310' ll='386' type='GCproto * lj_bcread_proto(LexState * ls)'/>
+<use f='luajit/lj_bcread.c' l='441' u='c' c='lj_bcread'/>
+<doc f='luajit/lj_bcread.c' l='309'>/* Read a prototype. */</doc>
+<use f='luajit/lj_lib.c' l='66' u='c' c='lib_read_lfunc'/>

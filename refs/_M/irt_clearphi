@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ir.h' l='435'/>
+<use f='luajit/lj_opt_loop.c' l='115' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='200' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='401' u='c'/>

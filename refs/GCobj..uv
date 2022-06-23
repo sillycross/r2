@@ -1,0 +1,23 @@
+<dec f='luajit/lj_obj.h' l='749' type='GCupval'/>
+<offset>0</offset>
+<use f='luajit/lj_asm_x86.h' l='203' u='a' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='1354' u='m' c='asm_uref'/>
+<use f='luajit/lj_debug.c' l='234' u='a' c='lj_debug_uvnamev'/>
+<use f='luajit/lj_func.c' l='32' macro='1' u='a' c='unlinkuv'/>
+<use f='luajit/lj_func.c' l='33' macro='1' u='a' c='unlinkuv'/>
+<use f='luajit/lj_func.c' l='44' macro='1' u='a' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='64' macro='1' u='a' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='88' macro='1' u='a' c='lj_func_closeuv'/>
+<use f='luajit/lj_func.c' l='177' u='a' c='lj_func_newL_gc'/>
+<use f='luajit/lj_gc.c' l='76' macro='1' u='a' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='115' macro='1' u='a' c='gc_mark_uv'/>
+<use f='luajit/lj_gc.c' l='115' macro='1' u='a' c='gc_mark_uv'/>
+<use f='luajit/lj_gc.c' l='231' u='a' c='gc_traverse_func'/>
+<use f='luajit/lj_gc.c' l='231' u='a' c='gc_traverse_func'/>
+<use f='luajit/lj_opt_fold.c' l='2160' macro='1' u='a' c='fold_cse_uref'/>
+<use f='luajit/lj_opt_fold.c' l='2165' macro='1' u='a' c='fold_cse_uref'/>
+<use f='luajit/lj_record.c' l='1605' u='a' c='rec_upvalue'/>
+<use f='luajit/lj_snap.c' l='225' macro='1' u='a' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='226' macro='1' u='a' c='snap_usedef'/>
+<use f='luajit/lj_state.c' l='80' macro='1' u='a' c='resizestack'/>
+<use f='luajit/lj_state.c' l='80' macro='1' u='a' c='resizestack'/>

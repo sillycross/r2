@@ -1,0 +1,14 @@
+<dec f='include/ctype.h' l='192'/>
+<use f='luajit/host/minilua.c' l='2766' u='c'/>
+<use f='luajit/host/minilua.c' l='2848' u='c'/>
+<use f='luajit/host/minilua.c' l='2856' u='c'/>
+<use f='luajit/host/minilua.c' l='2943' u='c'/>
+<use f='luajit/host/minilua.c' l='2957' u='c'/>
+<use f='luajit/host/minilua.c' l='7126' u='c'/>
+<use f='luajit/host/minilua.c' l='7271' u='c'/>
+<use f='luajit/host/minilua.c' l='7447' u='c'/>
+<use f='luajit/host/minilua.c' l='7558' u='c'/>
+<use f='luajit/host/minilua.c' l='7559' u='c'/>
+<use f='luajit/host/minilua.c' l='7562' u='c'/>
+<use f='luajit/host/minilua.c' l='7563' u='c'/>
+<use f='luajit/host/minilua.c' l='7565' u='c'/>

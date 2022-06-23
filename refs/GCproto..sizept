@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='382' type='MSize'/>
+<offset>448</offset>
+<doc f='luajit/lj_obj.h' l='382'>/* Total size including colocated arrays. */</doc>
+<use f='luajit/lj_bcread.c' l='353' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='273' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_func.c' l='22' u='r' c='lj_func_freeproto'/>
+<use f='luajit/lj_gc.c' l='342' u='r' c='propagatemark'/>
+<use f='luajit/lj_parse.c' l='1589' u='w' c='fs_finish'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_clib.h' l='22' type='TValue * lj_clib_index(lua_State * L, CLibrary * cl, GCstr * name)'/>
+<use f='luajit/lib_ffi.c' l='370' u='c' c='ffi_clib_index'/>
+<def f='luajit/lj_clib.c' l='342' ll='394' type='TValue * lj_clib_index(lua_State * L, CLibrary * cl, GCstr * name)'/>
+<doc f='luajit/lj_clib.c' l='341'>/* Index a C library by name. */</doc>

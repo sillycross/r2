@@ -1,0 +1,17 @@
+<dec f='luajit/lj_bc.h' l='202' macro='1' type='65'/>
+<use f='luajit/lj_bc.h' l='216' u='r' c='lj_assert_37'/>
+<use f='luajit/host/buildvm_arch.h' l='3973' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3975' u='r' c='build_ins'/>
+<use f='luajit/lj_asm.c' l='2080' c='asm_tail_link'/>
+<use f='luajit/lj_dispatch.c' l='389' c='cur_topslot'/>
+<use f='luajit/lj_ffrecord.c' l='156' u='r' c='recff_nyi'/>
+<use f='luajit/lj_parse.c' l='1939' u='r' c='parse_args'/>
+<use f='luajit/lj_record.c' l='1786' u='r' c='select_detect'/>
+<use f='luajit/lj_record.c' l='2379' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2562' c='rec_setup_root'/>
+<use f='luajit/lj_snap.c' l='279' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='280' u='r' c='snap_usedef'/>
+<use f='luajit/lj_snap.c' l='946' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='465' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='518' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='917' c='lj_trace_exit'/>

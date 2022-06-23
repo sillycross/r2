@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='452' type='uint8_t'/>
+<offset>88</offset>
+<use f='luajit/lib_debug.c' l='232' u='r' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='250' u='r' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lj_func.c' l='129' u='w' c='func_newL'/>
+<use f='luajit/lj_func.c' l='152' u='w' c='lj_func_newL_empty'/>
+<use f='luajit/lj_func.c' l='181' u='w' c='lj_func_newL_gc'/>
+<use f='luajit/lj_func.c' l='187' u='r' c='lj_func_free'/>
+<use f='luajit/lj_gc.c' l='230' u='r' c='gc_traverse_func'/>
+<use f='luajit/lj_gc.c' l='337' u='r' c='propagatemark'/>

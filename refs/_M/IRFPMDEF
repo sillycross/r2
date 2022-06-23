@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ir.h' l='179'/>
+<use f='luajit/lj_ir.h' l='186' u='c'/>
+<use f='luajit/host/buildvm.c' l='269' u='c'/>
+<doc f='luajit/lj_ir.h' l='178'>/* FPMATH sub-functions. ORDER FPM. */</doc>

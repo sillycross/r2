@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='497'/>
+<use f='luajit/lj_crecord.c' l='613' u='c'/>

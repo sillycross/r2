@@ -1,0 +1,7 @@
+<dec f='luajit/lj_cconv.h' l='59' type='int lj_cconv_tv_ct(CTState * cts, CType * s, CTypeID sid, TValue * o, uint8_t * sp)'/>
+<use f='luajit/lib_ffi.c' l='384' u='c' c='lj_cf_ffi_clib___index'/>
+<use f='luajit/lj_ccall.c' l='1147' u='c' c='ccall_get_results'/>
+<use f='luajit/lj_ccallback.c' l='612' u='c' c='callback_conv_args'/>
+<def f='luajit/lj_cconv.c' l='380' ll='423' type='int lj_cconv_tv_ct(CTState * cts, CType * s, CTypeID sid, TValue * o, uint8_t * sp)'/>
+<doc f='luajit/lj_cconv.c' l='379'>/* Convert C type to TValue. Caveat: expects to get the raw CType! */</doc>
+<use f='luajit/lj_cdata.c' l='255' u='c' c='lj_cdata_get'/>

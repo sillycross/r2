@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ffdef.h' l='17' macro='1' type='16'/>
+<use f='luajit/lj_record.c' l='1788' u='r' c='select_detect'/>

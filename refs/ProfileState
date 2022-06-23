@@ -1,0 +1,4 @@
+<def f='luajit/lj_profile.c' l='58' ll='82'/>
+<use f='luajit/lj_profile.c' l='58'/>
+<size>224</size>
+<doc f='luajit/lj_profile.c' l='57'>/* Profiler state. */</doc>

@@ -1,0 +1,27 @@
+<dec f='luajit/lj_parse.c' l='133' type='BCReg'/>
+<use f='luajit/lj_parse.c' l='399' u='r' c='bcreg_free'/>
+<use f='luajit/lj_parse.c' l='603' u='r' c='expr_toanyreg'/>
+<use f='luajit/lj_parse.c' l='826' u='r' c='bcemit_arith'/>
+<use f='luajit/lj_parse.c' l='827' u='r' c='bcemit_arith'/>
+<use f='luajit/lj_parse.c' l='874' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='875' u='r' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='1051' u='r' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1062' u='r' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1076' u='r' c='var_add'/>
+<use f='luajit/lj_parse.c' l='1083' u='w' c='var_add'/>
+<use f='luajit/lj_parse.c' l='1090' u='r' c='var_remove'/>
+<use f='luajit/lj_parse.c' l='1091' u='w' c='var_remove'/>
+<use f='luajit/lj_parse.c' l='1098' u='r' c='var_lookup_local'/>
+<use f='luajit/lj_parse.c' l='1170' u='r' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1278' u='r' c='fscope_begin'/>
+<use f='luajit/lj_parse.c' l='1293' u='r' c='fscope_end'/>
+<use f='luajit/lj_parse.c' l='1629' u='w' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='2272' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='2350' u='r' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2350' u='r' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2353' u='r' c='parse_return'/>
+<use f='luajit/lj_parse.c' l='2436' u='r' c='parse_while'/>
+<use f='luajit/lj_parse.c' l='2455' u='r' c='parse_repeat'/>
+<use f='luajit/lj_parse.c' l='2709' u='r' c='parse_chunk'/>
+<offset>448</offset>
+<doc f='luajit/lj_parse.c' l='133'>/* Number of active local variables. */</doc>

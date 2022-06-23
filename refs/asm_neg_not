@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='2205' ll='2210' type='void asm_neg_not(ASMState * as, IRIns * ir, x86Group3 xg)'/>
+<use f='luajit/lj_asm_x86.h' l='2217' u='c' c='asm_neg'/>
+<use f='luajit/lj_asm.c' l='1741' macro='1' u='c' c='asm_ir'/>

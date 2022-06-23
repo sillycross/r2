@@ -1,0 +1,6 @@
+<dec f='include/stdio.h' l='800' type='FILE * popen(const char * __command, const char * __modes)'/>
+<doc f='include/stdio.h' l='796'>/* Create a new stream connected to a pipe running the given command.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='luajit/lib_io.c' l='421' u='c' c='lj_cf_io_popen'/>

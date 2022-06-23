@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='645' type='int32_t'/>
+<offset>2624</offset>
+<doc f='luajit/lj_obj.h' l='645'>/* Instruction hook countdown. */</doc>
+<use f='luajit/lj_dispatch.c' l='329' u='w' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='423' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='424' u='w' c='lj_dispatch_ins'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ffdef.h' l='180' macro='1' type='179'/>
+<use f='luajit/lj_err.c' l='957' u='r' c='lj_err_callermsg'/>

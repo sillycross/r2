@@ -1,0 +1,4 @@
+<dec f='luajit/lj_debug.h' l='19' type='int'/>
+<offset>352</offset>
+<use f='luajit/lib_debug.c' l='143' u='r' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='477' u='w' c='lj_debug_getinfo'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_strfmt.h' l='70'/>
+<doc f='luajit/lj_strfmt.h' l='69'>/* Maximum buffer sizes for conversions. */</doc>
+<use f='luajit/lj_strfmt.c' l='281' u='c'/>

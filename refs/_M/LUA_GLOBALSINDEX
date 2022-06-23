@@ -1,0 +1,13 @@
+<dec f='luajit/lua.h' l='38'/>
+<use f='luajit/lib_aux.c' l='120' u='c'/>
+<use f='luajit/lib_base.c' l='517' u='c'/>
+<use f='luajit/lib_package.c' l='541' u='c'/>
+<use f='luajit/lib_package.c' l='623' u='c'/>
+<use f='luajit/lj_api.c' l='43' u='c'/>
+<use f='luajit/lj_api.c' l='58' u='c'/>
+<use f='luajit/lj_api.c' l='178' u='c'/>
+<use f='luajit/lj_api.c' l='192' u='c'/>
+<use f='luajit/lj_err.c' l='1023' u='c'/>
+<use f='luajit/lj_err.c' l='1027' u='c'/>
+<use f='luajit/lj_lib.c' l='38' u='c'/>
+<use f='luajit/luajit.c' l='189' u='c'/>

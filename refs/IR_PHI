@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='19'/>
+<use f='luajit/lj_asm.c' l='1497' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='1510' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='1536' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='1725' c='asm_ir'/>
+<use f='luajit/lj_opt_loop.c' l='197' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_sink.c' l='113' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='153' u='r' c='sink_remark_phi'/>
+<use f='luajit/lj_opt_sink.c' l='201' c='sink_sweep_ins'/>

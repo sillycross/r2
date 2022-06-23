@@ -1,0 +1,17 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='28'/>
+<use f='luajit/lj_asm.c' l='352' u='r' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='757' u='r' c='ra_left'/>
+<use f='luajit/lj_asm_x86.h' l='424' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='1923' u='r' c='asm_x87load'/>
+<use f='luajit/lj_ffrecord.c' l='127' u='r' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='128' u='r' c='recff_stitch'/>
+<use f='luajit/lj_ir.c' l='222' u='r' c='lj_ir_k64'/>
+<use f='luajit/lj_ir.c' l='241' u='r' c='lj_ir_knum_u64'/>
+<use f='luajit/lj_ir.c' l='306' u='r' c='lj_ir_ktrace'/>
+<use f='luajit/lj_ir.c' l='396' c='lj_ir_kvalue'/>
+<use f='luajit/lj_opt_narrow.c' l='282' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_record.c' l='962' u='r' c='rec_mm_prep'/>
+<use f='luajit/lj_snap.c' l='79' u='r' c='snapshot_slots'/>
+<use f='luajit/lj_snap.c' l='419' c='snap_replay_const'/>
+<use f='luajit/lj_snap.c' l='611' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='720' macro='1' u='r' c='snap_restoredata'/>

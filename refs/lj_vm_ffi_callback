@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ccallback.h' l='15' type='void lj_vm_ffi_callback()'/>
+<use f='luajit/lj_ccallback.c' l='115' u='r' c='callback_mcode_init'/>

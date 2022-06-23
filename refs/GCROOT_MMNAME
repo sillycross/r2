@@ -1,0 +1,22 @@
+<dec f='luajit/lj_obj.h' l='573' type='0'/>
+<use f='luajit/lj_obj.h' l='574' u='r'/>
+<use f='luajit/host/buildvm_arch.h' l='1237' u='r' c='build_subroutines'/>
+<doc f='luajit/lj_obj.h' l='573'>/* Metamethod names. */</doc>
+<use f='luajit/lib_ffi.c' l='338' macro='1' u='r' c='ffi_pairs'/>
+<use f='luajit/lib_ffi.c' l='515' macro='1' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_string.c' l='669' macro='1' u='r' c='luaopen_string'/>
+<use f='luajit/lj_ctype.c' l='351' macro='1' u='r' c='lj_ctype_meta'/>
+<use f='luajit/lj_debug.c' l='314' macro='1' u='r' c='lj_debug_funcname'/>
+<use f='luajit/lj_gc.c' l='146' macro='1' u='r' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='177' macro='1' u='r' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='563' macro='1' u='r' c='gc_finalize'/>
+<use f='luajit/lj_meta.c' l='42' u='r' c='lj_meta_init'/>
+<use f='luajit/lj_meta.c' l='69' macro='1' u='r' c='lj_meta_lookup'/>
+<use f='luajit/lj_meta.c' l='144' macro='1' u='r' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='174' macro='1' u='r' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='332' macro='1' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' macro='1' u='r' c='lj_meta_equal'/>
+<use f='luajit/lj_record.c' l='996' macro='1' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1026' macro='1' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1398' macro='1' u='r' c='nommstr'/>
+<use f='luajit/lj_record.c' l='1493' macro='1' u='r' c='lj_record_idx'/>

@@ -1,0 +1,4 @@
+<def f='luajit/lj_jit.h' l='218' ll='227' type='const BCIns * snap_pc(SnapEntry * sn)'/>
+<use f='luajit/lj_asm.c' l='2065' u='c' c='asm_tail_link'/>
+<use f='luajit/lj_snap.c' l='332' u='c' c='lj_snap_shrink'/>
+<use f='luajit/lj_snap.c' l='885' u='c' c='lj_snap_restore'/>

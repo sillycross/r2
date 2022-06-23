@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='939'/>
+<use f='luajit/lj_api.c' l='639' u='c'/>
+<use f='luajit/lj_serialize.c' l='319' u='c'/>
+<use f='luajit/lj_strscan.c' l='385' u='c'/>
+<use f='luajit/lj_trace.c' l='817' u='c'/>

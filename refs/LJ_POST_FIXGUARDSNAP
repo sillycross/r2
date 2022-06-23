@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='164' type='3'/>
+<doc f='luajit/lj_jit.h' l='164'>/* Fixup and emit pending guard and snapshot. */</doc>
+<use f='luajit/lj_crecord.c' l='1269' u='r' c='crec_call'/>
+<use f='luajit/lj_record.c' l='2015' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2018' u='r' c='lj_record_ins'/>

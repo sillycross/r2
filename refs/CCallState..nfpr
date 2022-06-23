@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ccall.h' l='166' type='uint8_t'/>
+<use f='luajit/host/buildvm_arch.h' l='2762' u='a' c='build_subroutines'/>
+<offset>120</offset>
+<doc f='luajit/lj_ccall.h' l='166'>/* Number of arguments in FPRs. */</doc>
+<use f='luajit/lj_ccall.c' l='674' u='r' c='ccall_struct_reg'/>
+<use f='luajit/lj_ccall.c' l='687' u='w' c='ccall_struct_reg'/>
+<use f='luajit/lj_ccall.c' l='164' u='w' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='166' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1100' u='w' c='ccall_set_args'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_buf.h' l='26' type='GCRef'/>
+<use f='luajit/lj_buf.h' l='138' u='m' c='lj_bufx_reset'/>
+<use f='luajit/lj_buf.h' l='148' u='m' c='lj_bufx_free'/>
+<offset>0</offset>
+<doc f='luajit/lj_buf.h' l='26'>/* Copy-on-write object reference. */</doc>
+<use f='luajit/lib_buffer.c' l='108' u='m' c='lj_cf_buffer_method_set'/>
+<use f='luajit/lj_buf.c' l='31' u='m' c='buf_grow'/>
+<use f='luajit/lj_gc.c' l='70' u='m' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='71' u='m' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='71' u='m' c='gc_mark'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_jit.h' l='150' type='0'/>
+<doc f='luajit/lj_jit.h' l='150'>/* Trace compiler idle. */</doc>
+<use f='luajit/lj_dispatch.c' l='110' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='412' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='482' u='r' c='lj_dispatch_call'/>
+<use f='luajit/lj_dispatch.c' l='508' u='r' c='lj_dispatch_call'/>
+<use f='luajit/lj_state.c' l='289' u='r' c='lua_close'/>
+<use f='luajit/lj_trace.c' l='422' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='432' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='701' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='713' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='742' u='r' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='771' u='r' c='lj_trace_stitch'/>

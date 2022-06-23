@@ -1,0 +1,8 @@
+<dec f='luajit/lj_lib.h' l='76' type='GCfunc * lj_lib_pushcc(lua_State * L, lua_CFunction f, int id, int n)'/>
+<use f='luajit/lib_base.c' l='658' u='c' c='lj_cf_coroutine_wrap'/>
+<use f='luajit/lib_package.c' l='598' macro='1' u='c' c='luaopen_package'/>
+<use f='luajit/lib_package.c' l='604' macro='1' u='c' c='luaopen_package'/>
+<use f='luajit/lib_string.c' l='543' u='c' c='lj_cf_string_gmatch'/>
+<def f='luajit/lj_lib.c' l='155' ll='163' type='GCfunc * lj_lib_pushcc(lua_State * L, lua_CFunction f, int id, int n)'/>
+<use f='luajit/lj_lib.c' l='177' macro='1' u='c' c='lj_lib_postreg'/>
+<doc f='luajit/lj_lib.c' l='154'>/* Push internal function on the stack. */</doc>

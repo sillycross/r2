@@ -1,0 +1,18 @@
+<dec f='luajit/lj_jit.h' l='416' type='GCfunc *'/>
+<offset>1152</offset>
+<doc f='luajit/lj_jit.h' l='416'>/* Current function. */</doc>
+<use f='luajit/lj_crecord.c' l='1710' u='r' c='recff_ffi_typeof'/>
+<use f='luajit/lj_ffrecord.c' l='158' u='r' c='recff_nyi'/>
+<use f='luajit/lj_ffrecord.c' l='207' u='r' c='recff_type'/>
+<use f='luajit/lj_ffrecord.c' l='445' u='r' c='recff_xpairs'/>
+<use f='luajit/lj_ffrecord.c' l='622' u='r' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='1192' u='r' c='lj_ffrecord_func'/>
+<use f='luajit/lj_record.c' l='1605' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1615' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='2327' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_trace.c' l='458' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='538' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='664' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='728' u='w' c='lj_trace_ins'/>
+<use f='luajit/lj_trace.c' l='729' u='r' c='lj_trace_ins'/>
+<use f='luajit/lj_trace.c' l='729' u='r' c='lj_trace_ins'/>

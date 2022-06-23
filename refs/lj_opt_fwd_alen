@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='123' type='TRef lj_opt_fwd_alen(jit_State * J)'/>
+<use f='luajit/lj_folddef.h' l='130' u='r'/>
+<def f='luajit/lj_opt_mem.c' l='385' ll='443' type='TRef lj_opt_fwd_alen(jit_State * J)'/>
+<doc f='luajit/lj_opt_mem.c' l='384'>/* ALEN forwarding. */</doc>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_char.h' l='26'/>
+<use f='luajit/lib_base.c' l='297' u='c'/>
+<use f='luajit/lib_base.c' l='302' u='c'/>
+<use f='luajit/lj_lex.c' l='250' u='c'/>
+<use f='luajit/lj_strscan.c' l='381' u='c'/>
+<use f='luajit/lj_strscan.c' l='394' u='c'/>
+<use f='luajit/lj_strscan.c' l='491' u='c'/>

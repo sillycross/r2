@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='70' macro='1' type='1094'/>
+<use f='luajit/lj_errmsg.h' l='70' macro='1' u='r'/>
+<use f='luajit/lib_buffer.c' l='217' u='r' c='lj_cf_buffer_method_commit'/>
+<use f='luajit/lj_lib.c' l='350' u='r' c='lj_lib_checkintrange'/>

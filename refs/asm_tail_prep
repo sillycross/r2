@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='2917' ll='2938' type='void asm_tail_prep(ASMState * as)'/>
+<use f='luajit/lj_asm.c' l='2445' u='c' c='lj_asm_trace'/>
+<doc f='luajit/lj_asm_x86.h' l='2916'>/* Prepare tail of code. */</doc>

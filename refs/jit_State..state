@@ -1,0 +1,36 @@
+<dec f='luajit/lj_jit.h' l='434' type='TraceState'/>
+<offset>1888</offset>
+<doc f='luajit/lj_jit.h' l='434'>/* Trace compiler state. */</doc>
+<use f='luajit/lib_aux.c' l='44' macro='1' u='w' c='luaL_fileresult'/>
+<use f='luajit/lib_jit.c' l='568' macro='1' u='w' c='jit_profile_callback'/>
+<use f='luajit/lj_ccallback.c' l='689' macro='1' u='w' c='lj_ccallback_enter'/>
+<use f='luajit/lj_dispatch.c' l='110' u='r' c='lj_dispatch_update'/>
+<use f='luajit/lj_dispatch.c' l='243' macro='1' u='w' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='331' macro='1' u='w' c='lua_sethook'/>
+<use f='luajit/lj_dispatch.c' l='358' macro='1' u='w' c='callhook'/>
+<use f='luajit/lj_dispatch.c' l='412' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='482' u='r' c='lj_dispatch_call'/>
+<use f='luajit/lj_dispatch.c' l='508' u='r' c='lj_dispatch_call'/>
+<use f='luajit/lj_err.c' l='737' macro='1' u='w' c='lj_err_throw'/>
+<use f='luajit/lj_err.c' l='839' macro='1' u='w' c='lj_err_run'/>
+<use f='luajit/lj_gc.c' l='509' macro='1' u='w' c='gc_call_finalizer'/>
+<use f='luajit/lj_record.c' l='293' macro='1' u='w' c='lj_record_stop'/>
+<use f='luajit/lj_state.c' l='289' u='w' c='lua_close'/>
+<use f='luajit/lj_trace.c' l='422' u='w' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='432' u='w' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='552' u='w' c='trace_downrec'/>
+<use f='luajit/lj_trace.c' l='574' u='w' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='649' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='651' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='685' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='693' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='701' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='713' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='717' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='731' u='w' c='lj_trace_ins'/>
+<use f='luajit/lj_trace.c' l='742' u='r' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='746' u='w' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='762' u='w' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='771' u='r' c='lj_trace_stitch'/>
+<use f='luajit/lj_trace.c' l='775' u='w' c='lj_trace_stitch'/>
+<use f='luajit/lj_trace.c' l='903' u='r' c='lj_trace_exit'/>

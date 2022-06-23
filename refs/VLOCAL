@@ -1,0 +1,19 @@
+<dec f='luajit/host/minilua.c' l='116' type='6'/>
+<use f='luajit/host/minilua.c' l='3203' c='luaK_dischargevars'/>
+<use f='luajit/host/minilua.c' l='3351' c='luaK_storevar'/>
+<use f='luajit/host/minilua.c' l='3798' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3801' u='r' c='singlevaraux'/>
+<use f='luajit/host/minilua.c' l='3870' u='r' c='pushclosure'/>
+<use f='luajit/host/minilua.c' l='4343' u='r' c='assignment'/>
+<use f='luajit/host/minilua.c' l='4349' u='r' c='assignment'/>
+<use f='luajit/host/minilua.c' l='4544' u='r' c='localfunc'/>
+<dec f='luajit/lj_parse.c' l='44' type='6'/>
+<use f='luajit/lj_parse.c' l='465' u='r' c='expr_discharge'/>
+<use f='luajit/lj_parse.c' l='625' u='r' c='bcemit_store'/>
+<use f='luajit/lj_parse.c' l='1116' u='r' c='var_lookup_uv'/>
+<use f='luajit/lj_parse.c' l='1130' u='r' c='var_lookup_'/>
+<use f='luajit/lj_parse.c' l='2209' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2214' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2263' u='r' c='parse_local'/>
+<doc f='luajit/lj_parse.c' l='43'>/* Non-constant expressions follow: */</doc>
+<doc f='luajit/lj_parse.c' l='44'>/* info = local register, aux = vstack index */</doc>

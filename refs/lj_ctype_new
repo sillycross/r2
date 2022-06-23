@@ -1,0 +1,13 @@
+<dec f='luajit/lj_ctype.h' l='458' type='CTypeID lj_ctype_new(CTState * cts, CType ** ctp)'/>
+<use f='luajit/lj_cparse.c' l='886' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='999' u='c' c='cp_decl_constinit'/>
+<use f='luajit/lj_cparse.c' l='1238' u='c' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1246' u='c' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1392' u='c' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1475' u='c' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1652' u='c' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1848' u='c' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1861' u='c' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1866' u='c' c='cp_decl_multi'/>
+<def f='luajit/lj_ctype.c' l='152' ll='178' type='CTypeID lj_ctype_new(CTState * cts, CType ** ctp)'/>
+<doc f='luajit/lj_ctype.c' l='151'>/* Create new type element. */</doc>

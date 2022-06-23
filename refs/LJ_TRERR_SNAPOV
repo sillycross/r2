@@ -1,0 +1,3 @@
+<use f='luajit/lj_asm_x86.h' l='47' u='r' c='asm_exitstub_setup'/>
+<use f='luajit/lj_ffrecord.c' l='112' u='r' c='recff_stitch'/>
+<use f='luajit/lj_snap.c' l='42' u='r' c='lj_snap_grow_buf_'/>

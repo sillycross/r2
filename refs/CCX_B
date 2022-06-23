@@ -1,0 +1,14 @@
+<dec f='luajit/lj_cconv.h' l='16' type='0'/>
+<doc f='luajit/lj_cconv.h' l='16'>/* Bool. */</doc>
+<use f='luajit/lj_cconv.c' l='148' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='148' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='152' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='160' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='170' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='235' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='408' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='408' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='410' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='411' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='425' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='461' macro='1' u='r' c='crec_ct_ct'/>

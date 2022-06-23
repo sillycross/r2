@@ -1,0 +1,2 @@
+<use f='luajit/lj_record.c' l='1893' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2492' u='r' c='lj_record_ins'/>

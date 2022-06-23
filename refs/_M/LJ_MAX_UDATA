@@ -1,0 +1,2 @@
+<dec f='luajit/lj_def.h' l='56'/>
+<use f='luajit/lj_api.c' l='763' u='c'/>

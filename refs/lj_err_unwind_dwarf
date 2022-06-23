@@ -1,0 +1,1 @@
+<def f='luajit/lj_err.c' l='414' ll='474' macro='1' type='int lj_err_unwind_dwarf(int version, int actions, uint64_t uexclass, _Unwind_Exception * uex, _Unwind_Context * ctx)'/>

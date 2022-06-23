@@ -1,0 +1,5 @@
+<dec f='luajit/lj_tab.h' l='60' type='GCtab * lj_tab_dup(lua_State * L, const GCtab * kt)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_snap.c' l='836' u='c' c='snap_unsink'/>
+<def f='luajit/lj_tab.c' l='164' ll='201' type='GCtab * lj_tab_dup(lua_State * L, const GCtab * kt)'/>
+<doc f='luajit/lj_tab.c' l='163'>/* Duplicate a table. */</doc>

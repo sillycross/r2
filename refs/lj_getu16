@@ -1,0 +1,4 @@
+<def f='luajit/lj_def.h' l='236' ll='239' type='uint16_t lj_getu16(const void * p)'/>
+<doc f='luajit/lj_def.h' l='235'>/* Unaligned load of uint16_t. */</doc>
+<use f='luajit/lj_opt_fold.c' l='2051' u='c' c='kfold_xload'/>
+<use f='luajit/lj_opt_fold.c' l='2052' u='c' c='kfold_xload'/>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_obj.h' l='431' type='uint8_t'/>
+<use f='luajit/host/buildvm_arch.h' l='3456' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='3492' u='a' c='build_ins'/>
+<offset>80</offset>
+<doc f='luajit/lj_obj.h' l='431'>/* Set if closed (i.e. uv-&gt;v == &amp;uv-&gt;u.value). */</doc>
+<use f='luajit/lj_func.c' l='57' u='w' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='76' u='w' c='func_emptyuv'/>
+<use f='luajit/lj_func.c' l='104' u='r' c='lj_func_freeuv'/>
+<use f='luajit/lj_gc.c' l='78' u='r' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='834' u='w' c='lj_gc_closeuv'/>
+<use f='luajit/lj_record.c' l='1631' u='r' c='rec_upvalue'/>

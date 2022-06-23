@@ -1,0 +1,5 @@
+<dec f='luajit/host/buildvm.h' l='20'/>
+<use f='luajit/host/buildvm_fold.c' l='13' u='c'/>
+<use f='luajit/host/buildvm_fold.c' l='63' u='c'/>
+<use f='luajit/host/buildvm_fold.c' l='66' u='c'/>
+<use f='luajit/host/buildvm_fold.c' l='149' u='c'/>

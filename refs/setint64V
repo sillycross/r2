@@ -1,0 +1,8 @@
+<def f='luajit/lj_obj.h' l='952' ll='958' type='void setint64V(TValue * o, int64_t i)'/>
+<use f='luajit/lib_io.c' l='352' u='c' c='lj_cf_io_method_seek'/>
+<use f='luajit/lib_jit.c' l='222' macro='1' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='389' macro='1' u='c' c='lj_cf_jit_util_tracemc'/>
+<use f='luajit/lib_jit.c' l='403' macro='1' u='c' c='lj_cf_jit_util_traceexitstub'/>
+<use f='luajit/lib_jit.c' l='425' macro='1' u='c' c='lj_cf_jit_util_ircalladdr'/>
+<use f='luajit/lj_api.c' l='645' macro='1' u='c' c='lua_pushinteger'/>
+<use f='luajit/lj_carith.c' l='119' macro='1' u='c' c='carith_ptr'/>

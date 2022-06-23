@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ircall.h' l='141'/>
+<use f='luajit/lj_ircall.h' l='254' u='c'/>
+<use f='luajit/host/buildvm.c' l='283' u='c'/>
+<doc f='luajit/lj_ircall.h' l='140'>/* Function definitions for CALL* instructions. */</doc>
+<use f='luajit/lj_ir.c' l='64' u='c'/>

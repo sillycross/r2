@@ -1,0 +1,1 @@
+<def f='luajit/lib_buffer.c' l='181' macro='1' type='int lj_cf_buffer_method_putcdata(lua_State * L)'/>

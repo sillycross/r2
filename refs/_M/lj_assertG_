@@ -1,0 +1,8 @@
+<dec f='luajit/lj_def.h' l='358'/>
+<use f='luajit/lj_buf.c' l='28' u='c'/>
+<use f='luajit/lj_buf.c' l='53' u='c'/>
+<use f='luajit/lj_buf.c' l='78' u='c'/>
+<use f='luajit/lj_buf.c' l='82' u='c'/>
+<use f='luajit/lj_buf.c' l='101' u='c'/>
+<use f='luajit/lj_ctype.c' l='532' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='424' u='c'/>

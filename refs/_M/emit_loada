@@ -1,0 +1,6 @@
+<dec f='luajit/lj_emit_x86.h' l='302'/>
+<use f='luajit/lj_asm_x86.h' l='1059' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1092' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1139' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='1900' u='c'/>
+<doc f='luajit/lj_emit_x86.h' l='301'>/* mov r, addr */</doc>

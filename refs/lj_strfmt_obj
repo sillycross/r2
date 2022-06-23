@@ -1,0 +1,6 @@
+<dec f='luajit/lj_strfmt.h' l='120' type='GCstr * lj_strfmt_obj(lua_State * L, cTValue * o)'/>
+<use f='luajit/lib_base.c' l='331' u='c' c='lj_ffh_tostring'/>
+<use f='luajit/lj_ffrecord.c' l='414' u='c' c='recff_tostring'/>
+<use f='luajit/lj_strfmt.c' l='455' u='c' c='lj_strfmt_putarg'/>
+<def f='luajit/lj_strfmt.c' l='507' ll='531' type='GCstr * lj_strfmt_obj(lua_State * L, cTValue * o)'/>
+<doc f='luajit/lj_strfmt.c' l='506'>/* Raw conversion of object to string. */</doc>

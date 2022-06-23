@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='154' type='lua_State * lua_tothread(lua_State * L, int idx)'/>
+<def f='luajit/lj_api.c' l='616' ll='620' macro='1' type='lua_State * lua_tothread(lua_State * L, int idx)'/>

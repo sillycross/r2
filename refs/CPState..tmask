@@ -1,0 +1,10 @@
+<dec f='luajit/lj_cparse.h' l='55' type='uint32_t'/>
+<offset>896</offset>
+<doc f='luajit/lj_cparse.h' l='55'>/* Type mask for next identifier. */</doc>
+<use f='luajit/lj_cparse.c' l='193' u='r' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='404' u='w' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='1014' u='r' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='1015' u='w' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='1018' u='w' c='cp_decl_sizeattr'/>
+<use f='luajit/lj_cparse.c' l='1224' u='w' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1227' u='w' c='cp_struct_name'/>

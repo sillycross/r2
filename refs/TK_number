@@ -1,0 +1,6 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='286'/>
+<use f='luajit/lj_lex.c' l='135' u='r' c='lex_number'/>
+<use f='luajit/lj_lex.c' l='299' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='382' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='493' u='r' c='lj_lex_error'/>
+<use f='luajit/lj_parse.c' l='1995' c='expr_simple'/>

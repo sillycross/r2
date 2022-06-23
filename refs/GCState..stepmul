@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='607' type='MSize'/>
+<offset>704</offset>
+<doc f='luajit/lj_obj.h' l='607'>/* Incremental GC step granularity. */</doc>
+<use f='luajit/lj_api.c' l='1286' u='r' c='lua_gc'/>
+<use f='luajit/lj_api.c' l='1287' u='w' c='lua_gc'/>
+<use f='luajit/lj_gc.c' l='727' u='r' c='lj_gc_step'/>
+<use f='luajit/lj_state.c' l='254' u='w' c='lua_newstate'/>

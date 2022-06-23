@@ -1,0 +1,13 @@
+<dec f='luajit/lj_obj.h' l='380' type='MSize'/>
+<offset>384</offset>
+<doc f='luajit/lj_obj.h' l='380'>/* Number of collectable constants. */</doc>
+<use f='luajit/lib_jit.c' l='201' u='r' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='257' u='r' c='lj_cf_jit_util_funck'/>
+<use f='luajit/lj_bcread.c' l='351' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcread.c' l='368' u='w' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcwrite.c' l='122' u='r' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='249' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='268' u='r' c='bcwrite_proto'/>
+<use f='luajit/lj_dispatch.c' l='228' u='r' c='setptmode_all'/>
+<use f='luajit/lj_gc.c' l='281' u='r' c='gc_traverse_proto'/>
+<use f='luajit/lj_parse.c' l='1364' u='w' c='fs_fixup_k'/>

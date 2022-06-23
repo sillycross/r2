@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='592' type='uint8_t'/>
+<offset>144</offset>
+<doc f='luajit/lj_obj.h' l='592'>/* No cdata finalizer called. */</doc>
+<use f='luajit/lj_gc.c' l='550' u='w' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='690' u='w' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='709' u='r' c='gc_onestep'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_strscan.h' l='21' type='2'/>
+<use f='luajit/lj_lex.c' l='122' u='r' c='lex_number'/>
+<use f='luajit/lj_strscan.c' l='476' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='509' u='r' c='lj_strscan_scan'/>

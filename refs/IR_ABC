@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='10'/>
+<use f='luajit/lj_asm_x86.h' l='2339' u='r'/>
+<use f='luajit/lj_asm.c' l='1733' c='asm_ir'/>
+<use f='luajit/lj_opt_fold.c' l='355' c='fold_kfold_intcomp'/>
+<use f='luajit/lj_opt_fold.c' l='1907' u='r' c='fold_abc_fwd'/>
+<use f='luajit/lj_opt_fold.c' l='1930' u='r' c='fold_abc_k'/>
+<use f='luajit/lj_record.c' l='1305' u='r' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1310' u='r' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='1315' u='r' c='rec_idx_abc'/>

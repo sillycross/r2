@@ -1,0 +1,13 @@
+<dec f='luajit/lj_jit.h' l='274' type='TraceNo1'/>
+<offset>864</offset>
+<doc f='luajit/lj_jit.h' l='274'>/* Root trace of side trace (or 0 for root traces). */</doc>
+<use f='luajit/lj_record.c' l='300' u='r' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='301' u='r' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='2619' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2619' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2620' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2636' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2642' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='267' u='r' c='lj_trace_flush'/>
+<use f='luajit/lj_trace.c' l='289' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='512' u='r' c='trace_stop'/>

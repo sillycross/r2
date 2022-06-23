@@ -1,0 +1,7 @@
+<dec f='luajit/lj_buf.h' l='31' type='int'/>
+<offset>448</offset>
+<doc f='luajit/lj_buf.h' l='31'>/* Remaining recursion depth. */</doc>
+<use f='luajit/lj_serialize.c' l='168' u='r' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='169' u='w' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='237' u='w' c='serialize_put'/>
+<use f='luajit/lj_serialize.c' l='405' u='w' c='lj_serialize_put'/>

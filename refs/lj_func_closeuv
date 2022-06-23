@@ -1,0 +1,7 @@
+<dec f='luajit/lj_func.h' l='15' type='void lj_func_closeuv(lua_State * L, TValue * level)'/>
+<use f='luajit/lj_err.c' l='100' u='c' c='unwindstack'/>
+<def f='luajit/lj_func.c' l='83' ll='100' type='void lj_func_closeuv(lua_State * L, TValue * level)'/>
+<doc f='luajit/lj_func.c' l='82'>/* Close all open upvalues pointing to some stack level or above. */</doc>
+<use f='luajit/lj_state.c' l='166' u='c' c='close_state'/>
+<use f='luajit/lj_state.c' l='285' u='c' c='lua_close'/>
+<use f='luajit/lj_state.c' l='330' u='c' c='lj_state_free'/>

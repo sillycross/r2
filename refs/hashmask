@@ -1,0 +1,11 @@
+<def f='luajit/lj_tab.h' l='35' ll='39' type='Node * hashmask(const GCtab * t, uint32_t hash)'/>
+<doc f='luajit/lj_tab.h' l='34'>/* Hash values are masked with the table hash mask and used as an index. */</doc>
+<use f='luajit/lj_serialize.c' l='204' macro='1' u='c' c='serialize_put'/>
+<use f='luajit/lj_tab.c' l='24' macro='1' u='c' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='26' macro='1' u='c' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='28' u='c' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='30' macro='1' u='c' c='hashkey'/>
+<use f='luajit/lj_tab.c' l='389' macro='1' u='c' c='lj_tab_getinth'/>
+<use f='luajit/lj_tab.c' l='399' macro='1' u='c' c='lj_tab_getstr'/>
+<use f='luajit/lj_tab.c' l='522' macro='1' u='c' c='lj_tab_setinth'/>
+<use f='luajit/lj_tab.c' l='533' macro='1' u='c' c='lj_tab_setstr'/>

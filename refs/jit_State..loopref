@@ -1,0 +1,17 @@
+<dec f='luajit/lj_jit.h' l='449' type='IRRef'/>
+<offset>2752</offset>
+<doc f='luajit/lj_jit.h' l='449'>/* Last loop reference or ref of final LOOP (or 0). */</doc>
+<use f='luajit/lj_asm.c' l='2395' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_opt_sink.c' l='59' u='r' c='sink_checkphi'/>
+<use f='luajit/lj_opt_sink.c' l='239' u='r' c='lj_opt_sink'/>
+<use f='luajit/lj_opt_sink.c' l='242' u='r' c='lj_opt_sink'/>
+<use f='luajit/lj_record.c' l='615' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='615' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='617' u='w' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='620' u='w' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='2414' u='w' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2599' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_trace.c' l='676' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='684' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='688' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='692' u='r' c='trace_state'/>

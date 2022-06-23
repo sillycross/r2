@@ -1,0 +1,27 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='25'/>
+<use f='luajit/lj_asm.c' l='369' u='r' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='768' u='r' c='ra_left'/>
+<use f='luajit/lj_asm_x86.h' l='255' u='r' c='asm_fusefref'/>
+<use f='luajit/lj_asm_x86.h' l='311' u='r' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='1813' u='r' c='asm_cnew'/>
+<use f='luajit/lj_crecord.c' l='616' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='946' macro='1' u='r' c='crec_finalizer'/>
+<use f='luajit/lj_crecord.c' l='948' macro='1' u='r' c='crec_finalizer'/>
+<use f='luajit/lj_crecord.c' l='969' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1524' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1608' macro='1' u='r' c='recff_clib_index'/>
+<use f='luajit/lj_ffrecord.c' l='185' macro='1' u='r' c='recff_bufhdr'/>
+<use f='luajit/lj_ffrecord.c' l='625' macro='1' u='r' c='recff_math_random'/>
+<use f='luajit/lj_ffrecord.c' l='1071' macro='1' u='r' c='recff_table_concat'/>
+<use f='luajit/lj_ir.c' l='392' c='lj_ir_kvalue'/>
+<use f='luajit/lj_opt_fold.c' l='761' macro='1' u='r' c='fold_kfold_add_kgc'/>
+<use f='luajit/lj_opt_mem.c' l='696' u='r' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='696' u='r' c='aa_xref'/>
+<use f='luajit/lj_record.c' l='699' macro='1' u='r' c='rec_call_specialize'/>
+<use f='luajit/lj_record.c' l='891' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='989' macro='1' u='r' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1939' macro='1' u='r' c='rec_cat'/>
+<use f='luajit/lj_snap.c' l='421' c='snap_replay_const'/>
+<use f='luajit/lj_snap.c' l='421' macro='1' u='r' c='snap_replay_const'/>
+<use f='luajit/lj_snap.c' l='649' u='r' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='720' macro='1' u='r' c='snap_restoredata'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_tab.h' l='62' type='void lj_tab_free(global_State * g, GCtab * t)'/>
+<use f='luajit/lj_gc.c' l='394' u='r'/>
+<def f='luajit/lj_tab.c' l='215' ll='225' type='void lj_tab_free(global_State * g, GCtab * t)'/>
+<doc f='luajit/lj_tab.c' l='214'>/* Free a table. */</doc>

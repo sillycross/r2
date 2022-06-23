@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ccallback.h' l='18' type='lua_State * lj_ccallback_enter(CTState * cts, void * cf)'/>
+<def f='luajit/lj_ccallback.c' l='679' ll='698' type='lua_State * lj_ccallback_enter(CTState * cts, void * cf)'/>
+<doc f='luajit/lj_ccallback.c' l='678'>/* Enter callback. */</doc>

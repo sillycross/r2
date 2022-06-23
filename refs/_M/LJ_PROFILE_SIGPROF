@@ -1,0 +1,8 @@
+<dec f='luajit/lj_arch.h' l='563'/>
+<use f='luajit/lj_profile.h' l='14' u='c'/>
+<use f='luajit/lj_dispatch.c' l='364' u='c'/>
+<use f='luajit/lj_dispatch.c' l='372' u='c'/>
+<use f='luajit/lj_profile.c' l='25' u='c'/>
+<use f='luajit/lj_profile.c' l='66' u='c'/>
+<use f='luajit/lj_profile.c' l='97' u='c'/>
+<use f='luajit/lj_profile.c' l='170' u='c'/>

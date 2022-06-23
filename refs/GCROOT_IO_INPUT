@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='577' type='36'/>
+<doc f='luajit/lj_obj.h' l='577'>/* Userdata for default I/O input file. */</doc>
+<use f='luajit/lib_io.c' l='449' u='r' c='lj_cf_io_read'/>
+<use f='luajit/lib_io.c' l='481' u='r' c='lj_cf_io_input'/>
+<use f='luajit/lib_io.c' l='498' u='m' c='lj_cf_io_lines'/>
+<use f='luajit/lib_io.c' l='538' u='m' c='luaopen_io'/>

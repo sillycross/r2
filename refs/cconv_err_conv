@@ -1,0 +1,2 @@
+<def f='luajit/lj_cconv.c' l='21' ll='35' macro='1' type='void cconv_err_conv(CTState * cts, CType * d, CType * s, CTInfo flags)'/>
+<use f='luajit/lj_cconv.c' l='373' u='c' c='lj_cconv_ct_ct'/>

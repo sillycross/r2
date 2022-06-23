@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='62' type='void lj_gc_fullgc(lua_State * L)'/>
+<use f='luajit/lj_api.c' l='1263' u='c' c='lua_gc'/>
+<def f='luajit/lj_gc.c' l='774' ll='796' type='void lj_gc_fullgc(lua_State * L)'/>
+<doc f='luajit/lj_gc.c' l='773'>/* Perform a full GC cycle. */</doc>

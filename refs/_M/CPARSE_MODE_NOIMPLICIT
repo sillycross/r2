@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cparse.h' l='25'/>
+<use f='luajit/lib_ffi.c' l='55' u='c'/>
+<use f='luajit/lj_cparse.c' l='1236' u='c'/>
+<use f='luajit/lj_crecord.c' l='86' u='c'/>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_jit.h' l='504' type='GCproto *'/>
+<offset>24768</offset>
+<doc f='luajit/lj_jit.h' l='504'>/* Previous prototype. */</doc>
+<use f='luajit/lj_record.c' l='653' u='r' c='rec_profile_need'/>
+<use f='luajit/lj_record.c' l='654' u='w' c='rec_profile_need'/>
+<use f='luajit/lj_record.c' l='681' u='w' c='rec_profile_ret'/>
+<use f='luajit/lj_record.c' l='2657' u='w' c='lj_record_setup'/>

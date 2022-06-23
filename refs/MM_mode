@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='3'/>
+<use f='luajit/lib_base.c' l='681' u='r' c='newproxy_weaktable'/>
+<use f='luajit/lib_ffi.c' l='833' u='r' c='ffi_finalizer'/>
+<use f='luajit/lj_gc.c' l='177' u='r' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='177' u='r' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='177' u='r' c='gc_traverse_tab'/>

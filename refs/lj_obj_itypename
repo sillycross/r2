@@ -1,0 +1,18 @@
+<dec f='luajit/lj_obj.h' l='1033' type='const char *const [14]'/>
+<use f='luajit/lib_ffi.c' l='121' macro='1' u='r' c='ffi_index_meta'/>
+<use f='luajit/lib_table.c' l='165' u='r' c='lj_cf_table_concat'/>
+<use f='luajit/lj_carith.c' l='252' macro='1' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_cconv.c' l='42' macro='1' u='r' c='cconv_err_convtv'/>
+<use f='luajit/lj_err.c' l='900' macro='1' u='r' c='lj_err_optype'/>
+<use f='luajit/lj_err.c' l='916' macro='1' u='r' c='lj_err_comp'/>
+<use f='luajit/lj_err.c' l='917' macro='1' u='r' c='lj_err_comp'/>
+<use f='luajit/lj_err.c' l='931' macro='1' u='r' c='lj_err_optype_call'/>
+<use f='luajit/lj_err.c' l='1024' u='r' c='lj_err_argtype'/>
+<use f='luajit/lj_err.c' l='1029' macro='1' u='r' c='lj_err_argtype'/>
+<use f='luajit/lj_err.c' l='1035' macro='1' u='r' c='lj_err_argtype'/>
+<use f='luajit/lj_meta.c' l='438' u='r' c='lj_meta_istype'/>
+<def f='luajit/lj_obj.c' l='17' ll='20' type='const char *const [14]'/>
+<doc f='luajit/lj_obj.c' l='17'>/* ORDER LJ_T */</doc>
+<use f='luajit/lj_serialize.c' l='293' macro='1' u='r' c='serialize_put'/>
+<use f='luajit/lj_strfmt.c' l='521' macro='1' u='r' c='lj_strfmt_obj'/>
+<use f='luajit/lj_strfmt.c' l='521' macro='1' u='r' c='lj_strfmt_obj'/>

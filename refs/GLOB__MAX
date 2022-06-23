@@ -1,0 +1,2 @@
+<dec f='luajit/host/buildvm_arch.h' l='168' type='157'/>
+<use f='luajit/host/buildvm.c' l='176' u='r' c='build_code'/>

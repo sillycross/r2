@@ -1,0 +1,12 @@
+<def f='luajit/lj_obj.h' l='746' ll='756'/>
+<use f='luajit/lj_obj.h' l='746'/>
+<size>104</size>
+<mbr r='GCobj::gch' o='0' t='GChead'/>
+<mbr r='GCobj::str' o='0' t='GCstr'/>
+<mbr r='GCobj::uv' o='0' t='GCupval'/>
+<mbr r='GCobj::th' o='0' t='lua_State'/>
+<mbr r='GCobj::pt' o='0' t='GCproto'/>
+<mbr r='GCobj::fn' o='0' t='GCfunc'/>
+<mbr r='GCobj::cd' o='0' t='GCcdata'/>
+<mbr r='GCobj::tab' o='0' t='GCtab'/>
+<mbr r='GCobj::ud' o='0' t='GCudata'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='452' type='uint8_t'/>
+<use f='luajit/host/buildvm_arch.h' l='4020' u='a' c='build_ins'/>
+<offset>80</offset>
+<use f='luajit/lj_func.c' l='128' u='w' c='func_newL'/>

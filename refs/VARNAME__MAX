@@ -1,0 +1,4 @@
+<dec f='luajit/lj_debug.h' l='63' type='7'/>
+<use f='luajit/lj_debug.c' l='156' u='r' c='debug_varname'/>
+<use f='luajit/lj_debug.c' l='166' u='r' c='debug_varname'/>
+<use f='luajit/lj_parse.c' l='1478' u='r' c='fs_prep_var'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='63' type='uint8_t'/>
+<offset>72</offset>
+<use f='luajit/lj_cdata.h' l='47' u='w' c='lj_cdata_new'/>
+<use f='luajit/lj_cdata.h' l='56' u='w' c='lj_cdata_new_'/>
+<use f='luajit/lj_cdata.c' l='47' u='w' c='lj_cdata_newv'/>

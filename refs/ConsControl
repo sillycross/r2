@@ -1,0 +1,7 @@
+<def f='luajit/host/minilua.c' l='3948' ll='3954'/>
+<use f='luajit/host/minilua.c' l='3955' c='recfield'/>
+<use f='luajit/host/minilua.c' l='3973' c='closelistfield'/>
+<use f='luajit/host/minilua.c' l='3982' c='lastlistfield'/>
+<use f='luajit/host/minilua.c' l='3995' c='listfield'/>
+<use f='luajit/host/minilua.c' l='4005' c='constructor'/>
+<size>48</size>

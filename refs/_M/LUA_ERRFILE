@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='19'/>
+<doc f='luajit/lauxlib.h' l='18'>/* extra error code for `luaL_load&apos; */</doc>
+<use f='luajit/lj_load.c' l='94' u='c'/>
+<use f='luajit/lj_load.c' l='107' u='c'/>

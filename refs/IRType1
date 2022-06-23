@@ -1,0 +1,4 @@
+<def f='luajit/lj_ir.h' l='342'/>
+<use f='luajit/lj_ir.h' l='342'/>
+<size>1</size>
+<mbr r='IRType1::irt' o='0' t='uint8_t'/>

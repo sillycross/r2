@@ -1,0 +1,2 @@
+<dec f='luajit/host/buildvm.h' l='33'/>
+<use f='luajit/host/buildvm_lib.c' l='130' u='c'/>

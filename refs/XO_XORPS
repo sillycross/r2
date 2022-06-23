@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='286' type='1460601085'/>
+<use f='luajit/lj_emit_x86.h' l='397' u='r' c='emit_loadk64'/>
+<use f='luajit/lj_asm_x86.h' l='794' u='r' c='asm_tointg'/>
+<use f='luajit/lj_asm_x86.h' l='835' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='853' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='2215' u='r' c='asm_neg'/>

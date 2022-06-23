@@ -1,0 +1,5 @@
+<dec f='luajit/lj_trace.h' l='26' type='GCtrace * lj_trace_alloc(lua_State * L, GCtrace * T)'/>
+<use f='luajit/lj_asm.c' l='2393' u='c' c='lj_asm_trace'/>
+<use f='luajit/lj_asm.c' l='2506' u='c' c='lj_asm_trace'/>
+<def f='luajit/lj_trace.c' l='123' ll='142' type='GCtrace * lj_trace_alloc(lua_State * L, GCtrace * T)'/>
+<doc f='luajit/lj_trace.c' l='122'>/* Allocate space for copy of T. */</doc>

@@ -1,0 +1,23 @@
+<dec f='luajit/host/buildvm.h' l='92' type='void owrite(BuildCtx * ctx, const void * ptr, size_t sz)'/>
+<def f='luajit/host/buildvm.c' l='77' ll='84' type='void owrite(BuildCtx * ctx, const void * ptr, size_t sz)'/>
+<use f='luajit/host/buildvm.c' l='91' u='c' c='emit_raw'/>
+<doc f='luajit/host/buildvm.c' l='75'>/* ------------------------------------------------------------------------ */</doc>
+<use f='luajit/host/buildvm_peobj.c' l='148' u='c' c='emit_peobj_sym'/>
+<use f='luajit/host/buildvm_peobj.c' l='163' u='c' c='emit_peobj_sym_sect'/>
+<use f='luajit/host/buildvm_peobj.c' l='167' u='c' c='emit_peobj_sym_sect'/>
+<use f='luajit/host/buildvm_peobj.c' l='242' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='243' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='251' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='257' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='266' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='268' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='271' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='274' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='277' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='280' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='283' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='286' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='306' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='309' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='327' u='c' c='emit_peobj'/>
+<use f='luajit/host/buildvm_peobj.c' l='367' u='c' c='emit_peobj'/>

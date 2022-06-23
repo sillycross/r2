@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='787'/>
+<use f='luajit/lj_api.c' l='280' u='c'/>
+<use f='luajit/lj_api.c' l='610' u='c'/>
+<use f='luajit/lj_cconv.c' l='627' u='c'/>
+<use f='luajit/lj_dispatch.c' l='297' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='203' u='c'/>
+<use f='luajit/lj_obj.c' l='42' u='c'/>
+<use f='luajit/lj_serialize.c' l='268' u='c'/>

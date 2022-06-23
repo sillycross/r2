@@ -1,0 +1,4 @@
+<dec f='luajit/host/minilua.c' l='46' type='3'/>
+<use f='luajit/host/minilua.c' l='1819' u='r' c='traversetable'/>
+<use f='luajit/host/minilua.c' l='1819' u='r' c='traversetable'/>
+<use f='luajit/host/minilua.c' l='1819' u='r' c='traversetable'/>

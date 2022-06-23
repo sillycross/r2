@@ -1,0 +1,14 @@
+<def f='luajit/lj_emit_x86.h' l='275' ll='292' type='void emit_loadi(ASMState * as, Reg r, int32_t i)'/>
+<use f='luajit/lj_emit_x86.h' l='315' u='c' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='356' u='c' c='emit_rma'/>
+<use f='luajit/lj_asm.c' l='377' u='c' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='777' u='c' c='ra_left'/>
+<use f='luajit/lj_asm.c' l='613' u='c' c='asm_tnew'/>
+<use f='luajit/lj_asm.c' l='613' u='c' c='asm_bufput'/>
+<use f='luajit/lj_asm_x86.h' l='610' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1385' u='c' c='asm_strref'/>
+<use f='luajit/lj_asm_x86.h' l='1852' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1866' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='2784' u='c' c='asm_gc_check'/>
+<use f='luajit/lj_asm.c' l='613' u='c' c='asm_tail_link'/>
+<doc f='luajit/lj_emit_x86.h' l='274'>/* mov r, i / xor r, r */</doc>

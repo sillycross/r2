@@ -1,0 +1,4 @@
+<dec f='luajit/lj_buf.h' l='174' type='SBuf * lj_buf_puttab(SBuf * sb, GCtab * t, GCstr * sep, int32_t i, int32_t e)'/>
+<use f='luajit/lib_table.c' l='160' u='c' c='lj_cf_table_concat'/>
+<def f='luajit/lj_buf.c' l='211' ll='241' type='SBuf * lj_buf_puttab(SBuf * sb, GCtab * t, GCstr * sep, int32_t i, int32_t e)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

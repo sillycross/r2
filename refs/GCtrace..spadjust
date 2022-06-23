@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='271' type='uint16_t'/>
+<offset>816</offset>
+<doc f='luajit/lj_jit.h' l='271'>/* Stack pointer adjustment (offset in bytes). */</doc>
+<use f='luajit/lj_asm_x86.h' l='2886' u='r' c='asm_tail_fixup'/>
+<use f='luajit/lj_asm.c' l='1855' u='w' c='asm_head_root'/>
+<use f='luajit/lj_asm.c' l='1918' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1920' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1923' u='w' c='asm_head_side'/>

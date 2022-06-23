@@ -1,0 +1,2 @@
+<dec f='luajit/lj_arch.h' l='190'/>
+<use f='luajit/lj_err.c' l='540' u='c'/>

@@ -1,0 +1,5 @@
+<def f='luajit/host/minilua.c' l='5761' ll='5764'/>
+<use f='luajit/host/minilua.c' l='5766' c='f_call'/>
+<use f='luajit/host/minilua.c' l='5766' c='f_call'/>
+<use f='luajit/host/minilua.c' l='5770' c='lua_pcall'/>
+<size>16</size>

@@ -1,0 +1,8 @@
+<def f='luajit/lj_strfmt.h' l='14' ll='19'/>
+<use f='luajit/lj_strfmt.h' l='14'/>
+<size>32</size>
+<doc f='luajit/lj_strfmt.h' l='13'>/* Format parser state. */</doc>
+<mbr r='FormatState::p' o='0' t='const uint8_t *'/>
+<mbr r='FormatState::e' o='64' t='const uint8_t *'/>
+<mbr r='FormatState::str' o='128' t='const char *'/>
+<mbr r='FormatState::len' o='192' t='MSize'/>

@@ -1,0 +1,5 @@
+<def f='luajit/lj_emit_x86.h' l='503' ll='517' type='void emit_call_(ASMState * as, MCode * target)'/>
+<use f='luajit/lj_asm_x86.h' l='564' macro='1' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1969' macro='1' u='c' c='asm_fpmath'/>
+<use f='luajit/lj_asm_x86.h' l='2002' macro='1' u='c' c='asm_fppowi'/>
+<doc f='luajit/lj_emit_x86.h' l='502'>/* call target */</doc>

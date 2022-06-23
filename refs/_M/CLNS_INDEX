@@ -1,0 +1,4 @@
+<dec f='luajit/lj_clib.h' l='14'/>
+<doc f='luajit/lj_clib.h' l='13'>/* Namespace for C library indexing. */</doc>
+<use f='luajit/lj_clib.c' l='348' u='c'/>
+<use f='luajit/lj_crecord.c' l='1588' u='c'/>

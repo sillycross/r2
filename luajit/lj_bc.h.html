@@ -1,0 +1,283 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_bc.h source code [luajit/lj_bc.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_bc.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_bc.h.html'>lj_bc.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Bytecode instruction format.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_BC_H">_LJ_BC_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_BC_H" data-ref="_M/_LJ_BC_H">_LJ_BC_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_def.h.html">"lj_def.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_arch.h.html">"lj_arch.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><i>/* Bytecode instruction format, 32 bit wide, fields of 8 or 16 bit:</i></td></tr>
+<tr><th id="13">13</th><td><i>**</i></td></tr>
+<tr><th id="14">14</th><td><i>** +----+----+----+----+</i></td></tr>
+<tr><th id="15">15</th><td><i>** | B  | C  | A  | OP | Format ABC</i></td></tr>
+<tr><th id="16">16</th><td><i>** +----+----+----+----+</i></td></tr>
+<tr><th id="17">17</th><td><i>** |    D    | A  | OP | Format AD</i></td></tr>
+<tr><th id="18">18</th><td><i>** +--------------------</i></td></tr>
+<tr><th id="19">19</th><td><i>** MSB               LSB</i></td></tr>
+<tr><th id="20">20</th><td><i>**</i></td></tr>
+<tr><th id="21">21</th><td><i>** In-memory instructions are always stored in host byte order.</i></td></tr>
+<tr><th id="22">22</th><td><i>*/</i></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><i>/* Operand ranges and related constants. */</i></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/BCMAX_A" data-ref="_M/BCMAX_A">BCMAX_A</dfn>		0xff</u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/BCMAX_B" data-ref="_M/BCMAX_B">BCMAX_B</dfn>		0xff</u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/BCMAX_C" data-ref="_M/BCMAX_C">BCMAX_C</dfn>		0xff</u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/BCMAX_D" data-ref="_M/BCMAX_D">BCMAX_D</dfn>		0xffff</u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/BCBIAS_J" data-ref="_M/BCBIAS_J">BCBIAS_J</dfn>	0x8000</u></td></tr>
+<tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/NO_REG" data-ref="_M/NO_REG">NO_REG</dfn>		BCMAX_A</u></td></tr>
+<tr><th id="31">31</th><td><u>#define <dfn class="macro" id="_M/NO_JMP" data-ref="_M/NO_JMP">NO_JMP</dfn>		(~(BCPos)0)</u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><i>/* Macros to get instruction fields. */</i></td></tr>
+<tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/bc_op" data-ref="_M/bc_op">bc_op</dfn>(i)	((BCOp)((i)&amp;0xff))</u></td></tr>
+<tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/bc_a" data-ref="_M/bc_a">bc_a</dfn>(i)		((BCReg)(((i)&gt;&gt;8)&amp;0xff))</u></td></tr>
+<tr><th id="36">36</th><td><u>#define <dfn class="macro" id="_M/bc_b" data-ref="_M/bc_b">bc_b</dfn>(i)		((BCReg)((i)&gt;&gt;24))</u></td></tr>
+<tr><th id="37">37</th><td><u>#define <dfn class="macro" id="_M/bc_c" data-ref="_M/bc_c">bc_c</dfn>(i)		((BCReg)(((i)&gt;&gt;16)&amp;0xff))</u></td></tr>
+<tr><th id="38">38</th><td><u>#define <dfn class="macro" id="_M/bc_d" data-ref="_M/bc_d">bc_d</dfn>(i)		((BCReg)((i)&gt;&gt;16))</u></td></tr>
+<tr><th id="39">39</th><td><u>#define <dfn class="macro" id="_M/bc_j" data-ref="_M/bc_j">bc_j</dfn>(i)		((ptrdiff_t)bc_d(i)-BCBIAS_J)</u></td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i>/* Macros to set instruction fields. */</i></td></tr>
+<tr><th id="42">42</th><td><u>#define <dfn class="macro" id="_M/setbc_byte" data-ref="_M/setbc_byte">setbc_byte</dfn>(p, x, ofs) \</u></td></tr>
+<tr><th id="43">43</th><td><u>  ((uint8_t *)(p))[LJ_ENDIAN_SELECT(ofs, 3-ofs)] = (uint8_t)(x)</u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/setbc_op" data-ref="_M/setbc_op">setbc_op</dfn>(p, x)	setbc_byte(p, (x), 0)</u></td></tr>
+<tr><th id="45">45</th><td><u>#define <dfn class="macro" id="_M/setbc_a" data-ref="_M/setbc_a">setbc_a</dfn>(p, x)	setbc_byte(p, (x), 1)</u></td></tr>
+<tr><th id="46">46</th><td><u>#define <dfn class="macro" id="_M/setbc_b" data-ref="_M/setbc_b">setbc_b</dfn>(p, x)	setbc_byte(p, (x), 3)</u></td></tr>
+<tr><th id="47">47</th><td><u>#define <dfn class="macro" id="_M/setbc_c" data-ref="_M/setbc_c">setbc_c</dfn>(p, x)	setbc_byte(p, (x), 2)</u></td></tr>
+<tr><th id="48">48</th><td><u>#define <dfn class="macro" id="_M/setbc_d" data-ref="_M/setbc_d">setbc_d</dfn>(p, x) \</u></td></tr>
+<tr><th id="49">49</th><td><u>  ((uint16_t *)(p))[LJ_ENDIAN_SELECT(1, 0)] = (uint16_t)(x)</u></td></tr>
+<tr><th id="50">50</th><td><u>#define <dfn class="macro" id="_M/setbc_j" data-ref="_M/setbc_j">setbc_j</dfn>(p, x)	setbc_d(p, (BCPos)((int32_t)(x)+BCBIAS_J))</u></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><i>/* Macros to compose instructions. */</i></td></tr>
+<tr><th id="53">53</th><td><u>#define <dfn class="macro" id="_M/BCINS_ABC" data-ref="_M/BCINS_ABC">BCINS_ABC</dfn>(o, a, b, c) \</u></td></tr>
+<tr><th id="54">54</th><td><u>  (((BCIns)(o))|((BCIns)(a)&lt;&lt;8)|((BCIns)(b)&lt;&lt;24)|((BCIns)(c)&lt;&lt;16))</u></td></tr>
+<tr><th id="55">55</th><td><u>#define <dfn class="macro" id="_M/BCINS_AD" data-ref="_M/BCINS_AD">BCINS_AD</dfn>(o, a, d) \</u></td></tr>
+<tr><th id="56">56</th><td><u>  (((BCIns)(o))|((BCIns)(a)&lt;&lt;8)|((BCIns)(d)&lt;&lt;16))</u></td></tr>
+<tr><th id="57">57</th><td><u>#define <dfn class="macro" id="_M/BCINS_AJ" data-ref="_M/BCINS_AJ">BCINS_AJ</dfn>(o, a, j)	BCINS_AD(o, a, (BCPos)((int32_t)(j)+BCBIAS_J))</u></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td><i>/* Bytecode instruction definition. Order matters, see below.</i></td></tr>
+<tr><th id="60">60</th><td><i>**</i></td></tr>
+<tr><th id="61">61</th><td><i>** (name, filler, Amode, Bmode, Cmode or Dmode, metamethod)</i></td></tr>
+<tr><th id="62">62</th><td><i>**</i></td></tr>
+<tr><th id="63">63</th><td><i>** The opcode name suffixes specify the type for RB/RC or RD:</i></td></tr>
+<tr><th id="64">64</th><td><i>** V = variable slot</i></td></tr>
+<tr><th id="65">65</th><td><i>** S = string const</i></td></tr>
+<tr><th id="66">66</th><td><i>** N = number const</i></td></tr>
+<tr><th id="67">67</th><td><i>** P = primitive type (~itype)</i></td></tr>
+<tr><th id="68">68</th><td><i>** B = unsigned byte literal</i></td></tr>
+<tr><th id="69">69</th><td><i>** M = multiple args/results</i></td></tr>
+<tr><th id="70">70</th><td><i>*/</i></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/BCDEF" data-ref="_M/BCDEF">BCDEF</dfn>(_) \</u></td></tr>
+<tr><th id="72">72</th><td><u>  /* Comparison ops. ORDER OPR. */ \</u></td></tr>
+<tr><th id="73">73</th><td><u>  _(ISLT,	var,	___,	var,	lt) \</u></td></tr>
+<tr><th id="74">74</th><td><u>  _(ISGE,	var,	___,	var,	lt) \</u></td></tr>
+<tr><th id="75">75</th><td><u>  _(ISLE,	var,	___,	var,	le) \</u></td></tr>
+<tr><th id="76">76</th><td><u>  _(ISGT,	var,	___,	var,	le) \</u></td></tr>
+<tr><th id="77">77</th><td><u>  \</u></td></tr>
+<tr><th id="78">78</th><td><u>  _(ISEQV,	var,	___,	var,	eq) \</u></td></tr>
+<tr><th id="79">79</th><td><u>  _(ISNEV,	var,	___,	var,	eq) \</u></td></tr>
+<tr><th id="80">80</th><td><u>  _(ISEQS,	var,	___,	str,	eq) \</u></td></tr>
+<tr><th id="81">81</th><td><u>  _(ISNES,	var,	___,	str,	eq) \</u></td></tr>
+<tr><th id="82">82</th><td><u>  _(ISEQN,	var,	___,	num,	eq) \</u></td></tr>
+<tr><th id="83">83</th><td><u>  _(ISNEN,	var,	___,	num,	eq) \</u></td></tr>
+<tr><th id="84">84</th><td><u>  _(ISEQP,	var,	___,	pri,	eq) \</u></td></tr>
+<tr><th id="85">85</th><td><u>  _(ISNEP,	var,	___,	pri,	eq) \</u></td></tr>
+<tr><th id="86">86</th><td><u>  \</u></td></tr>
+<tr><th id="87">87</th><td><u>  /* Unary test and copy ops. */ \</u></td></tr>
+<tr><th id="88">88</th><td><u>  _(ISTC,	dst,	___,	var,	___) \</u></td></tr>
+<tr><th id="89">89</th><td><u>  _(ISFC,	dst,	___,	var,	___) \</u></td></tr>
+<tr><th id="90">90</th><td><u>  _(IST,	___,	___,	var,	___) \</u></td></tr>
+<tr><th id="91">91</th><td><u>  _(ISF,	___,	___,	var,	___) \</u></td></tr>
+<tr><th id="92">92</th><td><u>  _(ISTYPE,	var,	___,	lit,	___) \</u></td></tr>
+<tr><th id="93">93</th><td><u>  _(ISNUM,	var,	___,	lit,	___) \</u></td></tr>
+<tr><th id="94">94</th><td><u>  \</u></td></tr>
+<tr><th id="95">95</th><td><u>  /* Unary ops. */ \</u></td></tr>
+<tr><th id="96">96</th><td><u>  _(MOV,	dst,	___,	var,	___) \</u></td></tr>
+<tr><th id="97">97</th><td><u>  _(NOT,	dst,	___,	var,	___) \</u></td></tr>
+<tr><th id="98">98</th><td><u>  _(UNM,	dst,	___,	var,	unm) \</u></td></tr>
+<tr><th id="99">99</th><td><u>  _(LEN,	dst,	___,	var,	len) \</u></td></tr>
+<tr><th id="100">100</th><td><u>  \</u></td></tr>
+<tr><th id="101">101</th><td><u>  /* Binary ops. ORDER OPR. VV last, POW must be next. */ \</u></td></tr>
+<tr><th id="102">102</th><td><u>  _(ADDVN,	dst,	var,	num,	add) \</u></td></tr>
+<tr><th id="103">103</th><td><u>  _(SUBVN,	dst,	var,	num,	sub) \</u></td></tr>
+<tr><th id="104">104</th><td><u>  _(MULVN,	dst,	var,	num,	mul) \</u></td></tr>
+<tr><th id="105">105</th><td><u>  _(DIVVN,	dst,	var,	num,	div) \</u></td></tr>
+<tr><th id="106">106</th><td><u>  _(MODVN,	dst,	var,	num,	mod) \</u></td></tr>
+<tr><th id="107">107</th><td><u>  \</u></td></tr>
+<tr><th id="108">108</th><td><u>  _(ADDNV,	dst,	var,	num,	add) \</u></td></tr>
+<tr><th id="109">109</th><td><u>  _(SUBNV,	dst,	var,	num,	sub) \</u></td></tr>
+<tr><th id="110">110</th><td><u>  _(MULNV,	dst,	var,	num,	mul) \</u></td></tr>
+<tr><th id="111">111</th><td><u>  _(DIVNV,	dst,	var,	num,	div) \</u></td></tr>
+<tr><th id="112">112</th><td><u>  _(MODNV,	dst,	var,	num,	mod) \</u></td></tr>
+<tr><th id="113">113</th><td><u>  \</u></td></tr>
+<tr><th id="114">114</th><td><u>  _(ADDVV,	dst,	var,	var,	add) \</u></td></tr>
+<tr><th id="115">115</th><td><u>  _(SUBVV,	dst,	var,	var,	sub) \</u></td></tr>
+<tr><th id="116">116</th><td><u>  _(MULVV,	dst,	var,	var,	mul) \</u></td></tr>
+<tr><th id="117">117</th><td><u>  _(DIVVV,	dst,	var,	var,	div) \</u></td></tr>
+<tr><th id="118">118</th><td><u>  _(MODVV,	dst,	var,	var,	mod) \</u></td></tr>
+<tr><th id="119">119</th><td><u>  \</u></td></tr>
+<tr><th id="120">120</th><td><u>  _(POW,	dst,	var,	var,	pow) \</u></td></tr>
+<tr><th id="121">121</th><td><u>  _(CAT,	dst,	rbase,	rbase,	concat) \</u></td></tr>
+<tr><th id="122">122</th><td><u>  \</u></td></tr>
+<tr><th id="123">123</th><td><u>  /* Constant ops. */ \</u></td></tr>
+<tr><th id="124">124</th><td><u>  _(KSTR,	dst,	___,	str,	___) \</u></td></tr>
+<tr><th id="125">125</th><td><u>  _(KCDATA,	dst,	___,	cdata,	___) \</u></td></tr>
+<tr><th id="126">126</th><td><u>  _(KSHORT,	dst,	___,	lits,	___) \</u></td></tr>
+<tr><th id="127">127</th><td><u>  _(KNUM,	dst,	___,	num,	___) \</u></td></tr>
+<tr><th id="128">128</th><td><u>  _(KPRI,	dst,	___,	pri,	___) \</u></td></tr>
+<tr><th id="129">129</th><td><u>  _(KNIL,	base,	___,	base,	___) \</u></td></tr>
+<tr><th id="130">130</th><td><u>  \</u></td></tr>
+<tr><th id="131">131</th><td><u>  /* Upvalue and function ops. */ \</u></td></tr>
+<tr><th id="132">132</th><td><u>  _(UGET,	dst,	___,	uv,	___) \</u></td></tr>
+<tr><th id="133">133</th><td><u>  _(USETV,	uv,	___,	var,	___) \</u></td></tr>
+<tr><th id="134">134</th><td><u>  _(USETS,	uv,	___,	str,	___) \</u></td></tr>
+<tr><th id="135">135</th><td><u>  _(USETN,	uv,	___,	num,	___) \</u></td></tr>
+<tr><th id="136">136</th><td><u>  _(USETP,	uv,	___,	pri,	___) \</u></td></tr>
+<tr><th id="137">137</th><td><u>  _(UCLO,	rbase,	___,	jump,	___) \</u></td></tr>
+<tr><th id="138">138</th><td><u>  _(FNEW,	dst,	___,	func,	gc) \</u></td></tr>
+<tr><th id="139">139</th><td><u>  \</u></td></tr>
+<tr><th id="140">140</th><td><u>  /* Table ops. */ \</u></td></tr>
+<tr><th id="141">141</th><td><u>  _(TNEW,	dst,	___,	lit,	gc) \</u></td></tr>
+<tr><th id="142">142</th><td><u>  _(TDUP,	dst,	___,	tab,	gc) \</u></td></tr>
+<tr><th id="143">143</th><td><u>  _(GGET,	dst,	___,	str,	index) \</u></td></tr>
+<tr><th id="144">144</th><td><u>  _(GSET,	var,	___,	str,	newindex) \</u></td></tr>
+<tr><th id="145">145</th><td><u>  _(TGETV,	dst,	var,	var,	index) \</u></td></tr>
+<tr><th id="146">146</th><td><u>  _(TGETS,	dst,	var,	str,	index) \</u></td></tr>
+<tr><th id="147">147</th><td><u>  _(TGETB,	dst,	var,	lit,	index) \</u></td></tr>
+<tr><th id="148">148</th><td><u>  _(TGETR,	dst,	var,	var,	index) \</u></td></tr>
+<tr><th id="149">149</th><td><u>  _(TSETV,	var,	var,	var,	newindex) \</u></td></tr>
+<tr><th id="150">150</th><td><u>  _(TSETS,	var,	var,	str,	newindex) \</u></td></tr>
+<tr><th id="151">151</th><td><u>  _(TSETB,	var,	var,	lit,	newindex) \</u></td></tr>
+<tr><th id="152">152</th><td><u>  _(TSETM,	base,	___,	num,	newindex) \</u></td></tr>
+<tr><th id="153">153</th><td><u>  _(TSETR,	var,	var,	var,	newindex) \</u></td></tr>
+<tr><th id="154">154</th><td><u>  \</u></td></tr>
+<tr><th id="155">155</th><td><u>  /* Calls and vararg handling. T = tail call. */ \</u></td></tr>
+<tr><th id="156">156</th><td><u>  _(CALLM,	base,	lit,	lit,	call) \</u></td></tr>
+<tr><th id="157">157</th><td><u>  _(CALL,	base,	lit,	lit,	call) \</u></td></tr>
+<tr><th id="158">158</th><td><u>  _(CALLMT,	base,	___,	lit,	call) \</u></td></tr>
+<tr><th id="159">159</th><td><u>  _(CALLT,	base,	___,	lit,	call) \</u></td></tr>
+<tr><th id="160">160</th><td><u>  _(ITERC,	base,	lit,	lit,	call) \</u></td></tr>
+<tr><th id="161">161</th><td><u>  _(ITERN,	base,	lit,	lit,	call) \</u></td></tr>
+<tr><th id="162">162</th><td><u>  _(VARG,	base,	lit,	lit,	___) \</u></td></tr>
+<tr><th id="163">163</th><td><u>  _(ISNEXT,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="164">164</th><td><u>  \</u></td></tr>
+<tr><th id="165">165</th><td><u>  /* Returns. */ \</u></td></tr>
+<tr><th id="166">166</th><td><u>  _(RETM,	base,	___,	lit,	___) \</u></td></tr>
+<tr><th id="167">167</th><td><u>  _(RET,	rbase,	___,	lit,	___) \</u></td></tr>
+<tr><th id="168">168</th><td><u>  _(RET0,	rbase,	___,	lit,	___) \</u></td></tr>
+<tr><th id="169">169</th><td><u>  _(RET1,	rbase,	___,	lit,	___) \</u></td></tr>
+<tr><th id="170">170</th><td><u>  \</u></td></tr>
+<tr><th id="171">171</th><td><u>  /* Loops and branches. I/J = interp/JIT, I/C/L = init/call/loop. */ \</u></td></tr>
+<tr><th id="172">172</th><td><u>  _(FORI,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="173">173</th><td><u>  _(JFORI,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="174">174</th><td><u>  \</u></td></tr>
+<tr><th id="175">175</th><td><u>  _(FORL,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="176">176</th><td><u>  _(IFORL,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="177">177</th><td><u>  _(JFORL,	base,	___,	lit,	___) \</u></td></tr>
+<tr><th id="178">178</th><td><u>  \</u></td></tr>
+<tr><th id="179">179</th><td><u>  _(ITERL,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="180">180</th><td><u>  _(IITERL,	base,	___,	jump,	___) \</u></td></tr>
+<tr><th id="181">181</th><td><u>  _(JITERL,	base,	___,	lit,	___) \</u></td></tr>
+<tr><th id="182">182</th><td><u>  \</u></td></tr>
+<tr><th id="183">183</th><td><u>  _(LOOP,	rbase,	___,	jump,	___) \</u></td></tr>
+<tr><th id="184">184</th><td><u>  _(ILOOP,	rbase,	___,	jump,	___) \</u></td></tr>
+<tr><th id="185">185</th><td><u>  _(JLOOP,	rbase,	___,	lit,	___) \</u></td></tr>
+<tr><th id="186">186</th><td><u>  \</u></td></tr>
+<tr><th id="187">187</th><td><u>  _(JMP,	rbase,	___,	jump,	___) \</u></td></tr>
+<tr><th id="188">188</th><td><u>  \</u></td></tr>
+<tr><th id="189">189</th><td><u>  /* Function headers. I/J = interp/JIT, F/V/C = fixarg/vararg/C func. */ \</u></td></tr>
+<tr><th id="190">190</th><td><u>  _(FUNCF,	rbase,	___,	___,	___) \</u></td></tr>
+<tr><th id="191">191</th><td><u>  _(IFUNCF,	rbase,	___,	___,	___) \</u></td></tr>
+<tr><th id="192">192</th><td><u>  _(JFUNCF,	rbase,	___,	lit,	___) \</u></td></tr>
+<tr><th id="193">193</th><td><u>  _(FUNCV,	rbase,	___,	___,	___) \</u></td></tr>
+<tr><th id="194">194</th><td><u>  _(IFUNCV,	rbase,	___,	___,	___) \</u></td></tr>
+<tr><th id="195">195</th><td><u>  _(JFUNCV,	rbase,	___,	lit,	___) \</u></td></tr>
+<tr><th id="196">196</th><td><u>  _(FUNCC,	rbase,	___,	___,	___) \</u></td></tr>
+<tr><th id="197">197</th><td><u>  _(FUNCCW,	rbase,	___,	___,	___)</u></td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td><i>/* Bytecode opcode numbers. */</i></td></tr>
+<tr><th id="200">200</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="201">201</th><td><u>#define <dfn class="macro" id="_M/BCENUM" data-ref="_M/BCENUM">BCENUM</dfn>(name, ma, mb, mc, mt)	BC_##name,</u></td></tr>
+<tr><th id="202">202</th><td><a class="macro" href="#71" title="BC_ISLT, BC_ISGE, BC_ISLE, BC_ISGT, BC_ISEQV, BC_ISNEV, BC_ISEQS, BC_ISNES, BC_ISEQN, BC_ISNEN, BC_ISEQP, BC_ISNEP, BC_ISTC, BC_ISFC, BC_IST, BC_ISF, BC_ISTYPE, BC_ISNUM, BC_MOV, BC_NOT, BC_UNM, BC_LEN, BC_ADDVN, BC_SUBVN, BC_MULVN, BC_DIVVN, BC_MODVN, BC_ADDNV, BC_SUBNV, BC_MULNV, BC_DIVNV, BC_MODNV, BC_ADDVV, BC_SUBVV, BC_MULVV, BC_DIVVV, BC_MODVV, BC_POW, BC_CAT, BC_KSTR, BC_KCDATA, BC_KSHORT, BC_KNUM, BC_KPRI, BC_KNIL, BC_UGET, BC_USETV, BC_USETS, BC_USETN, BC_USETP, BC_UCLO, BC_FNEW, BC_TNEW, BC_TDUP, BC_GGET, BC_GSET, BC_TGETV, BC_TGETS, BC_TGETB, BC_TGETR, BC_TSETV, BC_TSETS, BC_TSETB, BC_TSETM, BC_TSETR, BC_CALLM, BC_CALL, BC_CALLMT, BC_CALLT, BC_ITERC, BC_ITERN, BC_VARG, BC_ISNEXT, BC_RETM, BC_RET, BC_RET0, BC_RET1, BC_FORI, BC_JFORI, BC_FORL, BC_IFORL, BC_JFORL, BC_ITERL, BC_IITERL, BC_JITERL, BC_LOOP, BC_ILOOP, BC_JLOOP, BC_JMP, BC_FUNCF, BC_IFUNCF, BC_JFUNCF, BC_FUNCV, BC_IFUNCV, BC_JFUNCV, BC_FUNCC, BC_FUNCCW," data-ref="_M/BCDEF">BCDEF</a>(BCENUM)</td></tr>
+<tr><th id="203">203</th><td><u>#undef <a class="macro" href="#201" data-ref="_M/BCENUM">BCENUM</a></u></td></tr>
+<tr><th id="204">204</th><td>  <dfn class="enum" id="BC__MAX" title='BC__MAX' data-ref="BC__MAX" data-ref-filename="BC__MAX">BC__MAX</dfn></td></tr>
+<tr><th id="205">205</th><td>} <dfn class="typedef" id="BCOp" title='BCOp' data-type='enum BCOp' data-ref="BCOp" data-ref-filename="BCOp">BCOp</dfn>;</td></tr>
+<tr><th id="206">206</th><td></td></tr>
+<tr><th id="207">207</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_18(int STATIC_ASSERTION_FAILED[((int)BC_ISEQV+1 == (int)BC_ISNEV)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_ISEQV' data-ref="BC_ISEQV" data-ref-filename="BC_ISEQV">BC_ISEQV</a>+<var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_ISNEV' data-ref="BC_ISNEV" data-ref-filename="BC_ISNEV">BC_ISNEV</a>);</td></tr>
+<tr><th id="208">208</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_20(int STATIC_ASSERTION_FAILED[(((int)BC_ISEQV^1) == (int)BC_ISNEV)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISEQV' data-ref="BC_ISEQV" data-ref-filename="BC_ISEQV">BC_ISEQV</a>^<var>1</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISNEV' data-ref="BC_ISNEV" data-ref-filename="BC_ISNEV">BC_ISNEV</a>);</td></tr>
+<tr><th id="209">209</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_22(int STATIC_ASSERTION_FAILED[(((int)BC_ISEQS^1) == (int)BC_ISNES)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISEQS' data-ref="BC_ISEQS" data-ref-filename="BC_ISEQS">BC_ISEQS</a>^<var>1</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISNES' data-ref="BC_ISNES" data-ref-filename="BC_ISNES">BC_ISNES</a>);</td></tr>
+<tr><th id="210">210</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_24(int STATIC_ASSERTION_FAILED[(((int)BC_ISEQN^1) == (int)BC_ISNEN)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISEQN' data-ref="BC_ISEQN" data-ref-filename="BC_ISEQN">BC_ISEQN</a>^<var>1</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISNEN' data-ref="BC_ISNEN" data-ref-filename="BC_ISNEN">BC_ISNEN</a>);</td></tr>
+<tr><th id="211">211</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_26(int STATIC_ASSERTION_FAILED[(((int)BC_ISEQP^1) == (int)BC_ISNEP)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISEQP' data-ref="BC_ISEQP" data-ref-filename="BC_ISEQP">BC_ISEQP</a>^<var>1</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISNEP' data-ref="BC_ISNEP" data-ref-filename="BC_ISNEP">BC_ISNEP</a>);</td></tr>
+<tr><th id="212">212</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_28(int STATIC_ASSERTION_FAILED[(((int)BC_ISLT^1) == (int)BC_ISGE)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISLT' data-ref="BC_ISLT" data-ref-filename="BC_ISLT">BC_ISLT</a>^<var>1</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISGE' data-ref="BC_ISGE" data-ref-filename="BC_ISGE">BC_ISGE</a>);</td></tr>
+<tr><th id="213">213</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_30(int STATIC_ASSERTION_FAILED[(((int)BC_ISLE^1) == (int)BC_ISGT)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISLE' data-ref="BC_ISLE" data-ref-filename="BC_ISLE">BC_ISLE</a>^<var>1</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISGT' data-ref="BC_ISGT" data-ref-filename="BC_ISGT">BC_ISGT</a>);</td></tr>
+<tr><th id="214">214</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_32(int STATIC_ASSERTION_FAILED[(((int)BC_ISLT^3) == (int)BC_ISGT)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#202" title='BC_ISLT' data-ref="BC_ISLT" data-ref-filename="BC_ISLT">BC_ISLT</a>^<var>3</var>) == (<em>int</em>)<a class="enum" href="#202" title='BC_ISGT' data-ref="BC_ISGT" data-ref-filename="BC_ISGT">BC_ISGT</a>);</td></tr>
+<tr><th id="215">215</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_34(int STATIC_ASSERTION_FAILED[((int)BC_IST-(int)BC_ISTC == (int)BC_ISF-(int)BC_ISFC)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_IST' data-ref="BC_IST" data-ref-filename="BC_IST">BC_IST</a>-(<em>int</em>)<a class="enum" href="#202" title='BC_ISTC' data-ref="BC_ISTC" data-ref-filename="BC_ISTC">BC_ISTC</a> == (<em>int</em>)<a class="enum" href="#202" title='BC_ISF' data-ref="BC_ISF" data-ref-filename="BC_ISF">BC_ISF</a>-(<em>int</em>)<a class="enum" href="#202" title='BC_ISFC' data-ref="BC_ISFC" data-ref-filename="BC_ISFC">BC_ISFC</a>);</td></tr>
+<tr><th id="216">216</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_36(int STATIC_ASSERTION_FAILED[((int)BC_CALLT-(int)BC_CALL == (int)BC_CALLMT-(int)BC_CALLM)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_CALLT' data-ref="BC_CALLT" data-ref-filename="BC_CALLT">BC_CALLT</a>-(<em>int</em>)<a class="enum" href="#202" title='BC_CALL' data-ref="BC_CALL" data-ref-filename="BC_CALL">BC_CALL</a> == (<em>int</em>)<a class="enum" href="#202" title='BC_CALLMT' data-ref="BC_CALLMT" data-ref-filename="BC_CALLMT">BC_CALLMT</a>-(<em>int</em>)<a class="enum" href="#202" title='BC_CALLM' data-ref="BC_CALLM" data-ref-filename="BC_CALLM">BC_CALLM</a>);</td></tr>
+<tr><th id="217">217</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_38(int STATIC_ASSERTION_FAILED[((int)BC_CALLMT + 1 == (int)BC_CALLT)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_CALLMT' data-ref="BC_CALLMT" data-ref-filename="BC_CALLMT">BC_CALLMT</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_CALLT' data-ref="BC_CALLT" data-ref-filename="BC_CALLT">BC_CALLT</a>);</td></tr>
+<tr><th id="218">218</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_40(int STATIC_ASSERTION_FAILED[((int)BC_RETM + 1 == (int)BC_RET)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_RETM' data-ref="BC_RETM" data-ref-filename="BC_RETM">BC_RETM</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_RET' data-ref="BC_RET" data-ref-filename="BC_RET">BC_RET</a>);</td></tr>
+<tr><th id="219">219</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_42(int STATIC_ASSERTION_FAILED[((int)BC_FORL + 1 == (int)BC_IFORL)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_FORL' data-ref="BC_FORL" data-ref-filename="BC_FORL">BC_FORL</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_IFORL' data-ref="BC_IFORL" data-ref-filename="BC_IFORL">BC_IFORL</a>);</td></tr>
+<tr><th id="220">220</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_44(int STATIC_ASSERTION_FAILED[((int)BC_FORL + 2 == (int)BC_JFORL)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_FORL' data-ref="BC_FORL" data-ref-filename="BC_FORL">BC_FORL</a> + <var>2</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_JFORL' data-ref="BC_JFORL" data-ref-filename="BC_JFORL">BC_JFORL</a>);</td></tr>
+<tr><th id="221">221</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_46(int STATIC_ASSERTION_FAILED[((int)BC_ITERL + 1 == (int)BC_IITERL)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_ITERL' data-ref="BC_ITERL" data-ref-filename="BC_ITERL">BC_ITERL</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_IITERL' data-ref="BC_IITERL" data-ref-filename="BC_IITERL">BC_IITERL</a>);</td></tr>
+<tr><th id="222">222</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_48(int STATIC_ASSERTION_FAILED[((int)BC_ITERL + 2 == (int)BC_JITERL)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_ITERL' data-ref="BC_ITERL" data-ref-filename="BC_ITERL">BC_ITERL</a> + <var>2</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_JITERL' data-ref="BC_JITERL" data-ref-filename="BC_JITERL">BC_JITERL</a>);</td></tr>
+<tr><th id="223">223</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_50(int STATIC_ASSERTION_FAILED[((int)BC_LOOP + 1 == (int)BC_ILOOP)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_LOOP' data-ref="BC_LOOP" data-ref-filename="BC_LOOP">BC_LOOP</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_ILOOP' data-ref="BC_ILOOP" data-ref-filename="BC_ILOOP">BC_ILOOP</a>);</td></tr>
+<tr><th id="224">224</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_52(int STATIC_ASSERTION_FAILED[((int)BC_LOOP + 2 == (int)BC_JLOOP)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_LOOP' data-ref="BC_LOOP" data-ref-filename="BC_LOOP">BC_LOOP</a> + <var>2</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_JLOOP' data-ref="BC_JLOOP" data-ref-filename="BC_JLOOP">BC_JLOOP</a>);</td></tr>
+<tr><th id="225">225</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_54(int STATIC_ASSERTION_FAILED[((int)BC_FUNCF + 1 == (int)BC_IFUNCF)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_FUNCF' data-ref="BC_FUNCF" data-ref-filename="BC_FUNCF">BC_FUNCF</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_IFUNCF' data-ref="BC_IFUNCF" data-ref-filename="BC_IFUNCF">BC_IFUNCF</a>);</td></tr>
+<tr><th id="226">226</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_56(int STATIC_ASSERTION_FAILED[((int)BC_FUNCF + 2 == (int)BC_JFUNCF)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_FUNCF' data-ref="BC_FUNCF" data-ref-filename="BC_FUNCF">BC_FUNCF</a> + <var>2</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_JFUNCF' data-ref="BC_JFUNCF" data-ref-filename="BC_JFUNCF">BC_JFUNCF</a>);</td></tr>
+<tr><th id="227">227</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_58(int STATIC_ASSERTION_FAILED[((int)BC_FUNCV + 1 == (int)BC_IFUNCV)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_FUNCV' data-ref="BC_FUNCV" data-ref-filename="BC_FUNCV">BC_FUNCV</a> + <var>1</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_IFUNCV' data-ref="BC_IFUNCV" data-ref-filename="BC_IFUNCV">BC_IFUNCV</a>);</td></tr>
+<tr><th id="228">228</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_60(int STATIC_ASSERTION_FAILED[((int)BC_FUNCV + 2 == (int)BC_JFUNCV)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>((<em>int</em>)<a class="enum" href="#202" title='BC_FUNCV' data-ref="BC_FUNCV" data-ref-filename="BC_FUNCV">BC_FUNCV</a> + <var>2</var> == (<em>int</em>)<a class="enum" href="#202" title='BC_JFUNCV' data-ref="BC_JFUNCV" data-ref-filename="BC_JFUNCV">BC_JFUNCV</a>);</td></tr>
+<tr><th id="229">229</th><td></td></tr>
+<tr><th id="230">230</th><td><i>/* This solves a circular dependency problem, change as needed. */</i></td></tr>
+<tr><th id="231">231</th><td><u>#define <dfn class="macro" id="_M/FF_next_N" data-ref="_M/FF_next_N">FF_next_N</dfn>	4</u></td></tr>
+<tr><th id="232">232</th><td></td></tr>
+<tr><th id="233">233</th><td><i>/* Stack slots used by FORI/FORL, relative to operand A. */</i></td></tr>
+<tr><th id="234">234</th><td><b>enum</b> {</td></tr>
+<tr><th id="235">235</th><td>  <dfn class="enum" id="FORL_IDX" title='FORL_IDX' data-ref="FORL_IDX" data-ref-filename="FORL_IDX">FORL_IDX</dfn>, <dfn class="enum" id="FORL_STOP" title='FORL_STOP' data-ref="FORL_STOP" data-ref-filename="FORL_STOP">FORL_STOP</dfn>, <dfn class="enum" id="FORL_STEP" title='FORL_STEP' data-ref="FORL_STEP" data-ref-filename="FORL_STEP">FORL_STEP</dfn>, <dfn class="enum" id="FORL_EXT" title='FORL_EXT' data-ref="FORL_EXT" data-ref-filename="FORL_EXT">FORL_EXT</dfn></td></tr>
+<tr><th id="236">236</th><td>};</td></tr>
+<tr><th id="237">237</th><td></td></tr>
+<tr><th id="238">238</th><td><i>/* Bytecode operand modes. ORDER BCMode */</i></td></tr>
+<tr><th id="239">239</th><td><b>typedef</b> <b>enum</b> {</td></tr>
+<tr><th id="240">240</th><td>  <dfn class="enum" id="BCMnone" title='BCMnone' data-ref="BCMnone" data-ref-filename="BCMnone">BCMnone</dfn>, <dfn class="enum" id="BCMdst" title='BCMdst' data-ref="BCMdst" data-ref-filename="BCMdst">BCMdst</dfn>, <dfn class="enum" id="BCMbase" title='BCMbase' data-ref="BCMbase" data-ref-filename="BCMbase">BCMbase</dfn>, <dfn class="enum" id="BCMvar" title='BCMvar' data-ref="BCMvar" data-ref-filename="BCMvar">BCMvar</dfn>, <dfn class="enum" id="BCMrbase" title='BCMrbase' data-ref="BCMrbase" data-ref-filename="BCMrbase">BCMrbase</dfn>, <dfn class="enum" id="BCMuv" title='BCMuv' data-ref="BCMuv" data-ref-filename="BCMuv">BCMuv</dfn>,  <i>/* Mode A must be &lt;= 7 */</i></td></tr>
+<tr><th id="241">241</th><td>  <dfn class="enum" id="BCMlit" title='BCMlit' data-ref="BCMlit" data-ref-filename="BCMlit">BCMlit</dfn>, <dfn class="enum" id="BCMlits" title='BCMlits' data-ref="BCMlits" data-ref-filename="BCMlits">BCMlits</dfn>, <dfn class="enum" id="BCMpri" title='BCMpri' data-ref="BCMpri" data-ref-filename="BCMpri">BCMpri</dfn>, <dfn class="enum" id="BCMnum" title='BCMnum' data-ref="BCMnum" data-ref-filename="BCMnum">BCMnum</dfn>, <dfn class="enum" id="BCMstr" title='BCMstr' data-ref="BCMstr" data-ref-filename="BCMstr">BCMstr</dfn>, <dfn class="enum" id="BCMtab" title='BCMtab' data-ref="BCMtab" data-ref-filename="BCMtab">BCMtab</dfn>, <dfn class="enum" id="BCMfunc" title='BCMfunc' data-ref="BCMfunc" data-ref-filename="BCMfunc">BCMfunc</dfn>, <dfn class="enum" id="BCMjump" title='BCMjump' data-ref="BCMjump" data-ref-filename="BCMjump">BCMjump</dfn>, <dfn class="enum" id="BCMcdata" title='BCMcdata' data-ref="BCMcdata" data-ref-filename="BCMcdata">BCMcdata</dfn>,</td></tr>
+<tr><th id="242">242</th><td>  <dfn class="enum" id="BCM_max" title='BCM_max' data-ref="BCM_max" data-ref-filename="BCM_max">BCM_max</dfn></td></tr>
+<tr><th id="243">243</th><td>} <dfn class="typedef" id="BCMode" title='BCMode' data-type='enum BCMode' data-ref="BCMode" data-ref-filename="BCMode">BCMode</dfn>;</td></tr>
+<tr><th id="244">244</th><td><u>#define <dfn class="macro" id="_M/BCM___" data-ref="_M/BCM___">BCM___</dfn>		BCMnone</u></td></tr>
+<tr><th id="245">245</th><td></td></tr>
+<tr><th id="246">246</th><td><u>#define <dfn class="macro" id="_M/bcmode_a" data-ref="_M/bcmode_a">bcmode_a</dfn>(op)	((BCMode)(lj_bc_mode[op] &amp; 7))</u></td></tr>
+<tr><th id="247">247</th><td><u>#define <dfn class="macro" id="_M/bcmode_b" data-ref="_M/bcmode_b">bcmode_b</dfn>(op)	((BCMode)((lj_bc_mode[op]&gt;&gt;3) &amp; 15))</u></td></tr>
+<tr><th id="248">248</th><td><u>#define <dfn class="macro" id="_M/bcmode_c" data-ref="_M/bcmode_c">bcmode_c</dfn>(op)	((BCMode)((lj_bc_mode[op]&gt;&gt;7) &amp; 15))</u></td></tr>
+<tr><th id="249">249</th><td><u>#define <dfn class="macro" id="_M/bcmode_d" data-ref="_M/bcmode_d">bcmode_d</dfn>(op)	bcmode_c(op)</u></td></tr>
+<tr><th id="250">250</th><td><u>#define <dfn class="macro" id="_M/bcmode_hasd" data-ref="_M/bcmode_hasd">bcmode_hasd</dfn>(op)	((lj_bc_mode[op] &amp; (15&lt;&lt;3)) == (BCMnone&lt;&lt;3))</u></td></tr>
+<tr><th id="251">251</th><td><u>#define <dfn class="macro" id="_M/bcmode_mm" data-ref="_M/bcmode_mm">bcmode_mm</dfn>(op)	((MMS)(lj_bc_mode[op]&gt;&gt;11))</u></td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td><u>#define <dfn class="macro" id="_M/BCMODE" data-ref="_M/BCMODE">BCMODE</dfn>(name, ma, mb, mc, mm) \</u></td></tr>
+<tr><th id="254">254</th><td><u>  (BCM##ma|(BCM##mb&lt;&lt;3)|(BCM##mc&lt;&lt;7)|(MM_##mm&lt;&lt;11)),</u></td></tr>
+<tr><th id="255">255</th><td><u>#define <dfn class="macro" id="_M/BCMODE_FF" data-ref="_M/BCMODE_FF">BCMODE_FF</dfn>	0</u></td></tr>
+<tr><th id="256">256</th><td></td></tr>
+<tr><th id="257">257</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <em>int</em> <dfn class="decl def fn" id="bc_isret" title='bc_isret' data-ref="bc_isret" data-ref-filename="bc_isret">bc_isret</dfn>(<a class="typedef" href="#BCOp" title='BCOp' data-type='enum BCOp' data-ref="BCOp" data-ref-filename="BCOp">BCOp</a> <dfn class="local col8 decl" id="858op" title='op' data-type='BCOp' data-ref="858op" data-ref-filename="858op">op</dfn>)</td></tr>
+<tr><th id="258">258</th><td>{</td></tr>
+<tr><th id="259">259</th><td>  <b>return</b> (<a class="local col8 ref" href="#858op" title='op' data-ref="858op" data-ref-filename="858op">op</a> == <a class="enum" href="#202" title='BC_RETM' data-ref="BC_RETM" data-ref-filename="BC_RETM">BC_RETM</a> || <a class="local col8 ref" href="#858op" title='op' data-ref="858op" data-ref-filename="858op">op</a> == <a class="enum" href="#202" title='BC_RET' data-ref="BC_RET" data-ref-filename="BC_RET">BC_RET</a> || <a class="local col8 ref" href="#858op" title='op' data-ref="858op" data-ref-filename="858op">op</a> == <a class="enum" href="#202" title='BC_RET0' data-ref="BC_RET0" data-ref-filename="BC_RET0">BC_RET0</a> || <a class="local col8 ref" href="#858op" title='op' data-ref="858op" data-ref-filename="858op">op</a> == <a class="enum" href="#202" title='BC_RET1' data-ref="BC_RET1" data-ref-filename="BC_RET1">BC_RET1</a>);</td></tr>
+<tr><th id="260">260</th><td>}</td></tr>
+<tr><th id="261">261</th><td></td></tr>
+<tr><th id="262">262</th><td><a class="macro" href="lj_def.h.html#328" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_DATA">LJ_DATA</a> <em>const</em> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl" id="lj_bc_mode" title='lj_bc_mode' data-ref="lj_bc_mode" data-ref-filename="lj_bc_mode">lj_bc_mode</dfn>[];</td></tr>
+<tr><th id="263">263</th><td><a class="macro" href="lj_def.h.html#328" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_DATA">LJ_DATA</a> <em>const</em> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="decl" id="lj_bc_ofs" title='lj_bc_ofs' data-ref="lj_bc_ofs" data-ref-filename="lj_bc_ofs">lj_bc_ofs</dfn>[];</td></tr>
+<tr><th id="264">264</th><td></td></tr>
+<tr><th id="265">265</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="266">266</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

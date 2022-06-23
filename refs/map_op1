@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='2967' ll='2992' type='const uint8_t [256]'/>
+<use f='luajit/lj_asm_x86.h' l='3017' u='r' c='asm_x86_inslen'/>
+<use f='luajit/lj_asm_x86.h' l='3021' u='r' c='asm_x86_inslen'/>
+<doc f='luajit/lj_asm_x86.h' l='2965'>/* -- Trace patching ------------------------------------------------------ */</doc>

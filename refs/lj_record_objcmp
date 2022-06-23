@@ -1,0 +1,12 @@
+<dec f='luajit/lj_record.h' l='29' type='int lj_record_objcmp(jit_State * J, TRef a, TRef b, cTValue * av, cTValue * bv)'/>
+<use f='luajit/lj_ffrecord.c' l='276' u='c' c='recff_rawequal'/>
+<def f='luajit/lj_record.c' l='225' ll='245' type='int lj_record_objcmp(jit_State * J, TRef a, TRef b, cTValue * av, cTValue * bv)'/>
+<use f='luajit/lj_record.c' l='1134' u='c' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1175' u='c' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='2185' u='c' c='lj_record_ins'/>
+<doc f='luajit/lj_record.c' l='219'>/* Compare for raw object equality.
+** Returns 0 if the objects are the same.
+** Returns 1 if they are different, but the same type.
+** Returns 2 for two different types.
+** Comparisons between primitives always return 1 -- no caller cares about it.
+*/</doc>

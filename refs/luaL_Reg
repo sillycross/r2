@@ -1,0 +1,9 @@
+<def f='luajit/host/minilua.c' l='5837' ll='5840'/>
+<use f='luajit/host/minilua.c' l='5837'/>
+<use f='luajit/host/minilua.c' l='7734'/>
+<size>16</size>
+<def f='luajit/lauxlib.h' l='21' ll='24'/>
+<use f='luajit/lauxlib.h' l='21'/>
+<size>16</size>
+<mbr r='luaL_Reg::name' o='0' t='const char *'/>
+<mbr r='luaL_Reg::func' o='64' t='lua_CFunction'/>

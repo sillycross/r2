@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ir.h' l='156' type='100'/>
+<use f='luajit/lj_ir.h' l='293' u='r'/>
+<use f='luajit/lj_jit.h' l='467'/>
+<use f='luajit/lj_ir.c' l='46' u='r'/>
+<use f='luajit/lj_opt_dce.c' l='39' c='dce_propagate'/>
+<use f='luajit/lj_opt_dce.c' l='42' u='r' c='dce_propagate'/>

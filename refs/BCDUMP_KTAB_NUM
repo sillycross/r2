@@ -1,0 +1,3 @@
+<dec f='luajit/lj_bcdump.h' l='58' type='4'/>
+<use f='luajit/lj_bcread.c' l='191' u='r' c='bcread_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='69' u='r' c='bcwrite_ktabk'/>

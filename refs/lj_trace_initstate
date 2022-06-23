@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='32' type='void lj_trace_initstate(global_State * g)'/>
+<use f='luajit/lj_state.c' l='158' u='c' c='cpluaopen'/>
+<def f='luajit/lj_trace.c' l='310' ll='350' type='void lj_trace_initstate(global_State * g)'/>
+<doc f='luajit/lj_trace.c' l='309'>/* Initialize JIT compiler state. */</doc>

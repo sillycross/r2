@@ -1,0 +1,19 @@
+<dec f='luajit/lj_strscan.h' l='27' type='int lj_strscan_num(GCstr * str, TValue * o)'/>
+<use f='luajit/lj_strscan.h' l='31' u='c' c='lj_strscan_numberobj'/>
+<use f='luajit/lj_api.c' l='268' macro='1' u='c' c='lua_isnumber'/>
+<use f='luajit/lj_api.c' l='352' u='c' c='lua_tonumber'/>
+<use f='luajit/lj_api.c' l='365' u='c' c='lua_tonumberx'/>
+<use f='luajit/lj_api.c' l='380' u='c' c='luaL_checknumber'/>
+<use f='luajit/lj_api.c' l='393' u='c' c='luaL_optnumber'/>
+<use f='luajit/lj_api.c' l='408' macro='1' u='c' c='lua_tointeger'/>
+<use f='luajit/lj_api.c' l='432' macro='1' u='c' c='lua_tointegerx'/>
+<use f='luajit/lj_api.c' l='460' macro='1' u='c' c='luaL_checkinteger'/>
+<use f='luajit/lj_api.c' l='485' macro='1' u='c' c='luaL_optinteger'/>
+<use f='luajit/lj_carith.c' l='342' macro='1' u='c' c='lj_carith_check64'/>
+<use f='luajit/lj_ffrecord.c' l='351' u='c' c='recff_tonumber'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_lib.c' l='230' u='c' c='lj_lib_checknum'/>
+<use f='luajit/lj_meta.c' l='206' u='c' c='str2num'/>
+<use f='luajit/lj_opt_fold.c' l='916' u='c' c='fold_kfold_strto'/>
+<use f='luajit/lj_opt_narrow.c' l='526' u='c' c='conv_str_tonum'/>
+<def f='luajit/lj_strscan.c' l='528' ll='534' type='int lj_strscan_num(GCstr * str, TValue * o)'/>

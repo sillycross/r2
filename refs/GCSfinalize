@@ -1,0 +1,5 @@
+<dec f='luajit/lj_gc.h' l='13' type='5'/>
+<use f='luajit/lj_gc.c' l='688' u='r' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='699' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='769' u='r' c='lj_gc_step_jit'/>
+<use f='luajit/lj_trace.c' l='894' u='r' c='lj_trace_exit'/>

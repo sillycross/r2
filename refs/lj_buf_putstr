@@ -1,0 +1,6 @@
+<dec f='luajit/lj_buf.h' l='155' type='SBuf * lj_buf_putstr(SBuf * sb, GCstr * s)'/>
+<use f='luajit/lib_buffer.c' l='122' u='c' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_string.c' l='96' u='c' c='lj_cf_string_rep'/>
+<def f='luajit/lj_buf.c' l='129' ll='136' type='SBuf * lj_buf_putstr(SBuf * sb, GCstr * s)'/>
+<use f='luajit/lj_debug.c' l='558' u='c' c='debug_putchunkname'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

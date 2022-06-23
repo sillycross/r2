@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='55' type='int luaL_checkoption(lua_State * L, int narg, const char * def, const char *const * lst)'/>
+<def f='luajit/lj_api.c' l='563' ll='574' macro='1' type='int luaL_checkoption(lua_State * L, int idx, const char * def, const char *const * lst)'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='1039' type='const void * lj_obj_ptr(global_State * g, cTValue * o)'/>
+<use f='luajit/lj_api.c' l='624' u='c' c='lua_topointer'/>
+<def f='luajit/lj_obj.c' l='37' ll='50' type='const void * lj_obj_ptr(global_State * g, cTValue * o)'/>
+<doc f='luajit/lj_obj.c' l='36'>/* Return pointer to object or its object data. */</doc>
+<use f='luajit/lj_strfmt.c' l='469' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='527' u='c' c='lj_strfmt_obj'/>

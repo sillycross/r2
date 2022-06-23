@@ -1,0 +1,9 @@
+<dec f='luajit/lj_asm_x86.h' l='2332'/>
+<use f='luajit/lj_asm_x86.h' l='2345' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2346' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2347' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2348' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2350' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2351' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2381' u='c'/>
+<doc f='luajit/lj_asm_x86.h' l='2331'>/* Virtual flags for unordered FP comparisons. */</doc>

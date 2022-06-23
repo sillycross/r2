@@ -1,0 +1,11 @@
+<dec f='include/stdio.h' l='320' type='int sprintf(char *restrict __s, const char *restrict __format)'/>
+<use f='luajit/host/buildvm.c' l='108' u='c' c='sym_decorate'/>
+<doc f='include/stdio.h' l='319'>/* Write formatted output to S.  */</doc>
+<use f='luajit/host/buildvm_lib.c' l='63' u='c' c='libdef_endmodule'/>
+<use f='luajit/host/minilua.c' l='698' u='c' c='luaO_pushvfstring'/>
+<use f='luajit/host/minilua.c' l='145' u='c' c='luaV_tostring'/>
+<use f='luajit/host/minilua.c' l='7601' u='c' c='str_format'/>
+<use f='luajit/host/minilua.c' l='7606' u='c' c='str_format'/>
+<use f='luajit/host/minilua.c' l='7611' u='c' c='str_format'/>
+<use f='luajit/host/minilua.c' l='7616' u='c' c='str_format'/>
+<use f='luajit/host/minilua.c' l='7632' u='c' c='str_format'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='325' type='IRRef1'/>
+<offset>64</offset>
+<doc f='luajit/lj_jit.h' l='325'>/* Index reference. */</doc>
+<use f='luajit/lj_opt_fold.c' l='1267' u='r' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_record.c' l='482' u='w' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='499' u='r' c='rec_for'/>
+<use f='luajit/lj_record.c' l='1297' u='r' c='rec_idx_abc'/>
+<use f='luajit/lj_record.c' l='2587' u='w' c='lj_record_setup'/>

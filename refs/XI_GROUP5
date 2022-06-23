@@ -1,0 +1,2 @@
+<dec f='luajit/lj_target_x86.h' l='228' type='255'/>
+<use f='luajit/lj_ccallback.c' l='136' u='r' c='callback_mcode_init'/>

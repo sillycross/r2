@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ctype.h' l='183' type='CTypeID1 [128]'/>
+<offset>1728</offset>
+<doc f='luajit/lj_ctype.h' l='183'>/* Hash anchors for C type table. */</doc>
+<use f='luajit/lj_cparse.c' l='1922' macro='1' u='r' c='lj_cparse'/>
+<use f='luajit/lj_cparse.c' l='1922' macro='1' u='r' c='lj_cparse'/>
+<use f='luajit/lj_cparse.c' l='1922' macro='1' u='r' c='lj_cparse'/>
+<use f='luajit/lj_ctype.c' l='184' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='201' u='r' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='203' u='w' c='lj_ctype_intern'/>
+<use f='luajit/lj_ctype.c' l='211' u='r' c='ctype_addtype'/>
+<use f='luajit/lj_ctype.c' l='212' u='w' c='ctype_addtype'/>
+<use f='luajit/lj_ctype.c' l='219' u='r' c='lj_ctype_addname'/>
+<use f='luajit/lj_ctype.c' l='220' u='w' c='lj_ctype_addname'/>
+<use f='luajit/lj_ctype.c' l='226' u='r' c='lj_ctype_getname'/>

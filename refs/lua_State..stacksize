@@ -1,0 +1,22 @@
+<dec f='luajit/lj_obj.h' l='696' type='MSize'/>
+<offset>704</offset>
+<doc f='luajit/lj_obj.h' l='696'>/* True stack size (incl. LJ_STACK_EXTRA). */</doc>
+<use f='luajit/lj_gc.c' l='312' u='r' c='gc_traverse_thread'/>
+<use f='luajit/lj_gc.c' l='349' u='r' c='propagatemark'/>
+<use f='luajit/lj_state.c' l='61' u='r' c='resizestack'/>
+<use f='luajit/lj_state.c' l='74' u='w' c='resizestack'/>
+<use f='luajit/lj_state.c' l='86' u='r' c='lj_state_relimitstack'/>
+<use f='luajit/lj_state.c' l='93' u='r' c='lj_state_shrinkstack'/>
+<use f='luajit/lj_state.c' l='95' u='r' c='lj_state_shrinkstack'/>
+<use f='luajit/lj_state.c' l='96' u='r' c='lj_state_shrinkstack'/>
+<use f='luajit/lj_state.c' l='99' u='r' c='lj_state_shrinkstack'/>
+<use f='luajit/lj_state.c' l='106' u='r' c='lj_state_growstack'/>
+<use f='luajit/lj_state.c' l='108' u='r' c='lj_state_growstack'/>
+<use f='luajit/lj_state.c' l='111' u='r' c='lj_state_growstack'/>
+<use f='luajit/lj_state.c' l='112' u='r' c='lj_state_growstack'/>
+<use f='luajit/lj_state.c' l='117' u='r' c='lj_state_growstack'/>
+<use f='luajit/lj_state.c' l='131' u='w' c='stack_init'/>
+<use f='luajit/lj_state.c' l='132' u='r' c='stack_init'/>
+<use f='luajit/lj_state.c' l='177' u='r' c='close_state'/>
+<use f='luajit/lj_state.c' l='313' u='w' c='lj_state_new'/>
+<use f='luajit/lj_state.c' l='332' u='r' c='lj_state_free'/>

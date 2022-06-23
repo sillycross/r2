@@ -1,0 +1,3 @@
+<dec f='luajit/luajit.h' l='52' type='16'/>
+<doc f='luajit/luajit.h' l='52'>/* Set wrapper mode for C function calls. */</doc>
+<use f='luajit/lj_dispatch.c' l='293' c='luaJIT_setmode'/>

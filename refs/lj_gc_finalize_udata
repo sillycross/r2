@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='50' type='void lj_gc_finalize_udata(lua_State * L)'/>
+<def f='luajit/lj_gc.c' l='569' ll='573' type='void lj_gc_finalize_udata(lua_State * L)'/>
+<doc f='luajit/lj_gc.c' l='568'>/* Finalize all userdata objects from mmudata list. */</doc>
+<use f='luajit/lj_state.c' l='271' u='c' c='cpfinalize'/>

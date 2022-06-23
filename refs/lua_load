@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='205' type='int lua_load(lua_State * L, lua_Reader reader, void * dt, const char * chunkname)'/>
+<def f='luajit/lj_load.c' l='64' ll='68' macro='1' type='int lua_load(lua_State * L, lua_Reader reader, void * data, const char * chunkname)'/>

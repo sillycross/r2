@@ -1,0 +1,15 @@
+<dec f='luajit/lj_jit.h' l='213'/>
+<use f='luajit/lj_asm.c' l='972' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2703' u='c'/>
+<use f='luajit/lj_opt_dce.c' l='29' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='151' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='242' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='243' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='140' u='c'/>
+<use f='luajit/lj_snap.c' l='389' u='c'/>
+<use f='luajit/lj_snap.c' l='431' u='c'/>
+<use f='luajit/lj_snap.c' l='485' u='c'/>
+<use f='luajit/lj_snap.c' l='521' u='c'/>
+<use f='luajit/lj_snap.c' l='554' u='c'/>
+<use f='luajit/lj_snap.c' l='906' u='c'/>
+<use f='luajit/lj_snap.c' l='911' u='c'/>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_clib.h source code [luajit/lj_clib.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="CLibrary "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_clib.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_clib.h.html'>lj_clib.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** FFI C library loader.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_CLIB_H">_LJ_CLIB_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_CLIB_H" data-ref="_M/_LJ_CLIB_H">_LJ_CLIB_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="12">12</th><td></td></tr>
+<tr><th id="13">13</th><td><i>/* Namespace for C library indexing. */</i></td></tr>
+<tr><th id="14">14</th><td><u>#define <dfn class="macro" id="_M/CLNS_INDEX" data-ref="_M/CLNS_INDEX">CLNS_INDEX</dfn>	((1u&lt;&lt;CT_FUNC)|(1u&lt;&lt;CT_EXTERN)|(1u&lt;&lt;CT_CONSTVAL))</u></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><i>/* C library namespace. */</i></td></tr>
+<tr><th id="17">17</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="CLibrary" title='CLibrary' data-ref="CLibrary" data-ref-filename="CLibrary"><a class="type" href="#CLibrary" title='CLibrary' data-ref="CLibrary" data-ref-filename="CLibrary">CLibrary</a></dfn> {</td></tr>
+<tr><th id="18">18</th><td>  <em>void</em> *<dfn class="decl field" id="CLibrary::handle" title='CLibrary::handle' data-ref="CLibrary::handle" data-ref-filename="CLibrary..handle">handle</dfn>;		<i>/* Opaque handle for dynamic library loader. */</i></td></tr>
+<tr><th id="19">19</th><td>  <a class="typedef" href="lj_obj.h.html#GCtab" title='GCtab' data-type='struct GCtab' data-ref="GCtab" data-ref-filename="GCtab">GCtab</a> *<dfn class="decl field" id="CLibrary::cache" title='CLibrary::cache' data-ref="CLibrary::cache" data-ref-filename="CLibrary..cache">cache</dfn>;		<i>/* Cache for resolved symbols. Anchored in ud-&gt;env. */</i></td></tr>
+<tr><th id="20">20</th><td>} <dfn class="typedef" id="CLibrary" title='CLibrary' data-type='struct CLibrary' data-ref="CLibrary" data-ref-filename="CLibrary">CLibrary</dfn>;</td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="decl fn" id="lj_clib_index" title='lj_clib_index' data-ref="lj_clib_index" data-ref-filename="lj_clib_index">lj_clib_index</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col4 decl" id="14L" title='L' data-type='lua_State *' data-ref="14L" data-ref-filename="14L">L</dfn>, <a class="typedef" href="#CLibrary" title='CLibrary' data-type='struct CLibrary' data-ref="CLibrary" data-ref-filename="CLibrary">CLibrary</a> *<dfn class="local col5 decl" id="15cl" title='cl' data-type='CLibrary *' data-ref="15cl" data-ref-filename="15cl">cl</dfn>, <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col6 decl" id="16name" title='name' data-type='GCstr *' data-ref="16name" data-ref-filename="16name">name</dfn>);</td></tr>
+<tr><th id="23">23</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_clib_load" title='lj_clib_load' data-ref="lj_clib_load" data-ref-filename="lj_clib_load">lj_clib_load</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col7 decl" id="17L" title='L' data-type='lua_State *' data-ref="17L" data-ref-filename="17L">L</dfn>, <a class="typedef" href="lj_obj.h.html#GCtab" title='GCtab' data-type='struct GCtab' data-ref="GCtab" data-ref-filename="GCtab">GCtab</a> *<dfn class="local col8 decl" id="18mt" title='mt' data-type='GCtab *' data-ref="18mt" data-ref-filename="18mt">mt</dfn>, <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col9 decl" id="19name" title='name' data-type='GCstr *' data-ref="19name" data-ref-filename="19name">name</dfn>, <em>int</em> <dfn class="local col0 decl" id="20global" title='global' data-type='int' data-ref="20global" data-ref-filename="20global">global</dfn>);</td></tr>
+<tr><th id="24">24</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_clib_unload" title='lj_clib_unload' data-ref="lj_clib_unload" data-ref-filename="lj_clib_unload">lj_clib_unload</dfn>(<a class="typedef" href="#CLibrary" title='CLibrary' data-type='struct CLibrary' data-ref="CLibrary" data-ref-filename="CLibrary">CLibrary</a> *<dfn class="local col1 decl" id="21cl" title='cl' data-type='CLibrary *' data-ref="21cl" data-ref-filename="21cl">cl</dfn>);</td></tr>
+<tr><th id="25">25</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_clib_default" title='lj_clib_default' data-ref="lj_clib_default" data-ref-filename="lj_clib_default">lj_clib_default</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col2 decl" id="22L" title='L' data-type='lua_State *' data-ref="22L" data-ref-filename="22L">L</dfn>, <a class="typedef" href="lj_obj.h.html#GCtab" title='GCtab' data-type='struct GCtab' data-ref="GCtab" data-ref-filename="GCtab">GCtab</a> *<dfn class="local col3 decl" id="23mt" title='mt' data-type='GCtab *' data-ref="23mt" data-ref-filename="23mt">mt</dfn>);</td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_ffi.c.html'>luajit/lib_ffi.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

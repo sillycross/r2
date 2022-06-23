@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/sys/mman.h' l='76' type='int munmap(void * __addr, size_t __len)'/>
+<use f='luajit/lj_alloc.c' l='250' u='c' c='mmap_probe'/>
+<use f='luajit/lj_alloc.c' l='350' u='c' c='CALL_MUNMAP'/>
+<doc f='include/x86_64-linux-gnu/sys/mman.h' l='74'>/* Deallocate any mapping for the region starting at ADDR and extending LEN
+   bytes.  Returns 0 if successful, -1 for errors (and sets errno).  */</doc>
+<use f='luajit/lj_ccallback.c' l='313' u='c' c='lj_ccallback_mcode_free'/>
+<use f='luajit/lj_mcode.c' l='119' u='c' c='mcode_free'/>

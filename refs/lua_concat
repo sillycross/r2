@@ -1,0 +1,10 @@
+<dec f='luajit/lua.h' l='243' type='void lua_concat(lua_State * L, int n)'/>
+<use f='luajit/lib_aux.c' l='207' u='c' c='adjuststack'/>
+<use f='luajit/lib_aux.c' l='240' u='c' c='luaL_pushresult'/>
+<use f='luajit/lib_base.c' l='344' u='c' c='lj_cf_error'/>
+<use f='luajit/lib_package.c' l='457' u='c' c='lj_cf_package_require'/>
+<def f='luajit/lj_api.c' l='771' ll='793' macro='1' type='void lua_concat(lua_State * L, int n)'/>
+<use f='luajit/lj_debug.c' l='701' u='c' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='703' u='c' c='luaL_traceback'/>
+<use f='luajit/luajit.c' l='241' u='c' c='loadline'/>
+<use f='luajit/luajit.c' l='303' u='c' c='loadjitmodule'/>

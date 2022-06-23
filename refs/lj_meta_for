@@ -1,0 +1,4 @@
+<dec f='luajit/lj_meta.h' l='36' type='void lj_meta_for(lua_State * L, TValue * o)'/>
+<def f='luajit/lj_meta.c' l='454' ll='481' type='void lj_meta_for(lua_State * L, TValue * o)'/>
+<doc f='luajit/lj_meta.c' l='453'>/* Helper for FORI. Coercion. */</doc>
+<use f='luajit/lj_record.c' l='512' u='c' c='rec_for'/>

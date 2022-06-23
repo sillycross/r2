@@ -1,0 +1,6 @@
+<dec f='luajit/lj_tab.h' l='42'/>
+<doc f='luajit/lj_tab.h' l='41'>/* String IDs are generated when a string is interned. */</doc>
+<use f='luajit/lj_serialize.c' l='204' u='c'/>
+<use f='luajit/lj_tab.c' l='24' u='c'/>
+<use f='luajit/lj_tab.c' l='399' u='c'/>
+<use f='luajit/lj_tab.c' l='533' u='c'/>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ctype.h' l='218'/>
+<doc f='luajit/lj_ctype.h' l='217'>/* Combined type and flag checks. */</doc>
+<use f='luajit/lib_ffi.c' l='300' u='c'/>
+<use f='luajit/lj_cconv.c' l='386' u='c'/>
+<use f='luajit/lj_cconv.c' l='387' u='c'/>
+<use f='luajit/lj_cconv.c' l='592' u='c'/>
+<use f='luajit/lj_cdata.c' l='160' u='c'/>
+<use f='luajit/lj_cparse.c' l='753' u='c'/>
+<use f='luajit/lj_cparse.c' l='995' u='c'/>
+<use f='luajit/lj_crecord.c' l='967' u='c'/>
+<use f='luajit/lj_serialize.c' l='243' u='c'/>

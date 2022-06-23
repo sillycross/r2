@@ -1,0 +1,3 @@
+<dec f='luajit/lj_state.h' l='30' type='void lj_state_free(global_State * g, lua_State * L)'/>
+<use f='luajit/lj_gc.c' l='381' u='r'/>
+<def f='luajit/lj_state.c' l='325' ll='334' type='void lj_state_free(global_State * g, lua_State * L)'/>

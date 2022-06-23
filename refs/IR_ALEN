@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='72'/>
+<use f='luajit/lj_asm.c' l='1798' c='asm_ir'/>
+<use f='luajit/lj_ffrecord.c' l='1044' u='r' c='recff_table_insert'/>
+<use f='luajit/lj_ffrecord.c' l='1068' u='r' c='recff_table_concat'/>
+<use f='luajit/lj_opt_loop.c' l='359' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_mem.c' l='369' u='r' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='405' u='r' c='lj_opt_fwd_alen'/>
+<use f='luajit/lj_opt_sink.c' l='81' c='sink_mark_ins'/>
+<use f='luajit/lj_record.c' l='1093' u='r' c='rec_mm_len'/>
+<use f='luajit/lj_record.c' l='2227' u='r' c='lj_record_ins'/>

@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='1425' ll='1489' type='void asm_fxstore(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='1801' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1802' macro='1' u='c' c='asm_ir'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_parse.c' l='137' type='BCPos'/>
+<use f='luajit/lj_parse.c' l='421' u='r' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='425' u='w' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='1870' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1870' u='r' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='1876' u='w' c='parse_body'/>
+<use f='luajit/lj_parse.c' l='2733' u='w' c='lj_parse'/>
+<offset>640</offset>
+<doc f='luajit/lj_parse.c' l='137'>/* Limit of bytecode stack. */</doc>

@@ -1,0 +1,4 @@
+<def f='luajit/lj_strfmt.h' l='78' ll='84' type='void lj_strfmt_init(FormatState * fs, const char * p, MSize len)'/>
+<use f='luajit/lj_ffrecord.c' l='955' u='c' c='recff_string_format'/>
+<use f='luajit/lj_strfmt.c' l='379' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='553' u='c' c='lj_strfmt_pushvf'/>

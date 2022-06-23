@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='2'/>
+<use f='luajit/lj_record.c' l='698' u='r' c='rec_call_specialize'/>

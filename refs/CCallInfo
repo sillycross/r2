@@ -1,0 +1,6 @@
+<def f='luajit/lj_ircall.h' l='14' ll='17'/>
+<use f='luajit/lj_ircall.h' l='14'/>
+<size>16</size>
+<doc f='luajit/lj_ircall.h' l='13'>/* C call info for CALL* instructions. */</doc>
+<mbr r='CCallInfo::func' o='0' t='ASMFunction'/>
+<mbr r='CCallInfo::flags' o='64' t='uint32_t'/>

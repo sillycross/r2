@@ -1,0 +1,4 @@
+<use f='luajit/lj_mcode.c' l='110' u='r' c='mcode_alloc_at'/>
+<use f='luajit/lj_mcode.c' l='237' u='r' c='mcode_alloc'/>
+<use f='luajit/lj_mcode.c' l='368' u='r' c='lj_mcode_limiterr'/>
+<use f='luajit/lj_trace.c' l='624' u='r' c='trace_abort'/>

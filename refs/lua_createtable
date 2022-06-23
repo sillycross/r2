@@ -1,0 +1,16 @@
+<dec f='luajit/lua.h' l='182' type='void lua_createtable(lua_State * L, int narr, int nrec)'/>
+<use f='luajit/lib_aux.c' l='93' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_base.c' l='488' macro='1' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='129' u='c' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lib_ffi.c' l='567' u='c' c='lj_cf_ffi_typeinfo'/>
+<use f='luajit/lib_jit.c' l='194' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='218' u='c' c='lj_cf_jit_util_funcinfo'/>
+<use f='luajit/lib_jit.c' l='304' u='c' c='lj_cf_jit_util_traceinfo'/>
+<use f='luajit/lib_jit.c' l='371' u='c' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lib_os.c' l='196' u='c' c='lj_cf_os_date'/>
+<use f='luajit/lib_package.c' l='537' u='c' c='lj_cf_package_seeall'/>
+<use f='luajit/lib_package.c' l='602' u='c' c='luaopen_package'/>
+<use f='luajit/lib_table.c' l='292' u='c' c='lj_cf_table_new'/>
+<def f='luajit/lj_api.c' l='719' ll='724' macro='1' type='void lua_createtable(lua_State * L, int narray, int nrec)'/>
+<use f='luajit/lj_lib.c' l='47' u='c' c='lib_create_table'/>
+<use f='luajit/luajit.c' l='159' u='c' c='createargtable'/>

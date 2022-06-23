@@ -1,0 +1,4 @@
+<dec f='luajit/host/minilua.c' l='66' type='2'/>
+<use f='luajit/host/minilua.c' l='3234' u='r' c='code_label'/>
+<use f='luajit/host/minilua.c' l='3244' u='r' c='discharge2reg'/>
+<use f='luajit/host/minilua.c' l='4967' c='luaV_execute'/>

@@ -1,0 +1,17 @@
+<dec f='luajit/lj_lex.h' l='47' type='uint8_t'/>
+<offset>128</offset>
+<doc f='luajit/lj_lex.h' l='47'>/* Variable slot. */</doc>
+<use f='luajit/lj_parse.c' l='1080' u='w' c='var_add'/>
+<use f='luajit/lj_parse.c' l='1170' u='w' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1186' u='r' c='gola_patch'/>
+<use f='luajit/lj_parse.c' l='1199' u='r' c='gola_close'/>
+<use f='luajit/lj_parse.c' l='1215' u='r' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1215' u='r' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1216' u='r' c='gola_resolve'/>
+<use f='luajit/lj_parse.c' l='1240' u='r' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1240' u='r' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1247' u='w' c='gola_fixup'/>
+<use f='luajit/lj_parse.c' l='1347' u='r' c='fs_fixup_uv2'/>
+<use f='luajit/lj_parse.c' l='1349' u='r' c='fs_fixup_uv2'/>
+<use f='luajit/lj_parse.c' l='2376' u='r' c='parse_goto'/>
+<use f='luajit/lj_parse.c' l='2409' u='w' c='parse_label'/>

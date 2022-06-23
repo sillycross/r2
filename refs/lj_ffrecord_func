@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ffrecord.h' l='21' type='void lj_ffrecord_func(jit_State * J)'/>
+<def f='luajit/lj_ffrecord.c' l='1189' ll='1202' type='void lj_ffrecord_func(jit_State * J)'/>
+<doc f='luajit/lj_ffrecord.c' l='1188'>/* Record entry to a fast function or C function. */</doc>
+<use f='luajit/lj_record.c' l='2478' u='c' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2483' u='c' c='lj_record_ins'/>

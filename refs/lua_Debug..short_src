@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='370' type='char [60]'/>
+<offset>448</offset>
+<doc f='luajit/lua.h' l='370'>/* (S) */</doc>
+<use f='luajit/lj_debug.c' l='685' c='luaL_traceback'/>
+<use f='luajit/lj_debug.c' l='697' c='luaL_traceback'/>

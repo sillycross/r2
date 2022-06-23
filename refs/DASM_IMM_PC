@@ -1,0 +1,4 @@
+<dec f='luajit/dasm_x86.h' l='23' type='247'/>
+<use f='luajit/dasm_x86.h' l='230' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='343' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='464' c='dasm_encode'/>

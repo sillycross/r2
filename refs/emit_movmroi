@@ -1,0 +1,12 @@
+<def f='luajit/lj_emit_x86.h' l='255' ll='259' type='void emit_movmroi(ASMState * as, Reg base, int32_t ofs, int32_t i)'/>
+<use f='luajit/lj_asm_x86.h' l='626' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='627' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='636' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='1068' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1069' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1078' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='2722' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2724' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2736' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2737' u='c' c='asm_stack_restore'/>
+<doc f='luajit/lj_emit_x86.h' l='254'>/* mov [base+ofs], i */</doc>

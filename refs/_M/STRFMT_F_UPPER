@@ -1,0 +1,9 @@
+<dec f='luajit/lj_strfmt.h' l='42'/>
+<use f='luajit/lib_bit.c' l='158' u='c'/>
+<use f='luajit/lj_crecord.c' l='1878' u='c'/>
+<use f='luajit/lj_strfmt.c' l='79' u='c'/>
+<use f='luajit/lj_strfmt.c' l='312' u='c'/>
+<use f='luajit/lj_strfmt.c' l='315' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='276' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='293' u='c'/>
+<use f='luajit/lj_strfmt_num.c' l='502' u='c'/>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_trace.h' l='31' type='int lj_trace_flushall(lua_State * L)'/>
+<use f='luajit/lj_api.c' l='1046' u='c' c='lua_setmetatable'/>
+<use f='luajit/lj_dispatch.c' l='251' u='c' c='luaJIT_setmode'/>
+<use f='luajit/lj_profile.c' l='315' u='c' c='luaJIT_profile_start'/>
+<use f='luajit/lj_profile.c' l='346' u='c' c='luaJIT_profile_stop'/>
+<def f='luajit/lj_trace.c' l='280' ll='307' type='int lj_trace_flushall(lua_State * L)'/>
+<use f='luajit/lj_trace.c' l='431' u='c' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='625' u='c' c='trace_abort'/>
+<doc f='luajit/lj_trace.c' l='279'>/* Flush all traces. */</doc>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_strfmt.h' l='17' type='const char *'/>
+<offset>128</offset>
+<doc f='luajit/lj_strfmt.h' l='17'>/* Returned literal string. */</doc>
+<use f='luajit/lj_ffrecord.c' l='963' u='r' c='recff_string_format'/>
+<use f='luajit/lj_strfmt.c' l='37' u='w' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='46' u='r' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='84' u='r' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='92' u='r' c='lj_strfmt_parse'/>
+<use f='luajit/lj_strfmt.c' l='382' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='385' u='r' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='557' u='r' c='lj_strfmt_pushvf'/>

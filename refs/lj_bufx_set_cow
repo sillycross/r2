@@ -1,0 +1,3 @@
+<def f='luajit/lj_buf.h' l='126' ll='132' type='void lj_bufx_set_cow(lua_State * L, SBufExt * sbx, const char * p, MSize len)'/>
+<use f='luajit/lib_buffer.c' l='106' u='c' c='lj_cf_buffer_method_set'/>
+<use f='luajit/lib_buffer.c' l='336' u='c' c='lj_cf_buffer_decode'/>

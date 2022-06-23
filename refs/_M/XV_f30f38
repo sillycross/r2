@@ -1,0 +1,2 @@
+<dec f='luajit/lj_target_x86.h' l='200'/>
+<use f='luajit/lj_target_x86.h' l='242' u='c'/>

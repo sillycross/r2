@@ -1,0 +1,2 @@
+<dec f='luajit/lj_lib.h' l='87'/>
+<use f='luajit/lib_base.c' l='112' u='c'/>

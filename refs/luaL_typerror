@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='32' type='int luaL_typerror(lua_State * L, int narg, const char * tname)'/>
+<def f='luajit/lj_err.c' l='1069' ll='1073' macro='1' type='int luaL_typerror(lua_State * L, int narg, const char * xname)'/>

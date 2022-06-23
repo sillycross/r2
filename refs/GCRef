@@ -1,0 +1,5 @@
+<def f='luajit/lj_obj.h' l='54' ll='60'/>
+<use f='luajit/lj_obj.h' l='54'/>
+<size>8</size>
+<doc f='luajit/lj_obj.h' l='53'>/* GCobj reference */</doc>
+<mbr r='GCRef::gcptr64' o='0' t='uint64_t'/>

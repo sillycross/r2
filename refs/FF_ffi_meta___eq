@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ffdef.h' l='167' macro='1' type='166'/>
+<use f='luajit/lib_ffi.c' l='185' u='r' c='ffi_arith'/>

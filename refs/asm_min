@@ -1,0 +1,2 @@
+<def f='luajit/lj_asm_x86.h' l='2233' ll='2239' type='void asm_min(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm.c' l='1773' u='c' c='asm_ir'/>

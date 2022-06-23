@@ -1,0 +1,12 @@
+<def f='luajit/lj_obj.h' l='461' ll='464'/>
+<use f='luajit/lj_obj.h' l='461'/>
+<size>48</size>
+<mbr r='GCfuncL::nextgc' o='0' t='GCRef'/>
+<mbr r='GCfuncL::marked' o='64' t='uint8_t'/>
+<mbr r='GCfuncL::gct' o='72' t='uint8_t'/>
+<mbr r='GCfuncL::ffid' o='80' t='uint8_t'/>
+<mbr r='GCfuncL::nupvalues' o='88' t='uint8_t'/>
+<mbr r='GCfuncL::env' o='128' t='GCRef'/>
+<mbr r='GCfuncL::gclist' o='192' t='GCRef'/>
+<mbr r='GCfuncL::pc' o='256' t='MRef'/>
+<mbr r='GCfuncL::uvptr' o='320' t='GCRef [1]'/>

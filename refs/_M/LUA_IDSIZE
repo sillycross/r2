@@ -1,0 +1,12 @@
+<dec f='luajit/luaconf.h' l='105'/>
+<use f='luajit/lua.h' l='370' u='c'/>
+<use f='luajit/lj_debug.h' l='22' u='c'/>
+<use f='luajit/lj_debug.c' l='328' u='c'/>
+<use f='luajit/lj_debug.c' l='329' u='c'/>
+<use f='luajit/lj_debug.c' l='333' u='c'/>
+<use f='luajit/lj_debug.c' l='334' u='c'/>
+<use f='luajit/lj_debug.c' l='340' u='c'/>
+<use f='luajit/lj_debug.c' l='344' u='c'/>
+<use f='luajit/lj_debug.c' l='344' u='c'/>
+<use f='luajit/lj_debug.c' l='364' u='c'/>
+<use f='luajit/lj_err.c' l='887' u='c'/>

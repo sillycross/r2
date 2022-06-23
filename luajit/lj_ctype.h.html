@@ -1,0 +1,499 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_ctype.h source code [luajit/lj_ctype.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="CCallback,CTState,CType,FPRCBArg "/>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_ctype.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_ctype.h.html'>lj_ctype.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** C type management.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_CTYPE_H">_LJ_CTYPE_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_CTYPE_H" data-ref="_M/_LJ_CTYPE_H">_LJ_CTYPE_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_gc.h.html">"lj_gc.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><u>#<span data-ppcond="12">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="13">13</th><td></td></tr>
+<tr><th id="14">14</th><td><i>/* -- C type definitions -------------------------------------------------- */</i></td></tr>
+<tr><th id="15">15</th><td></td></tr>
+<tr><th id="16">16</th><td><i>/* C type numbers. Highest 4 bits of C type info. ORDER CT. */</i></td></tr>
+<tr><th id="17">17</th><td><b>enum</b> {</td></tr>
+<tr><th id="18">18</th><td>  <i>/* Externally visible types. */</i></td></tr>
+<tr><th id="19">19</th><td>  <dfn class="enum" id="CT_NUM" title='CT_NUM' data-ref="CT_NUM" data-ref-filename="CT_NUM">CT_NUM</dfn>,		<i>/* Integer or floating-point numbers. */</i></td></tr>
+<tr><th id="20">20</th><td>  <dfn class="enum" id="CT_STRUCT" title='CT_STRUCT' data-ref="CT_STRUCT" data-ref-filename="CT_STRUCT">CT_STRUCT</dfn>,		<i>/* Struct or union. */</i></td></tr>
+<tr><th id="21">21</th><td>  <dfn class="enum" id="CT_PTR" title='CT_PTR' data-ref="CT_PTR" data-ref-filename="CT_PTR">CT_PTR</dfn>,		<i>/* Pointer or reference. */</i></td></tr>
+<tr><th id="22">22</th><td>  <dfn class="enum" id="CT_ARRAY" title='CT_ARRAY' data-ref="CT_ARRAY" data-ref-filename="CT_ARRAY">CT_ARRAY</dfn>,		<i>/* Array or complex type. */</i></td></tr>
+<tr><th id="23">23</th><td>  <dfn class="enum" id="CT_MAYCONVERT" title='CT_MAYCONVERT' data-ref="CT_MAYCONVERT" data-ref-filename="CT_MAYCONVERT">CT_MAYCONVERT</dfn> = <a class="enum" href="#CT_ARRAY" title='CT_ARRAY' data-ref="CT_ARRAY" data-ref-filename="CT_ARRAY">CT_ARRAY</a>,</td></tr>
+<tr><th id="24">24</th><td>  <dfn class="enum" id="CT_VOID" title='CT_VOID' data-ref="CT_VOID" data-ref-filename="CT_VOID">CT_VOID</dfn>,		<i>/* Void type. */</i></td></tr>
+<tr><th id="25">25</th><td>  <dfn class="enum" id="CT_ENUM" title='CT_ENUM' data-ref="CT_ENUM" data-ref-filename="CT_ENUM">CT_ENUM</dfn>,		<i>/* Enumeration. */</i></td></tr>
+<tr><th id="26">26</th><td>  <dfn class="enum" id="CT_HASSIZE" title='CT_HASSIZE' data-ref="CT_HASSIZE" data-ref-filename="CT_HASSIZE">CT_HASSIZE</dfn> = <a class="enum" href="#CT_ENUM" title='CT_ENUM' data-ref="CT_ENUM" data-ref-filename="CT_ENUM">CT_ENUM</a>,  <i>/* Last type where ct-&gt;size holds the actual size. */</i></td></tr>
+<tr><th id="27">27</th><td>  <dfn class="enum" id="CT_FUNC" title='CT_FUNC' data-ref="CT_FUNC" data-ref-filename="CT_FUNC">CT_FUNC</dfn>,		<i>/* Function. */</i></td></tr>
+<tr><th id="28">28</th><td>  <dfn class="enum" id="CT_TYPEDEF" title='CT_TYPEDEF' data-ref="CT_TYPEDEF" data-ref-filename="CT_TYPEDEF">CT_TYPEDEF</dfn>,		<i>/* Typedef. */</i></td></tr>
+<tr><th id="29">29</th><td>  <dfn class="enum" id="CT_ATTRIB" title='CT_ATTRIB' data-ref="CT_ATTRIB" data-ref-filename="CT_ATTRIB">CT_ATTRIB</dfn>,		<i>/* Miscellaneous attributes. */</i></td></tr>
+<tr><th id="30">30</th><td>  <i>/* Internal element types. */</i></td></tr>
+<tr><th id="31">31</th><td>  <dfn class="enum" id="CT_FIELD" title='CT_FIELD' data-ref="CT_FIELD" data-ref-filename="CT_FIELD">CT_FIELD</dfn>,		<i>/* Struct/union field or function parameter. */</i></td></tr>
+<tr><th id="32">32</th><td>  <dfn class="enum" id="CT_BITFIELD" title='CT_BITFIELD' data-ref="CT_BITFIELD" data-ref-filename="CT_BITFIELD">CT_BITFIELD</dfn>,		<i>/* Struct/union bitfield. */</i></td></tr>
+<tr><th id="33">33</th><td>  <dfn class="enum" id="CT_CONSTVAL" title='CT_CONSTVAL' data-ref="CT_CONSTVAL" data-ref-filename="CT_CONSTVAL">CT_CONSTVAL</dfn>,		<i>/* Constant value. */</i></td></tr>
+<tr><th id="34">34</th><td>  <dfn class="enum" id="CT_EXTERN" title='CT_EXTERN' data-ref="CT_EXTERN" data-ref-filename="CT_EXTERN">CT_EXTERN</dfn>,		<i>/* External reference. */</i></td></tr>
+<tr><th id="35">35</th><td>  <dfn class="enum" id="CT_KW" title='CT_KW' data-ref="CT_KW" data-ref-filename="CT_KW">CT_KW</dfn>			<i>/* Keyword. */</i></td></tr>
+<tr><th id="36">36</th><td>};</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_88(int STATIC_ASSERTION_FAILED[(((int)CT_PTR &amp; (int)CT_ARRAY) == CT_PTR)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#CT_PTR" title='CT_PTR' data-ref="CT_PTR" data-ref-filename="CT_PTR">CT_PTR</a> &amp; (<em>int</em>)<a class="enum" href="#CT_ARRAY" title='CT_ARRAY' data-ref="CT_ARRAY" data-ref-filename="CT_ARRAY">CT_ARRAY</a>) == <a class="enum" href="#CT_PTR" title='CT_PTR' data-ref="CT_PTR" data-ref-filename="CT_PTR">CT_PTR</a>);</td></tr>
+<tr><th id="39">39</th><td><a class="macro" href="lj_def.h.html#369" title="extern void lj_assert_90(int STATIC_ASSERTION_FAILED[(((int)CT_STRUCT &amp; (int)CT_ARRAY) == CT_STRUCT)?1:-1])" data-ref="_M/LJ_STATIC_ASSERT">LJ_STATIC_ASSERT</a>(((<em>int</em>)<a class="enum" href="#CT_STRUCT" title='CT_STRUCT' data-ref="CT_STRUCT" data-ref-filename="CT_STRUCT">CT_STRUCT</a> &amp; (<em>int</em>)<a class="enum" href="#CT_ARRAY" title='CT_ARRAY' data-ref="CT_ARRAY" data-ref-filename="CT_ARRAY">CT_ARRAY</a>) == <a class="enum" href="#CT_STRUCT" title='CT_STRUCT' data-ref="CT_STRUCT" data-ref-filename="CT_STRUCT">CT_STRUCT</a>);</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i>/*</i></td></tr>
+<tr><th id="42">42</th><td><i>**  ---------- info ------------</i></td></tr>
+<tr><th id="43">43</th><td><i>** |type      flags...  A   cid | size   |  sib  | next  | name  |</i></td></tr>
+<tr><th id="44">44</th><td><i>** +----------------------------+--------+-------+-------+-------+--</i></td></tr>
+<tr><th id="45">45</th><td><i>** |NUM       BFcvUL..  A       | size   |       | type  |       |</i></td></tr>
+<tr><th id="46">46</th><td><i>** |STRUCT    ..cvU..V  A       | size   | field | name? | name? |</i></td></tr>
+<tr><th id="47">47</th><td><i>** |PTR       ..cvR...  A   cid | size   |       | type  |       |</i></td></tr>
+<tr><th id="48">48</th><td><i>** |ARRAY     VCcv...V  A   cid | size   |       | type  |       |</i></td></tr>
+<tr><th id="49">49</th><td><i>** |VOID      ..cv....  A       | size   |       | type  |       |</i></td></tr>
+<tr><th id="50">50</th><td><i>** |ENUM                A   cid | size   | const | name? | name? |</i></td></tr>
+<tr><th id="51">51</th><td><i>** |FUNC      ....VS.. cc   cid | nargs  | field | name? | name? |</i></td></tr>
+<tr><th id="52">52</th><td><i>** |TYPEDEF                 cid |        |       | name  | name  |</i></td></tr>
+<tr><th id="53">53</th><td><i>** |ATTRIB        attrnum   cid | attr   | sib?  | type? |       |</i></td></tr>
+<tr><th id="54">54</th><td><i>** |FIELD                   cid | offset | field |       | name? |</i></td></tr>
+<tr><th id="55">55</th><td><i>** |BITFIELD  B.cvU csz bsz pos | offset | field |       | name? |</i></td></tr>
+<tr><th id="56">56</th><td><i>** |CONSTVAL    c           cid | value  | const | name  | name  |</i></td></tr>
+<tr><th id="57">57</th><td><i>** |EXTERN                  cid |        | sib?  | name  | name  |</i></td></tr>
+<tr><th id="58">58</th><td><i>** |KW                      tok | size   |       | name  | name  |</i></td></tr>
+<tr><th id="59">59</th><td><i>** +----------------------------+--------+-------+-------+-------+--</i></td></tr>
+<tr><th id="60">60</th><td><i>**        ^^  ^^--- bits used for C type conversion dispatch</i></td></tr>
+<tr><th id="61">61</th><td><i>*/</i></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><i>/* C type info flags.     TFFArrrr  */</i></td></tr>
+<tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/CTF_BOOL" data-ref="_M/CTF_BOOL">CTF_BOOL</dfn>	0x08000000u	/* Boolean: NUM, BITFIELD. */</u></td></tr>
+<tr><th id="65">65</th><td><u>#define <dfn class="macro" id="_M/CTF_FP" data-ref="_M/CTF_FP">CTF_FP</dfn>		0x04000000u	/* Floating-point: NUM. */</u></td></tr>
+<tr><th id="66">66</th><td><u>#define <dfn class="macro" id="_M/CTF_CONST" data-ref="_M/CTF_CONST">CTF_CONST</dfn>	0x02000000u	/* Const qualifier. */</u></td></tr>
+<tr><th id="67">67</th><td><u>#define <dfn class="macro" id="_M/CTF_VOLATILE" data-ref="_M/CTF_VOLATILE">CTF_VOLATILE</dfn>	0x01000000u	/* Volatile qualifier. */</u></td></tr>
+<tr><th id="68">68</th><td><u>#define <dfn class="macro" id="_M/CTF_UNSIGNED" data-ref="_M/CTF_UNSIGNED">CTF_UNSIGNED</dfn>	0x00800000u	/* Unsigned: NUM, BITFIELD. */</u></td></tr>
+<tr><th id="69">69</th><td><u>#define <dfn class="macro" id="_M/CTF_LONG" data-ref="_M/CTF_LONG">CTF_LONG</dfn>	0x00400000u	/* Long: NUM. */</u></td></tr>
+<tr><th id="70">70</th><td><u>#define <dfn class="macro" id="_M/CTF_VLA" data-ref="_M/CTF_VLA">CTF_VLA</dfn>		0x00100000u	/* Variable-length: ARRAY, STRUCT. */</u></td></tr>
+<tr><th id="71">71</th><td><u>#define <dfn class="macro" id="_M/CTF_REF" data-ref="_M/CTF_REF">CTF_REF</dfn>		0x00800000u	/* Reference: PTR. */</u></td></tr>
+<tr><th id="72">72</th><td><u>#define <dfn class="macro" id="_M/CTF_VECTOR" data-ref="_M/CTF_VECTOR">CTF_VECTOR</dfn>	0x08000000u	/* Vector: ARRAY. */</u></td></tr>
+<tr><th id="73">73</th><td><u>#define <dfn class="macro" id="_M/CTF_COMPLEX" data-ref="_M/CTF_COMPLEX">CTF_COMPLEX</dfn>	0x04000000u	/* Complex: ARRAY. */</u></td></tr>
+<tr><th id="74">74</th><td><u>#define <dfn class="macro" id="_M/CTF_UNION" data-ref="_M/CTF_UNION">CTF_UNION</dfn>	0x00800000u	/* Union: STRUCT. */</u></td></tr>
+<tr><th id="75">75</th><td><u>#define <dfn class="macro" id="_M/CTF_VARARG" data-ref="_M/CTF_VARARG">CTF_VARARG</dfn>	0x00800000u	/* Vararg: FUNC. */</u></td></tr>
+<tr><th id="76">76</th><td><u>#define <dfn class="macro" id="_M/CTF_SSEREGPARM" data-ref="_M/CTF_SSEREGPARM">CTF_SSEREGPARM</dfn>	0x00400000u	/* SSE register parameters: FUNC. */</u></td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><u>#define <dfn class="macro" id="_M/CTF_QUAL" data-ref="_M/CTF_QUAL">CTF_QUAL</dfn>	(CTF_CONST|CTF_VOLATILE)</u></td></tr>
+<tr><th id="79">79</th><td><u>#define <dfn class="macro" id="_M/CTF_ALIGN" data-ref="_M/CTF_ALIGN">CTF_ALIGN</dfn>	(CTMASK_ALIGN&lt;&lt;CTSHIFT_ALIGN)</u></td></tr>
+<tr><th id="80">80</th><td><u>#define <dfn class="macro" id="_M/CTF_UCHAR" data-ref="_M/CTF_UCHAR">CTF_UCHAR</dfn>	((char)-1 &gt; 0 ? CTF_UNSIGNED : 0)</u></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><i>/* Flags used in parser.  .F.Ammvf   cp-&gt;attr  */</i></td></tr>
+<tr><th id="83">83</th><td><u>#define <dfn class="macro" id="_M/CTFP_ALIGNED" data-ref="_M/CTFP_ALIGNED">CTFP_ALIGNED</dfn>	0x00000001u	/* cp-&gt;attr + ALIGN */</u></td></tr>
+<tr><th id="84">84</th><td><u>#define <dfn class="macro" id="_M/CTFP_PACKED" data-ref="_M/CTFP_PACKED">CTFP_PACKED</dfn>	0x00000002u	/* cp-&gt;attr */</u></td></tr>
+<tr><th id="85">85</th><td><i>/*                        ...C...f   cp-&gt;fattr */</i></td></tr>
+<tr><th id="86">86</th><td><u>#define <dfn class="macro" id="_M/CTFP_CCONV" data-ref="_M/CTFP_CCONV">CTFP_CCONV</dfn>	0x00000001u	/* cp-&gt;fattr + CCONV/[SSE]REGPARM */</u></td></tr>
+<tr><th id="87">87</th><td></td></tr>
+<tr><th id="88">88</th><td><i>/* C type info bitfields. */</i></td></tr>
+<tr><th id="89">89</th><td><u>#define <dfn class="macro" id="_M/CTMASK_CID" data-ref="_M/CTMASK_CID">CTMASK_CID</dfn>	0x0000ffffu	/* Max. 65536 type IDs. */</u></td></tr>
+<tr><th id="90">90</th><td><u>#define <dfn class="macro" id="_M/CTMASK_NUM" data-ref="_M/CTMASK_NUM">CTMASK_NUM</dfn>	0xf0000000u	/* Max. 16 type numbers. */</u></td></tr>
+<tr><th id="91">91</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_NUM" data-ref="_M/CTSHIFT_NUM">CTSHIFT_NUM</dfn>	28</u></td></tr>
+<tr><th id="92">92</th><td><u>#define <dfn class="macro" id="_M/CTMASK_ALIGN" data-ref="_M/CTMASK_ALIGN">CTMASK_ALIGN</dfn>	15		/* Max. alignment is 2^15. */</u></td></tr>
+<tr><th id="93">93</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_ALIGN" data-ref="_M/CTSHIFT_ALIGN">CTSHIFT_ALIGN</dfn>	16</u></td></tr>
+<tr><th id="94">94</th><td><u>#define <dfn class="macro" id="_M/CTMASK_ATTRIB" data-ref="_M/CTMASK_ATTRIB">CTMASK_ATTRIB</dfn>	255		/* Max. 256 attributes. */</u></td></tr>
+<tr><th id="95">95</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_ATTRIB" data-ref="_M/CTSHIFT_ATTRIB">CTSHIFT_ATTRIB</dfn>	16</u></td></tr>
+<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/CTMASK_CCONV" data-ref="_M/CTMASK_CCONV">CTMASK_CCONV</dfn>	3		/* Max. 4 calling conventions. */</u></td></tr>
+<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_CCONV" data-ref="_M/CTSHIFT_CCONV">CTSHIFT_CCONV</dfn>	16</u></td></tr>
+<tr><th id="98">98</th><td><u>#define <dfn class="macro" id="_M/CTMASK_REGPARM" data-ref="_M/CTMASK_REGPARM">CTMASK_REGPARM</dfn>	3		/* Max. 0-3 regparms. */</u></td></tr>
+<tr><th id="99">99</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_REGPARM" data-ref="_M/CTSHIFT_REGPARM">CTSHIFT_REGPARM</dfn>	18</u></td></tr>
+<tr><th id="100">100</th><td><i>/* Bitfields only used in parser. */</i></td></tr>
+<tr><th id="101">101</th><td><u>#define <dfn class="macro" id="_M/CTMASK_VSIZEP" data-ref="_M/CTMASK_VSIZEP">CTMASK_VSIZEP</dfn>	15		/* Max. vector size is 2^15. */</u></td></tr>
+<tr><th id="102">102</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_VSIZEP" data-ref="_M/CTSHIFT_VSIZEP">CTSHIFT_VSIZEP</dfn>	4</u></td></tr>
+<tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/CTMASK_MSIZEP" data-ref="_M/CTMASK_MSIZEP">CTMASK_MSIZEP</dfn>	255		/* Max. type size (via mode) is 128. */</u></td></tr>
+<tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_MSIZEP" data-ref="_M/CTSHIFT_MSIZEP">CTSHIFT_MSIZEP</dfn>	8</u></td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><i>/* Info bits for BITFIELD. Max. size of bitfield is 64 bits. */</i></td></tr>
+<tr><th id="107">107</th><td><u>#define <dfn class="macro" id="_M/CTBSZ_MAX" data-ref="_M/CTBSZ_MAX">CTBSZ_MAX</dfn>	32		/* Max. size of bitfield is 32 bit. */</u></td></tr>
+<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/CTBSZ_FIELD" data-ref="_M/CTBSZ_FIELD">CTBSZ_FIELD</dfn>	127		/* Temp. marker for regular field. */</u></td></tr>
+<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/CTMASK_BITPOS" data-ref="_M/CTMASK_BITPOS">CTMASK_BITPOS</dfn>	127</u></td></tr>
+<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/CTMASK_BITBSZ" data-ref="_M/CTMASK_BITBSZ">CTMASK_BITBSZ</dfn>	127</u></td></tr>
+<tr><th id="111">111</th><td><u>#define <dfn class="macro" id="_M/CTMASK_BITCSZ" data-ref="_M/CTMASK_BITCSZ">CTMASK_BITCSZ</dfn>	127</u></td></tr>
+<tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_BITPOS" data-ref="_M/CTSHIFT_BITPOS">CTSHIFT_BITPOS</dfn>	0</u></td></tr>
+<tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_BITBSZ" data-ref="_M/CTSHIFT_BITBSZ">CTSHIFT_BITBSZ</dfn>	8</u></td></tr>
+<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/CTSHIFT_BITCSZ" data-ref="_M/CTSHIFT_BITCSZ">CTSHIFT_BITCSZ</dfn>	16</u></td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/CTF_INSERT" data-ref="_M/CTF_INSERT">CTF_INSERT</dfn>(info, field, val) \</u></td></tr>
+<tr><th id="117">117</th><td><u>  info = (info &amp; ~(CTMASK_##field&lt;&lt;CTSHIFT_##field)) | \</u></td></tr>
+<tr><th id="118">118</th><td><u>	  (((CTSize)(val) &amp; CTMASK_##field) &lt;&lt; CTSHIFT_##field)</u></td></tr>
+<tr><th id="119">119</th><td></td></tr>
+<tr><th id="120">120</th><td><i>/* Calling conventions. ORDER CC */</i></td></tr>
+<tr><th id="121">121</th><td><b>enum</b> { <dfn class="enum" id="CTCC_CDECL" title='CTCC_CDECL' data-ref="CTCC_CDECL" data-ref-filename="CTCC_CDECL">CTCC_CDECL</dfn>, <dfn class="enum" id="CTCC_THISCALL" title='CTCC_THISCALL' data-ref="CTCC_THISCALL" data-ref-filename="CTCC_THISCALL">CTCC_THISCALL</dfn>, <dfn class="enum" id="CTCC_FASTCALL" title='CTCC_FASTCALL' data-ref="CTCC_FASTCALL" data-ref-filename="CTCC_FASTCALL">CTCC_FASTCALL</dfn>, <dfn class="enum" id="CTCC_STDCALL" title='CTCC_STDCALL' data-ref="CTCC_STDCALL" data-ref-filename="CTCC_STDCALL">CTCC_STDCALL</dfn> };</td></tr>
+<tr><th id="122">122</th><td></td></tr>
+<tr><th id="123">123</th><td><i>/* Attribute numbers. */</i></td></tr>
+<tr><th id="124">124</th><td><b>enum</b> {</td></tr>
+<tr><th id="125">125</th><td>  <dfn class="enum" id="CTA_NONE" title='CTA_NONE' data-ref="CTA_NONE" data-ref-filename="CTA_NONE">CTA_NONE</dfn>,		<i>/* Ignored attribute. Must be zero. */</i></td></tr>
+<tr><th id="126">126</th><td>  <dfn class="enum" id="CTA_QUAL" title='CTA_QUAL' data-ref="CTA_QUAL" data-ref-filename="CTA_QUAL">CTA_QUAL</dfn>,		<i>/* Unmerged qualifiers. */</i></td></tr>
+<tr><th id="127">127</th><td>  <dfn class="enum" id="CTA_ALIGN" title='CTA_ALIGN' data-ref="CTA_ALIGN" data-ref-filename="CTA_ALIGN">CTA_ALIGN</dfn>,		<i>/* Alignment override. */</i></td></tr>
+<tr><th id="128">128</th><td>  <dfn class="enum" id="CTA_SUBTYPE" title='CTA_SUBTYPE' data-ref="CTA_SUBTYPE" data-ref-filename="CTA_SUBTYPE">CTA_SUBTYPE</dfn>,		<i>/* Transparent sub-type. */</i></td></tr>
+<tr><th id="129">129</th><td>  <dfn class="enum" id="CTA_REDIR" title='CTA_REDIR' data-ref="CTA_REDIR" data-ref-filename="CTA_REDIR">CTA_REDIR</dfn>,		<i>/* Redirected symbol name. */</i></td></tr>
+<tr><th id="130">130</th><td>  <dfn class="enum" id="CTA_BAD" title='CTA_BAD' data-ref="CTA_BAD" data-ref-filename="CTA_BAD">CTA_BAD</dfn>,		<i>/* To catch bad IDs. */</i></td></tr>
+<tr><th id="131">131</th><td>  <dfn class="enum" id="CTA__MAX" title='CTA__MAX' data-ref="CTA__MAX" data-ref-filename="CTA__MAX">CTA__MAX</dfn></td></tr>
+<tr><th id="132">132</th><td>};</td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td><i>/* Special sizes. */</i></td></tr>
+<tr><th id="135">135</th><td><u>#define <dfn class="macro" id="_M/CTSIZE_INVALID" data-ref="_M/CTSIZE_INVALID">CTSIZE_INVALID</dfn>	0xffffffffu</u></td></tr>
+<tr><th id="136">136</th><td></td></tr>
+<tr><th id="137">137</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="CTInfo" title='CTInfo' data-type='uint32_t' data-ref="CTInfo" data-ref-filename="CTInfo">CTInfo</dfn>;	<i>/* Type info. */</i></td></tr>
+<tr><th id="138">138</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</dfn>;	<i>/* Type size. */</i></td></tr>
+<tr><th id="139">139</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="typedef" id="CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</dfn>;	<i>/* Type ID. */</i></td></tr>
+<tr><th id="140">140</th><td><b>typedef</b> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint16_t" title='uint16_t' data-type='__uint16_t' data-ref="uint16_t" data-ref-filename="uint16_t">uint16_t</a> <dfn class="typedef" id="CTypeID1" title='CTypeID1' data-type='uint16_t' data-ref="CTypeID1" data-ref-filename="CTypeID1">CTypeID1</dfn>;	<i>/* Minimum-sized type ID. */</i></td></tr>
+<tr><th id="141">141</th><td></td></tr>
+<tr><th id="142">142</th><td><i>/* C type table element. */</i></td></tr>
+<tr><th id="143">143</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="CType" title='CType' data-ref="CType" data-ref-filename="CType"><a class="type" href="#CType" title='CType' data-ref="CType" data-ref-filename="CType">CType</a></dfn> {</td></tr>
+<tr><th id="144">144</th><td>  <a class="typedef" href="#CTInfo" title='CTInfo' data-type='uint32_t' data-ref="CTInfo" data-ref-filename="CTInfo">CTInfo</a> <dfn class="decl field" id="CType::info" title='CType::info' data-ref="CType::info" data-ref-filename="CType..info">info</dfn>;		<i>/* Type info. */</i></td></tr>
+<tr><th id="145">145</th><td>  <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> <dfn class="decl field" id="CType::size" title='CType::size' data-ref="CType::size" data-ref-filename="CType..size">size</dfn>;		<i>/* Type size or other info. */</i></td></tr>
+<tr><th id="146">146</th><td>  <a class="typedef" href="#CTypeID1" title='CTypeID1' data-type='uint16_t' data-ref="CTypeID1" data-ref-filename="CTypeID1">CTypeID1</a> <dfn class="decl field" id="CType::sib" title='CType::sib' data-ref="CType::sib" data-ref-filename="CType..sib">sib</dfn>;		<i>/* Sibling element. */</i></td></tr>
+<tr><th id="147">147</th><td>  <a class="typedef" href="#CTypeID1" title='CTypeID1' data-type='uint16_t' data-ref="CTypeID1" data-ref-filename="CTypeID1">CTypeID1</a> <dfn class="decl field" id="CType::next" title='CType::next' data-ref="CType::next" data-ref-filename="CType..next">next</dfn>;	<i>/* Next element in hash chain. */</i></td></tr>
+<tr><th id="148">148</th><td>  <a class="typedef" href="lj_obj.h.html#GCRef" title='GCRef' data-type='struct GCRef' data-ref="GCRef" data-ref-filename="GCRef">GCRef</a> <dfn class="decl field" id="CType::name" title='CType::name' data-ref="CType::name" data-ref-filename="CType..name">name</dfn>;		<i>/* Element name (GCstr). */</i></td></tr>
+<tr><th id="149">149</th><td>} <dfn class="typedef" id="CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</dfn>;</td></tr>
+<tr><th id="150">150</th><td></td></tr>
+<tr><th id="151">151</th><td><u>#define <dfn class="macro" id="_M/CTHASH_SIZE" data-ref="_M/CTHASH_SIZE">CTHASH_SIZE</dfn>	128	/* Number of hash anchors. */</u></td></tr>
+<tr><th id="152">152</th><td><u>#define <dfn class="macro" id="_M/CTHASH_MASK" data-ref="_M/CTHASH_MASK">CTHASH_MASK</dfn>	(CTHASH_SIZE-1)</u></td></tr>
+<tr><th id="153">153</th><td></td></tr>
+<tr><th id="154">154</th><td><i>/* Simplify target-specific configuration. Checked in lj_ccall.h. */</i></td></tr>
+<tr><th id="155">155</th><td><u>#define <dfn class="macro" id="_M/CCALL_MAX_GPR" data-ref="_M/CCALL_MAX_GPR">CCALL_MAX_GPR</dfn>		8</u></td></tr>
+<tr><th id="156">156</th><td><u>#define <dfn class="macro" id="_M/CCALL_MAX_FPR" data-ref="_M/CCALL_MAX_FPR">CCALL_MAX_FPR</dfn>		8</u></td></tr>
+<tr><th id="157">157</th><td></td></tr>
+<tr><th id="158">158</th><td><b>typedef</b> <a class="macro" href="lj_def.h.html#126" title="__attribute__((aligned(8)))" data-ref="_M/LJ_ALIGN">LJ_ALIGN</a>(<var>8</var>) <b>union</b> <dfn class="type def" id="FPRCBArg" title='FPRCBArg' data-ref="FPRCBArg" data-ref-filename="FPRCBArg"><a class="type" href="#FPRCBArg" title='FPRCBArg' data-ref="FPRCBArg" data-ref-filename="FPRCBArg">FPRCBArg</a></dfn> { <em>double</em> <dfn class="decl field" id="FPRCBArg::d" title='FPRCBArg::d' data-ref="FPRCBArg::d" data-ref-filename="FPRCBArg..d">d</dfn>; <em>float</em> <dfn class="decl field" id="FPRCBArg::f" title='FPRCBArg::f' data-ref="FPRCBArg::f" data-ref-filename="FPRCBArg..f">f</dfn>[<var>2</var>]; } <dfn class="typedef" id="FPRCBArg" title='FPRCBArg' data-type='union FPRCBArg' data-ref="FPRCBArg" data-ref-filename="FPRCBArg">FPRCBArg</dfn>;</td></tr>
+<tr><th id="159">159</th><td></td></tr>
+<tr><th id="160">160</th><td><i>/* C callback state. Defined here, to avoid dragging in lj_ccall.h. */</i></td></tr>
+<tr><th id="161">161</th><td></td></tr>
+<tr><th id="162">162</th><td><b>typedef</b> <a class="macro" href="lj_def.h.html#126" title="__attribute__((aligned(8)))" data-ref="_M/LJ_ALIGN">LJ_ALIGN</a>(<var>8</var>) <b>struct</b> <dfn class="type def" id="CCallback" title='CCallback' data-ref="CCallback" data-ref-filename="CCallback"><a class="type" href="#CCallback" title='CCallback' data-ref="CCallback" data-ref-filename="CCallback">CCallback</a></dfn> {</td></tr>
+<tr><th id="163">163</th><td>  <a class="typedef" href="#FPRCBArg" title='FPRCBArg' data-type='union FPRCBArg' data-ref="FPRCBArg" data-ref-filename="FPRCBArg">FPRCBArg</a> <dfn class="decl field" id="CCallback::fpr" title='CCallback::fpr' data-ref="CCallback::fpr" data-ref-filename="CCallback..fpr">fpr</dfn>[<a class="macro" href="#156" title="8" data-ref="_M/CCALL_MAX_FPR">CCALL_MAX_FPR</a>];	<i>/* Arguments/results in FPRs. */</i></td></tr>
+<tr><th id="164">164</th><td>  <a class="typedef" href="../include/stdint.h.html#intptr_t" title='intptr_t' data-type='long' data-ref="intptr_t" data-ref-filename="intptr_t">intptr_t</a> <dfn class="decl field" id="CCallback::gpr" title='CCallback::gpr' data-ref="CCallback::gpr" data-ref-filename="CCallback..gpr">gpr</dfn>[<a class="macro" href="#155" title="8" data-ref="_M/CCALL_MAX_GPR">CCALL_MAX_GPR</a>];	<i>/* Arguments/results in GPRs. */</i></td></tr>
+<tr><th id="165">165</th><td>  <a class="typedef" href="../include/stdint.h.html#intptr_t" title='intptr_t' data-type='long' data-ref="intptr_t" data-ref-filename="intptr_t">intptr_t</a> *<dfn class="decl field" id="CCallback::stack" title='CCallback::stack' data-ref="CCallback::stack" data-ref-filename="CCallback..stack">stack</dfn>;		<i>/* Pointer to arguments on stack. */</i></td></tr>
+<tr><th id="166">166</th><td>  <em>void</em> *<dfn class="decl field" id="CCallback::mcode" title='CCallback::mcode' data-ref="CCallback::mcode" data-ref-filename="CCallback..mcode">mcode</dfn>;			<i>/* Machine code for callback func. pointers. */</i></td></tr>
+<tr><th id="167">167</th><td>  <a class="typedef" href="#CTypeID1" title='CTypeID1' data-type='uint16_t' data-ref="CTypeID1" data-ref-filename="CTypeID1">CTypeID1</a> *<dfn class="decl field" id="CCallback::cbid" title='CCallback::cbid' data-ref="CCallback::cbid" data-ref-filename="CCallback..cbid">cbid</dfn>;		<i>/* Callback type table. */</i></td></tr>
+<tr><th id="168">168</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="CCallback::sizeid" title='CCallback::sizeid' data-ref="CCallback::sizeid" data-ref-filename="CCallback..sizeid">sizeid</dfn>;			<i>/* Size of callback type table. */</i></td></tr>
+<tr><th id="169">169</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="CCallback::topid" title='CCallback::topid' data-ref="CCallback::topid" data-ref-filename="CCallback..topid">topid</dfn>;			<i>/* Highest unused callback type table slot. */</i></td></tr>
+<tr><th id="170">170</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="CCallback::slot" title='CCallback::slot' data-ref="CCallback::slot" data-ref-filename="CCallback..slot">slot</dfn>;			<i>/* Current callback slot. */</i></td></tr>
+<tr><th id="171">171</th><td>} <dfn class="typedef" id="CCallback" title='CCallback' data-type='struct CCallback' data-ref="CCallback" data-ref-filename="CCallback">CCallback</dfn>;</td></tr>
+<tr><th id="172">172</th><td></td></tr>
+<tr><th id="173">173</th><td><i>/* C type state. */</i></td></tr>
+<tr><th id="174">174</th><td><b>typedef</b> <b>struct</b> <dfn class="type def" id="CTState" title='CTState' data-ref="CTState" data-ref-filename="CTState"><a class="type" href="#CTState" title='CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a></dfn> {</td></tr>
+<tr><th id="175">175</th><td>  <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl field" id="CTState::tab" title='CTState::tab' data-ref="CTState::tab" data-ref-filename="CTState..tab">tab</dfn>;		<i>/* C type table. */</i></td></tr>
+<tr><th id="176">176</th><td>  <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl field" id="CTState::top" title='CTState::top' data-ref="CTState::top" data-ref-filename="CTState..top">top</dfn>;		<i>/* Current top of C type table. */</i></td></tr>
+<tr><th id="177">177</th><td>  <a class="typedef" href="lj_obj.h.html#MSize" title='MSize' data-type='uint32_t' data-ref="MSize" data-ref-filename="MSize">MSize</a> <dfn class="decl field" id="CTState::sizetab" title='CTState::sizetab' data-ref="CTState::sizetab" data-ref-filename="CTState..sizetab">sizetab</dfn>;	<i>/* Size of C type table. */</i></td></tr>
+<tr><th id="178">178</th><td>  <a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="decl field" id="CTState::L" title='CTState::L' data-ref="CTState::L" data-ref-filename="CTState..L">L</dfn>;		<i>/* Lua state (needed for errors and allocations). */</i></td></tr>
+<tr><th id="179">179</th><td>  <a class="typedef" href="lj_obj.h.html#global_State" title='global_State' data-type='struct global_State' data-ref="global_State" data-ref-filename="global_State">global_State</a> *<dfn class="decl field" id="CTState::g" title='CTState::g' data-ref="CTState::g" data-ref-filename="CTState..g">g</dfn>;	<i>/* Global state. */</i></td></tr>
+<tr><th id="180">180</th><td>  <a class="typedef" href="lj_obj.h.html#GCtab" title='GCtab' data-type='struct GCtab' data-ref="GCtab" data-ref-filename="GCtab">GCtab</a> *<dfn class="decl field" id="CTState::finalizer" title='CTState::finalizer' data-ref="CTState::finalizer" data-ref-filename="CTState..finalizer">finalizer</dfn>;	<i>/* Map of cdata to finalizer. */</i></td></tr>
+<tr><th id="181">181</th><td>  <a class="typedef" href="lj_obj.h.html#GCtab" title='GCtab' data-type='struct GCtab' data-ref="GCtab" data-ref-filename="GCtab">GCtab</a> *<dfn class="decl field" id="CTState::miscmap" title='CTState::miscmap' data-ref="CTState::miscmap" data-ref-filename="CTState..miscmap">miscmap</dfn>;	<i>/* Map of -CTypeID to metatable and cb slot to func. */</i></td></tr>
+<tr><th id="182">182</th><td>  <a class="typedef" href="#CCallback" title='CCallback' data-type='struct CCallback' data-ref="CCallback" data-ref-filename="CCallback">CCallback</a> <dfn class="decl field" id="CTState::cb" title='CTState::cb' data-ref="CTState::cb" data-ref-filename="CTState..cb">cb</dfn>;		<i>/* Temporary callback state. */</i></td></tr>
+<tr><th id="183">183</th><td>  <a class="typedef" href="#CTypeID1" title='CTypeID1' data-type='uint16_t' data-ref="CTypeID1" data-ref-filename="CTypeID1">CTypeID1</a> <dfn class="decl field" id="CTState::hash" title='CTState::hash' data-ref="CTState::hash" data-ref-filename="CTState..hash">hash</dfn>[<a class="macro" href="#151" title="128" data-ref="_M/CTHASH_SIZE">CTHASH_SIZE</a>];  <i>/* Hash anchors for C type table. */</i></td></tr>
+<tr><th id="184">184</th><td>} <dfn class="typedef" id="CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</dfn>;</td></tr>
+<tr><th id="185">185</th><td></td></tr>
+<tr><th id="186">186</th><td><u>#define <dfn class="macro" id="_M/CTINFO" data-ref="_M/CTINFO">CTINFO</dfn>(ct, flags)	(((CTInfo)(ct) &lt;&lt; CTSHIFT_NUM) + (flags))</u></td></tr>
+<tr><th id="187">187</th><td><u>#define <dfn class="macro" id="_M/CTALIGN" data-ref="_M/CTALIGN">CTALIGN</dfn>(al)		((CTSize)(al) &lt;&lt; CTSHIFT_ALIGN)</u></td></tr>
+<tr><th id="188">188</th><td><u>#define <dfn class="macro" id="_M/CTATTRIB" data-ref="_M/CTATTRIB">CTATTRIB</dfn>(at)		((CTInfo)(at) &lt;&lt; CTSHIFT_ATTRIB)</u></td></tr>
+<tr><th id="189">189</th><td></td></tr>
+<tr><th id="190">190</th><td><u>#define <dfn class="macro" id="_M/ctype_type" data-ref="_M/ctype_type">ctype_type</dfn>(info)	((info) &gt;&gt; CTSHIFT_NUM)</u></td></tr>
+<tr><th id="191">191</th><td><u>#define <dfn class="macro" id="_M/ctype_cid" data-ref="_M/ctype_cid">ctype_cid</dfn>(info)		((<a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a>)((info) &amp; CTMASK_CID))</u></td></tr>
+<tr><th id="192">192</th><td><u>#define <dfn class="macro" id="_M/ctype_align" data-ref="_M/ctype_align">ctype_align</dfn>(info)	(((info) &gt;&gt; CTSHIFT_ALIGN) &amp; CTMASK_ALIGN)</u></td></tr>
+<tr><th id="193">193</th><td><u>#define <dfn class="macro" id="_M/ctype_attrib" data-ref="_M/ctype_attrib">ctype_attrib</dfn>(info)	(((info) &gt;&gt; CTSHIFT_ATTRIB) &amp; CTMASK_ATTRIB)</u></td></tr>
+<tr><th id="194">194</th><td><u>#define <dfn class="macro" id="_M/ctype_bitpos" data-ref="_M/ctype_bitpos">ctype_bitpos</dfn>(info)	(((info) &gt;&gt; CTSHIFT_BITPOS) &amp; CTMASK_BITPOS)</u></td></tr>
+<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/ctype_bitbsz" data-ref="_M/ctype_bitbsz">ctype_bitbsz</dfn>(info)	(((info) &gt;&gt; CTSHIFT_BITBSZ) &amp; CTMASK_BITBSZ)</u></td></tr>
+<tr><th id="196">196</th><td><u>#define <dfn class="macro" id="_M/ctype_bitcsz" data-ref="_M/ctype_bitcsz">ctype_bitcsz</dfn>(info)	(((info) &gt;&gt; CTSHIFT_BITCSZ) &amp; CTMASK_BITCSZ)</u></td></tr>
+<tr><th id="197">197</th><td><u>#define <dfn class="macro" id="_M/ctype_vsizeP" data-ref="_M/ctype_vsizeP">ctype_vsizeP</dfn>(info)	(((info) &gt;&gt; CTSHIFT_VSIZEP) &amp; CTMASK_VSIZEP)</u></td></tr>
+<tr><th id="198">198</th><td><u>#define <dfn class="macro" id="_M/ctype_msizeP" data-ref="_M/ctype_msizeP">ctype_msizeP</dfn>(info)	(((info) &gt;&gt; CTSHIFT_MSIZEP) &amp; CTMASK_MSIZEP)</u></td></tr>
+<tr><th id="199">199</th><td><u>#define <dfn class="macro" id="_M/ctype_cconv" data-ref="_M/ctype_cconv">ctype_cconv</dfn>(info)	(((info) &gt;&gt; CTSHIFT_CCONV) &amp; CTMASK_CCONV)</u></td></tr>
+<tr><th id="200">200</th><td></td></tr>
+<tr><th id="201">201</th><td><i>/* Simple type checks. */</i></td></tr>
+<tr><th id="202">202</th><td><u>#define <dfn class="macro" id="_M/ctype_isnum" data-ref="_M/ctype_isnum">ctype_isnum</dfn>(info)	(ctype_type((info)) == CT_NUM)</u></td></tr>
+<tr><th id="203">203</th><td><u>#define <dfn class="macro" id="_M/ctype_isvoid" data-ref="_M/ctype_isvoid">ctype_isvoid</dfn>(info)	(ctype_type((info)) == CT_VOID)</u></td></tr>
+<tr><th id="204">204</th><td><u>#define <dfn class="macro" id="_M/ctype_isptr" data-ref="_M/ctype_isptr">ctype_isptr</dfn>(info)	(ctype_type((info)) == CT_PTR)</u></td></tr>
+<tr><th id="205">205</th><td><u>#define <dfn class="macro" id="_M/ctype_isarray" data-ref="_M/ctype_isarray">ctype_isarray</dfn>(info)	(ctype_type((info)) == CT_ARRAY)</u></td></tr>
+<tr><th id="206">206</th><td><u>#define <dfn class="macro" id="_M/ctype_isstruct" data-ref="_M/ctype_isstruct">ctype_isstruct</dfn>(info)	(ctype_type((info)) == CT_STRUCT)</u></td></tr>
+<tr><th id="207">207</th><td><u>#define <dfn class="macro" id="_M/ctype_isfunc" data-ref="_M/ctype_isfunc">ctype_isfunc</dfn>(info)	(ctype_type((info)) == CT_FUNC)</u></td></tr>
+<tr><th id="208">208</th><td><u>#define <dfn class="macro" id="_M/ctype_isenum" data-ref="_M/ctype_isenum">ctype_isenum</dfn>(info)	(ctype_type((info)) == CT_ENUM)</u></td></tr>
+<tr><th id="209">209</th><td><u>#define <dfn class="macro" id="_M/ctype_istypedef" data-ref="_M/ctype_istypedef">ctype_istypedef</dfn>(info)	(ctype_type((info)) == CT_TYPEDEF)</u></td></tr>
+<tr><th id="210">210</th><td><u>#define <dfn class="macro" id="_M/ctype_isattrib" data-ref="_M/ctype_isattrib">ctype_isattrib</dfn>(info)	(ctype_type((info)) == <a class="enum" href="#CT_ATTRIB" title='CT_ATTRIB' data-ref="CT_ATTRIB" data-ref-filename="CT_ATTRIB">CT_ATTRIB</a>)</u></td></tr>
+<tr><th id="211">211</th><td><u>#define <dfn class="macro" id="_M/ctype_isfield" data-ref="_M/ctype_isfield">ctype_isfield</dfn>(info)	(ctype_type((info)) == CT_FIELD)</u></td></tr>
+<tr><th id="212">212</th><td><u>#define <dfn class="macro" id="_M/ctype_isbitfield" data-ref="_M/ctype_isbitfield">ctype_isbitfield</dfn>(info)	(ctype_type((info)) == CT_BITFIELD)</u></td></tr>
+<tr><th id="213">213</th><td><u>#define <dfn class="macro" id="_M/ctype_isconstval" data-ref="_M/ctype_isconstval">ctype_isconstval</dfn>(info)	(ctype_type((info)) == CT_CONSTVAL)</u></td></tr>
+<tr><th id="214">214</th><td><u>#define <dfn class="macro" id="_M/ctype_isextern" data-ref="_M/ctype_isextern">ctype_isextern</dfn>(info)	(ctype_type((info)) == CT_EXTERN)</u></td></tr>
+<tr><th id="215">215</th><td><u>#define <dfn class="macro" id="_M/ctype_hassize" data-ref="_M/ctype_hassize">ctype_hassize</dfn>(info)	(ctype_type((info)) &lt;= CT_HASSIZE)</u></td></tr>
+<tr><th id="216">216</th><td></td></tr>
+<tr><th id="217">217</th><td><i>/* Combined type and flag checks. */</i></td></tr>
+<tr><th id="218">218</th><td><u>#define <dfn class="macro" id="_M/ctype_isinteger" data-ref="_M/ctype_isinteger">ctype_isinteger</dfn>(info) \</u></td></tr>
+<tr><th id="219">219</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_BOOL|CTF_FP)) == CTINFO(CT_NUM, 0))</u></td></tr>
+<tr><th id="220">220</th><td><u>#define <dfn class="macro" id="_M/ctype_isinteger_or_bool" data-ref="_M/ctype_isinteger_or_bool">ctype_isinteger_or_bool</dfn>(info) \</u></td></tr>
+<tr><th id="221">221</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_FP)) == CTINFO(CT_NUM, 0))</u></td></tr>
+<tr><th id="222">222</th><td><u>#define <dfn class="macro" id="_M/ctype_isbool" data-ref="_M/ctype_isbool">ctype_isbool</dfn>(info) \</u></td></tr>
+<tr><th id="223">223</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_BOOL)) == CTINFO(CT_NUM, CTF_BOOL))</u></td></tr>
+<tr><th id="224">224</th><td><u>#define <dfn class="macro" id="_M/ctype_isfp" data-ref="_M/ctype_isfp">ctype_isfp</dfn>(info) \</u></td></tr>
+<tr><th id="225">225</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_FP)) == CTINFO(CT_NUM, CTF_FP))</u></td></tr>
+<tr><th id="226">226</th><td></td></tr>
+<tr><th id="227">227</th><td><u>#define <dfn class="macro" id="_M/ctype_ispointer" data-ref="_M/ctype_ispointer">ctype_ispointer</dfn>(info) \</u></td></tr>
+<tr><th id="228">228</th><td><u>  ((ctype_type(info) &gt;&gt; 1) == (CT_PTR &gt;&gt; 1))  /* Pointer or array. */</u></td></tr>
+<tr><th id="229">229</th><td><u>#define <dfn class="macro" id="_M/ctype_isref" data-ref="_M/ctype_isref">ctype_isref</dfn>(info) \</u></td></tr>
+<tr><th id="230">230</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_REF)) == CTINFO(CT_PTR, CTF_REF))</u></td></tr>
+<tr><th id="231">231</th><td></td></tr>
+<tr><th id="232">232</th><td><u>#define <dfn class="macro" id="_M/ctype_isrefarray" data-ref="_M/ctype_isrefarray">ctype_isrefarray</dfn>(info) \</u></td></tr>
+<tr><th id="233">233</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_VECTOR|CTF_COMPLEX)) == CTINFO(CT_ARRAY, 0))</u></td></tr>
+<tr><th id="234">234</th><td><u>#define <dfn class="macro" id="_M/ctype_isvector" data-ref="_M/ctype_isvector">ctype_isvector</dfn>(info) \</u></td></tr>
+<tr><th id="235">235</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_VECTOR)) == CTINFO(CT_ARRAY, CTF_VECTOR))</u></td></tr>
+<tr><th id="236">236</th><td><u>#define <dfn class="macro" id="_M/ctype_iscomplex" data-ref="_M/ctype_iscomplex">ctype_iscomplex</dfn>(info) \</u></td></tr>
+<tr><th id="237">237</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_COMPLEX)) == CTINFO(CT_ARRAY, CTF_COMPLEX))</u></td></tr>
+<tr><th id="238">238</th><td></td></tr>
+<tr><th id="239">239</th><td><u>#define <dfn class="macro" id="_M/ctype_isvltype" data-ref="_M/ctype_isvltype">ctype_isvltype</dfn>(info) \</u></td></tr>
+<tr><th id="240">240</th><td><u>  (((info) &amp; ((CTMASK_NUM|CTF_VLA) - (2u&lt;&lt;CTSHIFT_NUM))) == \</u></td></tr>
+<tr><th id="241">241</th><td><u>   CTINFO(CT_STRUCT, CTF_VLA))  /* VL array or VL struct. */</u></td></tr>
+<tr><th id="242">242</th><td><u>#define <dfn class="macro" id="_M/ctype_isvlarray" data-ref="_M/ctype_isvlarray">ctype_isvlarray</dfn>(info) \</u></td></tr>
+<tr><th id="243">243</th><td><u>  (((info) &amp; (CTMASK_NUM|CTF_VLA)) == CTINFO(CT_ARRAY, CTF_VLA))</u></td></tr>
+<tr><th id="244">244</th><td></td></tr>
+<tr><th id="245">245</th><td><u>#define <dfn class="macro" id="_M/ctype_isxattrib" data-ref="_M/ctype_isxattrib">ctype_isxattrib</dfn>(info, at) \</u></td></tr>
+<tr><th id="246">246</th><td><u>  (((info) &amp; (CTMASK_NUM|CTATTRIB(CTMASK_ATTRIB))) == \</u></td></tr>
+<tr><th id="247">247</th><td><u>   CTINFO(CT_ATTRIB, CTATTRIB(at)))</u></td></tr>
+<tr><th id="248">248</th><td></td></tr>
+<tr><th id="249">249</th><td><i>/* Target-dependent sizes and alignments. */</i></td></tr>
+<tr><th id="250">250</th><td><u>#<span data-ppcond="250">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="251">251</th><td><u>#define <dfn class="macro" id="_M/CTSIZE_PTR" data-ref="_M/CTSIZE_PTR">CTSIZE_PTR</dfn>	8</u></td></tr>
+<tr><th id="252">252</th><td><u>#define <dfn class="macro" id="_M/CTALIGN_PTR" data-ref="_M/CTALIGN_PTR">CTALIGN_PTR</dfn>	CTALIGN(3)</u></td></tr>
+<tr><th id="253">253</th><td><u>#<span data-ppcond="250">else</span></u></td></tr>
+<tr><th id="254">254</th><td><u>#define CTSIZE_PTR	4</u></td></tr>
+<tr><th id="255">255</th><td><u>#define CTALIGN_PTR	CTALIGN(2)</u></td></tr>
+<tr><th id="256">256</th><td><u>#<span data-ppcond="250">endif</span></u></td></tr>
+<tr><th id="257">257</th><td></td></tr>
+<tr><th id="258">258</th><td><u>#define <dfn class="macro" id="_M/CTINFO_REF" data-ref="_M/CTINFO_REF">CTINFO_REF</dfn>(ref) \</u></td></tr>
+<tr><th id="259">259</th><td><u>  CTINFO(CT_PTR, (CTF_CONST|CTF_REF|CTALIGN_PTR) + (ref))</u></td></tr>
+<tr><th id="260">260</th><td></td></tr>
+<tr><th id="261">261</th><td><u>#define <dfn class="macro" id="_M/CT_MEMALIGN" data-ref="_M/CT_MEMALIGN">CT_MEMALIGN</dfn>	3	/* Alignment guaranteed by memory allocator. */</u></td></tr>
+<tr><th id="262">262</th><td></td></tr>
+<tr><th id="263">263</th><td><u>#<span data-ppcond="263">ifdef</span> <span class="macro" data-ref="_M/LUA_USE_ASSERT">LUA_USE_ASSERT</span></u></td></tr>
+<tr><th id="264">264</th><td><u>#define lj_assertCTS(c, ...)	(lj_assertG_(cts-&gt;g, (c), __VA_ARGS__))</u></td></tr>
+<tr><th id="265">265</th><td><u>#<span data-ppcond="263">else</span></u></td></tr>
+<tr><th id="266">266</th><td><u>#define <dfn class="macro" id="_M/lj_assertCTS" data-ref="_M/lj_assertCTS">lj_assertCTS</dfn>(c, ...)	((void)<a class="local col2 ref" href="#882cts" title='cts' data-ref="882cts" data-ref-filename="882cts"><a class="local col6 ref" href="#886cts" title='cts' data-ref="886cts" data-ref-filename="886cts">cts</a></a>)</u></td></tr>
+<tr><th id="267">267</th><td><u>#<span data-ppcond="263">endif</span></u></td></tr>
+<tr><th id="268">268</th><td></td></tr>
+<tr><th id="269">269</th><td><i>/* -- Predefined types ---------------------------------------------------- */</i></td></tr>
+<tr><th id="270">270</th><td></td></tr>
+<tr><th id="271">271</th><td><i>/* Target-dependent types. */</i></td></tr>
+<tr><th id="272">272</th><td><u>#<span data-ppcond="272">if</span> LJ_TARGET_PPC</u></td></tr>
+<tr><th id="273">273</th><td><u>#define CTTYDEFP(_) \</u></td></tr>
+<tr><th id="274">274</th><td><u>  _(LINT32,		4,	CT_NUM, CTF_LONG|CTALIGN(2))</u></td></tr>
+<tr><th id="275">275</th><td><u>#<span data-ppcond="272">else</span></u></td></tr>
+<tr><th id="276">276</th><td><u>#define <dfn class="macro" id="_M/CTTYDEFP" data-ref="_M/CTTYDEFP">CTTYDEFP</dfn>(_)</u></td></tr>
+<tr><th id="277">277</th><td><u>#<span data-ppcond="272">endif</span></u></td></tr>
+<tr><th id="278">278</th><td></td></tr>
+<tr><th id="279">279</th><td><i>/* Common types. */</i></td></tr>
+<tr><th id="280">280</th><td><u>#define <dfn class="macro" id="_M/CTTYDEF" data-ref="_M/CTTYDEF">CTTYDEF</dfn>(_) \</u></td></tr>
+<tr><th id="281">281</th><td><u>  _(NONE,		0,	CT_ATTRIB, CTATTRIB(CTA_BAD)) \</u></td></tr>
+<tr><th id="282">282</th><td><u>  _(VOID,		-1,	CT_VOID, CTALIGN(0)) \</u></td></tr>
+<tr><th id="283">283</th><td><u>  _(CVOID,		-1,	CT_VOID, CTF_CONST|CTALIGN(0)) \</u></td></tr>
+<tr><th id="284">284</th><td><u>  _(BOOL,		1,	CT_NUM, CTF_BOOL|CTF_UNSIGNED|CTALIGN(0)) \</u></td></tr>
+<tr><th id="285">285</th><td><u>  _(CCHAR,		1,	CT_NUM, CTF_CONST|CTF_UCHAR|CTALIGN(0)) \</u></td></tr>
+<tr><th id="286">286</th><td><u>  _(INT8,		1,	CT_NUM, CTALIGN(0)) \</u></td></tr>
+<tr><th id="287">287</th><td><u>  _(UINT8,		1,	CT_NUM, CTF_UNSIGNED|CTALIGN(0)) \</u></td></tr>
+<tr><th id="288">288</th><td><u>  _(INT16,		2,	CT_NUM, CTALIGN(1)) \</u></td></tr>
+<tr><th id="289">289</th><td><u>  _(UINT16,		2,	CT_NUM, CTF_UNSIGNED|CTALIGN(1)) \</u></td></tr>
+<tr><th id="290">290</th><td><u>  _(INT32,		4,	CT_NUM, CTALIGN(2)) \</u></td></tr>
+<tr><th id="291">291</th><td><u>  _(UINT32,		4,	CT_NUM, CTF_UNSIGNED|CTALIGN(2)) \</u></td></tr>
+<tr><th id="292">292</th><td><u>  _(INT64,		8,	CT_NUM, CTF_LONG|CTALIGN(3)) \</u></td></tr>
+<tr><th id="293">293</th><td><u>  _(UINT64,		8,	CT_NUM, CTF_UNSIGNED|CTF_LONG|CTALIGN(3)) \</u></td></tr>
+<tr><th id="294">294</th><td><u>  _(FLOAT,		4,	CT_NUM, CTF_FP|CTALIGN(2)) \</u></td></tr>
+<tr><th id="295">295</th><td><u>  _(DOUBLE,		8,	CT_NUM, CTF_FP|CTALIGN(3)) \</u></td></tr>
+<tr><th id="296">296</th><td><u>  _(COMPLEX_FLOAT,	8,	CT_ARRAY, CTF_COMPLEX|CTALIGN(2)|CTID_FLOAT) \</u></td></tr>
+<tr><th id="297">297</th><td><u>  _(COMPLEX_DOUBLE,	16,	CT_ARRAY, CTF_COMPLEX|CTALIGN(3)|CTID_DOUBLE) \</u></td></tr>
+<tr><th id="298">298</th><td><u>  _(P_VOID,	CTSIZE_PTR,	CT_PTR, CTALIGN_PTR|CTID_VOID) \</u></td></tr>
+<tr><th id="299">299</th><td><u>  _(P_CVOID,	CTSIZE_PTR,	CT_PTR, CTALIGN_PTR|CTID_CVOID) \</u></td></tr>
+<tr><th id="300">300</th><td><u>  _(P_CCHAR,	CTSIZE_PTR,	CT_PTR, CTALIGN_PTR|CTID_CCHAR) \</u></td></tr>
+<tr><th id="301">301</th><td><u>  _(P_UINT8,	CTSIZE_PTR,	CT_PTR, CTALIGN_PTR|CTID_UINT8) \</u></td></tr>
+<tr><th id="302">302</th><td><u>  _(A_CCHAR,		-1,	CT_ARRAY, CTF_CONST|CTALIGN(0)|CTID_CCHAR) \</u></td></tr>
+<tr><th id="303">303</th><td><u>  _(CTYPEID,		4,	CT_ENUM, CTALIGN(2)|CTID_INT32) \</u></td></tr>
+<tr><th id="304">304</th><td><u>  CTTYDEFP(_) \</u></td></tr>
+<tr><th id="305">305</th><td><u>  /* End of type list. */</u></td></tr>
+<tr><th id="306">306</th><td></td></tr>
+<tr><th id="307">307</th><td><i>/* Public predefined type IDs. */</i></td></tr>
+<tr><th id="308">308</th><td><b>enum</b> {</td></tr>
+<tr><th id="309">309</th><td><u>#define <dfn class="macro" id="_M/CTTYIDDEF" data-ref="_M/CTTYIDDEF">CTTYIDDEF</dfn>(id, sz, ct, info)	CTID_##id,</u></td></tr>
+<tr><th id="310">310</th><td><a class="macro" href="#280" title="CTID_NONE, CTID_VOID, CTID_CVOID, CTID_BOOL, CTID_CCHAR, CTID_INT8, CTID_UINT8, CTID_INT16, CTID_UINT16, CTID_INT32, CTID_UINT32, CTID_INT64, CTID_UINT64, CTID_FLOAT, CTID_DOUBLE, CTID_COMPLEX_FLOAT, CTID_COMPLEX_DOUBLE, CTID_P_VOID, CTID_P_CVOID, CTID_P_CCHAR, CTID_P_UINT8, CTID_A_CCHAR, CTID_CTYPEID," data-ref="_M/CTTYDEF">CTTYDEF</a>(CTTYIDDEF)</td></tr>
+<tr><th id="311">311</th><td><u>#undef <a class="macro" href="#309" data-ref="_M/CTTYIDDEF">CTTYIDDEF</a></u></td></tr>
+<tr><th id="312">312</th><td>  <i>/* Predefined typedefs and keywords follow. */</i></td></tr>
+<tr><th id="313">313</th><td>  <dfn class="enum" id="CTID_MAX" title='CTID_MAX' data-ref="CTID_MAX" data-ref-filename="CTID_MAX">CTID_MAX</dfn> = <var>65536</var></td></tr>
+<tr><th id="314">314</th><td>};</td></tr>
+<tr><th id="315">315</th><td></td></tr>
+<tr><th id="316">316</th><td><i>/* Target-dependent type IDs. */</i></td></tr>
+<tr><th id="317">317</th><td><u>#<span data-ppcond="317">if</span> <a class="macro" href="lj_arch.h.html#600" title="1" data-ref="_M/LJ_64">LJ_64</a></u></td></tr>
+<tr><th id="318">318</th><td><u>#define <dfn class="macro" id="_M/CTID_INT_PSZ" data-ref="_M/CTID_INT_PSZ">CTID_INT_PSZ</dfn>	CTID_INT64</u></td></tr>
+<tr><th id="319">319</th><td><u>#define <dfn class="macro" id="_M/CTID_UINT_PSZ" data-ref="_M/CTID_UINT_PSZ">CTID_UINT_PSZ</dfn>	CTID_UINT64</u></td></tr>
+<tr><th id="320">320</th><td><u>#<span data-ppcond="317">else</span></u></td></tr>
+<tr><th id="321">321</th><td><u>#define CTID_INT_PSZ	CTID_INT32</u></td></tr>
+<tr><th id="322">322</th><td><u>#define CTID_UINT_PSZ	CTID_UINT32</u></td></tr>
+<tr><th id="323">323</th><td><u>#<span data-ppcond="317">endif</span></u></td></tr>
+<tr><th id="324">324</th><td></td></tr>
+<tr><th id="325">325</th><td><u>#<span data-ppcond="325">if</span> <a class="macro" href="lj_arch.h.html#622" title="0" data-ref="_M/LJ_ABI_WIN">LJ_ABI_WIN</a></u></td></tr>
+<tr><th id="326">326</th><td><u>#define CTID_WCHAR	CTID_UINT16</u></td></tr>
+<tr><th id="327">327</th><td><u>#<span data-ppcond="325">elif</span> LJ_TARGET_PPC</u></td></tr>
+<tr><th id="328">328</th><td><u>#define CTID_WCHAR	CTID_LINT32</u></td></tr>
+<tr><th id="329">329</th><td><u>#<span data-ppcond="325">else</span></u></td></tr>
+<tr><th id="330">330</th><td><u>#define <dfn class="macro" id="_M/CTID_WCHAR" data-ref="_M/CTID_WCHAR">CTID_WCHAR</dfn>	CTID_INT32</u></td></tr>
+<tr><th id="331">331</th><td><u>#<span data-ppcond="325">endif</span></u></td></tr>
+<tr><th id="332">332</th><td></td></tr>
+<tr><th id="333">333</th><td><i>/* -- C tokens and keywords ----------------------------------------------- */</i></td></tr>
+<tr><th id="334">334</th><td></td></tr>
+<tr><th id="335">335</th><td><i>/* C lexer keywords. */</i></td></tr>
+<tr><th id="336">336</th><td><u>#define <dfn class="macro" id="_M/CTOKDEF" data-ref="_M/CTOKDEF">CTOKDEF</dfn>(_) \</u></td></tr>
+<tr><th id="337">337</th><td><u>  _(IDENT, "&lt;identifier&gt;") _(STRING, "&lt;string&gt;") \</u></td></tr>
+<tr><th id="338">338</th><td><u>  _(INTEGER, "&lt;integer&gt;") _(EOF, "&lt;eof&gt;") \</u></td></tr>
+<tr><th id="339">339</th><td><u>  _(OROR, "||") _(ANDAND, "&amp;&amp;") _(EQ, "==") _(NE, "!=") \</u></td></tr>
+<tr><th id="340">340</th><td><u>  _(LE, "&lt;=") _(GE, "&gt;=") _(SHL, "&lt;&lt;") _(SHR, "&gt;&gt;") _(DEREF, "-&gt;")</u></td></tr>
+<tr><th id="341">341</th><td></td></tr>
+<tr><th id="342">342</th><td><i>/* Simple declaration specifiers. */</i></td></tr>
+<tr><th id="343">343</th><td><u>#define <dfn class="macro" id="_M/CDSDEF" data-ref="_M/CDSDEF">CDSDEF</dfn>(_) \</u></td></tr>
+<tr><th id="344">344</th><td><u>  _(VOID) _(BOOL) _(CHAR) _(INT) _(FP) \</u></td></tr>
+<tr><th id="345">345</th><td><u>  _(LONG) _(LONGLONG) _(SHORT) _(COMPLEX) _(SIGNED) _(UNSIGNED) \</u></td></tr>
+<tr><th id="346">346</th><td><u>  _(CONST) _(VOLATILE) _(RESTRICT) _(INLINE) \</u></td></tr>
+<tr><th id="347">347</th><td><u>  _(TYPEDEF) _(EXTERN) _(STATIC) _(AUTO) _(REGISTER)</u></td></tr>
+<tr><th id="348">348</th><td></td></tr>
+<tr><th id="349">349</th><td><i>/* C keywords. */</i></td></tr>
+<tr><th id="350">350</th><td><u>#define <dfn class="macro" id="_M/CKWDEF" data-ref="_M/CKWDEF">CKWDEF</dfn>(_) \</u></td></tr>
+<tr><th id="351">351</th><td><u>  CDSDEF(_) _(EXTENSION) _(ASM) _(ATTRIBUTE) \</u></td></tr>
+<tr><th id="352">352</th><td><u>  _(DECLSPEC) _(CCDECL) _(PTRSZ) \</u></td></tr>
+<tr><th id="353">353</th><td><u>  _(STRUCT) _(UNION) _(ENUM) \</u></td></tr>
+<tr><th id="354">354</th><td><u>  _(SIZEOF) _(ALIGNOF)</u></td></tr>
+<tr><th id="355">355</th><td></td></tr>
+<tr><th id="356">356</th><td><i>/* C token numbers. */</i></td></tr>
+<tr><th id="357">357</th><td><b>enum</b> {</td></tr>
+<tr><th id="358">358</th><td>  <dfn class="enum" id="CTOK_OFS" title='CTOK_OFS' data-ref="CTOK_OFS" data-ref-filename="CTOK_OFS">CTOK_OFS</dfn> = <var>255</var>,</td></tr>
+<tr><th id="359">359</th><td><u>#define <dfn class="macro" id="_M/CTOKNUM" data-ref="_M/CTOKNUM">CTOKNUM</dfn>(name, sym)	CTOK_##name,</u></td></tr>
+<tr><th id="360">360</th><td><u>#define <dfn class="macro" id="_M/CKWNUM" data-ref="_M/CKWNUM">CKWNUM</dfn>(name)		CTOK_##name,</u></td></tr>
+<tr><th id="361">361</th><td><a class="macro" href="#336" title="CTOK_IDENT, CTOK_STRING, CTOK_INTEGER, CTOK_EOF, CTOK_OROR, CTOK_ANDAND, CTOK_EQ, CTOK_NE, CTOK_LE, CTOK_GE, CTOK_SHL, CTOK_SHR, CTOK_DEREF," data-ref="_M/CTOKDEF">CTOKDEF</a>(CTOKNUM)</td></tr>
+<tr><th id="362">362</th><td><a class="macro" href="#350" title="CTOK_VOID, CTOK_BOOL, CTOK_CHAR, CTOK_INT, CTOK_FP, CTOK_LONG, CTOK_LONGLONG, CTOK_SHORT, CTOK_COMPLEX, CTOK_SIGNED, CTOK_UNSIGNED, CTOK_CONST, CTOK_VOLATILE, CTOK_RESTRICT, CTOK_INLINE, CTOK_TYPEDEF, CTOK_EXTERN, CTOK_STATIC, CTOK_AUTO, CTOK_REGISTER, CTOK_EXTENSION, CTOK_ASM, CTOK_ATTRIBUTE, CTOK_DECLSPEC, CTOK_CCDECL, CTOK_PTRSZ, CTOK_STRUCT, CTOK_UNION, CTOK_ENUM, CTOK_SIZEOF, CTOK_ALIGNOF," data-ref="_M/CKWDEF">CKWDEF</a>(CKWNUM)</td></tr>
+<tr><th id="363">363</th><td><u>#undef <a class="macro" href="#359" data-ref="_M/CTOKNUM">CTOKNUM</a></u></td></tr>
+<tr><th id="364">364</th><td><u>#undef <a class="macro" href="#360" data-ref="_M/CKWNUM">CKWNUM</a></u></td></tr>
+<tr><th id="365">365</th><td>  <dfn class="enum" id="CTOK_FIRSTDECL" title='CTOK_FIRSTDECL' data-ref="CTOK_FIRSTDECL" data-ref-filename="CTOK_FIRSTDECL">CTOK_FIRSTDECL</dfn> = <a class="enum" href="#362" title='CTOK_VOID' data-ref="CTOK_VOID" data-ref-filename="CTOK_VOID">CTOK_VOID</a>,</td></tr>
+<tr><th id="366">366</th><td>  <dfn class="enum" id="CTOK_FIRSTSCL" title='CTOK_FIRSTSCL' data-ref="CTOK_FIRSTSCL" data-ref-filename="CTOK_FIRSTSCL">CTOK_FIRSTSCL</dfn> = <a class="enum" href="#362" title='CTOK_TYPEDEF' data-ref="CTOK_TYPEDEF" data-ref-filename="CTOK_TYPEDEF">CTOK_TYPEDEF</a>,</td></tr>
+<tr><th id="367">367</th><td>  <dfn class="enum" id="CTOK_LASTDECLFLAG" title='CTOK_LASTDECLFLAG' data-ref="CTOK_LASTDECLFLAG" data-ref-filename="CTOK_LASTDECLFLAG">CTOK_LASTDECLFLAG</dfn> = <a class="enum" href="#362" title='CTOK_REGISTER' data-ref="CTOK_REGISTER" data-ref-filename="CTOK_REGISTER">CTOK_REGISTER</a>,</td></tr>
+<tr><th id="368">368</th><td>  <dfn class="enum" id="CTOK_LASTDECL" title='CTOK_LASTDECL' data-ref="CTOK_LASTDECL" data-ref-filename="CTOK_LASTDECL">CTOK_LASTDECL</dfn> = <a class="enum" href="#362" title='CTOK_ENUM' data-ref="CTOK_ENUM" data-ref-filename="CTOK_ENUM">CTOK_ENUM</a></td></tr>
+<tr><th id="369">369</th><td>};</td></tr>
+<tr><th id="370">370</th><td></td></tr>
+<tr><th id="371">371</th><td><i>/* Declaration specifier flags. */</i></td></tr>
+<tr><th id="372">372</th><td><b>enum</b> {</td></tr>
+<tr><th id="373">373</th><td><u>#define <dfn class="macro" id="_M/CDSFLAG" data-ref="_M/CDSFLAG">CDSFLAG</dfn>(name)	CDF_##name = (1u &lt;&lt; (CTOK_##name - <a class="enum" href="#CTOK_FIRSTDECL" title='CTOK_FIRSTDECL' data-ref="CTOK_FIRSTDECL" data-ref-filename="CTOK_FIRSTDECL">CTOK_FIRSTDECL</a>)),</u></td></tr>
+<tr><th id="374">374</th><td><a class="macro" href="#343" title="CDF_VOID = (1u &lt;&lt; (CTOK_VOID - CTOK_FIRSTDECL)), CDF_BOOL = (1u &lt;&lt; (CTOK_BOOL - CTOK_FIRSTDECL)), CDF_CHAR = (1u &lt;&lt; (CTOK_CHAR - CTOK_FIRSTDECL)), CDF_INT = (1u &lt;&lt; (CTOK_INT - CTOK_FIRSTDECL)), CDF_FP = (1u &lt;&lt; (CTOK_FP - CTOK_FIRSTDECL)), CDF_LONG = (1u &lt;&lt; (CTOK_LONG - CTOK_FIRSTDECL)), CDF_LONGLONG = (1u &lt;&lt; (CTOK_LONGLONG - CTOK_FIRSTDECL)), CDF_SHORT = (1u &lt;&lt; (CTOK_SHORT - CTOK_FIRSTDECL)), CDF_COMPLEX = (1u &lt;&lt; (CTOK_COMPLEX - CTOK_FIRSTDECL)), CDF_SIGNED = (1u &lt;&lt; (CTOK_SIGNED - CTOK_FIRSTDECL)), CDF_UNSIGNED = (1u &lt;&lt; (CTOK_UNSIGNED - CTOK_FIRSTDECL)), CDF_CONST = (1u &lt;&lt; (CTOK_CONST - CTOK_FIRSTDECL)), CDF_VOLATILE = (1u &lt;&lt; (CTOK_VOLATILE - CTOK_FIRSTDECL)), CDF_RESTRICT = (1u &lt;&lt; (CTOK_RESTRICT - CTOK_FIRSTDECL)), CDF_INLINE = (1u &lt;&lt; (CTOK_INLINE - CTOK_FIRSTDECL)), CDF_TYPEDEF = (1u &lt;&lt; (CTOK_TYPEDEF - CTOK_FIRSTDECL)), CDF_EXTERN = (1u &lt;&lt; (CTOK_EXTERN - CTOK_FIRSTDECL)), CDF_STATIC = (1u &lt;&lt; (CTOK_STATIC - CTOK_FIRSTDECL)), CDF_AUTO = (1u &lt;&lt; (CTOK_AUTO - CTOK_FIRSTDECL)), CDF_REGISTER = (1u &lt;&lt; (CTOK_REGISTER - CTOK_FIRSTDECL))," data-ref="_M/CDSDEF">CDSDEF</a>(CDSFLAG)</td></tr>
+<tr><th id="375">375</th><td><u>#undef <a class="macro" href="#373" data-ref="_M/CDSFLAG">CDSFLAG</a></u></td></tr>
+<tr><th id="376">376</th><td>  <dfn class="enum" id="CDF__END" title='CDF__END' data-ref="CDF__END" data-ref-filename="CDF__END">CDF__END</dfn></td></tr>
+<tr><th id="377">377</th><td>};</td></tr>
+<tr><th id="378">378</th><td></td></tr>
+<tr><th id="379">379</th><td><u>#define <dfn class="macro" id="_M/CDF_SCL" data-ref="_M/CDF_SCL">CDF_SCL</dfn>  (CDF_TYPEDEF|CDF_EXTERN|CDF_STATIC|CDF_AUTO|CDF_REGISTER)</u></td></tr>
+<tr><th id="380">380</th><td></td></tr>
+<tr><th id="381">381</th><td><i>/* -- C type management --------------------------------------------------- */</i></td></tr>
+<tr><th id="382">382</th><td></td></tr>
+<tr><th id="383">383</th><td><u>#define <dfn class="macro" id="_M/ctype_ctsG" data-ref="_M/ctype_ctsG">ctype_ctsG</dfn>(g)		(mref((g)-&gt;<a class="ref field" href="lj_obj.h.html#global_State::ctype_state" title='global_State::ctype_state' data-ref="global_State::ctype_state" data-ref-filename="global_State..ctype_state">ctype_state</a>, <a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a>))</u></td></tr>
+<tr><th id="384">384</th><td></td></tr>
+<tr><th id="385">385</th><td><i>/* Get C type state. */</i></td></tr>
+<tr><th id="386">386</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="decl def fn" id="ctype_cts" title='ctype_cts' data-ref="ctype_cts" data-ref-filename="ctype_cts">ctype_cts</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col0 decl" id="880L" title='L' data-type='lua_State *' data-ref="880L" data-ref-filename="880L">L</dfn>)</td></tr>
+<tr><th id="387">387</th><td>{</td></tr>
+<tr><th id="388">388</th><td>  <a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col1 decl" id="881cts" title='cts' data-type='CTState *' data-ref="881cts" data-ref-filename="881cts">cts</dfn> = <a class="macro" href="#383" title="(((CTState *)(void *)(((((global_State *)(void *)(L-&gt;glref).ptr64)))-&gt;ctype_state).ptr64))" data-ref="_M/ctype_ctsG">ctype_ctsG</a>(<a class="macro" href="lj_obj.h.html#699" title="(((global_State *)(void *)(L-&gt;glref).ptr64))" data-ref="_M/G">G</a>(<a class="local col0 ref" href="#880L" title='L' data-ref="880L" data-ref-filename="880L">L</a>));</td></tr>
+<tr><th id="389">389</th><td>  <a class="local col1 ref" href="#881cts" title='cts' data-ref="881cts" data-ref-filename="881cts">cts</a>-&gt;<a class="ref field" href="#CTState::L" title='CTState::L' data-ref="CTState::L" data-ref-filename="CTState..L">L</a> = <a class="local col0 ref" href="#880L" title='L' data-ref="880L" data-ref-filename="880L">L</a>;  <i>/* Save L for errors and allocations. */</i></td></tr>
+<tr><th id="390">390</th><td>  <b>return</b> <a class="local col1 ref" href="#881cts" title='cts' data-ref="881cts" data-ref-filename="881cts">cts</a>;</td></tr>
+<tr><th id="391">391</th><td>}</td></tr>
+<tr><th id="392">392</th><td></td></tr>
+<tr><th id="393">393</th><td><i>/* Load FFI library on-demand. */</i></td></tr>
+<tr><th id="394">394</th><td><u>#define <dfn class="macro" id="_M/ctype_loadffi" data-ref="_M/ctype_loadffi">ctype_loadffi</dfn>(L) \</u></td></tr>
+<tr><th id="395">395</th><td><u>  do { \</u></td></tr>
+<tr><th id="396">396</th><td><u>    if (!ctype_ctsG(G(L))) { \</u></td></tr>
+<tr><th id="397">397</th><td><u>      ptrdiff_t oldtop = (char *)L-&gt;top - mref(L-&gt;stack, char); \</u></td></tr>
+<tr><th id="398">398</th><td><u>      luaopen_ffi(L); \</u></td></tr>
+<tr><th id="399">399</th><td><u>      L-&gt;top = (TValue *)(mref(L-&gt;stack, char) + oldtop); \</u></td></tr>
+<tr><th id="400">400</th><td><u>    } \</u></td></tr>
+<tr><th id="401">401</th><td><u>  } while (0)</u></td></tr>
+<tr><th id="402">402</th><td></td></tr>
+<tr><th id="403">403</th><td><i>/* Save and restore state of C type table. */</i></td></tr>
+<tr><th id="404">404</th><td><u>#define <dfn class="macro" id="_M/LJ_CTYPE_SAVE" data-ref="_M/LJ_CTYPE_SAVE">LJ_CTYPE_SAVE</dfn>(cts)	CTState savects_ = *(cts)</u></td></tr>
+<tr><th id="405">405</th><td><u>#define <dfn class="macro" id="_M/LJ_CTYPE_RESTORE" data-ref="_M/LJ_CTYPE_RESTORE">LJ_CTYPE_RESTORE</dfn>(cts) \</u></td></tr>
+<tr><th id="406">406</th><td><u>  ((cts)-&gt;top = savects_.top, \</u></td></tr>
+<tr><th id="407">407</th><td><u>   memcpy((cts)-&gt;hash, savects_.hash, sizeof(savects_.hash)))</u></td></tr>
+<tr><th id="408">408</th><td></td></tr>
+<tr><th id="409">409</th><td><i>/* Check C type ID for validity when assertions are enabled. */</i></td></tr>
+<tr><th id="410">410</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl def fn" id="ctype_check" title='ctype_check' data-ref="ctype_check" data-ref-filename="ctype_check">ctype_check</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col2 decl" id="882cts" title='cts' data-type='CTState *' data-ref="882cts" data-ref-filename="882cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col3 decl" id="883id" title='id' data-type='CTypeID' data-ref="883id" data-ref-filename="883id">id</dfn>)</td></tr>
+<tr><th id="411">411</th><td>{</td></tr>
+<tr><th id="412">412</th><td>  <a class="macro" href="lj_def.h.html#91" title="((void)(cts))" data-ref="_M/UNUSED">UNUSED</a>(<a class="local col2 ref" href="#882cts" title='cts' data-ref="882cts" data-ref-filename="882cts">cts</a>);</td></tr>
+<tr><th id="413">413</th><td>  <a class="macro" href="#266" title="((void)cts)" data-ref="_M/lj_assertCTS">lj_assertCTS</a>(id &gt; <var>0</var> &amp;&amp; id &lt; cts-&gt;top, <q>"bad CTID %d"</q>, id);</td></tr>
+<tr><th id="414">414</th><td>  <b>return</b> <a class="local col3 ref" href="#883id" title='id' data-ref="883id" data-ref-filename="883id">id</a>;</td></tr>
+<tr><th id="415">415</th><td>}</td></tr>
+<tr><th id="416">416</th><td></td></tr>
+<tr><th id="417">417</th><td><i>/* Get C type for C type ID. */</i></td></tr>
+<tr><th id="418">418</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl def fn" id="ctype_get" title='ctype_get' data-ref="ctype_get" data-ref-filename="ctype_get">ctype_get</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col4 decl" id="884cts" title='cts' data-type='CTState *' data-ref="884cts" data-ref-filename="884cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col5 decl" id="885id" title='id' data-type='CTypeID' data-ref="885id" data-ref-filename="885id">id</dfn>)</td></tr>
+<tr><th id="419">419</th><td>{</td></tr>
+<tr><th id="420">420</th><td>  <b>return</b> &amp;<a class="local col4 ref" href="#884cts" title='cts' data-ref="884cts" data-ref-filename="884cts">cts</a>-&gt;<a class="ref field" href="#CTState::tab" title='CTState::tab' data-ref="CTState::tab" data-ref-filename="CTState..tab">tab</a>[<a class="ref fn" href="#ctype_check" title='ctype_check' data-ref="ctype_check" data-ref-filename="ctype_check">ctype_check</a>(<a class="local col4 ref" href="#884cts" title='cts' data-ref="884cts" data-ref-filename="884cts">cts</a>, <a class="local col5 ref" href="#885id" title='id' data-ref="885id" data-ref-filename="885id">id</a>)];</td></tr>
+<tr><th id="421">421</th><td>}</td></tr>
+<tr><th id="422">422</th><td></td></tr>
+<tr><th id="423">423</th><td><i>/* Get C type ID for a C type. */</i></td></tr>
+<tr><th id="424">424</th><td><u>#define <dfn class="macro" id="_M/ctype_typeid" data-ref="_M/ctype_typeid">ctype_typeid</dfn>(cts, ct)	((CTypeID)((ct) - (cts)-&gt;tab))</u></td></tr>
+<tr><th id="425">425</th><td></td></tr>
+<tr><th id="426">426</th><td><i>/* Get child C type. */</i></td></tr>
+<tr><th id="427">427</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl def fn" id="ctype_child" title='ctype_child' data-ref="ctype_child" data-ref-filename="ctype_child">ctype_child</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col6 decl" id="886cts" title='cts' data-type='CTState *' data-ref="886cts" data-ref-filename="886cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col7 decl" id="887ct" title='ct' data-type='CType *' data-ref="887ct" data-ref-filename="887ct">ct</dfn>)</td></tr>
+<tr><th id="428">428</th><td>{</td></tr>
+<tr><th id="429">429</th><td>  <a class="macro" href="#266" title="((void)cts)" data-ref="_M/lj_assertCTS">lj_assertCTS</a>(!(ctype_isvoid(ct-&gt;info) || ctype_isstruct(ct-&gt;info) ||</td></tr>
+<tr><th id="430">430</th><td>	       ctype_isbitfield(ct-&gt;info)),</td></tr>
+<tr><th id="431">431</th><td>	       <q>"ctype %08x has no children"</q>, ct-&gt;info);</td></tr>
+<tr><th id="432">432</th><td>  <b>return</b> <a class="ref fn" href="#ctype_get" title='ctype_get' data-ref="ctype_get" data-ref-filename="ctype_get">ctype_get</a>(<a class="local col6 ref" href="#886cts" title='cts' data-ref="886cts" data-ref-filename="886cts">cts</a>, <a class="macro" href="#191" title="((CTypeID)((ct-&gt;info) &amp; 0x0000ffffu))" data-ref="_M/ctype_cid">ctype_cid</a>(<a class="local col7 ref" href="#887ct" title='ct' data-ref="887ct" data-ref-filename="887ct">ct</a>-&gt;<a class="ref field" href="#CType::info" title='CType::info' data-ref="CType::info" data-ref-filename="CType..info">info</a>));</td></tr>
+<tr><th id="433">433</th><td>}</td></tr>
+<tr><th id="434">434</th><td></td></tr>
+<tr><th id="435">435</th><td><i>/* Get raw type for a C type ID. */</i></td></tr>
+<tr><th id="436">436</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl def fn" id="ctype_raw" title='ctype_raw' data-ref="ctype_raw" data-ref-filename="ctype_raw">ctype_raw</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col8 decl" id="888cts" title='cts' data-type='CTState *' data-ref="888cts" data-ref-filename="888cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col9 decl" id="889id" title='id' data-type='CTypeID' data-ref="889id" data-ref-filename="889id">id</dfn>)</td></tr>
+<tr><th id="437">437</th><td>{</td></tr>
+<tr><th id="438">438</th><td>  <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col0 decl" id="890ct" title='ct' data-type='CType *' data-ref="890ct" data-ref-filename="890ct">ct</dfn> = <a class="ref fn" href="#ctype_get" title='ctype_get' data-ref="ctype_get" data-ref-filename="ctype_get">ctype_get</a>(<a class="local col8 ref" href="#888cts" title='cts' data-ref="888cts" data-ref-filename="888cts">cts</a>, <a class="local col9 ref" href="#889id" title='id' data-ref="889id" data-ref-filename="889id">id</a>);</td></tr>
+<tr><th id="439">439</th><td>  <b>while</b> (<a class="macro" href="#210" title="((((ct-&gt;info)) &gt;&gt; 28) == CT_ATTRIB)" data-ref="_M/ctype_isattrib">ctype_isattrib</a>(<a class="local col0 ref" href="#890ct" title='ct' data-ref="890ct" data-ref-filename="890ct">ct</a>-&gt;<a class="ref field" href="#CType::info" title='CType::info' data-ref="CType::info" data-ref-filename="CType..info">info</a>)) <a class="local col0 ref" href="#890ct" title='ct' data-ref="890ct" data-ref-filename="890ct">ct</a> = <a class="ref fn" href="#ctype_child" title='ctype_child' data-ref="ctype_child" data-ref-filename="ctype_child">ctype_child</a>(<a class="local col8 ref" href="#888cts" title='cts' data-ref="888cts" data-ref-filename="888cts">cts</a>, <a class="local col0 ref" href="#890ct" title='ct' data-ref="890ct" data-ref-filename="890ct">ct</a>);</td></tr>
+<tr><th id="440">440</th><td>  <b>return</b> <a class="local col0 ref" href="#890ct" title='ct' data-ref="890ct" data-ref-filename="890ct">ct</a>;</td></tr>
+<tr><th id="441">441</th><td>}</td></tr>
+<tr><th id="442">442</th><td></td></tr>
+<tr><th id="443">443</th><td><i>/* Get raw type of the child of a C type. */</i></td></tr>
+<tr><th id="444">444</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl def fn" id="ctype_rawchild" title='ctype_rawchild' data-ref="ctype_rawchild" data-ref-filename="ctype_rawchild">ctype_rawchild</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col1 decl" id="891cts" title='cts' data-type='CTState *' data-ref="891cts" data-ref-filename="891cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col2 decl" id="892ct" title='ct' data-type='CType *' data-ref="892ct" data-ref-filename="892ct">ct</dfn>)</td></tr>
+<tr><th id="445">445</th><td>{</td></tr>
+<tr><th id="446">446</th><td>  <b>do</b> { <a class="local col2 ref" href="#892ct" title='ct' data-ref="892ct" data-ref-filename="892ct">ct</a> = <a class="ref fn" href="#ctype_child" title='ctype_child' data-ref="ctype_child" data-ref-filename="ctype_child">ctype_child</a>(<a class="local col1 ref" href="#891cts" title='cts' data-ref="891cts" data-ref-filename="891cts">cts</a>, <a class="local col2 ref" href="#892ct" title='ct' data-ref="892ct" data-ref-filename="892ct">ct</a>); } <b>while</b> (<a class="macro" href="#210" title="((((ct-&gt;info)) &gt;&gt; 28) == CT_ATTRIB)" data-ref="_M/ctype_isattrib">ctype_isattrib</a>(<a class="local col2 ref" href="#892ct" title='ct' data-ref="892ct" data-ref-filename="892ct">ct</a>-&gt;<a class="ref field" href="#CType::info" title='CType::info' data-ref="CType::info" data-ref-filename="CType..info">info</a>));</td></tr>
+<tr><th id="447">447</th><td>  <b>return</b> <a class="local col2 ref" href="#892ct" title='ct' data-ref="892ct" data-ref-filename="892ct">ct</a>;</td></tr>
+<tr><th id="448">448</th><td>}</td></tr>
+<tr><th id="449">449</th><td></td></tr>
+<tr><th id="450">450</th><td><i>/* Set the name of a C type table element. */</i></td></tr>
+<tr><th id="451">451</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <em>void</em> <dfn class="decl def fn" id="ctype_setname" title='ctype_setname' data-ref="ctype_setname" data-ref-filename="ctype_setname">ctype_setname</dfn>(<a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col3 decl" id="893ct" title='ct' data-type='CType *' data-ref="893ct" data-ref-filename="893ct">ct</dfn>, <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col4 decl" id="894s" title='s' data-type='GCstr *' data-ref="894s" data-ref-filename="894s">s</dfn>)</td></tr>
+<tr><th id="452">452</th><td>{</td></tr>
+<tr><th id="453">453</th><td>  <i>/* NOBARRIER: mark string as fixed -- the C type table is never collected. */</i></td></tr>
+<tr><th id="454">454</th><td>  <a class="macro" href="lj_gc.h.html#45" title="((s)-&gt;marked |= 0x20)" data-ref="_M/fixstring">fixstring</a>(<a class="local col4 ref" href="#894s" title='s' data-ref="894s" data-ref-filename="894s">s</a>);</td></tr>
+<tr><th id="455">455</th><td>  <a class="macro" href="lj_obj.h.html#72" title="((ct-&gt;name).gcptr64 = (uint64_t)&amp;(((GCobj *)(s)))-&gt;gch)" data-ref="_M/setgcref">setgcref</a>(<a class="local col3 ref" href="#893ct" title='ct' data-ref="893ct" data-ref-filename="893ct">ct</a>-&gt;<a class="ref field" href="#CType::name" title='CType::name' data-ref="CType::name" data-ref-filename="CType..name">name</a>, <a class="macro" href="lj_obj.h.html#769" title="((GCobj *)(s))" data-ref="_M/obj2gco">obj2gco</a>(<a class="local col4 ref" href="#894s" title='s' data-ref="894s" data-ref-filename="894s">s</a>));</td></tr>
+<tr><th id="456">456</th><td>}</td></tr>
+<tr><th id="457">457</th><td></td></tr>
+<tr><th id="458">458</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl fn" id="lj_ctype_new" title='lj_ctype_new' data-ref="lj_ctype_new" data-ref-filename="lj_ctype_new">lj_ctype_new</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col5 decl" id="895cts" title='cts' data-type='CTState *' data-ref="895cts" data-ref-filename="895cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> **<dfn class="local col6 decl" id="896ctp" title='ctp' data-type='CType **' data-ref="896ctp" data-ref-filename="896ctp">ctp</dfn>);</td></tr>
+<tr><th id="459">459</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl fn" id="lj_ctype_intern" title='lj_ctype_intern' data-ref="lj_ctype_intern" data-ref-filename="lj_ctype_intern">lj_ctype_intern</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col7 decl" id="897cts" title='cts' data-type='CTState *' data-ref="897cts" data-ref-filename="897cts">cts</dfn>, <a class="typedef" href="#CTInfo" title='CTInfo' data-type='uint32_t' data-ref="CTInfo" data-ref-filename="CTInfo">CTInfo</a> <dfn class="local col8 decl" id="898info" title='info' data-type='CTInfo' data-ref="898info" data-ref-filename="898info">info</dfn>, <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> <dfn class="local col9 decl" id="899size" title='size' data-type='CTSize' data-ref="899size" data-ref-filename="899size">size</dfn>);</td></tr>
+<tr><th id="460">460</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_ctype_addname" title='lj_ctype_addname' data-ref="lj_ctype_addname" data-ref-filename="lj_ctype_addname">lj_ctype_addname</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col0 decl" id="900cts" title='cts' data-type='CTState *' data-ref="900cts" data-ref-filename="900cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col1 decl" id="901ct" title='ct' data-type='CType *' data-ref="901ct" data-ref-filename="901ct">ct</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col2 decl" id="902id" title='id' data-type='CTypeID' data-ref="902id" data-ref-filename="902id">id</dfn>);</td></tr>
+<tr><th id="461">461</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="decl fn" id="lj_ctype_getname" title='lj_ctype_getname' data-ref="lj_ctype_getname" data-ref-filename="lj_ctype_getname">lj_ctype_getname</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col3 decl" id="903cts" title='cts' data-type='CTState *' data-ref="903cts" data-ref-filename="903cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> **<dfn class="local col4 decl" id="904ctp" title='ctp' data-type='CType **' data-ref="904ctp" data-ref-filename="904ctp">ctp</dfn>, <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col5 decl" id="905name" title='name' data-type='GCstr *' data-ref="905name" data-ref-filename="905name">name</dfn>,</td></tr>
+<tr><th id="462">462</th><td>				 <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col6 decl" id="906tmask" title='tmask' data-type='uint32_t' data-ref="906tmask" data-ref-filename="906tmask">tmask</dfn>);</td></tr>
+<tr><th id="463">463</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl fn" id="lj_ctype_getfieldq" title='lj_ctype_getfieldq' data-ref="lj_ctype_getfieldq" data-ref-filename="lj_ctype_getfieldq">lj_ctype_getfieldq</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col7 decl" id="907cts" title='cts' data-type='CTState *' data-ref="907cts" data-ref-filename="907cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col8 decl" id="908ct" title='ct' data-type='CType *' data-ref="908ct" data-ref-filename="908ct">ct</dfn>, <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col9 decl" id="909name" title='name' data-type='GCstr *' data-ref="909name" data-ref-filename="909name">name</dfn>,</td></tr>
+<tr><th id="464">464</th><td>				  <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> *<dfn class="local col0 decl" id="910ofs" title='ofs' data-type='CTSize *' data-ref="910ofs" data-ref-filename="910ofs">ofs</dfn>, <a class="typedef" href="#CTInfo" title='CTInfo' data-type='uint32_t' data-ref="CTInfo" data-ref-filename="CTInfo">CTInfo</a> *<dfn class="local col1 decl" id="911qual" title='qual' data-type='CTInfo *' data-ref="911qual" data-ref-filename="911qual">qual</dfn>);</td></tr>
+<tr><th id="465">465</th><td><u>#define <dfn class="macro" id="_M/lj_ctype_getfield" data-ref="_M/lj_ctype_getfield">lj_ctype_getfield</dfn>(cts, ct, name, ofs) \</u></td></tr>
+<tr><th id="466">466</th><td><u>  lj_ctype_getfieldq((cts), (ct), (name), (ofs), NULL)</u></td></tr>
+<tr><th id="467">467</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="decl fn" id="lj_ctype_rawref" title='lj_ctype_rawref' data-ref="lj_ctype_rawref" data-ref-filename="lj_ctype_rawref">lj_ctype_rawref</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col2 decl" id="912cts" title='cts' data-type='CTState *' data-ref="912cts" data-ref-filename="912cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col3 decl" id="913id" title='id' data-type='CTypeID' data-ref="913id" data-ref-filename="913id">id</dfn>);</td></tr>
+<tr><th id="468">468</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> <dfn class="decl fn" id="lj_ctype_size" title='lj_ctype_size' data-ref="lj_ctype_size" data-ref-filename="lj_ctype_size">lj_ctype_size</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col4 decl" id="914cts" title='cts' data-type='CTState *' data-ref="914cts" data-ref-filename="914cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col5 decl" id="915id" title='id' data-type='CTypeID' data-ref="915id" data-ref-filename="915id">id</dfn>);</td></tr>
+<tr><th id="469">469</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> <dfn class="decl fn" id="lj_ctype_vlsize" title='lj_ctype_vlsize' data-ref="lj_ctype_vlsize" data-ref-filename="lj_ctype_vlsize">lj_ctype_vlsize</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col6 decl" id="916cts" title='cts' data-type='CTState *' data-ref="916cts" data-ref-filename="916cts">cts</dfn>, <a class="typedef" href="#CType" title='CType' data-type='struct CType' data-ref="CType" data-ref-filename="CType">CType</a> *<dfn class="local col7 decl" id="917ct" title='ct' data-type='CType *' data-ref="917ct" data-ref-filename="917ct">ct</dfn>, <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> <dfn class="local col8 decl" id="918nelem" title='nelem' data-type='CTSize' data-ref="918nelem" data-ref-filename="918nelem">nelem</dfn>);</td></tr>
+<tr><th id="470">470</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTInfo" title='CTInfo' data-type='uint32_t' data-ref="CTInfo" data-ref-filename="CTInfo">CTInfo</a> <dfn class="decl fn" id="lj_ctype_info" title='lj_ctype_info' data-ref="lj_ctype_info" data-ref-filename="lj_ctype_info">lj_ctype_info</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col9 decl" id="919cts" title='cts' data-type='CTState *' data-ref="919cts" data-ref-filename="919cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col0 decl" id="920id" title='id' data-type='CTypeID' data-ref="920id" data-ref-filename="920id">id</dfn>, <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> *<dfn class="local col1 decl" id="921szp" title='szp' data-type='CTSize *' data-ref="921szp" data-ref-filename="921szp">szp</dfn>);</td></tr>
+<tr><th id="471">471</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#cTValue" title='cTValue' data-type='const TValue' data-ref="cTValue" data-ref-filename="cTValue">cTValue</a> *<dfn class="decl fn" id="lj_ctype_meta" title='lj_ctype_meta' data-ref="lj_ctype_meta" data-ref-filename="lj_ctype_meta">lj_ctype_meta</dfn>(<a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="local col2 decl" id="922cts" title='cts' data-type='CTState *' data-ref="922cts" data-ref-filename="922cts">cts</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col3 decl" id="923id" title='id' data-type='CTypeID' data-ref="923id" data-ref-filename="923id">id</dfn>, <a class="typedef" href="lj_obj.h.html#MMS" title='MMS' data-type='enum MMS' data-ref="MMS" data-ref-filename="MMS">MMS</a> <dfn class="local col4 decl" id="924mm" title='mm' data-type='MMS' data-ref="924mm" data-ref-filename="924mm">mm</dfn>);</td></tr>
+<tr><th id="472">472</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="decl fn" id="lj_ctype_repr" title='lj_ctype_repr' data-ref="lj_ctype_repr" data-ref-filename="lj_ctype_repr">lj_ctype_repr</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col5 decl" id="925L" title='L' data-type='lua_State *' data-ref="925L" data-ref-filename="925L">L</dfn>, <a class="typedef" href="#CTypeID" title='CTypeID' data-type='uint32_t' data-ref="CTypeID" data-ref-filename="CTypeID">CTypeID</a> <dfn class="local col6 decl" id="926id" title='id' data-type='CTypeID' data-ref="926id" data-ref-filename="926id">id</dfn>, <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="local col7 decl" id="927name" title='name' data-type='GCstr *' data-ref="927name" data-ref-filename="927name">name</dfn>);</td></tr>
+<tr><th id="473">473</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="decl fn" id="lj_ctype_repr_int64" title='lj_ctype_repr_int64' data-ref="lj_ctype_repr_int64" data-ref-filename="lj_ctype_repr_int64">lj_ctype_repr_int64</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col8 decl" id="928L" title='L' data-type='lua_State *' data-ref="928L" data-ref-filename="928L">L</dfn>, <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col9 decl" id="929n" title='n' data-type='uint64_t' data-ref="929n" data-ref-filename="929n">n</dfn>, <em>int</em> <dfn class="local col0 decl" id="930isunsigned" title='isunsigned' data-type='int' data-ref="930isunsigned" data-ref-filename="930isunsigned">isunsigned</dfn>);</td></tr>
+<tr><th id="474">474</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="decl fn" id="lj_ctype_repr_complex" title='lj_ctype_repr_complex' data-ref="lj_ctype_repr_complex" data-ref-filename="lj_ctype_repr_complex">lj_ctype_repr_complex</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col1 decl" id="931L" title='L' data-type='lua_State *' data-ref="931L" data-ref-filename="931L">L</dfn>, <em>void</em> *<dfn class="local col2 decl" id="932sp" title='sp' data-type='void *' data-ref="932sp" data-ref-filename="932sp">sp</dfn>, <a class="typedef" href="#CTSize" title='CTSize' data-type='uint32_t' data-ref="CTSize" data-ref-filename="CTSize">CTSize</a> <dfn class="local col3 decl" id="933size" title='size' data-type='CTSize' data-ref="933size" data-ref-filename="933size">size</dfn>);</td></tr>
+<tr><th id="475">475</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="#CTState" title='CTState' data-type='struct CTState' data-ref="CTState" data-ref-filename="CTState">CTState</a> *<dfn class="decl fn" id="lj_ctype_init" title='lj_ctype_init' data-ref="lj_ctype_init" data-ref-filename="lj_ctype_init">lj_ctype_init</dfn>(<a class="typedef" href="lua.h.html#lua_State" title='lua_State' data-type='struct lua_State' data-ref="lua_State" data-ref-filename="lua_State">lua_State</a> *<dfn class="local col4 decl" id="934L" title='L' data-type='lua_State *' data-ref="934L" data-ref-filename="934L">L</dfn>);</td></tr>
+<tr><th id="476">476</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_ctype_freestate" title='lj_ctype_freestate' data-ref="lj_ctype_freestate" data-ref-filename="lj_ctype_freestate">lj_ctype_freestate</dfn>(<a class="typedef" href="lj_obj.h.html#global_State" title='global_State' data-type='struct global_State' data-ref="global_State" data-ref-filename="global_State">global_State</a> *<dfn class="local col5 decl" id="935g" title='g' data-type='global_State *' data-ref="935g" data-ref-filename="935g">g</dfn>);</td></tr>
+<tr><th id="477">477</th><td></td></tr>
+<tr><th id="478">478</th><td><u>#<span data-ppcond="12">endif</span></u></td></tr>
+<tr><th id="479">479</th><td></td></tr>
+<tr><th id="480">480</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="481">481</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='host/buildvm.c.html'>luajit/host/buildvm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

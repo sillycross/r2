@@ -1,0 +1,7 @@
+<dec f='include/x86_64-linux-gnu/bits/dlfcn.h' l='38'/>
+<use f='luajit/lib_package.c' l='46' u='c'/>
+<doc f='include/x86_64-linux-gnu/bits/dlfcn.h' l='35'>/* Unix98 demands the following flag which is the inverse to RTLD_GLOBAL.
+   The implementation does this by default and so we can define the
+   value to zero.  */</doc>
+<use f='luajit/lj_clib.c' l='119' u='c'/>
+<use f='luajit/lj_clib.c' l='124' u='c'/>

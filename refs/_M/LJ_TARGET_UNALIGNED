@@ -1,0 +1,5 @@
+<dec f='luajit/lj_arch.h' l='194'/>
+<use f='luajit/lj_arch.h' l='603' u='a'/>
+<use f='luajit/lj_crecord.c' l='259' u='c'/>
+<use f='luajit/lj_crecord.c' l='321' u='c'/>
+<use f='luajit/lj_opt_fold.c' l='2072' u='c'/>

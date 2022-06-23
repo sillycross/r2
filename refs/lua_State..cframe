@@ -1,0 +1,53 @@
+<dec f='luajit/lj_obj.h' l='695' type='void *'/>
+<use f='luajit/host/buildvm_arch.h' l='458' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1654' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1664' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1699' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='a' c='build_subroutines'/>
+<offset>640</offset>
+<doc f='luajit/lj_obj.h' l='695'>/* End of C stack frame chain. */</doc>
+<use f='luajit/lib_base.c' l='588' u='r' c='lj_cf_coroutine_isyieldable'/>
+<use f='luajit/lib_base.c' l='610' u='r' c='ffh_resume'/>
+<use f='luajit/lib_base.c' l='612' u='r' c='ffh_resume'/>
+<use f='luajit/lj_api.c' l='1159' u='r' c='cpcall'/>
+<use f='luajit/lj_api.c' l='1193' u='r' c='lua_isyieldable'/>
+<use f='luajit/lj_api.c' l='1198' u='r' c='lua_yield'/>
+<use f='luajit/lj_api.c' l='1209' u='w' c='lua_yield'/>
+<use f='luajit/lj_api.c' l='1239' u='r' c='lua_resume'/>
+<use f='luajit/lj_ccallback.c' l='569' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='691' u='r' c='lj_ccallback_enter'/>
+<use f='luajit/lj_ccallback.c' l='695' u='w' c='lj_ccallback_enter'/>
+<use f='luajit/lj_ccallback.c' l='712' u='r' c='lj_ccallback_leave'/>
+<use f='luajit/lj_ccallback.c' l='719' u='w' c='lj_ccallback_leave'/>
+<use f='luajit/lj_ccallback.c' l='719' u='r' c='lj_ccallback_leave'/>
+<use f='luajit/lj_cparse.c' l='1904' u='r' c='cpcparser'/>
+<use f='luajit/lj_debug.c' l='63' u='r' c='debug_framepc'/>
+<use f='luajit/lj_debug.c' l='74' u='r' c='debug_framepc'/>
+<use f='luajit/lj_dispatch.c' l='402' u='r' c='lj_dispatch_ins'/>
+<use f='luajit/lj_dispatch.c' l='522' u='r' c='lj_dispatch_stitch'/>
+<use f='luajit/lj_dispatch.c' l='540' u='r' c='lj_dispatch_profile'/>
+<use f='luajit/lj_err.c' l='112' u='r' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='120' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='138' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='156' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='163' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='184' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='193' u='w' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='776' u='r' c='lj_err_mem'/>
+<use f='luajit/lj_err.c' l='785' u='r' c='finderrfunc'/>
+<use f='luajit/lj_err.c' l='904' macro='1' u='r' c='lj_err_optype'/>
+<use f='luajit/lj_err.c' l='929' macro='1' u='r' c='lj_err_optype_call'/>
+<use f='luajit/lj_err.c' l='960' u='r' c='lj_err_callermsg'/>
+<use f='luajit/lj_load.c' l='35' u='r' c='cpparser'/>
+<use f='luajit/lj_snap.c' l='889' u='r' c='lj_snap_restore'/>
+<use f='luajit/lj_state.c' l='296' u='w' c='lua_close'/>
+<use f='luajit/lj_state.c' l='315' u='w' c='lj_state_new'/>
+<use f='luajit/lj_trace.c' l='793' u='r' c='trace_exit_cp'/>
+<use f='luajit/lj_trace.c' l='794' u='r' c='trace_exit_cp'/>
+<use f='luajit/lj_trace.c' l='888' u='r' c='lj_trace_exit'/>

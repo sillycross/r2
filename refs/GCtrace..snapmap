@@ -1,0 +1,29 @@
+<dec f='luajit/lj_jit.h' l='263' type='SnapEntry *'/>
+<offset>448</offset>
+<doc f='luajit/lj_jit.h' l='263'>/* Snapshot map. */</doc>
+<use f='luajit/lib_jit.c' l='368' u='r' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lj_asm.c' l='967' u='r' c='asm_snap_alloc'/>
+<use f='luajit/lj_asm_x86.h' l='2693' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm.c' l='2039' u='r' c='asm_baseslot'/>
+<use f='luajit/lj_asm.c' l='2065' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_opt_dce.c' l='26' u='r' c='dce_marksnap'/>
+<use f='luajit/lj_opt_loop.c' l='148' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='211' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='212' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='232' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='255' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='300' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='378' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='388' u='r' c='loop_undo'/>
+<use f='luajit/lj_opt_sink.c' l='137' u='r' c='sink_mark_snap'/>
+<use f='luajit/lj_record.c' l='1984' u='r' c='rec_comp_fixup'/>
+<use f='luajit/lj_record.c' l='2020' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_snap.c' l='56' u='w' c='lj_snap_grow_map_'/>
+<use f='luajit/lj_snap.c' l='168' u='r' c='snapshot_stack'/>
+<use f='luajit/lj_snap.c' l='327' u='r' c='lj_snap_shrink'/>
+<use f='luajit/lj_snap.c' l='377' u='r' c='lj_snap_regspmap'/>
+<use f='luajit/lj_snap.c' l='476' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='876' u='r' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='158' u='w' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='158' u='r' c='trace_save'/>
+<use f='luajit/lj_trace.c' l='443' u='w' c='trace_start'/>

@@ -1,0 +1,29 @@
+<dec f='luajit/lua.h' l='123' type='void lua_pushvalue(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='85' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='95' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_aux.c' l='122' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_aux.c' l='154' u='c' c='luaL_setfuncs'/>
+<use f='luajit/lib_base.c' l='343' u='c' c='lj_cf_error'/>
+<use f='luajit/lib_base.c' l='489' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_debug.c' l='102' u='c' c='treatstackoption'/>
+<use f='luajit/lib_debug.c' l='179' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='338' u='c' c='lj_cf_debug_sethook'/>
+<use f='luajit/lib_jit.c' l='135' u='c' c='lj_cf_jit_attach'/>
+<use f='luajit/lib_package.c' l='220' u='c' c='ll_register'/>
+<use f='luajit/lib_package.c' l='470' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='486' u='c' c='setfenv'/>
+<use f='luajit/lib_package.c' l='495' u='c' c='dooptions'/>
+<use f='luajit/lib_package.c' l='496' u='c' c='dooptions'/>
+<use f='luajit/lib_package.c' l='504' u='c' c='modinit'/>
+<use f='luajit/lib_package.c' l='527' u='c' c='lj_cf_package_module'/>
+<use f='luajit/lib_package.c' l='538' u='c' c='lj_cf_package_seeall'/>
+<use f='luajit/lib_package.c' l='541' u='c' c='lj_cf_package_seeall'/>
+<use f='luajit/lib_package.c' l='623' u='c' c='luaopen_package'/>
+<use f='luajit/lib_string.c' l='580' u='c' c='add_value'/>
+<use f='luajit/lib_table.c' l='184' u='c' c='sort_comp'/>
+<use f='luajit/lib_table.c' l='185' u='c' c='sort_comp'/>
+<use f='luajit/lib_table.c' l='186' u='c' c='sort_comp'/>
+<use f='luajit/lib_table.c' l='223' u='c' c='auxsort'/>
+<def f='luajit/lj_api.c' l='209' ll='213' macro='1' type='void lua_pushvalue(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='302' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='352' u='c' c='dojitcmd'/>

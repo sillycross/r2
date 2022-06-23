@@ -1,0 +1,18 @@
+<dec f='luajit/lj_lib.h' l='41' type='lua_Number lj_lib_checknum(lua_State * L, int narg)'/>
+<use f='luajit/lib_math.c' l='26' macro='1' u='c' c='lj_ffh_math_abs'/>
+<use f='luajit/lib_math.c' l='34' u='c' c='lj_ffh_math_sqrt'/>
+<use f='luajit/lib_math.c' l='53' u='c' c='lj_ffh_math_log'/>
+<use f='luajit/lib_math.c' l='55' u='c' c='lj_ffh_math_log'/>
+<use f='luajit/lib_math.c' l='72' u='c' c='lj_ffh_math_atan2'/>
+<use f='luajit/lib_math.c' l='73' u='c' c='lj_ffh_math_atan2'/>
+<use f='luajit/lib_math.c' l='81' u='c' c='lj_ffh_math_ldexp'/>
+<use f='luajit/lib_math.c' l='85' u='c' c='lj_ffh_math_ldexp'/>
+<use f='luajit/lib_math.c' l='93' macro='1' u='c' c='lj_ffh_math_min'/>
+<use f='luajit/lib_math.c' l='151' u='c' c='lj_cf_math_random'/>
+<use f='luajit/lib_math.c' l='166' u='c' c='lj_cf_math_random'/>
+<use f='luajit/lib_math.c' l='186' u='c' c='lj_cf_math_randomseed'/>
+<def f='luajit/lj_lib.c' l='226' ll='239' type='lua_Number lj_lib_checknum(lua_State * L, int narg)'/>
+<use f='luajit/lj_meta.c' l='436' u='c' c='lj_meta_istype'/>
+<use f='luajit/lj_strfmt.c' l='409' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='425' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/lj_strfmt.c' l='428' u='c' c='lj_strfmt_putarg'/>

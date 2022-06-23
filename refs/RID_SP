@@ -1,0 +1,13 @@
+<dec f='luajit/lj_target_x86.h' l='37' type='4'/>
+<doc f='luajit/lj_target_x86.h' l='36'>/* Calling conventions. */</doc>
+<use f='luajit/lj_asm.c' l='194' u='r' c='ra_restore'/>
+<use f='luajit/lj_asm.c' l='196' u='r' c='ra_save'/>
+<use f='luajit/lj_asm.c' l='194' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='196' u='r' c='asm_phi_copyspill'/>
+<use f='luajit/lj_asm.c' l='194' u='r' c='asm_head_side'/>

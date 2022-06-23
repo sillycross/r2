@@ -1,0 +1,21 @@
+<def f='luajit/lj_ir.h' l='540' ll='564'/>
+<use f='luajit/lj_ir.h' l='540'/>
+<size>8</size>
+<doc f='luajit/lj_ir.h' l='525'>/* IR instruction format (64 bit).
+**
+**    16      16     8   8   8   8
+** +-------+-------+---+---+---+---+
+** |  op1  |  op2  | t | o | r | s |
+** +-------+-------+---+---+---+---+
+** |  op12/i/gco32 |   ot  | prev  | (alternative fields in union)
+** +-------+-------+---+---+---+---+
+** |  TValue/gco64                 | (2nd IR slot for 64 bit constants)
+** +---------------+-------+-------+
+**        32           16      16
+**
+** prev is only valid prior to register allocation and then reused for r + s.
+*/</doc>
+<mbr r='IRIns::i' o='0' t='int32_t'/>
+<mbr r='IRIns::gcr' o='0' t='GCRef'/>
+<mbr r='IRIns::ptr' o='0' t='MRef'/>
+<mbr r='IRIns::tv' o='0' t='TValue'/>

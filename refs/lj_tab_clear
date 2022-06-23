@@ -1,0 +1,5 @@
+<dec f='luajit/lj_tab.h' l='61' type='void lj_tab_clear(GCtab * t)'/>
+<use f='luajit/lib_table.c' l='298' u='c' c='lj_cf_table_clear'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_tab.c' l='204' ll='212' type='void lj_tab_clear(GCtab * t)'/>
+<doc f='luajit/lj_tab.c' l='203'>/* Clear a table. */</doc>

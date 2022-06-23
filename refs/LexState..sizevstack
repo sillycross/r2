@@ -1,0 +1,11 @@
+<dec f='luajit/lj_lex.h' l='71' type='MSize'/>
+<offset>1216</offset>
+<doc f='luajit/lj_lex.h' l='71'>/* Size of variable stack. */</doc>
+<use f='luajit/lj_lex.c' l='405' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='450' u='r' c='lj_lex_cleanup'/>
+<use f='luajit/lj_parse.c' l='1052' u='r' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1053' u='r' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1055' u='a' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1160' u='r' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1161' u='r' c='gola_new'/>
+<use f='luajit/lj_parse.c' l='1163' u='a' c='gola_new'/>

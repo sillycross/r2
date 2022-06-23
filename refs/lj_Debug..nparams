@@ -1,0 +1,6 @@
+<dec f='luajit/lj_debug.h' l='25' type='int'/>
+<offset>960</offset>
+<doc f='luajit/lj_debug.h' l='24'>/* Extended fields. Only valid if lj_debug_getinfo() is called with ext = 1.*/</doc>
+<use f='luajit/lib_debug.c' l='144' u='r' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='481' u='w' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='484' u='w' c='lj_debug_getinfo'/>

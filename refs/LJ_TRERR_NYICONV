@@ -1,0 +1,8 @@
+<use f='luajit/lj_crecord.c' l='541' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='592' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='651' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='979' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='996' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1062' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1075' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1080' u='r' c='crec_alloc'/>

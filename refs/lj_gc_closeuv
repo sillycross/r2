@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='75' type='void lj_gc_closeuv(global_State * g, GCupval * uv)'/>
+<use f='luajit/lj_func.c' l='97' u='c' c='lj_func_closeuv'/>
+<def f='luajit/lj_gc.c' l='828' ll='848' type='void lj_gc_closeuv(global_State * g, GCupval * uv)'/>
+<doc f='luajit/lj_gc.c' l='827'>/* Close upvalue. Also needs a write barrier. */</doc>

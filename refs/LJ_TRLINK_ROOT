@@ -1,0 +1,5 @@
+<dec f='luajit/lj_jit.h' l='240' type='1'/>
+<doc f='luajit/lj_jit.h' l='240'>/* Link to other root trace. */</doc>
+<use f='luajit/lj_record.c' l='637' u='r' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='1777' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2420' u='r' c='lj_record_ins'/>

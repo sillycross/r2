@@ -1,0 +1,30 @@
+<dec f='luajit/lj_cparse.h' l='45' type='GCstr *'/>
+<offset>128</offset>
+<doc f='luajit/lj_cparse.h' l='45'>/* Interned string of identifier/keyword. */</doc>
+<use f='luajit/lj_cparse.c' l='192' u='w' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='193' u='r' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='210' u='w' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='278' u='w' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='533' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='535' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='572' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='575' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='1042' u='r' c='cp_decl_asm'/>
+<use f='luajit/lj_cparse.c' l='1044' u='r' c='cp_decl_asm'/>
+<use f='luajit/lj_cparse.c' l='1058' u='r' c='cp_decl_mode'/>
+<use f='luajit/lj_cparse.c' l='1094' u='r' c='cp_decl_gccattribute'/>
+<use f='luajit/lj_cparse.c' l='1176' u='r' c='cp_decl_msvcattribute'/>
+<use f='luajit/lj_cparse.c' l='1237' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1241' u='r' c='cp_struct_name'/>
+<use f='luajit/lj_cparse.c' l='1451' u='r' c='cp_decl_enum'/>
+<use f='luajit/lj_cparse.c' l='1722' u='r' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1764' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1764' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1768' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1768' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1773' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1773' u='r' c='cp_pragma'/>
+<use f='luajit/lj_cparse.c' l='1822' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1822' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1826' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_cparse.c' l='1826' u='r' c='cp_decl_multi'/>

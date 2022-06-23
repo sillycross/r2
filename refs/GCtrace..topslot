@@ -1,0 +1,9 @@
+<dec f='luajit/lj_jit.h' l='278' type='uint8_t'/>
+<offset>920</offset>
+<doc f='luajit/lj_jit.h' l='278'>/* Top stack slot already checked to be allocated. */</doc>
+<use f='luajit/lj_asm.c' l='1858' u='w' c='asm_head_root'/>
+<use f='luajit/lj_asm.c' l='1880' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2020' u='w' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2020' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2021' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2029' u='w' c='asm_head_side'/>

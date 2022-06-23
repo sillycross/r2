@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='41' type='uintptr_t lj_trace_unwind(jit_State * J, uintptr_t addr, ExitNo * ep)'/>
+<use f='luajit/lj_err.c' l='506' u='c' c='err_unwind_jit'/>
+<def f='luajit/lj_trace.c' l='932' ll='964' type='uintptr_t lj_trace_unwind(jit_State * J, uintptr_t addr, ExitNo * ep)'/>
+<doc f='luajit/lj_trace.c' l='931'>/* Given an mcode address determine trace exit address for unwinding. */</doc>

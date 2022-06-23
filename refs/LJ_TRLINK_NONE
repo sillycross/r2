@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='239' type='0'/>
+<doc f='luajit/lj_jit.h' l='239'>/* Incomplete trace. No link, yet. */</doc>
+<use f='luajit/lj_trace.c' l='595' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='683' u='r' c='trace_state'/>

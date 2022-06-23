@@ -1,0 +1,8 @@
+<dec f='luajit/lj_cconv.h' l='23' type='7'/>
+<doc f='luajit/lj_cconv.h' l='23'>/* Struct/union. */</doc>
+<use f='luajit/lj_cconv.c' l='350' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='363' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='363' macro='1' u='r' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='513' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='533' macro='1' u='r' c='crec_ct_ct'/>
+<use f='luajit/lj_crecord.c' l='533' macro='1' u='r' c='crec_ct_ct'/>

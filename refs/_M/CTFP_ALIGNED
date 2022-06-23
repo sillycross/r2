@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ctype.h' l='83'/>
+<doc f='luajit/lj_ctype.h' l='82'>/* Flags used in parser.  .F.Ammvf   cp-&gt;attr  */</doc>
+<use f='luajit/lj_cparse.c' l='799' u='c'/>
+<use f='luajit/lj_cparse.c' l='1032' u='c'/>
+<use f='luajit/lj_cparse.c' l='1308' u='c'/>
+<use f='luajit/lj_cparse.c' l='1321' u='c'/>
+<use f='luajit/lj_ctype.c' l='321' u='c'/>
+<use f='luajit/lj_ctype.c' l='322' u='c'/>
+<use f='luajit/lj_ctype.c' l='324' u='c'/>

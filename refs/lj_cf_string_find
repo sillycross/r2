@@ -1,0 +1,1 @@
+<def f='luajit/lib_string.c' l='503' macro='1' type='int lj_cf_string_find(lua_State * L)'/>

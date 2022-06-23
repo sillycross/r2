@@ -1,0 +1,10 @@
+<def f='luajit/lj_cdata.h' l='53' ll='59' type='GCcdata * lj_cdata_new_(lua_State * L, CTypeID id, CTSize sz)'/>
+<use f='luajit/lib_bit.c' l='34' u='c' c='bit_result64'/>
+<doc f='luajit/lj_cdata.h' l='52'>/* Variant which works without a valid CTState. */</doc>
+<use f='luajit/lib_buffer.c' l='206' u='c' c='lj_cf_buffer_method_reserve'/>
+<use f='luajit/lib_buffer.c' l='228' u='c' c='lj_cf_buffer_method_ref'/>
+<use f='luajit/lj_bcread.c' l='242' u='c' c='bcread_kgc'/>
+<use f='luajit/lj_ir.c' l='399' u='c' c='lj_ir_kvalue'/>
+<use f='luajit/lj_lex.c' l='123' u='c' c='lex_number'/>
+<use f='luajit/lj_lex.c' l='127' u='c' c='lex_number'/>
+<use f='luajit/lj_serialize.c' l='363' u='c' c='serialize_get'/>

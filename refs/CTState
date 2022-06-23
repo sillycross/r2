@@ -1,0 +1,13 @@
+<def f='luajit/lj_ctype.h' l='174' ll='184'/>
+<use f='luajit/lj_ctype.h' l='174'/>
+<size>472</size>
+<doc f='luajit/lj_ctype.h' l='173'>/* C type state. */</doc>
+<mbr r='CTState::tab' o='0' t='CType *'/>
+<mbr r='CTState::top' o='64' t='CTypeID'/>
+<mbr r='CTState::sizetab' o='96' t='MSize'/>
+<mbr r='CTState::L' o='128' t='lua_State *'/>
+<mbr r='CTState::g' o='192' t='global_State *'/>
+<mbr r='CTState::finalizer' o='256' t='GCtab *'/>
+<mbr r='CTState::miscmap' o='320' t='GCtab *'/>
+<mbr r='CTState::cb' o='384' t='CCallback'/>
+<mbr r='CTState::hash' o='1728' t='CTypeID1 [128]'/>

@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='5'/>
+<use f='luajit/lj_obj.h' l='568'/>
+<use f='luajit/lj_bcdef.h' l='161' macro='1' u='r'/>
+<use f='luajit/lj_carith.c' l='257' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_carith.c' l='270' u='r' c='lj_carith_op'/>
+<use f='luajit/lj_crecord.c' l='1560' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_recdef.h' l='171' u='r'/>
+<use f='luajit/lj_meta.c' l='317' u='r' c='lj_meta_len'/>
+<use f='luajit/lj_meta.c' l='320' u='r' c='lj_meta_len'/>
+<use f='luajit/lj_record.c' l='1077' u='r' c='rec_mm_len'/>

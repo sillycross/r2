@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ir.h' l='14'/>
+<use f='luajit/lj_ir.h' l='154' u='c'/>
+<use f='luajit/host/buildvm.c' l='255' u='c'/>
+<doc f='luajit/lj_ir.h' l='13'>/* IR instruction definition. Order matters, see below. ORDER IR */</doc>
+<use f='luajit/lj_ir.c' l='47' u='c'/>

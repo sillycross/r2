@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='324' type='MRef'/>
+<offset>0</offset>
+<doc f='luajit/lj_jit.h' l='324'>/* Bytecode PC of FORI. */</doc>
+<use f='luajit/lj_record.c' l='483' u='m' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='499' u='m' c='rec_for'/>
+<use f='luajit/lj_record.c' l='2588' u='m' c='lj_record_setup'/>

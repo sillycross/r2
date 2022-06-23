@@ -1,0 +1,6 @@
+<dec f='luajit/lj_parse.c' l='128' type='struct FuncState *'/>
+<use f='luajit/lj_parse.c' l='1135' u='r' c='var_lookup_'/>
+<use f='luajit/lj_parse.c' l='1610' u='r' c='fs_finish'/>
+<use f='luajit/lj_parse.c' l='1619' u='w' c='fs_init'/>
+<offset>256</offset>
+<doc f='luajit/lj_parse.c' l='128'>/* Enclosing function. */</doc>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='594' type='uint8_t'/>
+<offset>152</offset>
+<doc f='luajit/lj_obj.h' l='594'>/* Number of lightuserdata segments - 1. */</doc>
+<use f='luajit/lj_state.c' l='180' u='r' c='close_state'/>
+<use f='luajit/lj_state.c' l='180' u='r' c='close_state'/>
+<use f='luajit/lj_udata.c' l='43' u='r' c='lj_lightud_intern'/>
+<use f='luajit/lj_udata.c' l='57' u='w' c='lj_lightud_intern'/>

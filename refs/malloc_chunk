@@ -1,0 +1,8 @@
+<def f='luajit/lj_alloc.c' l='392' ll='397'/>
+<use f='luajit/lj_alloc.c' l='395'/>
+<use f='luajit/lj_alloc.c' l='396'/>
+<use f='luajit/lj_alloc.c' l='399'/>
+<use f='luajit/lj_alloc.c' l='400'/>
+<use f='luajit/lj_alloc.c' l='401'/>
+<size>32</size>
+<doc f='luajit/lj_alloc.c' l='390'>/* -----------------------  Chunk representations ------------------------ */</doc>

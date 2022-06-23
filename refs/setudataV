@@ -1,0 +1,8 @@
+<def f='luajit/lj_obj.h' l='936' macro='1' type='void setudataV(lua_State * L, TValue * o, const GCudata * v)'/>
+<use f='luajit/lib_buffer.c' l='311' u='c' c='lj_cf_buffer_new'/>
+<use f='luajit/lib_io.c' l='241' u='c' c='io_file_write'/>
+<use f='luajit/lib_io.c' l='474' u='c' c='io_std_getset'/>
+<use f='luajit/lib_io.c' l='496' u='c' c='lj_cf_io_lines'/>
+<use f='luajit/lib_io.c' l='498' u='c' c='lj_cf_io_lines'/>
+<use f='luajit/lj_api.c' l='766' u='c' c='lua_newuserdata'/>
+<use f='luajit/lj_clib.c' l='408' u='c' c='clib_new'/>

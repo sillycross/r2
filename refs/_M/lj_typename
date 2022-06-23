@@ -1,0 +1,13 @@
+<dec f='luajit/lj_obj.h' l='1035'/>
+<use f='luajit/lib_ffi.c' l='121' u='c'/>
+<use f='luajit/lj_carith.c' l='252' u='c'/>
+<use f='luajit/lj_cconv.c' l='42' u='c'/>
+<use f='luajit/lj_err.c' l='900' u='c'/>
+<use f='luajit/lj_err.c' l='916' u='c'/>
+<use f='luajit/lj_err.c' l='917' u='c'/>
+<use f='luajit/lj_err.c' l='931' u='c'/>
+<use f='luajit/lj_err.c' l='1029' u='c'/>
+<use f='luajit/lj_err.c' l='1035' u='c'/>
+<use f='luajit/lj_serialize.c' l='293' u='c'/>
+<use f='luajit/lj_strfmt.c' l='521' u='c'/>
+<use f='luajit/lj_strfmt.c' l='521' u='c'/>

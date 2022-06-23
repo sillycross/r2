@@ -1,0 +1,11 @@
+<def f='luajit/lj_parse.c' l='174' ll='177' macro='1' type='void err_syntax(LexState * ls, ErrMsg em)'/>
+<use f='luajit/lj_parse.c' l='324' u='c' c='jmp_patchins'/>
+<use f='luajit/lj_parse.c' l='384' u='c' c='bcreg_bump'/>
+<use f='luajit/lj_parse.c' l='1553' u='c' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='1844' u='c' c='parse_params'/>
+<use f='luajit/lj_parse.c' l='1915' u='c' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1933' u='c' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1965' u='c' c='expr_primary'/>
+<use f='luajit/lj_parse.c' l='194' u='c' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='194' u='c' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2598' u='c' c='parse_for'/>

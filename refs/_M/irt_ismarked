@@ -1,0 +1,16 @@
+<dec f='luajit/lj_ir.h' l='430'/>
+<use f='luajit/lj_asm.c' l='1433' u='c'/>
+<use f='luajit/lj_asm.c' l='1560' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2849' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2863' u='c'/>
+<use f='luajit/lj_asm.c' l='1929' u='c'/>
+<use f='luajit/lj_opt_dce.c' l='45' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='180' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='182' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='193' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='85' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='125' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='172' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='181' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='192' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='203' u='c'/>

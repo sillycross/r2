@@ -1,0 +1,5 @@
+<dec f='luajit/lua.h' l='148' type='lua_Integer lua_tointeger(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='285' u='c' c='luaL_ref'/>
+<use f='luajit/lib_debug.c' l='117' u='c' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lib_os.c' l='161' u='c' c='getfield'/>
+<def f='luajit/lj_api.c' l='398' ll='419' macro='1' type='lua_Integer lua_tointeger(lua_State * L, int idx)'/>

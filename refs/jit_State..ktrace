@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='465' type='IRRef1'/>
+<offset>3200</offset>
+<doc f='luajit/lj_jit.h' l='465'>/* Reference to KGC with GCtrace. */</doc>
+<use f='luajit/lj_asm.c' l='2093' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2094' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2095' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_ffrecord.c' l='132' u='w' c='recff_stitch'/>
+<use f='luajit/lj_trace.c' l='451' u='w' c='trace_start'/>

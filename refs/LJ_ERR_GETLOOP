@@ -1,0 +1,3 @@
+<dec f='luajit/lj_errmsg.h' l='31' macro='1' type='364'/>
+<use f='luajit/lj_errmsg.h' l='31' macro='1' u='r'/>
+<use f='luajit/lj_meta.c' l='156' u='r' c='lj_meta_tget'/>

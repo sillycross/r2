@@ -1,0 +1,12 @@
+<dec f='luajit/lj_obj.h' l='700'/>
+<use f='luajit/lib_debug.c' l='28' u='c'/>
+<use f='luajit/lib_ffi.c' l='840' u='c'/>
+<use f='luajit/lib_jit.c' l='555' u='c'/>
+<use f='luajit/lib_jit.c' l='575' u='c'/>
+<use f='luajit/lib_jit.c' l='597' u='c'/>
+<use f='luajit/lj_api.c' l='48' u='c'/>
+<use f='luajit/lj_api.c' l='728' u='c'/>
+<use f='luajit/lj_api.c' l='944' u='c'/>
+<use f='luajit/lj_state.c' l='152' u='c'/>
+<use f='luajit/lj_state.c' l='242' u='c'/>
+<use f='luajit/lj_vmevent.c' l='23' u='c'/>

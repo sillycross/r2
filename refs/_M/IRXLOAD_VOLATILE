@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='231'/>
+<use f='luajit/lj_opt_mem.c' l='794' u='c'/>

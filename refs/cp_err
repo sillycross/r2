@@ -1,0 +1,19 @@
+<dec f='luajit/lj_cparse.c' l='66' type='void cp_err(CPState * cp, ErrMsg em)'/>
+<def f='luajit/lj_cparse.c' l='164' ll='167' macro='1' type='void cp_err(CPState * cp, ErrMsg em)'/>
+<use f='luajit/lj_cparse.c' l='207' u='c' c='cp_param'/>
+<use f='luajit/lj_cparse.c' l='476' u='c' c='cp_expr_sizeof'/>
+<use f='luajit/lj_cparse.c' l='707' u='c' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='718' u='c' c='cp_expr_infix'/>
+<use f='luajit/lj_cparse.c' l='734' u='c' c='cp_expr_unary'/>
+<use f='luajit/lj_cparse.c' l='753' u='c' c='cp_expr_kint'/>
+<use f='luajit/lj_cparse.c' l='761' u='c' c='cp_expr_ksize'/>
+<use f='luajit/lj_cparse.c' l='771' u='c' c='cp_add'/>
+<use f='luajit/lj_cparse.c' l='877' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='928' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='941' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='944' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='948' u='c' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='996' u='c' c='cp_decl_constinit'/>
+<use f='luajit/lj_cparse.c' l='1303' u='c' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1684' u='c' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1911' u='c' c='cpcparser'/>

@@ -1,0 +1,18 @@
+<def f='luajit/lj_asm_x86.h' l='2122' ll='2177' type='int asm_lea(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm_x86.h' l='2183' u='c' c='asm_add'/>
+<doc f='luajit/lj_asm_x86.h' l='2106'>/* LEA is really a 4-operand ADD with an independent destination register,
+** up to two source registers and an immediate. One register can be scaled
+** by 1, 2, 4 or 8. This can be used to avoid moves or to fuse several
+** instructions.
+**
+** Currently only a few common cases are supported:
+** - 3-operand ADD:    y = a+b; y = a+k   with a and b already allocated
+** - Left ADD fusion:  y = (a+b)+k; y = (a+k)+b
+** - Right ADD fusion: y = a+(b+k)
+** The ommited variants have already been reduced by FOLD.
+**
+** There are more fusion opportunities, like gathering shifts or joining
+** common references. But these are probably not worth the trouble, since
+** array indexing is not decomposed and already makes use of all fields
+** of the ModRM operand.
+*/</doc>

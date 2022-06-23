@@ -1,0 +1,15 @@
+<dec f='luajit/lj_tab.h' l='84'/>
+<use f='luajit/lib_base.c' l='235' u='c'/>
+<use f='luajit/lib_table.c' l='91' u='c'/>
+<use f='luajit/lib_table.c' l='163' u='c'/>
+<use f='luajit/lj_api.c' l='837' u='c'/>
+<use f='luajit/lj_buf.c' l='216' u='c'/>
+<use f='luajit/lj_ccallback.c' l='545' u='c'/>
+<use f='luajit/lj_cconv.c' l='479' u='c'/>
+<use f='luajit/lj_cconv.c' l='512' u='c'/>
+<use f='luajit/lj_tab.c' l='414' u='c'/>
+<use f='luajit/lj_tab.c' l='421' u='c'/>
+<use f='luajit/lj_tab.c' l='632' u='c'/>
+<use f='luajit/lj_tab.c' l='637' u='c'/>
+<use f='luajit/lj_tab.c' l='644' u='c'/>
+<use f='luajit/lj_vmevent.c' l='26' u='c'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='74' macro='1' type='1170'/>
+<use f='luajit/lj_errmsg.h' l='74' macro='1' u='r'/>
+<use f='luajit/lib_base.c' l='150' u='r' c='lj_cf_getfenv'/>
+<use f='luajit/lib_base.c' l='172' u='r' c='lj_cf_setfenv'/>

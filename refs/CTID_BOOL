@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ctype.h' l='310' macro='1' type='3'/>
+<use f='luajit/lj_ccall.c' l='916' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_cconv.c' l='616' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cconv.c' l='656' u='r' c='lj_cconv_bf_tv'/>
+<use f='luajit/lj_crecord.c' l='614' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='785' u='r' c='crec_index_bf'/>

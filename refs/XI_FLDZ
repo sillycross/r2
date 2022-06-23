@@ -1,0 +1,3 @@
+<dec f='luajit/lj_target_x86.h' l='231' type='61145'/>
+<doc f='luajit/lj_target_x86.h' l='230'>/* Note: little-endian byte-order! */</doc>
+<use f='luajit/lj_asm_x86.h' l='1926' u='r' c='asm_x87load'/>

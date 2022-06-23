@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='86' type='void luaL_traceback(lua_State * L, lua_State * L1, const char * msg, int level)'/>
+<use f='luajit/lib_debug.c' l='393' u='c' c='lj_cf_debug_traceback'/>
+<def f='luajit/lj_debug.c' l='659' ll='704' macro='1' type='void luaL_traceback(lua_State * L, lua_State * L1, const char * msg, int level)'/>
+<use f='luajit/luajit.c' l='108' u='c' c='traceback'/>

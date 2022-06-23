@@ -1,0 +1,5 @@
+<dec f='luajit/lj_target.h' l='44'/>
+<use f='luajit/lj_opt_sink.c' l='174' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='182' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='194' u='c'/>
+<use f='luajit/lj_opt_sink.c' l='206' u='c'/>

@@ -1,0 +1,13 @@
+<dec f='luajit/lj_parse.c' l='130' type='BCPos'/>
+<use f='luajit/lj_parse.c' l='361' u='w' c='jmp_tohere'/>
+<use f='luajit/lj_parse.c' l='478' u='r' c='bcemit_nil'/>
+<use f='luajit/lj_parse.c' l='579' u='w' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='698' u='r' c='bcemit_jmp'/>
+<use f='luajit/lj_parse.c' l='700' u='w' c='bcemit_jmp'/>
+<use f='luajit/lj_parse.c' l='1532' u='r' c='fs_fixup_ret'/>
+<use f='luajit/lj_parse.c' l='1624' u='w' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='2387' u='w' c='parse_label'/>
+<use f='luajit/lj_parse.c' l='2432' u='w' c='parse_while'/>
+<use f='luajit/lj_parse.c' l='2449' u='w' c='parse_repeat'/>
+<offset>352</offset>
+<doc f='luajit/lj_parse.c' l='130'>/* Bytecode position of last jump target. */</doc>

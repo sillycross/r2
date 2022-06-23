@@ -1,0 +1,10 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='288'/>
+<use f='luajit/lj_lex.c' l='197' u='r' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='266' u='r' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='343' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='347' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='369' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='493' u='r' c='lj_lex_error'/>
+<use f='luajit/lj_parse.c' l='1928' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1981' u='r' c='expr_primary'/>
+<use f='luajit/lj_parse.c' l='1999' c='expr_simple'/>

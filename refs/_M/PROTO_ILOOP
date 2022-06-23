@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='400'/>
+<use f='luajit/lj_bcwrite.c' l='223' u='c'/>
+<use f='luajit/lj_trace.c' l='186' u='c'/>
+<use f='luajit/lj_trace.c' l='189' u='c'/>
+<use f='luajit/lj_trace.c' l='377' u='c'/>
+<use f='luajit/lj_trace.c' l='420' u='c'/>

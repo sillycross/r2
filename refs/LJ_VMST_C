@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='527' type='1'/>
+<use f='luajit/host/buildvm_arch.h' l='421' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='4645' u='r' c='build_ins'/>
+<doc f='luajit/lj_obj.h' l='527'>/* C function. */</doc>
+<use f='luajit/lj_profile.c' l='160' u='r' c='profile_trigger'/>

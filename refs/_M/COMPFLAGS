@@ -1,0 +1,13 @@
+<dec f='luajit/lj_asm_x86.h' l='2338'/>
+<use f='luajit/lj_asm_x86.h' l='2341' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2342' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2343' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2344' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2345' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2346' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2347' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2348' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2349' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2350' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='2351' u='c'/>
+<doc f='luajit/lj_asm_x86.h' l='2337'>/* Map of comparisons to flags. ORDER IR. */</doc>

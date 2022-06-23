@@ -1,0 +1,26 @@
+<dec f='luajit/lj_jit.h' l='487' type='TraceNo'/>
+<offset>24128</offset>
+<doc f='luajit/lj_jit.h' l='487'>/* Parent of current side trace (0 for root traces). */</doc>
+<use f='luajit/lj_asm.c' l='2398' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_asm.c' l='2398' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_record.c' l='599' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='629' u='r' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='840' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='883' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='2605' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2617' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2618' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_record.c' l='2619' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='873' u='r' c='lj_snap_restore'/>
+<use f='luajit/lj_trace.c' l='414' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='460' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='461' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='507' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='509' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='550' u='w' c='trace_downrec'/>
+<use f='luajit/lj_trace.c' l='578' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='744' u='w' c='lj_trace_hot'/>
+<use f='luajit/lj_trace.c' l='755' u='r' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='773' u='w' c='lj_trace_stitch'/>
+<use f='luajit/lj_trace.c' l='861' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='882' u='r' c='lj_trace_exit'/>

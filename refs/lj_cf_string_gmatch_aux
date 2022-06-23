@@ -1,0 +1,2 @@
+<def f='luajit/lib_string.c' l='513' macro='1' type='int lj_cf_string_gmatch_aux(lua_State * L)'/>
+<use f='luajit/lib_string.c' l='543' u='r' c='lj_cf_string_gmatch'/>

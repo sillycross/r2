@@ -1,0 +1,49 @@
+<dec f='luajit/lj_obj.h' l='691' type='MRef'/>
+<use f='luajit/host/buildvm_arch.h' l='491' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='4180' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4559' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4609' u='a' c='build_ins'/>
+<use f='luajit/host/buildvm_arch.h' l='4637' u='a' c='build_ins'/>
+<offset>384</offset>
+<doc f='luajit/lj_obj.h' l='691'>/* Last free slot in the stack. */</doc>
+<use f='luajit/lj_state.h' l='24' u='m' c='lj_state_checkstack'/>
+<use f='luajit/lj_api.c' l='150' u='m' c='lua_settop'/>
+<use f='luajit/lj_api.c' l='212' macro='1' u='m' c='lua_pushvalue'/>
+<use f='luajit/lj_api.c' l='632' macro='1' u='m' c='lua_pushnil'/>
+<use f='luajit/lj_api.c' l='640' macro='1' u='m' c='lua_pushnumber'/>
+<use f='luajit/lj_api.c' l='646' macro='1' u='m' c='lua_pushinteger'/>
+<use f='luajit/lj_api.c' l='655' macro='1' u='m' c='lua_pushlstring'/>
+<use f='luajit/lj_api.c' l='668' macro='1' u='m' c='lua_pushstring'/>
+<use f='luajit/lj_api.c' l='701' macro='1' u='m' c='lua_pushcclosure'/>
+<use f='luajit/lj_api.c' l='707' macro='1' u='m' c='lua_pushboolean'/>
+<use f='luajit/lj_api.c' l='716' macro='1' u='m' c='lua_pushlightuserdata'/>
+<use f='luajit/lj_api.c' l='723' macro='1' u='m' c='lua_createtable'/>
+<use f='luajit/lj_api.c' l='745' macro='1' u='m' c='lua_pushthread'/>
+<use f='luajit/lj_api.c' l='755' macro='1' u='m' c='lua_newthread'/>
+<use f='luajit/lj_api.c' l='767' macro='1' u='m' c='lua_newuserdata'/>
+<use f='luajit/lj_api.c' l='790' macro='1' u='m' c='lua_concat'/>
+<use f='luajit/lj_api.c' l='823' macro='1' u='m' c='lua_getfield'/>
+<use f='luajit/lj_api.c' l='843' macro='1' u='m' c='lua_rawgeti'/>
+<use f='luajit/lj_api.c' l='859' macro='1' u='m' c='lua_getmetatable'/>
+<use f='luajit/lj_api.c' l='888' macro='1' u='m' c='lua_getfenv'/>
+<use f='luajit/lj_api.c' l='898' macro='1' u='m' c='lua_next'/>
+<use f='luajit/lj_api.c' l='912' macro='1' u='m' c='lua_getupvalue'/>
+<use f='luajit/lj_api.c' l='1245' macro='1' u='m' c='lua_resume'/>
+<use f='luajit/lj_bcread.c' l='445' macro='1' u='m' c='lj_bcread'/>
+<use f='luajit/lj_debug.c' l='411' macro='1' u='m' c='lua_getlocal'/>
+<use f='luajit/lj_debug.c' l='504' macro='1' u='m' c='lj_debug_getinfo'/>
+<use f='luajit/lj_debug.c' l='527' macro='1' u='m' c='lj_debug_getinfo'/>
+<use f='luajit/lj_gc.c' l='301' u='m' c='gc_traverse_frames'/>
+<use f='luajit/lj_gc.c' l='301' u='m' c='gc_traverse_frames'/>
+<use f='luajit/lj_parse.c' l='1637' macro='1' u='m' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='2727' macro='1' u='m' c='lj_parse'/>
+<use f='luajit/lj_record.c' l='1635' u='m' c='rec_upvalue'/>
+<use f='luajit/lj_snap.c' l='892' u='m' c='lj_snap_restore'/>
+<use f='luajit/lj_state.c' l='71' u='m' c='resizestack'/>
+<use f='luajit/lj_state.c' l='133' u='m' c='stack_init'/>
+<use f='luajit/lj_strfmt.c' l='589' macro='1' u='m' c='lj_strfmt_pushvf'/>

@@ -1,0 +1,16 @@
+<dec f='luajit/lj_obj.h' l='636' type='uint8_t'/>
+<offset>1176</offset>
+<doc f='luajit/lj_obj.h' l='636'>/* VM event mask. */</doc>
+<use f='luajit/lib_jit.c' l='137' u='w' c='lj_cf_jit_attach'/>
+<use f='luajit/lj_parse.c' l='1604' macro='1' u='r' c='fs_finish'/>
+<use f='luajit/lj_trace.c' l='303' macro='1' u='r' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='455' macro='1' u='r' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='535' macro='1' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='r' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='659' macro='1' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='880' macro='1' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_vmevent.c' l='34' u='w' c='lj_vmevent_prepare'/>
+<use f='luajit/lj_vmevent.c' l='41' u='r' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='44' u='w' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='55' u='r' c='lj_vmevent_call'/>
+<use f='luajit/lj_vmevent.c' l='56' u='w' c='lj_vmevent_call'/>

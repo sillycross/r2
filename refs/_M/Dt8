@@ -1,0 +1,8 @@
+<dec f='luajit/host/buildvm_arch.h' l='92'/>
+<use f='luajit/host/buildvm_arch.h' l='1425' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1503' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2170' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4135' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4637' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='91'>//|.type CFUNC,		GCfuncC</doc>

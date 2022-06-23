@@ -1,0 +1,4 @@
+<def f='luajit/lj_bcwrite.c' l='25' ll='35'/>
+<use f='luajit/lj_bcwrite.c' l='25'/>
+<size>64</size>
+<doc f='luajit/lj_bcwrite.c' l='24'>/* Context for bytecode writer. */</doc>

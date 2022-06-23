@@ -1,0 +1,14 @@
+<dec f='include/stdio.h' l='564' type='char * fgets(char *restrict __s, int __n, FILE *restrict __stream)'/>
+<doc f='include/stdio.h' l='560'>/* Get a newline-terminated string of finite length from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='luajit/host/buildvm_fold.c' l='196' u='c' c='emit_fold'/>
+<use f='luajit/host/buildvm_lib.c' l='377' u='c' c='emit_lib'/>
+<use f='luajit/host/buildvm_lib.c' l='390' u='c' c='emit_lib'/>
+<use f='luajit/host/minilua.c' l='6783' u='c' c='read_line'/>
+<use f='luajit/lib_debug.c' l='367' u='c' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_io.c' l='149' u='c' c='io_file_readline'/>
+<use f='luajit/lj_clib.c' l='101' u='c' c='clib_resolve_lds'/>
+<use f='luajit/lj_clib.c' l='103' u='c' c='clib_resolve_lds'/>
+<use f='luajit/luajit.c' l='215' u='c' c='pushline'/>

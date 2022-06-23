@@ -1,0 +1,4 @@
+<def f='luajit/lj_err.c' l='393' ll='398'/>
+<use f='luajit/lj_err.c' l='396'/>
+<use f='luajit/lj_err.c' l='393'/>
+<size>32</size>

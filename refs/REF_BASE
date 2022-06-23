@@ -1,0 +1,37 @@
+<dec f='luajit/lj_ir.h' l='453' type='32768'/>
+<doc f='luajit/lj_ir.h' l='453'>/* /--- IR grows upwards. */</doc>
+<use f='luajit/lj_asm.c' l='356' u='r' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='356' macro='1' u='r' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='359' macro='1' u='r' c='ra_rematk'/>
+<use f='luajit/lj_asm.c' l='424' macro='1' u='r' c='ra_restore'/>
+<use f='luajit/lj_asm.c' l='528' macro='1' u='r' c='ra_evictk'/>
+<use f='luajit/lj_asm.c' l='539' macro='1' u='r' c='ra_evictk'/>
+<use f='luajit/lj_asm.c' l='634' macro='1' u='r' c='ra_allocref'/>
+<use f='luajit/lj_asm_x86.h' l='429' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='433' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='453' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='490' macro='1' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='764' u='r' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='772' u='a' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='1683' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1698' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1740' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='2845' u='a' c='asm_head_root_base'/>
+<use f='luajit/lj_asm_x86.h' l='2859' u='a' c='asm_head_side_base'/>
+<use f='luajit/lj_asm.c' l='1874' u='a' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1887' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1927' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2061' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_asm.c' l='2126' u='a' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2148' u='r' c='asm_setup_regsp'/>
+<use f='luajit/lj_ffrecord.c' l='149' u='r' c='recff_nyi'/>
+<use f='luajit/lj_ir.c' l='82' u='r' c='lj_ir_growtop'/>
+<use f='luajit/lj_opt_loop.c' l='283' u='w' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='283' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_mem.c' l='476' u='r' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_opt_sink.c' l='167' u='a' c='sink_sweep_ins'/>
+<use f='luajit/lj_record.c' l='1639' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1653' u='r' c='rec_upvalue'/>
+<use f='luajit/lj_record.c' l='1829' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='1879' u='r' c='rec_varg'/>
+<use f='luajit/lj_trace.c' l='440' u='r' c='trace_start'/>

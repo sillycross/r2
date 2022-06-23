@@ -1,0 +1,5 @@
+<dec f='luajit/lualib.h' l='22'/>
+<use f='luajit/lib_init.c' l='28' u='c'/>
+<use f='luajit/lib_jit.c' l='747' u='c'/>
+<use f='luajit/lib_jit.c' l='749' u='c'/>
+<use f='luajit/lib_jit.c' l='753' u='c'/>

@@ -1,0 +1,7 @@
+<dec f='luajit/lj_dispatch.h' l='85'/>
+<use f='luajit/lj_dispatch.c' l='64' u='c'/>
+<use f='luajit/lj_dispatch.c' l='66' u='c'/>
+<use f='luajit/lj_dispatch.c' l='148' u='c'/>
+<use f='luajit/lj_dispatch.c' l='161' u='c'/>
+<use f='luajit/lj_dispatch.c' l='187' u='c'/>
+<use f='luajit/lj_dispatch.c' l='190' u='c'/>

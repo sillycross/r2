@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ccallback.h' l='17' type='MSize lj_ccallback_ptr2slot(CTState * cts, void * p)'/>
+<use f='luajit/lib_ffi.c' l='438' u='c' c='ffi_callback_set'/>
+<def f='luajit/lj_ccallback.c' l='96' ll='105' type='MSize lj_ccallback_ptr2slot(CTState * cts, void * p)'/>
+<doc f='luajit/lj_ccallback.c' l='95'>/* Convert callback function pointer to slot number. */</doc>

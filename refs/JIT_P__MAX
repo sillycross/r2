@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='140' type='15'/>
+<use f='luajit/lj_jit.h' l='470'/>
+<use f='luajit/lib_jit.c' l='495' u='r' c='jitopt_param'/>
+<use f='luajit/lib_jit.c' l='640' u='r'/>

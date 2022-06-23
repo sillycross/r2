@@ -1,0 +1,33 @@
+<dec f='luajit/lj_err.h' l='39' type='void lj_err_arg(lua_State * L, int narg, ErrMsg em)'/>
+<use f='luajit/lib_base.c' l='150' u='c' c='lj_cf_getfenv'/>
+<use f='luajit/lib_base.c' l='172' u='c' c='lj_cf_setfenv'/>
+<use f='luajit/lib_base.c' l='255' u='c' c='lj_cf_select'/>
+<use f='luajit/lib_base.c' l='296' u='c' c='lj_ffh_tonumber'/>
+<use f='luajit/lib_base.c' l='500' u='c' c='lj_cf_newproxy'/>
+<use f='luajit/lib_base.c' l='561' u='c' c='lj_cf_coroutine_status'/>
+<use f='luajit/lib_base.c' l='625' u='c' c='lj_ffh_coroutine_resume'/>
+<use f='luajit/lib_buffer.c' l='217' u='c' c='lj_cf_buffer_method_commit'/>
+<use f='luajit/lib_debug.c' l='125' u='c' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lib_debug.c' l='128' u='c' c='lj_cf_debug_getinfo'/>
+<use f='luajit/lib_debug.c' l='174' u='c' c='lj_cf_debug_getlocal'/>
+<use f='luajit/lib_debug.c' l='194' u='c' c='lj_cf_debug_setlocal'/>
+<use f='luajit/lib_debug.c' l='233' u='c' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='248' u='c' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lib_debug.c' l='251' u='c' c='lj_cf_debug_upvaluejoin'/>
+<use f='luajit/lib_ffi.c' l='62' u='c' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='84' u='c' c='ffi_checkptr'/>
+<use f='luajit/lib_ffi.c' l='96' u='c' c='ffi_checkint'/>
+<use f='luajit/lib_ffi.c' l='507' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='538' u='c' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='777' u='c' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='800' u='c' c='lj_cf_ffi_gc'/>
+<use f='luajit/lib_io.c' l='212' u='c' c='io_file_read'/>
+<use f='luajit/lib_io.c' l='216' u='c' c='io_file_read'/>
+<use f='luajit/lib_string.c' l='72' u='c' c='lj_ffh_string_char'/>
+<use f='luajit/lib_string.c' l='613' u='c' c='lj_cf_string_gsub'/>
+<use f='luajit/lj_api.c' l='249' u='c' c='luaL_checkany'/>
+<def f='luajit/lj_err.c' l='1013' ll='1016' macro='1' type='void lj_err_arg(lua_State * L, int narg, ErrMsg em)'/>
+<use f='luajit/lj_lib.c' l='191' u='c' c='lj_lib_checkany'/>
+<use f='luajit/lj_lib.c' l='286' u='c' c='lj_lib_checktabornil'/>
+<use f='luajit/lj_lib.c' l='350' u='c' c='lj_lib_checkintrange'/>
+<use f='luajit/lj_strfmt.c' l='389' u='c' c='lj_strfmt_putarg'/>

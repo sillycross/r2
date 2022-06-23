@@ -1,0 +1,8 @@
+<dec f='luajit/lj_cparse.h' l='54' type='int'/>
+<offset>864</offset>
+<doc f='luajit/lj_cparse.h' l='54'>/* Recursive declaration depth. */</doc>
+<use f='luajit/lj_cparse.c' l='397' u='w' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='734' u='w' c='cp_expr_unary'/>
+<use f='luajit/lj_cparse.c' l='737' u='w' c='cp_expr_unary'/>
+<use f='luajit/lj_cparse.c' l='1684' u='w' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1747' u='w' c='cp_declarator'/>

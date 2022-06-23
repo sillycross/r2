@@ -1,0 +1,28 @@
+<use f='luajit/lua.h' l='51'/>
+<def f='luajit/lj_obj.h' l='683' ll='697'/>
+<size>96</size>
+<doc f='luajit/lj_obj.h' l='682'>/* Per-thread state object. */</doc>
+<mbr r='lua_State::nextgc' o='0' t='GCRef'/>
+<mbr r='lua_State::marked' o='64' t='uint8_t'/>
+<mbr r='lua_State::gct' o='72' t='uint8_t'/>
+<mbr r='lua_State::dummy_ffid' o='80' t='uint8_t'/>
+<mbr r='lua_State::status' o='88' t='uint8_t'/>
+<mbr r='lua_State::glref' o='128' t='MRef'/>
+<mbr r='lua_State::gclist' o='192' t='GCRef'/>
+<mbr r='lua_State::base' o='256' t='TValue *'/>
+<mbr r='lua_State::top' o='320' t='TValue *'/>
+<mbr r='lua_State::maxstack' o='384' t='MRef'/>
+<mbr r='lua_State::stack' o='448' t='MRef'/>
+<mbr r='lua_State::openupval' o='512' t='GCRef'/>
+<mbr r='lua_State::env' o='576' t='GCRef'/>
+<mbr r='lua_State::cframe' o='640' t='void *'/>
+<mbr r='lua_State::stacksize' o='704' t='MSize'/>
+<use f='luajit/host/minilua.c' l='164'/>
+<use f='luajit/host/minilua.c' l='456'/>
+<def f='luajit/host/minilua.c' l='461' ll='488'/>
+<use f='luajit/host/minilua.c' l='498'/>
+<use f='luajit/host/minilua.c' l='969'/>
+<use f='luajit/host/minilua.c' l='2248'/>
+<size>184</size>
+<use f='luajit/lj_lex.h' l='54'/>
+<size>96</size>

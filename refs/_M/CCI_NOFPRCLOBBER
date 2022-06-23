@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ircall.h' l='41'/>
+<use f='luajit/lj_asm_x86.h' l='655' u='c'/>
+<use f='luajit/lj_asm.c' l='2208' u='c'/>

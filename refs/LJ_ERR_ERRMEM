@@ -1,0 +1,4 @@
+<dec f='luajit/lj_errmsg.h' l='9' macro='1' type='0'/>
+<use f='luajit/lj_errmsg.h' l='9' macro='1' u='r'/>
+<use f='luajit/lj_err.c' l='777' u='r' c='lj_err_mem'/>
+<use f='luajit/lj_state.c' l='156' u='r' c='cpluaopen'/>

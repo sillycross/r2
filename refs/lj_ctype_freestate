@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='476' type='void lj_ctype_freestate(global_State * g)'/>
+<def f='luajit/lj_ctype.c' l='627' ll='636' type='void lj_ctype_freestate(global_State * g)'/>
+<doc f='luajit/lj_ctype.c' l='626'>/* Free C type table and state. */</doc>
+<use f='luajit/lj_state.c' l='173' u='c' c='close_state'/>

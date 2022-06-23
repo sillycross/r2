@@ -1,0 +1,13 @@
+<dec f='luajit/lua.h' l='44'/>
+<use f='luajit/host/buildvm_arch.h' l='491' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1655' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1699' u='c'/>
+<use f='luajit/lib_base.c' l='564' u='c'/>
+<use f='luajit/lib_base.c' l='610' u='c'/>
+<use f='luajit/lj_api.c' l='1210' u='c'/>
+<use f='luajit/lj_api.c' l='1225' u='c'/>
+<use f='luajit/lj_api.c' l='1239' u='c'/>
+<use f='luajit/lj_err.c' l='177' u='c'/>

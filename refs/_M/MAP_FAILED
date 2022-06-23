@@ -1,0 +1,4 @@
+<dec f='include/x86_64-linux-gnu/sys/mman.h' l='44'/>
+<doc f='include/x86_64-linux-gnu/sys/mman.h' l='43'>/* Return value of `mmap&apos; in case of an error.  */</doc>
+<use f='luajit/lj_ccallback.c' l='281' u='c'/>
+<use f='luajit/lj_mcode.c' l='109' u='c'/>

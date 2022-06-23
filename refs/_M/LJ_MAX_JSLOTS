@@ -1,0 +1,11 @@
+<dec f='luajit/lj_def.h' l='85'/>
+<use f='luajit/lj_jit.h' l='468' u='c'/>
+<doc f='luajit/lj_def.h' l='84'>/* JIT compiler limits. */</doc>
+<use f='luajit/lj_asm.c' l='100' u='c'/>
+<use f='luajit/lj_asm.c' l='2157' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='815' u='c'/>
+<use f='luajit/lj_record.c' l='766' u='c'/>
+<use f='luajit/lj_record.c' l='1719' u='c'/>
+<use f='luajit/lj_record.c' l='1734' u='c'/>
+<use f='luajit/lj_record.c' l='1896' u='c'/>
+<use f='luajit/lj_record.c' l='2653' u='c'/>

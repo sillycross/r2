@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ctype.h' l='107'/>
+<doc f='luajit/lj_ctype.h' l='106'>/* Info bits for BITFIELD. Max. size of bitfield is 64 bits. */</doc>
+<use f='luajit/lj_cparse.c' l='1412' u='c'/>

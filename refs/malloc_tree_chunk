@@ -1,0 +1,10 @@
+<def f='luajit/lj_alloc.c' l='488' ll='498'/>
+<use f='luajit/lj_alloc.c' l='492'/>
+<use f='luajit/lj_alloc.c' l='493'/>
+<use f='luajit/lj_alloc.c' l='495'/>
+<use f='luajit/lj_alloc.c' l='496'/>
+<use f='luajit/lj_alloc.c' l='500'/>
+<use f='luajit/lj_alloc.c' l='501'/>
+<use f='luajit/lj_alloc.c' l='502'/>
+<size>64</size>
+<doc f='luajit/lj_alloc.c' l='486'>/* ---------------------- Overlaid data structures ----------------------- */</doc>

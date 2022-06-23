@@ -1,0 +1,15 @@
+<dec f='luajit/lj_target_x86.h' l='259' type='3238002942'/>
+<use f='luajit/lj_asm_x86.h' l='1225' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1236' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1238' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1240' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1245' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1261' macro='1' u='r' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1538' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1547' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1581' macro='1' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1715' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1727' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1729' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1777' macro='1' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='2288' macro='1' u='r' c='asm_bitshift'/>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_errmsg.h' l='121' macro='1' type='2293'/>
+<use f='luajit/lj_errmsg.h' l='121' macro='1' u='r'/>
+<use f='luajit/lj_cparse.c' l='238' u='r' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='242' u='r' c='cp_string'/>
+<use f='luajit/lj_lex.c' l='193' u='r' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='197' u='r' c='lex_string'/>

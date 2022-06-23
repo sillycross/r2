@@ -1,0 +1,11 @@
+<dec f='luajit/lj_target_x86.h' l='191'/>
+<use f='luajit/lj_target_x86.h' l='262' u='c'/>
+<use f='luajit/lj_target_x86.h' l='272' u='c'/>
+<use f='luajit/lj_target_x86.h' l='273' u='c'/>
+<use f='luajit/lj_target_x86.h' l='274' u='c'/>
+<use f='luajit/lj_target_x86.h' l='275' u='c'/>
+<use f='luajit/lj_target_x86.h' l='277' u='c'/>
+<use f='luajit/lj_target_x86.h' l='278' u='c'/>
+<use f='luajit/lj_target_x86.h' l='285' u='c'/>
+<use f='luajit/lj_target_x86.h' l='286' u='c'/>
+<use f='luajit/lj_target_x86.h' l='287' u='c'/>

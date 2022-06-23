@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_parse.h source code [luajit/lj_parse.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_parse.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_parse.h.html'>lj_parse.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Lua parser (source code -&gt; bytecode).</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_PARSE_H">_LJ_PARSE_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_PARSE_H" data-ref="_M/_LJ_PARSE_H">_LJ_PARSE_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_obj.h.html">"lj_obj.h"</a></u></td></tr>
+<tr><th id="10">10</th><td><u>#include <a href="lj_lex.h.html">"lj_lex.h"</a></u></td></tr>
+<tr><th id="11">11</th><td></td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCproto" title='GCproto' data-type='struct GCproto' data-ref="GCproto" data-ref-filename="GCproto">GCproto</a> *<dfn class="decl fn" id="lj_parse" title='lj_parse' data-ref="lj_parse" data-ref-filename="lj_parse">lj_parse</dfn>(<a class="typedef" href="lj_lex.h.html#LexState" title='LexState' data-type='struct LexState' data-ref="LexState" data-ref-filename="LexState">LexState</a> *<dfn class="local col1 decl" id="1ls" title='ls' data-type='LexState *' data-ref="1ls" data-ref-filename="1ls">ls</dfn>);</td></tr>
+<tr><th id="13">13</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="lj_obj.h.html#GCstr" title='GCstr' data-type='struct GCstr' data-ref="GCstr" data-ref-filename="GCstr">GCstr</a> *<dfn class="decl fn" id="lj_parse_keepstr" title='lj_parse_keepstr' data-ref="lj_parse_keepstr" data-ref-filename="lj_parse_keepstr">lj_parse_keepstr</dfn>(<a class="typedef" href="lj_lex.h.html#LexState" title='LexState' data-type='struct LexState' data-ref="LexState" data-ref-filename="LexState">LexState</a> *<dfn class="local col2 decl" id="2ls" title='ls' data-type='LexState *' data-ref="2ls" data-ref-filename="2ls">ls</dfn>, <em>const</em> <em>char</em> *<dfn class="local col3 decl" id="3str" title='str' data-type='const char *' data-ref="3str" data-ref-filename="3str">str</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col4 decl" id="4l" title='l' data-type='size_t' data-ref="4l" data-ref-filename="4l">l</dfn>);</td></tr>
+<tr><th id="14">14</th><td><u>#<span data-ppcond="14">if</span> <a class="macro" href="lj_arch.h.html#549" title="1" data-ref="_M/LJ_HASFFI">LJ_HASFFI</a></u></td></tr>
+<tr><th id="15">15</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <dfn class="decl fn" id="lj_parse_keepcdata" title='lj_parse_keepcdata' data-ref="lj_parse_keepcdata" data-ref-filename="lj_parse_keepcdata">lj_parse_keepcdata</dfn>(<a class="typedef" href="lj_lex.h.html#LexState" title='LexState' data-type='struct LexState' data-ref="LexState" data-ref-filename="LexState">LexState</a> *<dfn class="local col5 decl" id="5ls" title='ls' data-type='LexState *' data-ref="5ls" data-ref-filename="5ls">ls</dfn>, <a class="typedef" href="lj_obj.h.html#TValue" title='TValue' data-type='union TValue' data-ref="TValue" data-ref-filename="TValue">TValue</a> *<dfn class="local col6 decl" id="6tv" title='tv' data-type='TValue *' data-ref="6tv" data-ref-filename="6tv">tv</dfn>, <a class="typedef" href="lj_obj.h.html#GCcdata" title='GCcdata' data-type='struct GCcdata' data-ref="GCcdata" data-ref-filename="GCcdata">GCcdata</a> *<dfn class="local col7 decl" id="7cd" title='cd' data-type='GCcdata *' data-ref="7cd" data-ref-filename="7cd">cd</dfn>);</td></tr>
+<tr><th id="16">16</th><td><u>#<span data-ppcond="14">endif</span></u></td></tr>
+<tr><th id="17">17</th><td></td></tr>
+<tr><th id="18">18</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lj_lex.c.html'>luajit/lj_lex.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

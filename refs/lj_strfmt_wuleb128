@@ -1,0 +1,28 @@
+<dec f='luajit/lj_strfmt.h' l='89' type='char * lj_strfmt_wuleb128(char * p, uint32_t v)'/>
+<use f='luajit/lj_bcwrite.c' l='53' u='c' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='57' u='c' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='64' u='c' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='70' u='c' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='71' u='c' c='bcwrite_ktabk'/>
+<use f='luajit/lj_bcwrite.c' l='98' u='c' c='bcwrite_ktab'/>
+<use f='luajit/lj_bcwrite.c' l='99' u='c' c='bcwrite_ktab'/>
+<use f='luajit/lj_bcwrite.c' l='157' u='c' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='167' u='c' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='168' u='c' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='170' u='c' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='171' u='c' c='bcwrite_kgc'/>
+<use f='luajit/lj_bcwrite.c' l='197' u='c' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='203' u='c' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='206' u='c' c='bcwrite_knum'/>
+<use f='luajit/lj_bcwrite.c' l='268' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='269' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='270' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='274' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='276' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='277' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='302' u='c' c='bcwrite_proto'/>
+<use f='luajit/lj_bcwrite.c' l='324' u='c' c='bcwrite_header'/>
+<use f='luajit/lj_parse.c' l='1487' u='c' c='fs_prep_var'/>
+<use f='luajit/lj_parse.c' l='1488' u='c' c='fs_prep_var'/>
+<def f='luajit/lj_strfmt.c' l='155' ll='161' type='char * lj_strfmt_wuleb128(char * p, uint32_t v)'/>
+<doc f='luajit/lj_strfmt.c' l='154'>/* Write ULEB128 to buffer. */</doc>

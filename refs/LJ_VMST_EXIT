@@ -1,0 +1,3 @@
+<dec f='luajit/lj_obj.h' l='529' type='3'/>
+<use f='luajit/host/buildvm_arch.h' l='2468' u='r' c='build_subroutines'/>
+<doc f='luajit/lj_obj.h' l='529'>/* Trace exit handler. */</doc>

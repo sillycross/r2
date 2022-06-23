@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ircall.h' l='254' macro='1' type='98'/>
+<use f='luajit/lj_crecord.c' l='343' u='r' c='crec_fill'/>

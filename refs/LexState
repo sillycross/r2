@@ -1,0 +1,33 @@
+<use f='luajit/host/minilua.c' l='968'/>
+<def f='luajit/host/minilua.c' l='2241' ll='2253'/>
+<use f='luajit/host/minilua.c' l='2241'/>
+<use f='luajit/host/minilua.c' l='3922' c='luaY_parser'/>
+<size>96</size>
+<def f='luajit/lj_lex.h' l='52' ll='77'/>
+<use f='luajit/lj_lex.h' l='52'/>
+<size>184</size>
+<doc f='luajit/lj_lex.h' l='51'>/* Lua lexer state. */</doc>
+<mbr r='LexState::fs' o='0' t='struct FuncState *'/>
+<mbr r='LexState::L' o='64' t='struct lua_State *'/>
+<mbr r='LexState::tokval' o='128' t='TValue'/>
+<mbr r='LexState::lookaheadval' o='192' t='TValue'/>
+<mbr r='LexState::p' o='256' t='const char *'/>
+<mbr r='LexState::pe' o='320' t='const char *'/>
+<mbr r='LexState::c' o='384' t='LexChar'/>
+<mbr r='LexState::tok' o='416' t='LexToken'/>
+<mbr r='LexState::lookahead' o='448' t='LexToken'/>
+<mbr r='LexState::sb' o='512' t='SBuf'/>
+<mbr r='LexState::rfunc' o='768' t='lua_Reader'/>
+<mbr r='LexState::rdata' o='832' t='void *'/>
+<mbr r='LexState::linenumber' o='896' t='BCLine'/>
+<mbr r='LexState::lastline' o='928' t='BCLine'/>
+<mbr r='LexState::chunkname' o='960' t='GCstr *'/>
+<mbr r='LexState::chunkarg' o='1024' t='const char *'/>
+<mbr r='LexState::mode' o='1088' t='const char *'/>
+<mbr r='LexState::vstack' o='1152' t='VarInfo *'/>
+<mbr r='LexState::sizevstack' o='1216' t='MSize'/>
+<mbr r='LexState::vtop' o='1248' t='MSize'/>
+<mbr r='LexState::bcstack' o='1280' t='BCInsLine *'/>
+<mbr r='LexState::sizebcstack' o='1344' t='MSize'/>
+<mbr r='LexState::level' o='1376' t='uint32_t'/>
+<mbr r='LexState::endmark' o='1408' t='int'/>

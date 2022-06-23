@@ -1,0 +1,4 @@
+<dec f='include/stdio.h' l='757' type='void clearerr(FILE * __stream)'/>
+<doc f='include/stdio.h' l='756'>/* Clear the error and EOF indicators for STREAM.  */</doc>
+<use f='luajit/host/minilua.c' l='6817' u='c' c='g_read'/>
+<use f='luajit/lib_io.c' l='193' u='c' c='io_file_read'/>

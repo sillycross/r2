@@ -1,0 +1,4 @@
+<def f='luajit/lj_carith.c' l='24' ll='27'/>
+<use f='luajit/lj_carith.c' l='24'/>
+<size>32</size>
+<doc f='luajit/lj_carith.c' l='23'>/* Binary operands of an operator converted to ctypes. */</doc>

@@ -1,0 +1,2 @@
+<dec f='luajit/lj_char.h' l='16'/>
+<use f='luajit/lib_string.c' l='199' u='c'/>

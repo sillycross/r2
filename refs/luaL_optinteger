@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='42' type='lua_Integer luaL_optinteger(lua_State * L, int nArg, lua_Integer def)'/>
+<use f='luajit/lib_debug.c' l='334' macro='1' u='c' c='lj_cf_debug_sethook'/>
+<use f='luajit/lib_string.c' l='606' macro='1' u='c' c='lj_cf_string_gsub'/>
+<def f='luajit/lj_api.c' l='473' ll='496' macro='1' type='lua_Integer luaL_optinteger(lua_State * L, int idx, lua_Integer def)'/>

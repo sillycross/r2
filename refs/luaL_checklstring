@@ -1,0 +1,19 @@
+<dec f='luajit/lauxlib.h' l='34' type='const char * luaL_checklstring(lua_State * L, int numArg, size_t * l)'/>
+<use f='luajit/lib_debug.c' l='332' macro='1' u='c' c='lj_cf_debug_sethook'/>
+<use f='luajit/lib_os.c' l='66' macro='1' u='c' c='lj_cf_os_remove'/>
+<use f='luajit/lib_os.c' l='72' macro='1' u='c' c='lj_cf_os_rename'/>
+<use f='luajit/lib_os.c' l='73' macro='1' u='c' c='lj_cf_os_rename'/>
+<use f='luajit/lib_os.c' l='107' macro='1' u='c' c='lj_cf_os_getenv'/>
+<use f='luajit/lib_package.c' l='274' macro='1' u='c' c='lj_cf_package_loadlib'/>
+<use f='luajit/lib_package.c' l='275' macro='1' u='c' c='lj_cf_package_loadlib'/>
+<use f='luajit/lib_package.c' l='340' macro='1' u='c' c='lj_cf_package_searchpath'/>
+<use f='luajit/lib_package.c' l='341' macro='1' u='c' c='lj_cf_package_searchpath'/>
+<use f='luajit/lib_package.c' l='373' macro='1' u='c' c='lj_cf_package_loader_lua'/>
+<use f='luajit/lib_package.c' l='383' macro='1' u='c' c='lj_cf_package_loader_c'/>
+<use f='luajit/lib_package.c' l='394' macro='1' u='c' c='lj_cf_package_loader_croot'/>
+<use f='luajit/lib_package.c' l='412' macro='1' u='c' c='lj_cf_package_loader_preload'/>
+<use f='luajit/lib_package.c' l='432' macro='1' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='517' macro='1' u='c' c='lj_cf_package_module'/>
+<use f='luajit/lib_string.c' l='603' u='c' c='lj_cf_string_gsub'/>
+<use f='luajit/lib_string.c' l='604' macro='1' u='c' c='lj_cf_string_gsub'/>
+<def f='luajit/lj_api.c' l='523' ll='539' macro='1' type='const char * luaL_checklstring(lua_State * L, int idx, size_t * len)'/>

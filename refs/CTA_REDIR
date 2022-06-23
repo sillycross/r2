@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ctype.h' l='129' type='4'/>
+<doc f='luajit/lj_ctype.h' l='129'>/* Redirected symbol name. */</doc>
+<use f='luajit/lj_clib.c' l='335' u='r' c='clib_extsym'/>
+<use f='luajit/lj_cparse.c' l='1868' u='r' c='cp_decl_multi'/>

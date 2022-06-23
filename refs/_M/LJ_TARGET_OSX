@@ -1,0 +1,6 @@
+<dec f='luajit/lj_arch.h' l='119'/>
+<use f='luajit/lib_package.c' l='62' u='c'/>
+<use f='luajit/lj_ccall.c' l='588' u='c'/>
+<use f='luajit/lj_clib.c' l='30' u='c'/>
+<use f='luajit/lj_clib.c' l='49' u='c'/>
+<use f='luajit/lj_err.c' l='569' u='c'/>

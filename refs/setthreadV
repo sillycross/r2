@@ -1,0 +1,6 @@
+<def f='luajit/lj_obj.h' l='931' macro='1' type='void setthreadV(lua_State * L, TValue * o, const lua_State * v)'/>
+<use f='luajit/lib_jit.c' l='560' u='c' c='jit_profile_callback'/>
+<use f='luajit/lib_jit.c' l='582' u='c' c='lj_cf_jit_profile_start'/>
+<use f='luajit/lj_api.c' l='744' u='c' c='lua_pushthread'/>
+<use f='luajit/lj_api.c' l='754' u='c' c='lua_newthread'/>
+<use f='luajit/lj_state.c' l='134' u='c' c='stack_init'/>

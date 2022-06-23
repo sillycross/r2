@@ -1,0 +1,9 @@
+<dec f='luajit/lua.h' l='125' type='void lua_insert(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='134' u='c' c='luaL_openlib'/>
+<use f='luajit/lib_aux.c' l='255' u='c' c='luaL_addvalue'/>
+<use f='luajit/lib_package.c' l='281' u='c' c='lj_cf_package_loadlib'/>
+<use f='luajit/lib_package.c' l='348' u='c' c='lj_cf_package_searchpath'/>
+<def f='luajit/lj_api.c' l='169' ll='174' macro='1' type='void lua_insert(lua_State * L, int idx)'/>
+<use f='luajit/luajit.c' l='117' u='c' c='docall'/>
+<use f='luajit/luajit.c' l='240' u='c' c='loadline'/>
+<use f='luajit/luajit.c' l='257' u='c' c='dotty'/>

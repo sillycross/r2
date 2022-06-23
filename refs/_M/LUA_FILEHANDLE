@@ -1,0 +1,2 @@
+<dec f='luajit/lualib.h' l='11'/>
+<use f='luajit/lib_io.c' l='536' u='c'/>

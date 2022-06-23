@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='491' type='BCIns *'/>
+<offset>24256</offset>
+<doc f='luajit/lj_jit.h' l='491'>/* PC for pending re-patch. */</doc>
+<use f='luajit/lj_record.c' l='1769' u='w' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='1770' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_trace.c' l='632' u='r' c='trace_pendpatch'/>
+<use f='luajit/lj_trace.c' l='634' u='r' c='trace_pendpatch'/>
+<use f='luajit/lj_trace.c' l='635' u='w' c='trace_pendpatch'/>
+<use f='luajit/lj_trace.c' l='905' u='w' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='906' u='r' c='lj_trace_exit'/>

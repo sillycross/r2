@@ -1,0 +1,16 @@
+<dec f='luajit/lj_dispatch.h' l='135' type='void lj_dispatch_update(global_State * g)'/>
+<use f='luajit/lib_jit.c' l='734' u='c' c='jit_init'/>
+<def f='luajit/lj_dispatch.c' l='104' ll='205' type='void lj_dispatch_update(global_State * g)'/>
+<use f='luajit/lj_dispatch.c' l='257' u='c' c='luaJIT_setmode'/>
+<use f='luajit/lj_dispatch.c' l='332' u='c' c='lua_sethook'/>
+<doc f='luajit/lj_dispatch.c' l='103'>/* Update dispatch table depending on various flags. */</doc>
+<use f='luajit/lj_gc.c' l='511' u='c' c='gc_call_finalizer'/>
+<use f='luajit/lj_gc.c' l='520' u='c' c='gc_call_finalizer'/>
+<use f='luajit/lj_profile.c' l='137' u='c' c='lj_profile_interpreter'/>
+<use f='luajit/lj_profile.c' l='144' u='c' c='lj_profile_interpreter'/>
+<use f='luajit/lj_profile.c' l='163' u='c' c='profile_trigger'/>
+<use f='luajit/lj_profile.c' l='343' u='c' c='luaJIT_profile_stop'/>
+<use f='luajit/lj_state.c' l='290' u='c' c='lua_close'/>
+<use f='luajit/lj_trace.c' l='653' u='c' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='702' u='c' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='714' u='c' c='trace_state'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/lj_lex.h' l='24' type='256'/>
+<use f='luajit/lj_lex.h' l='30' u='r'/>
+<use f='luajit/lj_lex.c' l='308' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='478' u='r' c='lj_lex_token2str'/>
+<use f='luajit/lj_lex.c' l='479' u='r' c='lj_lex_token2str'/>

@@ -1,0 +1,1 @@
+<def f='luajit/lib_os.c' l='263' macro='1' type='int lj_cf_os_setlocale(lua_State * L)'/>

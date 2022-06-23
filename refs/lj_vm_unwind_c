@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='18' type='void lj_vm_unwind_c(void * cframe, int errcode)'/>
+<use f='luajit/lj_err.c' l='776' u='c' c='lj_err_mem'/>

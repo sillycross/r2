@@ -1,0 +1,7 @@
+<dec f='luajit/lua.h' l='48'/>
+<use f='luajit/lj_err.c' l='775' u='c'/>
+<use f='luajit/lj_err.c' l='840' u='c'/>
+<use f='luajit/lj_err.c' l='842' u='c'/>
+<use f='luajit/lj_err.c' l='844' u='c'/>
+<use f='luajit/lj_state.c' l='107' u='c'/>
+<use f='luajit/lj_state.c' l='256' u='c'/>

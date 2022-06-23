@@ -1,0 +1,7 @@
+<dec f='luajit/lj_jit.h' l='505' type='BCLine'/>
+<offset>24832</offset>
+<doc f='luajit/lj_jit.h' l='505'>/* Previous line. */</doc>
+<use f='luajit/lj_record.c' l='656' u='w' c='rec_profile_need'/>
+<use f='luajit/lj_record.c' l='661' u='r' c='rec_profile_need'/>
+<use f='luajit/lj_record.c' l='662' u='w' c='rec_profile_need'/>
+<use f='luajit/lj_record.c' l='2658' u='w' c='lj_record_setup'/>

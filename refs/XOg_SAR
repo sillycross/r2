@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='337' type='7'/>
+<use f='luajit/lj_asm_x86.h' l='1581' u='r' c='asm_ahuvload'/>
+<use f='luajit/lj_asm_x86.h' l='1777' u='r' c='asm_sload'/>
+<use f='luajit/lj_asm.c' l='1748' macro='1' u='r' c='asm_ir'/>

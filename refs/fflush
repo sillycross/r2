@@ -1,0 +1,17 @@
+<dec f='include/stdio.h' l='204' type='int fflush(FILE * __stream)'/>
+<use f='luajit/host/buildvm.c' l='508' u='c' c='main'/>
+<doc f='include/stdio.h' l='200'>/* Flush STREAM, or all streams if STREAM is NULL.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='luajit/host/minilua.c' l='6905' u='c' c='io_flush'/>
+<use f='luajit/host/minilua.c' l='6908' u='c' c='f_flush'/>
+<use f='luajit/lib_aux.c' l='317' u='c' c='panic'/>
+<use f='luajit/lib_io.c' l='302' u='c' c='lj_cf_io_method_flush'/>
+<use f='luajit/lib_io.c' l='420' u='c' c='lj_cf_io_popen'/>
+<use f='luajit/lib_io.c' l='459' u='c' c='lj_cf_io_flush'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/luajit.c' l='78' u='c' c='print_usage'/>
+<use f='luajit/luajit.c' l='85' u='c' c='l_message'/>
+<use f='luajit/luajit.c' l='193' u='c' c='write_prompt'/>
+<use f='luajit/luajit.c' l='266' u='c' c='dotty'/>

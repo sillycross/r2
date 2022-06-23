@@ -1,0 +1,4 @@
+<dec f='luajit/lj_char.h' l='24'/>
+<doc f='luajit/lj_char.h' l='23'>/* Only pass -1 or 0..255 to these macros. Never pass a signed char! */</doc>
+<use f='luajit/lib_string.c' l='207' u='c'/>
+<use f='luajit/lj_strscan.c' l='432' u='c'/>

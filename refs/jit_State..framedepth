@@ -1,0 +1,33 @@
+<dec f='luajit/lj_jit.h' l='439' type='int32_t'/>
+<offset>2016</offset>
+<doc f='luajit/lj_jit.h' l='439'>/* Current frame depth. */</doc>
+<use f='luajit/lj_crecord.c' l='1208' u='r' c='crec_snap_caller'/>
+<use f='luajit/lj_crecord.c' l='1214' u='w' c='crec_snap_caller'/>
+<use f='luajit/lj_crecord.c' l='1217' u='w' c='crec_snap_caller'/>
+<use f='luajit/lj_ffrecord.c' l='135' u='w' c='recff_stitch'/>
+<use f='luajit/lj_ffrecord.c' l='153' u='r' c='recff_nyi'/>
+<use f='luajit/lj_record.c' l='297' u='r' c='lj_record_stop'/>
+<use f='luajit/lj_record.c' l='600' u='r' c='rec_loop_interp'/>
+<use f='luajit/lj_record.c' l='634' u='r' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='763' u='w' c='lj_record_call'/>
+<use f='luajit/lj_record.c' l='776' u='w' c='lj_record_tailcall'/>
+<use f='luajit/lj_record.c' l='826' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='838' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='851' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='866' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='878' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='879' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='903' u='w' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='967' u='w' c='rec_mm_prep'/>
+<use f='luajit/lj_record.c' l='1683' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1695' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_record.c' l='1747' u='w' c='rec_func_vararg'/>
+<use f='luajit/lj_record.c' l='1774' u='r' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='1805' u='r' c='rec_varg'/>
+<use f='luajit/lj_record.c' l='2070' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2593' u='w' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='167' u='r' c='snapshot_stack'/>
+<use f='luajit/lj_snap.c' l='480' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='511' u='w' c='lj_snap_replay'/>
+<use f='luajit/lj_trace.c' l='666' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='678' u='r' c='trace_state'/>

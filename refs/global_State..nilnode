@@ -1,0 +1,37 @@
+<dec f='luajit/lj_obj.h' l='642' type='Node'/>
+<offset>1984</offset>
+<doc f='luajit/lj_obj.h' l='642'>/* Fallback 1-element hash part (nil key and value). */</doc>
+<use f='luajit/lj_api.c' l='38' macro='1' u='m' c='index2adr'/>
+<use f='luajit/lj_api.c' l='59' macro='1' u='m' c='index2adr'/>
+<use f='luajit/lj_api.c' l='79' macro='1' u='m' c='index2adr_stack'/>
+<use f='luajit/lj_api.c' l='81' macro='1' u='m' c='index2adr_stack'/>
+<use f='luajit/lj_api.c' l='226' macro='1' u='m' c='lua_type'/>
+<use f='luajit/lj_api.c' l='248' macro='1' u='m' c='luaL_checkany'/>
+<use f='luajit/lj_api.c' l='287' macro='1' u='m' c='lua_rawequal'/>
+<use f='luajit/lj_api.c' l='287' macro='1' u='m' c='lua_rawequal'/>
+<use f='luajit/lj_api.c' l='301' macro='1' u='m' c='lua_equal'/>
+<use f='luajit/lj_api.c' l='301' macro='1' u='m' c='lua_equal'/>
+<use f='luajit/lj_api.c' l='327' macro='1' u='m' c='lua_lessthan'/>
+<use f='luajit/lj_api.c' l='327' macro='1' u='m' c='lua_lessthan'/>
+<use f='luajit/lj_asm_x86.h' l='1139' macro='1' u='m' c='asm_href'/>
+<use f='luajit/lj_meta.c' l='73' macro='1' u='m' c='lj_meta_lookup'/>
+<use f='luajit/lj_meta.c' l='177' macro='1' u='m' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='325' macro='1' u='m' c='lj_meta_len'/>
+<use f='luajit/lj_opt_fold.c' l='2184' macro='1' u='m' c='fold_fwd_href_tnew'/>
+<use f='luajit/lj_opt_fold.c' l='2195' macro='1' u='m' c='fold_fwd_href_tdup'/>
+<use f='luajit/lj_opt_fold.c' l='2197' macro='1' u='m' c='fold_fwd_href_tdup'/>
+<use f='luajit/lj_record.c' l='1367' macro='1' u='m' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1468' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1469' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1499' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1499' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1506' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1520' macro='1' u='m' c='lj_record_idx'/>
+<use f='luajit/lj_state.c' l='243' u='m' c='lua_newstate'/>
+<use f='luajit/lj_state.c' l='244' u='m' c='lua_newstate'/>
+<use f='luajit/lj_tab.c' l='96' u='a' c='newtab'/>
+<use f='luajit/lj_tab.c' l='111' u='a' c='newtab'/>
+<use f='luajit/lj_tab.c' l='262' u='a' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='264' u='a' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='373' macro='1' u='m' c='lj_tab_rehash'/>
+<use f='luajit/lj_tab.c' l='436' macro='1' u='m' c='lj_tab_get'/>

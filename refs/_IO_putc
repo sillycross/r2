@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/libio.h' l='434' type='int _IO_putc(int __c, _IO_FILE * __fp)'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='81' u='c' c='putchar'/>
+<use f='luajit/host/buildvm_asm.c' l='21' macro='1' u='c' c='emit_asm_bytes'/>
+<use f='luajit/host/buildvm_asm.c' l='23' macro='1' u='c' c='emit_asm_bytes'/>
+<use f='luajit/luajit.c' l='149' macro='1' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='152' macro='1' u='c' c='print_jit_status'/>

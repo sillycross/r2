@@ -1,0 +1,2 @@
+<dec f='luajit/lj_debug.h' l='59' type='0'/>
+<use f='luajit/lj_debug.c' l='157' u='r' c='debug_varname'/>

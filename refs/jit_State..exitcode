@@ -1,0 +1,6 @@
+<dec f='luajit/lj_jit.h' l='489' type='int'/>
+<offset>24192</offset>
+<doc f='luajit/lj_jit.h' l='489'>/* Exit code from unwound trace. */</doc>
+<use f='luajit/lj_err.c' l='509' u='w' c='err_unwind_jit'/>
+<use f='luajit/lj_trace.c' l='846' u='r' c='lj_trace_exit'/>
+<use f='luajit/lj_trace.c' l='854' u='w' c='lj_trace_exit'/>

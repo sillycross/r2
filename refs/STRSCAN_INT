@@ -1,0 +1,21 @@
+<dec f='luajit/lj_strscan.h' l='22' type='3'/>
+<use f='luajit/lj_cparse.c' l='180' u='r' c='cp_number'/>
+<use f='luajit/lj_lex.c' l='111' u='r' c='lex_number'/>
+<use f='luajit/lj_strscan.c' l='123' c='strscan_hex'/>
+<use f='luajit/lj_strscan.c' l='126' u='r' c='strscan_hex'/>
+<use f='luajit/lj_strscan.c' l='164' c='strscan_oct'/>
+<use f='luajit/lj_strscan.c' l='228' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='231' u='r' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='255' u='r' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='258' u='r' c='strscan_dec'/>
+<use f='luajit/lj_strscan.c' l='347' c='strscan_bin'/>
+<use f='luajit/lj_strscan.c' l='350' u='r' c='strscan_bin'/>
+<use f='luajit/lj_strscan.c' l='403' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='477' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='481' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='483' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='485' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='486' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='497' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='504' u='r' c='lj_strscan_scan'/>
+<use f='luajit/lj_strscan.c' l='522' u='r' c='lj_strscan_scan'/>

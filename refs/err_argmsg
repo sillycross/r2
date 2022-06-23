@@ -1,0 +1,5 @@
+<def f='luajit/lj_err.c' l='987' ll='999' macro='1' type='void err_argmsg(lua_State * L, int narg, const char * msg)'/>
+<use f='luajit/lj_err.c' l='1009' u='c' c='lj_err_argv'/>
+<use f='luajit/lj_err.c' l='1015' u='c' c='lj_err_arg'/>
+<use f='luajit/lj_err.c' l='1038' u='c' c='lj_err_argtype'/>
+<use f='luajit/lj_err.c' l='1065' u='c' c='luaL_argerror'/>

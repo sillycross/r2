@@ -1,0 +1,7 @@
+<dec f='luajit/lj_frame.h' l='87' type='1'/>
+<use f='luajit/lj_ccallback.c' l='555' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='558' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_debug.c' l='91' macro='1' u='r' c='debug_framepc'/>
+<use f='luajit/lj_err.c' l='168' macro='1' u='r' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='808' macro='1' u='r' c='finderrfunc'/>
+<use f='luajit/lj_err.c' l='949' macro='1' u='r' c='lj_err_callermsg'/>

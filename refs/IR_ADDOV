@@ -1,0 +1,15 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='53'/>
+<use f='luajit/lj_asm.c' l='1777' c='asm_ir'/>
+<use f='luajit/lj_crecord.c' l='706' u='r' c='crec_reassoc_ofs'/>
+<use f='luajit/lj_crecord.c' l='985' u='r' c='crec_alloc'/>
+<use f='luajit/lj_opt_fold.c' l='316' u='r' c='fold_kfold_intovarith'/>
+<use f='luajit/lj_opt_fold.c' l='1370' u='r' c='fold_simplify_intmul_k'/>
+<use f='luajit/lj_opt_narrow.c' l='243' u='r' c='narrow_stripov_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='254' u='r' c='narrow_stripov_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='361' u='r' c='narrow_conv_emit'/>
+<use f='luajit/lj_opt_narrow.c' l='433' u='r' c='narrow_stripov'/>
+<use f='luajit/lj_opt_narrow.c' l='441' u='r' c='narrow_stripov'/>
+<use f='luajit/lj_opt_narrow.c' l='460' u='r' c='lj_opt_narrow_index'/>
+<use f='luajit/lj_opt_narrow.c' l='462' u='r' c='lj_opt_narrow_index'/>
+<use f='luajit/lj_opt_narrow.c' l='543' u='r' c='lj_opt_narrow_arith'/>
+<use f='luajit/lj_record.c' l='434' u='r' c='rec_for_check'/>

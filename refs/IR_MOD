@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='45'/>
+<use f='luajit/lj_asm.c' l='1756' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='2296' c='asm_setup_regsp'/>
+<use f='luajit/lj_opt_fold.c' l='273' c='kfold_intop'/>
+<use f='luajit/lj_opt_fold.c' l='418' u='r' c='fold_kfold_int64arith2'/>
+<use f='luajit/lj_opt_fold.c' l='422' u='r' c='fold_kfold_int64arith2'/>
+<use f='luajit/lj_opt_narrow.c' l='576' u='r' c='lj_opt_narrow_mod'/>
+<use f='luajit/lj_vmmath.c' l='46' u='r' c='lj_vm_foldarith'/>

@@ -1,0 +1,2 @@
+<def f='luajit/host/buildvm_arch.h' l='4671' ll='4680' type='int build_backend(BuildCtx * ctx)'/>
+<use f='luajit/host/buildvm.c' l='195' u='c' c='build_code'/>

@@ -1,0 +1,17 @@
+<dec f='luajit/dasm_x86.h' l='66' type='dasm_ActList'/>
+<use f='luajit/dasm_x86.h' l='142' u='w' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='171' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='160' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='157' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='310' u='r' c='dasm_link'/>
+<use f='luajit/dasm_x86.h' l='403' u='r' c='dasm_encode'/>
+<offset>64</offset>
+<doc f='luajit/dasm_x86.h' l='66'>/* Current actionlist pointer. */</doc>

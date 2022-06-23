@@ -1,0 +1,6 @@
+<dec f='luajit/lj_err.h' l='40' type='void lj_err_argv(lua_State * L, int narg, ErrMsg em)'/>
+<use f='luajit/lj_api.c' l='573' u='c' c='luaL_checkoption'/>
+<use f='luajit/lj_cconv.c' l='32' u='c' c='cconv_err_conv'/>
+<use f='luajit/lj_cconv.c' l='44' u='c' c='cconv_err_convtv'/>
+<def f='luajit/lj_err.c' l='1002' ll='1010' macro='1' type='void lj_err_argv(lua_State * L, int narg, ErrMsg em)'/>
+<use f='luajit/lj_lib.c' l='302' u='c' c='lj_lib_checkopt'/>

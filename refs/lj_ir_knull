@@ -1,0 +1,10 @@
+<dec f='luajit/lj_iropt.h' l='49' type='TRef lj_ir_knull(jit_State * J, IRType t)'/>
+<use f='luajit/lj_ffrecord.c' l='236' u='c' c='recff_setmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='1063' u='c' c='recff_table_concat'/>
+<use f='luajit/lj_ffrecord.c' l='1114' u='c' c='recff_io_fp'/>
+<use f='luajit/lj_ffrecord.c' l='1172' u='c' c='recff_debug_getmetatable'/>
+<def f='luajit/lj_ir.c' l='340' ll='356' type='TRef lj_ir_knull(jit_State * J, IRType t)'/>
+<doc f='luajit/lj_ir.c' l='339'>/* Intern typed NULL constant. */</doc>
+<use f='luajit/lj_opt_mem.c' l='597' u='c' c='lj_opt_fwd_fload'/>
+<use f='luajit/lj_record.c' l='1023' u='c' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1525' u='c' c='lj_record_idx'/>

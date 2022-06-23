@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='2007' ll='2029' type='int asm_swapops(ASMState * as, IRIns * ir)'/>
+<use f='luajit/lj_asm_x86.h' l='2046' u='c' c='asm_fparith'/>
+<use f='luajit/lj_asm_x86.h' l='2080' u='c' c='asm_intarith'/>

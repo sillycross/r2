@@ -1,0 +1,8 @@
+<dec f='luajit/lj_opt_narrow.c' l='191' type='0'/>
+<use f='luajit/lj_opt_narrow.c' l='261' u='r' c='narrow_stripov_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='278' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='312' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='328' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='335' u='r' c='narrow_conv_backprop'/>
+<use f='luajit/lj_opt_narrow.c' l='370' u='r' c='narrow_conv_emit'/>
+<doc f='luajit/lj_opt_narrow.c' l='191'>/* Push ref. */</doc>

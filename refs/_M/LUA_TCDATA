@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='222'/>
+<use f='luajit/lj_obj.h' l='1032' u='c'/>
+<use f='luajit/lib_ffi.c' l='73' u='c'/>
+<use f='luajit/lib_ffi.c' l='154' u='c'/>
+<use f='luajit/lib_ffi.c' l='171' u='c'/>
+<use f='luajit/lj_carith.c' l='36' u='c'/>

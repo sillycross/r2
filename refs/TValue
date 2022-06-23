@@ -1,0 +1,10 @@
+<def f='luajit/lj_obj.h' l='174' ll='213'/>
+<use f='luajit/lj_obj.h' l='174'/>
+<size>8</size>
+<doc f='luajit/lj_obj.h' l='173'>/* Tagged value. */</doc>
+<mbr r='TValue::u64' o='0' t='uint64_t'/>
+<mbr r='TValue::n' o='0' t='lua_Number'/>
+<mbr r='TValue::gcr' o='0' t='GCRef'/>
+<mbr r='TValue::it64' o='0' t='int64_t'/>
+<mbr r='TValue::ftsz' o='0' t='int64_t'/>
+<mbr r='TValue::u32' o='0' t='struct (unnamed struct at /home/u/LuaJIT/src/lj_obj.h:207:3)'/>

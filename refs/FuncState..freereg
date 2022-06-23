@@ -1,0 +1,37 @@
+<dec f='luajit/lj_parse.c' l='132' type='BCReg'/>
+<use f='luajit/lj_parse.c' l='381' u='r' c='bcreg_bump'/>
+<use f='luajit/lj_parse.c' l='393' u='w' c='bcreg_reserve'/>
+<use f='luajit/lj_parse.c' l='400' u='w' c='bcreg_free'/>
+<use f='luajit/lj_parse.c' l='574' u='r' c='expr_toreg'/>
+<use f='luajit/lj_parse.c' l='594' u='r' c='expr_tonextreg'/>
+<use f='luajit/lj_parse.c' l='672' u='r' c='bcemit_method'/>
+<use f='luajit/lj_parse.c' l='683' u='w' c='bcemit_method'/>
+<use f='luajit/lj_parse.c' l='702' u='r' c='bcemit_jmp'/>
+<use f='luajit/lj_parse.c' l='728' u='r' c='bcemit_branch'/>
+<use f='luajit/lj_parse.c' l='826' u='w' c='bcemit_arith'/>
+<use f='luajit/lj_parse.c' l='827' u='w' c='bcemit_arith'/>
+<use f='luajit/lj_parse.c' l='874' u='w' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='875' u='w' c='bcemit_comp'/>
+<use f='luajit/lj_parse.c' l='955' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='956' u='r' c='bcemit_unop'/>
+<use f='luajit/lj_parse.c' l='1293' u='w' c='fscope_end'/>
+<use f='luajit/lj_parse.c' l='1626' u='w' c='fs_init'/>
+<use f='luajit/lj_parse.c' l='1727' u='r' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1779' u='w' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1798' u='w' c='expr_table'/>
+<use f='luajit/lj_parse.c' l='1943' u='r' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='1948' u='w' c='parse_args'/>
+<use f='luajit/lj_parse.c' l='2017' u='r' c='expr_simple'/>
+<use f='luajit/lj_parse.c' l='2162' u='r' c='assign_hazard'/>
+<use f='luajit/lj_parse.c' l='2196' u='r' c='assign_adjust'/>
+<use f='luajit/lj_parse.c' l='2202' u='w' c='assign_adjust'/>
+<use f='luajit/lj_parse.c' l='2225' u='w' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2238' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2263' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='2264' u='r' c='parse_local'/>
+<use f='luajit/lj_parse.c' l='2476' u='r' c='parse_for_num'/>
+<use f='luajit/lj_parse.c' l='2492' u='r' c='parse_for_num'/>
+<use f='luajit/lj_parse.c' l='2549' u='r' c='parse_for_iter'/>
+<use f='luajit/lj_parse.c' l='2709' u='w' c='parse_chunk'/>
+<offset>416</offset>
+<doc f='luajit/lj_parse.c' l='132'>/* First free register. */</doc>

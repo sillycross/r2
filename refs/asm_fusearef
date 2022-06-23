@@ -1,0 +1,4 @@
+<def f='luajit/lj_asm_x86.h' l='150' ll='174' type='void asm_fusearef(ASMState * as, IRIns * ir, RegSet allow)'/>
+<use f='luajit/lj_asm_x86.h' l='188' u='c' c='asm_fuseahuref'/>
+<use f='luajit/lj_asm_x86.h' l='1099' u='c' c='asm_aref'/>
+<doc f='luajit/lj_asm_x86.h' l='149'>/* Fuse array reference into memory operand. */</doc>

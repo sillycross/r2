@@ -1,0 +1,3 @@
+<dec f='luajit/lj_jit.h' l='18'/>
+<doc f='luajit/lj_jit.h' l='17'>/* CPU-specific JIT engine flags. 12 bits. Flags and strings must match. */</doc>
+<use f='luajit/lib_jit.c' l='107' u='c'/>

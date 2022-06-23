@@ -1,0 +1,15 @@
+<dec f='luajit/lj_lex.h' l='75' type='uint32_t'/>
+<offset>1376</offset>
+<doc f='luajit/lj_lex.h' l='75'>/* Syntactical nesting level. */</doc>
+<use f='luajit/lj_bcread.c' l='27' u='r' c='bcread_dbg'/>
+<use f='luajit/lj_bcread.c' l='27' u='r' c='bcread_bytecode'/>
+<use f='luajit/lj_bcread.c' l='27' u='r' c='bcread_uv'/>
+<use f='luajit/lj_bcread.c' l='27' u='r' c='lj_bcread_proto'/>
+<use f='luajit/lj_bcread.c' l='27' u='w' c='bcread_header'/>
+<use f='luajit/lj_lib.c' l='64' u='w' c='lib_read_lfunc'/>
+<use f='luajit/lj_parse.c' l='2039' u='w' c='synlevel_begin'/>
+<use f='luajit/lj_parse.c' l='2043' u='w' c='expr_binop'/>
+<use f='luajit/lj_parse.c' l='2216' u='r' c='parse_assignment'/>
+<use f='luajit/lj_parse.c' l='2043' u='w' c='parse_label'/>
+<use f='luajit/lj_parse.c' l='2043' u='w' c='parse_chunk'/>
+<use f='luajit/lj_parse.c' l='2728' u='w' c='lj_parse'/>

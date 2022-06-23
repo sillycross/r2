@@ -1,0 +1,7 @@
+<dec f='luajit/lj_ctype.h' l='394'/>
+<doc f='luajit/lj_ctype.h' l='393'>/* Load FFI library on-demand. */</doc>
+<use f='luajit/lib_buffer.c' l='205' u='c'/>
+<use f='luajit/lib_buffer.c' l='227' u='c'/>
+<use f='luajit/lib_jit.c' l='349' u='c'/>
+<use f='luajit/lj_bcread.c' l='402' u='c'/>
+<use f='luajit/lj_lex.c' l='121' u='c'/>

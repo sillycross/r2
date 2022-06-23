@@ -1,0 +1,3 @@
+<def f='luajit/lj_libdef.h' l='63' ll='67' type='const uint8_t [57]'/>
+<use f='luajit/lib_base.c' l='668' u='r' c='setpc_wrap_aux'/>
+<use f='luajit/lib_base.c' l='692' macro='1' u='r' c='luaopen_base'/>

@@ -1,0 +1,8 @@
+<dec f='luajit/dasm_x86.h' l='72' type='dasm_Section *'/>
+<use f='luajit/dasm_x86.h' l='144' u='w' c='dasm_setup'/>
+<use f='luajit/dasm_x86.h' l='172' u='r' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='264' u='w' c='dasm_put'/>
+<use f='luajit/dasm_x86.h' l='523' u='r' c='dasm_checkstep'/>
+<use f='luajit/dasm_x86.h' l='524' u='r' c='dasm_checkstep'/>
+<offset>448</offset>
+<doc f='luajit/dasm_x86.h' l='72'>/* Pointer to active section. */</doc>

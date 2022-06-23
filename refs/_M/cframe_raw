@@ -1,0 +1,14 @@
+<dec f='luajit/lj_frame.h' l='294'/>
+<use f='luajit/lj_api.c' l='1201' u='c'/>
+<use f='luajit/lj_debug.c' l='63' u='c'/>
+<use f='luajit/lj_debug.c' l='74' u='c'/>
+<use f='luajit/lj_debug.c' l='82' u='c'/>
+<use f='luajit/lj_debug.c' l='92' u='c'/>
+<use f='luajit/lj_dispatch.c' l='402' u='c'/>
+<use f='luajit/lj_dispatch.c' l='522' u='c'/>
+<use f='luajit/lj_dispatch.c' l='540' u='c'/>
+<use f='luajit/lj_err.c' l='114' u='c'/>
+<use f='luajit/lj_err.c' l='787' u='c'/>
+<use f='luajit/lj_err.c' l='960' u='c'/>
+<use f='luajit/lj_snap.c' l='889' u='c'/>
+<use f='luajit/lj_trace.c' l='888' u='c'/>

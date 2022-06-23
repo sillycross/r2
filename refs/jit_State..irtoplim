@@ -1,0 +1,12 @@
+<dec f='luajit/lj_jit.h' l='447' type='IRRef'/>
+<offset>2688</offset>
+<doc f='luajit/lj_jit.h' l='447'>/* Upper limit of instuction buffer (biased). */</doc>
+<use f='luajit/lj_iropt.h' l='34' u='r' c='lj_ir_nextins'/>
+<use f='luajit/lj_ir.c' l='75' u='r' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='79' u='w' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='83' u='w' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='92' u='r' c='lj_ir_growbot'/>
+<use f='luajit/lj_ir.c' l='96' u='r' c='lj_ir_growbot'/>
+<use f='luajit/lj_ir.c' l='101' u='w' c='lj_ir_growbot'/>
+<use f='luajit/lj_ir.c' l='110' u='w' c='lj_ir_growbot'/>
+<use f='luajit/lj_trace.c' l='367' u='r' c='lj_trace_freestate'/>

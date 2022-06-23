@@ -1,0 +1,16 @@
+<dec f='luajit/lj_ctype.h' l='181' type='GCtab *'/>
+<offset>320</offset>
+<doc f='luajit/lj_ctype.h' l='181'>/* Map of -CTypeID to metatable and cb slot to func. */</doc>
+<use f='luajit/lib_ffi.c' l='440' u='r' c='ffi_callback_set'/>
+<use f='luajit/lib_ffi.c' l='514' u='r' c='lj_cf_ffi_new'/>
+<use f='luajit/lib_ffi.c' l='771' u='r' c='lj_cf_ffi_metatype'/>
+<use f='luajit/lib_ffi.c' l='851' u='w' c='luaopen_ffi'/>
+<use f='luajit/lib_ffi.c' l='859' u='r' c='luaopen_ffi'/>
+<use f='luajit/lj_ccall.c' l='1171' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccallback.c' l='545' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='545' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='545' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='788' u='r' c='lj_ccallback_new'/>
+<use f='luajit/lj_crecord.c' l='1240' u='r' c='crec_call'/>
+<use f='luajit/lj_ctype.c' l='347' u='r' c='lj_ctype_meta'/>
+<use f='luajit/lj_ctype.c' l='349' u='r' c='lj_ctype_meta'/>

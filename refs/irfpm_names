@@ -1,0 +1,6 @@
+<dec f='luajit/host/buildvm.h' l='101' type='const char *const []'/>
+<def f='luajit/host/buildvm.c' l='267' ll='272' type='const char *const [8]'/>
+<use f='luajit/host/buildvm.c' l='335' u='r' c='emit_vmdef'/>
+<use f='luajit/host/buildvm.c' l='336' u='r' c='emit_vmdef'/>
+<use f='luajit/host/buildvm_fold.c' l='102' u='r' c='nexttoken'/>
+<use f='luajit/host/buildvm_fold.c' l='103' u='r' c='nexttoken'/>

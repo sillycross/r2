@@ -1,0 +1,4 @@
+<dec f='luajit/lj_gc.h' l='74' type='void lj_gc_barrieruv(global_State * g, TValue * tv)'/>
+<def f='luajit/lj_gc.c' l='816' ll='825' type='void lj_gc_barrieruv(global_State * g, TValue * tv)'/>
+<doc f='luajit/lj_gc.c' l='815'>/* Specialized barrier for closed upvalue. Pass &amp;uv-&gt;tv. */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

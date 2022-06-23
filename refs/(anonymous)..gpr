@@ -1,0 +1,9 @@
+<dec f='luajit/lj_target_x86.h' l='160' type='intptr_t [16]'/>
+<offset>1024</offset>
+<doc f='luajit/lj_target_x86.h' l='160'>/* General-purpose registers. */</doc>
+<use f='luajit/lj_snap.c' l='687' u='r' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='703' u='r' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='747' u='a' c='snap_restoredata'/>
+<use f='luajit/lj_trace.c' l='808' u='r' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='809' u='r' c='trace_exit_regs'/>
+<use f='luajit/lj_trace.c' l='811' u='r' c='trace_exit_regs'/>

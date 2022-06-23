@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='497' type='MCode *'/>
+<offset>24512</offset>
+<doc f='luajit/lj_jit.h' l='497'>/* Bottom of current mcode area. */</doc>
+<use f='luajit/lj_emit_x86.h' l='416' macro='1' u='w' c='emit_loadk64'/>
+<use f='luajit/lj_asm_x86.h' l='36' macro='1' u='w' c='asm_exitstub_gen'/>
+<use f='luajit/lj_asm_x86.h' l='393' macro='1' u='w' c='asm_fuseloadk64'/>
+<use f='luajit/lj_mcode.c' l='273' u='w' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='277' u='w' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='277' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='304' u='r' c='lj_mcode_reserve'/>

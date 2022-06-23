@@ -1,0 +1,8 @@
+<dec f='luajit/lj_ir.h' l='249'/>
+<doc f='luajit/lj_ir.h' l='248'>/* Number to integer conversion mode. Ordered by strength of the checks. */</doc>
+<use f='luajit/lj_opt_narrow.c' l='245' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='284' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='415' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='479' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='495' u='c'/>
+<use f='luajit/lj_opt_narrow.c' l='508' u='c'/>

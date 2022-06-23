@@ -1,0 +1,5 @@
+<dec f='luajit/lj_target_x86.h' l='193'/>
+<use f='luajit/lj_target_x86.h' l='284' u='c'/>
+<use f='luajit/lj_target_x86.h' l='296' u='c'/>
+<use f='luajit/lj_target_x86.h' l='304' u='c'/>
+<use f='luajit/lj_target_x86.h' l='305' u='c'/>

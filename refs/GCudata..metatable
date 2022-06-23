@@ -1,0 +1,23 @@
+<dec f='luajit/lj_obj.h' l='326' type='GCRef'/>
+<offset>256</offset>
+<doc f='luajit/lj_obj.h' l='326'>/* Must be at same offset in GCtab. */</doc>
+<use f='luajit/lib_buffer.c' l='310' u='m' c='lj_cf_buffer_new'/>
+<use f='luajit/lib_io.c' l='77' u='m' c='io_file_new'/>
+<use f='luajit/lib_io.c' l='525' u='m' c='io_std_new'/>
+<use f='luajit/lj_api.c' l='853' u='m' c='lua_getmetatable'/>
+<use f='luajit/lj_api.c' l='945' u='m' c='luaL_testudata'/>
+<use f='luajit/lj_api.c' l='1041' u='m' c='lua_setmetatable'/>
+<use f='luajit/lj_clib.c' l='407' u='m' c='clib_new'/>
+<use f='luajit/lj_ffrecord.c' l='1165' u='m' c='recff_debug_getmetatable'/>
+<use f='luajit/lj_gc.c' l='64' u='m' c='gc_mark'/>
+<use f='luajit/lj_gc.c' l='146' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='146' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='146' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='563' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='563' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='563' u='m' c='gc_finalize'/>
+<use f='luajit/lj_meta.c' l='65' u='m' c='lj_meta_lookup'/>
+<use f='luajit/lj_record.c' l='983' u='m' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1127' u='m' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1168' u='m' c='rec_mm_comp'/>
+<use f='luajit/lj_udata.c' l='23' u='m' c='lj_udata_new'/>

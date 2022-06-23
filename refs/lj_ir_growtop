@@ -1,0 +1,4 @@
+<dec f='luajit/lj_iropt.h' l='16' type='void lj_ir_growtop(jit_State * J)'/>
+<use f='luajit/lj_iropt.h' l='34' u='c' c='lj_ir_nextins'/>
+<def f='luajit/lj_ir.c' l='72' ll='86' type='void lj_ir_growtop(jit_State * J)'/>
+<doc f='luajit/lj_ir.c' l='71'>/* Grow IR buffer at the top. */</doc>

@@ -1,0 +1,11 @@
+<dec f='luajit/lj_meta.h' l='13' type='cTValue * lj_meta_cache(GCtab * mt, MMS mm, GCstr * name)'/>
+<use f='luajit/lib_ffi.c' l='515' macro='1' u='c' c='lj_cf_ffi_new'/>
+<use f='luajit/lj_gc.c' l='146' macro='1' u='c' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='177' macro='1' u='c' c='gc_traverse_tab'/>
+<use f='luajit/lj_gc.c' l='563' macro='1' u='c' c='gc_finalize'/>
+<def f='luajit/lj_meta.c' l='47' ll='56' type='cTValue * lj_meta_cache(GCtab * mt, MMS mm, GCstr * name)'/>
+<use f='luajit/lj_meta.c' l='144' macro='1' u='c' c='lj_meta_tget'/>
+<use f='luajit/lj_meta.c' l='174' macro='1' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_meta.c' l='332' macro='1' u='c' c='lj_meta_equal'/>
+<use f='luajit/lj_meta.c' l='337' macro='1' u='c' c='lj_meta_equal'/>
+<doc f='luajit/lj_meta.c' l='46'>/* Negative caching of a few fast metamethods. See the lj_meta_fast() macro. */</doc>

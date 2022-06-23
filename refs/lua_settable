@@ -1,0 +1,4 @@
+<dec f='luajit/lua.h' l='191' type='void lua_settable(lua_State * L, int idx)'/>
+<use f='luajit/lib_aux.c' l='96' u='c' c='luaL_findtable'/>
+<use f='luajit/lib_package.c' l='221' u='c' c='ll_register'/>
+<def f='luajit/lj_api.c' l='960' ll='977' macro='1' type='void lua_settable(lua_State * L, int idx)'/>

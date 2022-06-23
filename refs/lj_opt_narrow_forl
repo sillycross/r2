@@ -1,0 +1,5 @@
+<dec f='luajit/lj_iropt.h' l='148' type='IRType lj_opt_narrow_forl(jit_State * J, cTValue * forbase)'/>
+<def f='luajit/lj_opt_narrow.c' l='628' ll='645' type='IRType lj_opt_narrow_forl(jit_State * J, cTValue * tv)'/>
+<doc f='luajit/lj_opt_narrow.c' l='627'>/* Narrow the FORL index type by looking at the runtime values. */</doc>
+<use f='luajit/lj_record.c' l='454' u='c' c='rec_for_loop'/>
+<use f='luajit/lj_record.c' l='513' u='c' c='rec_for'/>

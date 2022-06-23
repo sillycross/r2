@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ctype.h' l='101'/>
+<doc f='luajit/lj_ctype.h' l='100'>/* Bitfields only used in parser. */</doc>

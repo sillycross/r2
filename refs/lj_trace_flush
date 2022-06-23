@@ -1,0 +1,5 @@
+<dec f='luajit/lj_trace.h' l='30' type='void lj_trace_flush(jit_State * J, TraceNo traceno)'/>
+<use f='luajit/lj_dispatch.c' l='281' u='c' c='luaJIT_setmode'/>
+<use f='luajit/lj_record.c' l='1703' u='c' c='check_call_unroll'/>
+<def f='luajit/lj_trace.c' l='263' ll='270' type='void lj_trace_flush(jit_State * J, TraceNo traceno)'/>
+<doc f='luajit/lj_trace.c' l='262'>/* Flush a trace. Only root traces are considered. */</doc>

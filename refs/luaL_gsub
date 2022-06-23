@@ -1,0 +1,7 @@
+<dec f='luajit/lauxlib.h' l='73' type='const char * luaL_gsub(lua_State * L, const char * s, const char * p, const char * r)'/>
+<def f='luajit/lib_aux.c' l='161' ll='176' macro='1' type='const char * luaL_gsub(lua_State * L, const char * s, const char * p, const char * r)'/>
+<use f='luajit/lib_package.c' l='232' u='c' c='mksymname'/>
+<use f='luajit/lib_package.c' l='323' u='c' c='searchpath'/>
+<use f='luajit/lib_package.c' l='325' u='c' c='searchpath'/>
+<use f='luajit/lib_package.c' l='562' u='c' c='setpath'/>
+<use f='luajit/lib_package.c' l='564' u='c' c='setpath'/>

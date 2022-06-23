@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ctype.h' l='163' type='FPRCBArg [8]'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='a' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='a' c='build_subroutines'/>
+<offset>0</offset>
+<doc f='luajit/lj_ctype.h' l='163'>/* Arguments/results in FPRs. */</doc>
+<use f='luajit/lj_ccallback.c' l='350' u='a' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='646' u='a' c='callback_conv_result'/>

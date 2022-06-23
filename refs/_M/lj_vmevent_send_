@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vmevent.h' l='45'/>
+<use f='luajit/lj_trace.c' l='659' u='c'/>

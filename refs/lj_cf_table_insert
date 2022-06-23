@@ -1,0 +1,1 @@
+<def f='luajit/lib_table.c' l='79' macro='1' type='int lj_cf_table_insert(lua_State * L)'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_debug.h' l='45' type='void lj_debug_dumpstack(lua_State * L, SBuf * sb, const char * fmt, int depth)'/>
+<def f='luajit/lj_debug.c' l='582' ll='652' type='void lj_debug_dumpstack(lua_State * L, SBuf * sb, const char * fmt, int depth)'/>
+<doc f='luajit/lj_debug.c' l='581'>/* Put a compact stack dump into a buffer. */</doc>
+<use f='luajit/lj_profile.c' l='362' u='c' c='luaJIT_profile_dumpstack'/>

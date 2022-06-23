@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='187' type='uint16_t'/>
+<offset>48</offset>
+<doc f='luajit/lj_jit.h' l='187'>/* Offset into machine code in MCode units. */</doc>
+<use f='luajit/lj_asm.c' l='1032' u='w' c='asm_snap_prev'/>
+<use f='luajit/lj_asm.c' l='1046' u='w' c='asm_snap_fixup_mcofs'/>
+<use f='luajit/lj_asm.c' l='1046' u='r' c='asm_snap_fixup_mcofs'/>
+<use f='luajit/lj_asm.c' l='1048' u='w' c='asm_snap_fixup_mcofs'/>
+<use f='luajit/lj_opt_loop.c' l='228' u='w' c='loop_subst_snap'/>
+<use f='luajit/lj_snap.c' l='174' u='w' c='snapshot_stack'/>
+<use f='luajit/lj_trace.c' l='951' u='r' c='lj_trace_unwind'/>

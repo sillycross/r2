@@ -1,0 +1,32 @@
+<dec f='luajit/lj_obj.h' l='590' type='uint8_t'/>
+<offset>128</offset>
+<doc f='luajit/lj_obj.h' l='590'>/* Current white color. */</doc>
+<use f='luajit/lj_asm_x86.h' l='1861' u='a' c='asm_cnew'/>
+<use f='luajit/lj_cdata.c' l='45' macro='1' u='r' c='lj_cdata_newv'/>
+<use f='luajit/lj_cdata.c' l='66' macro='1' u='r' c='lj_cdata_free'/>
+<use f='luajit/lj_func.c' l='47' macro='1' u='r' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='55' macro='1' u='r' c='func_finduv'/>
+<use f='luajit/lj_func.c' l='93' macro='1' u='r' c='lj_func_closeuv'/>
+<use f='luajit/lj_gc.c' l='131' macro='1' u='r' c='gc_mark_mmudata'/>
+<use f='luajit/lj_gc.c' l='405' macro='1' u='r' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='413' macro='1' u='r' c='gc_sweep'/>
+<use f='luajit/lj_gc.c' l='431' macro='1' u='r' c='gc_sweepstr'/>
+<use f='luajit/lj_gc.c' l='441' macro='1' u='r' c='gc_sweepstr'/>
+<use f='luajit/lj_gc.c' l='544' macro='1' u='r' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='561' macro='1' u='r' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='590' macro='1' u='r' c='lj_gc_finalize_cdata'/>
+<use f='luajit/lj_gc.c' l='605' u='w' c='lj_gc_freeall'/>
+<use f='luajit/lj_gc.c' l='644' u='w' c='atomic'/>
+<use f='luajit/lj_gc.c' l='644' macro='1' u='r' c='atomic'/>
+<use f='luajit/lj_gc.c' l='645' u='r' c='atomic'/>
+<use f='luajit/lj_gc.c' l='812' macro='1' u='r' c='lj_gc_barrierf'/>
+<use f='luajit/lj_gc.c' l='823' macro='1' u='r' c='lj_gc_barrieruv'/>
+<use f='luajit/lj_gc.c' l='843' macro='1' u='r' c='lj_gc_closeuv'/>
+<use f='luajit/lj_gc.c' l='888' macro='1' u='r' c='lj_mem_newgco'/>
+<use f='luajit/lj_state.c' l='227' u='w' c='lua_newstate'/>
+<use f='luajit/lj_str.c' l='223' macro='1' u='r' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='238' macro='1' u='r' c='lj_str_rehash_chain'/>
+<use f='luajit/lj_str.c' l='281' macro='1' u='r' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='335' macro='1' u='r' c='lj_str_new'/>
+<use f='luajit/lj_trace.c' l='153' macro='1' u='r' c='trace_save'/>
+<use f='luajit/lj_udata.c' l='18' macro='1' u='r' c='lj_udata_new'/>

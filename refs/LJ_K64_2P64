@@ -1,0 +1,4 @@
+<dec f='luajit/lj_jit.h' l='353' type='1'/>
+<doc f='luajit/lj_jit.h' l='353'>/* 2^64 */</doc>
+<use f='luajit/lj_asm_x86.h' l='845' u='a' c='asm_conv'/>
+<use f='luajit/lj_trace.c' l='329' u='m' c='lj_trace_initstate'/>

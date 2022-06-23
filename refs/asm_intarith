@@ -1,0 +1,10 @@
+<def f='luajit/lj_asm_x86.h' l='2055' ll='2104' type='void asm_intarith(ASMState * as, IRIns * ir, x86Arith xa)'/>
+<use f='luajit/lj_asm_x86.h' l='2184' u='c' c='asm_add'/>
+<use f='luajit/lj_asm_x86.h' l='2192' u='c' c='asm_sub'/>
+<use f='luajit/lj_asm_x86.h' l='2200' u='c' c='asm_mul'/>
+<use f='luajit/lj_asm.c' l='1743' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1744' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1745' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1777' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1778' macro='1' u='c' c='asm_ir'/>
+<use f='luajit/lj_asm.c' l='1779' macro='1' u='c' c='asm_ir'/>

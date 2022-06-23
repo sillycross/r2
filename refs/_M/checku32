@@ -1,0 +1,4 @@
+<dec f='luajit/lj_def.h' l='106'/>
+<use f='luajit/lj_emit_x86.h' l='314' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='355' u='c'/>
+<use f='luajit/lj_serialize.c' l='273' u='c'/>

@@ -1,0 +1,69 @@
+<dec f='luajit/lj_obj.h' l='260'/>
+<use f='luajit/host/buildvm_arch.h' l='491' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='836' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1237' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1253' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1389' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1389' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1425' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1458' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1753' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2377' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3412' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3661' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3690' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3706' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3730' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3781' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3822' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3890' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4104' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4118' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4135' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4180' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4267' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4269' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4459' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4572' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4609' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4623' u='c'/>
+<doc f='luajit/lj_obj.h' l='224'>/* Internal object tags.
+**
+** Format for 32 bit GC references (!LJ_GC64):
+**
+** Internal tags overlap the MSW of a number object (must be a double).
+** Interpreted as a double these are special NaNs. The FPU only generates
+** one type of NaN (0xfff8_0000_0000_0000). So MSWs &gt; 0xfff80000 are available
+** for use as internal tags. Small negative numbers are used to shorten the
+** encoding of type comparisons (reg/mem against sign-ext. 8 bit immediate).
+**
+**                  ---MSW---.---LSW---
+** primitive types |  itype  |         |
+** lightuserdata   |  itype  |  void * |  (32 bit platforms)
+** lightuserdata   |ffff|seg|    ofs   |  (64 bit platforms)
+** GC objects      |  itype  |  GCRef  |
+** int (LJ_DUALNUM)|  itype  |   int   |
+** number           -------double------
+**
+** Format for 64 bit GC references (LJ_GC64):
+**
+** The upper 13 bits must be 1 (0xfff8...) for a special NaN. The next
+** 4 bits hold the internal tag. The lowest 47 bits either hold a pointer,
+** a zero-extended 32 bit integer or all bits set to 1 for primitive types.
+**
+**                     ------MSW------.------LSW------
+** primitive types    |1..1|itype|1..................1|
+** GC objects         |1..1|itype|-------GCRef--------|
+** lightuserdata      |1..1|itype|seg|------ofs-------|
+** int (LJ_DUALNUM)   |1..1|itype|0..0|-----int-------|
+** number              ------------double-------------
+**
+** ORDER LJ_T
+** Primitive types nil/false/true must be first, lightuserdata next.
+** GC objects are at the end, table/userdata must be lowest.
+** Also check lj_ir.h for similar ordering constraints.
+*/</doc>
+<use f='luajit/lib_table.c' l='165' u='c'/>
+<use f='luajit/lj_cdata.c' l='96' u='c'/>
+<use f='luajit/lj_parse.c' l='483' u='c'/>

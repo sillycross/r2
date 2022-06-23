@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_prng.h source code [luajit/lj_prng.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_prng.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_prng.h.html'>lj_prng.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** Pseudo-random number generation.</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_PRNG_H">_LJ_PRNG_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_PRNG_H" data-ref="_M/_LJ_PRNG_H">_LJ_PRNG_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_def.h.html">"lj_def.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>int</em> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_prng_seed_secure" title='lj_prng_seed_secure' data-ref="lj_prng_seed_secure" data-ref-filename="lj_prng_seed_secure">lj_prng_seed_secure</dfn>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col1 decl" id="1rs" title='rs' data-type='PRNGState *' data-ref="1rs" data-ref-filename="1rs">rs</dfn>);</td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_prng_u64" title='lj_prng_u64' data-ref="lj_prng_u64" data-ref-filename="lj_prng_u64">lj_prng_u64</dfn>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col2 decl" id="2rs" title='rs' data-type='PRNGState *' data-ref="2rs" data-ref-filename="2rs">rs</dfn>);</td></tr>
+<tr><th id="13">13</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <a class="typedef" href="../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <a class="macro" href="lj_def.h.html#314" title="" data-ref="_M/LJ_FASTCALL">LJ_FASTCALL</a> <dfn class="decl fn" id="lj_prng_u64d" title='lj_prng_u64d' data-ref="lj_prng_u64d" data-ref-filename="lj_prng_u64d">lj_prng_u64d</dfn>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col3 decl" id="3rs" title='rs' data-type='PRNGState *' data-ref="3rs" data-ref-filename="3rs">rs</dfn>);</td></tr>
+<tr><th id="14">14</th><td></td></tr>
+<tr><th id="15">15</th><td><i>/* This is just the precomputed result of lib_math.c:random_seed(rs, 0.0). */</i></td></tr>
+<tr><th id="16">16</th><td><em>static</em> <a class="macro" href="lj_def.h.html#128" title="inline __attribute__((always_inline))" data-ref="_M/LJ_AINLINE">LJ_AINLINE</a> <em>void</em> <dfn class="decl def fn" id="lj_prng_seed_fixed" title='lj_prng_seed_fixed' data-ref="lj_prng_seed_fixed" data-ref-filename="lj_prng_seed_fixed">lj_prng_seed_fixed</dfn>(<a class="typedef" href="lj_def.h.html#PRNGState" title='PRNGState' data-type='struct PRNGState' data-ref="PRNGState" data-ref-filename="PRNGState">PRNGState</a> *<dfn class="local col4 decl" id="4rs" title='rs' data-type='PRNGState *' data-ref="4rs" data-ref-filename="4rs">rs</dfn>)</td></tr>
+<tr><th id="17">17</th><td>{</td></tr>
+<tr><th id="18">18</th><td>  <a class="local col4 ref" href="#4rs" title='rs' data-ref="4rs" data-ref-filename="4rs">rs</a>-&gt;<a class="ref field" href="lj_def.h.html#PRNGState::u" title='PRNGState::u' data-ref="PRNGState::u" data-ref-filename="PRNGState..u">u</a>[<var>0</var>] = <a class="macro" href="lj_def.h.html#94" title="(((uint64_t)0xa0d27757 &lt;&lt; 32) + (uint64_t)0x0a345b8c)" data-ref="_M/U64x">U64x</a>(a0d27757,<var>0a345b8c</var>);</td></tr>
+<tr><th id="19">19</th><td>  <a class="local col4 ref" href="#4rs" title='rs' data-ref="4rs" data-ref-filename="4rs">rs</a>-&gt;<a class="ref field" href="lj_def.h.html#PRNGState::u" title='PRNGState::u' data-ref="PRNGState::u" data-ref-filename="PRNGState..u">u</a>[<var>1</var>] = <a class="macro" href="lj_def.h.html#94" title="(((uint64_t)0x764a296c &lt;&lt; 32) + (uint64_t)0x5d4aa64f)" data-ref="_M/U64x">U64x</a>(<var>764a296c</var>,<var>5d4aa64f</var>);</td></tr>
+<tr><th id="20">20</th><td>  <a class="local col4 ref" href="#4rs" title='rs' data-ref="4rs" data-ref-filename="4rs">rs</a>-&gt;<a class="ref field" href="lj_def.h.html#PRNGState::u" title='PRNGState::u' data-ref="PRNGState::u" data-ref-filename="PRNGState..u">u</a>[<var>2</var>] = <a class="macro" href="lj_def.h.html#94" title="(((uint64_t)0x51220704 &lt;&lt; 32) + (uint64_t)0x070adeaa)" data-ref="_M/U64x">U64x</a>(<var>51220704</var>,<var>070adeaa</var>);</td></tr>
+<tr><th id="21">21</th><td>  <a class="local col4 ref" href="#4rs" title='rs' data-ref="4rs" data-ref-filename="4rs">rs</a>-&gt;<a class="ref field" href="lj_def.h.html#PRNGState::u" title='PRNGState::u' data-ref="PRNGState::u" data-ref-filename="PRNGState..u">u</a>[<var>3</var>] = <a class="macro" href="lj_def.h.html#94" title="(((uint64_t)0x2a2717b5 &lt;&lt; 32) + (uint64_t)0xa7b7b927)" data-ref="_M/U64x">U64x</a>(<var>2a2717b5</var>,a7b7b927);</td></tr>
+<tr><th id="22">22</th><td>}</td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lib_math.c.html'>luajit/lib_math.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

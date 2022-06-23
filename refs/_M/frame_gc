@@ -1,0 +1,14 @@
+<dec f='luajit/lj_frame.h' l='46'/>
+<doc f='luajit/lj_frame.h' l='34'>/* Two-slot frame info, required for 64 bit PC/GCRef:
+**
+**                   base-2  base-1      |  base  base+1 ...
+**                  [func   PC/delta/ft] | [slots ...]
+**                  ^-- frame            | ^-- base   ^-- top
+**
+** Continuation frames:
+**
+**   base-4  base-3  base-2  base-1      |  base  base+1 ...
+**  [cont      PC ] [func   PC/delta/ft] | [slots ...]
+**                  ^-- frame            | ^-- base   ^-- top
+*/</doc>
+<use f='luajit/lj_debug.c' l='30' u='c'/>

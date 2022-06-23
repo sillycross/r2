@@ -1,0 +1,2 @@
+<def f='luajit/lib_base.c' l='79' macro='1' type='int lj_ffh_next(lua_State * L)'/>
+<use f='luajit/lj_libdef.h' l='7' u='r'/>

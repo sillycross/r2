@@ -1,0 +1,30 @@
+<dec f='luajit/host/buildvm_arch.h' l='2670'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2693' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='2660'>//|  int3
+  //|
+  //|//-----------------------------------------------------------------------
+  //|//-- FFI helper functions -----------------------------------------------
+  //|//-----------------------------------------------------------------------
+  //|
+  //|// Handler for callback functions. Callback slot number in ah/al.
+  //|-&gt;vm_ffi_callback:
+  //|.if FFI
+  //|.type CTSTATE, CTState, PC</doc>

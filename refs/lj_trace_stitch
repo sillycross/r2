@@ -1,0 +1,4 @@
+<dec f='luajit/lj_trace.h' l='38' type='void lj_trace_stitch(jit_State * J, const BCIns * pc)'/>
+<use f='luajit/lj_dispatch.c' l='527' u='c' c='lj_dispatch_stitch'/>
+<def f='luajit/lj_trace.c' l='768' ll='778' type='void lj_trace_stitch(jit_State * J, const BCIns * pc)'/>
+<doc f='luajit/lj_trace.c' l='767'>/* Stitch a new trace to the previous trace. */</doc>

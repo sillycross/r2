@@ -1,0 +1,5 @@
+<def f='luajit/lj_emit_x86.h' l='484' ll='491' type='void emit_jcc(ASMState * as, int cc, MCode * target)'/>
+<use f='luajit/lj_asm_x86.h' l='75' u='c' c='asm_guardcc'/>
+<use f='luajit/lj_asm_x86.h' l='2391' u='c' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2668' u='c' c='asm_stack_check'/>
+<doc f='luajit/lj_emit_x86.h' l='483'>/* jcc target */</doc>

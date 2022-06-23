@@ -1,0 +1,19 @@
+<dec f='luajit/lj_iropt.h' l='138' type='TRef lj_opt_narrow_toint(jit_State * J, TRef tr)'/>
+<use f='luajit/lj_crecord.c' l='436' u='c' c='crec_ct_ct'/>
+<use f='luajit/lj_ffrecord.c' l='342' u='c' c='recff_tonumber'/>
+<use f='luajit/lj_ffrecord.c' l='432' u='c' c='recff_ipairs_aux'/>
+<use f='luajit/lj_ffrecord.c' l='761' u='c' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='767' u='c' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='776' u='c' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='779' u='c' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='835' u='c' c='recff_string_char'/>
+<use f='luajit/lj_ffrecord.c' l='853' u='c' c='recff_string_rep'/>
+<use f='luajit/lj_ffrecord.c' l='899' u='c' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='1017' u='c' c='recff_string_format'/>
+<use f='luajit/lj_ffrecord.c' l='1065' u='c' c='recff_table_concat'/>
+<use f='luajit/lj_ffrecord.c' l='1067' u='c' c='recff_table_concat'/>
+<use f='luajit/lj_ffrecord.c' l='1079' u='c' c='recff_table_new'/>
+<use f='luajit/lj_ffrecord.c' l='1080' u='c' c='recff_table_new'/>
+<def f='luajit/lj_opt_narrow.c' l='467' ll='480' type='TRef lj_opt_narrow_toint(jit_State * J, TRef tr)'/>
+<doc f='luajit/lj_opt_narrow.c' l='466'>/* Narrow conversion to integer operand (overflow undefined). */</doc>
+<use f='luajit/lj_record.c' l='2207' u='c' c='lj_record_ins'/>

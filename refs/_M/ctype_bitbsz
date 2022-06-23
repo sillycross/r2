@@ -1,0 +1,5 @@
+<dec f='luajit/lj_ctype.h' l='195'/>
+<use f='luajit/lib_ffi.c' l='661' u='c'/>
+<use f='luajit/lj_cconv.c' l='444' u='c'/>
+<use f='luajit/lj_cconv.c' l='663' u='c'/>
+<use f='luajit/lj_crecord.c' l='763' u='c'/>

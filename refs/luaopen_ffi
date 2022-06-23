@@ -1,0 +1,8 @@
+<dec f='luajit/lualib.h' l='35' type='int luaopen_ffi(lua_State * L)'/>
+<use f='luajit/lib_buffer.c' l='205' macro='1' u='c' c='lj_cf_buffer_method_reserve'/>
+<use f='luajit/lib_buffer.c' l='227' macro='1' u='c' c='lj_cf_buffer_method_ref'/>
+<def f='luajit/lib_ffi.c' l='848' ll='867' macro='1' type='int luaopen_ffi(lua_State * L)'/>
+<use f='luajit/lib_init.c' l='34'/>
+<use f='luajit/lib_jit.c' l='349' macro='1' u='c' c='lj_cf_jit_util_tracek'/>
+<use f='luajit/lj_bcread.c' l='402' macro='1' u='c' c='bcread_header'/>
+<use f='luajit/lj_lex.c' l='121' macro='1' u='c' c='lex_number'/>

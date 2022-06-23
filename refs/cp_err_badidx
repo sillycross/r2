@@ -1,0 +1,4 @@
+<def f='luajit/lj_cparse.c' l='158' ll='162' macro='1' type='void cp_err_badidx(CPState * cp, CType * ct)'/>
+<use f='luajit/lj_cparse.c' l='511' u='c' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='556' u='c' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='566' u='c' c='cp_expr_postfix'/>

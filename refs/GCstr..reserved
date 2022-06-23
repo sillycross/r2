@@ -1,0 +1,7 @@
+<dec f='luajit/lj_obj.h' l='305' type='uint8_t'/>
+<offset>80</offset>
+<doc f='luajit/lj_obj.h' l='305'>/* Used by lexer for fast lookup of reserved words. */</doc>
+<use f='luajit/lj_lex.c' l='307' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='308' u='r' c='lex_scan'/>
+<use f='luajit/lj_lex.c' l='511' u='w' c='lj_lex_init'/>
+<use f='luajit/lj_str.c' l='297' u='w' c='lj_str_alloc'/>

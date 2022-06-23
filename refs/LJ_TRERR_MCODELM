@@ -1,0 +1,2 @@
+<use f='luajit/lj_mcode.c' l='370' u='r' c='lj_mcode_limiterr'/>
+<use f='luajit/lj_trace.c' l='572' u='r' c='trace_abort'/>

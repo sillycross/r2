@@ -1,0 +1,7 @@
+<dec f='luajit/lj_parse.h' l='13' type='GCstr * lj_parse_keepstr(LexState * ls, const char * str, size_t l)'/>
+<use f='luajit/lj_lex.c' l='179' u='c' c='lex_longstring'/>
+<use f='luajit/lj_lex.c' l='285' u='c' c='lex_string'/>
+<use f='luajit/lj_lex.c' l='305' u='c' c='lex_scan'/>
+<def f='luajit/lj_parse.c' l='239' ll='248' type='GCstr * lj_parse_keepstr(LexState * ls, const char * str, size_t len)'/>
+<use f='luajit/lj_parse.c' l='1067' u='c' c='parse_params'/>
+<doc f='luajit/lj_parse.c' l='238'>/* Anchor string constant to avoid GC. */</doc>

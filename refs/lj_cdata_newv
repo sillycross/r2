@@ -1,0 +1,5 @@
+<dec f='luajit/lj_cdata.h' l='62' type='GCcdata * lj_cdata_newv(lua_State * L, CTypeID id, CTSize sz, CTSize align)'/>
+<def f='luajit/lj_cdata.c' l='29' ll='50' type='GCcdata * lj_cdata_newv(lua_State * L, CTypeID id, CTSize sz, CTSize align)'/>
+<use f='luajit/lj_cdata.c' l='58' u='c' c='lj_cdata_newx'/>
+<doc f='luajit/lj_cdata.c' l='28'>/* Allocate variable-sized or specially aligned C data object. */</doc>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>

@@ -1,0 +1,3 @@
+<def f='luajit/lj_asm_x86.h' l='9' ll='40' type='MCode * asm_exitstub_gen(ASMState * as, ExitNo group)'/>
+<use f='luajit/lj_asm_x86.h' l='50' u='c' c='asm_exitstub_setup'/>
+<doc f='luajit/lj_asm_x86.h' l='8'>/* Generate an exit stub group at the bottom of the reserved MCode memory. */</doc>

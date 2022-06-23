@@ -1,0 +1,14 @@
+<dec f='luajit/lj_ctype.h' l='471' type='cTValue * lj_ctype_meta(CTState * cts, CTypeID id, MMS mm)'/>
+<use f='luajit/lib_ffi.c' l='110' u='c' c='ffi_index_meta'/>
+<use f='luajit/lib_ffi.c' l='237' u='c' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='316' u='c' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='335' u='c' c='ffi_pairs'/>
+<use f='luajit/lj_carith.c' l='229' u='c' c='lj_carith_meta'/>
+<use f='luajit/lj_carith.c' l='235' u='c' c='lj_carith_meta'/>
+<use f='luajit/lj_crecord.c' l='737' u='c' c='crec_index_meta'/>
+<use f='luajit/lj_crecord.c' l='1098' u='c' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1307' u='c' c='recff_cdata_call'/>
+<use f='luajit/lj_crecord.c' l='1448' u='c' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1454' u='c' c='crec_arith_meta'/>
+<def f='luajit/lj_ctype.c' l='337' ll='354' type='cTValue * lj_ctype_meta(CTState * cts, CTypeID id, MMS mm)'/>
+<doc f='luajit/lj_ctype.c' l='336'>/* Get ctype metamethod. */</doc>

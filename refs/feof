@@ -1,0 +1,4 @@
+<dec f='include/stdio.h' l='759' type='int feof(FILE * __stream)'/>
+<doc f='include/stdio.h' l='758'>/* Return the EOF indicator for STREAM.  */</doc>
+<use f='luajit/host/minilua.c' l='6131' u='c' c='getF'/>
+<use f='luajit/lj_load.c' l='79' u='c' c='reader_file'/>

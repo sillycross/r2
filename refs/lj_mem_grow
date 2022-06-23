@@ -1,0 +1,11 @@
+<dec f='luajit/lj_gc.h' l='114' type='void * lj_mem_grow(lua_State * L, void * p, MSize * szp, MSize lim, MSize esz)'/>
+<use f='luajit/lj_ccallback.c' l='740' macro='1' u='c' c='callback_slot_new'/>
+<use f='luajit/lj_ctype.c' l='167' macro='1' u='c' c='lj_ctype_new'/>
+<use f='luajit/lj_ctype.c' l='195' macro='1' u='c' c='lj_ctype_intern'/>
+<def f='luajit/lj_gc.c' l='893' ll='903' type='void * lj_mem_grow(lua_State * L, void * p, MSize * szp, MSize lim, MSize esz)'/>
+<doc f='luajit/lj_gc.c' l='892'>/* Resize growable vector. */</doc>
+<use f='luajit/lj_parse.c' l='424' macro='1' u='c' c='bcemit_INS'/>
+<use f='luajit/lj_parse.c' l='1055' macro='1' u='c' c='var_new'/>
+<use f='luajit/lj_parse.c' l='1163' macro='1' u='c' c='gola_new'/>
+<use f='luajit/lj_snap.c' l='43' macro='1' u='c' c='lj_snap_grow_buf_'/>
+<use f='luajit/lj_trace.c' l='75' macro='1' u='c' c='trace_findfree'/>

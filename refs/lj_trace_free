@@ -1,0 +1,5 @@
+<dec f='luajit/lj_trace.h' l='27' type='void lj_trace_free(global_State * g, GCtrace * T)'/>
+<use f='luajit/lj_asm.c' l='2504' u='c' c='lj_asm_trace'/>
+<use f='luajit/lj_gc.c' l='385' u='r'/>
+<def f='luajit/lj_trace.c' l='169' ll='181' type='void lj_trace_free(global_State * g, GCtrace * T)'/>
+<use f='luajit/lj_trace.c' l='567' u='c' c='trace_abort'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lauxlib.h' l='52' type='void luaL_where(lua_State * L, int lvl)'/>
+<use f='luajit/lib_base.c' l='342' u='c' c='lj_cf_error'/>
+<def f='luajit/lj_err.c' l='1075' ll='1080' macro='1' type='void luaL_where(lua_State * L, int level)'/>
+<use f='luajit/luajit.c' l='49' u='c' c='lstop'/>

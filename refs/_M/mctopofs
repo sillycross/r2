@@ -1,0 +1,6 @@
+<dec f='luajit/lj_emit_x86.h' l='299'/>
+<use f='luajit/lj_emit_x86.h' l='323' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='346' u='c'/>
+<use f='luajit/lj_emit_x86.h' l='400' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='380' u='c'/>
+<use f='luajit/lj_asm_x86.h' l='380' u='c'/>

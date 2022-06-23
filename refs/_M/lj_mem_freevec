@@ -1,0 +1,16 @@
+<dec f='luajit/lj_gc.h' l='130'/>
+<use f='luajit/lj_ctype.c' l='632' u='c'/>
+<use f='luajit/lj_ctype.c' l='633' u='c'/>
+<use f='luajit/lj_lex.c' l='449' u='c'/>
+<use f='luajit/lj_lex.c' l='450' u='c'/>
+<use f='luajit/lj_opt_loop.c' l='426' u='c'/>
+<use f='luajit/lj_state.c' l='177' u='c'/>
+<use f='luajit/lj_state.c' l='181' u='c'/>
+<use f='luajit/lj_state.c' l='332' u='c'/>
+<use f='luajit/lj_tab.c' l='218' u='c'/>
+<use f='luajit/lj_tab.c' l='220' u='c'/>
+<use f='luajit/lj_tab.c' l='289' u='c'/>
+<use f='luajit/lj_trace.c' l='365' u='c'/>
+<use f='luajit/lj_trace.c' l='366' u='c'/>
+<use f='luajit/lj_trace.c' l='367' u='c'/>
+<use f='luajit/lj_trace.c' l='368' u='c'/>

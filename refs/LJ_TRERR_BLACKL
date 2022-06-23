@@ -1,0 +1,2 @@
+<use f='luajit/lj_crecord.c' l='1241' u='r' c='crec_call'/>
+<use f='luajit/lj_record.c' l='2450' u='r' c='lj_record_ins'/>

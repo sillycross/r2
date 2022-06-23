@@ -1,0 +1,6 @@
+<dec f='luajit/host/buildvm.h' l='26'/>
+<doc f='luajit/host/buildvm.h' l='25'>/* Prefix for scanned fold definitions. */</doc>
+<use f='luajit/host/buildvm_fold.c' l='199' u='c'/>
+<use f='luajit/host/buildvm_fold.c' l='199' u='c'/>
+<use f='luajit/host/buildvm_fold.c' l='200' u='c'/>
+<use f='luajit/host/buildvm_fold.c' l='219' u='c'/>

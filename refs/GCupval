@@ -1,0 +1,11 @@
+<def f='luajit/lj_obj.h' l='429' ll='442'/>
+<use f='luajit/lj_obj.h' l='429'/>
+<size>48</size>
+<doc f='luajit/lj_obj.h' l='427'>/* -- Upvalue object ------------------------------------------------------ */</doc>
+<mbr r='GCupval::nextgc' o='0' t='GCRef'/>
+<mbr r='GCupval::marked' o='64' t='uint8_t'/>
+<mbr r='GCupval::gct' o='72' t='uint8_t'/>
+<mbr r='GCupval::closed' o='80' t='uint8_t'/>
+<mbr r='GCupval::immutable' o='88' t='uint8_t'/>
+<mbr r='GCupval::v' o='256' t='MRef'/>
+<mbr r='GCupval::dhash' o='320' t='uint32_t'/>

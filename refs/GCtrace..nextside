@@ -1,0 +1,8 @@
+<dec f='luajit/lj_jit.h' l='276' type='TraceNo1'/>
+<offset>896</offset>
+<doc f='luajit/lj_jit.h' l='276'>/* Next side trace of same root trace. */</doc>
+<use f='luajit/lj_gc.c' l='266' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_gc.c' l='266' u='r' c='gc_traverse_trace'/>
+<use f='luajit/lj_trace.c' l='514' u='w' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='514' u='r' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='515' u='w' c='trace_stop'/>

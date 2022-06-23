@@ -1,0 +1,31 @@
+<dec f='luajit/lua.h' l='179' type='void lua_getfield(lua_State * L, int idx, const char * k)'/>
+<use f='luajit/lib_aux.c' l='117' u='c' c='luaL_pushmodule'/>
+<use f='luajit/lib_buffer.c' l='352' u='c' c='luaopen_string_buffer'/>
+<use f='luajit/lib_os.c' l='150' u='c' c='getboolfield'/>
+<use f='luajit/lib_os.c' l='159' u='c' c='getfield'/>
+<use f='luajit/lib_package.c' l='357' u='c' c='findfile'/>
+<use f='luajit/lib_package.c' l='413' u='c' c='lj_cf_package_loader_preload'/>
+<use f='luajit/lib_package.c' l='416' u='c' c='lj_cf_package_loader_preload'/>
+<use f='luajit/lib_package.c' l='435' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='436' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='443' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='467' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='520' u='c' c='lj_cf_package_module'/>
+<use f='luajit/lib_package.c' l='612' u='c' c='luaopen_package'/>
+<def f='luajit/lj_api.c' l='810' ll='824' macro='1' type='void lua_getfield(lua_State * L, int idx, const char * k)'/>
+<use f='luajit/lj_api.c' l='1063' u='c' c='luaL_setmetatable'/>
+<use f='luajit/lj_lib.c' l='35' u='c' c='lib_create_table'/>
+<use f='luajit/luajit.c' l='140' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='141' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='143' u='c' c='print_jit_status'/>
+<use f='luajit/luajit.c' l='181' macro='1' u='c' c='dolibrary'/>
+<use f='luajit/luajit.c' l='189' u='c' c='write_prompt'/>
+<use f='luajit/luajit.c' l='256' macro='1' u='c' c='dotty'/>
+<use f='luajit/luajit.c' l='280' macro='1' u='c' c='handle_script'/>
+<use f='luajit/luajit.c' l='300' macro='1' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='310' u='c' c='loadjitmodule'/>
+<use f='luajit/luajit.c' l='349' u='c' c='dojitcmd'/>
+<use f='luajit/luajit.c' l='350' u='c' c='dojitcmd'/>
+<use f='luajit/luajit.c' l='368' u='c' c='dojitopt'/>
+<use f='luajit/luajit.c' l='369' u='c' c='dojitopt'/>
+<use f='luajit/luajit.c' l='371' u='c' c='dojitopt'/>

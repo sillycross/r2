@@ -1,0 +1,5 @@
+<dec f='luajit/lj_debug.h' l='32' type='const char * lj_debug_uvnamev(cTValue * o, uint32_t idx, TValue ** tvp, GCobj ** op)'/>
+<use f='luajit/lj_api.c' l='909' u='c' c='lua_getupvalue'/>
+<use f='luajit/lj_api.c' l='1096' u='c' c='lua_setupvalue'/>
+<def f='luajit/lj_debug.c' l='226' ll='247' type='const char * lj_debug_uvnamev(cTValue * o, uint32_t idx, TValue ** tvp, GCobj ** op)'/>
+<doc f='luajit/lj_debug.c' l='225'>/* Get name and value of upvalue. */</doc>

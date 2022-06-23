@@ -1,0 +1,3 @@
+<dec f='luajit/lua.h' l='111' type='lua_State * lua_newstate(lua_Alloc f, void * ud)'/>
+<use f='luajit/lib_aux.c' l='354' u='c' c='luaL_newstate'/>
+<def f='luajit/lj_state.c' l='198' ll='264' macro='1' type='lua_State * lua_newstate(lua_Alloc allocf, void * allocd)'/>

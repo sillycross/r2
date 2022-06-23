@@ -1,0 +1,19 @@
+<dec f='luajit/lj_obj.h' l='604' type='GCRef'/>
+<offset>512</offset>
+<doc f='luajit/lj_obj.h' l='604'>/* List of userdata (to be finalized). */</doc>
+<use f='luajit/lj_cdata.c' l='68' u='m' c='lj_cdata_free'/>
+<use f='luajit/lj_cdata.c' l='71' u='m' c='lj_cdata_free'/>
+<use f='luajit/lj_cdata.c' l='74' u='m' c='lj_cdata_free'/>
+<use f='luajit/lj_gc.c' l='126' u='m' c='gc_mark_mmudata'/>
+<use f='luajit/lj_gc.c' l='153' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='154' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='157' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='160' u='m' c='lj_gc_separateudata'/>
+<use f='luajit/lj_gc.c' l='530' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='534' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='535' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='537' u='m' c='gc_finalize'/>
+<use f='luajit/lj_gc.c' l='571' u='m' c='lj_gc_finalize_udata'/>
+<use f='luajit/lj_gc.c' l='687' u='m' c='gc_onestep'/>
+<use f='luajit/lj_gc.c' l='700' u='m' c='gc_onestep'/>
+<use f='luajit/lj_state.c' l='300' u='m' c='lua_close'/>

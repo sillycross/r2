@@ -1,0 +1,6 @@
+<dec f='include/x86_64-linux-gnu/bits/mathcalls.h' l='140' type='double pow(double __x, double __y)'/>
+<use f='luajit/host/minilua.c' l='152' u='c' c='constfolding'/>
+<use f='luajit/host/minilua.c' l='152' u='c' c='Arith'/>
+<use f='luajit/host/minilua.c' l='152' u='c' c='luaV_execute'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_vmmath.c' l='47' u='c' c='lj_vm_foldarith'/>

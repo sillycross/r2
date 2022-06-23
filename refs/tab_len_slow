@@ -1,0 +1,2 @@
+<def f='luajit/lj_tab.c' l='626' ll='648' macro='1' type='MSize tab_len_slow(GCtab * t, size_t hi)'/>
+<use f='luajit/lj_tab.c' l='666' u='c' c='lj_tab_len'/>

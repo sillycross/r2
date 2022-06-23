@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='451'/>
+<use f='luajit/lj_obj.h' l='456' u='c'/>
+<use f='luajit/lj_obj.h' l='462' u='c'/>
+<doc f='luajit/lj_obj.h' l='450'>/* Common header for functions. env should be at same offset in GCudata. */</doc>

@@ -1,0 +1,6 @@
+<dec f='luajit/lua.h' l='349' type='int lua_loadx(lua_State * L, lua_Reader reader, void * dt, const char * chunkname, const char * mode)'/>
+<use f='luajit/lib_base.c' l='430' u='c' c='lj_cf_load'/>
+<def f='luajit/lj_load.c' l='48' ll='62' macro='1' type='int lua_loadx(lua_State * L, lua_Reader reader, void * data, const char * chunkname, const char * mode)'/>
+<use f='luajit/lj_load.c' l='67' u='c' c='lua_load'/>
+<use f='luajit/lj_load.c' l='101' u='c' c='luaL_loadfilex'/>
+<use f='luajit/lj_load.c' l='143' u='c' c='luaL_loadbufferx'/>

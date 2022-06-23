@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ircall.h' l='254' macro='1' type='96'/>
+<use f='luajit/lj_crecord.c' l='1655' u='r' c='recff_ffi_string'/>

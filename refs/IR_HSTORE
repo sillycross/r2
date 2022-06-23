@@ -1,0 +1,10 @@
+<dec f='luajit/lj_ir.h' l='154' macro='1' type='74'/>
+<use f='luajit/lj_ir.h' l='171' u='r' c='lj_assert_73'/>
+<use f='luajit/lj_asm.c' l='889' u='r' c='asm_sunk_store'/>
+<use f='luajit/lj_asm.c' l='1800' c='asm_ir'/>
+<use f='luajit/lj_opt_mem.c' l='49' u='r' c='aa_escape'/>
+<use f='luajit/lj_opt_mem.c' l='305' u='r' c='lj_opt_fwd_href_nokey'/>
+<use f='luajit/lj_opt_mem.c' l='392' u='r' c='lj_opt_fwd_alen'/>
+<use f='luajit/lj_opt_sink.c' l='88' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='170' c='sink_sweep_ins'/>
+<use f='luajit/lj_snap.c' l='454' u='r' c='snap_sunk_store2'/>

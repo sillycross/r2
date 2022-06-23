@@ -1,0 +1,18 @@
+<dec f='luajit/lj_frame.h' l='25' type='2'/>
+<use f='luajit/host/buildvm_arch.h' l='798' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='906' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1070' c='build_subroutines'/>
+<use f='luajit/lj_api.c' l='1222' u='r' c='lua_yield'/>
+<use f='luajit/lj_ccallback.c' l='564' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_crecord.c' l='1567' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_debug.c' l='70' macro='1' u='r' c='debug_framepc'/>
+<use f='luajit/lj_debug.c' l='91' macro='1' u='r' c='debug_framepc'/>
+<use f='luajit/lj_err.c' l='167' c='err_unwind'/>
+<use f='luajit/lj_err.c' l='807' c='finderrfunc'/>
+<use f='luajit/lj_err.c' l='948' macro='1' u='r' c='lj_err_callermsg'/>
+<use f='luajit/lj_ffrecord.c' l='116' u='r' c='recff_stitch'/>
+<use f='luajit/lj_meta.c' l='91' u='r' c='lj_meta_tailcall'/>
+<use f='luajit/lj_record.c' l='900' macro='1' u='r' c='lj_record_ret'/>
+<use f='luajit/lj_record.c' l='1687' macro='1' u='r' c='check_call_unroll'/>
+<use f='luajit/lj_snap.c' l='133' macro='1' u='r' c='snapshot_framelinks'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='r' c='trace_abort'/>

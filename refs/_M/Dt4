@@ -1,0 +1,4 @@
+<dec f='luajit/host/buildvm_arch.h' l='88'/>
+<use f='luajit/host/buildvm_arch.h' l='3456' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3492' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='87'>//|.type GCOBJ,		GCobj</doc>

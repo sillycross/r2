@@ -1,0 +1,18 @@
+<dec f='luajit/lj_ir.h' l='454' type='32769'/>
+<use f='luajit/lj_asm.c' l='1894' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1934' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='1972' u='r' c='asm_head_side'/>
+<use f='luajit/lj_asm.c' l='2153' u='a' c='asm_setup_regsp'/>
+<use f='luajit/lj_asm.c' l='2498' u='r' c='lj_asm_trace'/>
+<use f='luajit/lj_opt_dce.c' l='30' u='r' c='dce_marksnap'/>
+<use f='luajit/lj_opt_dce.c' l='43' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_dce.c' l='53' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_dce.c' l='54' u='r' c='dce_propagate'/>
+<use f='luajit/lj_opt_loop.c' l='311' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='399' u='r' c='loop_undo'/>
+<use f='luajit/lj_opt_sink.c' l='43' u='r' c='sink_phidep'/>
+<use f='luajit/lj_opt_sink.c' l='44' u='r' c='sink_phidep'/>
+<use f='luajit/lj_opt_sink.c' l='51' u='r' c='sink_checkphi'/>
+<use f='luajit/lj_opt_sink.c' l='126' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_opt_sink.c' l='127' u='r' c='sink_mark_ins'/>
+<use f='luajit/lj_record.c' l='2512' u='r' c='lj_record_ins'/>

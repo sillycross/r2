@@ -1,0 +1,4 @@
+<dec f='luajit/lj_asm.h' l='12' type='void lj_asm_trace(jit_State * J, GCtrace * T)'/>
+<def f='luajit/lj_asm.c' l='2370' ll='2526' type='void lj_asm_trace(jit_State * J, GCtrace * T)'/>
+<doc f='luajit/lj_asm.c' l='2369'>/* Assemble a trace. */</doc>
+<use f='luajit/lj_trace.c' l='698' u='c' c='trace_state'/>

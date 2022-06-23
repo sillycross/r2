@@ -1,0 +1,2 @@
+<dec f='luajit/lj_obj.h' l='220'/>
+<doc f='luajit/lj_obj.h' l='219'>/* More external and GCobj tags for internal objects. */</doc>

@@ -1,0 +1,6 @@
+<dec f='luajit/lj_cparse.h' l='61' type='int lj_cparse(CPState * cp)'/>
+<use f='luajit/lib_ffi.c' l='56' u='c' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='487' u='c' c='lj_cf_ffi_cdef'/>
+<def f='luajit/lj_cparse.c' l='1917' ll='1925' type='int lj_cparse(CPState * cp)'/>
+<doc f='luajit/lj_cparse.c' l='1916'>/* C parser. */</doc>
+<use f='luajit/lj_crecord.c' l='87' u='c' c='argv2ctype'/>

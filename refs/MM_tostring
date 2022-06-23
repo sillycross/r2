@@ -1,0 +1,6 @@
+<dec f='luajit/lj_obj.h' l='564' macro='1' type='18'/>
+<use f='luajit/lib_base.c' l='326' u='r' c='lj_ffh_tostring'/>
+<use f='luajit/lib_buffer.c' l='130' u='r' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_ffi.c' l='316' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lj_ffrecord.c' l='409' u='r' c='recff_tostring'/>
+<use f='luajit/lj_strfmt.c' l='435' u='r' c='lj_strfmt_putarg'/>

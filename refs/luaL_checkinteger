@@ -1,0 +1,2 @@
+<dec f='luajit/lauxlib.h' l='41' type='lua_Integer luaL_checkinteger(lua_State * L, int numArg)'/>
+<def f='luajit/lj_api.c' l='450' ll='471' macro='1' type='lua_Integer luaL_checkinteger(lua_State * L, int idx)'/>

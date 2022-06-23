@@ -1,0 +1,6 @@
+<dec f='luajit/lj_debug.h' l='38' type='void lj_debug_shortname(char * out, GCstr * str, BCLine line)'/>
+<def f='luajit/lj_debug.c' l='324' ll='352' type='void lj_debug_shortname(char * out, GCstr * str, BCLine line)'/>
+<use f='luajit/lj_debug.c' l='365' u='c' c='lj_debug_addloc'/>
+<use f='luajit/lj_debug.c' l='460' u='c' c='lj_debug_getinfo'/>
+<doc f='luajit/lj_debug.c' l='323'>/* Generate shortened source name. */</doc>
+<use f='luajit/lj_err.c' l='889' u='c' c='lj_err_lex'/>

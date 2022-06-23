@@ -1,0 +1,9 @@
+<dec f='luajit/lj_lex.h' l='61' type='LexToken'/>
+<offset>448</offset>
+<doc f='luajit/lj_lex.h' l='61'>/* Lookahead token. */</doc>
+<use f='luajit/lj_lex.c' l='410' u='w' c='lj_lex_setup'/>
+<use f='luajit/lj_lex.c' l='458' u='r' c='lj_lex_next'/>
+<use f='luajit/lj_lex.c' l='461' u='r' c='lj_lex_next'/>
+<use f='luajit/lj_lex.c' l='462' u='w' c='lj_lex_next'/>
+<use f='luajit/lj_lex.c' l='471' u='w' c='lj_lex_lookahead'/>
+<use f='luajit/lj_lex.c' l='472' u='r' c='lj_lex_lookahead'/>

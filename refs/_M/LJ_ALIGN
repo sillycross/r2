@@ -1,0 +1,7 @@
+<dec f='luajit/lj_def.h' l='126'/>
+<use f='luajit/lj_obj.h' l='174' u='c'/>
+<use f='luajit/lj_obj.h' l='624' u='c'/>
+<use f='luajit/lj_ctype.h' l='158' u='c'/>
+<use f='luajit/lj_ctype.h' l='162' u='c'/>
+<use f='luajit/lj_ccall.h' l='41' u='c'/>
+<use f='luajit/lj_ccall.h' l='159' u='c'/>

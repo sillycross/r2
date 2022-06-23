@@ -1,0 +1,4 @@
+<dec f='luajit/lj_target_x86.h' l='173' type='64'/>
+<use f='luajit/lj_emit_x86.h' l='116' u='r' c='emit_rmro'/>
+<use f='luajit/lj_emit_x86.h' l='148' u='r' c='emit_rmrxo'/>
+<use f='luajit/lj_emit_x86.h' l='220' u='r' c='emit_mrm'/>

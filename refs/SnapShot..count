@@ -1,0 +1,10 @@
+<dec f='luajit/lj_jit.h' l='191' type='uint8_t'/>
+<offset>88</offset>
+<doc f='luajit/lj_jit.h' l='191'>/* Count of taken exits for this snapshot. */</doc>
+<use f='luajit/lj_opt_loop.c' l='231' u='w' c='loop_subst_snap'/>
+<use f='luajit/lj_record.c' l='2637' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='176' u='w' c='snapshot_stack'/>
+<use f='luajit/lj_trace.c' l='509' u='w' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='692' u='w' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='758' u='r' c='trace_hotside'/>
+<use f='luajit/lj_trace.c' l='759' u='w' c='trace_hotside'/>

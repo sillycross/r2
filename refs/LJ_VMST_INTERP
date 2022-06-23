@@ -1,0 +1,14 @@
+<dec f='luajit/lj_obj.h' l='526' type='0'/>
+<use f='luajit/host/buildvm_arch.h' l='531' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='610' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='649' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1656' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='1657' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2502' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='r' c='build_subroutines'/>
+<use f='luajit/host/buildvm_arch.h' l='4660' u='r' c='build_ins'/>
+<doc f='luajit/lj_obj.h' l='526'>/* Interpreter. */</doc>
+<use f='luajit/lj_dispatch.c' l='549' macro='1' u='r' c='lj_dispatch_profile'/>
+<use f='luajit/lj_profile.c' l='159' u='r' c='profile_trigger'/>
+<use f='luajit/lj_trace.c' l='700' macro='1' u='r' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='712' macro='1' u='r' c='trace_state'/>

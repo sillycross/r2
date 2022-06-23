@@ -1,0 +1,12 @@
+<def f='luajit/lj_obj.h' l='723' ll='730'/>
+<use f='luajit/lj_obj.h' l='723'/>
+<size>40</size>
+<doc f='luajit/lj_obj.h' l='722'>/* GC header for generic access to common fields of GC objects. */</doc>
+<mbr r='GChead::nextgc' o='0' t='GCRef'/>
+<mbr r='GChead::marked' o='64' t='uint8_t'/>
+<mbr r='GChead::gct' o='72' t='uint8_t'/>
+<mbr r='GChead::unused1' o='80' t='uint8_t'/>
+<mbr r='GChead::unused2' o='88' t='uint8_t'/>
+<mbr r='GChead::env' o='128' t='GCRef'/>
+<mbr r='GChead::gclist' o='192' t='GCRef'/>
+<mbr r='GChead::metatable' o='256' t='GCRef'/>

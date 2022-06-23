@@ -1,0 +1,1 @@
+<def f='luajit/lib_math.c' l='32' macro='1' type='int lj_ffh_math_sqrt(lua_State * L)'/>

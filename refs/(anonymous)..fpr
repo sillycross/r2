@@ -1,0 +1,6 @@
+<dec f='luajit/lj_target_x86.h' l='159' type='lua_Number [16]'/>
+<offset>0</offset>
+<doc f='luajit/lj_target_x86.h' l='159'>/* Floating-point registers. */</doc>
+<use f='luajit/lj_snap.c' l='690' u='r' c='snap_restoreval'/>
+<use f='luajit/lj_snap.c' l='750' u='a' c='snap_restoredata'/>
+<use f='luajit/lj_trace.c' l='815' u='r' c='trace_exit_regs'/>

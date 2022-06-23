@@ -1,0 +1,40 @@
+<dec f='luajit/lj_ctype.h' l='29' type='8'/>
+<use f='luajit/lj_ctype.h' l='210' u='r' c='ctype_raw'/>
+<use f='luajit/lj_ctype.h' l='210' u='r' c='ctype_rawchild'/>
+<doc f='luajit/lj_ctype.h' l='29'>/* Miscellaneous attributes. */</doc>
+<use f='luajit/lib_ffi.c' l='405' macro='1' u='r' c='lj_cf_ffi_clib___newindex'/>
+<use f='luajit/lj_ccall.c' l='665' macro='1' u='r' c='ccall_classify_struct'/>
+<use f='luajit/lj_ccall.c' l='982' macro='1' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccallback.c' l='585' macro='1' u='r' c='callback_conv_args'/>
+<use f='luajit/lj_ccallback.c' l='766' macro='1' u='r' c='callback_checkfunc'/>
+<use f='luajit/lj_cconv.c' l='63' macro='1' u='r' c='cconv_childqual'/>
+<use f='luajit/lj_cconv.c' l='529' macro='1' u='r' c='cconv_substruct_tab'/>
+<use f='luajit/lj_cconv.c' l='720' macro='1' u='r' c='cconv_substruct_init'/>
+<use f='luajit/lj_cdata.c' l='125' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='252' macro='1' u='r' c='lj_cdata_get'/>
+<use f='luajit/lj_cdata.c' l='285' macro='1' u='r' c='lj_cdata_set'/>
+<use f='luajit/lj_clib.c' l='335' macro='1' u='r' c='clib_extsym'/>
+<use f='luajit/lj_cparse.c' l='800' u='r' c='cp_push_attributes'/>
+<use f='luajit/lj_cparse.c' l='815' u='r' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='820' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='821' macro='1' u='r' c='cp_push_type'/>
+<use f='luajit/lj_cparse.c' l='882' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='892' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='893' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='895' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='934' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='989' macro='1' u='r' c='cp_decl_constinit'/>
+<use f='luajit/lj_cparse.c' l='1292' macro='1' u='r' c='cp_struct_layout'/>
+<use f='luajit/lj_cparse.c' l='1404' u='r' c='cp_decl_struct'/>
+<use f='luajit/lj_cparse.c' l='1868' u='r' c='cp_decl_multi'/>
+<use f='luajit/lj_crecord.c' l='930' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1127' macro='1' u='r' c='crec_call_args'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='250' macro='1' u='r' c='lj_ctype_getfieldq'/>
+<use f='luajit/lj_ctype.c' l='253' macro='1' u='r' c='lj_ctype_getfieldq'/>
+<use f='luajit/lj_ctype.c' l='274' macro='1' u='r' c='lj_ctype_rawref'/>
+<use f='luajit/lj_ctype.c' l='318' macro='1' u='r' c='lj_ctype_info'/>
+<use f='luajit/lj_ctype.c' l='319' macro='1' u='r' c='lj_ctype_info'/>
+<use f='luajit/lj_ctype.c' l='321' macro='1' u='r' c='lj_ctype_info'/>
+<use f='luajit/lj_ctype.c' l='341' macro='1' u='r' c='lj_ctype_meta'/>
+<use f='luajit/lj_ctype.c' l='488' c='ctype_repr'/>

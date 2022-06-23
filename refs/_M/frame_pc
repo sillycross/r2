@@ -1,0 +1,11 @@
+<dec f='luajit/lj_frame.h' l='48'/>
+<use f='luajit/lj_crecord.c' l='1210' u='c'/>
+<use f='luajit/lj_crecord.c' l='1258' u='c'/>
+<use f='luajit/lj_debug.c' l='69' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='94' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='107' u='c'/>
+<use f='luajit/lj_ffrecord.c' l='154' u='c'/>
+<use f='luajit/lj_meta.c' l='82' u='c'/>
+<use f='luajit/lj_record.c' l='860' u='c'/>
+<use f='luajit/lj_record.c' l='891' u='c'/>
+<use f='luajit/lj_trace.c' l='606' u='c'/>

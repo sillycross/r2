@@ -1,0 +1,14 @@
+<def f='luajit/lj_buf.h' l='162' ll='167' type='void lj_buf_putb(SBuf * sb, int c)'/>
+<use f='luajit/lj_cparse.c' l='116' u='c' c='cp_save'/>
+<use f='luajit/lj_debug.c' l='559' u='c' c='debug_putchunkname'/>
+<use f='luajit/lj_debug.c' l='608' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='623' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='629' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='631' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_debug.c' l='639' u='c' c='lj_debug_dumpstack'/>
+<use f='luajit/lj_lex.c' l='71' u='c' c='lex_save'/>
+<use f='luajit/lj_parse.c' l='1493' u='c' c='fs_prep_var'/>
+<use f='luajit/lj_strfmt.c' l='211' u='c' c='strfmt_putquotedlen'/>
+<use f='luajit/lj_strfmt.c' l='232' u='c' c='strfmt_putquotedlen'/>
+<use f='luajit/lj_strfmt.c' l='575' u='c' c='lj_strfmt_pushvf'/>
+<use f='luajit/lj_strfmt.c' l='582' u='c' c='lj_strfmt_pushvf'/>

@@ -1,0 +1,3 @@
+<dec f='luajit/lj_lex.h' l='27' macro='1' type='282'/>
+<use f='luajit/lj_lex.c' l='359' u='r' c='lex_scan'/>
+<use f='luajit/lj_parse.c' l='2061' c='token2binop'/>

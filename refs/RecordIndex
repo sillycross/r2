@@ -1,0 +1,16 @@
+<def f='luajit/lj_record.h' l='14' ll='27'/>
+<use f='luajit/lj_record.h' l='14'/>
+<size>72</size>
+<doc f='luajit/lj_record.h' l='13'>/* Context for recording an indexed load/store. */</doc>
+<mbr r='RecordIndex::tabv' o='0' t='TValue'/>
+<mbr r='RecordIndex::keyv' o='64' t='TValue'/>
+<mbr r='RecordIndex::valv' o='128' t='TValue'/>
+<mbr r='RecordIndex::mobjv' o='192' t='TValue'/>
+<mbr r='RecordIndex::mtv' o='256' t='GCtab *'/>
+<mbr r='RecordIndex::oldv' o='320' t='cTValue *'/>
+<mbr r='RecordIndex::tab' o='384' t='TRef'/>
+<mbr r='RecordIndex::key' o='416' t='TRef'/>
+<mbr r='RecordIndex::val' o='448' t='TRef'/>
+<mbr r='RecordIndex::mt' o='480' t='TRef'/>
+<mbr r='RecordIndex::mobj' o='512' t='TRef'/>
+<mbr r='RecordIndex::idxchain' o='544' t='int'/>

@@ -1,0 +1,17 @@
+<dec f='luajit/lj_ir.h' l='318' macro='1' type='18'/>
+<use f='luajit/lj_asm_x86.h' l='476' u='r' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='889' u='r' c='asm_conv'/>
+<use f='luajit/lj_asm_x86.h' l='1407' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1435' macro='1' u='r' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='1456' c='asm_fxstore'/>
+<use f='luajit/lj_asm_x86.h' l='2455' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_asm_x86.h' l='2468' macro='1' u='r' c='asm_comp'/>
+<use f='luajit/lj_crecord.c' l='55' u='r' c='argv2cdata'/>
+<use f='luajit/lj_crecord.c' l='336' u='r' c='crec_fill'/>
+<use f='luajit/lj_crecord.c' l='1156' u='r' c='crec_call_args'/>
+<use f='luajit/lj_crecord.c' l='1281' u='r' c='crec_call'/>
+<use f='luajit/lj_opt_fold.c' l='1260' macro='1' u='r' c='fold_simplify_conv_sext'/>
+<use f='luajit/lj_opt_fold.c' l='2052' c='kfold_xload'/>
+<use f='luajit/lj_opt_fold.c' l='2099' u='r' c='fold_merge_eqne_snew_kgc'/>
+<use f='luajit/lj_opt_mem.c' l='814' u='r' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_snap.c' l='813' macro='1' u='r' c='snap_unsink'/>

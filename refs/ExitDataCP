@@ -1,0 +1,4 @@
+<def f='luajit/lj_trace.c' l='782' ll='786'/>
+<use f='luajit/lj_trace.c' l='782'/>
+<size>24</size>
+<doc f='luajit/lj_trace.c' l='781'>/* Tiny struct to pass data to protected call. */</doc>

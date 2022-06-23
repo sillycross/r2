@@ -1,0 +1,4 @@
+<dec f='luajit/lj_cdata.h' l='67' type='void lj_cdata_free(global_State * g, GCcdata * cd)'/>
+<def f='luajit/lj_cdata.c' l='62' ll='85' type='void lj_cdata_free(global_State * g, GCcdata * cd)'/>
+<doc f='luajit/lj_cdata.c' l='61'>/* Free a C data object. */</doc>
+<use f='luajit/lj_gc.c' l='390' u='r'/>

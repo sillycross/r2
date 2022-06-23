@@ -1,0 +1,2 @@
+<dec f='luajit/lj_err.c' l='576' type='void __deregister_frame(const void * )'/>
+<use f='luajit/lj_err.c' l='600' u='c' c='lj_err_deregister_mcode'/>

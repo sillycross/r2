@@ -1,0 +1,5 @@
+<dec f='luajit/lj_errmsg.h' l='71' macro='1' type='1114'/>
+<use f='luajit/lj_errmsg.h' l='71' macro='1' u='r'/>
+<use f='luajit/lib_base.c' l='255' u='r' c='lj_cf_select'/>
+<use f='luajit/lib_debug.c' l='233' u='r' c='lj_cf_debug_upvalueid'/>
+<use f='luajit/lib_debug.c' l='251' u='r' c='lj_cf_debug_upvaluejoin'/>

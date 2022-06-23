@@ -1,0 +1,45 @@
+<dec f='luajit/lj_record.h' l='15' type='TValue'/>
+<offset>0</offset>
+<doc f='luajit/lj_record.h' l='15'>/* Runtime value of table (or indexed object). */</doc>
+<use f='luajit/lj_ffrecord.c' l='217' u='a' c='recff_getmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='233' u='a' c='recff_setmetatable'/>
+<use f='luajit/lj_ffrecord.c' l='251' u='a' c='recff_rawget'/>
+<use f='luajit/lj_ffrecord.c' l='263' u='a' c='recff_rawset'/>
+<use f='luajit/lj_ffrecord.c' l='381' u='a' c='recff_metacall'/>
+<use f='luajit/lj_ffrecord.c' l='430' u='a' c='recff_ipairs_aux'/>
+<use f='luajit/lj_ffrecord.c' l='1047' u='a' c='recff_table_insert'/>
+<use f='luajit/lj_record.c' l='737' u='a' c='rec_call_setup'/>
+<use f='luajit/lj_record.c' l='979' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='982' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='983' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='989' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1011' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1011' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1019' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1019' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1031' u='a' c='lj_record_mm_lookup'/>
+<use f='luajit/lj_record.c' l='1050' u='a' c='rec_mm_arith'/>
+<use f='luajit/lj_record.c' l='1055' u='a' c='rec_mm_arith'/>
+<use f='luajit/lj_record.c' l='1076' u='a' c='rec_mm_len'/>
+<use f='luajit/lj_record.c' l='1116' u='a' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1132' u='a' c='rec_mm_equal'/>
+<use f='luajit/lj_record.c' l='1145' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1173' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1186' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1188' u='a' c='rec_mm_comp'/>
+<use f='luajit/lj_record.c' l='1200' u='a' c='rec_mm_comp_cdata'/>
+<use f='luajit/lj_record.c' l='1204' u='a' c='rec_mm_comp_cdata'/>
+<use f='luajit/lj_record.c' l='1323' u='a' c='rec_idx_key'/>
+<use f='luajit/lj_record.c' l='1428' u='a' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1442' u='a' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1483' u='a' c='lj_record_idx'/>
+<use f='luajit/lj_record.c' l='1555' u='a' c='rec_tsetm'/>
+<use f='luajit/lj_record.c' l='1956' u='a' c='rec_cat'/>
+<use f='luajit/lj_record.c' l='2085' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2239' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2085' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2085' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2085' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2085' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2085' u='a' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2327' u='a' c='lj_record_ins'/>

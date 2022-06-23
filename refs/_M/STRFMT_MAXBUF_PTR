@@ -1,0 +1,3 @@
+<dec f='luajit/lj_strfmt.h' l='73'/>
+<use f='luajit/lj_strfmt.c' l='138' u='c'/>
+<use f='luajit/lj_strfmt.c' l='204' u='c'/>

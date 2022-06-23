@@ -1,0 +1,3 @@
+<dec f='luajit/lj_ir.h' l='451' type='32766'/>
+<use f='luajit/lj_asm_x86.h' l='2776' macro='1' u='r' c='asm_gc_check'/>
+<use f='luajit/lj_asm_x86.h' l='2784' macro='1' u='r' c='asm_gc_check'/>

@@ -1,0 +1,4 @@
+<dec f='luajit/lj_prng.h' l='13' type='uint64_t lj_prng_u64d(PRNGState * rs)'/>
+<use f='luajit/lib_math.c' l='137' u='c' c='lj_cf_math_random'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_prng.c' l='55' ll='61' macro='1' type='uint64_t lj_prng_u64d(PRNGState * rs)'/>

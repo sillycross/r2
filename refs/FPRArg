@@ -1,0 +1,9 @@
+<def f='luajit/lj_ccall.h' l='41' ll='48'/>
+<use f='luajit/lj_ccall.h' l='41'/>
+<size>16</size>
+<mbr r='FPRArg::d' o='0' t='double [2]'/>
+<mbr r='FPRArg::f' o='0' t='float [4]'/>
+<mbr r='FPRArg::b' o='0' t='uint8_t [16]'/>
+<mbr r='FPRArg::s' o='0' t='uint16_t [8]'/>
+<mbr r='FPRArg::i' o='0' t='int [4]'/>
+<mbr r='FPRArg::l' o='0' t='int64_t [2]'/>

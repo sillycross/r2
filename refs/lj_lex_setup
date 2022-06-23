@@ -1,0 +1,4 @@
+<dec f='luajit/lj_lex.h' l='79' type='int lj_lex_setup(lua_State * L, LexState * ls)'/>
+<def f='luajit/lj_lex.c' l='398' ll='443' type='int lj_lex_setup(lua_State * L, LexState * ls)'/>
+<doc f='luajit/lj_lex.c' l='397'>/* Setup lexer state. */</doc>
+<use f='luajit/lj_load.c' l='36' u='c' c='cpparser'/>

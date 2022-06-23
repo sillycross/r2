@@ -1,0 +1,6 @@
+<dec f='luajit/lj_ccall.h' l='160' type='void (*)(void)'/>
+<use f='luajit/host/buildvm_arch.h' l='2782' u='a' c='build_subroutines'/>
+<offset>0</offset>
+<doc f='luajit/lj_ccall.h' l='160'>/* Pointer to called function. */</doc>
+<use f='luajit/lj_ccall.c' l='1163' u='w' c='lj_ccall_func'/>
+<use f='luajit/lj_ccall.c' l='1170' u='r' c='lj_ccall_func'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/lua.h' l='208' type='int lua_dump(lua_State * L, lua_Writer writer, void * data)'/>
+<def f='luajit/lj_load.c' l='159' ll='167' macro='1' type='int lua_dump(lua_State * L, lua_Writer writer, void * data)'/>

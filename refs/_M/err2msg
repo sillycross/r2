@@ -1,0 +1,16 @@
+<dec f='luajit/lj_err.h' l='21'/>
+<use f='luajit/lj_bcread.c' l='43' u='c'/>
+<use f='luajit/lj_cparse.c' l='144' u='c'/>
+<use f='luajit/lj_cparse.c' l='147' u='c'/>
+<use f='luajit/lj_err.c' l='769' u='c'/>
+<use f='luajit/lj_err.c' l='871' u='c'/>
+<use f='luajit/lj_err.c' l='890' u='c'/>
+<use f='luajit/lj_err.c' l='893' u='c'/>
+<use f='luajit/lj_err.c' l='901' u='c'/>
+<use f='luajit/lj_err.c' l='975' u='c'/>
+<use f='luajit/lj_err.c' l='983' u='c'/>
+<use f='luajit/lj_err.c' l='995' u='c'/>
+<use f='luajit/lj_err.c' l='997' u='c'/>
+<use f='luajit/lj_err.c' l='1007' u='c'/>
+<use f='luajit/lj_err.c' l='1015' u='c'/>
+<use f='luajit/lj_err.c' l='1037' u='c'/>

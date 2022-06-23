@@ -1,0 +1,2 @@
+<dec f='luajit/lj_vm.h' l='50' type='void lj_vm_inshook()'/>
+<use f='luajit/lj_dispatch.c' l='159' u='r' c='lj_dispatch_update'/>

@@ -1,0 +1,1 @@
+<def f='luajit/lib_ffi.c' l='699' macro='1' type='int lj_cf_ffi_copy(lua_State * L)'/>

@@ -1,0 +1,2 @@
+<dec f='luajit/luaconf.h' l='92'/>
+<use f='luajit/lj_state.c' l='254' u='c'/>

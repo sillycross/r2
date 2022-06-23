@@ -1,0 +1,4 @@
+<dec f='luajit/lj_state.h' l='17' type='void lj_state_relimitstack(lua_State * L)'/>
+<use f='luajit/lj_err.c' l='105' u='c' c='unwindstack'/>
+<def f='luajit/lj_state.c' l='84' ll='88' type='void lj_state_relimitstack(lua_State * L)'/>
+<doc f='luajit/lj_state.c' l='83'>/* Relimit stack after error, in case the limit was overdrawn. */</doc>

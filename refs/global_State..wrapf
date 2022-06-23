@@ -1,0 +1,4 @@
+<dec f='luajit/lj_obj.h' l='648' type='lua_CFunction'/>
+<offset>2752</offset>
+<doc f='luajit/lj_obj.h' l='648'>/* Wrapper for C function calls. */</doc>
+<use f='luajit/lj_dispatch.c' l='298' u='w' c='luaJIT_setmode'/>

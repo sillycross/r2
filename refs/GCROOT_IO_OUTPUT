@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='578' type='37'/>
+<doc f='luajit/lj_obj.h' l='578'>/* Userdata for default I/O output file. */</doc>
+<use f='luajit/lib_io.c' l='241' u='m' c='io_file_write'/>
+<use f='luajit/lib_io.c' l='286' u='m' c='lj_cf_io_method_close'/>
+<use f='luajit/lib_io.c' l='454' u='r' c='lj_cf_io_write'/>
+<use f='luajit/lib_io.c' l='459' u='r' c='lj_cf_io_flush'/>
+<use f='luajit/lib_io.c' l='486' u='r' c='lj_cf_io_output'/>
+<use f='luajit/lib_io.c' l='539' u='m' c='luaopen_io'/>
+<use f='luajit/lj_recdef.h' l='114' u='r'/>
+<use f='luajit/lj_recdef.h' l='115' u='r'/>

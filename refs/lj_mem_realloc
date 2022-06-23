@@ -1,0 +1,28 @@
+<dec f='luajit/lj_gc.h' l='112' type='void * lj_mem_realloc(lua_State * L, void * p, GCSize osz, GCSize nsz)'/>
+<use f='luajit/lj_buf.c' l='29' macro='1' u='c' c='buf_grow'/>
+<use f='luajit/lj_buf.c' l='34' u='c' c='buf_grow'/>
+<use f='luajit/lj_buf.c' l='96' u='c' c='lj_buf_shrink'/>
+<use f='luajit/lj_cdata.c' l='34' macro='1' u='c' c='lj_cdata_newv'/>
+<use f='luajit/lj_ctype.c' l='595' macro='1' u='c' c='lj_ctype_init'/>
+<use f='luajit/lj_ctype.c' l='596' macro='1' u='c' c='lj_ctype_init'/>
+<use f='luajit/lj_func.c' l='54' macro='1' u='c' c='func_finduv'/>
+<def f='luajit/lj_gc.c' l='862' ll='874' type='void * lj_mem_realloc(lua_State * L, void * p, GCSize osz, GCSize nsz)'/>
+<use f='luajit/lj_gc.c' l='900' u='c' c='lj_mem_grow'/>
+<doc f='luajit/lj_gc.c' l='861'>/* Call pluggable memory allocator to allocate or resize a fragment. */</doc>
+<use f='luajit/lj_ir.c' l='77' u='c' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='81' u='c' c='lj_ir_growtop'/>
+<use f='luajit/lj_ir.c' l='105' macro='1' u='c' c='lj_ir_growbot'/>
+<use f='luajit/lj_opt_loop.c' l='281' macro='1' u='c' c='loop_unroll'/>
+<use f='luajit/lj_snap.c' l='54' u='c' c='lj_snap_grow_map_'/>
+<use f='luajit/lj_state.c' l='66' u='c' c='resizestack'/>
+<use f='luajit/lj_state.c' l='129' macro='1' u='c' c='stack_init'/>
+<use f='luajit/lj_str.c' l='139' macro='1' u='c' c='lj_str_resize'/>
+<use f='luajit/lj_str.c' l='278' macro='1' u='c' c='lj_str_alloc'/>
+<use f='luajit/lj_tab.c' l='45' macro='1' u='c' c='newhpart'/>
+<use f='luajit/lj_tab.c' l='119' macro='1' u='c' c='newtab'/>
+<use f='luajit/lj_tab.c' l='243' macro='1' u='c' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='248' u='c' c='lj_tab_resize'/>
+<use f='luajit/lj_tab.c' l='277' u='c' c='lj_tab_resize'/>
+<use f='luajit/lj_trace.c' l='130' macro='1' u='c' c='lj_trace_alloc'/>
+<use f='luajit/lj_udata.c' l='16' macro='1' u='c' c='lj_udata_new'/>
+<use f='luajit/lj_udata.c' l='54' macro='1' u='c' c='lj_lightud_intern'/>

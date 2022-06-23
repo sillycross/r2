@@ -1,0 +1,5 @@
+<dec f='luajit/lj_tab.h' l='56' type='GCtab * lj_tab_new_ah(lua_State * L, int32_t a, int32_t h)'/>
+<use f='luajit/lj_api.c' l='722' u='c' c='lua_createtable'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<def f='luajit/lj_tab.c' l='148' ll='151' type='GCtab * lj_tab_new_ah(lua_State * L, int32_t a, int32_t h)'/>
+<doc f='luajit/lj_tab.c' l='147'>/* The API of this function conforms to lua_createtable(). */</doc>

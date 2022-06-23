@@ -1,0 +1,9 @@
+<dec f='luajit/host/buildvm_arch.h' l='89'/>
+<use f='luajit/host/buildvm_arch.h' l='1237' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1900' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1918' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1969' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3189' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3690' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='3822' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='88'>//|.type STR,		GCstr</doc>

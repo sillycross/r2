@@ -1,0 +1,10 @@
+<dec f='luajit/lj_prng.h' l='12' type='uint64_t lj_prng_u64(PRNGState * rs)'/>
+<use f='luajit/lib_math.c' l='126' u='c' c='random_seed'/>
+<use f='luajit/lj_alloc.c' l='269' u='c' c='mmap_probe'/>
+<use f='luajit/lj_mcode.c' l='233' u='c' c='mcode_alloc'/>
+<def f='luajit/lj_prng.c' l='47' ll='52' macro='1' type='uint64_t lj_prng_u64(PRNGState * rs)'/>
+<use f='luajit/lj_prng.c' l='245' u='c' c='lj_prng_seed_secure'/>
+<use f='luajit/lj_record.c' l='1705' u='c' c='check_call_unroll'/>
+<use f='luajit/lj_str.c' l='289' u='c' c='lj_str_alloc'/>
+<use f='luajit/lj_str.c' l='367' u='c' c='lj_str_init'/>
+<use f='luajit/lj_trace.c' l='388' u='c' c='penalty_pc'/>

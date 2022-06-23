@@ -1,0 +1,10 @@
+<dec f='luajit/lj_obj.h' l='333' type='1'/>
+<doc f='luajit/lj_obj.h' l='333'>/* I/O library FILE. */</doc>
+<use f='luajit/lib_io.c' l='50' u='r' c='io_tofilep'/>
+<use f='luajit/lib_io.c' l='75' u='r' c='io_file_new'/>
+<use f='luajit/lib_io.c' l='506' u='r' c='lj_cf_io_type'/>
+<use f='luajit/lib_io.c' l='523' u='r' c='io_std_new'/>
+<use f='luajit/lj_cconv.c' l='623' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='619' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='623' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_ffrecord.c' l='1110' u='r' c='recff_io_fp'/>

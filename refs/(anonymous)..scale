@@ -1,0 +1,10 @@
+<dec f='luajit/lj_target_x86.h' l='183' type='uint8_t'/>
+<offset>48</offset>
+<doc f='luajit/lj_target_x86.h' l='183'>/* Index scale (XM_SCALE1 .. XM_SCALE8). */</doc>
+<use f='luajit/lj_emit_x86.h' l='228' u='r' c='emit_mrm'/>
+<use f='luajit/lj_asm_x86.h' l='161' u='w' c='asm_fusearef'/>
+<use f='luajit/lj_asm_x86.h' l='278' u='w' c='asm_fusestrref'/>
+<use f='luajit/lj_asm_x86.h' l='339' u='w' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='352' u='w' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='356' u='w' c='asm_fusexref'/>
+<use f='luajit/lj_asm_x86.h' l='2129' u='w' c='asm_lea'/>

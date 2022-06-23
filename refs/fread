@@ -1,0 +1,10 @@
+<dec f='include/stdio.h' l='646' type='unsigned long fread(void *restrict __ptr, size_t __size, size_t __n, FILE *restrict __stream)'/>
+<doc f='include/stdio.h' l='642'>/* Read chunks of generic data from STREAM.
+
+   This function is a possible cancellation point and therefore not
+   marked with __THROW.  */</doc>
+<use f='luajit/host/minilua.c' l='6132' u='c' c='getF'/>
+<use f='luajit/host/minilua.c' l='6806' u='c' c='read_chars'/>
+<use f='luajit/lib_io.c' l='165' u='c' c='io_file_readall'/>
+<use f='luajit/lib_io.c' l='178' u='c' c='io_file_readlen'/>
+<use f='luajit/lj_load.c' l='80' u='c' c='reader_file'/>

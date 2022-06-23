@@ -1,0 +1,7 @@
+<dec f='luajit/lj_jit.h' l='436' type='int32_t'/>
+<offset>1920</offset>
+<doc f='luajit/lj_jit.h' l='436'>/* Unroll counter for instable loops. */</doc>
+<use f='luajit/lj_opt_loop.c' l='435' u='w' c='lj_opt_loop'/>
+<use f='luajit/lj_record.c' l='633' u='w' c='rec_loop_jit'/>
+<use f='luajit/lj_record.c' l='1773' u='w' c='rec_func_jit'/>
+<use f='luajit/lj_record.c' l='2596' u='w' c='lj_record_setup'/>

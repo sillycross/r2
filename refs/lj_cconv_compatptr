@@ -1,0 +1,11 @@
+<dec f='luajit/lj_cconv.h' l='56' type='int lj_cconv_compatptr(CTState * cts, CType * d, CType * s, CTInfo flags)'/>
+<use f='luajit/lib_ffi.c' l='601' u='c' c='lj_cf_ffi_istype'/>
+<use f='luajit/lj_carith.c' l='108' u='c' c='carith_ptr'/>
+<def f='luajit/lj_cconv.c' l='77' ll='110' type='int lj_cconv_compatptr(CTState * cts, CType * d, CType * s, CTInfo flags)'/>
+<use f='luajit/lj_cconv.c' l='101' u='c' c='lj_cconv_compatptr'/>
+<use f='luajit/lj_cconv.c' l='345' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='351' u='c' c='lj_cconv_ct_ct'/>
+<use f='luajit/lj_cconv.c' l='358' u='c' c='lj_cconv_ct_ct'/>
+<doc f='luajit/lj_cconv.c' l='74'>/* Check for compatible types when converting to a pointer.
+** Note: these checks are more relaxed than what C99 mandates.
+*/</doc>

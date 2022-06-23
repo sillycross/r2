@@ -1,0 +1,9 @@
+<dec f='luajit/lj_vmevent.h' l='56' type='void lj_vmevent_call(lua_State * L, ptrdiff_t argbase)'/>
+<use f='luajit/lj_parse.c' l='1604' macro='1' u='c' c='fs_finish'/>
+<use f='luajit/lj_trace.c' l='303' macro='1' u='c' c='lj_trace_flushall'/>
+<use f='luajit/lj_trace.c' l='455' macro='1' u='c' c='trace_start'/>
+<use f='luajit/lj_trace.c' l='535' macro='1' u='c' c='trace_stop'/>
+<use f='luajit/lj_trace.c' l='596' macro='1' u='c' c='trace_abort'/>
+<use f='luajit/lj_trace.c' l='659' macro='1' u='c' c='trace_state'/>
+<use f='luajit/lj_trace.c' l='880' macro='1' u='c' c='lj_trace_exit'/>
+<def f='luajit/lj_vmevent.c' l='38' ll='57' type='void lj_vmevent_call(lua_State * L, ptrdiff_t argbase)'/>

@@ -1,0 +1,26 @@
+<dec f='luajit/lj_jit.h' l='190' type='uint8_t'/>
+<offset>80</offset>
+<doc f='luajit/lj_jit.h' l='190'>/* Number of compressed entries. */</doc>
+<use f='luajit/lib_jit.c' l='369' u='r' c='lj_cf_jit_util_tracesnap'/>
+<use f='luajit/lj_asm.c' l='968' u='r' c='asm_snap_alloc'/>
+<use f='luajit/lj_asm_x86.h' l='2697' u='r' c='asm_stack_restore'/>
+<use f='luajit/lj_asm.c' l='2041' u='r' c='asm_baseslot'/>
+<use f='luajit/lj_asm.c' l='2065' u='r' c='asm_tail_link'/>
+<use f='luajit/lj_opt_dce.c' l='27' u='r' c='dce_marksnap'/>
+<use f='luajit/lj_opt_loop.c' l='149' u='r' c='loop_emit_phi'/>
+<use f='luajit/lj_opt_loop.c' l='214' u='r' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='250' u='w' c='loop_subst_snap'/>
+<use f='luajit/lj_opt_loop.c' l='296' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='302' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='378' u='r' c='loop_unroll'/>
+<use f='luajit/lj_opt_loop.c' l='389' u='r' c='loop_undo'/>
+<use f='luajit/lj_opt_loop.c' l='389' u='r' c='loop_undo'/>
+<use f='luajit/lj_opt_sink.c' l='138' u='r' c='sink_mark_snap'/>
+<use f='luajit/lj_record.c' l='1984' u='r' c='rec_comp_fixup'/>
+<use f='luajit/lj_record.c' l='2020' u='r' c='lj_record_ins'/>
+<use f='luajit/lj_record.c' l='2623' u='r' c='lj_record_setup'/>
+<use f='luajit/lj_snap.c' l='170' u='w' c='snapshot_stack'/>
+<use f='luajit/lj_snap.c' l='328' u='r' c='lj_snap_shrink'/>
+<use f='luajit/lj_snap.c' l='341' u='w' c='lj_snap_shrink'/>
+<use f='luajit/lj_snap.c' l='477' u='r' c='lj_snap_replay'/>
+<use f='luajit/lj_snap.c' l='875' u='r' c='lj_snap_restore'/>

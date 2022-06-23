@@ -1,0 +1,16 @@
+<dec f='include/stdio.h' l='135' type='struct _IO_FILE *'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='46' macro='1' u='r' c='getchar'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='72' macro='1' u='r' c='getchar_unlocked'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='72' macro='1' u='r' c='getchar_unlocked'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='72' macro='1' u='r' c='getchar_unlocked'/>
+<use f='include/x86_64-linux-gnu/bits/stdio.h' l='72' macro='1' u='r' c='getchar_unlocked'/>
+<doc f='include/stdio.h' l='134'>/* Standard streams.  */</doc>
+<doc f='include/stdio.h' l='135'>/* Standard input stream.  */</doc>
+<use f='luajit/host/buildvm_fold.c' l='180' macro='1' u='r' c='emit_fold'/>
+<use f='luajit/host/buildvm_lib.c' l='366' macro='1' u='r' c='emit_lib'/>
+<use f='luajit/host/minilua.c' l='6150' macro='1' u='r' c='luaL_loadfile'/>
+<use f='luajit/host/minilua.c' l='6958' macro='1' u='r' c='luaopen_io'/>
+<use f='luajit/lib_debug.c' l='367' macro='1' u='r' c='lj_cf_debug_debug'/>
+<use f='luajit/lib_io.c' l='538' macro='1' u='r' c='luaopen_io'/>
+<use f='luajit/lj_load.c' l='98' macro='1' u='r' c='luaL_loadfilex'/>
+<use f='luajit/luajit.c' l='215' macro='1' u='r' c='pushline'/>

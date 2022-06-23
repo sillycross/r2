@@ -1,0 +1,3 @@
+<dec f='luajit/lua.h' l='27'/>
+<doc f='luajit/lua.h' l='26'>/* mark for precompiled code (`&lt;esc&gt;Lua&apos;) */</doc>
+<use f='luajit/lj_lex.c' l='429' u='c'/>

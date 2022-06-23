@@ -1,0 +1,2 @@
+<dec f='luajit/lj_folddef.h' l='1167'/>
+<use f='luajit/lj_opt_fold.c' l='2503' u='c'/>

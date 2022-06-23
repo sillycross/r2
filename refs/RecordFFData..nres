@@ -1,0 +1,28 @@
+<dec f='luajit/lj_ffrecord.h' l='16' type='ptrdiff_t'/>
+<use f='luajit/lj_crecord.c' l='729' u='w' c='crec_tailcall'/>
+<use f='luajit/lj_crecord.c' l='795' u='w' c='crec_index_bf'/>
+<use f='luajit/lj_crecord.c' l='936' u='w' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='1244' u='w' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1590' u='w' c='recff_clib_index'/>
+<use f='luajit/lj_crecord.c' l='1674' u='w' c='recff_ffi_copy'/>
+<use f='luajit/lj_crecord.c' l='1698' u='w' c='recff_ffi_fill'/>
+<use f='luajit/lj_crecord.c' l='1751' u='w' c='recff_ffi_xof'/>
+<offset>64</offset>
+<doc f='luajit/lj_ffrecord.h' l='16'>/* Number of returned results (defaults to 1). */</doc>
+<use f='luajit/lj_ffrecord.c' l='165' u='w' c='recff_nyi'/>
+<use f='luajit/lj_ffrecord.c' l='172' u='w' c='recff_nyi'/>
+<use f='luajit/lj_ffrecord.c' l='194' u='w' c='recff_assert'/>
+<use f='luajit/lj_ffrecord.c' l='324' u='w' c='recff_select'/>
+<use f='luajit/lj_ffrecord.c' l='397' u='w' c='recff_metacall'/>
+<use f='luajit/lj_ffrecord.c' l='435' u='w' c='recff_ipairs_aux'/>
+<use f='luajit/lj_ffrecord.c' l='448' u='w' c='recff_xpairs'/>
+<use f='luajit/lj_ffrecord.c' l='461' u='w' c='recff_pcall'/>
+<use f='luajit/lj_ffrecord.c' l='497' u='w' c='recff_xpcall'/>
+<use f='luajit/lj_ffrecord.c' l='817' u='w' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='825' u='w' c='recff_string_range'/>
+<use f='luajit/lj_ffrecord.c' l='933' u='w' c='recff_string_find'/>
+<use f='luajit/lj_ffrecord.c' l='1041' u='w' c='recff_table_insert'/>
+<use f='luajit/lj_ffrecord.c' l='1089' u='w' c='recff_table_clear'/>
+<use f='luajit/lj_ffrecord.c' l='1194' u='w' c='lj_ffrecord_func'/>
+<use f='luajit/lj_ffrecord.c' l='1198' u='r' c='lj_ffrecord_func'/>
+<use f='luajit/lj_ffrecord.c' l='1200' u='r' c='lj_ffrecord_func'/>

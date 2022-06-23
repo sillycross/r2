@@ -1,0 +1,7 @@
+<def f='luajit/lj_asm_x86.h' l='232' ll='270' type='void asm_fusefref(ASMState * as, IRIns * ir, RegSet allow)'/>
+<use f='luajit/lj_asm_x86.h' l='463' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='487' u='c' c='asm_fuseload'/>
+<use f='luajit/lj_asm_x86.h' l='1376' u='c' c='asm_fref'/>
+<use f='luajit/lj_asm_x86.h' l='1399' u='c' c='asm_fxload'/>
+<use f='luajit/lj_asm_x86.h' l='1447' u='c' c='asm_fxstore'/>
+<doc f='luajit/lj_asm_x86.h' l='231'>/* Fuse FLOAD/FREF reference into memory operand. */</doc>

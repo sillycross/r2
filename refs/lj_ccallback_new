@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ccallback.h' l='20' type='void * lj_ccallback_new(CTState * cts, CType * ct, GCfunc * fn)'/>
+<def f='luajit/lj_ccallback.c' l='783' ll='794' type='void * lj_ccallback_new(CTState * cts, CType * ct, GCfunc * fn)'/>
+<doc f='luajit/lj_ccallback.c' l='782'>/* Create a new callback and return the callback function pointer. */</doc>
+<use f='luajit/lj_cconv.c' l='630' u='c' c='lj_cconv_ct_tv'/>

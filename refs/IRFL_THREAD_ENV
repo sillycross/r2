@@ -1,0 +1,2 @@
+<dec f='luajit/lj_ir.h' l='216' macro='1' type='4'/>
+<use f='luajit/lj_ffrecord.c' l='508' u='r' c='recff_getfenv'/>

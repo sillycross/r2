@@ -1,0 +1,96 @@
+<dec f='luajit/lj_ctype.h' l='21' type='2'/>
+<use f='luajit/lj_ctype.h' l='38' u='r' c='lj_assert_89'/>
+<use f='luajit/lj_ctype.h' l='38' u='r' c='lj_assert_89'/>
+<doc f='luajit/lj_ctype.h' l='21'>/* Pointer or reference. */</doc>
+<use f='luajit/lib_ffi.c' l='236' macro='1' u='r' c='lj_cf_ffi_meta___call'/>
+<use f='luajit/lib_ffi.c' l='293' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='310' macro='1' u='r' c='lj_cf_ffi_meta___tostring'/>
+<use f='luajit/lib_ffi.c' l='334' macro='1' u='r' c='ffi_pairs'/>
+<use f='luajit/lib_ffi.c' l='437' macro='1' u='r' c='ffi_callback_set'/>
+<use f='luajit/lib_ffi.c' l='537' macro='1' u='r' c='lj_cf_ffi_cast'/>
+<use f='luajit/lib_ffi.c' l='600' macro='1' u='r' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='604' macro='1' u='r' c='lj_cf_ffi_istype'/>
+<use f='luajit/lib_ffi.c' l='798' macro='1' u='r' c='lj_cf_ffi_gc'/>
+<use f='luajit/lj_carith.c' l='43' macro='1' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_carith.c' l='45' macro='1' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_carith.c' l='49' u='r' c='carith_checkarg'/>
+<use f='luajit/lj_carith.c' l='100' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='102' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='136' macro='1' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='148' u='r' c='carith_ptr'/>
+<use f='luajit/lj_carith.c' l='228' macro='1' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_carith.c' l='234' macro='1' u='r' c='lj_carith_meta'/>
+<use f='luajit/lj_carith.c' l='328' macro='1' u='r' c='lj_carith_check64'/>
+<use f='luajit/lj_ccall.c' l='904' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_ccall.c' l='907' u='r' c='lj_ccall_ctid_vararg'/>
+<use f='luajit/lj_ccall.c' l='1156' macro='1' u='r' c='lj_ccall_func'/>
+<use f='luajit/lj_ccallback.c' l='753' macro='1' u='r' c='callback_checkfunc'/>
+<use f='luajit/lj_ccallback.c' l='760' macro='1' u='r' c='callback_checkfunc'/>
+<use f='luajit/lj_ccallback.c' l='770' macro='1' u='r' c='callback_checkfunc'/>
+<use f='luajit/lj_cconv.c' l='99' macro='1' u='r' c='lj_cconv_compatptr'/>
+<use f='luajit/lj_cconv.c' l='565' macro='1' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cconv.c' l='573' u='r' c='lj_cconv_ct_tv'/>
+<use f='luajit/lj_cdata.c' l='22' macro='1' u='r' c='lj_cdata_newref'/>
+<use f='luajit/lj_cdata.c' l='117' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='143' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='147' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='188' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='199' macro='1' u='r' c='lj_cdata_index'/>
+<use f='luajit/lj_cdata.c' l='244' macro='1' u='r' c='lj_cdata_get'/>
+<use f='luajit/lj_cdata.c' l='277' macro='1' u='r' c='lj_cdata_set'/>
+<use f='luajit/lj_cparse.c' l='510' macro='1' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='515' u='r' c='cp_expr_prefix'/>
+<use f='luajit/lj_cparse.c' l='553' macro='1' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='555' macro='1' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='565' macro='1' u='r' c='cp_expr_postfix'/>
+<use f='luajit/lj_cparse.c' l='925' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='927' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='929' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='940' macro='1' u='r' c='cp_decl_intern'/>
+<use f='luajit/lj_cparse.c' l='1647' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1650' u='r' c='cp_decl_func'/>
+<use f='luajit/lj_cparse.c' l='1692' u='r' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1696' u='r' c='cp_declarator'/>
+<use f='luajit/lj_cparse.c' l='1704' macro='1' u='r' c='cp_declarator'/>
+<use f='luajit/lj_crecord.c' l='112' macro='1' u='r' c='crec_ct2irt'/>
+<use f='luajit/lj_crecord.c' l='572' macro='1' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='576' macro='1' u='r' c='crec_tv_ct'/>
+<use f='luajit/lj_crecord.c' l='659' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='665' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='667' macro='1' u='r' c='crec_ct_tv'/>
+<use f='luajit/lj_crecord.c' l='810' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='812' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='822' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='847' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='907' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='924' macro='1' u='r' c='recff_cdata_index'/>
+<use f='luajit/lj_crecord.c' l='967' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='969' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1013' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1040' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1060' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1068' macro='1' u='r' c='crec_alloc'/>
+<use f='luajit/lj_crecord.c' l='1149' macro='1' u='r' c='crec_call_args'/>
+<use f='luajit/lj_crecord.c' l='1228' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1245' macro='1' u='r' c='crec_call'/>
+<use f='luajit/lj_crecord.c' l='1307' macro='1' u='r' c='recff_cdata_call'/>
+<use f='luajit/lj_crecord.c' l='1382' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1384' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1407' macro='1' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1432' u='r' c='crec_arith_ptr'/>
+<use f='luajit/lj_crecord.c' l='1447' macro='1' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1453' macro='1' u='r' c='crec_arith_meta'/>
+<use f='luajit/lj_crecord.c' l='1492' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1494' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1509' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1544' macro='1' u='r' c='recff_cdata_arith'/>
+<use f='luajit/lj_crecord.c' l='1688' macro='1' u='r' c='recff_ffi_fill'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='119' macro='1' u='r'/>
+<use f='luajit/lj_ctype.c' l='274' macro='1' u='r' c='lj_ctype_rawref'/>
+<use f='luajit/lj_ctype.c' l='341' macro='1' u='r' c='lj_ctype_meta'/>
+<use f='luajit/lj_ctype.c' l='345' macro='1' u='r' c='lj_ctype_meta'/>
+<use f='luajit/lj_ctype.c' l='491' c='ctype_repr'/>
+<use f='luajit/lj_opt_fold.c' l='756' macro='1' u='r' c='fold_kfold_add_kgc'/>

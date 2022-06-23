@@ -1,0 +1,19 @@
+<dec f='luajit/lj_gc.h' l='94'/>
+<doc f='luajit/lj_gc.h' l='93'>/* Barrier for stores to table objects. TValue and GCobj variant. */</doc>
+<use f='luajit/lib_ffi.c' l='444' u='c'/>
+<use f='luajit/lib_ffi.c' l='520' u='c'/>
+<use f='luajit/lib_ffi.c' l='782' u='c'/>
+<use f='luajit/lib_ffi.c' l='844' u='c'/>
+<use f='luajit/lib_jit.c' l='585' u='c'/>
+<use f='luajit/lib_jit.c' l='602' u='c'/>
+<use f='luajit/lj_api.c' l='734' u='c'/>
+<use f='luajit/lj_api.c' l='1007' u='c'/>
+<use f='luajit/lj_ccallback.c' l='790' u='c'/>
+<use f='luajit/lj_cdata.c' l='94' u='c'/>
+<use f='luajit/lj_clib.c' l='390' u='c'/>
+<use f='luajit/lj_lib.c' l='85' u='c'/>
+<use f='luajit/lj_lib.c' l='180' u='c'/>
+<use f='luajit/lj_meta.c' l='172' u='c'/>
+<use f='luajit/lj_meta.c' l='176' u='c'/>
+<use f='luajit/lj_parse.c' l='1765' u='c'/>
+<use f='luajit/lj_tab.c' l='512' u='c'/>

@@ -1,0 +1,3 @@
+<dec f='include/x86_64-linux-gnu/bits/signum-generic.h' l='77'/>
+<use f='luajit/lj_profile.c' l='191' u='c'/>
+<use f='luajit/lj_profile.c' l='201' u='c'/>

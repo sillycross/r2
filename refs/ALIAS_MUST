@@ -1,0 +1,17 @@
+<dec f='luajit/lj_opt_mem.c' l='38' type='2'/>
+<use f='luajit/lj_opt_mem.c' l='83' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='93' u='r' c='aa_ahref'/>
+<use f='luajit/lj_opt_mem.c' l='147' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='181' c='fwd_ahload'/>
+<use f='luajit/lj_opt_mem.c' l='361' c='lj_opt_dse_ahstore'/>
+<use f='luajit/lj_opt_mem.c' l='461' u='r' c='aa_uref'/>
+<use f='luajit/lj_opt_mem.c' l='487' c='lj_opt_fwd_uload'/>
+<use f='luajit/lj_opt_mem.c' l='522' c='lj_opt_dse_ustore'/>
+<use f='luajit/lj_opt_mem.c' l='566' u='r' c='aa_fref'/>
+<use f='luajit/lj_opt_mem.c' l='588' c='lj_opt_fwd_fload'/>
+<use f='luajit/lj_opt_mem.c' l='622' c='lj_opt_dse_fstore'/>
+<use f='luajit/lj_opt_mem.c' l='681' u='r' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='708' u='r' c='aa_xref'/>
+<use f='luajit/lj_opt_mem.c' l='807' c='lj_opt_fwd_xload'/>
+<use f='luajit/lj_opt_mem.c' l='873' c='lj_opt_dse_xstore'/>
+<doc f='luajit/lj_opt_mem.c' l='38'>/* The two refs MUST alias (exact). */</doc>

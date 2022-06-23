@@ -1,0 +1,4 @@
+<dec f='luajit/lj_meta.h' l='12' type='void lj_meta_init(lua_State * L)'/>
+<def f='luajit/lj_meta.c' l='29' ll='44' type='void lj_meta_init(lua_State * L)'/>
+<doc f='luajit/lj_meta.c' l='28'>/* String interning of metamethod names for fast indexing. */</doc>
+<use f='luajit/lj_state.c' l='154' u='c' c='cpluaopen'/>

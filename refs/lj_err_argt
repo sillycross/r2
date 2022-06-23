@@ -1,0 +1,30 @@
+<dec f='luajit/lj_err.h' l='42' type='void lj_err_argt(lua_State * L, int narg, int tt)'/>
+<use f='luajit/lib_base.c' l='95' u='c' c='ffh_pairs'/>
+<use f='luajit/lib_base.c' l='596' u='c' c='lj_cf_coroutine_create'/>
+<use f='luajit/lib_ffi.c' l='73' u='c' c='ffi_checkcdata'/>
+<use f='luajit/lib_ffi.c' l='154' u='c' c='lj_cf_ffi_meta___index'/>
+<use f='luajit/lib_ffi.c' l='171' u='c' c='lj_cf_ffi_meta___newindex'/>
+<use f='luajit/lib_ffi.c' l='366' u='c' c='ffi_clib_index'/>
+<use f='luajit/lib_ffi.c' l='369' u='c' c='ffi_clib_index'/>
+<use f='luajit/lib_io.c' l='235' u='c' c='io_file_write'/>
+<use f='luajit/lib_io.c' l='330' u='c' c='lj_cf_io_method_seek'/>
+<use f='luajit/lib_jit.c' l='63' u='c' c='setjitmode'/>
+<use f='luajit/lib_jit.c' l='178' u='c' c='check_Lproto'/>
+<use f='luajit/lj_api.c' l='243' u='c' c='luaL_checktype'/>
+<use f='luajit/lj_api.c' l='381' u='c' c='luaL_checknumber'/>
+<use f='luajit/lj_api.c' l='394' u='c' c='luaL_optnumber'/>
+<use f='luajit/lj_api.c' l='461' u='c' c='luaL_checkinteger'/>
+<use f='luajit/lj_api.c' l='486' u='c' c='luaL_optinteger'/>
+<use f='luajit/lj_api.c' l='535' u='c' c='luaL_checklstring'/>
+<use f='luajit/lj_api.c' l='557' u='c' c='luaL_optlstring'/>
+<use f='luajit/lj_api.c' l='569' u='c' c='luaL_checkoption'/>
+<use f='luajit/lj_carith.c' l='36' u='c' c='carith_checkarg'/>
+<use f='luajit/lj_carith.c' l='319' u='c' c='lj_carith_check64'/>
+<def f='luajit/lj_err.c' l='1042' ll='1045' macro='1' type='void lj_err_argt(lua_State * L, int narg, int tt)'/>
+<use f='luajit/lj_lib.c' l='207' u='c' c='lj_lib_checkstr'/>
+<use f='luajit/lj_lib.c' l='231' u='c' c='lj_lib_checknum'/>
+<use f='luajit/lj_lib.c' l='245' u='c' c='lj_lib_checkint'/>
+<use f='luajit/lj_lib.c' l='265' u='c' c='lj_lib_checkfunc'/>
+<use f='luajit/lj_lib.c' l='273' u='c' c='lj_lib_checktab'/>
+<use f='luajit/lj_lib.c' l='317' u='c' c='lj_lib_checkstrx'/>
+<use f='luajit/lj_lib.c' l='353' u='c' c='lj_lib_checkintrange'/>

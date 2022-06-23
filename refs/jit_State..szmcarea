@@ -1,0 +1,7 @@
+<dec f='luajit/lj_jit.h' l='498' type='size_t'/>
+<offset>24576</offset>
+<doc f='luajit/lj_jit.h' l='498'>/* Size of current mcode area. */</doc>
+<use f='luajit/lj_mcode.c' l='185' u='r' c='mcode_protect'/>
+<use f='luajit/lj_mcode.c' l='270' u='w' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='272' u='r' c='mcode_allocarea'/>
+<use f='luajit/lj_mcode.c' l='336' u='r' c='lj_mcode_patch'/>

@@ -1,0 +1,5 @@
+<dec f='luajit/luajit.h' l='43' type='0'/>
+<doc f='luajit/luajit.h' l='43'>/* Set mode for whole JIT engine. */</doc>
+<use f='luajit/lib_jit.c' l='47' u='r' c='setjitmode'/>
+<use f='luajit/lib_jit.c' l='60' u='r' c='setjitmode'/>
+<use f='luajit/lj_dispatch.c' l='249' c='luaJIT_setmode'/>

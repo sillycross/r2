@@ -1,0 +1,9 @@
+<dec f='luajit/lj_tab.h' l='77' type='TValue * lj_tab_newkey(lua_State * L, GCtab * t, cTValue * key)'/>
+<use f='luajit/lj_ir.c' l='64' macro='1'/>
+<use f='luajit/lj_meta.c' l='182' u='c' c='lj_meta_tset'/>
+<use f='luajit/lj_serialize.c' l='134' u='c' c='lj_serialize_dict_prep'/>
+<def f='luajit/lj_tab.c' l='442' ll='515' type='TValue * lj_tab_newkey(lua_State * L, GCtab * t, cTValue * key)'/>
+<use f='luajit/lj_tab.c' l='527' u='c' c='lj_tab_setinth'/>
+<use f='luajit/lj_tab.c' l='539' u='c' c='lj_tab_setstr'/>
+<use f='luajit/lj_tab.c' l='566' u='c' c='lj_tab_set'/>
+<doc f='luajit/lj_tab.c' l='441'>/* Insert new key. Use Brent&apos;s variation to optimize the chain length. */</doc>

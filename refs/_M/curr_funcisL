@@ -1,0 +1,5 @@
+<dec f='luajit/lj_obj.h' l='710'/>
+<use f='luajit/lj_err.c' l='870' u='c'/>
+<use f='luajit/lj_err.c' l='902' u='c'/>
+<use f='luajit/lj_gc.c' l='755' u='c'/>
+<use f='luajit/lj_meta.c' l='122' u='c'/>

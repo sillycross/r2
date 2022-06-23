@@ -1,0 +1,11 @@
+<dec f='luajit/lj_ir.h' l='468'/>
+<doc f='luajit/lj_ir.h' l='458'>/* Note: IRMlit operands must be &lt; REF_BIAS, too!
+** This allows for fast and uniform manipulation of all operands
+** without looking up the operand mode in lj_ir_mode:
+** - CSE calculates the maximum reference of two operands.
+**   This must work with mixed reference/literal operands, too.
+** - DCE marking only checks for operand &gt;= REF_BIAS.
+** - LOOP needs to substitute reference operands.
+**   Constant references and literals must not be modified.
+*/</doc>
+<use f='luajit/lj_ir.c' l='362' u='c'/>

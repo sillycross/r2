@@ -1,0 +1,4 @@
+<dec f='luajit/lj_ircall.h' l='96'/>
+<use f='luajit/lj_ircall.h' l='98' u='c'/>
+<use f='luajit/lj_ircall.h' l='338' u='c'/>
+<use f='luajit/lj_ircall.h' l='353' u='c'/>

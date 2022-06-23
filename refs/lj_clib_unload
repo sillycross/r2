@@ -1,0 +1,4 @@
+<dec f='luajit/lj_clib.h' l='24' type='void lj_clib_unload(CLibrary * cl)'/>
+<use f='luajit/lib_ffi.c' l='422' u='c' c='lj_cf_ffi_clib___gc'/>
+<def f='luajit/lj_clib.c' l='421' ll='425' type='void lj_clib_unload(CLibrary * cl)'/>
+<doc f='luajit/lj_clib.c' l='420'>/* Unload a C library. */</doc>

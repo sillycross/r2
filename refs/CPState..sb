@@ -1,0 +1,18 @@
+<dec f='luajit/lj_cparse.h' l='48' type='SBuf'/>
+<offset>320</offset>
+<doc f='luajit/lj_cparse.h' l='48'>/* String buffer for tokens. */</doc>
+<use f='luajit/lj_cparse.c' l='116' u='a' c='cp_save'/>
+<use f='luajit/lj_cparse.c' l='136' u='m' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='136' u='m' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='138' u='m' c='cp_errmsg'/>
+<use f='luajit/lj_cparse.c' l='178' u='m' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='178' u='a' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='178' u='a' c='cp_number'/>
+<use f='luajit/lj_cparse.c' l='192' u='a' c='cp_ident'/>
+<use f='luajit/lj_cparse.c' l='278' u='a' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='281' u='a' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='281' u='a' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='282' u='m' c='cp_string'/>
+<use f='luajit/lj_cparse.c' l='311' u='a' c='cp_next_'/>
+<use f='luajit/lj_cparse.c' l='400' u='a' c='cp_init'/>
+<use f='luajit/lj_cparse.c' l='412' u='a' c='cp_cleanup'/>

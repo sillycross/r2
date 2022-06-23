@@ -1,0 +1,4 @@
+<dec f='luajit/lj_bc.h' l='231'/>
+<use f='luajit/host/buildvm_arch.h' l='4135' u='c'/>
+<doc f='luajit/lj_bc.h' l='230'>/* This solves a circular dependency problem, change as needed. */</doc>
+<use f='luajit/lib_base.c' l='77' u='c'/>

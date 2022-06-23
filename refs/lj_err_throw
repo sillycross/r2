@@ -1,0 +1,20 @@
+<dec f='luajit/lj_err.h' l='24' type='void lj_err_throw(lua_State * L, int errcode)'/>
+<use f='luajit/lib_ffi.c' l='57' u='c' c='ffi_checkctype'/>
+<use f='luajit/lib_ffi.c' l='488' u='c' c='lj_cf_ffi_cdef'/>
+<use f='luajit/lj_api.c' l='1225' u='c' c='lua_yield'/>
+<use f='luajit/lj_bcread.c' l='44' u='c' c='bcread_error'/>
+<def f='luajit/lj_err.c' l='734' ll='764' macro='1' type='void lj_err_throw(lua_State * L, int errcode)'/>
+<use f='luajit/lj_err.c' l='778' u='c' c='lj_err_mem'/>
+<use f='luajit/lj_err.c' l='842' u='c' c='lj_err_run'/>
+<use f='luajit/lj_err.c' l='851' u='c' c='lj_err_run'/>
+<use f='luajit/lj_err.c' l='860' u='c' c='lj_err_trace'/>
+<use f='luajit/lj_err.c' l='894' u='c' c='lj_err_lex'/>
+<use f='luajit/lj_ffrecord.c' l='396' u='c' c='recff_metacall'/>
+<use f='luajit/lj_ffrecord.c' l='496' u='c' c='recff_xpcall'/>
+<use f='luajit/lj_gc.c' l='523' u='c' c='gc_call_finalizer'/>
+<use f='luajit/lj_lex.c' l='438' u='c' c='lj_lex_setup'/>
+<use f='luajit/lj_load.c' l='39' u='c' c='cpparser'/>
+<use f='luajit/lj_opt_loop.c' l='444' u='c' c='lj_opt_loop'/>
+<use f='luajit/lj_state.c' l='107' u='c' c='lj_state_growstack'/>
+<use f='luajit/lj_trace.c' l='42' u='c' c='lj_trace_err'/>
+<use f='luajit/lj_trace.c' l='49' u='c' c='lj_trace_err_info'/>

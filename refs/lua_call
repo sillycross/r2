@@ -1,0 +1,15 @@
+<dec f='luajit/lua.h' l='202' type='void lua_call(lua_State * L, int nargs, int nresults)'/>
+<use f='luajit/lib_base.c' l='391' u='c' c='reader_func'/>
+<use f='luajit/lib_base.c' l='448' u='c' c='lj_cf_dofile'/>
+<use f='luajit/lib_base.c' l='533' u='c' c='lj_cf_print'/>
+<use f='luajit/lib_buffer.c' l='134' u='c' c='lj_cf_buffer_method_put'/>
+<use f='luajit/lib_debug.c' l='299' u='c' c='hookf'/>
+<use f='luajit/lib_init.c' l='45' u='c' c='luaL_openlibs'/>
+<use f='luajit/lib_package.c' l='453' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='464' u='c' c='lj_cf_package_require'/>
+<use f='luajit/lib_package.c' l='497' u='c' c='dooptions'/>
+<use f='luajit/lib_string.c' l='582' u='c' c='add_value'/>
+<use f='luajit/lib_table.c' l='187' u='c' c='sort_comp'/>
+<def f='luajit/lj_api.c' l='1120' ll='1126' macro='1' type='void lua_call(lua_State * L, int nargs, int nresults)'/>
+<use f='luajit/lj_strfmt.c' l='439' u='c' c='lj_strfmt_putarg'/>
+<use f='luajit/luajit.c' l='146' u='c' c='print_jit_status'/>

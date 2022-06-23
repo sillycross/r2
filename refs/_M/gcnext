@@ -1,0 +1,8 @@
+<dec f='luajit/lj_obj.h' l='90'/>
+<use f='luajit/lj_gc.c' l='130' u='c'/>
+<use f='luajit/lj_gc.c' l='530' u='c'/>
+<use f='luajit/lj_state.c' l='79' u='c'/>
+<use f='luajit/lj_str.c' l='155' u='c'/>
+<use f='luajit/lj_str.c' l='172' u='c'/>
+<use f='luajit/lj_str.c' l='231' u='c'/>
+<use f='luajit/lj_str.c' l='341' u='c'/>

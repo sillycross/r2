@@ -1,0 +1,13 @@
+<def f='luajit/lj_alloc.c' l='509' ll='513'/>
+<use f='luajit/lj_alloc.c' l='512'/>
+<use f='luajit/lj_alloc.c' l='515'/>
+<use f='luajit/lj_alloc.c' l='516'/>
+<use f='luajit/lj_alloc.c' l='600' c='init_top'/>
+<use f='luajit/lj_alloc.c' l='941' c='add_segment'/>
+<use f='luajit/lj_alloc.c' l='600' c='add_segment'/>
+<use f='luajit/lj_alloc.c' l='600' c='alloc_sys'/>
+<use f='luajit/lj_alloc.c' l='600' c='release_unused_segments'/>
+<use f='luajit/lj_alloc.c' l='600' c='alloc_trim'/>
+<use f='luajit/lj_alloc.c' l='600' c='lj_alloc_create'/>
+<size>24</size>
+<doc f='luajit/lj_alloc.c' l='507'>/* ----------------------------- Segments -------------------------------- */</doc>

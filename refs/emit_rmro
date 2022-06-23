@@ -1,0 +1,70 @@
+<def f='luajit/lj_emit_x86.h' l='103' ll='137' type='void emit_rmro(ASMState * as, x86Op xo, Reg rr, Reg rb, int32_t ofs)'/>
+<use f='luajit/lj_emit_x86.h' l='186' u='c' c='emit_gmroi'/>
+<use f='luajit/lj_emit_x86.h' l='258' u='c' c='emit_movmroi'/>
+<use f='luajit/lj_emit_x86.h' l='322' u='c' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='327' u='c' c='emit_loadu64'/>
+<use f='luajit/lj_emit_x86.h' l='345' u='c' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='347' u='c' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='367' u='c' c='emit_rma'/>
+<use f='luajit/lj_emit_x86.h' l='418' u='c' c='emit_loadk64'/>
+<use f='luajit/lj_emit_x86.h' l='546' u='c' c='emit_loadofs'/>
+<use f='luajit/lj_emit_x86.h' l='548' u='c' c='emit_loadofs'/>
+<use f='luajit/lj_emit_x86.h' l='555' u='c' c='emit_storeofs'/>
+<use f='luajit/lj_emit_x86.h' l='557' u='c' c='emit_storeofs'/>
+<use f='luajit/lj_asm_x86.h' l='630' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='639' macro='1' u='c' c='asm_gencall'/>
+<use f='luajit/lj_asm_x86.h' l='673' macro='1' u='c' c='asm_setupresult'/>
+<use f='luajit/lj_asm_x86.h' l='777' u='c' c='asm_retf'/>
+<use f='luajit/lj_asm_x86.h' l='1046' u='c' c='asm_strto'/>
+<use f='luajit/lj_asm_x86.h' l='1061' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1075' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1080' macro='1' u='c' c='asm_tvptr'/>
+<use f='luajit/lj_asm_x86.h' l='1144' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1162' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1170' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1188' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1193' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1222' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1224' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1229' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1231' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1232' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1234' u='c' c='asm_href'/>
+<use f='luajit/lj_asm_x86.h' l='1288' u='c' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1297' u='c' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1314' u='c' c='asm_hrefk'/>
+<use f='luajit/lj_asm_x86.h' l='1360' u='c' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1363' u='c' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1365' u='c' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1367' u='c' c='asm_uref'/>
+<use f='luajit/lj_asm_x86.h' l='1684' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1703' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1724' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1730' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1735' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1753' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1762' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1765' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1778' u='c' c='asm_sload'/>
+<use f='luajit/lj_asm_x86.h' l='1817' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1819' macro='1' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1824' macro='1' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1857' macro='1' u='c' c='asm_cnew'/>
+<use f='luajit/lj_asm_x86.h' l='1877' macro='1' u='c' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1881' u='c' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1884' u='c' c='asm_tbar'/>
+<use f='luajit/lj_asm_x86.h' l='1909' u='c' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1913' u='c' c='asm_obar'/>
+<use f='luajit/lj_asm_x86.h' l='1934' u='c' c='asm_x87load'/>
+<use f='luajit/lj_asm_x86.h' l='1985' u='c' c='asm_ldexp'/>
+<use f='luajit/lj_asm_x86.h' l='1987' u='c' c='asm_ldexp'/>
+<use f='luajit/lj_asm_x86.h' l='2670' u='c' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2678' u='c' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2684' u='c' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2687' u='c' c='asm_stack_check'/>
+<use f='luajit/lj_asm_x86.h' l='2709' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2720' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2727' macro='1' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2734' u='c' c='asm_stack_restore'/>
+<use f='luajit/lj_asm_x86.h' l='2780' u='c' c='asm_gc_check'/>
+<doc f='luajit/lj_emit_x86.h' l='102'>/* op r, [base+ofs] */</doc>

@@ -1,0 +1,9 @@
+<dec f='luajit/lj_ccall.h' l='162' type='uint8_t'/>
+<use f='luajit/host/buildvm_arch.h' l='2740' u='a' c='build_subroutines'/>
+<offset>96</offset>
+<doc f='luajit/lj_ccall.h' l='162'>/* Number of stack slots. */</doc>
+<use f='luajit/lj_ccall.c' l='701' u='r' c='ccall_struct_arg'/>
+<use f='luajit/lj_ccall.c' l='703' u='w' c='ccall_struct_arg'/>
+<use f='luajit/lj_ccall.c' l='164' u='w' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='166' u='r' c='ccall_set_args'/>
+<use f='luajit/lj_ccall.c' l='1102' u='w' c='ccall_set_args'/>

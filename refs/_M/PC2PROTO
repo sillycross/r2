@@ -1,0 +1,13 @@
+<dec f='luajit/host/buildvm_arch.h' l='321'/>
+<use f='luajit/host/buildvm_arch.h' l='576' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='704' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2299' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2502' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='2564' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4043' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4264' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4559' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4559' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4609' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='4615' u='c'/>
+<doc f='luajit/host/buildvm_arch.h' l='320'>//|</doc>

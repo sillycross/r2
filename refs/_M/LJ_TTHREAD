@@ -1,0 +1,11 @@
+<dec f='luajit/lj_obj.h' l='266'/>
+<use f='luajit/lj_obj.h' l='931' u='c'/>
+<use f='luajit/host/buildvm_arch.h' l='1654' u='c'/>
+<use f='luajit/lj_api.c' l='1220' u='c'/>
+<use f='luajit/lj_ccallback.c' l='551' u='c'/>
+<use f='luajit/lj_err.c' l='932' u='c'/>
+<use f='luajit/lj_gc.c' l='343' u='c'/>
+<use f='luajit/lj_gc.c' l='408' u='c'/>
+<use f='luajit/lj_meta.c' l='89' u='c'/>
+<use f='luajit/lj_state.c' l='223' u='c'/>
+<use f='luajit/lj_state.c' l='310' u='c'/>

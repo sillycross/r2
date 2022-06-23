@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>lj_asm.h source code [luajit/lj_asm.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href=".././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href=".././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src=".././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src=".././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'luajit/lj_asm.h'; var root_path = '..'; var data_path = '.././data'; var ecma_script_api_version = 2;</script>
+<script src='.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>luajit</a>/<a href='lj_asm.h.html'>lj_asm.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i>** IR assembler (SSA IR -&gt; machine code).</i></td></tr>
+<tr><th id="3">3</th><td><i>** Copyright (C) 2005-2021 Mike Pall. See Copyright Notice in luajit.h</i></td></tr>
+<tr><th id="4">4</th><td><i>*/</i></td></tr>
+<tr><th id="5">5</th><td></td></tr>
+<tr><th id="6">6</th><td><u>#<span data-ppcond="6">ifndef</span> <span class="macro" data-ref="_M/_LJ_ASM_H">_LJ_ASM_H</span></u></td></tr>
+<tr><th id="7">7</th><td><u>#define <dfn class="macro" id="_M/_LJ_ASM_H" data-ref="_M/_LJ_ASM_H">_LJ_ASM_H</dfn></u></td></tr>
+<tr><th id="8">8</th><td></td></tr>
+<tr><th id="9">9</th><td><u>#include <a href="lj_jit.h.html">"lj_jit.h"</a></u></td></tr>
+<tr><th id="10">10</th><td></td></tr>
+<tr><th id="11">11</th><td><u>#<span data-ppcond="11">if</span> <a class="macro" href="lj_arch.h.html#542" title="1" data-ref="_M/LJ_HASJIT">LJ_HASJIT</a></u></td></tr>
+<tr><th id="12">12</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <a class="decl fn" href="lj_asm.c.html#lj_asm_trace" title='lj_asm_trace' data-ref="lj_asm_trace" data-ref-filename="lj_asm_trace" id="lj_asm_trace">lj_asm_trace</a>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col3 decl" id="33J" title='J' data-type='jit_State *' data-ref="33J" data-ref-filename="33J">J</dfn>, <a class="typedef" href="lj_jit.h.html#GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a> *<dfn class="local col4 decl" id="34T" title='T' data-type='GCtrace *' data-ref="34T" data-ref-filename="34T">T</dfn>);</td></tr>
+<tr><th id="13">13</th><td><a class="macro" href="lj_def.h.html#335" title="extern __attribute__((visibility(&quot;hidden&quot;)))" data-ref="_M/LJ_FUNC">LJ_FUNC</a> <em>void</em> <a class="decl fn" href="lj_asm_x86.h.html#lj_asm_patchexit" title='lj_asm_patchexit' data-ref="lj_asm_patchexit" data-ref-filename="lj_asm_patchexit" id="lj_asm_patchexit">lj_asm_patchexit</a>(<a class="typedef" href="lj_jit.h.html#jit_State" title='jit_State' data-type='struct jit_State' data-ref="jit_State" data-ref-filename="jit_State">jit_State</a> *<dfn class="local col5 decl" id="35J" title='J' data-type='jit_State *' data-ref="35J" data-ref-filename="35J">J</dfn>, <a class="typedef" href="lj_jit.h.html#GCtrace" title='GCtrace' data-type='struct GCtrace' data-ref="GCtrace" data-ref-filename="GCtrace">GCtrace</a> *<dfn class="local col6 decl" id="36T" title='T' data-type='GCtrace *' data-ref="36T" data-ref-filename="36T">T</dfn>, <a class="typedef" href="lj_jit.h.html#ExitNo" title='ExitNo' data-type='uint32_t' data-ref="ExitNo" data-ref-filename="ExitNo">ExitNo</a> <dfn class="local col7 decl" id="37exitno" title='exitno' data-type='ExitNo' data-ref="37exitno" data-ref-filename="37exitno">exitno</dfn>,</td></tr>
+<tr><th id="14">14</th><td>			      <a class="typedef" href="lj_jit.h.html#MCode" title='MCode' data-type='uint8_t' data-ref="MCode" data-ref-filename="MCode">MCode</a> *<dfn class="local col8 decl" id="38target" title='target' data-type='MCode *' data-ref="38target" data-ref-filename="38target">target</dfn>);</td></tr>
+<tr><th id="15">15</th><td><u>#<span data-ppcond="11">endif</span></u></td></tr>
+<tr><th id="16">16</th><td></td></tr>
+<tr><th id="17">17</th><td><u>#<span data-ppcond="6">endif</span></u></td></tr>
+<tr><th id="18">18</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='lj_asm.c.html'>luajit/lj_asm.c</a><br/>Generated on <em>2022-Jun-23</em> from project luajit revision <em>v2.1.0-beta3-294-ge9577376</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>
